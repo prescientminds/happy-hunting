@@ -1287,6 +1287,7 @@ body.hh-landing {
     color: #f5f0e8;
     outline: none;
     transition: border-color 0.2s;
+    box-sizing: border-box;
 }
 .bar-search:focus { border-color: #c9a84c; }
 .bar-search::placeholder { color: #5a5550; }

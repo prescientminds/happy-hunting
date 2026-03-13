@@ -1,6 +1,7 @@
 /* ============================================
    HAPPY HUNTING — Hunt Engine
-   Envelope unlock, clue cards, answer validation
+   Envelope unlock, clue cards, answer validation,
+   clue pool shuffling, photo answers
    ============================================ */
 
 const HappyHunting = {
@@ -12,6 +13,7 @@ const HappyHunting = {
     senderName: '',
     recipientName: '',
     urlKey: '',
+    hasPool: false,
     els: {},
     screens: {},
 
@@ -24,7 +26,8 @@ const HappyHunting = {
             'next-btn', 'arrival-bar', 'arrival-address',
             'arrival-hh', 'arrival-vibe', 'arrival-arc',
             'arrival-details', 'envelope-sender', 'unlock-feedback',
-            'envelope', 'code-row'
+            'envelope', 'code-row', 'dice-btn',
+            'answer-row-text', 'answer-row-photo', 'photo-done-btn'
         ].forEach(id => {
             this.els[id] = document.getElementById(id);
         });
@@ -53,13 +56,21 @@ const HappyHunting = {
         if (hash.startsWith('#custom=')) {
             this.loadCustomHunt(hash.slice(8));
         } else {
-            const huntId = params.get('hunt') || 'thunderbolt-hunt-1';
+            const huntId = params.get('hunt') || 'thunderbolt';
             await this.loadHunt(huntId);
         }
 
         if (!this.hunt) {
             this.showScreen('error');
             return;
+        }
+
+        // Derive steps from cluePool if present
+        if (this.hunt.cluePool && this.hunt.cluePool.length > 0) {
+            this.hasPool = true;
+            if (!this.hunt.steps) {
+                this.hunt.steps = this.assembleSteps();
+            }
         }
 
         if (this.isInvite) {
@@ -108,6 +119,30 @@ const HappyHunting = {
         } catch (e) {
             this.hunt = null;
         }
+    },
+
+    // ---- Clue Pool ----
+    assembleSteps() {
+        const pool = this.hunt.cluePool;
+        const rings = [1, 2, 3];
+        return rings.map((ring, i) => {
+            const candidates = pool.filter(c => c.ring === ring);
+            const pick = candidates[0] || pool[i];
+            return { ...pick, stepNumber: i + 1 };
+        });
+    },
+
+    shuffleClue() {
+        if (!this.hasPool) return;
+        const currentRing = this.hunt.steps[this.currentStep].ring;
+        const currentClue = this.hunt.steps[this.currentStep].clue;
+        const candidates = this.hunt.cluePool.filter(
+            c => c.ring === currentRing && c.clue !== currentClue
+        );
+        if (candidates.length === 0) return;
+        const pick = candidates[Math.floor(Math.random() * candidates.length)];
+        this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
+        this.renderClue();
     },
 
     // ---- Skin ----
@@ -161,49 +196,30 @@ const HappyHunting = {
     onUnlock() {
         const digits = document.querySelectorAll('.code-digit');
         const envelope = this.els['envelope'];
-
-        // Flash green
         digits.forEach(d => d.classList.add('correct'));
-
-        // Break seal + slide envelope away
-        setTimeout(() => {
-            envelope.classList.add('opening');
-        }, 500);
-
-        // Transition to intro
-        setTimeout(() => {
-            this.renderIntro();
-        }, 1200);
+        setTimeout(() => { envelope.classList.add('opening'); }, 500);
+        setTimeout(() => { this.renderIntro(); }, 1200);
     },
 
     onWrongCode() {
         const digits = document.querySelectorAll('.code-digit');
         const row = this.els['code-row'];
-
         digits.forEach(d => d.classList.add('wrong'));
         row.classList.add('shake');
-
         setTimeout(() => {
             row.classList.remove('shake');
-            digits.forEach(d => {
-                d.value = '';
-                d.classList.remove('wrong');
-            });
+            digits.forEach(d => { d.value = ''; d.classList.remove('wrong'); });
             digits[0].focus();
         }, 600);
-
         this.els['unlock-feedback'].textContent = 'Not quite. Try again.';
     },
 
     // ---- Intro ----
     renderIntro() {
         this.els['hunt-theme'].textContent = this.hunt.theme;
-
-        // Hide skin selector in invite mode (sender already chose)
         if (this.isInvite) {
             this.els['skin-selector'].style.display = 'none';
         }
-
         this.showScreen('intro');
     },
 
@@ -212,6 +228,14 @@ const HappyHunting = {
         const step = this.hunt.steps[this.currentStep];
         this.els['step-label'].textContent = `Clue ${step.stepNumber} of ${this.hunt.steps.length}`;
         this.renderClueText(step.clue);
+
+        // Show/hide dice button
+        this.els['dice-btn'].hidden = !this.hasPool;
+
+        // Photo vs text answer
+        const isPhoto = step.answerType === 'photo';
+        this.els['answer-row-text'].hidden = isPhoto;
+        this.els['answer-row-photo'].hidden = !isPhoto;
 
         // Reset state
         this.els['answer-section'].classList.remove('solved');
@@ -226,7 +250,9 @@ const HappyHunting = {
         this.els['next-btn'].innerHTML = isLast ? 'You\'ve arrived &rarr;' : 'Next Clue &rarr;';
 
         this.showScreen('clue');
-        setTimeout(() => this.els['answer-input'].focus(), 500);
+        if (!isPhoto) {
+            setTimeout(() => this.els['answer-input'].focus(), 500);
+        }
     },
 
     renderClueText(text) {
@@ -275,6 +301,15 @@ const HappyHunting = {
         }
     },
 
+    solvePhoto() {
+        const step = this.hunt.steps[this.currentStep];
+        this.els['answer-feedback'].textContent = 'Nice shot.';
+        this.els['answer-feedback'].className = 'answer-feedback correct';
+        this.els['answer-section'].classList.add('solved');
+        this.els['fact-text'].textContent = step.historicalFact;
+        setTimeout(() => this.els['fact-reveal'].classList.add('visible'), 400);
+    },
+
     onCorrect(step) {
         this.els['answer-input'].disabled = true;
         this.els['answer-feedback'].textContent = step.answer;
@@ -296,7 +331,7 @@ const HappyHunting = {
         this.els['answer-input'].classList.add('shake');
         setTimeout(() => this.els['answer-input'].classList.remove('shake'), 350);
 
-        if (this.wrongAttempts >= 3) {
+        if (this.wrongAttempts >= 3 && step.answer) {
             this.els['answer-feedback'].textContent = `Hint: starts with "${step.answer.charAt(0)}"`;
         }
 
@@ -345,6 +380,12 @@ const HappyHunting = {
             if (e.key === 'Enter') this.checkAnswer();
         });
 
+        // Photo done
+        this.els['photo-done-btn'].addEventListener('click', () => this.solvePhoto());
+
+        // Dice shuffle
+        this.els['dice-btn'].addEventListener('click', () => this.shuffleClue());
+
         // Next clue
         this.els['next-btn'].addEventListener('click', () => this.nextClue());
 
@@ -352,12 +393,10 @@ const HappyHunting = {
         const digits = document.querySelectorAll('.code-digit');
         digits.forEach((input, i) => {
             input.addEventListener('input', () => {
-                // Only allow digits
                 input.value = input.value.replace(/\D/g, '');
                 if (input.value && i < digits.length - 1) {
                     digits[i + 1].focus();
                 }
-                // Check code when all 4 entered
                 if (i === digits.length - 1 && input.value) {
                     const code = Array.from(digits).map(d => d.value).join('');
                     if (code.length === 4) this.verifyCode(code);
@@ -368,7 +407,6 @@ const HappyHunting = {
                     digits[i - 1].focus();
                 }
             });
-            // Select on focus for easy replacement
             input.addEventListener('focus', () => input.select());
         });
     }

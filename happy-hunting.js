@@ -19,7 +19,16 @@ const HappyHuntingLanding = {
         try {
             const res = await fetch('scavenger-hunt-schema.json');
             const data = await res.json();
-            this.hunts = data.hunts;
+            this.hunts = data.hunts.map(hunt => {
+                // Derive steps from cluePool if no steps array
+                if (!hunt.steps && hunt.cluePool) {
+                    hunt.steps = [1, 2, 3].map((ring, i) => {
+                        const pick = hunt.cluePool.find(c => c.ring === ring) || hunt.cluePool[i];
+                        return { ...pick, stepNumber: i + 1 };
+                    });
+                }
+                return hunt;
+            });
         } catch (e) {
             this.hunts = [];
         }
@@ -33,7 +42,7 @@ const HappyHuntingLanding = {
                 <div class="hunt-card-bar">${hunt.bar.name}</div>
                 <div class="hunt-card-hood">${hunt.bar.neighborhood}</div>
                 <div class="hunt-card-theme">${hunt.theme}</div>
-                <div class="hunt-card-meta">${hunt.totalWalkingDistance} walk &middot; ${hunt.steps.length} clues</div>
+                <div class="hunt-card-meta">${hunt.totalWalkingDistance} walk &middot; 3 clues${hunt.cluePool ? ' &middot; ' + hunt.cluePool.length + ' variations' : ''}</div>
                 <div class="hunt-card-styles">
                     <button class="style-btn active" data-style="free" data-hunt="${hunt.huntId}">Free</button>
                     <button class="style-btn" data-style="ransom" data-hunt="${hunt.huntId}">Ransom</button>
