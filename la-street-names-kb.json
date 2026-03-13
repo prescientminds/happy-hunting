@@ -1,0 +1,426 @@
+{
+  "source": "lastreetnames.com by Mark Tapio Kines (2,100+ entries)",
+  "purpose": "LA street name origins for scavenger hunt clue generation",
+  "streets": [
+    {
+      "street": "Beaudry Avenue",
+      "neighborhoods": ["Historic Filipinotown", "DTLA", "Victor Heights"],
+      "namedAfter": "Prudent Beaudry (1818-1893)",
+      "who": "French-Canadian businessman, 9th mayor of Los Angeles (1874)",
+      "year": "1870s",
+      "facts": [
+        "Only Frenchman to ever serve as mayor of Los Angeles",
+        "Built reservoirs, laid gas lines, planted 4,000 street trees",
+        "Came to LA in 1852",
+        "His brother Victor also served on the City Council",
+        "Beaudry Avenue runs directly into Victor Heights — the residential neighborhood named for brother Victor. The brothers' legacies are literally connected by the street grid.",
+        "Michael's favorite LA street fact: 'What LA street named after an early LA resident runs into a residential neighborhood named for that resident's brother?'"
+      ],
+      "cluePotential": "very high",
+      "connectedClues": ["Victor Heights", "Temple Street", "Thunderbolt bar"]
+    },
+    {
+      "street": "Alvarado Street",
+      "neighborhoods": ["Echo Park", "Historic Filipinotown", "Silver Lake", "Westlake"],
+      "namedAfter": "Juan Bautista Alvarado (1809-1882)",
+      "who": "Mexican governor of Alta California (1836-1842)",
+      "year": "1850s",
+      "facts": [
+        "Led a coup at age 27 to seize the governorship",
+        "His era was marked by armed skirmishes between NorCal and SoCal",
+        "The instability rendered California vulnerable to U.S. takeover in 1846",
+        "Quit politics in 1848, died in obscurity"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Beverly Boulevard",
+      "neighborhoods": ["Citywide", "Beverly Hills", "West Hollywood"],
+      "namedAfter": "City of Beverly Hills (founded 1906)",
+      "who": "Named to co-opt the Beverly name for property values",
+      "year": "1916",
+      "facts": [
+        "Created by combining sections of 1st Street and Temple Street in 1916",
+        "Until 1934, the winding stretch of what is now Sunset Blvd between Benedict Canyon and the coast was actually called Beverly Boulevard",
+        "Didn't fully open until 1926"
+      ],
+      "cluePotential": "medium"
+    },
+    {
+      "street": "Broadway",
+      "neighborhoods": ["Citywide", "DTLA", "Gardena"],
+      "namedAfter": "New York's Broadway (aspirational renaming)",
+      "who": "Renamed by printer Fred Lind Alles (1851-1945)",
+      "year": "1890",
+      "facts": [
+        "Originally 'Fort Street' after Fort Moore, built by American soldiers after Mexican-American War",
+        "Renamed Feb 1890 because German immigrants confused 'Fort Street' with 'Fourth Street'",
+        "Fred Lind Alles spent months petitioning for the change",
+        "Several other streets (Eternity Street, Buena Vista Street, Downey Avenue) were later absorbed into Broadway"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Cahuenga Boulevard",
+      "neighborhoods": ["Hancock Park", "Hollywood", "Hollywood Hills", "North Hollywood"],
+      "namedAfter": "Kizh/Tongva village 'Kawee'nga'",
+      "who": "Indigenous name from the Kizh (Tongva) people",
+      "year": "pre-colonial",
+      "facts": [
+        "Follows an ancient footpath — the Cahuenga Pass — between the LA basin and the village near present-day Universal City",
+        "Treaty of Cahuenga signed here Jan 13, 1847 by Andres Pico and John C. Fremont, ending California's involvement in the Mexican-American War",
+        "Possible meanings: 'place of the hill' or 'place of the fox'"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Cesar E. Chavez Avenue",
+      "neighborhoods": ["Boyle Heights", "DTLA", "East LA"],
+      "namedAfter": "Cesar Estrada Chavez (1927-1993)",
+      "who": "Labor leader, co-founded United Farm Workers",
+      "year": "1994",
+      "facts": [
+        "Co-founded UFW with Dolores Huerta and Gilbert Padilla in 1962",
+        "Thoroughfare consists of former Brooklyn Avenue, Macy Street, and a portion of Sunset Boulevard",
+        "Renamed in his honor in 1994, a year after his death"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Echo Park Avenue",
+      "neighborhoods": ["Echo Park"],
+      "namedAfter": "Echo Park — echoes heard around the reservoir",
+      "who": "Named by city parks superintendent Joseph Henry Tomlinson",
+      "year": "1894",
+      "facts": [
+        "LA's primary water source was its river; a reservoir was dug here in 1868 (Reservoir Site No. 4 — today's Echo Park Lake)",
+        "Real estate speculator Thomas Kelley donated 33 acres for parkland in 1891",
+        "The name 'Echo Park' was coined for the echoes Tomlinson heard around the reservoir"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Figueroa Street",
+      "neighborhoods": ["Citywide", "Carson", "Gardena", "Wilmington"],
+      "namedAfter": "General Jose Figueroa (1792-1835), governor of Alta California",
+      "who": "Governor who secularized the missions and began offering land grants",
+      "year": "1897",
+      "facts": [
+        "First laid out in 1849 as Calle de los Chapules — 'Grasshopper Street'",
+        "Legend: if grasshoppers made it past this road, the grape harvest would be doomed",
+        "Renamed Pearl Street in 1874, then Figueroa in 1897",
+        "The old Figueroa (a few blocks west) was renamed Boylston"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Flower Street",
+      "neighborhoods": ["DTLA", "South LA", "University Park"],
+      "namedAfter": "Blossom-filled hills behind the street",
+      "who": "Named on 1849 Ord/Hutton survey map",
+      "year": "1849",
+      "facts": [
+        "Part of alleged 'Faith, Hope, and Charity' trio of downtown streets — but no evidence Flower was ever called 'Faith Street'",
+        "Merchant Harris Newmark claimed Emeline Childs named all three in the 1860s",
+        "Its only name has always been Flower"
+      ],
+      "cluePotential": "medium"
+    },
+    {
+      "street": "Grand Avenue",
+      "neighborhoods": ["DTLA", "South LA", "University Park"],
+      "namedAfter": "Renamed from Charity Street",
+      "who": "Property owners petitioned because they hated 'living on charity' jokes",
+      "year": "1886",
+      "facts": [
+        "Originally Charity Street on the 1849 map",
+        "LA Daily Times: Council 'took pity on the people who were sick of living on charity'",
+        "Residents initially suggested Pacific Avenue, but that name was taken"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Griffith Park Boulevard",
+      "neighborhoods": ["Los Feliz", "Silver Lake"],
+      "namedAfter": "Griffith Jenkins Griffith (1850-1919)",
+      "who": "Welsh mining magnate who donated 3,015 acres for a public park",
+      "year": "1925",
+      "facts": [
+        "Donated land as Christmas gift in 1896, requesting it be for 'the plain people'",
+        "In 1903, shot out his wife Tina's right eye during a drunken rampage at Santa Monica's Hotel Arcadia",
+        "Spent two years in San Quentin",
+        "After his death, city used his money to build Griffith Observatory and the Greek Theatre",
+        "Boulevard was originally Childs Avenue"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Hollywood Boulevard",
+      "neighborhoods": ["East Hollywood", "Hollywood", "Hollywood Hills West"],
+      "namedAfter": "'Hollywood' — origin disputed",
+      "who": "Harvey and Daeida Wilcox branded 120 acres 'Hollywood' in 1887",
+      "year": "1901",
+      "facts": [
+        "Originally called Prospect Avenue, renamed 1901",
+        "Competing origins: (1) woman on train told Ida about 'Hollywood' near Chicago; (2) sister claimed Ida named it after California holly; (3) landowner Ivar Weid suggested it",
+        "Hollywood annexed by LA in 1910"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Hoover Street",
+      "neighborhoods": ["Citywide", "Gardena"],
+      "namedAfter": "Vincent Hoover (1825-1883), banker and subdivider",
+      "who": "Father Dr. Leonce Hoover pioneered LA's wine industry",
+      "year": "1875",
+      "facts": [
+        "Was once the western boundary of the city of LA",
+        "Briefly renamed 'West Boundary Street' in 1892, but it didn't stick",
+        "Streets west of Hoover run on strict north-south grid; east of Hoover, at 36-degree angle"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Hope Street",
+      "neighborhoods": ["DTLA", "University Park"],
+      "namedAfter": "Possibly Dr. Alexander W. Hope (c. 1820-1856) or the virtue of hope",
+      "who": "Virginia physician who became LA's first chief of police in 1851",
+      "year": "1849",
+      "facts": [
+        "On the 1849 Ord/Hutton survey map, though the street didn't exist until late 1860s",
+        "Spanish name: Calle de las Esperanzas",
+        "Theory: part of 'Faith, Hope, and Charity' trio with Flower and Grand"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Hyperion Avenue",
+      "neighborhoods": ["Silver Lake"],
+      "namedAfter": "Hyperion — Greek Titan, father of Helios (sun god), or Longfellow's novel",
+      "who": "Laid out in 1887 on the Childs Heights tract",
+      "year": "1887",
+      "facts": [
+        "Either named for Greek Titan (father of Helios, god of the sun) or Longfellow's novel Hyperion (1836)",
+        "Other streets in the tract have literary allusions",
+        "Originally ran just a couple blocks; extended by city ordinance in 1911"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "La Brea Avenue",
+      "neighborhoods": ["Citywide", "Inglewood", "West Hollywood"],
+      "namedAfter": "La brea — 'the tar' in Spanish",
+      "who": "From old Rancho La Brea with famous tar deposits",
+      "year": "1906",
+      "facts": [
+        "Tar first coated native canoes, then adobe roofs",
+        "Rancho deeded in 1828 to Rocha family, who lost it to their own lawyer Henry Hancock in legal fees",
+        "Hancock's son George discovered oil, developed Hancock Park",
+        "Originally Plummer Street; renamed La Brea in 1906"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Los Feliz Boulevard",
+      "neighborhoods": ["Atwater Village", "Los Feliz"],
+      "namedAfter": "The Feliz family — not 'the happy'",
+      "who": "Vicente Feliz (c. 1741-1822), corporal who protected LA's first 44 non-native settlers",
+      "year": "1888",
+      "facts": [
+        "Spanish crown granted Vicente 6,647 acres: Rancho Los Feliz, around 1800",
+        "Los Feliz means 'the Feliz family,' not 'the happy'",
+        "Pronunciation debate: old-timers say 'loss FEE-liz,' transplants say 'lohs fuh-LEASE'",
+        "Widened from avenue to boulevard in 1912"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Main Street",
+      "neighborhoods": ["Citywide", "DTLA"],
+      "namedAfter": "Being the main street — from Calle Principal",
+      "who": "Likely the oldest street in LA",
+      "year": "1781+",
+      "facts": [
+        "Began as one of two anonymous roads from the original pueblo's plaza in 1781",
+        "Known as Calle Real, then Calle Principal, then Main Street",
+        "Some historians believe surveyor Ord confused Main with what is now Los Angeles Street on his 1849 map"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Mulholland Drive",
+      "neighborhoods": ["Citywide"],
+      "namedAfter": "William Mulholland (1855-1935), water department superintendent",
+      "who": "Built the LA Aqueduct; career ended by St. Francis Dam disaster",
+      "year": "1922",
+      "facts": [
+        "Born in Belfast, worked from ditch cleaner to head of Water Department",
+        "Famous quote at aqueduct opening: 'There it is. Take it.'",
+        "St. Francis Dam failed March 12, 1928, killing over 450 people",
+        "Mulholland Drive laid out in 1922 when things were still going well"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Normandie Avenue",
+      "neighborhoods": ["Citywide", "Gardena", "Koreatown"],
+      "namedAfter": "Unknown French inspiration — possibly a steamer or hotel",
+      "who": "Renamed by developer Edwin S. Rowley from Oshkosh, Wisconsin",
+      "year": "1898",
+      "facts": [
+        "Originally Rosedale Avenue because it led to Rosedale Cemetery",
+        "Rowley didn't want to sell houses on a street named after a graveyard",
+        "Possibly inspired by transatlantic steamer La Normandie or a DC hotel"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Olvera Street",
+      "neighborhoods": ["DTLA"],
+      "namedAfter": "Judge Agustin Olvera (1818-1876)",
+      "who": "Helped negotiate Treaty of Cahuenga; LA County's first superior court judge",
+      "year": "1873",
+      "facts": [
+        "Not actually the oldest street in LA despite appearances",
+        "Previously called Wine Street or Vine Street, or 'the street next to Judge Olvera's house'",
+        "Christine Sterling transformed it into a Mexican-themed marketplace in 1930 with help from LA Times publisher Harry Chandler and prison labor"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Ord Street",
+      "neighborhoods": ["Chinatown"],
+      "namedAfter": "Lt. Edward Otho Cresap Ord (1818-1883), U.S. Army engineer",
+      "who": "Created the first American map of Los Angeles in 1849",
+      "year": "1890",
+      "facts": [
+        "Roomed with William Tecumseh Sherman at West Point",
+        "Later forced Robert E. Lee to surrender",
+        "Originally Calle Alta ('High Street'), renamed Walters Street in 1886, then Ord in 1890",
+        "Most streets on his 1849 map didn't yet exist — the work was aspirational"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Pico Boulevard",
+      "neighborhoods": ["Citywide", "Santa Monica"],
+      "namedAfter": "Pio de Jesus Pico (1801-1894), last Mexican governor of Alta California",
+      "who": "Born at Mission San Gabriel; of Spanish, Native American, and African heritage",
+      "year": "1855",
+      "facts": [
+        "LA never had an unlucky 13th Street — the street after 12th was dubbed Pico Street",
+        "Financed luxury hotel Pico House (still standing) by selling San Fernando Valley land",
+        "Gambling debts left him penniless",
+        "Became Pico Boulevard in 1914"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Silver Lake Boulevard",
+      "neighborhoods": ["Atwater Village", "Silver Lake"],
+      "namedAfter": "Herman Silver (1831-1913), city official",
+      "who": "German Jewish immigrant who crossed paths with Abraham Lincoln in Illinois",
+      "year": "1911",
+      "facts": [
+        "Not named for a color or metal, but for a man",
+        "Elected City Council president in 1896",
+        "Silver Lake Reservoir named in his honor in 1903 when Mulholland announced plans to dam Ivanhoe Canyon"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Spring Street",
+      "neighborhoods": ["Chinatown", "DTLA"],
+      "namedAfter": "Possibly Trinidad Ortega (1832-1903), nicknamed 'Primavera' (Spring)",
+      "who": "Pio Pico's niece — surveyor Ord allegedly found her charming",
+      "year": "1849",
+      "facts": [
+        "Surveyor Edward Ord allegedly named it after Trinidad Ortega from San Diego",
+        "May have previously been Calle de Caridad (Charity Street) or Calle Cuidado (Caution Street)",
+        "The romance angle is 'surely hogwash' per the site, but the Ortega connection was promoted at a 1932 luncheon by Trinidad's daughter"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Sunset Boulevard",
+      "neighborhoods": ["Citywide", "Beverly Hills", "West Hollywood"],
+      "namedAfter": "A planned town called 'Sunset' (1887) that never materialized",
+      "who": "Boulevard was the main drag of a ghost town that never existed",
+      "year": "1887",
+      "facts": [
+        "Planned town 'Sunset' announced in present-day Westwood in June 1887 — but never materialized",
+        "Started small, absorbed streets named Bread, Short, Elysian, and Marchessault",
+        "The Sunset Strip in WeHo was known as Santa Monica Avenue",
+        "Easternmost portion renamed Cesar Chavez Avenue in 1994"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Temple Street",
+      "neighborhoods": ["DTLA", "Historic Filipinotown"],
+      "namedAfter": "John Temple (1796-1866), Massachusetts tradesman",
+      "who": "Opened LA's first general store c. 1828; created modern DTLA with his Temple Block buildings",
+      "year": "1859",
+      "facts": [
+        "One of LA's earliest American settlers, became a Mexican citizen ('Juan')",
+        "Owned Rancho Los Cerritos (today's Long Beach)",
+        "His half-brother Francis Pliny Fisk Temple was another major land-grabber"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Vermont Avenue",
+      "neighborhoods": ["Citywide", "Gardena"],
+      "namedAfter": "Vermont (the state), via Ozro W. Childs (1824-1890)",
+      "who": "LA's most famous Vermonter: banker, developer, horticulturalist",
+      "year": "1882",
+      "facts": [
+        "Originally Childs Street on the 1876 West Los Angeles tract near USC",
+        "Childs and partners John G. Downey and Isaias W. Hellman donated this tract for the founding of USC in 1879",
+        "Vermont Avenue named by 1882, almost certainly after Childs's home state"
+      ],
+      "cluePotential": "high"
+    },
+    {
+      "street": "Vine Street",
+      "neighborhoods": ["Hollywood"],
+      "namedAfter": "Senator Cornelius Cole's grapevines",
+      "who": "Former U.S. Senator (R-CA) who planted a vineyard",
+      "year": "1893",
+      "facts": [
+        "Originally Weyse Avenue (1887) after Otto Gunther Weyse, Harvey Wilcox's partner",
+        "Weyse was declared insolvent in 1888, 'accidentally' shot himself in 1889, went through an abuse-filled divorce in 1890, and died at 34",
+        "Cole named Vine Street after his grapevines in 1893; the name crept north and replaced Weyse Avenue"
+      ],
+      "cluePotential": "very high"
+    },
+    {
+      "street": "Western Avenue",
+      "neighborhoods": ["Citywide", "Gardena", "Koreatown"],
+      "namedAfter": "Being west of city limits",
+      "who": "Genuinely was west of LA city limits when opened",
+      "year": "1885",
+      "facts": [
+        "Opened in 1885 as a county road, genuinely west of LA city limits",
+        "Hoover Street marked LA's western boundary at the time",
+        "City expanded to meet Western Avenue in 1896",
+        "Now about 27.5 miles long"
+      ],
+      "cluePotential": "medium"
+    },
+    {
+      "street": "Wilshire Boulevard",
+      "neighborhoods": ["Citywide", "Beverly Hills", "Santa Monica"],
+      "namedAfter": "Henry Gaylord Wilshire (1861-1927), 'millionaire socialist'",
+      "who": "Cincinnati banker's son who went by 'Gaylord'; befriended Jack London and George Bernard Shaw",
+      "year": "1895",
+      "facts": [
+        "Bought a barley field in 1887, failed to find oil, ran a boulevard through it in 1895",
+        "Named it after himself",
+        "Final years spent hawking a quack device called 'Ionaco'",
+        "Route follows a path used for eons — by indigenous peoples and even Ice Age mammals heading to the La Brea Tar Pits"
+      ],
+      "cluePotential": "very high"
+    }
+  ]
+}

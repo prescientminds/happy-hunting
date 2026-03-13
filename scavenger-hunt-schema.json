@@ -1,0 +1,327 @@
+{
+  "$schema": "hunt-schema-v2",
+  "description": "Each hunt has a cluePool of 10+ clues across 3 rings (distance tiers). Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Dice shuffle picks one from each ring.",
+  "constraints": {
+    "maxTotalDistance": "0.4 miles",
+    "maxStartDistance": "0.3 miles from bar",
+    "direction": "inward — each step closer to the bar",
+    "noFreewaysCrossed": true,
+    "stepsPerHunt": 3
+  },
+  "hunts": [
+    {
+      "huntId": "thunderbolt",
+      "bar": {
+        "name": "Thunderbolt",
+        "address": "1263 W Temple St",
+        "neighborhood": "Historic Filipinotown",
+        "happyHour": "Check thunderboltla.com",
+        "vibe": "Southern-inspired cocktails, centrifuge technique, Madeira list. North America's 50 Best Bars."
+      },
+      "theme": "Mayors, Fires, and the Man Who Built Temple Street",
+      "totalWalkingDistance": "~0.3 miles",
+      "narrativeArc": "From a French mayor's infrastructure legacy, through the fire stations that once protected this hillside, to a bar that transforms Southern tradition with laboratory precision.",
+      "avoidZones": ["Do not cross the 101 freeway", "Do not cross the 110 freeway"],
+      "cluePool": [
+        {
+          "ring": 1,
+          "type": "history",
+          "clue": "Two French-Canadian brothers shaped early Los Angeles. One became the 9th mayor in 1874 — he built reservoirs, laid gas lines, and planted 4,000 street trees. His brother served on the City Council. The mayor's avenue runs into a neighborhood named for the brother. Find the avenue where it meets Temple Street.",
+          "answer": "Beaudry Avenue",
+          "answerVariants": ["beaudry", "beaudry ave", "beaudry avenue"],
+          "historicalFact": "Prudent Beaudry (1818–1893) became LA's 9th mayor in 1874 — winning by a single vote. His brother Victor served on City Council. Beaudry Avenue runs into Victor Heights — the brothers' legacies connected by the street grid."
+        },
+        {
+          "ring": 1,
+          "type": "history",
+          "clue": "In 1849, a downtown street was called Calle de los Chapules — Grasshopper Street. Legend said if grasshoppers crossed this road, the grape harvest was doomed. It became Pearl Street, then took a governor's name in 1897 — forcing the ORIGINAL street with that name to be renamed. The castoff is near Temple. Find it.",
+          "answer": "Boylston Street",
+          "answerVariants": ["boylston", "boylston st", "boylston street"],
+          "historicalFact": "When Grasshopper St → Pearl St was renamed Figueroa in 1897, the original Figueroa a few blocks west had to become Boylston. Boylston near Temple is the original Figueroa — a street that lost its identity."
+        },
+        {
+          "ring": 1,
+          "type": "wordplay",
+          "clue": "Unscramble these letters: R-U-B-Y-A-D-E. They spell an avenue named after LA's only French-born mayor. He won his election by a single vote. Find where this avenue meets Temple Street.",
+          "answer": "Beaudry",
+          "answerVariants": ["beaudry", "beaudry ave", "beaudry avenue"],
+          "historicalFact": "Prudent Beaudry transformed LA from a dusty pueblo into a functioning city with gas lighting, reservoirs, and 4,000 street trees."
+        },
+        {
+          "ring": 1,
+          "type": "trivia",
+          "clue": "The neighborhood surrounding Temple Street here was officially designated in 2002 to honor a community that has lived in this area since the 1920s. Locals call it by its two-letter abbreviation: HiFi. What's the full name?",
+          "answer": "Historic Filipinotown",
+          "answerVariants": ["historic filipinotown", "hifi", "hi-fi", "hi fi"],
+          "historicalFact": "Historic Filipinotown was designated by the LA City Council in 2002. Filipino immigrants settled here in the 1920s, making it one of the oldest Filipino communities in the US."
+        },
+        {
+          "ring": 2,
+          "type": "history",
+          "clue": "Near Temple Street, a firehouse once stood on an avenue whose name means 'beautiful view' in French. Engine Company No. 6 — built in the 1890s — served the families of this hillside before the freeway came through. What avenue?",
+          "answer": "Bellevue Avenue",
+          "answerVariants": ["bellevue", "bellevue ave", "bellevue avenue"],
+          "historicalFact": "Old Fire Station #6 on Bellevue Avenue served HiFi and surrounding neighborhoods. 'Bellevue' is French for 'beautiful view' — fitting for the elevated streets above Temple."
+        },
+        {
+          "ring": 2,
+          "type": "history",
+          "clue": "A street near Temple is named after a Los Angeles County Supervisor from the 1870s who also helped found the town of Banning, California. It crosses Temple and rhymes with 'pixel.' What street?",
+          "answer": "Bixel Street",
+          "answerVariants": ["bixel", "bixel st", "bixel street"],
+          "historicalFact": "Bixel Street crosses Temple in the transition zone between Historic Filipinotown and downtown LA."
+        },
+        {
+          "ring": 2,
+          "type": "trivia",
+          "clue": "Temple Street is named after John Temple, who sailed from Massachusetts to LA around 1828 and opened the city's first general store. He became a Mexican citizen named 'Juan' and eventually owned a rancho that became a modern beach city. Which city?",
+          "answer": "Long Beach",
+          "answerVariants": ["long beach"],
+          "historicalFact": "John Temple owned Rancho Los Cerritos — today's Long Beach. His Temple Block buildings on Main Street created the commercial core of early DTLA."
+        },
+        {
+          "ring": 2,
+          "type": "photo",
+          "answerType": "photo",
+          "clue": "LA has over 450 hidden public staircases — remnants of the streetcar era. The hillside of Victor Heights near Temple and Beaudry has several. Find any staircase in this neighborhood and take a photo from the bottom looking up.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "LA's public staircases were built in the early 1900s to connect hilltop neighborhoods to streetcar lines below. Many are still used daily as walking paths."
+        },
+        {
+          "ring": 3,
+          "type": "history",
+          "clue": "Your destination shares its name with a small town outside Savannah, Georgia — population 2,668. But this version deals in centrifuges, not shrimp boats. It was named one of North America's 50 Best Bars. It's at 1263 W Temple St.",
+          "answer": "Thunderbolt",
+          "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
+          "historicalFact": "John Temple came to LA c. 1828 and opened the city's first general store. Temple Street was named in his honor in 1859."
+        },
+        {
+          "ring": 3,
+          "type": "trivia",
+          "clue": "This bar uses laboratory centrifuges to make cocktails. Named one of North America's 50 Best Bars. Its name is also a type of lightning. It serves Southern-inspired drinks at 1263 W Temple.",
+          "answer": "Thunderbolt",
+          "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
+          "historicalFact": "Thunderbolt specializes in Southern-inspired cocktails using centrifuge clarification — a technique that produces crystal-clear drinks with intense flavor."
+        },
+        {
+          "ring": 3,
+          "type": "puzzle",
+          "clue": "The bar is hiding in this sentence: 'In the thunder, bolt the doors and windows.' Its cocktails use lab equipment normally found in hospitals. 1263 W Temple St.",
+          "answer": "Thunderbolt",
+          "answerVariants": ["thunderbolt", "thunder bolt"],
+          "historicalFact": "Thunderbolt, the bar, is named after Thunderbolt, Georgia — a fishing community outside Savannah."
+        }
+      ]
+    },
+    {
+      "huntId": "seven-grand",
+      "bar": {
+        "name": "Seven Grand",
+        "address": "515 W 7th St, 2nd Floor",
+        "neighborhood": "DTLA",
+        "happyHour": "Mon–Fri 5–7pm, $10 cocktails, $6 beers",
+        "vibe": "Hunting-lodge whiskey bar with 700+ bottles. Taxidermy. Live jazz."
+      },
+      "theme": "Charity, Grasshoppers, and the Girl Named Spring",
+      "totalWalkingDistance": "~0.35 miles",
+      "narrativeArc": "A street ashamed of its name. A street named for a woman who may not have existed. And a whiskey bar sitting on top of a map drawn before any of these streets were real.",
+      "avoidZones": ["Stay within the DTLA grid — no freeway crossings needed"],
+      "cluePool": [
+        {
+          "ring": 1,
+          "type": "history",
+          "clue": "In 1849, this downtown street was called Charity Street. By 1886, property owners petitioned City Council for a name change — they were sick of jokes about 'living on charity.' The Council took pity. What avenue did Charity become?",
+          "answer": "Grand Avenue",
+          "answerVariants": ["grand", "grand ave", "grand avenue"],
+          "historicalFact": "Grand Avenue was originally Charity Street on the 1849 Ord survey map. Residents suggested Pacific Avenue, but that name was taken."
+        },
+        {
+          "ring": 1,
+          "type": "trivia",
+          "clue": "Two of DTLA's most famous buildings sit on this avenue: a concert hall designed by Frank Gehry and an art museum by Renzo Piano. The avenue itself was originally called Charity — until residents demanded something more dignified. What is it?",
+          "answer": "Grand Avenue",
+          "answerVariants": ["grand", "grand ave", "grand avenue"],
+          "historicalFact": "Walt Disney Concert Hall (Gehry, 2003) and The Broad (Diller Scofidio + Renfro, 2015) both sit on Grand Avenue, the former Charity Street."
+        },
+        {
+          "ring": 1,
+          "type": "puzzle",
+          "clue": "Five DTLA streets in order, going east: Flower, Hope, ___, Olive, Hill. One of these used to be called Charity. Fill in the blank.",
+          "answer": "Grand",
+          "answerVariants": ["grand", "grand ave", "grand avenue"],
+          "historicalFact": "The 1849 Ord survey named these streets. Hope and Charity were neighbors — but while Hope kept its name, Charity was forced to change after 37 years of jokes."
+        },
+        {
+          "ring": 1,
+          "type": "wordplay",
+          "clue": "Find the 5-letter word hidden in this phrase: 'a flag ran down the hill.' That word is also the avenue that Charity Street became. Head there.",
+          "answer": "Grand",
+          "answerVariants": ["grand", "grand ave", "grand avenue"],
+          "historicalFact": "flaGRANDown — Grand Avenue, renamed from Charity in 1886. The LA Daily Times reported Council 'took pity on the people who were sick of living on charity.'"
+        },
+        {
+          "ring": 2,
+          "type": "history",
+          "clue": "A downtown street may have been named after a woman — Pio Pico's niece from San Diego, nicknamed 'Primavera.' Surveyor Edward Ord supposedly found her charming in 1849 and named a street in her honor. The romance angle is 'surely hogwash.' But the street is real. Find it.",
+          "answer": "Spring Street",
+          "answerVariants": ["spring", "spring st", "spring street"],
+          "historicalFact": "Spring Street may be named after Trinidad Ortega (1832–1903), nicknamed 'Primavera' (Spring). Her daughter promoted the story at a 1932 luncheon."
+        },
+        {
+          "ring": 2,
+          "type": "trivia",
+          "clue": "The world's shortest railway — Angels Flight — has carried riders up Bunker Hill since 1901. It connects the avenue that was once Charity at the top to a street at the bottom named after the terrain. What's the bottom street?",
+          "answer": "Hill Street",
+          "answerVariants": ["hill", "hill st", "hill street"],
+          "historicalFact": "Angels Flight, a 298-foot funicular, connects Hill Street to Grand Avenue on Bunker Hill. It costs $1 to ride."
+        },
+        {
+          "ring": 2,
+          "type": "photo",
+          "clue": "The Eastern Columbia Building on Broadway (between 8th and 9th) has a clock tower covered in glazed terra cotta — one of LA's greatest Art Deco landmarks. Find it and take a photo. What color dominates the building?",
+          "answer": "turquoise",
+          "answerVariants": ["turquoise", "teal", "blue", "blue-green", "aqua", "blue green"],
+          "historicalFact": "The Eastern Columbia Building (1929) is clad in glossy turquoise terra cotta with gold trim — one of the finest Art Deco buildings in Los Angeles."
+        },
+        {
+          "ring": 2,
+          "type": "observation",
+          "clue": "Broadway between 3rd and 7th has more pre-war movie palaces per block than anywhere in the world — the Million Dollar Theatre (1918), the Los Angeles Theatre (1931), the Palace (1911). What street are they on?",
+          "answer": "Broadway",
+          "answerVariants": ["broadway", "s broadway", "south broadway"],
+          "historicalFact": "Broadway's Theatre District between 3rd and 9th contains 12 historic movie palaces — the highest concentration in the world."
+        },
+        {
+          "ring": 3,
+          "type": "history",
+          "clue": "Your destination sits at 515 W 7th St, second floor. Inside: taxidermy on the walls, live jazz, and 700 bottles of whiskey. The street was first drawn on a map in 1849 by Lt. Edward Ord — who later forced Robert E. Lee to surrender.",
+          "answer": "Seven Grand",
+          "answerVariants": ["seven grand", "7 grand"],
+          "historicalFact": "Lt. Edward Ord drew the first American map of LA in 1849. He roomed with Sherman at West Point and forced Lee's surrender at Appomattox."
+        },
+        {
+          "ring": 3,
+          "type": "trivia",
+          "clue": "700+ whiskey bottles. Taxidermy. Live jazz. Second floor. This bar's name combines the street number with a word meaning 'impressive' — which also happens to be the avenue that Charity Street became. 515 W 7th.",
+          "answer": "Seven Grand",
+          "answerVariants": ["seven grand", "7 grand"],
+          "historicalFact": "Seven Grand houses one of the most extensive whiskey collections on the West Coast."
+        },
+        {
+          "ring": 3,
+          "type": "wordplay",
+          "clue": "Take the number of the street (7th). Write it as a word. Add the avenue that Charity became. That's the bar. Second floor, 515.",
+          "answer": "Seven Grand",
+          "answerVariants": ["seven grand", "7 grand"],
+          "historicalFact": "Seven + Grand. The bar sits on 7th Street, one block from Grand Avenue — the former Charity Street."
+        }
+      ]
+    },
+    {
+      "huntId": "frolic-room",
+      "bar": {
+        "name": "Frolic Room",
+        "address": "6245 Hollywood Blvd",
+        "neighborhood": "Hollywood",
+        "happyHour": "Daily 4–7pm, $5 wells, $4 beers",
+        "vibe": "Legendary dive bar since 1934. Al Hirschfeld mural. Adjacent to the Pantages Theatre."
+      },
+      "theme": "A Fox Path, a Disgraced Vintner, and the Boulevard That Wasn't",
+      "totalWalkingDistance": "~0.35 miles",
+      "narrativeArc": "An indigenous footpath. A disgraced man's street renamed for a senator's grapes. And a boulevard whose origin story no one can agree on — leading to a bar that's been telling stories since 1934.",
+      "avoidZones": ["Stay on Hollywood Blvd corridor — no freeways to cross"],
+      "cluePool": [
+        {
+          "ring": 1,
+          "type": "history",
+          "clue": "This boulevard follows a path the Kizh people walked for centuries — from the LA basin through a mountain pass to their village near present-day Universal City. The Treaty of Cahuenga, ending California's role in the Mexican-American War, was signed in its pass on January 13, 1847. Its name might mean 'place of the fox.' Find the boulevard.",
+          "answer": "Cahuenga Boulevard",
+          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+          "historicalFact": "Cahuenga follows the ancient Tongva footpath. The Treaty of Cahuenga was signed Jan 13, 1847 by Andres Pico and John C. Fremont."
+        },
+        {
+          "ring": 1,
+          "type": "trivia",
+          "clue": "The Capitol Records Building — designed to look like a stack of 45s on a turntable — sits near this boulevard. The architect says the resemblance is a coincidence. The boulevard follows an indigenous path through a mountain pass. What boulevard?",
+          "answer": "Cahuenga Boulevard",
+          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+          "historicalFact": "The Capitol Records Building (1956) was designed by Welton Becket. Despite the persistent myth, he said the record-stack resemblance was unintentional."
+        },
+        {
+          "ring": 1,
+          "type": "wordplay",
+          "clue": "Unscramble: A-H-U-G-C-A-N-E. This boulevard began as a Tongva footpath. A peace treaty was signed in its pass in 1847. It intersects Hollywood Blvd near some of the most famous recording studios in the world.",
+          "answer": "Cahuenga",
+          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+          "historicalFact": "The Treaty of Cahuenga effectively ended fighting in California during the Mexican-American War."
+        },
+        {
+          "ring": 1,
+          "type": "puzzle",
+          "clue": "Indigenous people called this mountain pass 'Kawee'nga.' The Spanish heard 'Cahuenga.' UCLA linguists think it means 'place of the fox' or 'place of the hill.' Today it's a boulevard, a freeway exit, and a recording studio corridor. What's the name?",
+          "answer": "Cahuenga",
+          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+          "historicalFact": "Cahuenga is derived from the Tongva word 'Kawee'nga,' with competing etymological interpretations from UCLA linguist Pamela Munro."
+        },
+        {
+          "ring": 2,
+          "type": "history",
+          "clue": "On Hollywood Blvd — originally called Prospect Avenue until 1901 — a cross street was named after a U.S. Senator's grapevines. Its original name honored a man who went bankrupt, shot himself, endured a brutal divorce, and died at 34. The senator's grapes were a better namesake. What street?",
+          "answer": "Vine Street",
+          "answerVariants": ["vine", "vine st", "vine street"],
+          "historicalFact": "Vine Street was originally Weyse Avenue (1887) after Otto Gunther Weyse. After his spectacular downfall, Senator Cornelius Cole renamed it after his grapevines in 1893."
+        },
+        {
+          "ring": 2,
+          "type": "trivia",
+          "clue": "One of the most famous intersections in the world pairs a boulevard with a street named after a crop that once grew here. Together, they're shorthand for the entire entertainment industry. What's the crop street?",
+          "answer": "Vine Street",
+          "answerVariants": ["vine", "vine st", "vine street"],
+          "historicalFact": "Hollywood & Vine became synonymous with entertainment in the 1920s when nearby studios and radio stations made it the industry's geographic center."
+        },
+        {
+          "ring": 2,
+          "type": "puzzle",
+          "clue": "Before 1901, Hollywood Blvd was called Prospect Avenue. Before 1893, Vine Street was called Weyse Avenue. The most famous intersection in entertainment would have been 'Prospect & Weyse.' What was Hollywood Boulevard's original name?",
+          "answer": "Prospect Avenue",
+          "answerVariants": ["prospect", "prospect ave", "prospect avenue"],
+          "historicalFact": "Prospect Avenue was renamed Hollywood Boulevard in 1901, a few years after the Wilcoxes began developing their ranch."
+        },
+        {
+          "ring": 2,
+          "type": "photo",
+          "answerType": "photo",
+          "clue": "Walk along the Hollywood Walk of Fame. Find a star that belongs to someone you've never heard of. Take a photo of it.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "The Hollywood Walk of Fame has over 2,700 five-pointed terrazzo-and-brass stars. The first eight were installed in 1960. New stars cost $75,000 — paid by the honoree's sponsors."
+        },
+        {
+          "ring": 3,
+          "type": "history",
+          "clue": "At 6245 Hollywood Blvd, next to the Pantages Theatre, a bar has been pouring drinks since 1934 — the year Prohibition ended. An Al Hirschfeld mural covers one wall, depicting the stars who drank here. Walk in.",
+          "answer": "Frolic Room",
+          "answerVariants": ["frolic room", "frolic", "the frolic room"],
+          "historicalFact": "Hollywood was branded by Harvey and Daeida Wilcox in 1887. No one agrees on the name's origin — a woman on a train, California holly, or a neighbor's suggestion."
+        },
+        {
+          "ring": 3,
+          "type": "trivia",
+          "clue": "This dive bar opened the same year Prohibition ended — 1934. It shares a wall with a theatre where Howard Hughes once premiered movies. Charles Bukowski was a regular. It's at 6245 Hollywood Blvd.",
+          "answer": "Frolic Room",
+          "answerVariants": ["frolic room", "frolic", "the frolic room"],
+          "historicalFact": "The Frolic Room is one of the last remaining bars from Hollywood Boulevard's golden age. Bukowski drank here regularly."
+        },
+        {
+          "ring": 3,
+          "type": "photo",
+          "clue": "Find 6245 Hollywood Blvd. The neon sign has been glowing since the 1930s. Take a photo of it. Now: what's the name of the theatre next door — the one where Hamilton and other Broadway shows play?",
+          "answer": "Pantages",
+          "answerVariants": ["pantages", "pantages theatre", "the pantages"],
+          "historicalFact": "The Pantages Theatre (1930) was designed by B. Marcus Priteca. Howard Hughes maintained an office upstairs while running RKO Pictures."
+        }
+      ]
+    }
+  ]
+}

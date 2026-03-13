@@ -1,0 +1,5799 @@
+[
+  {
+    "id": "misfit-daily",
+    "restaurant": "The Misfit",
+    "neighborhood": "Santa Monica",
+    "address": "225 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "12:00",
+    "endTime": "19:00",
+    "drinks": [
+      "50% off ALL cocktails",
+      "50% off wines by the glass",
+      "50% off spirits"
+    ],
+    "food": [
+      "$9 Barfly Menu items Mon-Fri (smash burger, tacos, salads)"
+    ],
+    "normalPriceContext": "Cocktails normally $16-20 \u2192 $8-10 at HH",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "daily"
+    ]
+  },
+  {
+    "id": "cabo-cantina-hh",
+    "restaurant": "Cabo Cantina",
+    "neighborhood": "Santa Monica",
+    "address": "3rd Street Promenade",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "drinks": [
+      "2-for-1 ALL drinks"
+    ],
+    "food": [
+      "Taco Tuesday: $9.99 AYCE tacos"
+    ],
+    "normalPriceContext": "2-for-1 = effectively 50% off all drinks",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "daily"
+    ]
+  },
+  {
+    "id": "cabo-cantina-late",
+    "restaurant": "Cabo Cantina",
+    "neighborhood": "Santa Monica",
+    "address": "3rd Street Promenade",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "22:30",
+    "endTime": "24:00",
+    "drinks": [
+      "2-for-1 ALL drinks (late night)"
+    ],
+    "food": [],
+    "normalPriceContext": "2-for-1 = effectively 50% off",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "late-night"
+    ]
+  },
+  {
+    "id": "waterfront-weekday",
+    "restaurant": "The Waterfront",
+    "neighborhood": "Venice",
+    "address": "205 Ocean Front Walk",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "BOGO select drinks: Shot of Day $10, Margarita $16, Can of Day $7-11, Wine $12-14"
+    ],
+    "food": [
+      "$10 chicken sandwich",
+      "$10 fish tacos",
+      "$10 cheeseburger"
+    ],
+    "normalPriceContext": "BOGO on select drinks = ~50% off featured cocktails",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "ocean-view"
+    ]
+  },
+  {
+    "id": "waterfront-weekend",
+    "restaurant": "The Waterfront",
+    "neighborhood": "Venice",
+    "address": "205 Ocean Front Walk",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "19:00",
+    "endTime": "21:00",
+    "drinks": [
+      "BOGO select drinks (weekend evening)"
+    ],
+    "food": [
+      "$10 food specials"
+    ],
+    "normalPriceContext": "BOGO on select drinks",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "weekend",
+      "ocean-view"
+    ]
+  },
+  {
+    "id": "melanie-wine-daily",
+    "restaurant": "Melanie Wine Bar",
+    "neighborhood": "West 3rd / Fairfax",
+    "address": "8310 W 3rd St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "drinks": [
+      "50% off ALL wines by the glass"
+    ],
+    "food": [],
+    "normalPriceContext": "Wines normally $14-22/glass \u2192 $7-11",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "wine"
+    ]
+  },
+  {
+    "id": "melanie-wine-bottles",
+    "restaurant": "Melanie Wine Bar",
+    "neighborhood": "West 3rd / Fairfax",
+    "address": "8310 W 3rd St",
+    "daysOfWeek": [
+      0,
+      1,
+      2
+    ],
+    "startTime": "16:00",
+    "endTime": "22:00",
+    "drinks": [
+      "50% off bottles (Sun/Mon/Tue '50/50' deal with $50 food spend)"
+    ],
+    "food": [],
+    "normalPriceContext": "Half-price bottles with food purchase",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "wine"
+    ]
+  },
+  {
+    "id": "little-doms-monday",
+    "restaurant": "Little Dom's",
+    "neighborhood": "Los Feliz",
+    "address": "2128 Hillhurst Ave",
+    "daysOfWeek": [
+      1
+    ],
+    "startTime": "17:00",
+    "endTime": "22:00",
+    "drinks": [
+      "$25 bottle house wine",
+      "$5 draft beers"
+    ],
+    "food": [
+      "$25 three-course dinner (rotating weekly menu)"
+    ],
+    "normalPriceContext": "3-course dinner normally $40-50+ \u2192 $25. Wine bottles normally $40+ \u2192 $25",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "prix-fixe",
+      "monday-special"
+    ]
+  },
+  {
+    "id": "good-clean-fun-weekday",
+    "restaurant": "Good Clean Fun",
+    "neighborhood": "DTLA",
+    "address": "Downtown LA",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 natural wine (rotating)",
+      "$5 spritz",
+      "$5 beer",
+      "$10 select cocktails",
+      "$25 beer bucket (5)"
+    ],
+    "food": [],
+    "normalPriceContext": "Natural wines normally $14-18 \u2192 $9",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "natural-wine"
+    ]
+  },
+  {
+    "id": "good-clean-fun-monday",
+    "restaurant": "Good Clean Fun",
+    "neighborhood": "DTLA",
+    "address": "Downtown LA",
+    "daysOfWeek": [
+      1
+    ],
+    "startTime": "07:00",
+    "endTime": "14:00",
+    "drinks": [
+      "All-day HH pricing: $9 wine, $5 spritz/beer"
+    ],
+    "food": [],
+    "normalPriceContext": "All-day Monday (cafe hours only)",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "natural-wine",
+      "all-day"
+    ]
+  },
+  {
+    "id": "good-clean-fun-wednesday-tasting",
+    "restaurant": "Good Clean Fun",
+    "neighborhood": "DTLA",
+    "address": "Downtown LA",
+    "daysOfWeek": [
+      3
+    ],
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "drinks": [
+      "FREE wine tasting (complimentary sips)"
+    ],
+    "food": [],
+    "normalPriceContext": "Free",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "free",
+      "wine-tasting"
+    ]
+  },
+  {
+    "id": "rossoblu-wednesday",
+    "restaurant": "Rossoblu",
+    "neighborhood": "DTLA / Fashion District",
+    "address": "1124 San Julian St",
+    "daysOfWeek": [
+      3
+    ],
+    "startTime": "11:30",
+    "endTime": "22:00",
+    "drinks": [
+      "$12 classic cocktails & house wines",
+      "$7 beers",
+      "$3 off signature cocktails"
+    ],
+    "food": [
+      "$8-12 bar bites (eggplant, fries, fritto misto, meatballs, stracciatella)"
+    ],
+    "normalPriceContext": "All-day Wednesday HH. Cocktails normally $16-18 \u2192 $12",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "all-day",
+      "italian"
+    ]
+  },
+  {
+    "id": "rossoblu-regular",
+    "restaurant": "Rossoblu",
+    "neighborhood": "DTLA / Fashion District",
+    "address": "1124 San Julian St",
+    "daysOfWeek": [
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$12 classic cocktails & house wines",
+      "$7 beers"
+    ],
+    "food": [
+      "$8-12 bar bites"
+    ],
+    "normalPriceContext": "Cocktails normally $16-18 \u2192 $12",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "italian"
+    ]
+  },
+  {
+    "id": "everson-royce-weekday",
+    "restaurant": "Everson Royce Bar",
+    "neighborhood": "Arts District",
+    "address": "1936 E 7th St",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 cocktails",
+      "$8 wine",
+      "$6-7 beers",
+      "$6 mystery shot"
+    ],
+    "food": [
+      "$13 burger + fries"
+    ],
+    "normalPriceContext": "Cocktails normally $15-17 \u2192 $10. Burger normally $18+ \u2192 $13",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "arts-district"
+    ]
+  },
+  {
+    "id": "everson-royce-weekend",
+    "restaurant": "Everson Royce Bar",
+    "neighborhood": "Arts District",
+    "address": "1936 E 7th St",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 cocktails",
+      "$8 wine",
+      "$6-7 beers"
+    ],
+    "food": [
+      "$13 burger + fries"
+    ],
+    "normalPriceContext": "Cocktails normally $15-17 \u2192 $10",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "arts-district",
+      "weekend"
+    ]
+  },
+  {
+    "id": "escala-regular",
+    "restaurant": "Escala",
+    "neighborhood": "Koreatown",
+    "address": "3451 W 6th St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$6 pints (Hite/Stella)",
+      "$7 wine/well/Old Fashioned"
+    ],
+    "food": [
+      "$6 street corn/empanadas (2)",
+      "$7 carne asada sliders (2)/tamales"
+    ],
+    "normalPriceContext": "Old Fashioned normally $14 \u2192 $7",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "daily",
+      "latin"
+    ]
+  },
+  {
+    "id": "escala-latenight",
+    "restaurant": "Escala",
+    "neighborhood": "Koreatown",
+    "address": "3451 W 6th St",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "23:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$6-7 drinks (same as regular HH)"
+    ],
+    "food": [
+      "$6-7 food (same as regular HH)"
+    ],
+    "normalPriceContext": "Reverse happy hour Sun-Thu 11pm-1am",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "late-night"
+    ]
+  },
+  {
+    "id": "gracias-madre",
+    "restaurant": "Gracias Madre",
+    "neighborhood": "West Hollywood",
+    "address": "8905 Melrose Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 Purista Margarita (+$1 mezcal)",
+      "$6 draft beer",
+      "$8 wine"
+    ],
+    "food": [
+      "$7 select bites (nachos, ceviche tostada)",
+      "$10 Happy Madre Meal (jackfruit slider + fries + beer)"
+    ],
+    "normalPriceContext": "Margaritas normally $18 \u2192 $9. 50% off",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "plant-based",
+      "margaritas"
+    ]
+  },
+  {
+    "id": "broken-shaker",
+    "restaurant": "Broken Shaker",
+    "neighborhood": "DTLA",
+    "address": "416 W 8th St (Freehand Hotel)",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$12 cocktails",
+      "$6 beer (Tecate/Peroni)",
+      "$10 wine"
+    ],
+    "food": [
+      "$6 tacos",
+      "$10 guac & chips",
+      "$12 carne asada fries",
+      "$17 burger + HH beer combo"
+    ],
+    "normalPriceContext": "Cocktails normally $17-19 \u2192 $12",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "rooftop",
+      "hotel"
+    ]
+  },
+  {
+    "id": "jemma-aperitivo",
+    "restaurant": "Jemma",
+    "neighborhood": "Hollywood",
+    "address": "1717 Vine St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "17:00",
+    "drinks": [
+      "$12 spritzes",
+      "$16 mini cocktail flights"
+    ],
+    "food": [
+      "$18 pizzas",
+      "$15 crispy calamari",
+      "$10 dessert"
+    ],
+    "normalPriceContext": "Aperitivo pricing \u2014 call to confirm exact prices",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "italian",
+      "aperitivo"
+    ]
+  },
+  {
+    "id": "jemma-latenight",
+    "restaurant": "Jemma",
+    "neighborhood": "Hollywood",
+    "address": "1717 Vine St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "21:00",
+    "endTime": "22:00",
+    "drinks": [
+      "Digestivo HH pricing"
+    ],
+    "food": [
+      "Late-night menu"
+    ],
+    "normalPriceContext": "Late-night window 9-10pm (Fri/Sat may start 10:30pm)",
+    "quality": "B",
+    "verified": "2026-03",
+    "tags": [
+      "late-night",
+      "italian"
+    ]
+  },
+  {
+    "id": "fig-restaurant",
+    "restaurant": "FIG Restaurant",
+    "neighborhood": "Santa Monica",
+    "address": "101 Wilshire Blvd (Fairmont Miramar)",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "50% off HH cocktail menu & wine list"
+    ],
+    "food": [
+      "50% off curated HH menu (elevated bites)"
+    ],
+    "normalPriceContext": "50% off a curated HH menu (not full dinner menu)",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "hotel"
+    ]
+  },
+  {
+    "id": "citrin",
+    "restaurant": "Citrin",
+    "neighborhood": "Santa Monica",
+    "address": "Santa Monica (Michelin, Chef Josiah Citrin)",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "17:30",
+    "endTime": "19:00",
+    "drinks": [
+      "$13 cocktails",
+      "$11 wine",
+      "$9 beer"
+    ],
+    "food": [
+      "$15 lobster bolognese",
+      "Bar menu items (walk-ins, bar seating only)"
+    ],
+    "normalPriceContext": "Michelin-level food at bar prices. Lobster bolognese is a steal at $15",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "michelin",
+      "fine-dining"
+    ]
+  },
+  {
+    "id": "charcoal",
+    "restaurant": "Charcoal Venice",
+    "neighborhood": "Venice",
+    "address": "Venice (Chef Josiah Citrin)",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:30",
+    "endTime": "19:00",
+    "drinks": [
+      "$12 cocktails",
+      "$11 highballs",
+      "$7 wine",
+      "$6.50 beer"
+    ],
+    "food": [
+      "$14 steak frites",
+      "$12 Charcoal Burger",
+      "$4.25-9 bites (lamb ribs, skewers, calamari)"
+    ],
+    "normalPriceContext": "Steak frites normally $28+ \u2192 $14. 50% off",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "daily",
+      "fine-dining"
+    ]
+  },
+  {
+    "id": "connie-teds",
+    "restaurant": "Connie & Ted's",
+    "neighborhood": "West Hollywood",
+    "address": "8171 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 draft beers",
+      "$6 wines",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$10 half-dozen oysters",
+      "$5-6 smoked bluefish dip/Hook slider/clam cakes"
+    ],
+    "normalPriceContext": "Oysters normally $18-21/half-dozen \u2192 $10. ~50% off",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "seafood",
+      "oysters"
+    ]
+  },
+  {
+    "id": "electric-owl",
+    "restaurant": "Electric Owl",
+    "neighborhood": "West Hollywood",
+    "address": "1451 N Gardner St",
+    "daysOfWeek": [
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$6 cocktails",
+      "$4.20 beers"
+    ],
+    "food": [
+      "$4.20 Smash Daddy burger (wagyu/dry-aged, pickles, American cheese)"
+    ],
+    "normalPriceContext": "Wagyu smash burger normally $16+ \u2192 $4.20. Insane value",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "burger-deal"
+    ]
+  },
+  {
+    "id": "employees-only",
+    "restaurant": "Employees Only",
+    "neighborhood": "West Hollywood",
+    "address": "7953 Santa Monica Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$13-14 cocktails",
+      "$10 house wine"
+    ],
+    "food": [
+      "$11 roasted bone marrow",
+      "$13-15 wood-fired pizzas",
+      "$7 fried pickles",
+      "$8 chips & dip"
+    ],
+    "normalPriceContext": "\"Golden Hour\" \u2014 cocktails normally $18+ \u2192 $13-14",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktail-bar"
+    ]
+  },
+  {
+    "id": "big-bar-alcove",
+    "restaurant": "Big Bar / Alcove",
+    "neighborhood": "Los Feliz",
+    "address": "1929 Hillhurst Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "14:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$10 cocktail of the day / Aperol spritz",
+      "$8 wine",
+      "$2 off draft beer"
+    ],
+    "food": [
+      "$7-12 bites (mango habanero wings, cauliflower, burger)"
+    ],
+    "normalPriceContext": "5-hour window. Cocktails normally $15+ \u2192 $10",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "long-window"
+    ]
+  },
+  {
+    "id": "founders-weekday",
+    "restaurant": "Founders Ale House",
+    "neighborhood": "Pico-Robertson",
+    "address": "Pico Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 wines",
+      "$6 well drinks/beers",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$3.50 sliders/taquitos/meatballs",
+      "$7-10 bar bites"
+    ],
+    "normalPriceContext": "$3.50 sliders are the cheapest quality bite in LA",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "founders-weekday-late",
+    "restaurant": "Founders Ale House",
+    "neighborhood": "Pico-Robertson",
+    "address": "Pico Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "22:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$5 wines",
+      "$6 well drinks/beers",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$3.50 sliders/taquitos/meatballs"
+    ],
+    "normalPriceContext": "Late-night return of HH pricing",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "late-night",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "founders-friday",
+    "restaurant": "Founders Ale House",
+    "neighborhood": "Pico-Robertson",
+    "address": "Pico Blvd",
+    "daysOfWeek": [
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 wines",
+      "$6 well drinks/beers",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$3.50 sliders/taquitos/meatballs"
+    ],
+    "normalPriceContext": "Friday starts earlier at 3pm",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "founders-weekend",
+    "restaurant": "Founders Ale House",
+    "neighborhood": "Pico-Robertson",
+    "address": "Pico Blvd",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "13:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 wines",
+      "$6 well drinks/beers",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$3.50 sliders/taquitos/meatballs"
+    ],
+    "normalPriceContext": "Weekend HH starts at 1pm",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "weekend",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "idle-hour-weekday",
+    "restaurant": "Idle Hour",
+    "neighborhood": "North Hollywood",
+    "address": "4824 Vineland Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 classic cocktails/well drinks/wines",
+      "$2 off all beers"
+    ],
+    "food": [
+      "$7 flatbread pizza",
+      "$7 queso & chips",
+      "$7 chicken wings"
+    ],
+    "normalPriceContext": "Cocktails normally $13-15 \u2192 $7. Inside a giant barrel building",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "valley",
+      "landmark"
+    ]
+  },
+  {
+    "id": "idle-hour-saturday",
+    "restaurant": "Idle Hour",
+    "neighborhood": "North Hollywood",
+    "address": "4824 Vineland Ave",
+    "daysOfWeek": [
+      6
+    ],
+    "startTime": "13:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 classic cocktails/well drinks/wines",
+      "$2 off all beers"
+    ],
+    "food": [
+      "$7 flatbread pizza",
+      "$7 queso & chips"
+    ],
+    "normalPriceContext": "Saturday starts at 1pm \u2014 5 hours",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "weekend",
+      "valley"
+    ]
+  },
+  {
+    "id": "idle-hour-sunday",
+    "restaurant": "Idle Hour",
+    "neighborhood": "North Hollywood",
+    "address": "4824 Vineland Ave",
+    "daysOfWeek": [
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 classic cocktails/well drinks/wines",
+      "$16 bottomless mimosas (brunch)"
+    ],
+    "food": [
+      "$7 bites"
+    ],
+    "normalPriceContext": "$16 bottomless mimosas at brunch",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "weekend",
+      "brunch",
+      "valley"
+    ]
+  },
+  {
+    "id": "marco-polo-wednesday",
+    "restaurant": "Marco Polo",
+    "neighborhood": "Silver Lake",
+    "address": "Silver Lake",
+    "daysOfWeek": [
+      3
+    ],
+    "startTime": "08:00",
+    "endTime": "22:00",
+    "drinks": [
+      "Half-price bottles of wine ALL DAY"
+    ],
+    "food": [
+      "$15 pasta / $30 full supper (Pasta Party 6-9pm)"
+    ],
+    "normalPriceContext": "50% off all bottles. Bottles normally $40-80 \u2192 $20-40",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "all-day",
+      "half-off"
+    ]
+  },
+  {
+    "id": "marco-polo-regular",
+    "restaurant": "Marco Polo",
+    "neighborhood": "Silver Lake",
+    "address": "Silver Lake",
+    "daysOfWeek": [
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 beers",
+      "$8 wines",
+      "$12 cocktails"
+    ],
+    "food": [
+      "$5 snacks"
+    ],
+    "normalPriceContext": "$4 beers among the cheapest in the area",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "wine"
+    ]
+  },
+  {
+    "id": "bodega-wine-wednesday",
+    "restaurant": "Bodega Wine Bar",
+    "neighborhood": "Santa Monica",
+    "address": "814 Broadway",
+    "daysOfWeek": [
+      3
+    ],
+    "startTime": "16:00",
+    "endTime": "22:00",
+    "drinks": [
+      "$25 bottles of wine (Wine Wednesday)"
+    ],
+    "food": [],
+    "normalPriceContext": "Bottles normally $40-60 \u2192 $25",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "wine-wednesday"
+    ]
+  },
+  {
+    "id": "bodega-wine-regular",
+    "restaurant": "Bodega Wine Bar",
+    "neighborhood": "Santa Monica",
+    "address": "814 Broadway",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$8 wine glasses",
+      "$4 beer",
+      "$7 sangria"
+    ],
+    "food": [
+      "$9 starters",
+      "$15 pizzas"
+    ],
+    "normalPriceContext": "Mon-Thu regular HH",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "wine"
+    ]
+  },
+  {
+    "id": "tu-madre-taco-tuesday",
+    "restaurant": "Tu Madre",
+    "neighborhood": "WeHo / Los Feliz / SM / Westwood",
+    "address": "Multiple locations",
+    "daysOfWeek": [
+      2
+    ],
+    "startTime": "11:00",
+    "endTime": "22:00",
+    "drinks": [],
+    "food": [
+      "$2.40 street tacos ALL DAY (KBBQ, Rotisserie Chicken, Brisket)"
+    ],
+    "normalPriceContext": "Tacos normally $3.50-4 \u2192 $2.40",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "taco-tuesday"
+    ]
+  },
+  {
+    "id": "tu-madre-hh",
+    "restaurant": "Tu Madre",
+    "neighborhood": "WeHo / Los Feliz / SM / Westwood",
+    "address": "Multiple locations",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$6 beers",
+      "$10 wines/cocktails"
+    ],
+    "food": [
+      "$1.50-2.50 street tacos",
+      "$6-12 bar bites"
+    ],
+    "normalPriceContext": "Tacos drop to $1.50 during HH window",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "tacos"
+    ]
+  },
+  {
+    "id": "messhall-tuesday",
+    "restaurant": "MessHall Kitchen",
+    "neighborhood": "Los Feliz",
+    "address": "4500 Los Feliz Blvd",
+    "daysOfWeek": [
+      2
+    ],
+    "startTime": "17:00",
+    "endTime": "22:00",
+    "drinks": [],
+    "food": [
+      "$1 oysters",
+      "$1 tacos"
+    ],
+    "normalPriceContext": "Oysters normally $2+ \u2192 $1. Call to confirm start time: (323) 660-6377",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "taco-tuesday",
+      "oysters"
+    ]
+  },
+  {
+    "id": "messhall-hh",
+    "restaurant": "MessHall Kitchen",
+    "neighborhood": "Los Feliz",
+    "address": "4500 Los Feliz Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "Discounted cocktails and beer"
+    ],
+    "food": [
+      "HH menu items"
+    ],
+    "normalPriceContext": "Regular weekday HH 3-6pm",
+    "quality": "B",
+    "verified": "2026-03",
+    "tags": []
+  },
+  {
+    "id": "maple-block",
+    "restaurant": "Maple Block Meat Co.",
+    "neighborhood": "Culver City",
+    "address": "3973 Sepulveda Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "20:00",
+    "endTime": "21:00",
+    "drinks": [
+      "BOGO drinks (cocktails, beer, wine) last hour before close"
+    ],
+    "food": [],
+    "normalPriceContext": "BOGO = 50% off. Time varies \u2014 1hr before close nightly",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "bbq"
+    ]
+  },
+  {
+    "id": "nick-stefs",
+    "restaurant": "Nick + Stef's Steakhouse",
+    "neighborhood": "DTLA",
+    "address": "330 S Hope St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$13 cocktails",
+      "$11 wine",
+      "$7-9 beers"
+    ],
+    "food": [
+      "Bar snacks $11 & under (deviled eggs, crabcake sliders, sweet potato fries)",
+      "$28 grilled hanger steak"
+    ],
+    "normalPriceContext": "Steakhouse bar bites at casual prices",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "steakhouse"
+    ]
+  },
+  {
+    "id": "nick-stefs-friday",
+    "restaurant": "Nick + Stef's Steakhouse",
+    "neighborhood": "DTLA",
+    "address": "330 S Hope St",
+    "daysOfWeek": [
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$13 cocktails",
+      "$11 wine",
+      "$7-9 beers"
+    ],
+    "food": [
+      "Bar snacks $11 & under"
+    ],
+    "normalPriceContext": "Friday starts at 4pm (not 3pm)",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "steakhouse"
+    ]
+  },
+  {
+    "id": "redbird",
+    "restaurant": "Redbird",
+    "neighborhood": "DTLA / Historic Core",
+    "address": "114 E 2nd St",
+    "daysOfWeek": [
+      3,
+      4,
+      5
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$12 cocktails",
+      "$12 wine"
+    ],
+    "food": [
+      "$15 small plates (duck wings, shishito peppers, hiramasa crudo)"
+    ],
+    "normalPriceContext": "Fine dining HH. Bar seating only",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "fine-dining"
+    ]
+  },
+  {
+    "id": "far-bar",
+    "restaurant": "Far Bar",
+    "neighborhood": "Little Tokyo",
+    "address": "347 E 1st St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$12 featured cocktails",
+      "$4 beer of the day",
+      "$5 wells"
+    ],
+    "food": [
+      "$3-5 select appetizers",
+      "$7 Far Bar Burger + fries"
+    ],
+    "normalPriceContext": "Beer of the day $4 is great value. Burger deal solid",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "little-tokyo"
+    ]
+  },
+  {
+    "id": "uchi",
+    "restaurant": "Uchi",
+    "neighborhood": "West Hollywood",
+    "address": "9001 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "18:30",
+    "drinks": [
+      "$10 cocktails",
+      "$6 beer",
+      "$7-12 wine/sake"
+    ],
+    "food": [
+      "$4-5 oysters",
+      "$8-12 crispy rice/walu walu",
+      "$6.50+ nigiri",
+      "~$60 HH omakase tasting"
+    ],
+    "normalPriceContext": "High-end sushi at HH prices. Omakase tasting normally $100+ \u2192 ~$60",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "sushi",
+      "fine-dining",
+      "omakase"
+    ]
+  },
+  {
+    "id": "uchi-cocktail-bar",
+    "restaurant": "Uchi (Cocktail Bar)",
+    "neighborhood": "West Hollywood",
+    "address": "9001 Santa Monica Blvd",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "22:00",
+    "drinks": [
+      "HH pricing all night at the cocktail bar (Sun-Thu)"
+    ],
+    "food": [
+      "HH menu available all night at cocktail bar"
+    ],
+    "normalPriceContext": "All-night HH at the cocktail bar only, Sun-Thu",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "sushi",
+      "all-night"
+    ]
+  },
+  {
+    "id": "alexander-steakhouse",
+    "restaurant": "Alexander's Steakhouse",
+    "neighborhood": "Pasadena",
+    "address": "111 N Los Robles Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "17:00",
+    "endTime": "18:30",
+    "drinks": [
+      "$9 margaritas/Manhattans/daiquiris",
+      "$5 craft beers",
+      "$2.50 hamachi shots"
+    ],
+    "food": [
+      "$16 Wagyu burger",
+      "$4 oysters",
+      "$8 potato croquettes"
+    ],
+    "normalPriceContext": "Wagyu burger normally $24+ \u2192 $16. Hamachi shots $2.50 unheard of",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "steakhouse",
+      "pasadena",
+      "fine-dining"
+    ]
+  },
+  {
+    "id": "the-arbour",
+    "restaurant": "The Arbour",
+    "neighborhood": "Pasadena",
+    "address": "527 S Lake Ave #120",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 draft beer",
+      "$6 wine",
+      "$8 Old Fashioned",
+      "$9 martini"
+    ],
+    "food": [
+      "$7 cheeseburger",
+      "$6 oysters",
+      "$5 cheese plate",
+      "$5 garlic fries"
+    ],
+    "normalPriceContext": "$7 cheeseburger + $5 fries = full meal for $12",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "daily"
+    ]
+  },
+  {
+    "id": "cafe-santorini",
+    "restaurant": "Cafe Santorini",
+    "neighborhood": "Pasadena",
+    "address": "64 W Union St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$6 sangria/draft beer",
+      "$7 wine/well drinks/specialty cocktails"
+    ],
+    "food": [
+      "$6 grilled calamari/curry shrimp/saffron clams"
+    ],
+    "normalPriceContext": "$6 seafood apps are a steal",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "mediterranean"
+    ]
+  },
+  {
+    "id": "brookside",
+    "restaurant": "Brookside Restaurant (Rose Bowl)",
+    "neighborhood": "Pasadena",
+    "address": "1133 Rosemont Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 well drinks/margaritas",
+      "$4 domestic drafts",
+      "$4 house wines"
+    ],
+    "food": [
+      "$2 bacon blue cheese dip/loaded tots/buffalo wings/chips & guac",
+      "$1 tacos (Tue)",
+      "$5 margaritas (Tue)"
+    ],
+    "normalPriceContext": "$2 loaded tots and wings. $1 Taco Tuesday",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "raymond-1886",
+    "restaurant": "The Raymond's 1886",
+    "neighborhood": "Pasadena / South Pasadena",
+    "address": "1250 S Fair Oaks Ave",
+    "daysOfWeek": [
+      2,
+      3,
+      4
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "Half off well drinks",
+      "$5 craft beers",
+      "$5 wine",
+      "$7 cocktail of the day"
+    ],
+    "food": [
+      "Half off mac & cheese, steamed mussels, short rib tacos"
+    ],
+    "normalPriceContext": "Historic Pasadena bar. Half-off food and wells",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "half-off",
+      "cocktail-bar"
+    ]
+  },
+  {
+    "id": "magnolia-house",
+    "restaurant": "Magnolia House",
+    "neighborhood": "Pasadena",
+    "address": "492 S Lake Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:30",
+    "drinks": [
+      "$5 draft beer/wine/well drinks/house sangria"
+    ],
+    "food": [
+      "$3 Belgian fries",
+      "$5 deviled eggs/hummus",
+      "$7 drunken nachos",
+      "$9 tuna poke tacos"
+    ],
+    "normalPriceContext": "$3 fries + $5 drink = $8 for a round",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "edwin-mills-monday",
+    "restaurant": "Edwin Mills",
+    "neighborhood": "Pasadena",
+    "address": "22 Mills Pl",
+    "daysOfWeek": [
+      1
+    ],
+    "startTime": "16:00",
+    "endTime": "22:00",
+    "drinks": [
+      "Half-price ALL alcohol (Monday Madness)"
+    ],
+    "food": [
+      "Half-price appetizers"
+    ],
+    "normalPriceContext": "50% off everything. Best Monday deal in Pasadena",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "half-off",
+      "monday-special"
+    ]
+  },
+  {
+    "id": "edwin-mills-wine-wed",
+    "restaurant": "Edwin Mills",
+    "neighborhood": "Pasadena",
+    "address": "22 Mills Pl",
+    "daysOfWeek": [
+      3
+    ],
+    "startTime": "16:00",
+    "endTime": "22:00",
+    "drinks": [
+      "Half-price wine & sake"
+    ],
+    "food": [],
+    "normalPriceContext": "Wine Wednesday \u2014 half-price wine and sake",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "wine-wednesday",
+      "half-off"
+    ]
+  },
+  {
+    "id": "edwin-mills-regular",
+    "restaurant": "Edwin Mills",
+    "neighborhood": "Pasadena",
+    "address": "22 Mills Pl",
+    "daysOfWeek": [
+      2,
+      4,
+      5
+    ],
+    "startTime": "11:00",
+    "endTime": "22:00",
+    "drinks": [
+      "$3 martinis/mixed drinks/bottle beer"
+    ],
+    "food": [],
+    "normalPriceContext": "$3 martinis Tue/Thu/Fri. $3!",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "simmzys",
+    "restaurant": "Simmzy's",
+    "neighborhood": "Manhattan Beach",
+    "address": "229 Manhattan Beach Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "15:00",
+    "endTime": "17:00",
+    "drinks": [
+      "$2 off beers",
+      "$5 off pitchers",
+      "$3 off cocktails & wines"
+    ],
+    "food": [],
+    "normalPriceContext": "Also runs last-hour-before-close deal",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay"
+    ]
+  },
+  {
+    "id": "ercoles",
+    "restaurant": "Ercole's 1101",
+    "neighborhood": "Manhattan Beach",
+    "address": "1101 Manhattan Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "10:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 pitchers"
+    ],
+    "food": [
+      "Wed: 2 burgers for $14 (5-10pm)"
+    ],
+    "normalPriceContext": "All-day HH until 6pm. $9 pitchers legendary",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay",
+      "dive",
+      "all-day"
+    ]
+  },
+  {
+    "id": "rebel-republic",
+    "restaurant": "Rebel Republic",
+    "neighborhood": "Redondo Beach",
+    "address": "1710 S Catalina Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 craft draft/prosecco/house wine",
+      "$7 classic cocktails"
+    ],
+    "food": [
+      "$7 eats"
+    ],
+    "normalPriceContext": "$5 prosecco daily",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay"
+    ]
+  },
+  {
+    "id": "huddys",
+    "restaurant": "Huddy's",
+    "neighborhood": "Redondo Beach",
+    "address": "514 N Pacific Coast Hwy",
+    "daysOfWeek": [
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4-8 drink specials",
+      "$6 draft Skyduster lager"
+    ],
+    "food": [
+      "$1 street tacos",
+      "$2 veggie tacos",
+      "$5.50 veggie taquitos (3)"
+    ],
+    "normalPriceContext": "(Verify HH \u2014 recently rebranded) $1 tacos at the beach. Also Fri 3-6pm, Sat 12-3pm",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "huddys-fri",
+    "restaurant": "Huddy's",
+    "neighborhood": "Redondo Beach",
+    "address": "514 N Pacific Coast Hwy",
+    "daysOfWeek": [
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4-8 drink specials"
+    ],
+    "food": [
+      "$1 street tacos",
+      "$2 veggie tacos"
+    ],
+    "normalPriceContext": "(Verify HH \u2014 recently rebranded) Friday 3-6pm window",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "huddys-sat",
+    "restaurant": "Huddy's",
+    "neighborhood": "Redondo Beach",
+    "address": "514 N Pacific Coast Hwy",
+    "daysOfWeek": [
+      6
+    ],
+    "startTime": "12:00",
+    "endTime": "15:00",
+    "drinks": [
+      "$4-8 drink specials"
+    ],
+    "food": [
+      "$1 street tacos",
+      "$2 veggie tacos"
+    ],
+    "normalPriceContext": "(Verify HH \u2014 recently rebranded) Saturday noon-3pm window",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay",
+      "cheap-eats",
+      "weekend"
+    ]
+  },
+  {
+    "id": "sausal",
+    "restaurant": "Sausal",
+    "neighborhood": "El Segundo",
+    "address": "219 Main St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7.50 margarita/sangria/house wine",
+      "$5.50 select beer"
+    ],
+    "food": [
+      "$4.25 small bites"
+    ],
+    "normalPriceContext": "Daily 3-6pm",
+    "quality": "B",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay"
+    ]
+  },
+  {
+    "id": "tavern-on-main",
+    "restaurant": "Tavern on Main",
+    "neighborhood": "El Segundo",
+    "address": "123 Main St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 drinks"
+    ],
+    "food": [
+      "$5 food items"
+    ],
+    "normalPriceContext": "Everything $5. Simple, strong",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "south-bay",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "proud-bird",
+    "restaurant": "Proud Bird",
+    "neighborhood": "Near LAX",
+    "address": "11022 Aviation Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 beers",
+      "$5 house drinks/wines",
+      "$8 select cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Airplane-themed restaurant near LAX. Outdoor aviation exhibits",
+    "quality": "B",
+    "verified": "2026-03",
+    "tags": [
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "the-greyhound-hp",
+    "restaurant": "The Greyhound",
+    "neighborhood": "Highland Park",
+    "address": "5570 N Figueroa St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "17:30",
+    "drinks": [
+      "$8 well drinks/wine",
+      "$6 draft beer",
+      "$9 cocktails"
+    ],
+    "food": [
+      "$9 carne asada quesadilla/wings/onion smash burger"
+    ],
+    "normalPriceContext": "Also late night Mon-Thu 10-11pm same pricing",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "highland-park"
+    ]
+  },
+  {
+    "id": "greyhound-hp-late",
+    "restaurant": "The Greyhound",
+    "neighborhood": "Highland Park",
+    "address": "5570 N Figueroa St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "22:00",
+    "endTime": "23:00",
+    "drinks": [
+      "$8 well drinks/wine",
+      "$6 draft beer",
+      "$9 cocktails"
+    ],
+    "food": [
+      "$9 food items"
+    ],
+    "normalPriceContext": "Late-night return of HH",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "highland-park",
+      "late-night"
+    ]
+  },
+  {
+    "id": "greyhound-glendale",
+    "restaurant": "The Greyhound",
+    "neighborhood": "Glendale",
+    "address": "130 S Brand Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "drinks": [
+      "$8 well/wine",
+      "$6 draft beer",
+      "$9 cocktails"
+    ],
+    "food": [
+      "50-cent wings Wed 6:30-10pm",
+      "$9 pizzas Thu",
+      "Half-price oysters Sat noon-8pm",
+      "$6 oysters (11-ct)"
+    ],
+    "normalPriceContext": "50-cent wings on Wednesday is elite. Half-price oysters Saturday",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "glendale"
+    ]
+  },
+  {
+    "id": "hail-mary-weekday",
+    "restaurant": "Hail Mary Pizza",
+    "neighborhood": "Atwater Village",
+    "address": "3219 Glendale Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$6-13 beer/wine"
+    ],
+    "food": [
+      "BOGO half-price pizza",
+      "$10 fire-roasted wings",
+      "$9 broccoli w/ chimichurri"
+    ],
+    "normalPriceContext": "Buy one pizza, second half off",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pizza",
+      "bogo"
+    ]
+  },
+  {
+    "id": "hail-mary-weekend",
+    "restaurant": "Hail Mary Pizza",
+    "neighborhood": "Atwater Village",
+    "address": "3219 Glendale Blvd",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "13:00",
+    "endTime": "17:00",
+    "drinks": [
+      "$6-13 beer/wine"
+    ],
+    "food": [
+      "BOGO half-price pizza",
+      "$10 wings"
+    ],
+    "normalPriceContext": "Weekend starts at 1pm",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pizza",
+      "bogo",
+      "weekend"
+    ]
+  },
+  {
+    "id": "hail-mary-latenight",
+    "restaurant": "Hail Mary Pizza",
+    "neighborhood": "Atwater Village",
+    "address": "3219 Glendale Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "20:00",
+    "endTime": "23:00",
+    "drinks": [
+      "$6-13 beer/wine"
+    ],
+    "food": [
+      "BOGO half-price pizza"
+    ],
+    "normalPriceContext": "Nightly 8pm-close deal",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "pizza",
+      "late-night",
+      "bogo"
+    ]
+  },
+  {
+    "id": "the-morrison",
+    "restaurant": "The Morrison",
+    "neighborhood": "Atwater Village",
+    "address": "3179 Los Feliz Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "startTime": "12:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 draft beers/well drinks/house wine/select cocktails"
+    ],
+    "food": [
+      "$5 sliders/wings/salad/potato skins/fries/mac & cheese"
+    ],
+    "normalPriceContext": "Everything $5 from noon-6pm. 6 hours. One of LA's best all-around deals",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "cheap-eats",
+      "all-day"
+    ]
+  },
+  {
+    "id": "the-morrison-sunday",
+    "restaurant": "The Morrison",
+    "neighborhood": "Atwater Village",
+    "address": "3179 Los Feliz Blvd",
+    "daysOfWeek": [
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 draft beers/well drinks/house wine/select cocktails"
+    ],
+    "food": [
+      "$5 sliders/wings/salad/potato skins/fries/mac & cheese"
+    ],
+    "normalPriceContext": "Sunday starts at 2pm",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "cheap-eats",
+      "weekend"
+    ]
+  },
+  {
+    "id": "gold-room",
+    "restaurant": "Gold Room",
+    "neighborhood": "Echo Park",
+    "address": "1558 W Sunset Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "PBR + shot of tequila ~$5-9",
+      "Cheap wells"
+    ],
+    "food": [
+      "2 tacos + beer + tequila shot reportedly ~$5"
+    ],
+    "normalPriceContext": "Classic dive. Call to confirm exact current prices",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "dear-janes",
+    "restaurant": "Dear Jane's",
+    "neighborhood": "Marina del Rey",
+    "address": "13950 Panay Way",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "17:30",
+    "endTime": "19:00",
+    "drinks": [
+      "$13 cocktails",
+      "$12 highballs",
+      "$8 wine",
+      "$7 beer"
+    ],
+    "food": [
+      "$4.50 oysters",
+      "$10 fried calamari",
+      "$12.50 yellowtail carpaccio",
+      "$14.50 fish & chips",
+      "$19 steak frites"
+    ],
+    "normalPriceContext": "Marina views. Bar seating, first-come first-served",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "marina",
+      "seafood"
+    ]
+  },
+  {
+    "id": "belles-beach-house",
+    "restaurant": "Belles Beach House",
+    "neighborhood": "Venice",
+    "address": "24 Windward Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 tiki cocktails/wine",
+      "$6 beer",
+      "$4 slushie shots"
+    ],
+    "food": [
+      "$6 edamame/bok choy",
+      "$8 pork dumplings",
+      "$10 mochiko chicken/cheeseburger spring rolls/hamachi roll"
+    ],
+    "normalPriceContext": "$4 slushie shots are fun",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "tiki",
+      "venice"
+    ]
+  },
+  {
+    "id": "gin-rummy",
+    "restaurant": "Gin Rummy",
+    "neighborhood": "Venice",
+    "address": "Venice",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 frozen daiquiris/margaritas",
+      "$8 wines/shots",
+      "$4 beer"
+    ],
+    "food": [
+      "$8 chicken wings",
+      "$11 coconut shrimp"
+    ],
+    "normalPriceContext": "$4 beer daily in Venice",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "daily",
+      "venice"
+    ]
+  },
+  {
+    "id": "piccalilli-weekday",
+    "restaurant": "Piccalilli",
+    "neighborhood": "Culver City",
+    "address": "3850 Main St",
+    "daysOfWeek": [
+      1,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 draft beers",
+      "$10 cocktails",
+      "$10 shot & beer combo"
+    ],
+    "food": [
+      "Crispy wings, pork jowl, Brussels sprouts, papaya salad"
+    ],
+    "normalPriceContext": "Southeast Asian happy hour",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "southeast-asian"
+    ]
+  },
+  {
+    "id": "piccalilli-weekend",
+    "restaurant": "Piccalilli",
+    "neighborhood": "Culver City",
+    "address": "3850 Main St",
+    "daysOfWeek": [
+      5,
+      6
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 draft beers",
+      "$10 cocktails"
+    ],
+    "food": [
+      "SE Asian bar bites"
+    ],
+    "normalPriceContext": "Fri-Sat starts at 4pm",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "southeast-asian"
+    ]
+  },
+  {
+    "id": "piccalilli-sunday",
+    "restaurant": "Piccalilli",
+    "neighborhood": "Culver City",
+    "address": "3850 Main St",
+    "daysOfWeek": [
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 draft beers",
+      "$10 cocktails"
+    ],
+    "food": [
+      "SE Asian bar bites"
+    ],
+    "normalPriceContext": "Sunday starts at 2pm \u2014 4 hours",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "southeast-asian",
+      "weekend"
+    ]
+  },
+  {
+    "id": "ugo-weekday",
+    "restaurant": "Ugo",
+    "neighborhood": "Culver City",
+    "address": "3865 Cardiff Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "14:30",
+    "endTime": "18:30",
+    "drinks": [
+      "$7-10 well/beer/wine",
+      "$11 Negroni/Aperol Spritz"
+    ],
+    "food": [
+      "$10 portobello fries",
+      "$13 Neapolitan pizzas",
+      "$14 calamari/meatballs/pasta"
+    ],
+    "normalPriceContext": "Starts at 2:30pm \u2014 long window. Thu: $6 cocktails, $7 pizzas, $8 apps on patio 5-9pm",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "italian"
+    ]
+  },
+  {
+    "id": "ugo-monday-night",
+    "restaurant": "Ugo",
+    "neighborhood": "Culver City",
+    "address": "3865 Cardiff Ave",
+    "daysOfWeek": [
+      1
+    ],
+    "startTime": "17:00",
+    "endTime": "21:00",
+    "drinks": [],
+    "food": [
+      "50% off ALL dishes (Monday night 5pm-close)"
+    ],
+    "normalPriceContext": "Half-off everything Monday nights. One of the best Monday deals in LA",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "monday-special",
+      "italian"
+    ]
+  },
+  {
+    "id": "dante-bh",
+    "restaurant": "Dante Beverly Hills",
+    "neighborhood": "Beverly Hills",
+    "address": "225 N Canon Dr (Maybourne Hotel)",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "17:00",
+    "drinks": [
+      "$10 martinis (7 styles, vodka or gin)"
+    ],
+    "food": [],
+    "normalPriceContext": "Martinis normally $22+ \u2192 $10. 55% off. Daily",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "beverly-hills",
+      "daily",
+      "martinis"
+    ]
+  },
+  {
+    "id": "genghis-cohen",
+    "restaurant": "Genghis Cohen",
+    "neighborhood": "Fairfax",
+    "address": "448 N Fairfax Ave",
+    "daysOfWeek": [
+      2,
+      3,
+      4
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$8 cocktails (Szechuan Margarita)",
+      "$5 Tsing Tao beer"
+    ],
+    "food": [
+      "$5 egg rolls/dumplings/butterfly shrimp/cold sesame noodles"
+    ],
+    "normalPriceContext": "$5 dumplings and egg rolls. 4-hour window",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "chinese"
+    ]
+  },
+  {
+    "id": "dog-haus-latenight",
+    "restaurant": "Dog Haus Biergarten",
+    "neighborhood": "Pasadena",
+    "address": "93 E Green St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "22:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$2 off draft beer & wine",
+      "$3 off cocktails"
+    ],
+    "food": [
+      "$1 off cheeseburger sliders (2)",
+      "$2 off loaded tots",
+      "$3 off wings"
+    ],
+    "normalPriceContext": "Late-night Mon-Thu. Format is now '$X off' rather than flat prices",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "late-night"
+    ]
+  },
+  {
+    "id": "dog-haus-sunday",
+    "restaurant": "Dog Haus Biergarten",
+    "neighborhood": "Pasadena",
+    "address": "93 E Green St",
+    "daysOfWeek": [
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "22:00",
+    "drinks": [
+      "Discounted draft beer, wine, cocktails"
+    ],
+    "food": [
+      "Discounted sliders, fries, tots"
+    ],
+    "normalPriceContext": "All-day Sunday happy hour 3pm-close",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "pasadena",
+      "weekend",
+      "all-day"
+    ]
+  },
+  {
+    "id": "moos-bbq",
+    "restaurant": "Moo's Craft Barbecue",
+    "neighborhood": "Lincoln Heights",
+    "address": "2118 N Broadway",
+    "daysOfWeek": [
+      4,
+      5
+    ],
+    "startTime": "14:00",
+    "endTime": "17:00",
+    "drinks": [
+      "$2 off craft beer",
+      "$6 Micheladas"
+    ],
+    "food": [
+      "$10 pulled pork/chopped brisket sandwiches",
+      "$10 Frito pie",
+      "$10 chili cheese fries"
+    ],
+    "normalPriceContext": "BBQ sandwiches normally $15+ \u2192 $10. Thu-Fri only",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bbq"
+    ]
+  },
+  {
+    "id": "formosa-cafe",
+    "restaurant": "Formosa Cafe",
+    "neighborhood": "West Hollywood",
+    "address": "7156 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$3 beers",
+      "$5 wine",
+      "$6 margaritas"
+    ],
+    "food": [
+      "$4-5 appetizers"
+    ],
+    "normalPriceContext": "$3 beers and $6 margs at a Hollywood landmark. Daily",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "daily",
+      "landmark",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "three-clubs",
+    "restaurant": "Three Clubs",
+    "neighborhood": "Hollywood",
+    "address": "1123 N Vine St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 drinks"
+    ],
+    "food": [
+      "$1 tacos"
+    ],
+    "normalPriceContext": "$1 tacos. Daily. Not a typo",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "daily",
+      "dive",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "red-lion-tavern",
+    "restaurant": "Red Lion Tavern",
+    "neighborhood": "Silver Lake",
+    "address": "2366 Glendale Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "25% off all drinks (German beers, wines, wells)"
+    ],
+    "food": [
+      "Specials on large pretzels"
+    ],
+    "normalPriceContext": "60+ year old German beer garden. 25% off",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "german",
+      "landmark"
+    ]
+  },
+  {
+    "id": "desert-5-spot",
+    "restaurant": "Desert 5 Spot",
+    "neighborhood": "Hollywood",
+    "address": "6516 Selma Ave (Tommie Hotel rooftop)",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "18:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$9 cocktails",
+      "$6 beer/wine"
+    ],
+    "food": [
+      "$10 for two tacos"
+    ],
+    "normalPriceContext": "Later start time (6pm). Country/Western vibes",
+    "quality": "B",
+    "verified": "2026-03",
+    "tags": [
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "boardners",
+    "restaurant": "Boardner's",
+    "neighborhood": "Hollywood",
+    "address": "1652 N Cherokee Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$3-4 beers",
+      "$5 wells",
+      "$5 house wine"
+    ],
+    "food": [
+      "$5 appetizers"
+    ],
+    "normalPriceContext": "Cheap all night. Hollywood dive since 1942",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "daily",
+      "landmark",
+      "cheap-eats"
+    ]
+  },
+  {
+    "id": "theia",
+    "restaurant": "Theia",
+    "neighborhood": "Melrose",
+    "address": "7661 Melrose Ave",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$10 select cocktails",
+      "$5-6 beer/wine"
+    ],
+    "food": [
+      "$3-12 Greek mezzes"
+    ],
+    "normalPriceContext": "Mykonos vibes. DJs and belly dancers",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "greek",
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "juliet",
+    "restaurant": "Juliet",
+    "neighborhood": "Culver City",
+    "address": "8888 Washington Blvd (Platform)",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "17:00",
+    "drinks": [
+      "Wine specials (small French producers)"
+    ],
+    "food": [
+      "$4 oysters",
+      "$14 mousse au foi de volaille"
+    ],
+    "normalPriceContext": "Parisian wine bar. Daily 3-5pm",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "french",
+      "wine",
+      "daily"
+    ]
+  },
+  {
+    "id": "frolic-room",
+    "restaurant": "Frolic Room",
+    "neighborhood": "Hollywood",
+    "address": "6245 Hollywood Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "11:00",
+    "endTime": "19:00",
+    "drinks": [
+      "~$6 bottled beer",
+      "Cheap well drinks",
+      "Strong pours"
+    ],
+    "food": [],
+    "normalPriceContext": "Classic Hollywood dive. Cheap all day. Next to Pantages Theatre",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "landmark",
+      "all-day"
+    ]
+  },
+  {
+    "id": "bigfoot-lodge-hh",
+    "restaurant": "Bigfoot Lodge",
+    "neighborhood": "Atwater Village",
+    "address": "3172 Los Feliz Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$3 wells",
+      "$5 margaritas",
+      "$5 Bloody Marys",
+      "$2 PBR cans"
+    ],
+    "food": [],
+    "normalPriceContext": "1933 Group bar. Normal cocktails $14-16 \u2192 $3-5 at HH",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "daily",
+      "half-off"
+    ]
+  },
+  {
+    "id": "oldfields-hh",
+    "restaurant": "Oldfield's Liquor Room",
+    "neighborhood": "Palms",
+    "address": "10899 Venice Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "21:00",
+    "drinks": [
+      "$5 beer & wine",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$3 empanadas"
+    ],
+    "normalPriceContext": "Craft cocktail bar, normal drinks $14-18 \u2192 $7 at HH. 1933 Group",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily",
+      "half-off"
+    ]
+  },
+  {
+    "id": "descanso-hh",
+    "restaurant": "Descanso",
+    "neighborhood": "Miracle Mile",
+    "address": "5773 Wilshire Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 house margaritas (classic, mango, guava, strawberry)",
+      "$9 well cocktails",
+      "$5-9 bottled beer",
+      "$9 featured wine",
+      "$3 off draft beers"
+    ],
+    "food": [
+      "Elote Asado",
+      "Choriqueso Verde",
+      "Street tacos (steak, chicken, al pastor, carnitas)"
+    ],
+    "normalPriceContext": "Michoacan-inspired. Normal cocktails $15-18 \u2192 $9 at HH",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "zori-hh",
+    "restaurant": "Zori",
+    "neighborhood": "West 3rd / Fairfax",
+    "address": "7910 W 3rd St",
+    "daysOfWeek": [
+      4,
+      5,
+      6
+    ],
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "drinks": [
+      "Discounted signature cocktails",
+      "Discounted beer & wine"
+    ],
+    "food": [],
+    "normalPriceContext": "Upscale gastropub. Short 1-hr window Thu-Sat. Call (323) 433-0303 for specific prices",
+    "quality": "B",
+    "verified": "2026-03",
+    "tags": [
+      "upscale",
+      "short-window"
+    ]
+  },
+  {
+    "id": "the-prince-hh",
+    "restaurant": "The Prince",
+    "neighborhood": "Koreatown",
+    "address": "3198 1/2 W 7th St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "drinks": [
+      "50% off ALL drinks"
+    ],
+    "food": [
+      "Korean fried chicken (small) $10.99"
+    ],
+    "normalPriceContext": "50% off everything. Cocktails $14 \u2192 $7. Mad Men / New Girl filming location",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "daily",
+      "landmark"
+    ]
+  },
+  {
+    "id": "guelaguetza-hh",
+    "restaurant": "Guelaguetza",
+    "neighborhood": "Koreatown",
+    "address": "3014 W Olympic Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "Half-off all draft beer",
+      "$7 margaritas (Tue)",
+      "$7 Ancient Peak wines (Wed)",
+      "2-for-1 Tecate Micheladas (Fri)"
+    ],
+    "food": [
+      "$12 Festival de Moles sampler (normally $29)",
+      "$4.50 quesadilla fritas",
+      "$7.50 chapulines a la Mexicana"
+    ],
+    "normalPriceContext": "James Beard-recognized Oaxacan. $12 mole sampler (normally $29) is 60% off",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "food-specials",
+      "half-off"
+    ]
+  },
+  {
+    "id": "mama-lion-hh",
+    "restaurant": "Mama Lion",
+    "neighborhood": "Koreatown",
+    "address": "601 S Western Ave",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "19:00",
+    "endTime": "21:00",
+    "drinks": [
+      "$6 Daiquiri / East Side",
+      "$8 Margarita / Old Fashioned"
+    ],
+    "food": [
+      "$12 half dozen oysters",
+      "$6 little gem salad",
+      "$8 crispy chicken sliders"
+    ],
+    "normalPriceContext": "Cocktails normally $14-18. Upscale lounge at HH prices",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "mama-lion-late",
+    "restaurant": "Mama Lion",
+    "neighborhood": "Koreatown",
+    "address": "601 S Western Ave",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "23:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$6 Daiquiri / East Side",
+      "$8 Margarita / Old Fashioned"
+    ],
+    "food": [],
+    "normalPriceContext": "Late night HH Tue-Sat 11pm-close",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "late-night"
+    ]
+  },
+  {
+    "id": "cassells-hh",
+    "restaurant": "Cassell's Hamburgers",
+    "neighborhood": "Koreatown",
+    "address": "3600 W 6th St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$7 Moscow Mule / Gold Rush / Margarita",
+      "$8 Old Fashioned",
+      "$1 off all beers"
+    ],
+    "food": [
+      "Burger + fries + craft beer $15"
+    ],
+    "normalPriceContext": "Inside Hotel Normandie. Burger combo normally $20+ \u2192 $15",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily",
+      "beer"
+    ]
+  },
+  {
+    "id": "hms-bounty-hh",
+    "restaurant": "HMS Bounty",
+    "neighborhood": "Koreatown",
+    "address": "3357 Wilshire Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5.50 boilermaker (shot + beer)"
+    ],
+    "food": [
+      "Sunday burger + fries $5 (noon-3pm)"
+    ],
+    "normalPriceContext": "1962 dive bar. Cheapest drink deal in Koreatown",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "beer"
+    ]
+  },
+  {
+    "id": "anju-house-hh",
+    "restaurant": "Anju House",
+    "neighborhood": "Koreatown",
+    "address": "234 S Oxford Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "All drinks under $10 (soju, beer, cocktails)"
+    ],
+    "food": [
+      "$5-10 'In This Economy' menu: animal fries, mayo shrimp, sausage & rice cake skewers"
+    ],
+    "normalPriceContext": "Regular items $20-30. Everything under $10 at HH. Korean pocha atmosphere",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "chi-chi-hh",
+    "restaurant": "Chi Chi",
+    "neighborhood": "Koreatown",
+    "address": "610 S Berendo St",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "startTime": "17:30",
+    "endTime": "22:00",
+    "drinks": [
+      "50% off all soju and beers"
+    ],
+    "food": [],
+    "normalPriceContext": "50% off soju ($10-15 \u2192 $5-7.50) and beer. Gaming tables, neon vibe",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off"
+    ]
+  },
+  {
+    "id": "normandie-club-hh",
+    "restaurant": "The Normandie Club",
+    "neighborhood": "Koreatown",
+    "address": "3612 W 6th St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "18:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$7 bartender's choice",
+      "$11 draft cocktails",
+      "$12 Old Fashioned"
+    ],
+    "food": [],
+    "normalPriceContext": "Cocktails normally $16-20. $7 bartender's choice is the move",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily"
+    ]
+  },
+  {
+    "id": "jjan-hh",
+    "restaurant": "JJAN Korean Gastropub",
+    "neighborhood": "Koreatown",
+    "address": "3328 W 8th St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:30",
+    "endTime": "20:00",
+    "drinks": [
+      "HH pricing on soju and beer"
+    ],
+    "food": [
+      "Modern Korean pub food at reduced prices"
+    ],
+    "normalPriceContext": "Low-key Korean pub. Call (213) 381-5838 to confirm prices",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer"
+    ]
+  },
+  {
+    "id": "dgm-soju-hh",
+    "restaurant": "DGM Soju Bar",
+    "neighborhood": "Koreatown",
+    "address": "3275 Wilshire Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:30",
+    "endTime": "20:00",
+    "drinks": [
+      "$7 soju"
+    ],
+    "food": [
+      "$8.99 spicy pork bulgogi with cheese",
+      "$7.99 sweet & sour chicken",
+      "$3 rice cake skewers"
+    ],
+    "normalPriceContext": "Regular soju $10-12. Retro-themed spot",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials"
+    ]
+  },
+  {
+    "id": "nandarang-hh",
+    "restaurant": "Nandarang",
+    "neighborhood": "Koreatown",
+    "address": "3811 W 6th St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "drinks": [],
+    "food": [
+      "50% off all anju (appetizers) with any alcoholic drink"
+    ],
+    "normalPriceContext": "Half-off food with every drink. Good for groups",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily",
+      "half-off"
+    ]
+  },
+  {
+    "id": "the-venue-hh",
+    "restaurant": "The Venue",
+    "neighborhood": "Koreatown",
+    "address": "3470 Wilshire Blvd B1",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "19:30",
+    "drinks": [
+      "$5 off specialty cocktails",
+      "$5 beer",
+      "$10 well liquor",
+      "$10 house wine"
+    ],
+    "food": [
+      "$9 karaage wings",
+      "$9 fried chicken & kimchi waffle"
+    ],
+    "normalPriceContext": "Cocktails normally $16-18. 13 private karaoke rooms",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "perch-hh",
+    "restaurant": "Perch",
+    "neighborhood": "DTLA",
+    "address": "448 S Hill St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 beers",
+      "$6 select wines",
+      "$7 select cocktails"
+    ],
+    "food": [
+      "$6 Campari Tomato Burrata",
+      "$4 Brioche Beef Slider"
+    ],
+    "normalPriceContext": "Rooftop French bistro. Cocktails normally $16-20. DTLA skyline views",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "rooftop",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "seven-grand-hh",
+    "restaurant": "Seven Grand",
+    "neighborhood": "DTLA",
+    "address": "515 W 7th St, 2nd Floor",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$4 beers",
+      "$5 cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "One of LA's largest whiskey collections. Cocktails normally $14-18",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "half-off"
+    ]
+  },
+  {
+    "id": "rappahannock-hh",
+    "restaurant": "Rappahannock Oyster Bar",
+    "neighborhood": "Arts District",
+    "address": "777 S Alameda St, Suite 154",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 beer",
+      "$7 wine",
+      "$8 sparkling",
+      "$10 shochu cocktails"
+    ],
+    "food": [
+      "$1.50 featured oyster"
+    ],
+    "normalPriceContext": "Virginia-farmed oysters. $1.50 oysters daily + all night Mondays",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "death-and-co-hh",
+    "restaurant": "Death & Co",
+    "neighborhood": "Arts District",
+    "address": "818 E 3rd St",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "startTime": "18:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$13 cocktails (normally $24-26)"
+    ],
+    "food": [
+      "Half off bar snacks"
+    ],
+    "normalPriceContext": "NYC legendary cocktail bar. Nearly half price on world-class drinks",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "half-off"
+    ]
+  },
+  {
+    "id": "le-draq-hh",
+    "restaurant": "le draQ",
+    "neighborhood": "DTLA",
+    "address": "118 W 4th St",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$4 Pacifico/Negra Modelo",
+      "$5 Michelada",
+      "$7 Seasonal Margarita",
+      "$26 margarita pitcher"
+    ],
+    "food": [
+      "$5 Super Nachos",
+      "$5 Guacamole",
+      "$5 Fried Kielbasa Soft Taco",
+      "$7 Short Rib Taquitos"
+    ],
+    "normalPriceContext": "(Verify HH \u2014 recently rebranded) Tex-Mex from Josef Centeno. Full meal under $10",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "food-specials",
+      "half-off"
+    ]
+  },
+  {
+    "id": "le-draq-sun",
+    "restaurant": "le draQ",
+    "neighborhood": "DTLA",
+    "address": "118 W 4th St",
+    "daysOfWeek": [
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 Pacifico/Negra Modelo",
+      "$5 Michelada",
+      "$7 Seasonal Margarita"
+    ],
+    "food": [
+      "$5 Super Nachos",
+      "$5 Guacamole"
+    ],
+    "normalPriceContext": "(Verify HH \u2014 recently rebranded) Sunday HH 4-6pm",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "library-bar-hh",
+    "restaurant": "Library Bar",
+    "neighborhood": "DTLA",
+    "address": "630 W 6th St, Suite 116-A",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "~$5 cocktails"
+    ],
+    "food": [
+      "Discounted bar food (fried pickles, Buffalo cauliflower)"
+    ],
+    "normalPriceContext": "Cocktails normally $14-16. Hidden gem with pool table, literary theme",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "dive"
+    ]
+  },
+  {
+    "id": "wolf-crane-hh",
+    "restaurant": "Wolf & Crane",
+    "neighborhood": "Little Tokyo",
+    "address": "366 E 2nd St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 beers, house wine, well liquors",
+      "Half off top shelf Mondays (Japanese whisky)"
+    ],
+    "food": [],
+    "normalPriceContext": "LA's largest Japanese whisky collection. Half-price Mon is a sleeper",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "beer"
+    ]
+  },
+  {
+    "id": "wolf-crane-sun",
+    "restaurant": "Wolf & Crane",
+    "neighborhood": "Little Tokyo",
+    "address": "366 E 2nd St",
+    "daysOfWeek": [
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$5 beers, house wine, well liquors"
+    ],
+    "food": [],
+    "normalPriceContext": "All night Sunday HH",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "all-day"
+    ]
+  },
+  {
+    "id": "wokcano-hh",
+    "restaurant": "Wokcano",
+    "neighborhood": "DTLA",
+    "address": "800 W 7th St",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "12:00",
+    "endTime": "18:30",
+    "drinks": [
+      "$4 draft beers, well drinks, house wines, sangrias",
+      "$5 sake bombs"
+    ],
+    "food": [
+      "$5-7 sushi rolls",
+      "$10 salmon sashimi with truffle oil",
+      "$1 oysters (Thu)"
+    ],
+    "normalPriceContext": "Massive HH window. Sushi rolls normally $12-18",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "long-window"
+    ]
+  },
+  {
+    "id": "wokcano-late",
+    "restaurant": "Wokcano",
+    "neighborhood": "DTLA",
+    "address": "800 W 7th St",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "20:30",
+    "endTime": "23:00",
+    "drinks": [
+      "$4 draft beers, well drinks, house wines",
+      "$5 sake bombs"
+    ],
+    "food": [
+      "$5-7 sushi rolls"
+    ],
+    "normalPriceContext": "Late night HH 8:30-11pm",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "late-night"
+    ]
+  },
+  {
+    "id": "joyce-hh",
+    "restaurant": "Joyce",
+    "neighborhood": "DTLA",
+    "address": "770 S Grand Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$7 beers",
+      "$9 cocktails and wine"
+    ],
+    "food": [
+      "$11 bites"
+    ],
+    "normalPriceContext": "Modern Southern + seafood. All HH items under $12",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "joyce-late",
+    "restaurant": "Joyce",
+    "neighborhood": "DTLA",
+    "address": "770 S Grand Ave",
+    "daysOfWeek": [
+      5,
+      6
+    ],
+    "startTime": "21:00",
+    "endTime": "23:00",
+    "drinks": [
+      "$7 beers",
+      "$9 cocktails and wine"
+    ],
+    "food": [
+      "$11 bites"
+    ],
+    "normalPriceContext": "Fri-Sat late night HH",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "late-night"
+    ]
+  },
+  {
+    "id": "bar-americano-hh",
+    "restaurant": "Bar Americano",
+    "neighborhood": "Arts District",
+    "address": "923 E 3rd St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "~$7 cocktails (hibiscus margarita $7)"
+    ],
+    "food": [
+      "Discounted small plates"
+    ],
+    "normalPriceContext": "Cocktails normally $14-18. Beautiful Arts District space",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails"
+    ]
+  },
+  {
+    "id": "kombu-sushi-hh",
+    "restaurant": "Kombu Sushi & Sake",
+    "neighborhood": "Arts District",
+    "address": "300 S Santa Fe Ave, Suite Q",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$3 beer and sake",
+      "$8 cocktails and wine"
+    ],
+    "food": [
+      "$5 handrolls"
+    ],
+    "normalPriceContext": "$3 sake + $5 handrolls is exceptional. Dog-friendly patio",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "71above-hh",
+    "restaurant": "71Above",
+    "neighborhood": "DTLA",
+    "address": "633 W 5th St, 71st Floor",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "Discounted craft cocktails"
+    ],
+    "food": [
+      "Shareable plates at reduced prices"
+    ],
+    "normalPriceContext": "Fine dining on the 71st floor. Walk-in HH at SkyLounge. Cocktails normally $20-24",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "rooftop",
+      "upscale"
+    ]
+  },
+  {
+    "id": "33-taps-dtla-hh",
+    "restaurant": "33 Taps",
+    "neighborhood": "DTLA",
+    "address": "1240 S Figueroa St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 beers",
+      "$7 house liquor",
+      "$8 cocktails and wine"
+    ],
+    "food": [
+      "$9 food specials"
+    ],
+    "normalPriceContext": "Sports bar near Crypto.com Arena",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "33-taps-dtla-late",
+    "restaurant": "33 Taps",
+    "neighborhood": "DTLA",
+    "address": "1240 S Figueroa St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "21:30",
+    "endTime": "24:00",
+    "drinks": [
+      "$5 beers",
+      "$7 house liquor",
+      "$8 cocktails and wine"
+    ],
+    "food": [
+      "$9 food specials"
+    ],
+    "normalPriceContext": "Late night HH 9:30pm-close nightly",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "late-night"
+    ]
+  },
+  {
+    "id": "the-mermaid-hh",
+    "restaurant": "The Mermaid",
+    "neighborhood": "Little Tokyo",
+    "address": "428 E 2nd St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "drinks": [
+      "~$9 cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Nautical-themed karaoke bar. Cocktails normally $13-16",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "the-mermaid-wknd",
+    "restaurant": "The Mermaid",
+    "neighborhood": "Little Tokyo",
+    "address": "428 E 2nd St",
+    "daysOfWeek": [
+      5,
+      6
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "~$9 cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Fri-Sat 3-6pm. All-day Sunday HH",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "harbor-house-hh",
+    "restaurant": "Harbor House",
+    "neighborhood": "DTLA",
+    "address": "1000 Wilshire Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$10 cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Outdoor terrace with skyline views. Cocktails normally $16-20",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "rooftop",
+      "patio"
+    ]
+  },
+  {
+    "id": "hachioji-hh",
+    "restaurant": "Hachioji Craft Ramen",
+    "neighborhood": "Little Tokyo",
+    "address": "313 E 1st St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$2.99 Sapporo draft",
+      "Discounted hot sake"
+    ],
+    "food": [],
+    "normalPriceContext": "Beers normally $6-8. Craft ramen shop",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer"
+    ]
+  },
+  {
+    "id": "arts-district-brewing-hh",
+    "restaurant": "Arts District Brewing",
+    "neighborhood": "Arts District",
+    "address": "828 Traction Ave",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "~$4-6 pints, well specials"
+    ],
+    "food": [],
+    "normalPriceContext": "Large brewery taproom with games and outdoor space. Pints normally $7-9",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "patio"
+    ]
+  },
+  {
+    "id": "barbrix-hh",
+    "restaurant": "Barbrix",
+    "neighborhood": "Silver Lake",
+    "address": "2442 Hyperion Ave",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$6 draft beer",
+      "$8 wine by the glass"
+    ],
+    "food": [
+      "$5 pizzas",
+      "$1 oysters (Mon, 3 kinds, till gone)"
+    ],
+    "normalPriceContext": "Wine glasses normally $12-16, pizzas normally $14-18. Converted 1940s house",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "food-specials",
+      "half-off"
+    ]
+  },
+  {
+    "id": "barbrix-late",
+    "restaurant": "Barbrix",
+    "neighborhood": "Silver Lake",
+    "address": "2442 Hyperion Ave",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "22:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$6 draft beer",
+      "$8 wine"
+    ],
+    "food": [
+      "$8 burger & fries"
+    ],
+    "normalPriceContext": "Late HH Sun-Thu 10pm-close",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "late-night",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "semi-tropic-hh",
+    "restaurant": "The Semi-Tropic",
+    "neighborhood": "Echo Park",
+    "address": "1412 Glendale Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 beer, wine, and mixed drinks"
+    ],
+    "food": [
+      "Discounted snacks (shishito peppers, beet hummus)"
+    ],
+    "normalPriceContext": "Signature cocktails normally $14-17. 4-hour daily window",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily",
+      "long-window"
+    ]
+  },
+  {
+    "id": "lowboy-hh",
+    "restaurant": "Lowboy",
+    "neighborhood": "Echo Park",
+    "address": "1540 Sunset Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 Whisky Sour/Gimlet/Vodka Collins/Shot n' Beer",
+      "$8 wine/well/Lowboy Special (Coors + Granddad shot)",
+      "$5 Mexican Lager"
+    ],
+    "food": [
+      "Triple Play: lowburger + small fries + any draft $12-16"
+    ],
+    "normalPriceContext": "Excellent smash burgers. Cocktails normally $12-15",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "thirsty-crow-hh",
+    "restaurant": "Thirsty Crow",
+    "neighborhood": "Silver Lake",
+    "address": "2939 W Sunset Blvd",
+    "daysOfWeek": [
+      4,
+      5,
+      6
+    ],
+    "startTime": "13:00",
+    "endTime": "21:00",
+    "drinks": [
+      "$5 drink menu",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$6 tacos (until 7pm)"
+    ],
+    "normalPriceContext": "Cocktails normally $12-14. 1933 Group. All-day Sun and Wed HH",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "long-window"
+    ]
+  },
+  {
+    "id": "thirsty-crow-allday",
+    "restaurant": "Thirsty Crow",
+    "neighborhood": "Silver Lake",
+    "address": "2939 W Sunset Blvd",
+    "daysOfWeek": [
+      0,
+      3
+    ],
+    "startTime": "13:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$5 drink menu",
+      "$7 cocktails"
+    ],
+    "food": [
+      "$6 tacos (until 7pm)"
+    ],
+    "normalPriceContext": "ALL DAY Wed (5pm-2am) and Sun (1pm-2am)",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "half-off",
+      "all-day"
+    ]
+  },
+  {
+    "id": "jays-bar-hh",
+    "restaurant": "Jay's Bar",
+    "neighborhood": "Silver Lake",
+    "address": "4321 Sunset Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$1 off all drafts and wine",
+      "$3 PBR/Coors Light",
+      "$1 sake shots all day"
+    ],
+    "food": [
+      "$5 poutine, hush puppies, fried chicken wings"
+    ],
+    "normalPriceContext": "15 craft taps. $1 sake shots all day is a hidden gem",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "la-cuevita-hh",
+    "restaurant": "La Cuevita",
+    "neighborhood": "Highland Park",
+    "address": "5922 N Figueroa St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$7 cocktails (Paloma, Old Fashioned, Tom Collins, Daiquiri)"
+    ],
+    "food": [],
+    "normalPriceContext": "Cocktails normally $12-15. Day of the Dead grotto atmosphere",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily",
+      "unique-venue"
+    ]
+  },
+  {
+    "id": "la-cuevita-late",
+    "restaurant": "La Cuevita",
+    "neighborhood": "Highland Park",
+    "address": "5922 N Figueroa St",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "24:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$7 cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Late night HH Sun-Thu midnight-2am",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "late-night"
+    ]
+  },
+  {
+    "id": "4100-bar-hh",
+    "restaurant": "4100 Bar",
+    "neighborhood": "Silver Lake",
+    "address": "1087 Manzanita St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$4 beer",
+      "$5 well drinks",
+      "$8 shot + draft combo"
+    ],
+    "food": [],
+    "normalPriceContext": "Dive bar with huge patio, pool tables, photobooths",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "beer",
+      "patio"
+    ]
+  },
+  {
+    "id": "kalaveras-hh",
+    "restaurant": "Kalaveras",
+    "neighborhood": "Silver Lake",
+    "address": "401 Silver Lake Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$8 well drinks",
+      "$2.50 off draft beer",
+      "$5 off select cocktails",
+      "$4.99 Margarita Monday"
+    ],
+    "food": [
+      "$2 off appetizers"
+    ],
+    "normalPriceContext": "90+ tequila/mezcal selection. Margarita Mon, Taco Tue, Mezcal Wed",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "cocktails"
+    ]
+  },
+  {
+    "id": "el-condor-hh",
+    "restaurant": "El Condor",
+    "neighborhood": "Silver Lake",
+    "address": "3701 Sunset Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$7 margaritas and sangria",
+      "$4 shots"
+    ],
+    "food": [
+      "$5 quesadilla or nachos"
+    ],
+    "normalPriceContext": "Margaritas normally $13-15. Dark, moody Mexican cocktail bar",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "cocktails",
+      "daily"
+    ]
+  },
+  {
+    "id": "offbeat-bar-hh",
+    "restaurant": "The Offbeat Bar",
+    "neighborhood": "Highland Park",
+    "address": "6316 York Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "21:00",
+    "drinks": [
+      "$5 cocktails",
+      "$1 off beers"
+    ],
+    "food": [],
+    "normalPriceContext": "Cocktails normally $10-12. York Blvd neighborhood bar",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily"
+    ]
+  },
+  {
+    "id": "checker-hall-hh",
+    "restaurant": "Checker Hall",
+    "neighborhood": "Highland Park",
+    "address": "104 N Ave 56",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$8 cocktails",
+      "$5 draft beer",
+      "$5 house wine/bubbles"
+    ],
+    "food": [
+      "$5 apps (hummus, labneh, chicken/beef skewers)"
+    ],
+    "normalPriceContext": "Mediterranean in old Masonic lodge. 1-hr window but great food",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "short-window"
+    ]
+  },
+  {
+    "id": "hippo-hh",
+    "restaurant": "HiPPO",
+    "neighborhood": "Highland Park",
+    "address": "5916 1/2 N Figueroa St",
+    "daysOfWeek": [
+      3,
+      4,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 cocktails",
+      "$9 wine"
+    ],
+    "food": [
+      "$12 pastas (tagliatelle, cappellacci)",
+      "$6 fries"
+    ],
+    "normalPriceContext": "Pastas normally $18-24. Upscale Italian, bar/patio only",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "short-window",
+      "upscale"
+    ]
+  },
+  {
+    "id": "the-fable-hh",
+    "restaurant": "The Fable",
+    "neighborhood": "Eagle Rock",
+    "address": "1630 Colorado Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$2 off all drafts/cans",
+      "$3 off wine by glass",
+      "$7 well drinks",
+      "$9 classic cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Pub with daily HH and karaoke. Cocktails normally $12-14",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "daily"
+    ]
+  },
+  {
+    "id": "cacao-hh",
+    "restaurant": "CaCao Mexicatessen",
+    "neighborhood": "Eagle Rock",
+    "address": "1576 Colorado Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 beers",
+      "$9 margaritas"
+    ],
+    "food": [
+      "Food specials available"
+    ],
+    "normalPriceContext": "Beloved Eagle Rock institution. Margaritas normally $12-14",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "beer"
+    ]
+  },
+  {
+    "id": "cacao-wknd",
+    "restaurant": "CaCao Mexicatessen",
+    "neighborhood": "Eagle Rock",
+    "address": "1576 Colorado Blvd",
+    "daysOfWeek": [
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 beers",
+      "$9 margaritas"
+    ],
+    "food": [
+      "Food specials available"
+    ],
+    "normalPriceContext": "Fri-Sun 3-6pm",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "beer"
+    ]
+  },
+  {
+    "id": "verdugo-bar-hh",
+    "restaurant": "Verdugo Bar",
+    "neighborhood": "Glassell Park",
+    "address": "3408 Verdugo Rd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "18:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$2 off select draft beers",
+      "$4 well drinks"
+    ],
+    "food": [],
+    "normalPriceContext": "22 taps of craft beer, big smoking patio",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "patio"
+    ]
+  },
+  {
+    "id": "verdugo-bar-wknd",
+    "restaurant": "Verdugo Bar",
+    "neighborhood": "Glassell Park",
+    "address": "3408 Verdugo Rd",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$2 off select draft beers",
+      "$4 well drinks"
+    ],
+    "food": [],
+    "normalPriceContext": "Weekend HH 3-7pm",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "patio"
+    ]
+  },
+  {
+    "id": "the-grant-hh",
+    "restaurant": "The Grant",
+    "neighborhood": "Glassell Park",
+    "address": "3515 Eagle Rock Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 tap beers",
+      "$8 tap wine",
+      "$10 house cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Cocktails normally $14-16. Natural wine + craft beer bar",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "wine"
+    ]
+  },
+  {
+    "id": "the-grant-wknd",
+    "restaurant": "The Grant",
+    "neighborhood": "Glassell Park",
+    "address": "3515 Eagle Rock Blvd",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$4 tap beers",
+      "$8 tap wine",
+      "$10 house cocktails"
+    ],
+    "food": [],
+    "normalPriceContext": "Weekend HH starts 2pm",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "wine"
+    ]
+  },
+  {
+    "id": "wife-somm-hh",
+    "restaurant": "Wife and the Somm",
+    "neighborhood": "Glassell Park",
+    "address": "3416 Verdugo Rd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 glasses of wine (natural, small-producer)"
+    ],
+    "food": [],
+    "normalPriceContext": "Wine glasses normally $14-18. For natural wine lovers",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "daily"
+    ]
+  },
+  {
+    "id": "stk-hh",
+    "restaurant": "STK Los Angeles",
+    "neighborhood": "Westwood",
+    "address": "1100 Glendon Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "14:30",
+    "endTime": "18:30",
+    "drinks": [
+      "$7 signature cocktails (STK Mule, Cucumber Stiletto)"
+    ],
+    "food": [
+      "$3 oysters",
+      "$6 crab & corn fritters / Lil BRGs / wagyu meatballs",
+      "$9 A5 wagyu tacos / short rib quesadillas / cheeseburger"
+    ],
+    "normalPriceContext": "Regular cocktails $18-22, entrees $35-65. 60-80% off food at HH",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "upscale",
+      "food-specials",
+      "half-off"
+    ]
+  },
+  {
+    "id": "stk-wknd",
+    "restaurant": "STK Los Angeles",
+    "neighborhood": "Westwood",
+    "address": "1100 Glendon Ave",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "14:30",
+    "endTime": "17:30",
+    "drinks": [
+      "$7 signature cocktails"
+    ],
+    "food": [
+      "$3 oysters",
+      "$6 crab & corn fritters",
+      "$9 A5 wagyu tacos"
+    ],
+    "normalPriceContext": "Weekend HH 2:30-5:30pm",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "upscale",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "stk-late",
+    "restaurant": "STK Los Angeles",
+    "neighborhood": "Westwood",
+    "address": "1100 Glendon Ave",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "22:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$7 signature cocktails"
+    ],
+    "food": [
+      "$3/$6/$9 food tiers"
+    ],
+    "normalPriceContext": "Late night HH Sun-Thu 10pm-close",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "upscale",
+      "food-specials",
+      "late-night"
+    ]
+  },
+  {
+    "id": "accomplice-hh",
+    "restaurant": "Accomplice Bar",
+    "neighborhood": "Mar Vista",
+    "address": "3811 Grand View Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$7 gimlet / Old Fashioned",
+      "$8 Japanese whiskey highball",
+      "$9 cocktail of the day",
+      "$4 Taiwan beer"
+    ],
+    "food": [
+      "$3 veggie egg rolls",
+      "$5 fried dumplings",
+      "$3 taco of the day"
+    ],
+    "normalPriceContext": "Top-tier cocktails + Little Fatty food. $7 Old Fashioneds",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "accomplice-late",
+    "restaurant": "Accomplice Bar",
+    "neighborhood": "Mar Vista",
+    "address": "3811 Grand View Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "22:00",
+    "endTime": "23:00",
+    "drinks": [
+      "$7 gimlet / Old Fashioned",
+      "$4 Taiwan beer"
+    ],
+    "food": [
+      "$3 egg rolls",
+      "$5 dumplings"
+    ],
+    "normalPriceContext": "Late night second window 10-11pm",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "late-night"
+    ]
+  },
+  {
+    "id": "hermanito-hh",
+    "restaurant": "Hermanito",
+    "neighborhood": "Sawtelle",
+    "address": "2024 Sawtelle Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 cocktails (Highball, Margarita)"
+    ],
+    "food": [
+      "$10 plates: birria tacos, al pastor tacos, nachos with black mole, chicken wings"
+    ],
+    "normalPriceContext": "Regular cocktails $14-18, entrees $16-22. Mexican + Japanese inflection",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "cocktails",
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "sorry-not-sorry-hh",
+    "restaurant": "Sorry Not Sorry",
+    "neighborhood": "Sawtelle",
+    "address": "11520 W Pico Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$11 Signature Daiquiri",
+      "Whiskey Wed 25% off top-shelf neat/rocks",
+      "Throwback Thu $13 Mai Tai, $15 double Zombie"
+    ],
+    "food": [
+      "Turmeric garlic fries, mole burger"
+    ],
+    "normalPriceContext": "Regular cocktails $15-18. Spacious beer garden, tiki cocktails",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "patio"
+    ]
+  },
+  {
+    "id": "tuck-room-hh",
+    "restaurant": "The Tuck Room",
+    "neighborhood": "Westwood",
+    "address": "10840 Wilshire Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 draft beers",
+      "$5 wines",
+      "$7 cocktails",
+      "$9 Old Fashioneds",
+      "$15 bottled cocktails (serves 4)"
+    ],
+    "food": [
+      "$6 meatballs / prosciutto flatbread / spicy tuna crispy rice"
+    ],
+    "normalPriceContext": "iPic theater attached. James Beard chef. All-day HH Tue & Thu",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "katsuya-hh",
+    "restaurant": "Katsuya Brentwood",
+    "neighborhood": "Brentwood",
+    "address": "11777 San Vicente Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$3 drafts",
+      "$4 well drinks"
+    ],
+    "food": [
+      "Half-price appetizers (crispy rice spicy tuna, rock shrimp tempura)"
+    ],
+    "normalPriceContext": "Celebrity sushi spot. Apps normally $16-24 \u2192 $8-12 at HH",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "half-off",
+      "upscale"
+    ]
+  },
+  {
+    "id": "ospi-hh",
+    "restaurant": "Ospi Brentwood",
+    "neighborhood": "Brentwood",
+    "address": "11677 San Vicente Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "~$10 aperitivo cocktails",
+      "Pick 2 for $25 (includes drinks)"
+    ],
+    "food": [
+      "Pizzas and small plates in Pick 2 deal"
+    ],
+    "normalPriceContext": "Pizzas normally $20-22. Pick 2 for $25 saves ~$15-19. Bar & patio only",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "upscale",
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "thunderbird-hh",
+    "restaurant": "Thunderbird",
+    "neighborhood": "Brentwood",
+    "address": "12217 Wilshire Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 beers",
+      "Cocktails under $10",
+      "Extensive mezcal/tequila selection"
+    ],
+    "food": [
+      "$3 tacos all day and night",
+      "Discounted nachos, chile con queso"
+    ],
+    "normalPriceContext": "$3 tacos + $5 beers is a baseline steal. Vintage skeeball",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "beer",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "bacari-hh",
+    "restaurant": "Bacari West Adams",
+    "neighborhood": "West Adams",
+    "address": "2308 S Union Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3
+    ],
+    "startTime": "17:00",
+    "endTime": "24:00",
+    "drinks": [
+      "$5 margaritas all night Mon-Wed"
+    ],
+    "food": [],
+    "normalPriceContext": "Regular margaritas $13-15. $5 margs three nights/week is 65% off",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "half-off"
+    ]
+  },
+  {
+    "id": "tinys-hi-dive-hh",
+    "restaurant": "Tiny's Hi-Dive",
+    "neighborhood": "Sawtelle",
+    "address": "12012 W Pico Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "14:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$6 whiskey mules",
+      "Discounted drafts and wells"
+    ],
+    "food": [
+      "Chicago dogs, Italian beef, fish tacos, buffalo wings"
+    ],
+    "normalPriceContext": "Chicago-themed dive. 6-hour daily HH window. Arcade, pool, shuffleboard",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "dive",
+      "daily",
+      "long-window"
+    ]
+  },
+  {
+    "id": "rosegold-hh",
+    "restaurant": "The Rosegold Saloon",
+    "neighborhood": "Sawtelle",
+    "address": "11501 W Pico Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$7 select cocktails",
+      "$8 well cocktails",
+      "$9 house wine",
+      "$2 off beers"
+    ],
+    "food": [
+      "$2 off select small plates and sliders"
+    ],
+    "normalPriceContext": "Cocktails normally $15. Neighborhood cocktail bar",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails"
+    ]
+  },
+  {
+    "id": "auld-fella-hh",
+    "restaurant": "The Auld Fella",
+    "neighborhood": "Brentwood",
+    "address": "11831 Wilshire Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "Discounted pints, wells, and Irish whiskey"
+    ],
+    "food": [],
+    "normalPriceContext": "Authentic Irish pub since 2023. Sunday trad music",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "beer"
+    ]
+  },
+  {
+    "id": "taverna-mar-vista-hh",
+    "restaurant": "Taverna at The Mar Vista",
+    "neighborhood": "Mar Vista",
+    "address": "12249 Venice Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "Wine and cocktail specials at the bar"
+    ],
+    "food": [
+      "Greek small plates at HH pricing"
+    ],
+    "normalPriceContext": "Greek restaurant. Entrees normally $22-40. Call for HH specifics",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "upscale"
+    ]
+  },
+  {
+    "id": "chulita-hh",
+    "restaurant": "Chulita",
+    "neighborhood": "West Adams",
+    "address": "5160 W Adams Blvd",
+    "daysOfWeek": [
+      1,
+      2
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$10 spicy margarita"
+    ],
+    "food": [],
+    "normalPriceContext": "Mezcal-forward Mexican. Regular cocktails $14-18",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "cocktails"
+    ]
+  },
+  {
+    "id": "chulita-wed",
+    "restaurant": "Chulita",
+    "neighborhood": "West Adams",
+    "address": "5160 W Adams Blvd",
+    "daysOfWeek": [
+      3
+    ],
+    "startTime": "15:00",
+    "endTime": "21:00",
+    "drinks": [
+      "$10 spicy margarita"
+    ],
+    "food": [],
+    "normalPriceContext": "Wednesday's 6-hour HH window is the play",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "cocktails",
+      "long-window"
+    ]
+  },
+  {
+    "id": "bayou-weho-hh",
+    "restaurant": "The Bayou WeHo",
+    "neighborhood": "West Hollywood",
+    "address": "8939 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "drinks": [
+      "2-for-1 ALL drinks",
+      "$2 Bud",
+      "$3 beers",
+      "$4 wells",
+      "$5 calls"
+    ],
+    "food": [
+      "30% off all food",
+      "$10/lb Cajun shrimp boils"
+    ],
+    "normalPriceContext": "Cheapest HH in WeHo. 2-for-1 on already-cheap drinks. Queer-friendly Cajun dive",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "daily",
+      "food-specials",
+      "dive"
+    ]
+  },
+  {
+    "id": "bayou-weho-late",
+    "restaurant": "The Bayou WeHo",
+    "neighborhood": "West Hollywood",
+    "address": "8939 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "22:30",
+    "endTime": "24:00",
+    "drinks": [
+      "2-for-1 ALL drinks"
+    ],
+    "food": [
+      "30% off all food"
+    ],
+    "normalPriceContext": "Late night HH 10:30pm-12:30am nightly",
+    "quality": "A+",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "late-night"
+    ]
+  },
+  {
+    "id": "la-boheme-hh",
+    "restaurant": "La Boheme",
+    "neighborhood": "West Hollywood",
+    "address": "8400 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "24:00",
+    "drinks": [
+      "Specially priced cocktails, wine, beer"
+    ],
+    "food": [
+      "$6 chicken tacos",
+      "$6 short rib tacos",
+      "$9 buffalo cauliflower"
+    ],
+    "normalPriceContext": "Mon-Thu HH runs to close. Garden patio. Entrees normally $22-38",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "long-window"
+    ]
+  },
+  {
+    "id": "la-boheme-wknd",
+    "restaurant": "La Boheme",
+    "neighborhood": "West Hollywood",
+    "address": "8400 Santa Monica Blvd",
+    "daysOfWeek": [
+      5,
+      6
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "Specially priced cocktails, wine, beer"
+    ],
+    "food": [
+      "$6 chicken tacos",
+      "$6 short rib tacos"
+    ],
+    "normalPriceContext": "Fri-Sat 5-7pm. Sun 4pm-close",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials"
+    ]
+  },
+  {
+    "id": "fiesta-cantina-hh",
+    "restaurant": "Fiesta Cantina",
+    "neighborhood": "West Hollywood",
+    "address": "8865 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "drinks": [
+      "2-for-1 ALL regular drinks (margaritas, cocktails, beers, shots)"
+    ],
+    "food": [],
+    "normalPriceContext": "2-for-1 everything daily. Margaritas normally $12-14. WeHo nightlife staple",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "daily"
+    ]
+  },
+  {
+    "id": "fiesta-cantina-late",
+    "restaurant": "Fiesta Cantina",
+    "neighborhood": "West Hollywood",
+    "address": "8865 Santa Monica Blvd",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "startTime": "22:30",
+    "endTime": "24:00",
+    "drinks": [
+      "2-for-1 ALL regular drinks"
+    ],
+    "food": [],
+    "normalPriceContext": "Late night HH Sun-Thu 10:30pm-12:30am",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "bogo",
+      "late-night"
+    ]
+  },
+  {
+    "id": "harriets-rooftop-hh",
+    "restaurant": "Harriet's Rooftop",
+    "neighborhood": "West Hollywood",
+    "address": "8490 Sunset Blvd",
+    "daysOfWeek": [
+      2,
+      3,
+      4
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "BOGO wine (white, ros\u00e9, red)"
+    ],
+    "food": [
+      "$10 veggie gyoza / shishitos / loaded tots",
+      "$15 albacore crudo / spicy tuna roll / chicken karaage sliders"
+    ],
+    "normalPriceContext": "1 Hotel rooftop. Wine normally $18-24, BOGO = 50% off. Sunset Strip views",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "rooftop",
+      "wine",
+      "bogo",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "33-taps-weho-hh",
+    "restaurant": "33 Taps WeHo",
+    "neighborhood": "West Hollywood",
+    "address": "8941 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 draft beers",
+      "$7 wells",
+      "$8 cocktails & wines"
+    ],
+    "food": [
+      "$9 food specials"
+    ],
+    "normalPriceContext": "33 taps. Queer-owned sports bar with jumbotron",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "food-specials"
+    ]
+  },
+  {
+    "id": "33-taps-weho-late",
+    "restaurant": "33 Taps WeHo",
+    "neighborhood": "West Hollywood",
+    "address": "8941 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "21:30",
+    "endTime": "24:00",
+    "drinks": [
+      "$5 draft beers",
+      "$7 wells",
+      "$8 cocktails & wines"
+    ],
+    "food": [
+      "$9 food specials"
+    ],
+    "normalPriceContext": "Late night HH 9:30pm-close nightly",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "beer",
+      "late-night"
+    ]
+  },
+  {
+    "id": "the-dresden-hh",
+    "restaurant": "The Dresden",
+    "neighborhood": "Los Feliz",
+    "address": "1760 N Vermont Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$4 wells and bottled beers",
+      "$5 martinis",
+      "$1 off wine by glass"
+    ],
+    "food": [
+      "$2 off appetizers"
+    ],
+    "normalPriceContext": "Iconic LA lounge (Swingers). $5 martinis in a mid-century setting. Marty & Elayne nightly",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily",
+      "landmark"
+    ]
+  },
+  {
+    "id": "ep-lp-hh",
+    "restaurant": "E.P. & L.P.",
+    "neighborhood": "West Hollywood",
+    "address": "603 N La Cienega Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 cocktail of the day",
+      "Select Asian beers, sparkling, wine"
+    ],
+    "food": [
+      "$10 modern Asian street food bites"
+    ],
+    "normalPriceContext": "$5 cocktails on one of LA's best rooftops. First come first served",
+    "quality": "A",
+    "verified": "2026-03",
+    "tags": [
+      "rooftop",
+      "cocktails"
+    ]
+  },
+  {
+    "id": "hollywood-roosevelt-hh",
+    "restaurant": "The Hollywood Roosevelt",
+    "neighborhood": "Hollywood",
+    "address": "7000 Hollywood Blvd",
+    "daysOfWeek": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$10 select mini martinis",
+      "Select wines at reduced prices"
+    ],
+    "food": [],
+    "normalPriceContext": "Cocktails normally $15-32. Historic Spanish Colonial lobby. Sun-Wed only",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "landmark",
+      "upscale"
+    ]
+  },
+  {
+    "id": "sunset-vinyl-hh",
+    "restaurant": "Sunset & Vinyl",
+    "neighborhood": "Hollywood",
+    "address": "1521 Vine St",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "drinks": [
+      "$5 well drinks and beers",
+      "$6 select wines"
+    ],
+    "food": [],
+    "normalPriceContext": "Speakeasy behind 800 Degrees Pizza. Record-themed cocktails",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "speakeasy",
+      "daily"
+    ]
+  },
+  {
+    "id": "el-compadre-hh",
+    "restaurant": "El Compadre",
+    "neighborhood": "Hollywood",
+    "address": "7408 W Sunset Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "drinks": [
+      "Discounted margaritas",
+      "Flaming margaritas"
+    ],
+    "food": [
+      "Bar bites specials"
+    ],
+    "normalPriceContext": "Legendary since 1975. Live mariachi. Call for specific HH prices",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "landmark"
+    ]
+  },
+  {
+    "id": "el-compadre-wknd",
+    "restaurant": "El Compadre",
+    "neighborhood": "Hollywood",
+    "address": "7408 W Sunset Blvd",
+    "daysOfWeek": [
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "Discounted margaritas"
+    ],
+    "food": [
+      "Bar bites specials"
+    ],
+    "normalPriceContext": "Weekend HH 4-6pm",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "mexican",
+      "landmark"
+    ]
+  },
+  {
+    "id": "bottega-louie-weho-hh",
+    "restaurant": "Bottega Louie WeHo",
+    "neighborhood": "West Hollywood",
+    "address": "8936 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$9 well drinks/shots",
+      "$12 cocktails",
+      "$13 martinis/old fashioneds/negronis",
+      "$7 Peroni"
+    ],
+    "food": [
+      "Black truffle arancini, crab cakes, bruschetta"
+    ],
+    "normalPriceContext": "Regular cocktails $16-22. Upscale Italian patisserie",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "upscale"
+    ]
+  },
+  {
+    "id": "hugos-hh",
+    "restaurant": "Hugo's",
+    "neighborhood": "West Hollywood",
+    "address": "8401 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$6 beer",
+      "$6 wine",
+      "$8 cocktails",
+      "$10 martinis"
+    ],
+    "food": [
+      "HH bites menu"
+    ],
+    "normalPriceContext": "Cocktails normally $14-18. Health-conscious Californian",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "cocktails",
+      "daily"
+    ]
+  },
+  {
+    "id": "phorage-hh",
+    "restaurant": "Phorage",
+    "neighborhood": "West Hollywood",
+    "address": "7326 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 beers",
+      "$7 wines",
+      "$10 cocktails"
+    ],
+    "food": [
+      "$2 oysters"
+    ],
+    "normalPriceContext": "Modern Vietnamese. $2 oysters is the draw",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "matties-weho-hh",
+    "restaurant": "Mattie's WeHo",
+    "neighborhood": "West Hollywood",
+    "address": "8900 Santa Monica Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "19:00",
+    "drinks": [
+      "$5 well drinks, house wine, all beer"
+    ],
+    "food": [
+      "$10 nachos",
+      "$10 buffalo chicken empanadas",
+      "$5 for 2 hot dogs"
+    ],
+    "normalPriceContext": "(Verify HH \u2014 recently rebranded) Fun WeHo bar. $5 wells + $5 hot dog pairs",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily",
+      "dive"
+    ]
+  },
+  {
+    "id": "farfalla-hh",
+    "restaurant": "Farfalla Trattoria",
+    "neighborhood": "Los Feliz",
+    "address": "1978 Hillhurst Ave",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [],
+    "food": [
+      "Half-price wood-fired pizza with purchase of wine or beer"
+    ],
+    "normalPriceContext": "Pizzas normally $16-22 \u2192 $8-11 with a drink. Family-owned Italian since 1988",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "food-specials",
+      "daily"
+    ]
+  },
+  {
+    "id": "tabula-rasa-hh",
+    "restaurant": "Tabula Rasa Bar",
+    "neighborhood": "Thai Town",
+    "address": "5125 Hollywood Blvd",
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "drinks": [
+      "$5 house beer",
+      "$7 house wine",
+      "$2 off all other wine and draft beer"
+    ],
+    "food": [],
+    "normalPriceContext": "Natural wine bar with 150+ selections. Wines normally $12-18/glass",
+    "quality": "B+",
+    "verified": "2026-03",
+    "tags": [
+      "wine",
+      "daily"
+    ]
+  },
+  {
+    "id": "thunderbolt-hh",
+    "restaurant": "Thunderbolt",
+    "neighborhood": "Historic Filipinotown",
+    "address": "1263 W Temple St",
+    "daysOfWeek": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "startTime": "17:00",
+    "endTime": "19:00",
+    "drinks": [
+      "Happy hour cocktails (call to confirm pricing)"
+    ],
+    "food": [
+      "Southern-inspired bar bites"
+    ],
+    "normalPriceContext": "Cocktails normally $16-20. NEEDS PHONE VERIFICATION: (213) 372-5099",
+    "quality": "A",
+    "verified": "unverified",
+    "tags": [
+      "cocktail-bar",
+      "50-best-bars",
+      "needs-verification"
+    ]
+  }
+]

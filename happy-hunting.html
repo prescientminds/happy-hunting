@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hunting — Send Someone on a Hunt</title>
+    <meta property="og:title" content="Happy Hunting">
+    <meta property="og:description" content="3 clues. One destination. Send someone on a first date they'll remember.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@400;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hunt.css">
+</head>
+<body class="hh-landing">
+
+    <header class="hh-header">
+        <a href="index.html" class="hh-back">&larr; Happy List</a>
+        <h1>Happy Hunting</h1>
+        <p class="hh-tagline">3 clues. One destination. Send someone on a first date they'll remember.</p>
+        <a href="create-hunt.html" class="hh-create-link">Create Your Own Hunt &rarr;</a>
+    </header>
+
+    <main class="hh-hunts" id="hunts-grid">
+        <!-- Populated by JS -->
+    </main>
+
+    <!-- Send Modal -->
+    <div class="send-overlay" id="send-overlay">
+        <div class="send-modal">
+            <button class="send-close" id="send-close">&times;</button>
+            <h2 class="send-title" id="send-title"></h2>
+            <p class="send-bar" id="send-bar"></p>
+
+            <div class="send-form" id="send-form">
+                <p class="send-skin-badge">Style: <strong id="send-skin-label"></strong></p>
+                <label>
+                    <span>Your first name</span>
+                    <input type="text" id="sender-name" placeholder="Michael" autocomplete="given-name">
+                </label>
+                <label>
+                    <span>Their first name</span>
+                    <input type="text" id="recipient-name" placeholder="Alex" autocomplete="off">
+                </label>
+                <label>
+                    <span>Their phone number</span>
+                    <input type="tel" id="recipient-phone" placeholder="(310) 555-1234" autocomplete="off">
+                </label>
+                <div class="promo-row">
+                    <label class="promo-label">
+                        <span>Promo code</span>
+                        <input type="text" id="promo-code" placeholder="Have a code?" autocomplete="off">
+                    </label>
+                    <p class="promo-feedback" id="promo-feedback"></p>
+                </div>
+                <button class="send-generate" id="send-generate">Generate Invitation &mdash; $5</button>
+            </div>
+
+            <div class="send-result" id="send-result" hidden>
+                <p class="send-instructions">Copy this link and text it to them. They'll need the last 4 digits of their phone number to open it.</p>
+                <div class="send-link-row">
+                    <input type="text" id="send-link" readonly>
+                    <button id="send-copy">Copy</button>
+                </div>
+                <p class="send-preview">They'll see: &ldquo;<span id="send-preview-text"></span> sent you a clue&rdquo;</p>
+                <button class="send-another" id="send-another">Send Another</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="happy-hunting.js"></script>
+</body>
+</html>

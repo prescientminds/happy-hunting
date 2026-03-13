@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Hunt — Happy Hunting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@400;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hunt.css">
+</head>
+<body class="hh-landing">
+
+    <header class="hh-header">
+        <a href="happy-hunting.html" class="hh-back">&larr; Happy Hunting</a>
+        <h1>Create a Hunt</h1>
+        <p class="hh-tagline">Pick a bar. Build 3 clues. Send it to someone.</p>
+    </header>
+
+    <main class="create-main">
+
+        <!-- Step 1: Choose Bar -->
+        <section class="create-section" id="bar-section">
+            <h2 class="create-section-title">1. Choose your destination</h2>
+            <div class="bar-search-wrap">
+                <input type="text" id="bar-search" class="bar-search" placeholder="Search bars..." autocomplete="off">
+                <div class="bar-results" id="bar-results"></div>
+            </div>
+            <div class="bar-selected" id="bar-selected" hidden>
+                <div class="bar-selected-name" id="bar-selected-name"></div>
+                <div class="bar-selected-detail" id="bar-selected-detail"></div>
+                <button class="bar-change" id="bar-change">Change</button>
+            </div>
+        </section>
+
+        <!-- Suggestions (shown after bar selected) -->
+        <section class="create-section" id="suggestions-section" hidden>
+            <h2 class="create-section-title">Nearby facts &amp; streets</h2>
+            <p class="create-hint">Tap a fact to start a clue with it</p>
+            <div class="suggestions-grid" id="suggestions-grid"></div>
+        </section>
+
+        <!-- Step 2: Build Clues -->
+        <section class="create-section" id="clues-section" hidden>
+            <h2 class="create-section-title">2. Write your clues</h2>
+
+            <!-- Skin + Tone selectors -->
+            <div class="create-controls">
+                <div class="create-control-group">
+                    <span class="control-label">Skin</span>
+                    <div class="control-btns">
+                        <button class="ctrl-btn active" data-skin="ransom">Ransom</button>
+                        <button class="ctrl-btn" data-skin="script">Script</button>
+                        <button class="ctrl-btn" data-skin="napkin">Napkin</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel" id="carousel">
+                <button class="carousel-arrow carousel-prev" id="carousel-prev">&lsaquo;</button>
+                <div class="carousel-viewport" id="carousel-viewport">
+                    <!-- 3 cards rendered by JS -->
+                </div>
+                <button class="carousel-arrow carousel-next" id="carousel-next">&rsaquo;</button>
+                <div class="carousel-dots" id="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+
+            <!-- Editor (below carousel) -->
+            <div class="clue-editor" id="clue-editor">
+                <div class="editor-label" id="editor-label">Clue 1</div>
+                <div class="editor-field"
+                     id="editor-text"
+                     contenteditable="true"
+                     data-placeholder="Write your clue... or tap a fact above to start"></div>
+                <div class="editor-answer-row">
+                    <label class="editor-answer-label">
+                        <span>Answer</span>
+                        <input type="text" id="editor-answer" placeholder="What do they type to solve this?" autocomplete="off">
+                    </label>
+                </div>
+                <div class="editor-hint">
+                    <span id="editor-hint-text">The answer unlocks the next clue. Keep it short — a street name, a bar name, a place.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Theme + Generate -->
+        <section class="create-section" id="generate-section" hidden>
+            <h2 class="create-section-title">3. Name it and share</h2>
+            <label class="create-theme-label">
+                <span>Hunt theme</span>
+                <input type="text" id="hunt-theme-input" placeholder="e.g. Mayors, Fires, and a Street That Lost Its Name" autocomplete="off">
+            </label>
+            <button class="send-generate" id="create-generate">Generate Link</button>
+            <div class="create-result" id="create-result" hidden>
+                <p class="send-instructions">Your hunt is ready. Copy this link and share it.</p>
+                <div class="send-link-row">
+                    <input type="text" id="create-link" readonly>
+                    <button id="create-copy">Copy</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="create-hunt.js"></script>
+</body>
+</html>

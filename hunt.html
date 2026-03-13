@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Happy Hunting</title>
+    <meta property="og:title" content="Someone sent you a Happy Hunt">
+    <meta property="og:description" content="3 clues. One destination. Tap to begin.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@400;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hunt.css">
+</head>
+<body class="skin-ransom">
+    <div id="hunt-app">
+
+        <!-- Envelope (invite mode only) -->
+        <div id="envelope-screen" class="screen">
+            <div class="envelope-wrapper">
+                <p class="envelope-sender" id="envelope-sender">Someone sent you a clue</p>
+                <div class="envelope" id="envelope">
+                    <div class="envelope-fold"></div>
+                    <div class="wax-seal"><span>HH</span></div>
+                </div>
+                <div class="envelope-unlock">
+                    <p class="unlock-prompt">Enter the last 4 digits of your phone number</p>
+                    <div class="code-input-row" id="code-row">
+                        <input type="tel" maxlength="1" class="code-digit" data-index="0" inputmode="numeric" pattern="[0-9]">
+                        <input type="tel" maxlength="1" class="code-digit" data-index="1" inputmode="numeric" pattern="[0-9]">
+                        <input type="tel" maxlength="1" class="code-digit" data-index="2" inputmode="numeric" pattern="[0-9]">
+                        <input type="tel" maxlength="1" class="code-digit" data-index="3" inputmode="numeric" pattern="[0-9]">
+                    </div>
+                    <p class="unlock-feedback" id="unlock-feedback"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intro -->
+        <div id="intro-screen" class="screen">
+            <div class="card intro-card">
+                <p class="intro-label">Happy Hunting</p>
+                <h1 class="intro-theme" id="hunt-theme"></h1>
+                <p class="intro-meta">3 clues. One destination.<br>Start walking.</p>
+                <div class="skin-selector" id="skin-selector">
+                    <button class="skin-btn active" data-skin="ransom"><span class="skin-swatch ransom-swatch"></span>Ransom</button>
+                    <button class="skin-btn" data-skin="script"><span class="skin-swatch script-swatch"></span>Script</button>
+                    <button class="skin-btn" data-skin="napkin"><span class="skin-swatch napkin-swatch"></span>Napkin</button>
+                </div>
+                <button id="begin-btn" class="action-btn">Begin</button>
+            </div>
+        </div>
+
+        <!-- Clue -->
+        <div id="clue-screen" class="screen">
+            <div class="card clue-card">
+                <div class="step-header">
+                    <div class="step-indicator" id="step-label">Clue 1 of 3</div>
+                    <button class="dice-btn" id="dice-btn" title="Shuffle this clue" hidden>&#x1F3B2;</button>
+                </div>
+                <div class="clue-body" id="clue-body">
+                    <div class="clue-text" id="clue-text"></div>
+                </div>
+                <div class="answer-section" id="answer-section">
+                    <div class="answer-row" id="answer-row-text">
+                        <input type="text" id="answer-input" placeholder="Your answer..." autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
+                        <button id="submit-btn" class="submit-btn">&rarr;</button>
+                    </div>
+                    <div class="answer-row answer-row-photo" id="answer-row-photo" hidden>
+                        <button id="photo-done-btn" class="photo-done-btn">I took the photo &checkmark;</button>
+                    </div>
+                    <p class="answer-feedback" id="answer-feedback"></p>
+                </div>
+                <div class="fact-reveal" id="fact-reveal">
+                    <div class="fact-divider"></div>
+                    <p class="fact-text" id="fact-text"></p>
+                    <button id="next-btn" class="action-btn">Next Clue &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrival -->
+        <div id="arrival-screen" class="screen">
+            <div class="card arrival-card">
+                <p class="arrival-label">You've arrived.</p>
+                <h1 class="arrival-bar" id="arrival-bar"></h1>
+                <p class="arrival-address" id="arrival-address"></p>
+                <div class="arrival-details" id="arrival-details">
+                    <p class="arrival-hh" id="arrival-hh"></p>
+                    <p class="arrival-vibe" id="arrival-vibe"></p>
+                </div>
+                <p class="arrival-arc" id="arrival-arc"></p>
+                <div class="arrival-actions">
+                    <a href="happy-hunting.html" class="action-btn" style="text-align:center;text-decoration:none;">Send a Hunt</a>
+                    <a href="index.html" class="browse-link">Browse Happy Hours &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error -->
+        <div id="error-screen" class="screen">
+            <div class="card error-card">
+                <h2>Hunt not found</h2>
+                <p>Check the URL and try again.</p>
+                <a href="index.html" class="browse-link">Browse Happy Hours &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="hunt.js"></script>
+</body>
+</html>

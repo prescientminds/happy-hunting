@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy List LA &mdash; LA's Authoritative Happy Hour Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tippy.js@6/dist/tippy.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hunt.css">
+</head>
+<body>
+  <a href="happy-hunting.html" class="hh-banner">
+    Happy Hunting <span class="hh-banner-sub">Send someone on a scavenger hunt to happy hour</span>
+  </a>
+  <header>
+    <div class="header-top">
+      <div class="brand">
+        <h1>Happy List LA</h1>
+        <p class="tagline">LA's Authoritative Happy Hour Guide</p>
+      </div>
+      <div class="header-meta">
+        <span class="venue-count" id="venue-count"></span>
+        <span class="verified-date">Updated March 2026</span>
+      </div>
+    </div>
+
+    <div class="search-wrapper" id="search-wrapper">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" id="search-input" placeholder="Search by restaurant or neighborhood..." autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <div class="controls">
+      <div class="filter-group">
+        <div class="multi-select" id="neighborhood-ms">
+          <button class="ms-trigger" data-placeholder="Neighborhoods">All Neighborhoods</button>
+          <div class="ms-dropdown">
+            <div class="ms-search-wrap">
+              <input type="text" class="ms-search" placeholder="Filter...">
+            </div>
+            <div class="ms-actions">
+              <button class="ms-action-btn" data-action="all">All</button>
+            </div>
+            <div class="ms-options"></div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="multi-select" id="restaurant-ms">
+          <button class="ms-trigger" data-placeholder="Restaurants">All Restaurants</button>
+          <div class="ms-dropdown">
+            <div class="ms-search-wrap">
+              <input type="text" class="ms-search" placeholder="Filter...">
+            </div>
+            <div class="ms-actions">
+              <button class="ms-action-btn" data-action="all">All</button>
+            </div>
+            <div class="ms-options"></div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="multi-select" id="quality-ms">
+          <button class="ms-trigger" data-placeholder="Deals">All Deals</button>
+          <div class="ms-dropdown">
+            <div class="ms-actions">
+              <button class="ms-action-btn" data-action="all">All</button>
+            </div>
+            <div class="ms-options"></div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="multi-select" id="tag-ms">
+          <button class="ms-trigger" data-placeholder="Types">All Types</button>
+          <div class="ms-dropdown">
+            <div class="ms-search-wrap">
+              <input type="text" class="ms-search" placeholder="Filter...">
+            </div>
+            <div class="ms-actions">
+              <button class="ms-action-btn" data-action="all">All</button>
+            </div>
+            <div class="ms-options"></div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <button id="late-night-toggle" class="toggle-btn">Late Night</button>
+      </div>
+    </div>
+    <div class="active-pills" id="active-pills"></div>
+  </header>
+
+  <div class="grid-wrapper">
+    <div class="day-headers" id="day-headers"></div>
+    <div class="time-grid" id="time-grid"></div>
+  </div>
+
+  <!-- Detail panel -->
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <span class="detail-title" id="detail-title"></span>
+      <button class="detail-close" id="detail-close">&times;</button>
+    </div>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+  <div class="detail-overlay" id="detail-overlay"></div>
+
+  <footer>
+    <p>Prices change &mdash; call ahead. Happy hunting.</p>
+  </footer>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="app.js"></script>
+</body>
+</html>
