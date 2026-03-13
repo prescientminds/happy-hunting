@@ -1222,26 +1222,115 @@ body.hh-landing {
 .hh-banner {
     display: block;
     text-align: center;
-    padding: 14px 20px;
+    padding: 28px 20px 24px;
     background: #0d1b2a;
-    color: #c9a84c;
+    color: #f5f0e8;
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 0.95em;
-    letter-spacing: 0.04em;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     transition: background 0.2s;
+    border-bottom: 2px solid #c9a84c;
 }
 .hh-banner:hover {
     background: #111d2e;
 }
 .hh-banner-sub {
     font-family: 'Inter', sans-serif;
-    font-size: 0.7em;
-    color: #8a8070;
-    letter-spacing: 0.08em;
+    font-size: 0.35em;
+    font-weight: 400;
+    color: #c9a84c;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     display: block;
-    margin-top: 4px;
+    margin-top: 8px;
+}
+
+/* Hunt promo card — inline between filters and grid */
+.hunt-promo {
+    max-width: 1400px;
+    margin: 0 auto 24px;
+    padding: 0 20px;
+}
+.hunt-promo-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 32px;
+    background: #0d1b2a;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s;
+}
+.hunt-promo-card:hover {
+    border-color: #c9a84c;
+}
+.hunt-promo-icon {
+    font-size: 2em;
+    flex-shrink: 0;
+}
+.hunt-promo-body {
+    flex: 1;
+}
+.hunt-promo-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #f5f0e8;
+    margin-bottom: 4px;
+}
+.hunt-promo-desc {
+    font-size: 0.8em;
+    color: #a0917a;
+    line-height: 1.5;
+}
+.hunt-promo-arrow {
+    font-size: 1.4em;
+    color: #c9a84c;
+    flex-shrink: 0;
+}
+.hunt-promo-actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.hunt-promo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+}
+.hunt-promo-btn--primary {
+    background: #c9a84c;
+    color: #0d1b2a;
+}
+.hunt-promo-btn--primary:hover { background: #d4b85c; }
+.hunt-promo-btn--secondary {
+    background: transparent;
+    color: #c9a84c;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+}
+.hunt-promo-btn--secondary:hover { border-color: #c9a84c; }
+
+@media (max-width: 600px) {
+    .hh-banner { font-size: 1.5em; padding: 22px 16px 18px; }
+    .hunt-promo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 16px;
+    }
+    .hunt-promo-actions { flex-direction: column; width: 100%; }
+    .hunt-promo-btn { text-align: center; }
+    .hunt-promo-arrow { display: none; }
 }
 
 
