@@ -15,6 +15,8 @@
 <body class="skin-ransom">
     <div id="hunt-app">
 
+        <a href="happy-hunting.html" class="hunt-back" id="hunt-back" hidden>&larr; All Hunts</a>
+
         <!-- Envelope (invite mode only) -->
         <div id="envelope-screen" class="screen">
             <div class="envelope-wrapper">
@@ -58,8 +60,10 @@
                 <div class="step-header">
                     <div class="step-indicator" id="step-label">Clue 1 of 3</div>
                     <div class="difficulty-ctrl" id="difficulty-ctrl" hidden>
+                        <span class="diff-label">Difficulty</span>
                         <button class="diff-btn diff-minus" id="diff-minus">&minus;</button>
                         <span class="diff-level" id="diff-level">1</span>
+                        <span class="diff-of" id="diff-of">/ 4</span>
                         <button class="diff-btn diff-plus" id="diff-plus">+</button>
                     </div>
                 </div>
@@ -75,6 +79,11 @@
                         <button id="photo-done-btn" class="photo-done-btn">I took the photo &checkmark;</button>
                     </div>
                     <p class="answer-feedback" id="answer-feedback"></p>
+                    <button class="stuck-btn" id="stuck-btn" hidden>I'm stuck</button>
+                </div>
+                <div class="preview-answer-section" id="preview-answer-section" hidden>
+                    <button class="see-answer-btn" id="see-answer-btn">See Answer</button>
+                    <p class="preview-answer-text" id="preview-answer-text"></p>
                 </div>
                 <div class="fact-reveal" id="fact-reveal">
                     <button id="next-btn" class="action-btn">Next Clue &rarr;</button>

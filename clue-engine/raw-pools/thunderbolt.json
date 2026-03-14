@@ -1,0 +1,273 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "The neighborhood surrounding Temple Street here was officially designated in 2002 to honor a community that has lived in this area since the 1920s. Locals call it by its two-letter abbreviation: HiFi. What's the full name?",
+    "answer": "Historic Filipinotown",
+    "answerVariants": ["historic filipinotown", "hifi", "hi-fi", "hi fi"],
+    "historicalFact": "Historic Filipinotown was designated by the LA City Council in 2002. Filipino immigrants settled here in the 1920s, making it one of the oldest Filipino communities in the US. The gateway arch at Temple and Beverly marks the neighborhood's entrance."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Temple Street is named after a man who sailed from Massachusetts to Los Angeles around 1828 and opened the city's first general store. He became a Mexican citizen and took a Spanish first name. What was his adopted first name?",
+    "answer": "Juan",
+    "answerVariants": ["juan", "juan temple"],
+    "historicalFact": "John Temple arrived in LA c. 1828, became 'Don Juan Temple,' married into the Cota family, and built the Temple Block — the commercial heart of early DTLA. His Rancho Los Cerritos became Long Beach."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Unscramble these letters: R-U-B-Y-A-D-E. They spell an avenue named after LA's 9th mayor — a French-Canadian who won his election by a single vote. Find where this avenue meets Temple Street.",
+    "answer": "Beaudry",
+    "answerVariants": ["beaudry", "beaudry ave", "beaudry avenue"],
+    "historicalFact": "Prudent Beaudry transformed LA from a dusty pueblo into a functioning city with gas lighting, reservoirs, and 4,000 street trees. He served as the 9th mayor starting in 1874."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "history",
+    "clue": "Two French-Canadian brothers shaped early Los Angeles. One became the 9th mayor in 1874 — he built reservoirs, laid gas lines, and planted 4,000 street trees. His brother served on the City Council. The mayor's avenue runs into a neighborhood named for the brother. What is the brother's first name?",
+    "answer": "Victor",
+    "answerVariants": ["victor", "victor beaudry"],
+    "historicalFact": "Victor Beaudry served on the LA City Council while his brother Prudent was mayor. Victor Heights — the hillside neighborhood above Temple Street — carries his name. The brothers arrived from Montreal in the 1850s."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "trivia",
+    "clue": "The 101 and 110 freeways meet near here in a massive interchange that destroyed much of the original neighborhood fabric. But one memorial remains: a gateway arch marking HiFi's entrance stands at the intersection of Temple Street and which boulevard?",
+    "answer": "Beverly",
+    "answerVariants": ["beverly", "beverly blvd", "beverly boulevard"],
+    "historicalFact": "The HiFi gateway arch at Temple and Beverly was installed after the 2002 designation. The 101/110 interchange, built in the 1950s-60s, demolished hundreds of homes and bisected the Filipino community."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I won my office by the slimmest margin possible. I planted trees by the thousands. I piped gas beneath dirt roads. I built reservoirs to hold water for a city that had none. My brother's name marks the hilltop; mine marks the avenue below. Who am I?",
+    "answer": "Prudent Beaudry",
+    "answerVariants": ["prudent beaudry", "beaudry", "prudent"],
+    "historicalFact": "Prudent Beaudry (1818-1893) won the 1874 mayoral election by a single vote. He was French-Canadian — one of the few non-Anglo mayors in 19th-century LA. He transformed the city from a dusty pueblo of 6,000 into a place with gas lighting, running water, and tree-lined streets."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "history",
+    "clue": "In 1849, a downtown street was called Calle de los Chapules — Grasshopper Street. Legend said if grasshoppers crossed this road, the grape harvest was doomed. It became Pearl Street, then took a governor's name in 1897 — forcing the ORIGINAL street with that name to be renamed. What did the castoff street become?",
+    "answer": "Boylston Street",
+    "answerVariants": ["boylston", "boylston st", "boylston street"],
+    "historicalFact": "When Grasshopper St became Pearl St and then Figueroa in 1897, the original Figueroa a few blocks west had to be renamed Boylston. It's a street that lost its identity to a chain of name-bumping."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "history",
+    "clue": "I was born in Montreal. I won my office by a single vote. I lit the streets with gas when they had only oil lamps. I built reservoirs when the city had no running water. I planted 4,000 trees in a treeless town. My brother's hill overlooks my avenue. I served as LA's 9th mayor — but I was not American-born, not Anglo, and not elected by a comfortable margin. What is my first name?",
+    "answer": "Prudent",
+    "answerVariants": ["prudent", "prudent beaudry"],
+    "historicalFact": "Prudent Beaudry (1818-1893) was a French-Canadian immigrant who became LA's 9th mayor in 1874, winning by a single vote. He modernized the city with gas lighting, water infrastructure, and 4,000 street trees — transforming a dusty pueblo of 6,000 into a livable city. His brother Victor's name lives on in Victor Heights, the hillside above Beaudry Avenue."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "trivia",
+    "clue": "A park near Temple Street in Historic Filipinotown shares its name with a Spanish word meaning 'unity.' Filipino War Veterans are memorialized nearby. What is the park called?",
+    "answer": "Unidad Park",
+    "answerVariants": ["unidad", "unidad park"],
+    "historicalFact": "Unidad Park serves as a community gathering space in Historic Filipinotown. The Filipino War Veterans Memorial nearby honors Filipino soldiers who fought alongside American forces in WWII, many of whom settled in this neighborhood after the war."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Prudent Beaudry became LA's 9th mayor in 1874. John Temple arrived in LA around 1828. Subtract Temple's arrival year from Beaudry's election year. Then subtract the number of trees Beaudry planted, in thousands. Finally, multiply by the number of freeways that border Historic Filipinotown (the 101 and the 110). What do you get?",
+    "answer": "84",
+    "answerVariants": ["84"],
+    "historicalFact": "1874 minus 1828 equals 46. Minus 4 (for 4,000 trees) equals 42. Times 2 (for the 101 and 110 freeways) equals 84. Those two freeways carved through the neighborhood in the 1950s-60s, demolishing hundreds of homes and splitting the Filipino community in half."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Temple Street is named after John Temple, who sailed from Massachusetts to LA around 1828 and opened the city's first general store. He eventually owned a rancho that became a modern beach city south of LA. Which city?",
+    "answer": "Long Beach",
+    "answerVariants": ["long beach"],
+    "historicalFact": "John Temple owned Rancho Los Cerritos — today's Long Beach. His Temple Block buildings on Main Street created the commercial core of early DTLA."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "In the 1890s, Engine Company No. 6 was built on a hillside avenue just north of Temple Street, between Bixel and Beaudry. The street sits on an elevated ridge with sweeping views of the LA basin — and its French name says exactly that. What avenue?",
+    "answer": "Bellevue Avenue",
+    "answerVariants": ["bellevue", "bellevue ave", "bellevue avenue"],
+    "historicalFact": "Old Fire Station No. 6 on Bellevue Avenue served HiFi and surrounding neighborhoods. 'Bellevue' is French for 'beautiful view' — fitting for the elevated streets above Temple."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "A street near Temple is named after an 1870s LA County Supervisor who also helped found the town of Banning, California. The street rhymes with 'pixel.' What street?",
+    "answer": "Bixel Street",
+    "answerVariants": ["bixel", "bixel st", "bixel street"],
+    "historicalFact": "Bixel Street is named after an LA County Supervisor from the 1870s who helped establish the town of Banning in Riverside County. The street crosses Temple in the transition zone between HiFi and downtown."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "LA has over 450 hidden public staircases — remnants of the streetcar era. The hillside of Victor Heights near Temple and Beaudry has several. Find any staircase in this neighborhood and take a photo from the bottom looking up.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "LA's public staircases were built in the early 1900s to connect hilltop neighborhoods to Pacific Electric Red Car streetcar lines below. Victor Heights has some of the steepest and most scenic."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "history",
+    "clue": "Before Engine Company No. 6 was built on Bellevue Avenue in the 1890s, this hillside was largely unprotected from fire. The avenue's French name translates to two English words. What do they mean?",
+    "answer": "Beautiful view",
+    "answerVariants": ["beautiful view", "belle vue", "pretty view", "fine view"],
+    "historicalFact": "'Bellevue' is French for 'beautiful view.' The avenue sits on an elevated ridge with sightlines across the LA basin. Many French-derived street names in this area trace back to the Beaudry brothers' influence on the neighborhood."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I'm a street named after a man, not a landscape. I cross Temple. I rhyme with a unit of digital imagery. An 1870s County Supervisor gave me his name before helping to found a desert town in Riverside County. What street am I?",
+    "answer": "Bixel",
+    "answerVariants": ["bixel", "bixel st", "bixel street"],
+    "historicalFact": "Bixel Street crosses Temple near the western edge of downtown. The supervisor it's named for helped found the city of Banning — named after Phineas Banning, the 'Father of the Port of Los Angeles.'"
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "trivia",
+    "clue": "John Temple arrived in LA around 1828 and became one of its wealthiest citizens. He owned a rancho that stretched across what is now Long Beach. But his Temple Block buildings on Main Street served a different purpose. What kind of business did Temple open — LA's first of its kind?",
+    "answer": "General store",
+    "answerVariants": ["general store", "a general store", "store", "trading post"],
+    "historicalFact": "Temple's general store was LA's first permanent retail establishment. He parlayed that into real estate, cattle ranching, and political influence — becoming one of the most powerful men in pre-statehood California."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "Three streets near Temple each have a name with a hidden meaning. Decode all three:\n\n1) This avenue's name is French for 'beautiful view.'\n2) This street is named after an 1870s County Supervisor who helped found a desert town in Riverside County. It rhymes with 'pixel.'\n3) This avenue is named after a French-Canadian mayor who won by one vote.\n\nWhat are the three streets, in order?",
+    "answer": "Bellevue, Bixel, Beaudry",
+    "answerVariants": ["bellevue, bixel, beaudry", "bellevue bixel beaudry"],
+    "historicalFact": "Bellevue Avenue ('beautiful view' in French), Bixel Street (named after an 1870s LA County Supervisor who helped found the town of Banning), and Beaudry Avenue (named after Mayor Prudent Beaudry) all intersect or run near Temple Street. The French names — Bellevue and Beaudry — trace back to the Beaudry brothers' influence on this hillside neighborhood."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "observation",
+    "clue": "Walk to the intersection of Temple Street and Beverly Boulevard. Stand on the south side and look north. A large decorative structure marks the entrance to Historic Filipinotown — installed after the neighborhood's 2002 designation. What is this structure?",
+    "answer": "Gateway arch",
+    "answerVariants": ["gateway arch", "arch", "hifi arch", "the arch", "the gateway arch"],
+    "historicalFact": "Historic Filipinotown is home to Filipino bakeries, restaurants, community centers, and the HiFi gateway arch. The neighborhood's Filipino character survived freeway construction, redlining, and gentrification — maintained by families who have lived here for generations."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Put these events in chronological order, earliest to latest:\n\nA) Engine Company No. 6 built on Bellevue Avenue\nB) Historic Filipinotown officially designated\nC) John Temple opens LA's first general store\nD) Prudent Beaudry elected mayor\n\nNow take the first letter of each event in the correct order. What 4-letter word do they spell?",
+    "answer": "CDAB",
+    "answerVariants": ["cdab"],
+    "historicalFact": "Chronological order: C (Temple, c. 1828), D (Beaudry, 1874), A (Engine Co. 6, 1890s), B (HiFi designation, 2002). C-D-A-B. These four moments span 174 years of Temple Street history — from a Massachusetts trader's general store to the recognition of a Filipino community that had been calling this neighborhood home for 80 years before anyone made it official."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Your destination is at 1263 W Temple St. It uses laboratory centrifuges to make cocktails. It was named one of North America's 50 Best Bars. Its name is also a type of lightning. What's the bar?",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
+    "historicalFact": "Thunderbolt specializes in Southern-inspired cocktails using centrifuge clarification — a technique borrowed from laboratories that produces crystal-clear drinks with intense flavor."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Your destination shares its name with a small town outside Savannah, Georgia — population 2,668. But this version deals in centrifuges, not shrimp boats. It was named one of North America's 50 Best Bars. It's at 1263 W Temple St.",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
+    "historicalFact": "Thunderbolt, Georgia (pop. 2,668) sits on the Wilmington River outside Savannah. The bar borrowed the name and the Southern spirit, but traded shrimp nets for centrifuge tubes."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "The bar is hiding in this sentence: 'In the thunder, bolt the doors and windows.' Its cocktails use lab equipment normally found in hospitals. 1263 W Temple St.",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt", "thunder bolt"],
+    "historicalFact": "Thunderbolt, the bar, is named after Thunderbolt, Georgia — a fishing community outside Savannah. The hidden word spans 'thunder, bolt.'"
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "This bar at 1263 W Temple St is known for its extensive list of a fortified wine from a Portuguese island. The wine shares its name with the island where it's produced — the same wine used to toast the signing of the Declaration of Independence. What wine?",
+    "answer": "Madeira",
+    "answerVariants": ["madeira", "madeira wine"],
+    "historicalFact": "Thunderbolt maintains one of LA's best Madeira lists. Madeira wine comes from the Portuguese island of the same name and was the drink of choice for America's Founding Fathers — it was used to toast the Declaration of Independence in 1776."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I'm named after a small Georgia town. I spin drinks in machines meant for blood samples. I sit on a street named after a man who opened LA's first store. I've been called one of the 50 best bars on the continent. What am I?",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
+    "historicalFact": "Thunderbolt's centrifuge technique clarifies cocktails by spinning out solids at high speed — the same principle used in medical labs to separate blood components. The result is a drink that's impossibly clear but retains full flavor."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "history",
+    "clue": "The street your destination sits on was named for a man who sailed from Massachusetts around 1828. He became a Mexican citizen, married into the Cota family, and built the commercial core of early DTLA. His rancho became Long Beach. What is his full name?",
+    "answer": "John Temple",
+    "answerVariants": ["john temple", "temple", "juan temple", "don juan temple"],
+    "historicalFact": "John Temple (1798-1866) arrived in LA c. 1828 and became 'Don Juan Temple.' His Temple Block on Main Street was the commercial center of early Los Angeles. Temple Street preserves his name."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "puzzle",
+    "clue": "A cipher puzzle. Each number below corresponds to a letter's position in the alphabet (A=1, B=2, ... Z=26). Decode the bar's name:\n\n20-8-21-14-4-5-18-2-15-12-20\n\nThis bar sits at 1263 W Temple St. It shares its name with a small town outside Savannah, Georgia — population 2,668.",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt", "thunder bolt"],
+    "historicalFact": "T(20) H(8) U(21) N(14) D(4) E(5) R(18) B(2) O(15) L(12) T(20). Thunderbolt, Georgia sits on the Wilmington River outside Savannah — a fishing community of 2,668. The bar borrowed the name and the Southern spirit, pairing it with laboratory centrifuge technology to create crystal-clear cocktails."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "wordplay",
+    "clue": "Your destination's name is a compound word. The first half is the sound that follows lightning. The second half is what you do to a door in a storm. Together they name both a Georgia town and an LA bar at 1263 W Temple. In mythology, Zeus hurled these as weapons. What is the word?",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt", "thunder bolt", "a thunderbolt"],
+    "historicalFact": "A thunderbolt in mythology referred to the physical weapon Zeus hurled from Olympus — a concentrated shaft of lightning and force. The word predates the scientific understanding of electricity. Benjamin Franklin proved thunderbolts were just lightning, but the mythological power of the word endures."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "puzzle",
+    "clue": "Take the first letter of each item in this list: Temple, Historic, Unidad, Neighborhood, Designated, Engine, Rancho, Beaudry, Original, Lotus, Temple. Read them in order. What word do they spell?",
+    "answer": "Thunderbolt",
+    "answerVariants": ["thunderbolt"],
+    "historicalFact": "T-H-U-N-D-E-R-B-O-L-T. Every letter comes from a person, place, or concept woven into the fabric of this neighborhood — from Beaudry's reservoirs to the Filipino community's designated home to Temple Street itself."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "A compound puzzle in three parts:\n\n1) Prudent Beaudry became mayor in 1874. John Temple arrived c. 1828. What is the difference in years? Call that number A.\n\n2) Beaudry planted 4,000 trees. Express that in thousands. Call that number B.\n\n3) How many freeways border Historic Filipinotown? (The 101 and the 110.) Call that number C.\n\nCalculate: (A minus B) times C. What do you get?",
+    "answer": "84",
+    "answerVariants": ["84"],
+    "historicalFact": "A = 46 (1874 - 1828). B = 4 (4,000 trees in thousands). C = 2 (the 101 and 110). (46 - 4) x 2 = 84. The 101 and 110 freeways — the C in this equation — did the most damage. Built in the 1950s-60s, they demolished hundreds of homes and split the Filipino community. The neighborhood survived anyway."
+  }
+]

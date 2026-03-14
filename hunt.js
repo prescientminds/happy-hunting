@@ -29,9 +29,11 @@ const HappyHunting = {
             'arrival-hh', 'arrival-vibe', 'arrival-arc',
             'arrival-details', 'envelope-sender', 'unlock-feedback',
             'envelope', 'code-row', 'difficulty-ctrl',
-            'diff-level', 'diff-minus', 'diff-plus',
+            'diff-level', 'diff-of', 'diff-minus', 'diff-plus',
             'answer-row-text', 'answer-row-photo', 'photo-done-btn',
-            'preview-prev', 'preview-next'
+            'preview-prev', 'preview-next',
+            'stuck-btn', 'see-answer-btn', 'preview-answer-section',
+            'preview-answer-text', 'hunt-back'
         ].forEach(id => {
             this.els[id] = document.getElementById(id);
         });
@@ -58,6 +60,7 @@ const HappyHunting = {
 
         if (this.isPreview) {
             this.skin = 'ransom'; // default body class, but text renders plain
+            this.els['hunt-back'].hidden = false;
         }
 
         this.applySkin(this.skin);
@@ -143,22 +146,27 @@ const HappyHunting = {
         });
     },
 
+    getPoolForCurrentRing() {
+        if (!this.hasPool) return [];
+        const currentRing = this.hunt.steps[this.currentStep].ring;
+        return this.hunt.cluePool.filter(c => c.ring === currentRing);
+    },
+
     setDifficulty(level) {
+        const candidates = this.getPoolForCurrentRing();
+        // Sort by difficulty field if present, fall back to array order
+        const sorted = candidates.slice().sort((a, b) => (a.difficulty || 0) - (b.difficulty || 0));
+        const max = sorted.length || 1;
         if (level < 1) level = 1;
-        if (level > 10) level = 10;
+        if (level > max) level = max;
         this.difficultyLevel = level;
         this.els['diff-level'].textContent = level;
+        this.els['diff-of'].textContent = '/ ' + max;
 
-        if (!this.hasPool) return;
+        if (!this.hasPool || sorted.length === 0) return;
 
-        // Pick clue based on difficulty: map level to available clues in this ring
-        const currentRing = this.hunt.steps[this.currentStep].ring;
-        const candidates = this.hunt.cluePool.filter(c => c.ring === currentRing);
-        if (candidates.length === 0) return;
-
-        // Map 1-10 difficulty across available clues
-        const index = Math.min(Math.floor((level - 1) / 10 * candidates.length), candidates.length - 1);
-        const pick = candidates[index];
+        // Pick clue by difficulty field if available, otherwise by index
+        let pick = sorted.find(c => c.difficulty === level) || sorted[level - 1];
 
         if (pick.clue !== this.hunt.steps[this.currentStep].clue) {
             this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
@@ -260,18 +268,29 @@ const HappyHunting = {
 
         this.renderClueContent();
 
-        // Difficulty ctrl: show for pool hunts, hide in preview
-        this.els['difficulty-ctrl'].hidden = !this.hasPool || this.isPreview;
+        // Difficulty ctrl: show for pool hunts (both preview and interactive)
+        this.els['difficulty-ctrl'].hidden = !this.hasPool;
+
+        // Update difficulty range for this ring
+        if (this.hasPool) {
+            const candidates = this.getPoolForCurrentRing();
+            this.els['diff-of'].textContent = '/ ' + candidates.length;
+        }
 
         if (this.isPreview) {
-            // Preview mode: hide answer section, show arrows
+            // Preview mode: hide interactive answer, show preview answer + arrows
             this.els['answer-section'].hidden = true;
+            this.els['preview-answer-section'].hidden = false;
+            this.els['see-answer-btn'].hidden = false;
+            this.els['preview-answer-text'].textContent = '';
+            this.els['preview-answer-text'].hidden = true;
             this.els['fact-reveal'].classList.remove('visible');
             this.els['preview-prev'].hidden = this.currentStep === 0;
             this.els['preview-next'].hidden = this.currentStep === this.hunt.steps.length - 1;
         } else {
-            // Interactive mode: show answers, hide preview arrows
+            // Interactive mode: show answers, hide preview elements
             this.els['answer-section'].hidden = false;
+            this.els['preview-answer-section'].hidden = true;
             this.els['preview-prev'].hidden = true;
             this.els['preview-next'].hidden = true;
 
@@ -279,6 +298,12 @@ const HappyHunting = {
             const isPhoto = step.answerType === 'photo';
             this.els['answer-row-text'].hidden = isPhoto;
             this.els['answer-row-photo'].hidden = !isPhoto;
+
+            // "I'm stuck" button: show after a delay, hidden initially
+            this.els['stuck-btn'].hidden = true;
+            this.stuckTimeout = setTimeout(() => {
+                this.els['stuck-btn'].hidden = false;
+            }, 15000); // appears after 15 seconds
 
             // Reset state
             this.els['answer-section'].classList.remove('solved');
@@ -396,8 +421,84 @@ const HappyHunting = {
         this.els['answer-input'].select();
     },
 
+    // ---- Preview: See Answer ----
+    revealAnswer() {
+        const step = this.hunt.steps[this.currentStep];
+        const answer = step.answer || '(no answer set)';
+        this.els['see-answer-btn'].hidden = true;
+        this.els['preview-answer-text'].textContent = answer;
+        this.els['preview-answer-text'].hidden = false;
+
+        // Also show the historical fact
+        if (step.historicalFact) {
+            this.els['fact-text'].textContent = step.historicalFact;
+            this.els['fact-reveal'].classList.add('visible');
+        }
+    },
+
+    // ---- I'm Stuck: Call Center Comedy ----
+    triggerStuckCall() {
+        const step = this.hunt.steps[this.currentStep];
+        const answer = step.answer || 'the answer';
+        this.els['stuck-btn'].textContent = 'Calling...';
+        this.els['stuck-btn'].disabled = true;
+
+        // Build the scripted call center bit
+        const lines = [
+            { text: `Thank you for calling Happy Hunting Support, my name is... uh... my name is Gerald. How can I help you today?`, pause: 2500 },
+            { text: `Okay so you are stuck on a clue. Let me pull up the system here.`, pause: 2000 },
+            { text: `One moment please... the system is loading...`, pause: 2500 },
+            { text: `Oh no. Okay the system is not loading. This happens sometimes. Let me try again.`, pause: 2000 },
+            { text: `Loading... still loading...`, pause: 2500 },
+            { text: `Sir, ma'am, I am so sorry. My internet is very slow today. My supervisor is watching me right now. Please do not hang up.`, pause: 3000 },
+            { text: `Okay! Okay I think it is working now. Let me read the clue... yes... yes I see...`, pause: 2500 },
+            { text: `Hmm. This is a hard one. I am not sure I...`, pause: 2000 },
+            { text: `Wait. Wait wait wait. I think I have it. What if... what if the answer is... ${answer}?`, pause: 2000 },
+            { text: `Yes! I believe the answer is: ${answer}. Try that!`, pause: 1000 },
+        ];
+
+        // Use Web Speech API
+        if (!('speechSynthesis' in window)) {
+            // Fallback: just show the answer
+            this.els['answer-feedback'].textContent = `The answer is: ${answer}`;
+            this.els['answer-feedback'].className = 'answer-feedback correct';
+            this.els['stuck-btn'].textContent = 'I\'m stuck';
+            this.els['stuck-btn'].disabled = false;
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+        let delay = 500;
+
+        lines.forEach(line => {
+            setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(line.text);
+                utterance.rate = 1.05;
+                utterance.pitch = 1.1;
+                // Try to find a voice that sounds right
+                const voices = window.speechSynthesis.getVoices();
+                const preferred = voices.find(v =>
+                    v.name.includes('Daniel') || v.name.includes('Rishi') ||
+                    v.name.includes('Moira') || v.name.includes('Samantha')
+                );
+                if (preferred) utterance.voice = preferred;
+                window.speechSynthesis.speak(utterance);
+            }, delay);
+            delay += line.pause;
+        });
+
+        // After the bit finishes, fill in the answer
+        setTimeout(() => {
+            this.els['answer-input'].value = answer;
+            this.els['stuck-btn'].textContent = 'I\'m stuck';
+            this.els['stuck-btn'].disabled = false;
+            this.checkAnswer();
+        }, delay + 1000);
+    },
+
     // ---- Navigation ----
     nextClue() {
+        if (this.stuckTimeout) clearTimeout(this.stuckTimeout);
         if (this.currentStep === this.hunt.steps.length - 1) {
             this.showArrival();
         } else {
@@ -490,6 +591,12 @@ const HappyHunting = {
             });
             input.addEventListener('focus', () => input.select());
         });
+
+        // See Answer (preview mode)
+        this.els['see-answer-btn'].addEventListener('click', () => this.revealAnswer());
+
+        // I'm stuck (interactive mode)
+        this.els['stuck-btn'].addEventListener('click', () => this.triggerStuckCall());
 
         // Keyboard arrows for preview mode
         document.addEventListener('keydown', e => {

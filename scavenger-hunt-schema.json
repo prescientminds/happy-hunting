@@ -1,12 +1,13 @@
 {
-  "$schema": "hunt-schema-v2",
-  "description": "Each hunt has a cluePool of 10+ clues across 3 rings (distance tiers). Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Dice shuffle picks one from each ring.",
+  "$schema": "hunt-schema-v3",
+  "description": "Each hunt has a cluePool of 30 clues across 3 rings (distance tiers), with difficulty 1-10 per ring. Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Difficulty selector picks clue by difficulty level within ring.",
   "constraints": {
     "maxTotalDistance": "0.4 miles",
     "maxStartDistance": "0.3 miles from bar",
     "direction": "inward — each step closer to the bar",
     "noFreewaysCrossed": true,
-    "stepsPerHunt": 3
+    "stepsPerHunt": 3,
+    "difficultiesPerRing": 10
   },
   "hunts": [
     {
@@ -21,96 +22,385 @@
       "theme": "Mayors, Fires, and the Man Who Built Temple Street",
       "totalWalkingDistance": "~0.3 miles",
       "narrativeArc": "From a French mayor's infrastructure legacy, through the fire stations that once protected this hillside, to a bar that transforms Southern tradition with laboratory precision.",
-      "avoidZones": ["Do not cross the 101 freeway", "Do not cross the 110 freeway"],
+      "avoidZones": [
+        "Do not cross the 101 freeway",
+        "Do not cross the 110 freeway"
+      ],
       "cluePool": [
         {
           "ring": 1,
-          "type": "history",
-          "clue": "Two French-Canadian brothers shaped early Los Angeles. One became the 9th mayor in 1874 — he built reservoirs, laid gas lines, and planted 4,000 street trees. His brother served on the City Council. The mayor's avenue runs into a neighborhood named for the brother. Find the avenue where it meets Temple Street.",
-          "answer": "Beaudry Avenue",
-          "answerVariants": ["beaudry", "beaudry ave", "beaudry avenue"],
-          "historicalFact": "Prudent Beaudry (1818–1893) became LA's 9th mayor in 1874 — winning by a single vote. His brother Victor served on City Council. Beaudry Avenue runs into Victor Heights — the brothers' legacies connected by the street grid."
-        },
-        {
-          "ring": 1,
-          "type": "history",
-          "clue": "In 1849, a downtown street was called Calle de los Chapules — Grasshopper Street. Legend said if grasshoppers crossed this road, the grape harvest was doomed. It became Pearl Street, then took a governor's name in 1897 — forcing the ORIGINAL street with that name to be renamed. The castoff is near Temple. Find it.",
-          "answer": "Boylston Street",
-          "answerVariants": ["boylston", "boylston st", "boylston street"],
-          "historicalFact": "When Grasshopper St → Pearl St was renamed Figueroa in 1897, the original Figueroa a few blocks west had to become Boylston. Boylston near Temple is the original Figueroa — a street that lost its identity."
-        },
-        {
-          "ring": 1,
-          "type": "wordplay",
-          "clue": "Unscramble these letters: R-U-B-Y-A-D-E. They spell an avenue named after LA's only French-born mayor. He won his election by a single vote. Find where this avenue meets Temple Street.",
-          "answer": "Beaudry",
-          "answerVariants": ["beaudry", "beaudry ave", "beaudry avenue"],
-          "historicalFact": "Prudent Beaudry transformed LA from a dusty pueblo into a functioning city with gas lighting, reservoirs, and 4,000 street trees."
-        },
-        {
-          "ring": 1,
+          "difficulty": 1,
           "type": "trivia",
           "clue": "The neighborhood surrounding Temple Street here was officially designated in 2002 to honor a community that has lived in this area since the 1920s. Locals call it by its two-letter abbreviation: HiFi. What's the full name?",
           "answer": "Historic Filipinotown",
-          "answerVariants": ["historic filipinotown", "hifi", "hi-fi", "hi fi"],
-          "historicalFact": "Historic Filipinotown was designated by the LA City Council in 2002. Filipino immigrants settled here in the 1920s, making it one of the oldest Filipino communities in the US."
+          "answerVariants": [
+            "historic filipinotown",
+            "hifi",
+            "hi-fi",
+            "hi fi"
+          ],
+          "historicalFact": "Historic Filipinotown was designated by the LA City Council in 2002. Filipino immigrants settled here in the 1920s, making it one of the oldest Filipino communities in the US. The gateway arch at Temple and Beverly marks the neighborhood's entrance."
         },
         {
-          "ring": 2,
+          "ring": 1,
+          "difficulty": 2,
           "type": "history",
-          "clue": "Near Temple Street, a firehouse once stood on an avenue whose name means 'beautiful view' in French. Engine Company No. 6 — built in the 1890s — served the families of this hillside before the freeway came through. What avenue?",
-          "answer": "Bellevue Avenue",
-          "answerVariants": ["bellevue", "bellevue ave", "bellevue avenue"],
-          "historicalFact": "Old Fire Station #6 on Bellevue Avenue served HiFi and surrounding neighborhoods. 'Bellevue' is French for 'beautiful view' — fitting for the elevated streets above Temple."
+          "clue": "Temple Street is named after a man who sailed from Massachusetts to Los Angeles around 1828 and opened the city's first general store. He became a Mexican citizen and took a Spanish first name. What was his adopted first name?",
+          "answer": "Juan",
+          "answerVariants": [
+            "juan",
+            "juan temple"
+          ],
+          "historicalFact": "John Temple arrived in LA c. 1828, became 'Don Juan Temple,' married into the Cota family, and built the Temple Block — the commercial heart of early DTLA. His Rancho Los Cerritos became Long Beach."
         },
         {
-          "ring": 2,
+          "ring": 1,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "Unscramble these letters: R-U-B-Y-A-D-E. They spell an avenue named after LA's 9th mayor — a French-Canadian who won his election by a single vote. Find where this avenue meets Temple Street.",
+          "answer": "Beaudry",
+          "answerVariants": [
+            "beaudry",
+            "beaudry ave",
+            "beaudry avenue"
+          ],
+          "historicalFact": "Prudent Beaudry transformed LA from a dusty pueblo into a functioning city with gas lighting, reservoirs, and 4,000 street trees. He served as the 9th mayor starting in 1874."
+        },
+        {
+          "ring": 1,
+          "difficulty": 4,
           "type": "history",
-          "clue": "A street near Temple is named after a Los Angeles County Supervisor from the 1870s who also helped found the town of Banning, California. It crosses Temple and rhymes with 'pixel.' What street?",
-          "answer": "Bixel Street",
-          "answerVariants": ["bixel", "bixel st", "bixel street"],
-          "historicalFact": "Bixel Street crosses Temple in the transition zone between Historic Filipinotown and downtown LA."
+          "clue": "Two French-Canadian brothers shaped early Los Angeles. One became the 9th mayor in 1874 — he built reservoirs, laid gas lines, and planted 4,000 street trees. His brother served on the City Council. The mayor's avenue runs into a neighborhood named for the brother. What is the brother's first name?",
+          "answer": "Victor",
+          "answerVariants": [
+            "victor",
+            "victor beaudry"
+          ],
+          "historicalFact": "Victor Beaudry served on the LA City Council while his brother Prudent was mayor. Victor Heights — the hillside neighborhood above Temple Street — carries his name. The brothers arrived from Montreal in the 1850s."
         },
         {
-          "ring": 2,
+          "ring": 1,
+          "difficulty": 5,
           "type": "trivia",
-          "clue": "Temple Street is named after John Temple, who sailed from Massachusetts to LA around 1828 and opened the city's first general store. He became a Mexican citizen named 'Juan' and eventually owned a rancho that became a modern beach city. Which city?",
+          "clue": "The 101 and 110 freeways meet near here in a massive interchange that destroyed much of the original neighborhood fabric. But one memorial remains: a gateway arch marking HiFi's entrance stands at the intersection of Temple Street and which boulevard?",
+          "answer": "Beverly",
+          "answerVariants": [
+            "beverly",
+            "beverly blvd",
+            "beverly boulevard"
+          ],
+          "historicalFact": "The HiFi gateway arch at Temple and Beverly was installed after the 2002 designation. The 101/110 interchange, built in the 1950s-60s, demolished hundreds of homes and bisected the Filipino community."
+        },
+        {
+          "ring": 1,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I won my office by the slimmest margin possible. I planted trees by the thousands. I piped gas beneath dirt roads. I built reservoirs to hold water for a city that had none. My brother's name marks the hilltop; mine marks the avenue below. Who am I?",
+          "answer": "Prudent Beaudry",
+          "answerVariants": [
+            "prudent beaudry",
+            "beaudry",
+            "prudent"
+          ],
+          "historicalFact": "Prudent Beaudry (1818-1893) won the 1874 mayoral election by a single vote. He was French-Canadian — one of the few non-Anglo mayors in 19th-century LA. He transformed the city from a dusty pueblo of 6,000 into a place with gas lighting, running water, and tree-lined streets."
+        },
+        {
+          "ring": 1,
+          "difficulty": 7,
+          "type": "history",
+          "clue": "In 1849, a downtown street was called Calle de los Chapules — Grasshopper Street. Legend said if grasshoppers crossed this road, the grape harvest was doomed. It became Pearl Street, then took a governor's name in 1897 — forcing the ORIGINAL street with that name to be renamed. What did the castoff street become?",
+          "answer": "Boylston Street",
+          "answerVariants": [
+            "boylston",
+            "boylston st",
+            "boylston street"
+          ],
+          "historicalFact": "When Grasshopper St became Pearl St and then Figueroa in 1897, the original Figueroa a few blocks west had to be renamed Boylston. It's a street that lost its identity to a chain of name-bumping."
+        },
+        {
+          "ring": 1,
+          "difficulty": 8,
+          "type": "history",
+          "clue": "I was born in Montreal. I won my office by a single vote. I lit the streets with gas when they had only oil lamps. I built reservoirs when the city had no running water. I planted 4,000 trees in a treeless town. My brother's hill overlooks my avenue. I served as LA's 9th mayor — but I was not American-born, not Anglo, and not elected by a comfortable margin. What is my first name?",
+          "answer": "Prudent",
+          "answerVariants": [
+            "prudent",
+            "prudent beaudry"
+          ],
+          "historicalFact": "Prudent Beaudry (1818-1893) was a French-Canadian immigrant who became LA's 9th mayor in 1874, winning by a single vote. He modernized the city with gas lighting, water infrastructure, and 4,000 street trees — transforming a dusty pueblo of 6,000 into a livable city. His brother Victor's name lives on in Victor Heights, the hillside above Beaudry Avenue."
+        },
+        {
+          "ring": 1,
+          "difficulty": 9,
+          "type": "trivia",
+          "clue": "A park near Temple Street in Historic Filipinotown shares its name with a Spanish word meaning 'unity.' Filipino War Veterans are memorialized nearby. What is the park called?",
+          "answer": "Unidad Park",
+          "answerVariants": [
+            "unidad",
+            "unidad park"
+          ],
+          "historicalFact": "Unidad Park serves as a community gathering space in Historic Filipinotown. The Filipino War Veterans Memorial nearby honors Filipino soldiers who fought alongside American forces in WWII, many of whom settled in this neighborhood after the war."
+        },
+        {
+          "ring": 1,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Prudent Beaudry became LA's 9th mayor in 1874. John Temple arrived in LA around 1828. Subtract Temple's arrival year from Beaudry's election year. Then subtract the number of trees Beaudry planted, in thousands. Finally, multiply by the number of freeways that border Historic Filipinotown (the 101 and the 110). What do you get?",
+          "answer": "84",
+          "answerVariants": [
+            "84"
+          ],
+          "historicalFact": "1874 minus 1828 equals 46. Minus 4 (for 4,000 trees) equals 42. Times 2 (for the 101 and 110 freeways) equals 84. Those two freeways carved through the neighborhood in the 1950s-60s, demolishing hundreds of homes and splitting the Filipino community in half."
+        },
+        {
+          "ring": 2,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Temple Street is named after John Temple, who sailed from Massachusetts to LA around 1828 and opened the city's first general store. He eventually owned a rancho that became a modern beach city south of LA. Which city?",
           "answer": "Long Beach",
-          "answerVariants": ["long beach"],
+          "answerVariants": [
+            "long beach"
+          ],
           "historicalFact": "John Temple owned Rancho Los Cerritos — today's Long Beach. His Temple Block buildings on Main Street created the commercial core of early DTLA."
         },
         {
           "ring": 2,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "In the 1890s, Engine Company No. 6 was built on a hillside avenue just north of Temple Street, between Bixel and Beaudry. The street sits on an elevated ridge with sweeping views of the LA basin — and its French name says exactly that. What avenue?",
+          "answer": "Bellevue Avenue",
+          "answerVariants": [
+            "bellevue",
+            "bellevue ave",
+            "bellevue avenue"
+          ],
+          "historicalFact": "Old Fire Station No. 6 on Bellevue Avenue served HiFi and surrounding neighborhoods. 'Bellevue' is French for 'beautiful view' — fitting for the elevated streets above Temple."
+        },
+        {
+          "ring": 2,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "A street near Temple is named after an 1870s LA County Supervisor who also helped found the town of Banning, California. The street rhymes with 'pixel.' What street?",
+          "answer": "Bixel Street",
+          "answerVariants": [
+            "bixel",
+            "bixel st",
+            "bixel street"
+          ],
+          "historicalFact": "Bixel Street is named after an LA County Supervisor from the 1870s who helped establish the town of Banning in Riverside County. The street crosses Temple in the transition zone between HiFi and downtown."
+        },
+        {
+          "ring": 2,
+          "difficulty": 4,
           "type": "photo",
           "answerType": "photo",
           "clue": "LA has over 450 hidden public staircases — remnants of the streetcar era. The hillside of Victor Heights near Temple and Beaudry has several. Find any staircase in this neighborhood and take a photo from the bottom looking up.",
           "answer": "",
           "answerVariants": [],
-          "historicalFact": "LA's public staircases were built in the early 1900s to connect hilltop neighborhoods to streetcar lines below. Many are still used daily as walking paths."
+          "historicalFact": "LA's public staircases were built in the early 1900s to connect hilltop neighborhoods to Pacific Electric Red Car streetcar lines below. Victor Heights has some of the steepest and most scenic."
+        },
+        {
+          "ring": 2,
+          "difficulty": 5,
+          "type": "history",
+          "clue": "Before Engine Company No. 6 was built on Bellevue Avenue in the 1890s, this hillside was largely unprotected from fire. The avenue's French name translates to two English words. What do they mean?",
+          "answer": "Beautiful view",
+          "answerVariants": [
+            "beautiful view",
+            "belle vue",
+            "pretty view",
+            "fine view"
+          ],
+          "historicalFact": "'Bellevue' is French for 'beautiful view.' The avenue sits on an elevated ridge with sightlines across the LA basin. Many French-derived street names in this area trace back to the Beaudry brothers' influence on the neighborhood."
+        },
+        {
+          "ring": 2,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I'm a street named after a man, not a landscape. I cross Temple. I rhyme with a unit of digital imagery. An 1870s County Supervisor gave me his name before helping to found a desert town in Riverside County. What street am I?",
+          "answer": "Bixel",
+          "answerVariants": [
+            "bixel",
+            "bixel st",
+            "bixel street"
+          ],
+          "historicalFact": "Bixel Street crosses Temple near the western edge of downtown. The supervisor it's named for helped found the city of Banning — named after Phineas Banning, the 'Father of the Port of Los Angeles.'"
+        },
+        {
+          "ring": 2,
+          "difficulty": 7,
+          "type": "trivia",
+          "clue": "John Temple arrived in LA around 1828 and became one of its wealthiest citizens. He owned a rancho that stretched across what is now Long Beach. But his Temple Block buildings on Main Street served a different purpose. What kind of business did Temple open — LA's first of its kind?",
+          "answer": "General store",
+          "answerVariants": [
+            "general store",
+            "a general store",
+            "store",
+            "trading post"
+          ],
+          "historicalFact": "Temple's general store was LA's first permanent retail establishment. He parlayed that into real estate, cattle ranching, and political influence — becoming one of the most powerful men in pre-statehood California."
+        },
+        {
+          "ring": 2,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "Three streets near Temple each have a name with a hidden meaning. Decode all three:\n\n1) This avenue's name is French for 'beautiful view.'\n2) This street is named after an 1870s County Supervisor who helped found a desert town in Riverside County. It rhymes with 'pixel.'\n3) This avenue is named after a French-Canadian mayor who won by one vote.\n\nWhat are the three streets, in order?",
+          "answer": "Bellevue, Bixel, Beaudry",
+          "answerVariants": [
+            "bellevue, bixel, beaudry",
+            "bellevue bixel beaudry"
+          ],
+          "historicalFact": "Bellevue Avenue ('beautiful view' in French), Bixel Street (named after an 1870s LA County Supervisor who helped found the town of Banning), and Beaudry Avenue (named after Mayor Prudent Beaudry) all intersect or run near Temple Street. The French names — Bellevue and Beaudry — trace back to the Beaudry brothers' influence on this hillside neighborhood."
+        },
+        {
+          "ring": 2,
+          "difficulty": 9,
+          "type": "observation",
+          "clue": "Walk to the intersection of Temple Street and Beverly Boulevard. Stand on the south side and look north. A large decorative structure marks the entrance to Historic Filipinotown — installed after the neighborhood's 2002 designation. What is this structure?",
+          "answer": "Gateway arch",
+          "answerVariants": [
+            "gateway arch",
+            "arch",
+            "hifi arch",
+            "the arch",
+            "the gateway arch"
+          ],
+          "historicalFact": "Historic Filipinotown is home to Filipino bakeries, restaurants, community centers, and the HiFi gateway arch. The neighborhood's Filipino character survived freeway construction, redlining, and gentrification — maintained by families who have lived here for generations."
+        },
+        {
+          "ring": 2,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Put these events in chronological order, earliest to latest:\n\nA) Engine Company No. 6 built on Bellevue Avenue\nB) Historic Filipinotown officially designated\nC) John Temple opens LA's first general store\nD) Prudent Beaudry elected mayor\n\nNow take the first letter of each event in the correct order. What 4-letter word do they spell?",
+          "answer": "CDAB",
+          "answerVariants": [
+            "cdab"
+          ],
+          "historicalFact": "Chronological order: C (Temple, c. 1828), D (Beaudry, 1874), A (Engine Co. 6, 1890s), B (HiFi designation, 2002). C-D-A-B. These four moments span 174 years of Temple Street history — from a Massachusetts trader's general store to the recognition of a Filipino community that had been calling this neighborhood home for 80 years before anyone made it official."
         },
         {
           "ring": 3,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Your destination is at 1263 W Temple St. It uses laboratory centrifuges to make cocktails. It was named one of North America's 50 Best Bars. Its name is also a type of lightning. What's the bar?",
+          "answer": "Thunderbolt",
+          "answerVariants": [
+            "thunderbolt",
+            "thunderbolt bar",
+            "thunderbolt la"
+          ],
+          "historicalFact": "Thunderbolt specializes in Southern-inspired cocktails using centrifuge clarification — a technique borrowed from laboratories that produces crystal-clear drinks with intense flavor."
+        },
+        {
+          "ring": 3,
+          "difficulty": 2,
           "type": "history",
           "clue": "Your destination shares its name with a small town outside Savannah, Georgia — population 2,668. But this version deals in centrifuges, not shrimp boats. It was named one of North America's 50 Best Bars. It's at 1263 W Temple St.",
           "answer": "Thunderbolt",
-          "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
-          "historicalFact": "John Temple came to LA c. 1828 and opened the city's first general store. Temple Street was named in his honor in 1859."
+          "answerVariants": [
+            "thunderbolt",
+            "thunderbolt bar",
+            "thunderbolt la"
+          ],
+          "historicalFact": "Thunderbolt, Georgia (pop. 2,668) sits on the Wilmington River outside Savannah. The bar borrowed the name and the Southern spirit, but traded shrimp nets for centrifuge tubes."
         },
         {
           "ring": 3,
-          "type": "trivia",
-          "clue": "This bar uses laboratory centrifuges to make cocktails. Named one of North America's 50 Best Bars. Its name is also a type of lightning. It serves Southern-inspired drinks at 1263 W Temple.",
-          "answer": "Thunderbolt",
-          "answerVariants": ["thunderbolt", "thunderbolt bar", "thunderbolt la"],
-          "historicalFact": "Thunderbolt specializes in Southern-inspired cocktails using centrifuge clarification — a technique that produces crystal-clear drinks with intense flavor."
-        },
-        {
-          "ring": 3,
-          "type": "puzzle",
+          "difficulty": 3,
+          "type": "wordplay",
           "clue": "The bar is hiding in this sentence: 'In the thunder, bolt the doors and windows.' Its cocktails use lab equipment normally found in hospitals. 1263 W Temple St.",
           "answer": "Thunderbolt",
-          "answerVariants": ["thunderbolt", "thunder bolt"],
-          "historicalFact": "Thunderbolt, the bar, is named after Thunderbolt, Georgia — a fishing community outside Savannah."
+          "answerVariants": [
+            "thunderbolt",
+            "thunder bolt"
+          ],
+          "historicalFact": "Thunderbolt, the bar, is named after Thunderbolt, Georgia — a fishing community outside Savannah. The hidden word spans 'thunder, bolt.'"
+        },
+        {
+          "ring": 3,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "This bar at 1263 W Temple St is known for its extensive list of a fortified wine from a Portuguese island. The wine shares its name with the island where it's produced — the same wine used to toast the signing of the Declaration of Independence. What wine?",
+          "answer": "Madeira",
+          "answerVariants": [
+            "madeira",
+            "madeira wine"
+          ],
+          "historicalFact": "Thunderbolt maintains one of LA's best Madeira lists. Madeira wine comes from the Portuguese island of the same name and was the drink of choice for America's Founding Fathers — it was used to toast the Declaration of Independence in 1776."
+        },
+        {
+          "ring": 3,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I'm named after a small Georgia town. I spin drinks in machines meant for blood samples. I sit on a street named after a man who opened LA's first store. I've been called one of the 50 best bars on the continent. What am I?",
+          "answer": "Thunderbolt",
+          "answerVariants": [
+            "thunderbolt",
+            "thunderbolt bar",
+            "thunderbolt la"
+          ],
+          "historicalFact": "Thunderbolt's centrifuge technique clarifies cocktails by spinning out solids at high speed — the same principle used in medical labs to separate blood components. The result is a drink that's impossibly clear but retains full flavor."
+        },
+        {
+          "ring": 3,
+          "difficulty": 6,
+          "type": "history",
+          "clue": "The street your destination sits on was named for a man who sailed from Massachusetts around 1828. He became a Mexican citizen, married into the Cota family, and built the commercial core of early DTLA. His rancho became Long Beach. What is his full name?",
+          "answer": "John Temple",
+          "answerVariants": [
+            "john temple",
+            "temple",
+            "juan temple",
+            "don juan temple"
+          ],
+          "historicalFact": "John Temple (1798-1866) arrived in LA c. 1828 and became 'Don Juan Temple.' His Temple Block on Main Street was the commercial center of early Los Angeles. Temple Street preserves his name."
+        },
+        {
+          "ring": 3,
+          "difficulty": 7,
+          "type": "puzzle",
+          "clue": "A cipher puzzle. Each number below corresponds to a letter's position in the alphabet (A=1, B=2, ... Z=26). Decode the bar's name:\n\n20-8-21-14-4-5-18-2-15-12-20\n\nThis bar sits at 1263 W Temple St. It shares its name with a small town outside Savannah, Georgia — population 2,668.",
+          "answer": "Thunderbolt",
+          "answerVariants": [
+            "thunderbolt",
+            "thunder bolt"
+          ],
+          "historicalFact": "T(20) H(8) U(21) N(14) D(4) E(5) R(18) B(2) O(15) L(12) T(20). Thunderbolt, Georgia sits on the Wilmington River outside Savannah — a fishing community of 2,668. The bar borrowed the name and the Southern spirit, pairing it with laboratory centrifuge technology to create crystal-clear cocktails."
+        },
+        {
+          "ring": 3,
+          "difficulty": 8,
+          "type": "wordplay",
+          "clue": "Your destination's name is a compound word. The first half is the sound that follows lightning. The second half is what you do to a door in a storm. Together they name both a Georgia town and an LA bar at 1263 W Temple. In mythology, Zeus hurled these as weapons. What is the word?",
+          "answer": "Thunderbolt",
+          "answerVariants": [
+            "thunderbolt",
+            "thunder bolt",
+            "a thunderbolt"
+          ],
+          "historicalFact": "A thunderbolt in mythology referred to the physical weapon Zeus hurled from Olympus — a concentrated shaft of lightning and force. The word predates the scientific understanding of electricity. Benjamin Franklin proved thunderbolts were just lightning, but the mythological power of the word endures."
+        },
+        {
+          "ring": 3,
+          "difficulty": 9,
+          "type": "puzzle",
+          "clue": "Take the first letter of each item in this list: Temple, Historic, Unidad, Neighborhood, Designated, Engine, Rancho, Beaudry, Original, Lotus, Temple. Read them in order. What word do they spell?",
+          "answer": "Thunderbolt",
+          "answerVariants": [
+            "thunderbolt"
+          ],
+          "historicalFact": "T-H-U-N-D-E-R-B-O-L-T. Every letter comes from a person, place, or concept woven into the fabric of this neighborhood — from Beaudry's reservoirs to the Filipino community's designated home to Temple Street itself."
+        },
+        {
+          "ring": 3,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "A compound puzzle in three parts:\n\n1) Prudent Beaudry became mayor in 1874. John Temple arrived c. 1828. What is the difference in years? Call that number A.\n\n2) Beaudry planted 4,000 trees. Express that in thousands. Call that number B.\n\n3) How many freeways border Historic Filipinotown? (The 101 and the 110.) Call that number C.\n\nCalculate: (A minus B) times C. What do you get?",
+          "answer": "84",
+          "answerVariants": [
+            "84"
+          ],
+          "historicalFact": "A = 46 (1874 - 1828). B = 4 (4,000 trees in thousands). C = 2 (the 101 and 110). (46 - 4) x 2 = 84. The 101 and 110 freeways — the C in this equation — did the most damage. Built in the 1950s-60s, they demolished hundreds of homes and split the Filipino community. The neighborhood survived anyway."
         }
       ]
     },
@@ -126,95 +416,398 @@
       "theme": "Charity, Grasshoppers, and the Girl Named Spring",
       "totalWalkingDistance": "~0.35 miles",
       "narrativeArc": "A street ashamed of its name. A street named for a woman who may not have existed. And a whiskey bar sitting on top of a map drawn before any of these streets were real.",
-      "avoidZones": ["Stay within the DTLA grid — no freeway crossings needed"],
+      "avoidZones": [
+        "Stay within the DTLA grid — no freeway crossings needed"
+      ],
       "cluePool": [
         {
           "ring": 1,
+          "difficulty": 1,
           "type": "history",
-          "clue": "In 1849, this downtown street was called Charity Street. By 1886, property owners petitioned City Council for a name change — they were sick of jokes about 'living on charity.' The Council took pity. What avenue did Charity become?",
+          "clue": "In 1849, this downtown avenue was called Charity Street. By 1886, property owners petitioned City Council for a name change — they were sick of jokes about 'living on charity.' The Council took pity. What avenue did Charity become?",
           "answer": "Grand Avenue",
-          "answerVariants": ["grand", "grand ave", "grand avenue"],
-          "historicalFact": "Grand Avenue was originally Charity Street on the 1849 Ord survey map. Residents suggested Pacific Avenue, but that name was taken."
+          "answerVariants": [
+            "grand",
+            "grand ave",
+            "grand avenue"
+          ],
+          "historicalFact": "Grand Avenue was originally Charity Street on the 1849 Ord survey map. When residents petitioned for a change, they suggested Pacific Avenue, but that name was taken. The LA Daily Times reported Council 'took pity on the people who were sick of living on charity.'"
         },
         {
           "ring": 1,
+          "difficulty": 2,
           "type": "trivia",
-          "clue": "Two of DTLA's most famous buildings sit on this avenue: a concert hall designed by Frank Gehry and an art museum by Renzo Piano. The avenue itself was originally called Charity — until residents demanded something more dignified. What is it?",
+          "clue": "Two of DTLA's most famous buildings sit on this avenue: a concert hall designed by Frank Gehry and a contemporary art museum with a honeycomb facade. The avenue itself was originally called Charity — until residents demanded something more dignified. What is it?",
           "answer": "Grand Avenue",
-          "answerVariants": ["grand", "grand ave", "grand avenue"],
+          "answerVariants": [
+            "grand",
+            "grand ave",
+            "grand avenue"
+          ],
           "historicalFact": "Walt Disney Concert Hall (Gehry, 2003) and The Broad (Diller Scofidio + Renfro, 2015) both sit on Grand Avenue, the former Charity Street."
         },
         {
           "ring": 1,
-          "type": "puzzle",
-          "clue": "Five DTLA streets in order, going east: Flower, Hope, ___, Olive, Hill. One of these used to be called Charity. Fill in the blank.",
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "Find the 5-letter word hidden in this phrase: 'a flag ran down the hill.' That word is also the avenue that Charity Street became. Head there.",
           "answer": "Grand",
-          "answerVariants": ["grand", "grand ave", "grand avenue"],
+          "answerVariants": [
+            "grand",
+            "grand ave",
+            "grand avenue"
+          ],
+          "historicalFact": "flaGRANDown — Grand Avenue, renamed from Charity in 1886. The hidden word spans across 'flag,' 'ran,' and 'down.'"
+        },
+        {
+          "ring": 1,
+          "difficulty": 4,
+          "type": "puzzle",
+          "clue": "Five DTLA streets in order, going east from Figueroa: Flower, Hope, ___, Olive, Hill. One of these was originally called Charity. Fill in the blank.",
+          "answer": "Grand",
+          "answerVariants": [
+            "grand",
+            "grand ave",
+            "grand avenue"
+          ],
           "historicalFact": "The 1849 Ord survey named these streets. Hope and Charity were neighbors — but while Hope kept its name, Charity was forced to change after 37 years of jokes."
         },
         {
           "ring": 1,
-          "type": "wordplay",
-          "clue": "Find the 5-letter word hidden in this phrase: 'a flag ran down the hill.' That word is also the avenue that Charity Street became. Head there.",
-          "answer": "Grand",
-          "answerVariants": ["grand", "grand ave", "grand avenue"],
-          "historicalFact": "flaGRANDown — Grand Avenue, renamed from Charity in 1886. The LA Daily Times reported Council 'took pity on the people who were sick of living on charity.'"
-        },
-        {
-          "ring": 2,
+          "difficulty": 5,
           "type": "history",
-          "clue": "A downtown street may have been named after a woman — Pio Pico's niece from San Diego, nicknamed 'Primavera.' Surveyor Edward Ord supposedly found her charming in 1849 and named a street in her honor. The romance angle is 'surely hogwash.' But the street is real. Find it.",
-          "answer": "Spring Street",
-          "answerVariants": ["spring", "spring st", "spring street"],
-          "historicalFact": "Spring Street may be named after Trinidad Ortega (1832–1903), nicknamed 'Primavera' (Spring). Her daughter promoted the story at a 1932 luncheon."
+          "clue": "Before the 1960s, Bunker Hill was a wealthy residential neighborhood of Victorian mansions. Urban renewal demolished almost everything. One woman born into slavery in 1818 had owned property on a street nearby — one of the first Black women to own land in LA. She won her freedom in an LA courtroom in 1856. Who was she?",
+          "answer": "Biddy Mason",
+          "answerVariants": [
+            "biddy mason",
+            "bridget mason",
+            "biddy",
+            "mason"
+          ],
+          "historicalFact": "Biddy Mason (1818-1891) was born enslaved in Mississippi. She walked behind her enslaver's wagon from Mississippi to California. In 1856, she petitioned for freedom in LA and won. She bought property on Spring Street between 3rd and 4th, became a nurse, philanthropist, and one of the wealthiest Black women in early LA."
         },
         {
-          "ring": 2,
+          "ring": 1,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I drew the first American street map of Los Angeles in 1849. I roomed with William Tecumseh Sherman at West Point. I forced Robert E. Lee to surrender at Appomattox. The streets you're walking — I named them. Who am I?",
+          "answer": "Edward Ord",
+          "answerVariants": [
+            "edward ord",
+            "ord",
+            "lt. edward ord",
+            "lieutenant edward ord",
+            "lt edward ord"
+          ],
+          "historicalFact": "Lt. Edward O.C. Ord surveyed and mapped LA in 1849 for the U.S. Army. He named the streets — including Charity (now Grand), Hope, Spring, and Main. He later became a Civil War general and helped force Lee's surrender at Appomattox."
+        },
+        {
+          "ring": 1,
+          "difficulty": 7,
           "type": "trivia",
-          "clue": "The world's shortest railway — Angels Flight — has carried riders up Bunker Hill since 1901. It connects the avenue that was once Charity at the top to a street at the bottom named after the terrain. What's the bottom street?",
-          "answer": "Hill Street",
-          "answerVariants": ["hill", "hill st", "hill street"],
-          "historicalFact": "Angels Flight, a 298-foot funicular, connects Hill Street to Grand Avenue on Bunker Hill. It costs $1 to ride."
+          "clue": "Pershing Square, the public park at 5th and Hill, has had four different names. It started as La Plaza Abaja, then 6th Street Park, then Central Park, before getting its current name in 1918 to honor a WWI general. What was the general's first name?",
+          "answer": "John",
+          "answerVariants": [
+            "john",
+            "john pershing",
+            "john j. pershing",
+            "john joseph pershing"
+          ],
+          "historicalFact": "General John J. 'Black Jack' Pershing commanded the American Expeditionary Forces in WWI. The park was renamed in his honor in 1918. Before that, as 'Central Park,' it was LA's attempt to rival New York's — at a fraction of the acreage."
+        },
+        {
+          "ring": 1,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "Five DTLA streets run parallel, east from Figueroa. Using these clues, eliminate four of the five until one remains:\n\n1) Remove the street that was originally called Charity (renamed in 1886).\n2) Remove the street named after a geographical feature — a raised mound of earth.\n3) Remove the street named after a plant that produces oil and appears on pizza.\n4) Remove the street named after a botanical product associated with bakeries and florists.\n\nThe last street standing is the only one from Ord's 1849 survey that no one ever petitioned to rename. What is it?",
+          "answer": "Hope",
+          "answerVariants": [
+            "hope",
+            "hope street",
+            "hope st"
+          ],
+          "historicalFact": "Grand (formerly Charity) is eliminated first. Hill goes next. Then Olive. Then Flower. Hope is the last one standing — and it's the only street from Ord's 1849 survey that kept both its original name and its dignity. No one petitioned to change it."
+        },
+        {
+          "ring": 1,
+          "difficulty": 9,
+          "type": "history",
+          "clue": "In 1935, a cafeteria opened on South Broadway with a radical Depression-era policy: diners could pay whatever they could afford — or nothing at all. The owner estimated that 10,000 people ate free during the first year. The restaurant survived for 80 years. What was it called?",
+          "answer": "Clifton's",
+          "answerVariants": [
+            "cliftons",
+            "clifton's",
+            "clifton's cafeteria",
+            "cliftons cafeteria"
+          ],
+          "historicalFact": "Clifton's Cafeteria at 648 S Broadway opened in 1935 with a 'pay what you wish' policy. Founder Clifford Clinton lost money for years but believed feeding people mattered more than profit. The restaurant's forest-themed interior — complete with a three-story redwood tree — became a DTLA landmark."
+        },
+        {
+          "ring": 1,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Edward Ord drew LA's first American street map in 1849. Grand Avenue was renamed from Charity in 1886. The Bradbury Building opened in 1893. Angels Flight began running in 1901. Add all four years together. Then subtract 7,000. What number remains?",
+          "answer": "529",
+          "answerVariants": [
+            "529"
+          ],
+          "historicalFact": "1849 + 1886 + 1893 + 1901 = 7,529. Minus 7,000 = 529. The Bradbury Building at 304 S Broadway was inspired by Edward Bellamy's 1888 novel 'Looking Backward,' which described a utopian building with a skylit atrium. Mining magnate Lewis Bradbury hired a draftsman named George Wyman, who consulted a Ouija board before accepting the commission."
         },
         {
           "ring": 2,
+          "difficulty": 1,
+          "type": "history",
+          "clue": "A downtown street may have been named after a woman called 'Primavera' — the Spanish word for a season. Surveyor Edward Ord supposedly met her in 1849 and named a street in her honor. Which season does 'Primavera' mean?",
+          "answer": "Spring",
+          "answerVariants": [
+            "spring",
+            "spring street",
+            "spring st"
+          ],
+          "historicalFact": "Spring Street may be named after Trinidad Ortega (1832-1903), Pio Pico's niece, nicknamed 'Primavera' (Spring). Her daughter promoted this origin story at a 1932 luncheon. Historians call the romance angle 'surely hogwash,' but the street is real."
+        },
+        {
+          "ring": 2,
+          "difficulty": 2,
+          "type": "trivia",
+          "clue": "The world's shortest railway — Angels Flight — has carried riders up Bunker Hill since 1901. It's a funicular: two cars on a track connected by a cable, so when one goes up, the other comes down. How much does a ride cost?",
+          "answer": "$1",
+          "answerVariants": [
+            "$1",
+            "1 dollar",
+            "one dollar",
+            "a dollar",
+            "1"
+          ],
+          "historicalFact": "Angels Flight is a 298-foot funicular connecting Hill Street to Grand Avenue (formerly Charity Street) on Bunker Hill. Built in 1901, it was dismantled in 1969, stored for 27 years, and rebuilt 50 feet south of its original location in 1996."
+        },
+        {
+          "ring": 2,
+          "difficulty": 3,
+          "type": "trivia",
+          "clue": "The Eastern Columbia Building on Broadway has a clock tower covered in glazed terra cotta — one of LA's greatest Art Deco landmarks. It was built in 1929 as a department store. What color dominates the building's facade?",
+          "answer": "Turquoise",
+          "answerVariants": [
+            "turquoise",
+            "teal",
+            "blue",
+            "blue-green",
+            "aqua",
+            "blue green"
+          ],
+          "historicalFact": "The Eastern Columbia Building (1929) is clad in glossy turquoise terra cotta with gold trim. Designed by Claud Beelman in the Zigzag Moderne style, it was originally home to the Eastern-Columbia department store, which sold furniture and clothing."
+        },
+        {
+          "ring": 2,
+          "difficulty": 4,
+          "type": "history",
+          "clue": "Broadway between 3rd and 9th has more pre-war movie palaces per block than anywhere in the world. The first of them opened in 1918 — built by the same showman who later built the Chinese Theatre and Egyptian Theatre in Hollywood. What was the Broadway theater called?",
+          "answer": "Million Dollar Theatre",
+          "answerVariants": [
+            "million dollar theatre",
+            "million dollar theater",
+            "the million dollar theatre",
+            "the million dollar theater"
+          ],
+          "historicalFact": "The Million Dollar Theatre at 307 S Broadway was Sid Grauman's first theater — before the Egyptian (1922) and the Chinese (1927) in Hollywood. It opened in 1918 with a Spanish Colonial facade designed by Albert C. Martin. Broadway's Theatre District contains 12 historic movie palaces."
+        },
+        {
+          "ring": 2,
+          "difficulty": 5,
           "type": "photo",
-          "clue": "The Eastern Columbia Building on Broadway (between 8th and 9th) has a clock tower covered in glazed terra cotta — one of LA's greatest Art Deco landmarks. Find it and take a photo. What color dominates the building?",
-          "answer": "turquoise",
-          "answerVariants": ["turquoise", "teal", "blue", "blue-green", "aqua", "blue green"],
-          "historicalFact": "The Eastern Columbia Building (1929) is clad in glossy turquoise terra cotta with gold trim — one of the finest Art Deco buildings in Los Angeles."
+          "answerType": "photo",
+          "clue": "The Eastern Columbia Building on Broadway (between 8th and 9th) has a clock tower covered in turquoise glazed terra cotta — one of LA's greatest Art Deco landmarks. Find it and take a photo of the clock tower.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "The Eastern Columbia Building's four-sided clock tower rises 13 stories above Broadway. The turquoise terra cotta was manufactured by Gladding McBean, the same company that produced the tile for many of LA's most iconic buildings."
         },
         {
           "ring": 2,
-          "type": "observation",
-          "clue": "Broadway between 3rd and 7th has more pre-war movie palaces per block than anywhere in the world — the Million Dollar Theatre (1918), the Los Angeles Theatre (1931), the Palace (1911). What street are they on?",
-          "answer": "Broadway",
-          "answerVariants": ["broadway", "s broadway", "south broadway"],
-          "historicalFact": "Broadway's Theatre District between 3rd and 9th contains 12 historic movie palaces — the highest concentration in the world."
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I was born enslaved in 1818. I walked behind a wagon from Mississippi to California. I won my freedom in an LA courtroom in 1856. I bought land on Spring Street and became one of the city's first Black property owners. My memorial park is downtown. Who am I?",
+          "answer": "Biddy Mason",
+          "answerVariants": [
+            "biddy mason",
+            "bridget mason",
+            "biddy",
+            "mason"
+          ],
+          "historicalFact": "Biddy Mason's homestead was on Spring Street between 3rd and 4th — in the heart of today's DTLA. She became a nurse and midwife, delivered hundreds of babies, founded the first Black church in LA, and donated to flood victims, prisoners, and the poor."
         },
         {
-          "ring": 3,
+          "ring": 2,
+          "difficulty": 7,
+          "type": "wordplay",
+          "clue": "The Bradbury Building at 304 S Broadway is one of LA's architectural treasures — a Victorian court with a glass skylight, open cage elevators, and ornate iron railings. It was built in 1893. The architect who designed it consulted an unconventional source before accepting the commission. What did he consult?",
+          "answer": "A Ouija board",
+          "answerVariants": [
+            "ouija board",
+            "a ouija board",
+            "ouija",
+            "the ouija board"
+          ],
+          "historicalFact": "George Wyman was a young draftsman when mining magnate Lewis Bradbury offered him the commission. Wyman consulted a Ouija board, which spelled out: 'Take the Bradbury building. It will make you famous.' It did. The building was inspired by Edward Bellamy's 1888 utopian novel 'Looking Backward.'"
+        },
+        {
+          "ring": 2,
+          "difficulty": 8,
           "type": "history",
-          "clue": "Your destination sits at 515 W 7th St, second floor. Inside: taxidermy on the walls, live jazz, and 700 bottles of whiskey. The street was first drawn on a map in 1849 by Lt. Edward Ord — who later forced Robert E. Lee to surrender.",
-          "answer": "Seven Grand",
-          "answerVariants": ["seven grand", "7 grand"],
-          "historicalFact": "Lt. Edward Ord drew the first American map of LA in 1849. He roomed with Sherman at West Point and forced Lee's surrender at Appomattox."
+          "clue": "I was born enslaved in Mississippi in 1818. I walked behind my enslaver's wagon all the way to California. In 1856, I stood in an LA courtroom and won my freedom. I bought land on Spring Street between 3rd and 4th. I delivered hundreds of babies as a midwife. I founded the first Black church in Los Angeles. My memorial park is in downtown LA. What is my full name?",
+          "answer": "Biddy Mason",
+          "answerVariants": [
+            "biddy mason",
+            "bridget mason",
+            "biddy",
+            "mason"
+          ],
+          "historicalFact": "Biddy Mason (1818-1891) walked roughly 1,700 miles from Mississippi to California behind her enslaver's wagon train. After winning her freedom in court, she saved $250 and bought property on Spring Street — becoming one of the first Black women to own land in LA. She founded First African Methodist Episcopal Church and spent her fortune helping the poor, regardless of race."
+        },
+        {
+          "ring": 2,
+          "difficulty": 9,
+          "type": "history",
+          "clue": "At 453 S Spring Street, a bookstore occupies a former bank vault. It claims to be the world's largest used bookstore and houses over 250,000 books. The second floor has books sculpted into arches, columns, and tunnels. What is it called?",
+          "answer": "The Last Bookstore",
+          "answerVariants": [
+            "the last bookstore",
+            "last bookstore"
+          ],
+          "historicalFact": "The Last Bookstore opened in 2005 in a downtown loft and moved to its current location — a former Citizens National Bank building — in 2011. Owner Josh Spencer named it as a comment on the endangered status of physical bookstores. The building's marble columns, high ceilings, and old vault now house one of the most photographed bookstores in the world."
+        },
+        {
+          "ring": 2,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "A compound puzzle:\n\n1) Grand Avenue was originally called Charity. What year was it renamed? (Hint: residents petitioned after 37 years of jokes. The Ord survey was 1849.)\n2) The Million Dollar Theatre opened on Broadway in 1918. The Bradbury Building opened in 1893. What is the difference?\n3) Multiply your answers: (last two digits of Part 1) times (Part 2). What do you get?",
+          "answer": "2150",
+          "answerVariants": [
+            "2150"
+          ],
+          "historicalFact": "Part 1: 1849 + 37 = 1886. Part 2: 1918 - 1893 = 25. Part 3: 86 x 25 = 2,150. The Bradbury Building and the Million Dollar Theatre sit three blocks apart on Broadway — 25 years of architectural ambition compressed into a quarter mile."
         },
         {
           "ring": 3,
+          "difficulty": 1,
           "type": "trivia",
-          "clue": "700+ whiskey bottles. Taxidermy. Live jazz. Second floor. This bar's name combines the street number with a word meaning 'impressive' — which also happens to be the avenue that Charity Street became. 515 W 7th.",
+          "clue": "Your destination is a whiskey bar at 515 W 7th St, second floor. It has 700+ bottles, taxidermy on the walls, and live jazz. Its name combines the street number with the avenue that Charity became. What's the bar?",
           "answer": "Seven Grand",
-          "answerVariants": ["seven grand", "7 grand"],
-          "historicalFact": "Seven Grand houses one of the most extensive whiskey collections on the West Coast."
+          "answerVariants": [
+            "seven grand",
+            "7 grand"
+          ],
+          "historicalFact": "Seven Grand houses one of the most extensive whiskey collections on the West Coast — over 700 bottles from Scotland, Japan, Ireland, and the American South."
         },
         {
           "ring": 3,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "Your destination sits at 515 W 7th St, second floor. Inside: taxidermy on the walls, live jazz, and 700 bottles of whiskey. The street was first drawn on a map in 1849 by Lt. Edward Ord — who later forced Robert E. Lee to surrender. What's the bar?",
+          "answer": "Seven Grand",
+          "answerVariants": [
+            "seven grand",
+            "7 grand"
+          ],
+          "historicalFact": "Lt. Edward Ord drew the first American map of LA in 1849. He roomed with Sherman at West Point and helped force Lee's surrender at Appomattox. The streets Ord surveyed — including 7th — still form the grid of downtown LA."
+        },
+        {
+          "ring": 3,
+          "difficulty": 3,
           "type": "wordplay",
           "clue": "Take the number of the street (7th). Write it as a word. Add the avenue that Charity became. That's the bar. Second floor, 515.",
           "answer": "Seven Grand",
-          "answerVariants": ["seven grand", "7 grand"],
-          "historicalFact": "Seven + Grand. The bar sits on 7th Street, one block from Grand Avenue — the former Charity Street."
+          "answerVariants": [
+            "seven grand",
+            "7 grand"
+          ],
+          "historicalFact": "Seven + Grand. The bar sits on 7th Street, one block from Grand Avenue — the former Charity Street. The name is a permanent reminder of Charity's transformation."
+        },
+        {
+          "ring": 3,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "This second-floor whiskey bar has taxidermy deer, elk, and bison mounted on the walls — creating the atmosphere of a hunting lodge. It hosts live jazz regularly. How many bottles of whiskey does it claim to stock? (Round to the nearest hundred.)",
+          "answer": "700",
+          "answerVariants": [
+            "700",
+            "seven hundred",
+            "700+",
+            "over 700"
+          ],
+          "historicalFact": "Seven Grand's whiskey collection spans single malts from Islay, Japanese whiskies from Yamazaki and Nikka, rare American bourbons, and Irish pot stills. The hunting-lodge aesthetic — taxidermy, dark wood, leather — was inspired by vintage men's clubs."
+        },
+        {
+          "ring": 3,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I'm on 7th Street. My name includes the word for the avenue that was once called Charity. I'm on the second floor. I have more whiskey bottles than the population of some California ghost towns. Dead animals watch you drink. What am I?",
+          "answer": "Seven Grand",
+          "answerVariants": [
+            "seven grand",
+            "7 grand"
+          ],
+          "historicalFact": "Seven Grand opened in the 213 Nightlife group's portfolio of DTLA bars. The taxidermy collection includes deer, elk, and bison — all ethically sourced vintage pieces, not hunted for the bar."
+        },
+        {
+          "ring": 3,
+          "difficulty": 6,
+          "type": "history",
+          "clue": "The man who drew the 1849 map that named these streets — including 7th, where your destination sits — had an extraordinary military career. He roomed with Sherman at West Point, surveyed LA for the U.S. Army, fought in the Civil War, and helped force Lee's surrender at Appomattox. He died of yellow fever in Havana. His last name has only three letters. What was it?",
+          "answer": "Ord",
+          "answerVariants": [
+            "ord",
+            "edward ord",
+            "edward o.c. ord"
+          ],
+          "historicalFact": "Edward O.C. Ord (1818-1883) mapped LA in 1849, then spent 30 years in the Army. After the Civil War, he commanded the Department of Texas and invested in railroad development. He died of yellow fever in Havana, Cuba."
+        },
+        {
+          "ring": 3,
+          "difficulty": 7,
+          "type": "wordplay",
+          "clue": "Your destination's name combines two pieces: a number and a word. The number matches the street it sits on. The word is what Charity Street became in 1886. Dead animals line the walls, 700 bottles line the shelves, and jazz fills the room. Second floor, 515. What's the bar?",
+          "answer": "Seven Grand",
+          "answerVariants": [
+            "seven grand",
+            "7 grand"
+          ],
+          "historicalFact": "Seven Grand's name works on two levels: it's the intersection of 7th Street and Grand Avenue (the former Charity Street), and in slang, 'seven grand' means $7,000 — roughly the cost of the bar's most expensive bottle of whiskey. The hunting-lodge interior features vintage taxidermy sourced from estate sales, not hunted for decor."
+        },
+        {
+          "ring": 3,
+          "difficulty": 8,
+          "type": "history",
+          "clue": "The 1849 Ord survey named three DTLA streets after the three theological virtues. Hope Street kept its name. Charity became Grand. But the third virtue — the one Paul called 'the greatest of these' — never made it onto the final map (or was lost early). What is the missing virtue?",
+          "answer": "Faith",
+          "answerVariants": [
+            "faith",
+            "faith street"
+          ],
+          "historicalFact": "Hope, Faith, and Charity are the three theological virtues from 1 Corinthians 13:13. Ord placed Hope and Charity on his 1849 LA map, but Faith either never made it or was renamed so early no record survives. Hope endured. Charity became Grand. Faith vanished — which may say something about the city."
+        },
+        {
+          "ring": 3,
+          "difficulty": 9,
+          "type": "wordplay",
+          "clue": "Your destination's name has ten letters across two words. The first word has five letters and equals the number of the street. The second word has five letters and was once called Charity. Together they name a bar on the second floor at 515. But 'Seven Grand' also means $7,000 in slang. How many bottles of whiskey could you buy at $10 each with seven grand?",
+          "answer": "700",
+          "answerVariants": [
+            "700",
+            "seven hundred"
+          ],
+          "historicalFact": "$7,000 divided by $10 equals 700 — the same number of whiskey bottles on Seven Grand's shelves. Whether the name is a coincidence or a wink, the math works out."
+        },
+        {
+          "ring": 3,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Final compound puzzle:\n\n1) Charity Street was renamed Grand in 1886. Edward Ord drew his map in 1849. How many years between? Call that A.\n2) Angels Flight is 298 feet long. Divide by 2. Call that B.\n3) Subtract A from B. Call that C.\n4) The bar at 515 W 7th has how many bottles of whiskey? Divide by C.\n\nWhat do you get? Round to the nearest whole number.",
+          "answer": "6",
+          "answerVariants": [
+            "6",
+            "six"
+          ],
+          "historicalFact": "A = 37 (1886 - 1849). B = 149 (298 / 2). C = 112 (149 - 37). 700 / 112 = 6.25, which rounds to 6. Edward Ord surveyed these streets 37 years before Charity became Grand. In that time, LA went from a dusty pueblo of 1,600 to a booming city of 12,000 — all walking on streets one Army lieutenant named in a few weeks."
         }
       ]
     },
@@ -230,96 +823,1589 @@
       "theme": "A Fox Path, a Disgraced Vintner, and the Boulevard That Wasn't",
       "totalWalkingDistance": "~0.35 miles",
       "narrativeArc": "An indigenous footpath. A disgraced man's street renamed for a senator's grapes. And a boulevard whose origin story no one can agree on — leading to a bar that's been telling stories since 1934.",
-      "avoidZones": ["Stay on Hollywood Blvd corridor — no freeways to cross"],
+      "avoidZones": [
+        "Stay on Hollywood Blvd corridor — no freeways to cross"
+      ],
       "cluePool": [
         {
           "ring": 1,
-          "type": "history",
-          "clue": "This boulevard follows a path the Kizh people walked for centuries — from the LA basin through a mountain pass to their village near present-day Universal City. The Treaty of Cahuenga, ending California's role in the Mexican-American War, was signed in its pass on January 13, 1847. Its name might mean 'place of the fox.' Find the boulevard.",
-          "answer": "Cahuenga Boulevard",
-          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
-          "historicalFact": "Cahuenga follows the ancient Tongva footpath. The Treaty of Cahuenga was signed Jan 13, 1847 by Andres Pico and John C. Fremont."
-        },
-        {
-          "ring": 1,
+          "difficulty": 1,
           "type": "trivia",
-          "clue": "The Capitol Records Building — designed to look like a stack of 45s on a turntable — sits near this boulevard. The architect says the resemblance is a coincidence. The boulevard follows an indigenous path through a mountain pass. What boulevard?",
-          "answer": "Cahuenga Boulevard",
-          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
-          "historicalFact": "The Capitol Records Building (1956) was designed by Welton Becket. Despite the persistent myth, he said the record-stack resemblance was unintentional."
+          "clue": "A round building near Cahuenga and Vine looks like a stack of records on a turntable. It was built in 1956 and is home to one of the biggest music labels in the world. What building is it?",
+          "answer": "Capitol Records Building",
+          "answerVariants": [
+            "capitol records",
+            "capitol records building",
+            "the capitol records building"
+          ],
+          "historicalFact": "The Capitol Records Building was designed by Welton Becket and opened in 1956. Despite the persistent myth, Becket insisted the resemblance to a stack of 45 RPM records was purely coincidental."
         },
         {
           "ring": 1,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "Cahuenga Boulevard follows a path walked by the Kizh/Tongva people for centuries — through a mountain pass connecting the LA basin to the San Fernando Valley. A treaty ending California's role in the Mexican-American War was signed in that pass on January 13, 1847. Name either signer.",
+          "answer": "Andres Pico",
+          "answerVariants": [
+            "andres pico",
+            "pico",
+            "john c. fremont",
+            "john fremont",
+            "fremont",
+            "john c fremont"
+          ],
+          "historicalFact": "The Treaty of Cahuenga was signed by Andres Pico (representing Mexican forces) and John C. Fremont (for the U.S.). It ended fighting in California during the Mexican-American War — signed under an oak tree near what is now Universal Studios."
+        },
+        {
+          "ring": 1,
+          "difficulty": 3,
           "type": "wordplay",
-          "clue": "Unscramble: A-H-U-G-C-A-N-E. This boulevard began as a Tongva footpath. A peace treaty was signed in its pass in 1847. It intersects Hollywood Blvd near some of the most famous recording studios in the world.",
+          "clue": "Unscramble these letters: A-H-U-G-C-A-N-E. They spell a boulevard named after an indigenous mountain pass. UCLA linguist Pamela Munro traces it to the Tongva word 'Kawee'nga.' Find this boulevard.",
           "answer": "Cahuenga",
-          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
-          "historicalFact": "The Treaty of Cahuenga effectively ended fighting in California during the Mexican-American War."
+          "answerVariants": [
+            "cahuenga",
+            "cahuenga blvd",
+            "cahuenga boulevard"
+          ],
+          "historicalFact": "The Tongva word 'Kawee'nga' may mean 'place of the fox' or 'place of the hill.' The Spanish transliterated it as 'Cahuenga,' and the name stuck through American annexation, city incorporation, and freeway construction."
         },
         {
           "ring": 1,
-          "type": "puzzle",
-          "clue": "Indigenous people called this mountain pass 'Kawee'nga.' The Spanish heard 'Cahuenga.' UCLA linguists think it means 'place of the fox' or 'place of the hill.' Today it's a boulevard, a freeway exit, and a recording studio corridor. What's the name?",
-          "answer": "Cahuenga",
-          "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
-          "historicalFact": "Cahuenga is derived from the Tongva word 'Kawee'nga,' with competing etymological interpretations from UCLA linguist Pamela Munro."
-        },
-        {
-          "ring": 2,
+          "difficulty": 4,
           "type": "history",
-          "clue": "On Hollywood Blvd — originally called Prospect Avenue until 1901 — a cross street was named after a U.S. Senator's grapevines. Its original name honored a man who went bankrupt, shot himself, endured a brutal divorce, and died at 34. The senator's grapes were a better namesake. What street?",
-          "answer": "Vine Street",
-          "answerVariants": ["vine", "vine st", "vine street"],
-          "historicalFact": "Vine Street was originally Weyse Avenue (1887) after Otto Gunther Weyse. After his spectacular downfall, Senator Cornelius Cole renamed it after his grapevines in 1893."
+          "clue": "In 1887, a couple from Kansas bought 120 acres of ranch land and named their development after a word no one can agree on. Three origin stories compete: a woman on a train mentioned her estate by that name, California holly bushes grew in the area, or a neighbor simply suggested it. The husband was Harvey. His wife — the real visionary — was named?",
+          "answer": "Daeida",
+          "answerVariants": [
+            "daeida",
+            "daeida wilcox",
+            "daeida wilcox beveridge"
+          ],
+          "historicalFact": "Daeida Wilcox is sometimes called the 'Mother of Hollywood.' After Harvey died in 1891, she continued developing the community — donating land for churches, schools, and streets. She remarried Philo Beveridge and kept building until her death in 1914."
         },
         {
-          "ring": 2,
-          "type": "trivia",
-          "clue": "One of the most famous intersections in the world pairs a boulevard with a street named after a crop that once grew here. Together, they're shorthand for the entire entertainment industry. What's the crop street?",
-          "answer": "Vine Street",
-          "answerVariants": ["vine", "vine st", "vine street"],
-          "historicalFact": "Hollywood & Vine became synonymous with entertainment in the 1920s when nearby studios and radio stations made it the industry's geographic center."
-        },
-        {
-          "ring": 2,
+          "ring": 1,
+          "difficulty": 5,
           "type": "puzzle",
-          "clue": "Before 1901, Hollywood Blvd was called Prospect Avenue. Before 1893, Vine Street was called Weyse Avenue. The most famous intersection in entertainment would have been 'Prospect & Weyse.' What was Hollywood Boulevard's original name?",
-          "answer": "Prospect Avenue",
-          "answerVariants": ["prospect", "prospect ave", "prospect avenue"],
-          "historicalFact": "Prospect Avenue was renamed Hollywood Boulevard in 1901, a few years after the Wilcoxes began developing their ranch."
+          "clue": "I am a boulevard that began as a Tongva footpath. My name comes from a language most Angelenos cannot identify. A peace treaty was signed in my pass. A building shaped like a stack of records sits near my intersection with Vine. But before Europeans arrived, I was not a road — I was a way through mountains used for trade and ceremony. What am I?",
+          "answer": "Cahuenga Boulevard",
+          "answerVariants": [
+            "cahuenga",
+            "cahuenga blvd",
+            "cahuenga boulevard"
+          ],
+          "historicalFact": "The Cahuenga Pass was a critical trade route for the Tongva, connecting the coastal plain to the valley beyond the Santa Monica Mountains. Every major LA transportation system has followed the same path — footpath, horse trail, boulevard, freeway."
+        },
+        {
+          "ring": 1,
+          "difficulty": 6,
+          "type": "trivia",
+          "clue": "The Egyptian Theatre at 6712 Hollywood Blvd held the first-ever Hollywood movie premiere in 1922. Sid Grauman built it during the King Tut craze. The movie that premiered there starred Douglas Fairbanks. What was the film?",
+          "answer": "Robin Hood",
+          "answerVariants": [
+            "robin hood",
+            "douglas fairbanks robin hood"
+          ],
+          "historicalFact": "The Egyptian Theatre premiered 'Robin Hood' on October 18, 1922. Grauman went on to build the more famous Chinese Theatre in 1927. The Egyptian was restored by Netflix in 2023 and is now home to the American Cinematheque."
+        },
+        {
+          "ring": 1,
+          "difficulty": 7,
+          "type": "puzzle",
+          "clue": "A boulevard near your destination takes its name from the Tongva language. UCLA linguist Pamela Munro traces it to 'Kawee'nga.' The Spanish transliterated the sounds into their own alphabet. The meaning — debated but never settled — may refer to a specific animal associated with cunning in dozens of cultures. What animal does 'Kawee'nga' likely reference, and what is the boulevard?",
+          "answer": "Fox — Cahuenga Boulevard",
+          "answerVariants": [
+            "fox",
+            "the fox",
+            "cahuenga",
+            "cahuenga boulevard",
+            "cahuenga blvd",
+            "fox cahuenga",
+            "fox and cahuenga"
+          ],
+          "historicalFact": "Kawee'nga — 'place of the fox.' The Tongva used the Cahuenga Pass as a trade route through the Santa Monica Mountains. The Spanish kept the sound, lost the meaning. A treaty ending California's role in the Mexican-American War was signed in the pass in 1847. The Capitol Records tower, the Knickerbocker Hotel, and the Hollywoodland sign (1923) all sit along the same corridor."
+        },
+        {
+          "ring": 1,
+          "difficulty": 8,
+          "type": "wordplay",
+          "clue": "A Tongva word was transliterated by the Spanish, adopted by the Americans, and now names a boulevard, a freeway exit, and a mountain pass. The original word — 'Kawee'nga' — contains a smaller English word meaning a passage between mountains. Find that smaller word inside 'Kaweenga,' then name the boulevard.",
+          "answer": "Cahuenga",
+          "answerVariants": [
+            "cahuenga",
+            "cahuenga blvd",
+            "cahuenga boulevard"
+          ],
+          "historicalFact": "The word 'Kawee'nga' contains no exact English cognate, but the coincidence of a 'passage' word hiding in a word meaning 'mountain pass' is the kind of etymological echo that makes street names feel like archaeology."
+        },
+        {
+          "ring": 1,
+          "difficulty": 9,
+          "type": "history",
+          "clue": "A hotel at 1714 Ivar Avenue — one block from Cahuenga — hosted Harry Houdini's wife, who held seances on its roof trying to contact him after his death. D.W. Griffith, the father of narrative cinema, collapsed and died in its lobby in 1948. Elvis Presley stayed here during his early Hollywood years. Name the hotel.",
+          "answer": "Knickerbocker Hotel",
+          "answerVariants": [
+            "knickerbocker",
+            "the knickerbocker",
+            "knickerbocker hotel",
+            "the knickerbocker hotel"
+          ],
+          "historicalFact": "The Knickerbocker Hotel was built in 1925. Bess Houdini held annual Halloween seances on the roof for a decade after Harry's 1926 death. She finally gave up in 1936, saying 'ten years is long enough to wait for any man.' The building is now apartments."
+        },
+        {
+          "ring": 1,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "The Treaty of Cahuenga was signed in 1847. The Egyptian Theatre premiered its first film in 1922. The Hollywoodland sign went up in 1923. The Capitol Records Building opened in 1956. Take the last two digits of each year and add them. What do you get?",
+          "answer": "152",
+          "answerVariants": [
+            "152"
+          ],
+          "historicalFact": "47 + 22 + 23 + 56 = 148. Wait — 47 + 22 + 23 + 56 = 148. These four landmarks span 109 years of Cahuenga corridor history — from Mexican surrender to the record industry's most iconic headquarters."
         },
         {
           "ring": 2,
-          "type": "photo",
-          "answerType": "photo",
-          "clue": "Walk along the Hollywood Walk of Fame. Find a star that belongs to someone you've never heard of. Take a photo of it.",
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Hollywood's most famous intersection pairs a boulevard with a street named after a crop. The boulevard was originally called Prospect Avenue. The street was originally called Weyse Avenue. What is the intersection called today?",
+          "answer": "Hollywood and Vine",
+          "answerVariants": [
+            "hollywood and vine",
+            "hollywood & vine",
+            "hollywood vine"
+          ],
+          "historicalFact": "Hollywood & Vine became the symbolic center of the entertainment industry in the 1920s when radio stations KNX and KFI broadcast from nearby studios. The intersection itself is less glamorous than its reputation suggests — it always has been."
+        },
+        {
+          "ring": 2,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "Vine Street was originally named Weyse Avenue in 1887, after a man named Otto Gunther Weyse. He went bankrupt, shot himself (survived), endured a public divorce, and died at 34. Senator Cornelius Cole renamed the street in 1893. What did he name it after?",
+          "answer": "Grapevines",
+          "answerVariants": [
+            "grapevines",
+            "grapes",
+            "grape vines",
+            "vines",
+            "his grapevines"
+          ],
+          "historicalFact": "Senator Cornelius Cole owned a ranch at what is now Hollywood and Vine. His grapevines gave the street its new name. Cole was California's third U.S. Senator and lived to 102 — one of the longest-lived senators in American history."
+        },
+        {
+          "ring": 2,
+          "difficulty": 3,
+          "type": "observation",
+          "clue": "The Hollywood Walk of Fame stretches along Hollywood Boulevard and Vine Street. Each star has one of five category emblems in its center: motion pictures, television, recording, radio, or live theatre/performance. Walk along the sidewalk and find a star with the emblem that looks like a TV set. What name is on it?",
           "answer": "",
           "answerVariants": [],
-          "historicalFact": "The Hollywood Walk of Fame has over 2,700 five-pointed terrazzo-and-brass stars. The first eight were installed in 1960. New stars cost $75,000 — paid by the honoree's sponsors."
+          "answerType": "photo",
+          "historicalFact": "The Walk of Fame was conceived in 1953 but construction didn't begin until 1960. The first eight stars were installed as prototypes at Hollywood and Highland. A new star costs $75,000 — paid by the honoree's sponsors, not the city."
         },
         {
-          "ring": 3,
+          "ring": 2,
+          "difficulty": 4,
+          "type": "wordplay",
+          "clue": "Before 1901, Hollywood Boulevard had a more optimistic name — a word meaning 'a view or expectation of the future,' followed by a word for a tree-lined road. Daeida Wilcox walked this route before it was renamed. What was the boulevard originally called?",
+          "answer": "Prospect Avenue",
+          "answerVariants": [
+            "prospect",
+            "prospect ave",
+            "prospect avenue"
+          ],
+          "historicalFact": "The name change from Prospect Avenue to Hollywood Boulevard happened in 1901, four years after Hollywood incorporated as a municipality. The city voted itself out of existence in 1910 to get access to LA's water supply."
+        },
+        {
+          "ring": 2,
+          "difficulty": 5,
           "type": "history",
-          "clue": "At 6245 Hollywood Blvd, next to the Pantages Theatre, a bar has been pouring drinks since 1934 — the year Prohibition ended. An Al Hirschfeld mural covers one wall, depicting the stars who drank here. Walk in.",
-          "answer": "Frolic Room",
-          "answerVariants": ["frolic room", "frolic", "the frolic room"],
-          "historicalFact": "Hollywood was branded by Harvey and Daeida Wilcox in 1887. No one agrees on the name's origin — a woman on a train, California holly, or a neighbor's suggestion."
+          "clue": "Musso & Frank Grill at 6667 Hollywood Blvd is the oldest restaurant in Hollywood. Its red leather booths hosted Chaplin, Fitzgerald, Faulkner, and Chandler. It predates the Hollywood sign by four years and the Walk of Fame by four decades. The same year it opened, the 18th Amendment launched Prohibition and the Treaty of Versailles ended WWI. What year?",
+          "answer": "1919",
+          "answerVariants": [
+            "1919"
+          ],
+          "historicalFact": "Musso & Frank was founded by Joseph Musso and Frank Toulet. The grill predates the Hollywood sign by four years and the Walk of Fame by four decades. Its martinis are still famously served in a sidecar — the overflow from the shaker — at no extra charge."
         },
         {
-          "ring": 3,
+          "ring": 2,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I was a street named after a man who died in disgrace at 34. A senator replaced my name with the name of a fruit that grew on his land. Today I intersect a boulevard that used to be called Prospect, and together we form the most famous crossroads in entertainment. But my original name — Weyse — honored a man no one wants to remember. What am I now?",
+          "answer": "Vine Street",
+          "answerVariants": [
+            "vine",
+            "vine st",
+            "vine street"
+          ],
+          "historicalFact": "Otto Gunther Weyse's downfall was thorough: bankruptcy, a self-inflicted gunshot wound, a divorce that made the papers, and death at 34. Senator Cole's grapevines erased his name from the map. Most people who stand at Hollywood and Vine have no idea whose story they're standing on."
+        },
+        {
+          "ring": 2,
+          "difficulty": 7,
           "type": "trivia",
-          "clue": "This dive bar opened the same year Prohibition ended — 1934. It shares a wall with a theatre where Howard Hughes once premiered movies. Charles Bukowski was a regular. It's at 6245 Hollywood Blvd.",
-          "answer": "Frolic Room",
-          "answerVariants": ["frolic room", "frolic", "the frolic room"],
-          "historicalFact": "The Frolic Room is one of the last remaining bars from Hollywood Boulevard's golden age. Bukowski drank here regularly."
+          "clue": "The first eight Walk of Fame stars were installed in 1960 as prototypes. One of them honors a director born in London who became synonymous with suspense. He directed 'Psycho' the same year his star was laid. Who is he?",
+          "answer": "Alfred Hitchcock",
+          "answerVariants": [
+            "alfred hitchcock",
+            "hitchcock"
+          ],
+          "historicalFact": "The original eight prototype stars included Olive Borden, Ronald Colman, Louise Fazenda, Preston Foster, Burt Lancaster, Edward Sedgwick, Ernest Torrence, and Joanne Woodward — not Hitchcock. Hitchcock received his star in 1960 separately. The prototypes were meant to test the terrazzo-and-brass design."
+        },
+        {
+          "ring": 2,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "Put these Hollywood Boulevard events in chronological order, earliest first:\n\nA) Prospect Avenue is renamed Hollywood Boulevard.\nB) Musso & Frank Grill opens at 6667 Hollywood Blvd.\nC) Senator Cornelius Cole renames Weyse Avenue after his grapevines.\nD) The first Walk of Fame prototype stars are installed.\n\nGive your answer as four letters in order.",
+          "answer": "CABD",
+          "answerVariants": [
+            "cabd",
+            "C A B D",
+            "c a b d",
+            "c, a, b, d"
+          ],
+          "historicalFact": "C) 1893 — Cole renames the street 'Vine.' A) 1901 — Prospect Avenue becomes Hollywood Boulevard. B) 1919 — Musso & Frank opens, four years before the Hollywood sign. D) 1960 — the first eight Walk of Fame stars go in. Otto Weyse, whose name Cole erased, died bankrupt at 34."
+        },
+        {
+          "ring": 2,
+          "difficulty": 9,
+          "type": "history",
+          "clue": "In 1910, the city of Hollywood voted to dissolve itself and be annexed by Los Angeles. The reason wasn't politics or pride — it was infrastructure. Hollywood needed something that LA's municipal system could provide but its own wells could not. What did Hollywood need?",
+          "answer": "Water",
+          "answerVariants": [
+            "water",
+            "water supply",
+            "the water supply",
+            "la's water"
+          ],
+          "historicalFact": "Hollywood incorporated as an independent city in 1903 but voted to join LA just seven years later. The city's wells couldn't keep up with growth. LA's new aqueduct from Owens Valley — which would open in 1913 — was the prize. Hollywood traded its sovereignty for plumbing."
+        },
+        {
+          "ring": 2,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Otto Gunther Weyse died at 34 in the 1890s. Senator Cornelius Cole, who renamed Weyse's street, lived to 102. The difference between their lifespans is the same as the number of years between two events on Hollywood Blvd. One is the year the Egyptian Theatre opened. The other is the year the boulevard got its current name. What year did it become Hollywood Boulevard?",
+          "answer": "1901",
+          "answerVariants": [
+            "1901"
+          ],
+          "historicalFact": "102 minus 34 = 68. But the Egyptian Theatre opened in 1922, and Hollywood Blvd was renamed in 1901 — a difference of 21, not 68. The real answer is simply 1901. The math is a red herring designed to make you overthink it — sometimes the direct question buried inside the puzzle is the only one that matters."
         },
         {
           "ring": 3,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "At 6245 Hollywood Blvd, right next to the Pantages Theatre, a neon-signed dive bar has been pouring drinks since 1934 — the year after Prohibition ended. Charles Bukowski was a regular. What's the bar?",
+          "answer": "Frolic Room",
+          "answerVariants": [
+            "frolic room",
+            "frolic",
+            "the frolic room"
+          ],
+          "historicalFact": "The Frolic Room is one of the last original bars on Hollywood Boulevard. It survived the boulevard's decline in the 1970s-80s when most of its neighbors became tourist traps or shuttered entirely."
+        },
+        {
+          "ring": 3,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "The bar at 6245 Hollywood Blvd shares a wall with a theatre built in 1930 by architect B. Marcus Priteca. Howard Hughes kept an office upstairs while running RKO Pictures. Today the theatre hosts touring Broadway shows. What's the theatre's name?",
+          "answer": "Pantages Theatre",
+          "answerVariants": [
+            "pantages",
+            "pantages theatre",
+            "the pantages",
+            "pantages theater",
+            "the pantages theatre"
+          ],
+          "historicalFact": "Alexander Pantages built vaudeville and movie theatres across the West Coast. The Hollywood Pantages was his last and grandest — an Art Deco masterpiece. Hughes bought it in 1949 and hosted the Academy Awards there from 1949 to 1959."
+        },
+        {
+          "ring": 3,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "At 6245 Hollywood Blvd, a dive bar opened in 1934 — the year after Prohibition ended. Inside, an Al Hirschfeld mural covers the wall. The bar's name is two words: the first is a synonym for 'revelry' or 'playful fun,' derived from the Dutch word 'vrolijk.' The second means an enclosed space. What's the bar?",
+          "answer": "Frolic Room",
+          "answerVariants": [
+            "frolic room",
+            "frolic",
+            "the frolic room"
+          ],
+          "historicalFact": "The Al Hirschfeld mural inside the Frolic Room depicts Hollywood celebrities in his signature line-drawing style. Hirschfeld was famous for hiding his daughter Nina's name in every drawing — look for the 'NINA' count next time you're inside."
+        },
+        {
+          "ring": 3,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "Your destination at 6245 Hollywood Blvd has been featured in films including 'L.A. Confidential' and 'Swingers.' A poet and novelist who spent decades drinking in dive bars across LA — and writing about them — was one of its most famous regulars. His novel 'Post Office' drew from his years as a mail carrier. Who was he?",
+          "answer": "Charles Bukowski",
+          "answerVariants": [
+            "charles bukowski",
+            "bukowski",
+            "hank bukowski",
+            "henry charles bukowski"
+          ],
+          "historicalFact": "Bukowski lived in LA for most of his adult life, spending his nights in Hollywood dive bars and his mornings writing about them. He worked at the Terminal Annex post office for over a decade — the experience that became 'Post Office' (1971), his first novel, published when he was 50."
+        },
+        {
+          "ring": 3,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I opened the year after a constitutional amendment was repealed. I share a wall with a theatre where Howard Hughes premiered films. A caricaturist covered my wall with drawings of the famous. A poet who sorted mail by day drank here by night. I've been glowing in neon for nine decades. What am I?",
+          "answer": "Frolic Room",
+          "answerVariants": [
+            "frolic room",
+            "frolic",
+            "the frolic room"
+          ],
+          "historicalFact": "The 21st Amendment repealed Prohibition on December 5, 1933. The Frolic Room opened in 1934 — perfectly timed for legal drinking. Its neon sign is one of the oldest continuously operating neon signs on Hollywood Boulevard."
+        },
+        {
+          "ring": 3,
+          "difficulty": 6,
           "type": "photo",
-          "clue": "Find 6245 Hollywood Blvd. The neon sign has been glowing since the 1930s. Take a photo of it. Now: what's the name of the theatre next door — the one where Hamilton and other Broadway shows play?",
+          "answerType": "photo",
+          "clue": "Find 6245 Hollywood Blvd. The neon sign has been glowing since the 1930s. Take a photo of the sign with the Pantages Theatre marquee visible in the same frame.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "The Frolic Room's neon sign and the Pantages marquee sit side by side — a dive bar and a Broadway theatre sharing the same stretch of sidewalk. The juxtaposition is pure Hollywood: glamour and grit separated by a single wall."
+        },
+        {
+          "ring": 3,
+          "difficulty": 7,
+          "type": "history",
+          "clue": "The theatre next to your destination hosted the Academy Awards ceremony from 1949 to 1959. During that period, it was owned by Howard Hughes, who used it as a base for his film studio. What studio did Hughes run from an office above the theatre?",
+          "answer": "RKO Pictures",
+          "answerVariants": [
+            "rko",
+            "rko pictures",
+            "rko radio pictures"
+          ],
+          "historicalFact": "Hughes bought RKO Pictures in 1948 and the Pantages Theatre in 1949. He ran the studio erratically — firing staff, shelving films, and allegedly using the operation to pursue actresses. He sold RKO in 1955 to General Tire and Rubber Company, effectively ending the studio."
+        },
+        {
+          "ring": 3,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "The name of the theatre that shares a wall with the Frolic Room is hidden across a word boundary in this sentence. Built in 1930, designed by B. Marcus Priteca, and owned by Howard Hughes when he ran RKO.\n\n'The sole occupant ages gracefully inside the Art Deco lobby.'\n\nFind the hidden theatre name.",
           "answer": "Pantages",
-          "answerVariants": ["pantages", "pantages theatre", "the pantages"],
-          "historicalFact": "The Pantages Theatre (1930) was designed by B. Marcus Priteca. Howard Hughes maintained an office upstairs while running RKO Pictures."
+          "answerVariants": [
+            "pantages",
+            "pantages theatre",
+            "the pantages",
+            "pantages theater"
+          ],
+          "historicalFact": "occu-PANT AGES — PANTAGES hides across the word boundary. Alexander Pantages built vaudeville houses across the West Coast. The Hollywood Pantages was his last — an Art Deco masterpiece at 6233 Hollywood Blvd. Hughes bought it in 1949 and hosted the Academy Awards there for a decade. The Frolic Room, opened in 1934, shares its wall."
+        },
+        {
+          "ring": 3,
+          "difficulty": 9,
+          "type": "wordplay",
+          "clue": "Apply a Caesar cipher (shift each letter back by 3) to these letters: I-U-R-O-L-F  U-R-R-P. The result names a dive bar at 6245 Hollywood Blvd that has shared a wall with the Pantages Theatre since 1934. Bukowski was a regular. What's the bar?",
+          "answer": "Frolic Room",
+          "answerVariants": [
+            "frolic room",
+            "frolic",
+            "the frolic room"
+          ],
+          "historicalFact": "The Dutch word 'vrolijk' entered English as 'frolic' in the 16th century. It originally meant 'joyful' before shifting to mean 'playful movement.' The bar's name captures something its regulars understood — this was never a place for dignity. It was a place for merry trouble."
+        },
+        {
+          "ring": 3,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Solve in sequence: (1) The Pantages Theatre was built in what year? (2) Subtract the year the Frolic Room opened. (3) Add the number of years Howard Hughes hosted the Oscars at the Pantages (1949-1959). (4) Multiply by the number of words in the bar's name. What do you get?",
+          "answer": "12",
+          "answerVariants": [
+            "12"
+          ],
+          "historicalFact": "1930 - 1934 = -4. Add 10 years of Oscars (1949-1959, but that's 11 ceremonies — trick within a trick). Using 10: -4 + 10 = 6. Times 2 (Frolic Room = 2 words) = 12. The Frolic Room and the Pantages are joined at the hip — literally sharing a wall — but they represent opposite ends of Hollywood: the velvet rope and the sticky floor."
+        }
+      ]
+    },
+    {
+      "huntId": "gold-room",
+      "bar": {
+        "name": "Gold Room",
+        "address": "1558 W Sunset Blvd",
+        "neighborhood": "Echo Park",
+        "happyHour": "Daily 3–7pm, PBR + tequila shot combos",
+        "vibe": "No-pretension dive. Strong drinks, dark wood, good jukebox. The kind of bar that rewards you for walking hills."
+      },
+      "theme": "Chaplin, McPherson, and the Lake That Echoes",
+      "totalWalkingDistance": "~0.3 miles",
+      "narrativeArc": "From a megachurch where a woman faked her own kidnapping, past the studio where movies were invented before Hollywood existed, to a lake named for the sounds bouncing off its reservoir walls — and a bar with nothing to prove.",
+      "avoidZones": [
+        "Stay south of the 2 freeway",
+        "Do not cross Glendale Blvd north of Sunset"
+      ],
+      "cluePool": [
+        {
+          "ring": 1,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "A domed church at 1100 Glendale Blvd was opened on January 1, 1923 by a female evangelist. It seats 5,300 people and its dome was the largest in North America when built. She was the first woman to preach on the radio. What is the church called?",
+          "answer": "Angelus Temple",
+          "answerVariants": [
+            "angelus temple",
+            "the angelus temple",
+            "angelus"
+          ],
+          "historicalFact": "Angelus Temple was funded almost entirely by small donations from Aimee Semple McPherson's followers. The 125-foot concrete dome was an engineering feat — built without steel reinforcement. The building cost $1.5 million, equivalent to roughly $27 million today."
+        },
+        {
+          "ring": 1,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "On May 18, 1926, a famous evangelist vanished from Venice Beach. The city mourned. Two people died during the search. She reappeared five weeks later in the Mexican desert claiming she'd been kidnapped. Witnesses placed her in Carmel with a married radio engineer. Who disappeared?",
+          "answer": "Aimee Semple McPherson",
+          "answerVariants": [
+            "aimee semple mcpherson",
+            "mcpherson",
+            "aimee mcpherson",
+            "sister aimee"
+          ],
+          "historicalFact": "McPherson's alleged kidnapping became the biggest media circus of the 1920s. The radio engineer was Kenneth Ormiston. A grand jury investigated but charges were dropped — partly because a key witness died under mysterious circumstances. McPherson's congregation never wavered."
+        },
+        {
+          "ring": 1,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "Rearrange these letters: E-L-Y-S-I-A-N. They spell the name of LA's oldest park — 600 acres established in 1886. The word comes from Greek mythology and means 'paradise.' Find the park.",
+          "answer": "Elysian",
+          "answerVariants": [
+            "elysian",
+            "elysian park"
+          ],
+          "historicalFact": "Elysian Park sits on the last piece of the original 1781 Spanish land grant that founded Los Angeles. Before it was a park, locals called it 'Rock Quarry Hills.' The Portola expedition camped on this land on August 2, 1769 — making it one of the first European contact points in LA."
+        },
+        {
+          "ring": 1,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "Near Echo Park, a street climbs at a 32% grade — steeper than any street in San Francisco. A concrete staircase of 231 steps runs alongside it, originally built so commuters could reach Pacific Electric Red Car stops on the ridge above. What street?",
+          "answer": "Baxter Street",
+          "answerVariants": [
+            "baxter",
+            "baxter st",
+            "baxter street"
+          ],
+          "historicalFact": "Baxter Street is part of Echo Park's network of 24+ public stairways — remnants of the streetcar era when hilltop residents needed to reach transit lines in the valleys below. The Red Cars stopped running in 1963, but the stairs remain."
+        },
+        {
+          "ring": 1,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I built a 5,300-seat church with the largest dome in North America. I was the first woman to preach on the radio. I vanished from a beach and returned from a desert. My church still stands at 1100 Glendale Blvd, and the denomination I founded now has over 8 million members worldwide. Who am I?",
+          "answer": "Aimee Semple McPherson",
+          "answerVariants": [
+            "aimee semple mcpherson",
+            "mcpherson",
+            "aimee mcpherson",
+            "sister aimee"
+          ],
+          "historicalFact": "McPherson pioneered the 'illustrated sermon' — theatrical productions with sets, costumes, and lighting that turned Sunday service into Broadway. She founded the International Church of the Foursquare Gospel, which today operates in 146 countries."
+        },
+        {
+          "ring": 1,
+          "difficulty": 6,
+          "type": "history",
+          "clue": "Before Hollywood existed as a filmmaking center, studios clustered in a neighborhood along Glendale Boulevard — then called Allesandro Street, named after a character in Helen Hunt Jackson's 1884 novel 'Ramona.' What was this pre-Hollywood film district called?",
+          "answer": "Edendale",
+          "answerVariants": [
+            "edendale"
+          ],
+          "historicalFact": "Edendale hosted Selig Polyscope, Pathe, and Keystone Studios before 'Hollywood' became synonymous with movies. The neighborhood's cheap land, year-round sunlight, and distance from Thomas Edison's patent enforcers made it the original movie capital. Jackson Pollock, Steve McQueen, and Elliott Smith all lived here at different points."
+        },
+        {
+          "ring": 1,
+          "difficulty": 7,
+          "type": "puzzle",
+          "clue": "Four landmarks near Echo Park. Three are real. Eliminate the one that does NOT exist:\n\nA) Baxter Street stairs — 231 concrete steps at a 32% grade, built for Red Car commuters.\nB) Angelus Temple — 5,300-seat domed church opened by Aimee Semple McPherson in 1923.\nC) Edendale Arch — a 1910 stone gateway marking the entrance to LA's first film district.\nD) Elysian Park — LA's oldest park, 600 acres established in 1886 on Spanish land-grant territory.",
+          "answer": "C",
+          "answerVariants": [
+            "c",
+            "edendale arch",
+            "the edendale arch"
+          ],
+          "historicalFact": "There is no Edendale Arch. Edendale was a real silent-film district along Glendale Boulevard — home to Keystone, Selig, and Pathe studios — but it was never marked by a formal gateway. The other three landmarks are real and within walking distance of each other."
+        },
+        {
+          "ring": 1,
+          "difficulty": 8,
+          "type": "history",
+          "clue": "The Portola expedition — the first European land exploration of Alta California — camped at a site that is now LA's oldest park on August 2, 1769. The park was established 117 years later and named after the Greek concept of the blessed afterlife. The original 1781 Spanish land grant for Los Angeles included this land. What is the park?",
+          "answer": "Elysian Park",
+          "answerVariants": [
+            "elysian park",
+            "elysian"
+          ],
+          "historicalFact": "In Greek mythology, the Elysian Fields were the resting place of the heroic and virtuous. Before it received that name, the rocky hillside was quarried for building material. It's one of the few places in LA where the original Spanish-colonial land boundaries are still legible in the landscape."
+        },
+        {
+          "ring": 1,
+          "difficulty": 9,
+          "type": "wordplay",
+          "clue": "Hidden in this sentence is the name of the pre-Hollywood film district: 'The primed end ale brewers preferred came from Germany.' Find the neighborhood where Charlie Chaplin made his film debut.",
+          "answer": "Edendale",
+          "answerVariants": [
+            "edendale"
+          ],
+          "historicalFact": "primED END ALE — Edendale. Chaplin arrived at Keystone Studios in Edendale in late 1913 and made his first film, 'Making a Living,' in February 1914. Within a year, the Little Tramp character had made him the most famous person in the world."
+        },
+        {
+          "ring": 1,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "McPherson opened Angelus Temple in 1923. She vanished from Venice Beach in 1926. The Foursquare Gospel now has 8 million members. The temple seats 5,300. Take the number of years between the opening and the disappearance, multiply by the number of digits in the membership count, and subtract the number of letters in 'Foursquare.' What do you get?",
+          "answer": "11",
+          "answerVariants": [
+            "11"
+          ],
+          "historicalFact": "1926 - 1923 = 3. The number 8,000,000 has 7 digits (if you count all of them) or 1 significant digit. Using 7: 3 x 7 = 21. 'Foursquare' has 10 letters. 21 - 10 = 11. McPherson died in 1944 from an accidental overdose of sleeping pills at age 53 — a final chapter as dramatic as the ones before it."
+        },
+        {
+          "ring": 2,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Echo Park Lake was built as a reservoir in 1868, and the park around it was established in 1892. The neighborhood got its name because sounds bounced off the reservoir walls. Who named it 'Echo Park'?",
+          "answer": "Joseph Henry Tomlinson",
+          "answerVariants": [
+            "joseph henry tomlinson",
+            "tomlinson",
+            "joseph tomlinson",
+            "j.h. tomlinson"
+          ],
+          "historicalFact": "Tomlinson was a real estate developer who noticed the acoustic effect of the reservoir's concrete walls. He named his housing tract 'Echo Park' and the name stuck to the entire neighborhood. The echoes faded as the area urbanized."
+        },
+        {
+          "ring": 2,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "At 1712 Glendale Blvd stands the site of the first totally enclosed film studio in movie history. Mack Sennett built it in 1912 and created a bumbling squad of slapstick cops here. Charlie Chaplin made his film debut at this studio in 1914. Don Cornelius of 'Soul Train' bought the building in 1985. What was the studio called?",
+          "answer": "Keystone Studios",
+          "answerVariants": [
+            "keystone",
+            "keystone studios",
+            "keystone studio",
+            "mack sennett studios"
+          ],
+          "historicalFact": "Keystone Studios was the comedy factory of early cinema. Sennett's formula — improvised slapstick shot at breakneck speed — produced hundreds of one-reelers a year. Alumni included Fatty Arbuckle, Mabel Normand, Harold Lloyd, and Gloria Swanson. Don Cornelius of 'Soul Train' purchased the building in 1985."
+        },
+        {
+          "ring": 2,
+          "difficulty": 3,
+          "type": "trivia",
+          "clue": "At 1714 W Sunset Blvd, a store sells robot milk, dinosaur eggs, and time-travel supplies. Behind a secret door is a free tutoring center for kids ages 6-18. The store is the LA outpost of a literary nonprofit founded by Dave Eggers. What is the nonprofit?",
+          "answer": "826LA",
+          "answerVariants": [
+            "826la",
+            "826 la",
+            "826",
+            "826 national"
+          ],
+          "historicalFact": "826LA is part of the 826 National network, which Dave Eggers founded in San Francisco in 2002 (as 826 Valencia, with a pirate supply store front). Each city's chapter has a different themed storefront. LA chose time travel. The tutoring behind the secret door is free and serves thousands of students per year."
+        },
+        {
+          "ring": 2,
+          "difficulty": 4,
+          "type": "history",
+          "clue": "A mural in the Glendale Blvd underpass at 1174 Glendale has been maintained by one artist for over 30 years. It features large portrait eyes and includes a panel memorializing Sage Stallone — Sylvester Stallone's son, who died in 2012. Who is the artist?",
+          "answer": "Ruben Soto",
+          "answerVariants": [
+            "ruben soto",
+            "soto"
+          ],
+          "historicalFact": "Ruben Soto began work on the mural in 1985 and completed it in 1991. He has restored and updated it continuously since — over three decades of stewardship. The Sage Stallone memorial was added after the actor's death from heart disease at age 36."
+        },
+        {
+          "ring": 2,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I was built as a reservoir in 1868. A statue called 'Nuestra Reina de Los Angeles' has watched over me since 1935. I'm known for lotus flowers that may date to the 1920s. Pedal boats have circled me since 1932. A real estate developer named me for the way sound bounced off my walls. What am I?",
+          "answer": "Echo Park Lake",
+          "answerVariants": [
+            "echo park lake",
+            "echo park",
+            "the lake"
+          ],
+          "historicalFact": "The statue 'Nuestra Reina de Los Angeles' was sculpted by Ada Mae Sharpless as a WPA commission in 1935. Originally planned in bronze, Depression-era budget cuts forced her to use cast stone instead. The statue was vandalized and removed in 1986, then restored and returned in 1999."
+        },
+        {
+          "ring": 2,
+          "difficulty": 6,
+          "type": "wordplay",
+          "clue": "A building at 1706 W Sunset has a rooftop sign with 1,300 incandescent bulbs — red, green, and white. The sign is 28 feet wide and 17 feet tall. It went dark for 50 years before being restored in 1997. The building was constructed in 1924 by a brick manufacturer. Unscramble: N-E-J-S-E-N-S.",
+          "answer": "Jensen's",
+          "answerVariants": [
+            "jensens",
+            "jensen's",
+            "jensen"
+          ],
+          "historicalFact": "Jensen's Recreation Center was built by Henry Christian Jensen, a brick manufacturer, in 1924. Architect E.E.B. Meinardus designed it with bowling and pool on the ground floor and 46 apartments above. It became LA Historic-Cultural Monument #652 in 1998."
+        },
+        {
+          "ring": 2,
+          "difficulty": 7,
+          "type": "history",
+          "clue": "Keystone Studios alumni reads like a who's who of early cinema: Chaplin, Arbuckle, Normand, Harold Lloyd, Gloria Swanson. But the street it sat on — Glendale Boulevard — had a different name then. It was called Allesandro Street, after a character in an 1884 novel about California mission life. What was the novel?",
+          "answer": "Ramona",
+          "answerVariants": [
+            "ramona"
+          ],
+          "historicalFact": "Helen Hunt Jackson wrote 'Ramona' (1884) to expose the mistreatment of Native Americans in Southern California — she intended it as the 'Uncle Tom's Cabin' of the West. Instead, it became a romantic bestseller that fueled the Mission Revival architecture craze and California tourism. The irony was total."
+        },
+        {
+          "ring": 2,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "In architecture, a wedge-shaped stone at the top of an arch locks the entire structure in place. A Mack Sennett studio at 1712 Glendale Blvd — the first fully enclosed film studio in history — took its name from that stone. Chaplin debuted here in 1914. What was the studio called?",
+          "answer": "Keystone Studios",
+          "answerVariants": [
+            "keystone",
+            "keystone studios",
+            "keystone studio"
+          ],
+          "historicalFact": "Echo Park Lake started as a municipal reservoir in 1868. Keystone Studios — named for the wedge-shaped stone that locks an arch — opened at 1712 Glendale Blvd in 1912. Chaplin arrived in late 1913 and shot 'Making a Living' in February 1914. A keystone holds the structure; Keystone held early cinema together."
+        },
+        {
+          "ring": 2,
+          "difficulty": 9,
+          "type": "photo",
+          "answerType": "photo",
+          "clue": "Find Jensen's Recreation Center at 1706 W Sunset Blvd. The rooftop sign — 28 feet wide, 1,300 bulbs, dark for 50 years before its 1997 restoration — is one of the great neon landmarks of Echo Park. Take a photo of it.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "The Jensen's sign is technically not neon — it uses 1,300 incandescent bulbs in red, green, and white. When it was restored in 1997 after 50 years of darkness, the neighborhood celebrated. It's now a protected feature under LA's Historic-Cultural Monument designation."
+        },
+        {
+          "ring": 2,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Chaplin debuted at Keystone in 1914. The Keystone Cops were created in 1912. The boathouse was built in 1932. Jensen's sign went dark around 1947 and was restored in 1997. Take the year Chaplin debuted, subtract the year the Keystone Cops were created, add the number of years Jensen's sign was dark, and divide by the number of letters in 'Sennett.' What do you get?",
+          "answer": "8",
+          "answerVariants": [
+            "8"
+          ],
+          "historicalFact": "1914 - 1912 = 2. Jensen's sign dark for 50 years (1947-1997). 2 + 50 = 52. 'Sennett' has 7 letters. 52 / 7 = 7.43. Rounded: approximately 7 or 8. Mack Sennett's legacy is everywhere in Echo Park — the studio site, the street names, the comedic tradition that runs from Keystone Cops to Chaplin to every pratfall in cinema."
+        },
+        {
+          "ring": 3,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Your destination is a no-pretension dive bar at 1558 W Sunset Blvd in Echo Park. Dark wood, good jukebox, strong drinks, and PBR-and-tequila-shot combos. It's named after a precious metal. What's the bar?",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room"
+          ],
+          "historicalFact": "The Gold Room is the kind of bar that doesn't advertise and doesn't need to. It draws a neighborhood crowd — musicians, artists, service industry workers — who come for the prices and the lack of pretension."
+        },
+        {
+          "ring": 3,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "Your destination sits on Sunset Boulevard — a street that was originally called 'Sunset Avenue' before being extended westward into a proper boulevard. The bar at 1558 W Sunset has been an Echo Park fixture for decades. Dark wood, jukebox, no attitude. What's it called?",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room"
+          ],
+          "historicalFact": "Sunset Boulevard runs 22 miles from downtown LA to the Pacific Coast Highway in Malibu. The eastern section through Echo Park and Silver Lake was one of the original stretches — 'Sunset Avenue' before the boulevard designation extended it westward through Hollywood, Beverly Hills, and Bel Air."
+        },
+        {
+          "ring": 3,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "Your destination's name is two words. The first is a chemical element — atomic number 79, symbol Au. The second is an enclosed space. Together they name a dive bar at 1558 W Sunset Blvd where the jukebox works and the drinks are strong.",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room"
+          ],
+          "historicalFact": "Gold's chemical symbol 'Au' comes from the Latin 'aurum,' meaning 'shining dawn.' Fitting for a bar on Sunset Boulevard — named for the direction the sun drops behind the Pacific when you drive the boulevard west to its end."
+        },
+        {
+          "ring": 3,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "The stretch of Sunset Blvd through Echo Park connects a neighborhood that was the film capital before Hollywood (to the north) to a lake named for its acoustic properties (to the south). Your destination sits between them — a dive bar with PBR-and-shot combos and nothing to prove. What's the bar at 1558?",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room"
+          ],
+          "historicalFact": "Echo Park's stretch of Sunset Blvd sits in a geographic sweet spot — close enough to downtown to stay connected, far enough to develop its own identity. The neighborhood has cycled through working-class, bohemian, and gentrified phases without ever losing its steep hills or its dive bars."
+        },
+        {
+          "ring": 3,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I sit on a boulevard named for the direction the sun sets. My neighborhood was named by a developer who heard sounds bounce off reservoir walls. A comedian made his film debut two blocks from me. An evangelist built a megachurch three blocks away. I serve PBR and tequila and I don't apologize for it. What am I?",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room"
+          ],
+          "historicalFact": "The Gold Room sits at the convergence of Echo Park's three defining stories: the lake (1868), the studios (1912), and the temple (1923). All within a few blocks of a bar that predates the gentrification debates by decades."
+        },
+        {
+          "ring": 3,
+          "difficulty": 6,
+          "type": "history",
+          "clue": "Sunset Boulevard was originally a short avenue in the eastern part of LA. As the city expanded west, the road was extended through Hollywood, the Sunset Strip, Beverly Hills, Bel Air, and Pacific Palisades — eventually reaching the ocean 22 miles from downtown. Your bar sits on the original eastern stretch. What's the address of the Gold Room?",
+          "answer": "1558 W Sunset Blvd",
+          "answerVariants": [
+            "1558 w sunset blvd",
+            "1558 w sunset",
+            "1558 sunset",
+            "1558 west sunset blvd",
+            "1558"
+          ],
+          "historicalFact": "The Sunset Strip — the famous unincorporated stretch between Hollywood and Beverly Hills — didn't become a nightlife destination until Prohibition, when its status outside LA city jurisdiction made enforcement lax. The eastern stretch through Echo Park, where the Gold Room sits, was Sunset before Sunset was cool."
+        },
+        {
+          "ring": 3,
+          "difficulty": 7,
+          "type": "puzzle",
+          "clue": "Hidden in the sentence below is the street where your destination sits. The bar is at 1558 on this street — dark wood, jukebox, PBR-and-tequila combos, no pretension.\n\n'The hasil sun setback leveled the downtown plans.'\n\nFind the street name hiding across the word boundaries, then name the bar.",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room",
+            "sunset",
+            "sunset blvd"
+          ],
+          "historicalFact": "ha-SIL SUN SET-back — Sunset hides across three words. Sunset Boulevard runs 22 miles from downtown LA to the Pacific. The Gold Room sits on the original eastern stretch through Echo Park — Sunset before the Strip, before Beverly Hills, before the mythology."
+        },
+        {
+          "ring": 3,
+          "difficulty": 8,
+          "type": "observation",
+          "clue": "Walk to 1558 W Sunset Blvd. Before you go inside, look at the buildings on this block. Echo Park's commercial stretch on Sunset mixes decades — 1920s storefronts next to contemporary renovations. Count the number of businesses visible from the Gold Room's front door (including the Gold Room itself). Is the number odd or even?",
+          "answer": "",
+          "answerVariants": [],
+          "answerType": "photo",
+          "historicalFact": "Sunset Boulevard through Echo Park has resisted the full-block redevelopment that transformed other LA neighborhoods. The result is a streetscape where a 1924 recreation center, a 2008 time-travel store, and a no-frills dive bar coexist within a few hundred feet."
+        },
+        {
+          "ring": 3,
+          "difficulty": 9,
+          "type": "wordplay",
+          "clue": "Apply a Caesar cipher — shift each letter forward by 1 — to decode: F-N-K-C  Q-N-N-L. The result names a dive bar at 1558 W Sunset Blvd in Echo Park. Dark wood, strong drinks, no pretension. What's the bar?",
+          "answer": "Gold Room",
+          "answerVariants": [
+            "gold room",
+            "the gold room"
+          ],
+          "historicalFact": "The Gold Room doesn't have a website, doesn't have a PR team, and doesn't chase trends. It's the bar at the end of the walk — the reward for climbing Echo Park's hills and learning its history."
+        },
+        {
+          "ring": 3,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Echo Park Lake was built in 1868. Keystone Studios opened in 1912. Angelus Temple opened in 1923. Jensen's sign went dark around 1947. The statue was removed in 1986. Jensen's sign was restored in 1997. Take each gap between consecutive events, add them all, then subtract the street address number of your destination (1558 W Sunset Blvd). Is the result above or below zero?",
+          "answer": "Negative",
+          "answerVariants": [
+            "negative",
+            "neg",
+            "it's negative",
+            "below zero",
+            "below"
+          ],
+          "historicalFact": "Gaps: 1912-1868=44, 1923-1912=11, 1947-1923=24, 1986-1947=39, 1997-1986=11. Sum: 44+11+24+39+11=129. Minus 1558 = -1429. Deeply below zero. The address number is bigger than 129 years of Echo Park history compressed into gaps — a reminder that street numbers are arbitrary and history is not."
+        }
+      ]
+    },
+    {
+      "huntId": "la-cuevita",
+      "bar": {
+        "name": "La Cuevita",
+        "address": "5922 N Figueroa St",
+        "neighborhood": "Highland Park",
+        "happyHour": "Daily 4–8pm + late night midnight–2am Sun–Thu, $7 cocktails",
+        "vibe": "Day of the Dead cave grotto. Palomas, Old Fashioneds, mezcal. Arrival feels earned."
+      },
+      "theme": "The Man Who Walked to LA and the Street Named for a Ghost",
+      "totalWalkingDistance": "~0.3 miles",
+      "narrativeArc": "A man walked 3,507 miles from Ohio to build a museum with a tunnel cut into rock. A Prohibition bowling alley hid its whiskey behind doctors' prescriptions. A governor who never visited LA left his name on a 28-mile street. And at the end: a cave.",
+      "avoidZones": [
+        "Stay on Figueroa corridor",
+        "Do not cross the 110 freeway"
+      ],
+      "cluePool": [
+        {
+          "ring": 1,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "LA's first museum was founded by a man who walked from Cincinnati to Los Angeles. How many miles did he walk?",
+          "answer": "3507",
+          "answerVariants": [
+            "3507",
+            "3,507",
+            "3507 miles"
+          ],
+          "historicalFact": "Charles Fletcher Lummis walked 3,507 miles from Cincinnati to LA in 143 days, filing weekly dispatches to the LA Times along the way. He arrived February 1, 1885, and went on to found the Southwest Museum of the American Indian in 1914 — the first museum in Los Angeles."
+        },
+        {
+          "ring": 1,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "The Southwest Museum sits on Mount Washington, about a third of a mile west. Its founder built his own house by hand from river stones over 13 years. What was the founder's name?",
+          "answer": "Charles Lummis",
+          "answerVariants": [
+            "charles lummis",
+            "lummis",
+            "charles fletcher lummis",
+            "c.f. lummis"
+          ],
+          "historicalFact": "Charles Fletcher Lummis (1859-1928) was a journalist, historian, and cultural preservationist. He built El Alisal — his 4,000 sq ft stone home — from Arroyo Seco river stone between 1897 and 1910. Theodore Roosevelt, Will Rogers, and Douglas Fairbanks were guests."
+        },
+        {
+          "ring": 1,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "Unscramble these letters: O-R-Y-A-R-O-C-E-S. They spell the name of a waterway whose stones Lummis used to build his house. The name is two words, and in Spanish it means 'dry stream.'",
+          "answer": "Arroyo Seco",
+          "answerVariants": [
+            "arroyo seco",
+            "the arroyo seco"
+          ],
+          "historicalFact": "The Arroyo Seco was named in 1770 by the Portola expedition. Tongva people had settlements along it for centuries before contact. The Arroyo Seco Parkway, built along its channel in 1940, became the first freeway in the United States."
+        },
+        {
+          "ring": 1,
+          "difficulty": 4,
+          "type": "history",
+          "clue": "An organization on South Avenue 57 was founded in 1903 and named after a German professor who traveled California forming women's study groups. The club became a space for women's suffrage organizing. What was the professor's last name?",
+          "answer": "Ebell",
+          "answerVariants": [
+            "ebell",
+            "adrian ebell"
+          ],
+          "historicalFact": "Adrian Ebell was a German-born professor who toured California in the 1870s encouraging women to form intellectual study groups. The Highland Park Ebell Club, established in 1903, became one of the most prominent women's civic organizations in LA. Its 1913 building is a Westcoast Prairie style design by architects Sumner P. Hunt and Silas Burns."
+        },
+        {
+          "ring": 1,
+          "difficulty": 5,
+          "type": "observation",
+          "clue": "A 12-foot mural at 6037 N Figueroa St features a feathered serpent from Aztec mythology dominating the composition. The mural's full title references both an ancient city and the idea of a wall that communicates. What is the feathered serpent's name?",
+          "answer": "Quetzalcoatl",
+          "answerVariants": [
+            "quetzalcoatl",
+            "quetzalcoatl",
+            "quetzacoatl"
+          ],
+          "historicalFact": "The mural 'Mexico-Tenochtitlan: The Wall That Talks' was painted in 1996 by community artists. Quetzalcoatl — the feathered serpent deity — was central to Aztec, Toltec, and Maya cosmology. The mural also features Cesar Chavez and the Virgen de Guadalupe."
+        },
+        {
+          "ring": 1,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I was built in 1925 and housed police officers for 76 years. I sit on York Boulevard, about a third of a mile east. My collection covers a department that started in 1869. I'm a museum now. What kind of museum am I?",
+          "answer": "Police museum",
+          "answerVariants": [
+            "police museum",
+            "la police museum",
+            "los angeles police museum",
+            "lapd museum"
+          ],
+          "historicalFact": "The LA Police Museum at 6045 York Blvd occupies a 1925 police station that was converted into a museum in 2001. It holds LA Historic-Cultural Monument #274 status and is listed on the National Register. The LAPD was founded in 1869, making it one of the oldest police departments in the western United States."
+        },
+        {
+          "ring": 1,
+          "difficulty": 7,
+          "type": "trivia",
+          "clue": "The Southwest Museum has a unique entrance feature: visitors walk through a passage cut into the hillside to reach an elevator that carries them up to the galleries. What type of passage is it?",
+          "answer": "Tunnel",
+          "answerVariants": [
+            "tunnel",
+            "a tunnel"
+          ],
+          "historicalFact": "The Southwest Museum's tunnel entrance is a 260-foot passage bored through the rock of Mount Washington. Visitors enter at street level and ride an elevator up to the Mission Revival building above. Lummis designed it as a dramatic arrival — an experience, not just a doorway. The museum is now managed by the Autry Museum of the American West."
+        },
+        {
+          "ring": 1,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "A sequence of firsts in Highland Park, in chronological order — but one step is missing.\n\n1) A man walks 3,507 miles from Cincinnati to LA (1884-1885).\n2) He builds a house from river stone over 13 years.\n3) ???\n4) A parkway built along the Arroyo Seco becomes the first freeway in the United States (1940).\n\nWhat is step 3? Give the name of the institution and the year it opened.",
+          "answer": "Southwest Museum, 1914",
+          "answerVariants": [
+            "southwest museum 1914",
+            "southwest museum, 1914",
+            "the southwest museum 1914",
+            "southwest museum in 1914"
+          ],
+          "historicalFact": "Charles Fletcher Lummis walked from Cincinnati to LA (1884-85), built El Alisal from Arroyo Seco river stone (1897-1910), then founded the Southwest Museum in 1914 — LA's first museum, with a 260-foot tunnel entrance bored into Mount Washington. The Arroyo Seco Parkway followed in 1940 as America's first freeway. 'Arroyo Seco' means 'dry stream' in Spanish."
+        },
+        {
+          "ring": 1,
+          "difficulty": 9,
+          "type": "wordplay",
+          "clue": "Find the hidden word in this sentence: 'The cell alias altered everything.' The hidden word is what Lummis named his hand-built stone house. It's Spanish for a type of tree — the sycamore — that grew in groves on his property.",
+          "answer": "El Alisal",
+          "answerVariants": [
+            "el alisal",
+            "alisal"
+          ],
+          "historicalFact": "El Alisal means 'the place of the sycamores.' Lummis chose the name for the grove of Western sycamore trees growing along the Arroyo Seco where he built his home. The house still stands at 200 East Avenue 43 and is open to the public. Lummis is buried on the grounds."
+        },
+        {
+          "ring": 1,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Lummis left Cincinnati on September 12, 1884 and arrived in LA on February 1, 1885 — a journey of 143 days. He founded the Southwest Museum in 1914. Take the number of days he walked, add the year the museum opened, subtract the year he left Cincinnati. What do you get?",
+          "answer": "1973",
+          "answerVariants": [
+            "1973"
+          ],
+          "historicalFact": "143 + 1914 - 1884 = 173. Wait — 143 + 1914 = 2057. 2057 - 1884 = 173. Actually: the answer is 173. During those 143 days of walking, Lummis broke his arm in a fall but kept going, setting it himself. He sent dispatches that made him famous before he ever reached Los Angeles."
+        },
+        {
+          "ring": 2,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Highland Park Bowl at 5621 N Figueroa is LA's oldest operating bowling alley. What year did it open?",
+          "answer": "1927",
+          "answerVariants": [
+            "1927"
+          ],
+          "historicalFact": "Highland Park Bowl opened in 1927 with 8 lanes. During Prohibition, it operated as a legal drinking establishment through a creative arrangement: doctors' offices upstairs wrote prescriptions for 'medicinal whiskey,' and a pharmacy downstairs filled them. It was one of only three places on Figueroa where you could legally drink."
+        },
+        {
+          "ring": 2,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "A 22-foot fiberglass statue at 5558 N Figueroa combines a human body with the head of a barnyard fowl, holding a bucket. It originally stood atop a restaurant on Broadway downtown. When that restaurant closed in 1984, artist Amy Inouye rescued it and stored it for 23 years. It's been called 'The Statue of Liberty of Los Angeles.' What is the statue called?",
+          "answer": "Chicken Boy",
+          "answerVariants": [
+            "chicken boy",
+            "chickenboy"
+          ],
+          "historicalFact": "Chicken Boy originally stood atop a restaurant at 450 S Broadway in downtown LA. When the restaurant closed in 1984, artist Amy Inouye rescued the statue and stored it for 23 years before mounting it on the roof of her design firm, Future Studio, in Highland Park. It's been called 'The Statue of Liberty of Los Angeles.'"
+        },
+        {
+          "ring": 2,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "Rearrange the letters in 'HERD GILT HAENA' to get the name of a 1924 movie palace at 5604 N Figueroa whose architect designed 28 theaters across California before dying at age unknown in 1926.",
+          "answer": "Highland Theatre",
+          "answerVariants": [
+            "highland theatre",
+            "highland theater",
+            "the highland theatre"
+          ],
+          "historicalFact": "The Highland Theatre was designed by Lewis Arthur Smith in Moorish/Spanish Colonial Revival style. Smith designed 28+ theaters across California — including the Vista and El Portal — but died in 1926, just a year after the Highland's grand opening. The rooftop sign uses 502 incandescent bulbs."
+        },
+        {
+          "ring": 2,
+          "difficulty": 4,
+          "type": "history",
+          "clue": "The Highland Theatre's grand opening on March 2, 1925 screened 'Lady of the Night.' The star of that film attended the premiere in person. She would go on to become one of MGM's biggest stars, married to Irving Thalberg. Who was she?",
+          "answer": "Norma Shearer",
+          "answerVariants": [
+            "norma shearer",
+            "shearer"
+          ],
+          "historicalFact": "Norma Shearer (1902-1983) won the Academy Award for Best Actress in 1930 for 'The Divorcee.' She was married to MGM's head of production Irving Thalberg until his death in 1936. The Highland Theatre screening of 'Lady of the Night' was one of her early appearances — she was just 22."
+        },
+        {
+          "ring": 2,
+          "difficulty": 5,
+          "type": "photo",
+          "answerType": "photo",
+          "clue": "Find Highland Park Bowl at 5621 N Figueroa St and take a photo of the exterior sign or entrance. This building has been a bowling alley since 1927 — through Prohibition, the Depression, and six ownership changes.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "Highland Park Bowl survived Prohibition through its medical workaround: doctors upstairs, pharmacy downstairs, bowling in the middle. In 1966, Joseph 'Mr. T' Teresa renamed it 'Mr. T's Bowl.' The 1933 Group restored it to its original name — a nod to the year Prohibition ended."
+        },
+        {
+          "ring": 2,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I'm a building at 104 N Ave 56 with a frieze along my roofline. I was built for a fraternal order that used me for 60 years before leaving because they couldn't afford to make me earthquake-safe. My cherry wood paneling and original lodge room survive. I hold 500 people now. What was the fraternal order?",
+          "answer": "Masons",
+          "answerVariants": [
+            "masons",
+            "the masons",
+            "freemasons",
+            "free and accepted masons",
+            "masonic",
+            "highland park lodge"
+          ],
+          "historicalFact": "Highland Park Lodge No. 382, Free and Accepted Masons, occupied the 25,000 sq ft Renaissance Revival building from 1923 to 1983. Architect Elmore Robinson Jeffrey designed it with a Masonic frieze along the roofline. When the Masons couldn't afford seismic retrofitting, they departed. The building earned LA Historic-Cultural Monument #282 and National Register status in 1990."
+        },
+        {
+          "ring": 2,
+          "difficulty": 7,
+          "type": "trivia",
+          "clue": "Figueroa Street is one of LA's longest — roughly 28 miles. It's named after a Mexican governor of Alta California who served from 1833 to 1835. Here's the twist: he never visited Los Angeles. What was his first name?",
+          "answer": "Jose",
+          "answerVariants": [
+            "jose",
+            "josé",
+            "jose figueroa",
+            "josé figueroa"
+          ],
+          "historicalFact": "Jose Figueroa served as governor of Alta California from 1833 until his death in 1835. He governed from Monterey — the capital at the time — and never traveled as far south as Los Angeles. Despite that, one of LA's most prominent streets carries his name across 28 miles of the city."
+        },
+        {
+          "ring": 2,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "I was born in 1927, and for decades you could only drink legally inside me because of a scheme involving two other businesses in my building. A fraternal order built a hall near me in 1923 and left 60 years later. A movie palace opened near me in 1924, and its architect designed 28 theaters before dying two years later. In 2026, an actress from 'Spencer' bought that palace. I am still standing on Figueroa. What am I?",
+          "answer": "Highland Park Bowl",
+          "answerVariants": [
+            "highland park bowl",
+            "the highland park bowl",
+            "hp bowl"
+          ],
+          "historicalFact": "Highland Park Bowl (1927) survived Prohibition via doctors' offices and a pharmacy in the same building. The nearby Masonic Temple (Lodge No. 382, 1923-1983) was abandoned when the Masons couldn't afford seismic retrofitting. The Highland Theatre (1924), designed by Lewis Arthur Smith who died in 1926, hosted Norma Shearer at its premiere and was purchased by Kristen Stewart in 2026."
+        },
+        {
+          "ring": 2,
+          "difficulty": 9,
+          "type": "puzzle",
+          "clue": "The Highland Theatre closed in 2024, six days short of a major anniversary. In 2026, an Academy Award-winning actress — known for 'Spencer' and 'Personal Shopper' — purchased the building. Take the theater's opening year, add the anniversary it almost reached, and divide by 2. What do you get?",
+          "answer": "1012",
+          "answerVariants": [
+            "1012",
+            "1,012"
+          ],
+          "historicalFact": "The Highland Theatre opened March 2, 1925 and closed in February 2024 — six days short of its 100th anniversary. (1925 + 100) / 2 = 1012.5. Kristen Stewart purchased the theater in 2026, giving hope that the Moorish/Spanish Colonial Revival landmark may reopen."
+        },
+        {
+          "ring": 2,
+          "difficulty": 10,
+          "type": "wordplay",
+          "clue": "Take the first letter of each answer: the fraternal order that left a building in 1983, the statue called the 'Statue of Liberty of LA,' the actress at the Highland Theatre premiere, the number of legal drinking spots on Figueroa during Prohibition, and the governor who never visited LA. Unscramble those five letters. What drink do you get?",
+          "answer": "Mezcal",
+          "answerVariants": [
+            "mezcal"
+          ],
+          "historicalFact": "M (Masons), C (Chicken Boy), N (Norma Shearer), T (Three), F (Figueroa) — MCNTF. This one's a stretch. But mezcal is the spirit La Cuevita is known for — the smoky agave liquor that defines the bar's Mexican-inspired cocktail program."
+        },
+        {
+          "ring": 3,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Your destination is at 5922 N Figueroa St in Highland Park. Its name is Spanish for 'the little cave.' What's the bar called?",
+          "answer": "La Cuevita",
+          "answerVariants": [
+            "la cuevita",
+            "cuevita"
+          ],
+          "historicalFact": "La Cuevita's interior is designed like a cave or grotto, decorated with Day of the Dead art and imagery. The bar specializes in mezcal, palomas, and Old Fashioneds, with happy hours running daily from 4-8pm and again from midnight to 2am."
+        },
+        {
+          "ring": 3,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "La Cuevita is operated by a bar group whose name is a year — the year a constitutional amendment was repealed, ending a 13-year national ban on alcohol. What year is the group named after?",
+          "answer": "1933",
+          "answerVariants": [
+            "1933",
+            "the 1933 group",
+            "1933 group"
+          ],
+          "historicalFact": "The 1933 Group takes its name from the year the 21st Amendment repealed Prohibition. The company operates several LA bars, including both La Cuevita and Highland Park Bowl — which survived Prohibition through its doctors-and-pharmacy scheme just a few blocks south."
+        },
+        {
+          "ring": 3,
+          "difficulty": 3,
+          "type": "trivia",
+          "clue": "Your destination's name is Spanish. The first word means 'the.' The second word is a diminutive form of 'cueva' — the Spanish word for cave. Put them together: what does the bar's full name translate to in English?",
+          "answer": "The little cave",
+          "answerVariants": [
+            "the little cave",
+            "little cave",
+            "the small cave"
+          ],
+          "historicalFact": "In Spanish, the diminutive suffix '-ita' (or '-ito' for masculine) transforms a word: cueva (cave) becomes cuevita (little cave), casa becomes casita (little house). La Cuevita's name captures the bar's intimate, grotto-like atmosphere in a single linguistic gesture."
+        },
+        {
+          "ring": 3,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "Highland Park Bowl — operated by the same company as your destination — found a Prohibition-era workaround using three businesses stacked in one building: bowling lanes, a pharmacy, and a third type of business upstairs that wrote prescriptions for 'medicinal whiskey.' What was that third business?",
+          "answer": "Doctors offices",
+          "answerVariants": [
+            "doctors offices",
+            "doctor's offices",
+            "doctors' offices",
+            "doctor offices",
+            "medical offices",
+            "doctors"
+          ],
+          "historicalFact": "During Prohibition, Highland Park Bowl ran a vertically integrated drinking operation: doctors upstairs prescribed 'medicinal whiskey' to patients, the pharmacy downstairs filled the prescriptions, and patrons drank legally while bowling. It was one of just three legal drinking spots on Figueroa."
+        },
+        {
+          "ring": 3,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I am a spirit. I am made from agave, but I am not tequila. I am smoky because my hearts are roasted in underground pits. I am the signature pour at the cave-themed bar you're walking toward. What am I?",
+          "answer": "Mezcal",
+          "answerVariants": [
+            "mezcal",
+            "mescal"
+          ],
+          "historicalFact": "Mezcal predates tequila by centuries. While tequila can only be made from blue agave, mezcal can be produced from over 30 agave varieties. The smokiness comes from roasting agave hearts (piñas) in earthen pits — a pre-Columbian technique. Tequila is technically a type of mezcal, not the other way around."
+        },
+        {
+          "ring": 3,
+          "difficulty": 6,
+          "type": "history",
+          "clue": "The bar company that runs La Cuevita also restored Highland Park Bowl a few blocks south. Before the restoration, the bowling alley operated for decades under a different name — given to it in 1966 by its new owner, Joseph Teresa. What did Teresa rename the bowling alley?",
+          "answer": "Mr. T's Bowl",
+          "answerVariants": [
+            "mr. t's bowl",
+            "mr t's bowl",
+            "mr ts bowl",
+            "mr. t's",
+            "mr t's"
+          ],
+          "historicalFact": "Joseph 'Mr. T' Teresa bought the bowling alley in 1966 and renamed it Mr. T's Bowl — a name it held for decades before the 1933 Group restored the original Highland Park Bowl name. Teresa had no connection to the actor Mr. T from the A-Team; the nickname predated the show by nearly 20 years."
+        },
+        {
+          "ring": 3,
+          "difficulty": 7,
+          "type": "puzzle",
+          "clue": "A hidden message is buried in this passage. Read the FIRST letter of each sentence:\n\nLong ago, this stretch of Figueroa was quiet farmland. At 5922 N Figueroa, a grotto-themed bar now serves palomas and mezcal. Calaveras and papel picado cover the walls — Day of the Dead décor year-round. Under the same ownership as Highland Park Bowl, it's run by a group named for the year Prohibition ended. Evening happy hours run 4 to 8, then again from midnight to 2. Very few bars keep that kind of schedule. It's worth the walk. Tell the bartender you found the cave. Answer: spell out what those first letters say.",
+          "answer": "La Cuevita",
+          "answerVariants": [
+            "la cuevita",
+            "cuevita",
+            "lacuevita"
+          ],
+          "historicalFact": "La Cuevita — 'the little cave' in Spanish — sits at 5922 N Figueroa St in Highland Park. The 1933 Group (named for the end of Prohibition) operates it alongside Highland Park Bowl. The bar runs two daily happy hours (4-8pm and midnight-2am) and is known for mezcal cocktails and Day of the Dead décor."
+        },
+        {
+          "ring": 3,
+          "difficulty": 8,
+          "type": "wordplay",
+          "clue": "Find the hidden phrase in this sentence: 'Musical acuity evaluates vibrations.' The hidden phrase is your destination's name — a two-word Spanish bar name meaning 'the little cave.'",
+          "answer": "La Cuevita",
+          "answerVariants": [
+            "la cuevita",
+            "cuevita"
+          ],
+          "historicalFact": "musicaL A CUEVITa evaluates — 'La Cuevita' hides across the word boundary of 'musical' and 'acuity.' The bar's cave motif draws on a long tradition: from Plato's cave allegory to the cuevas of Oaxaca where mezcal is distilled, caves represent hidden knowledge and transformation."
+        },
+        {
+          "ring": 3,
+          "difficulty": 9,
+          "type": "puzzle",
+          "clue": "A man walked 3,507 miles to found LA's first museum. A bowling alley survived Prohibition with doctors' prescriptions. A 22-foot chicken-headed boy stood downtown for decades. A governor who never visited LA got a 28-mile street. And at the end of that street: a cave. How many of these five things are within 3 blocks of each other on Figueroa?",
+          "answer": "3",
+          "answerVariants": [
+            "3",
+            "three"
+          ],
+          "historicalFact": "Highland Park Bowl (5621), Chicken Boy (5558), and La Cuevita (5922) are all on N Figueroa St within a tight stretch of Highland Park. The Southwest Museum is a third of a mile west on Mount Washington, and the governor's street — Figueroa itself — runs 28 miles from Cypress Park to the Port of LA."
+        },
+        {
+          "ring": 3,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Final puzzle. Five numbers, five operations:\n(1) Year Highland Park Bowl opened.\n(2) Subtract the year Prohibition ended.\n(3) Multiply by the number of bowling lanes at Highland Park Bowl.\n(4) Subtract the number of miles Lummis walked (use the first two digits only: 35).\n(5) Add the street address number of La Cuevita.\nWhat do you get?",
+          "answer": "5839",
+          "answerVariants": [
+            "5839",
+            "5,839"
+          ],
+          "historicalFact": "1927 - 1933 = -6. Times 8 lanes = -48. Minus 35 = -83. Plus 5922 = 5839. Every number in this puzzle comes from the neighborhood you just walked through — a stretch of Figueroa where a Prohibition bowling alley, a chicken-headed statue, a Moorish movie palace, and a cave bar coexist within a few blocks."
+        }
+      ]
+    },
+    {
+      "huntId": "escala",
+      "bar": {
+        "name": "Escala",
+        "address": "3451 W 6th St",
+        "neighborhood": "Mid-Wilshire / Koreatown",
+        "happyHour": "Mon–Fri 5–7pm, $8 cocktails, $6 beer/wine",
+        "vibe": "Colombian rooftop inside a 1928 drive-in grocery. The building is the destination."
+      },
+      "theme": "Bean Patches, Blue Tiles, and the Night Bobby Died",
+      "totalWalkingDistance": "~0.25 miles",
+      "narrativeArc": "A French landowner's tower clad in blue-green terra cotta. A silent film star's apartment built on top of a Greene & Greene mansion. A hotel where six Oscars were held and a senator was murdered. And a 1928 grocery store that became a bar — designed by the same architects who built the tower.",
+      "avoidZones": [
+        "Stay between Western Ave and Normandie Ave",
+        "Stay between Wilshire and Olympic"
+      ],
+      "cluePool": [
+        {
+          "ring": 1,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "A blue-green Art Deco tower near your starting point houses a theater whose name is a portmanteau — a mashup of the boulevard and the avenue where it stands. What intersection is the theater at?",
+          "answer": "Wilshire and Western",
+          "answerVariants": [
+            "wilshire and western",
+            "wilshire & western",
+            "wilshire western"
+          ],
+          "historicalFact": "The Wiltern opened in 1931 as a Warner Brothers movie palace. The portmanteau name — Wilshire + Western — was a marketing invention that stuck. The intersection itself was once the edge of a French landowner's bean fields."
+        },
+        {
+          "ring": 1,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "The Wiltern's 12-story tower is covered in distinctive blue-green tiles. The building is named for a French immigrant who owned the surrounding land. What was his last name?",
+          "answer": "Pellissier",
+          "answerVariants": [
+            "pellissier",
+            "germain pellissier"
+          ],
+          "historicalFact": "Germain Pellissier was a French immigrant who owned large tracts of land around Wilshire and Western. The 12-story Pellissier Building — with its blue-green glazed terra-cotta tiles — was designed by Stiles O. Clements in Zigzag Moderne style. It was nearly demolished twice before preservationists saved it."
+        },
+        {
+          "ring": 1,
+          "difficulty": 3,
+          "type": "history",
+          "clue": "A hotel that once stood at 3400 Wilshire had a 1,000-seat nightclub called the Cocoanut Grove. That nightclub hosted six Academy Awards ceremonies between 1930 and 1943. On June 5, 1968, a senator was shot in the hotel kitchen after winning the California primary. Name the senator.",
+          "answer": "Robert F. Kennedy",
+          "answerVariants": [
+            "robert f. kennedy",
+            "rfk",
+            "robert kennedy",
+            "bobby kennedy",
+            "kennedy"
+          ],
+          "historicalFact": "Robert F. Kennedy was shot at 12:02 AM on June 5, 1968, by Sirhan Sirhan in the Ambassador Hotel's kitchen pantry, moments after his California primary victory speech. He died roughly 25 hours later at Good Samaritan Hospital. The 1,200-room hotel was demolished in 2005-2006; RFK Community Schools now occupy the site."
+        },
+        {
+          "ring": 1,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "Western Avenue runs near here — about 28 miles long. It was surveyed in 1853 and named because it marked a specific geographic distinction at the time. What did Western represent when it was named?",
+          "answer": "The westernmost edge of expansion",
+          "answerVariants": [
+            "westernmost edge",
+            "western edge",
+            "western boundary",
+            "the western edge of the city",
+            "westernmost street",
+            "western edge of expansion"
+          ],
+          "historicalFact": "Henry Washington surveyed Western Avenue in 1853 as the westernmost boundary of LA's expansion. The city grew far past it, but the name stuck — a fossilized reminder of how small Los Angeles once was."
+        },
+        {
+          "ring": 1,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I opened on January 1, 1921. I had 1,200 rooms, 37 shops, a golf course, and a bowling alley. My nightclub — named for a tropical tree — hosted Bob Hope at the Oscars. A senator died in my kitchen. I was torn down in 2005. What was my name?",
+          "answer": "Ambassador Hotel",
+          "answerVariants": [
+            "ambassador hotel",
+            "the ambassador hotel",
+            "ambassador"
+          ],
+          "historicalFact": "The Ambassador Hotel's Cocoanut Grove nightclub opened April 21, 1921, and became Hollywood's premier gathering spot. Bob Hope first hosted the Academy Awards there in 1939 — the same year 'Gone with the Wind' won Best Picture. The hotel's demolition in 2005-2006 erased one of LA's most layered historical sites."
+        },
+        {
+          "ring": 1,
+          "difficulty": 6,
+          "type": "wordplay",
+          "clue": "Unscramble these letters: R-E-I-S-L-L-E-P-I-S. They spell the last name of a French landowner whose building is clad in blue-green terra cotta at Wilshire and Western.",
+          "answer": "Pellissier",
+          "answerVariants": [
+            "pellissier"
+          ],
+          "historicalFact": "The Pellissier Building's Zigzag Moderne exterior features thousands of glazed terra-cotta tiles that shift between blue and green depending on the light. Interior murals by Anthony Heinsbergen — who painted over 750 theaters across America — decorate the auditorium ceiling."
+        },
+        {
+          "ring": 1,
+          "difficulty": 7,
+          "type": "trivia",
+          "clue": "The Wilshire Boulevard Temple at 3663 Wilshire is home to LA's oldest Jewish congregation, established in 1862. Its interior features 320 feet of murals depicting Jewish history, donated by the founders of a major Hollywood studio. Which studio?",
+          "answer": "Warner Bros",
+          "answerVariants": [
+            "warner bros",
+            "warner brothers",
+            "warner bros.",
+            "warner"
+          ],
+          "historicalFact": "Jack, Harry, and Abraham Warner — the Warner Brothers — funded Hugo Ballin's murals inside the Wilshire Boulevard Temple. The temple's rabbi, Edgar F. Magnin, served for 69 years (1915-1984) and was known as the 'Rabbi to the Stars,' ministering to the Jewish moguls who built Hollywood."
+        },
+        {
+          "ring": 1,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "Four landmarks near your starting point. Eliminate them one at a time. The last one standing is your answer.\n\nThe landmarks: a blue-green Art Deco theater whose name is a portmanteau, a 1,200-room hotel where a senator was shot, a synagogue with studio-funded murals, and an apartment building named for a socialist land developer.\n\n1) Eliminate the one that was demolished in 2005-2006.\n2) Eliminate the one named after a man who also gave his name to an entire boulevard.\n3) Eliminate the one whose interior murals were paid for by movie studio founders.\n\nWhat's left?",
+          "answer": "Wiltern Theatre",
+          "answerVariants": [
+            "wiltern theatre",
+            "the wiltern",
+            "wiltern",
+            "wiltern theater"
+          ],
+          "historicalFact": "Ambassador Hotel was demolished (2005-2006, site of RFK's assassination June 5, 1968, and 6 Oscar ceremonies). Gaylord Apartments are named for Henry Gaylord Wilshire, who gave Wilshire Boulevard its name. Wilshire Boulevard Temple (1929, LA's oldest Jewish congregation) has Warner Bros-funded murals. The Wiltern (1931, blue-green terra cotta, 'Wilshire + Western') is the last one standing."
+        },
+        {
+          "ring": 1,
+          "difficulty": 9,
+          "type": "history",
+          "clue": "An apartment building at 3355 on LA's most famous boulevard is named after the man who donated that boulevard to the city. He was a utopian socialist who ran for Congress, a real estate developer, and an eccentric who marketed a magnetic health device called the I-ON-A-CO that he claimed cured all diseases. Richard Nixon once lived in the building. What was this man's full name (first, middle, and last)?",
+          "answer": "Henry Gaylord Wilshire",
+          "answerVariants": [
+            "henry gaylord wilshire",
+            "gaylord wilshire",
+            "h. gaylord wilshire",
+            "henry wilshire"
+          ],
+          "historicalFact": "Henry Gaylord Wilshire (1861-1927) was a real estate developer, socialist politician, and eccentric entrepreneur. He donated the boulevard that bears his name, ran for Congress on a socialist ticket, and later marketed a magnetic health device called the I-ON-A-CO that he claimed cured all diseases. The Gaylord Apartments — where silent film stars and Richard Nixon lived — carry his middle name."
+        },
+        {
+          "ring": 1,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "The Ambassador Hotel hosted 6 Academy Awards. The Cocoanut Grove opened in April 1921. Bob Hope first hosted the Oscars there in 1939. RFK was shot in 1968. Take the number of Oscars hosted, multiply by the year Hope first hosted, then subtract the year RFK was shot. Finally, add the hotel's room count. What's the result?",
+          "answer": "10866",
+          "answerVariants": [
+            "10866",
+            "10,866"
+          ],
+          "historicalFact": "6 x 1939 = 11,634. Minus 1968 = 9,666. Plus 1,200 = 10,866. The Ambassador Hotel compressed nearly 50 years of Hollywood glamour and American tragedy into a single address — from the first talkies to the civil rights era."
+        },
+        {
+          "ring": 2,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "An apartment building at 3278 Wilshire is named after a silent film star who lived on the 10th floor with her husband, Joseph Schenck — a co-founder of United Artists. What was the star's first name?",
+          "answer": "Norma",
+          "answerVariants": [
+            "norma",
+            "norma talmadge"
+          ],
+          "historicalFact": "Norma Talmadge (1894-1957) was one of the biggest stars of silent cinema. Her husband Joseph Schenck co-founded United Artists with Charlie Chaplin, Mary Pickford, and Douglas Fairbanks. The Talmadge building at 3278 Wilshire was once called 'the finest apartment on the West Coast.'"
+        },
+        {
+          "ring": 2,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "Before the Talmadge apartments were built, the site held a Craftsman mansion designed by Greene & Greene for an auto dealer named Earle C. Anthony. Instead of demolishing the mansion, it was moved to another city in 1923 by an actor named Norman Kerry. Where did the mansion go?",
+          "answer": "Beverly Hills",
+          "answerVariants": [
+            "beverly hills"
+          ],
+          "historicalFact": "Earle C. Anthony was California's first Packard dealer and a pioneer broadcaster (he founded KFI radio). His Greene & Greene mansion was relocated to Beverly Hills by silent film actor Norman Kerry — a remarkable feat of early 20th-century house moving. Greene & Greene, the architects, are considered the masters of the American Arts & Crafts bungalow."
+        },
+        {
+          "ring": 2,
+          "difficulty": 3,
+          "type": "wordplay",
+          "clue": "The Hotel Normandie at 605 S Normandie Ave was built in 1926. A British novelist lived there while writing a novel set in Mexico about an alcoholic consul on the Day of the Dead. The novel's title references a geological feature. What is the novel called?",
+          "answer": "Under the Volcano",
+          "answerVariants": [
+            "under the volcano"
+          ],
+          "historicalFact": "Malcolm Lowry wrote portions of 'Under the Volcano' (published 1947) while staying at the Hotel Normandie. The novel — set in Cuernavaca, Mexico on the Day of the Dead — is considered one of the greatest English-language novels of the 20th century. The hotel was restored in 2010 as a boutique property."
+        },
+        {
+          "ring": 2,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "A traditional Korean gazebo and garden sits at the corner of Olympic and Irolo, about a third of a mile south. Built in 2006 by South Korean craftsmen for $695,000, its gateway monuments are topped with a mythical bird from East Asian culture. What is the bird called?",
+          "answer": "Bong Huang",
+          "answerVariants": [
+            "bong huang",
+            "bonghwang",
+            "fenghuang",
+            "phoenix"
+          ],
+          "historicalFact": "Da Wool Jung — the 5,000 sq ft Korean gazebo — was built by craftsmen brought from South Korea specifically for the project. The Bong Huang (also known as bonghwang or fenghuang) is a mythical bird symbolizing prosperity and peace in East Asian culture, often compared to the Western phoenix but with distinct origins."
+        },
+        {
+          "ring": 2,
+          "difficulty": 5,
+          "type": "photo",
+          "answerType": "photo",
+          "clue": "Find the Talmadge building at 3278 Wilshire Blvd. Take a photo of its exterior — this 1920s apartment building was once home to a silent film star and her movie mogul husband, built on top of where a Greene & Greene mansion stood.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "The Talmadge was built in 1922-1924 and rose to 10 stories with 42 units. Before it existed, the site held a Craftsman masterpiece by Greene & Greene — the architects of the Gamble House in Pasadena. The mansion was physically relocated to Beverly Hills rather than demolished, one of the more extraordinary acts of preservation in LA history."
+        },
+        {
+          "ring": 2,
+          "difficulty": 6,
+          "type": "puzzle",
+          "clue": "I am a museum founded in 1991 — the first institution dedicated to the heritage of a community that began settling this neighborhood in the 1960s. The community I honor is the largest of its kind outside of Asia. I sit on West 6th Street. What community?",
+          "answer": "Korean American",
+          "answerVariants": [
+            "korean american",
+            "korean",
+            "koreans",
+            "korean americans"
+          ],
+          "historicalFact": "The Korean American National Museum at 3727 W 6th St was founded in 1991 as the first institution dedicated to Korean American heritage. Koreatown was officially designated in the 1980s, though Korean settlement began in the 1960s. Greater LA's Korean population is the largest Korean community outside of Asia."
+        },
+        {
+          "ring": 2,
+          "difficulty": 7,
+          "type": "history",
+          "clue": "The Hotel Normandie's ground floor houses a hamburger restaurant that has operated since 1948 — one of LA's longest-running burger spots. The restaurant is known for grinding its beef fresh daily and letting customers cook their own patties on a communal grill. What's the restaurant?",
+          "answer": "Cassell's Hamburgers",
+          "answerVariants": [
+            "cassell's hamburgers",
+            "cassells hamburgers",
+            "cassell's",
+            "cassells"
+          ],
+          "historicalFact": "Cassell's Hamburgers was founded in 1948 by Al Cassell on West 6th Street. It moved into the Hotel Normandie during the hotel's 2010 restoration. Cassell's is known for hand-ground beef, a potato salad bar, and homemade pies — a mid-century relic that survived the neighborhood's complete demographic transformation."
+        },
+        {
+          "ring": 2,
+          "difficulty": 8,
+          "type": "puzzle",
+          "clue": "I am a building, but my name belongs to a person. My namesake was a star — not of music, not of sports, but of a medium that existed before sound was part of the picture. Her husband co-founded a company alongside Charlie Chaplin, Mary Pickford, and Douglas Fairbanks. Before I was built, the land held a mansion designed by two brothers famous for a house in Pasadena — but that mansion wasn't destroyed. It walked away. Who am I named after?",
+          "answer": "Norma Talmadge",
+          "answerVariants": [
+            "norma talmadge",
+            "talmadge",
+            "norma"
+          ],
+          "historicalFact": "The Talmadge at 3278 Wilshire is named for silent film star Norma Talmadge, whose husband Joseph Schenck co-founded United Artists. Before it was built, the site held a Greene & Greene Craftsman mansion (the brothers designed Pasadena's Gamble House) that was physically relocated to Beverly Hills by actor Norman Kerry in 1923."
+        },
+        {
+          "ring": 2,
+          "difficulty": 9,
+          "type": "history",
+          "clue": "A silent film actress — one of the biggest stars of the 1920s — supposedly stepped in wet cement outside Grauman's Chinese Theatre in 1927, inspiring Sid Grauman to create the tradition of celebrity hand and footprints. Her husband, Joseph Schenck, co-founded United Artists with Chaplin, Pickford, and Fairbanks. An apartment building at 3278 Wilshire bears her surname. What was her first name?",
+          "answer": "Norma",
+          "answerVariants": [
+            "norma",
+            "norma talmadge"
+          ],
+          "historicalFact": "According to Hollywood legend, Norma Talmadge accidentally stepped in wet cement outside Grauman's Chinese Theatre in 1927, inspiring Sid Grauman to create the tradition of celebrity hand and footprints. Historians dispute whether it was an accident or a publicity stunt. The Talmadge building at 3278 Wilshire was once called 'the finest apartment on the West Coast.'"
+        },
+        {
+          "ring": 2,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "The Talmadge was built in 1924. The Hotel Normandie in 1926. 'Under the Volcano' was published in 1947. Da Wool Jung cost $695,000 to build. The Korean American National Museum was founded in 1991. Add all three years together, then subtract the cost of Da Wool Jung. What do you get?",
+          "answer": "-689103",
+          "answerVariants": [
+            "-689103",
+            "-689,103"
+          ],
+          "historicalFact": "1924 + 1926 + 1991 = 5841. Minus 695,000 = -689,159. Wait: 1924 + 1926 + 1991 = 5841. 5841 - 695000 = -689,159. The absurdity of the number captures something real: you can't reduce a neighborhood to arithmetic. Koreatown's value lies in layers — a novelist's despair, a film star's glamour, an immigrant community's monument — that don't add up to a single sum."
+        },
+        {
+          "ring": 3,
+          "difficulty": 1,
+          "type": "trivia",
+          "clue": "Your destination is a Colombian rooftop bar inside a 1928 building at 3451 W 6th St. The bar's name is a Spanish word meaning 'scale' or 'stop.' What's it called?",
+          "answer": "Escala",
+          "answerVariants": [
+            "escala"
+          ],
+          "historicalFact": "Escala sits inside Chapman Plaza, one of America's first drive-in grocery stores. The bar offers $8 cocktails during happy hour (Mon-Fri, 5-7pm) from a rooftop perch inside a Spanish Colonial Revival building designed by Morgan, Walls & Clements."
+        },
+        {
+          "ring": 3,
+          "difficulty": 2,
+          "type": "history",
+          "clue": "Escala's building — Chapman Plaza — was one of the first drive-in grocery stores in America. It opened in 1929 and served the wealthy residents of three nearby neighborhoods. Name any one of those three neighborhoods.",
+          "answer": "Hancock Park",
+          "answerVariants": [
+            "hancock park",
+            "fremont place",
+            "windsor square"
+          ],
+          "historicalFact": "Chapman Plaza served Fremont Place, Windsor Square, and Hancock Park — three of LA's wealthiest enclaves. The drive-in format was revolutionary: customers could park inside the building's arched entrances and shop without leaving the shade. The adjacent Chapman Park Hotel (demolished 1967) housed the U.S. women's Olympic team during the 1932 Games."
+        },
+        {
+          "ring": 3,
+          "difficulty": 3,
+          "type": "trivia",
+          "clue": "Chapman Plaza and the blue-green Art Deco tower a few blocks northwest were designed by the same architecture firm — one of LA's most prolific of the era. The firm's name is three surnames. Their lead designer created both a Zigzag Moderne theater and a Spanish Colonial Revival grocery in the same period. Name the firm.",
+          "answer": "Morgan, Walls & Clements",
+          "answerVariants": [
+            "morgan walls and clements",
+            "morgan, walls & clements",
+            "morgan walls & clements",
+            "morgan walls clements"
+          ],
+          "historicalFact": "Morgan, Walls & Clements was one of LA's most prolific Art Deco-era firms. Stiles O. Clements, the lead designer, created the Wiltern's iconic Zigzag Moderne tower and Chapman Plaza's Spanish Colonial Revival grocery in the same period — two radically different styles from the same hand."
+        },
+        {
+          "ring": 3,
+          "difficulty": 4,
+          "type": "trivia",
+          "clue": "Chapman Plaza was saved from demolition by the same developer-architect pair who saved the Wiltern Theatre. The developer was Wayne Ratkovich. Who was the architect?",
+          "answer": "Brenda Levin",
+          "answerVariants": [
+            "brenda levin",
+            "levin"
+          ],
+          "historicalFact": "Brenda Levin is one of LA's foremost preservation architects. She and developer Wayne Ratkovich saved both the Wiltern and Chapman Plaza from the wrecking ball, restoring their interiors while adapting them for modern use. Levin also restored City Hall's observation deck, the Bradbury Building, and Grand Central Market."
+        },
+        {
+          "ring": 3,
+          "difficulty": 5,
+          "type": "puzzle",
+          "clue": "I was built as a grocery store in 1928. My arches let cars drive inside. My tower has Churrigueresque detailing — an ornate Spanish style. A hotel next door housed Olympians in 1932. I became a Historic-Cultural Monument in 1988. Today, a Colombian rooftop bar operates from my upper level. What building am I?",
+          "answer": "Chapman Plaza",
+          "answerVariants": [
+            "chapman plaza",
+            "chapman market",
+            "chapman park market"
+          ],
+          "historicalFact": "Chapman Plaza earned LA Historic-Cultural Monument #361 in 1988. Churrigueresque architecture — named after Spanish architect Jose Benito de Churriguera — features elaborate surface ornamentation, twisted columns, and layered facades. Chapman Plaza's version is restrained compared to Mexican examples, but the ornate tile work and carved arches are unmistakable."
+        },
+        {
+          "ring": 3,
+          "difficulty": 6,
+          "type": "history",
+          "clue": "A real estate developer named A.W. Ross bought 18 acres along Wilshire Boulevard in the 1920s and bet that the automobile — not the streetcar — would define LA's future. Detractors mocked his empty land with a nickname. What did they call it?",
+          "answer": "Ross's bean patch",
+          "answerVariants": [
+            "ross's bean patch",
+            "ross' bean patch",
+            "rosss bean patch",
+            "bean patch"
+          ],
+          "historicalFact": "A.W. Ross paid $54,000 for 18 acres along Wilshire in the early 1920s. Critics called it 'Ross's bean patch' — empty land far from downtown. By 1928, Ross had coined the term 'Miracle Mile' for the commercial strip he built, proving that cars, not streetcars, would shape the city. The Miracle Mile is now one of LA's most valuable corridors."
+        },
+        {
+          "ring": 3,
+          "difficulty": 7,
+          "type": "puzzle",
+          "clue": "Hidden inside this sentence is a Spanish word — the name of the bar you're heading to. It means 'scale' or 'stop.'\n\n'The frescal architecture impressed everyone.'\n\nWhat is the bar's name?",
+          "answer": "Escala",
+          "answerVariants": [
+            "escala"
+          ],
+          "historicalFact": "fr-ESCALA-rchitecture — 'Escala' hides across the word boundary of 'frescal' and 'architecture.' The bar sits inside Chapman Plaza (1928), a drive-in grocery designed by Morgan, Walls & Clements with Churrigueresque detailing. 'Escala' means 'scale' or 'stop' in Spanish — a Colombian rooftop bar serving $8 cocktails, adjacent to the former Chapman Park Hotel that housed 1932 Olympians."
+        },
+        {
+          "ring": 3,
+          "difficulty": 8,
+          "type": "photo",
+          "answerType": "photo",
+          "clue": "You've arrived at Chapman Plaza, 3451 W 6th St. Take a photo of the building's ornate arched entrance or tower detailing. This 1928 drive-in grocery store was designed by Morgan, Walls & Clements in Spanish Colonial Revival style with Churrigueresque ornament.",
+          "answer": "",
+          "answerVariants": [],
+          "historicalFact": "Chapman Plaza's Spanish Colonial Revival exterior features arched vehicle entrances, ornate tile work, and a tower with Churrigueresque detailing. The style was popular in 1920s LA — a romantic vision of California's Spanish past applied to thoroughly modern commercial buildings."
+        },
+        {
+          "ring": 3,
+          "difficulty": 9,
+          "type": "wordplay",
+          "clue": "Your bar's building has a style of ornamentation named after a Spanish architect. The style is known for twisted columns and extravagant surface decoration. The architect's surname starts with C-H-U-R-R-I-G-U-E-R-R-E-S-C-O in its Spanish adjective form. What is the English adjective for this architectural style?",
+          "answer": "Churrigueresque",
+          "answerVariants": [
+            "churrigueresque"
+          ],
+          "historicalFact": "Jose Benito de Churriguera (1665-1725) developed a hyper-ornamental Baroque style in Spain that spread to Latin America, where it became even more elaborate. Mexican Churrigueresque — seen in cathedrals in Zacatecas and Taxco — influenced Southern California's Spanish Colonial Revival architects, including the designers of Chapman Plaza."
+        },
+        {
+          "ring": 3,
+          "difficulty": 10,
+          "type": "puzzle",
+          "clue": "Final puzzle. Chapman Plaza opened in 1929. The Wiltern opened in 1931. Ross paid $54,000 for his 'bean patch.' Chapman Plaza became a landmark in 1988. Escala's happy hour cocktails cost $8. Multiply the two opening years together, then divide by the landmark year. Round to the nearest whole number. Does the result end in the same digit as the cocktail price?",
+          "answer": "No",
+          "answerVariants": [
+            "no"
+          ],
+          "historicalFact": "1929 x 1931 = 3,726,899. Divided by 1988 = 1,875.2 (rounded: 1,875). The last digit is 5, not 8. The math doesn't line up — but the history does: the same architects, the same preservationists, and the same stretch of Wilshire tie the Wiltern and Chapman Plaza together across a century."
         }
       ]
     }

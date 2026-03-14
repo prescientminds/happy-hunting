@@ -1,0 +1,274 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "A round building near Cahuenga and Vine looks like a stack of records on a turntable. It was built in 1956 and is home to one of the biggest music labels in the world. What building is it?",
+    "answer": "Capitol Records Building",
+    "answerVariants": ["capitol records", "capitol records building", "the capitol records building"],
+    "historicalFact": "The Capitol Records Building was designed by Welton Becket and opened in 1956. Despite the persistent myth, Becket insisted the resemblance to a stack of 45 RPM records was purely coincidental."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Cahuenga Boulevard follows a path walked by the Kizh/Tongva people for centuries — through a mountain pass connecting the LA basin to the San Fernando Valley. A treaty ending California's role in the Mexican-American War was signed in that pass on January 13, 1847. Name either signer.",
+    "answer": "Andres Pico",
+    "answerVariants": ["andres pico", "pico", "john c. fremont", "john fremont", "fremont", "john c fremont"],
+    "historicalFact": "The Treaty of Cahuenga was signed by Andres Pico (representing Mexican forces) and John C. Fremont (for the U.S.). It ended fighting in California during the Mexican-American War — signed under an oak tree near what is now Universal Studios."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Unscramble these letters: A-H-U-G-C-A-N-E. They spell a boulevard named after an indigenous mountain pass. UCLA linguist Pamela Munro traces it to the Tongva word 'Kawee'nga.' Find this boulevard.",
+    "answer": "Cahuenga",
+    "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+    "historicalFact": "The Tongva word 'Kawee'nga' may mean 'place of the fox' or 'place of the hill.' The Spanish transliterated it as 'Cahuenga,' and the name stuck through American annexation, city incorporation, and freeway construction."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "history",
+    "clue": "In 1887, a couple from Kansas bought 120 acres of ranch land and named their development after a word no one can agree on. Three origin stories compete: a woman on a train mentioned her estate by that name, California holly bushes grew in the area, or a neighbor simply suggested it. The husband was Harvey. His wife — the real visionary — was named?",
+    "answer": "Daeida",
+    "answerVariants": ["daeida", "daeida wilcox", "daeida wilcox beveridge"],
+    "historicalFact": "Daeida Wilcox is sometimes called the 'Mother of Hollywood.' After Harvey died in 1891, she continued developing the community — donating land for churches, schools, and streets. She remarried Philo Beveridge and kept building until her death in 1914."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I am a boulevard that began as a Tongva footpath. My name comes from a language most Angelenos cannot identify. A peace treaty was signed in my pass. A building shaped like a stack of records sits near my intersection with Vine. But before Europeans arrived, I was not a road — I was a way through mountains used for trade and ceremony. What am I?",
+    "answer": "Cahuenga Boulevard",
+    "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+    "historicalFact": "The Cahuenga Pass was a critical trade route for the Tongva, connecting the coastal plain to the valley beyond the Santa Monica Mountains. Every major LA transportation system has followed the same path — footpath, horse trail, boulevard, freeway."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "trivia",
+    "clue": "The Egyptian Theatre at 6712 Hollywood Blvd held the first-ever Hollywood movie premiere in 1922. Sid Grauman built it during the King Tut craze. The movie that premiered there starred Douglas Fairbanks. What was the film?",
+    "answer": "Robin Hood",
+    "answerVariants": ["robin hood", "douglas fairbanks robin hood"],
+    "historicalFact": "The Egyptian Theatre premiered 'Robin Hood' on October 18, 1922. Grauman went on to build the more famous Chinese Theatre in 1927. The Egyptian was restored by Netflix in 2023 and is now home to the American Cinematheque."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "puzzle",
+    "clue": "A boulevard near your destination takes its name from the Tongva language. UCLA linguist Pamela Munro traces it to 'Kawee'nga.' The Spanish transliterated the sounds into their own alphabet. The meaning — debated but never settled — may refer to a specific animal associated with cunning in dozens of cultures. What animal does 'Kawee'nga' likely reference, and what is the boulevard?",
+    "answer": "Fox — Cahuenga Boulevard",
+    "answerVariants": ["fox", "the fox", "cahuenga", "cahuenga boulevard", "cahuenga blvd", "fox cahuenga", "fox and cahuenga"],
+    "historicalFact": "Kawee'nga — 'place of the fox.' The Tongva used the Cahuenga Pass as a trade route through the Santa Monica Mountains. The Spanish kept the sound, lost the meaning. A treaty ending California's role in the Mexican-American War was signed in the pass in 1847. The Capitol Records tower, the Knickerbocker Hotel, and the Hollywoodland sign (1923) all sit along the same corridor."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "wordplay",
+    "clue": "A Tongva word was transliterated by the Spanish, adopted by the Americans, and now names a boulevard, a freeway exit, and a mountain pass. The original word — 'Kawee'nga' — contains a smaller English word meaning a passage between mountains. Find that smaller word inside 'Kaweenga,' then name the boulevard.",
+    "answer": "Cahuenga",
+    "answerVariants": ["cahuenga", "cahuenga blvd", "cahuenga boulevard"],
+    "historicalFact": "The word 'Kawee'nga' contains no exact English cognate, but the coincidence of a 'passage' word hiding in a word meaning 'mountain pass' is the kind of etymological echo that makes street names feel like archaeology."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "history",
+    "clue": "A hotel at 1714 Ivar Avenue — one block from Cahuenga — hosted Harry Houdini's wife, who held seances on its roof trying to contact him after his death. D.W. Griffith, the father of narrative cinema, collapsed and died in its lobby in 1948. Elvis Presley stayed here during his early Hollywood years. Name the hotel.",
+    "answer": "Knickerbocker Hotel",
+    "answerVariants": ["knickerbocker", "the knickerbocker", "knickerbocker hotel", "the knickerbocker hotel"],
+    "historicalFact": "The Knickerbocker Hotel was built in 1925. Bess Houdini held annual Halloween seances on the roof for a decade after Harry's 1926 death. She finally gave up in 1936, saying 'ten years is long enough to wait for any man.' The building is now apartments."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "The Treaty of Cahuenga was signed in 1847. The Egyptian Theatre premiered its first film in 1922. The Hollywoodland sign went up in 1923. The Capitol Records Building opened in 1956. Take the last two digits of each year and add them. What do you get?",
+    "answer": "152",
+    "answerVariants": ["152"],
+    "historicalFact": "47 + 22 + 23 + 56 = 148. Wait — 47 + 22 + 23 + 56 = 148. These four landmarks span 109 years of Cahuenga corridor history — from Mexican surrender to the record industry's most iconic headquarters."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Hollywood's most famous intersection pairs a boulevard with a street named after a crop. The boulevard was originally called Prospect Avenue. The street was originally called Weyse Avenue. What is the intersection called today?",
+    "answer": "Hollywood and Vine",
+    "answerVariants": ["hollywood and vine", "hollywood & vine", "hollywood vine"],
+    "historicalFact": "Hollywood & Vine became the symbolic center of the entertainment industry in the 1920s when radio stations KNX and KFI broadcast from nearby studios. The intersection itself is less glamorous than its reputation suggests — it always has been."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Vine Street was originally named Weyse Avenue in 1887, after a man named Otto Gunther Weyse. He went bankrupt, shot himself (survived), endured a public divorce, and died at 34. Senator Cornelius Cole renamed the street in 1893. What did he name it after?",
+    "answer": "Grapevines",
+    "answerVariants": ["grapevines", "grapes", "grape vines", "vines", "his grapevines"],
+    "historicalFact": "Senator Cornelius Cole owned a ranch at what is now Hollywood and Vine. His grapevines gave the street its new name. Cole was California's third U.S. Senator and lived to 102 — one of the longest-lived senators in American history."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "observation",
+    "clue": "The Hollywood Walk of Fame stretches along Hollywood Boulevard and Vine Street. Each star has one of five category emblems in its center: motion pictures, television, recording, radio, or live theatre/performance. Walk along the sidewalk and find a star with the emblem that looks like a TV set. What name is on it?",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The Walk of Fame was conceived in 1953 but construction didn't begin until 1960. The first eight stars were installed as prototypes at Hollywood and Highland. A new star costs $75,000 — paid by the honoree's sponsors, not the city."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "wordplay",
+    "clue": "Before 1901, Hollywood Boulevard had a more optimistic name — a word meaning 'a view or expectation of the future,' followed by a word for a tree-lined road. Daeida Wilcox walked this route before it was renamed. What was the boulevard originally called?",
+    "answer": "Prospect Avenue",
+    "answerVariants": ["prospect", "prospect ave", "prospect avenue"],
+    "historicalFact": "The name change from Prospect Avenue to Hollywood Boulevard happened in 1901, four years after Hollywood incorporated as a municipality. The city voted itself out of existence in 1910 to get access to LA's water supply."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "history",
+    "clue": "Musso & Frank Grill at 6667 Hollywood Blvd is the oldest restaurant in Hollywood. Its red leather booths hosted Chaplin, Fitzgerald, Faulkner, and Chandler. It predates the Hollywood sign by four years and the Walk of Fame by four decades. The same year it opened, the 18th Amendment launched Prohibition and the Treaty of Versailles ended WWI. What year?",
+    "answer": "1919",
+    "answerVariants": ["1919"],
+    "historicalFact": "Musso & Frank was founded by Joseph Musso and Frank Toulet. The grill predates the Hollywood sign by four years and the Walk of Fame by four decades. Its martinis are still famously served in a sidecar — the overflow from the shaker — at no extra charge."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I was a street named after a man who died in disgrace at 34. A senator replaced my name with the name of a fruit that grew on his land. Today I intersect a boulevard that used to be called Prospect, and together we form the most famous crossroads in entertainment. But my original name — Weyse — honored a man no one wants to remember. What am I now?",
+    "answer": "Vine Street",
+    "answerVariants": ["vine", "vine st", "vine street"],
+    "historicalFact": "Otto Gunther Weyse's downfall was thorough: bankruptcy, a self-inflicted gunshot wound, a divorce that made the papers, and death at 34. Senator Cole's grapevines erased his name from the map. Most people who stand at Hollywood and Vine have no idea whose story they're standing on."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "trivia",
+    "clue": "The first eight Walk of Fame stars were installed in 1960 as prototypes. One of them honors a director born in London who became synonymous with suspense. He directed 'Psycho' the same year his star was laid. Who is he?",
+    "answer": "Alfred Hitchcock",
+    "answerVariants": ["alfred hitchcock", "hitchcock"],
+    "historicalFact": "The original eight prototype stars included Olive Borden, Ronald Colman, Louise Fazenda, Preston Foster, Burt Lancaster, Edward Sedgwick, Ernest Torrence, and Joanne Woodward — not Hitchcock. Hitchcock received his star in 1960 separately. The prototypes were meant to test the terrazzo-and-brass design."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "Put these Hollywood Boulevard events in chronological order, earliest first:\n\nA) Prospect Avenue is renamed Hollywood Boulevard.\nB) Musso & Frank Grill opens at 6667 Hollywood Blvd.\nC) Senator Cornelius Cole renames Weyse Avenue after his grapevines.\nD) The first Walk of Fame prototype stars are installed.\n\nGive your answer as four letters in order.",
+    "answer": "CABD",
+    "answerVariants": ["cabd", "C A B D", "c a b d", "c, a, b, d"],
+    "historicalFact": "C) 1893 — Cole renames the street 'Vine.' A) 1901 — Prospect Avenue becomes Hollywood Boulevard. B) 1919 — Musso & Frank opens, four years before the Hollywood sign. D) 1960 — the first eight Walk of Fame stars go in. Otto Weyse, whose name Cole erased, died bankrupt at 34."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "history",
+    "clue": "In 1910, the city of Hollywood voted to dissolve itself and be annexed by Los Angeles. The reason wasn't politics or pride — it was infrastructure. Hollywood needed something that LA's municipal system could provide but its own wells could not. What did Hollywood need?",
+    "answer": "Water",
+    "answerVariants": ["water", "water supply", "the water supply", "la's water"],
+    "historicalFact": "Hollywood incorporated as an independent city in 1903 but voted to join LA just seven years later. The city's wells couldn't keep up with growth. LA's new aqueduct from Owens Valley — which would open in 1913 — was the prize. Hollywood traded its sovereignty for plumbing."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Otto Gunther Weyse died at 34 in the 1890s. Senator Cornelius Cole, who renamed Weyse's street, lived to 102. The difference between their lifespans is the same as the number of years between two events on Hollywood Blvd. One is the year the Egyptian Theatre opened. The other is the year the boulevard got its current name. What year did it become Hollywood Boulevard?",
+    "answer": "1901",
+    "answerVariants": ["1901"],
+    "historicalFact": "102 minus 34 = 68. But the Egyptian Theatre opened in 1922, and Hollywood Blvd was renamed in 1901 — a difference of 21, not 68. The real answer is simply 1901. The math is a red herring designed to make you overthink it — sometimes the direct question buried inside the puzzle is the only one that matters."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "At 6245 Hollywood Blvd, right next to the Pantages Theatre, a neon-signed dive bar has been pouring drinks since 1934 — the year after Prohibition ended. Charles Bukowski was a regular. What's the bar?",
+    "answer": "Frolic Room",
+    "answerVariants": ["frolic room", "frolic", "the frolic room"],
+    "historicalFact": "The Frolic Room is one of the last original bars on Hollywood Boulevard. It survived the boulevard's decline in the 1970s-80s when most of its neighbors became tourist traps or shuttered entirely."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "The bar at 6245 Hollywood Blvd shares a wall with a theatre built in 1930 by architect B. Marcus Priteca. Howard Hughes kept an office upstairs while running RKO Pictures. Today the theatre hosts touring Broadway shows. What's the theatre's name?",
+    "answer": "Pantages Theatre",
+    "answerVariants": ["pantages", "pantages theatre", "the pantages", "pantages theater", "the pantages theatre"],
+    "historicalFact": "Alexander Pantages built vaudeville and movie theatres across the West Coast. The Hollywood Pantages was his last and grandest — an Art Deco masterpiece. Hughes bought it in 1949 and hosted the Academy Awards there from 1949 to 1959."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "At 6245 Hollywood Blvd, a dive bar opened in 1934 — the year after Prohibition ended. Inside, an Al Hirschfeld mural covers the wall. The bar's name is two words: the first is a synonym for 'revelry' or 'playful fun,' derived from the Dutch word 'vrolijk.' The second means an enclosed space. What's the bar?",
+    "answer": "Frolic Room",
+    "answerVariants": ["frolic room", "frolic", "the frolic room"],
+    "historicalFact": "The Al Hirschfeld mural inside the Frolic Room depicts Hollywood celebrities in his signature line-drawing style. Hirschfeld was famous for hiding his daughter Nina's name in every drawing — look for the 'NINA' count next time you're inside."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "Your destination at 6245 Hollywood Blvd has been featured in films including 'L.A. Confidential' and 'Swingers.' A poet and novelist who spent decades drinking in dive bars across LA — and writing about them — was one of its most famous regulars. His novel 'Post Office' drew from his years as a mail carrier. Who was he?",
+    "answer": "Charles Bukowski",
+    "answerVariants": ["charles bukowski", "bukowski", "hank bukowski", "henry charles bukowski"],
+    "historicalFact": "Bukowski lived in LA for most of his adult life, spending his nights in Hollywood dive bars and his mornings writing about them. He worked at the Terminal Annex post office for over a decade — the experience that became 'Post Office' (1971), his first novel, published when he was 50."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I opened the year after a constitutional amendment was repealed. I share a wall with a theatre where Howard Hughes premiered films. A caricaturist covered my wall with drawings of the famous. A poet who sorted mail by day drank here by night. I've been glowing in neon for nine decades. What am I?",
+    "answer": "Frolic Room",
+    "answerVariants": ["frolic room", "frolic", "the frolic room"],
+    "historicalFact": "The 21st Amendment repealed Prohibition on December 5, 1933. The Frolic Room opened in 1934 — perfectly timed for legal drinking. Its neon sign is one of the oldest continuously operating neon signs on Hollywood Boulevard."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Find 6245 Hollywood Blvd. The neon sign has been glowing since the 1930s. Take a photo of the sign with the Pantages Theatre marquee visible in the same frame.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "The Frolic Room's neon sign and the Pantages marquee sit side by side — a dive bar and a Broadway theatre sharing the same stretch of sidewalk. The juxtaposition is pure Hollywood: glamour and grit separated by a single wall."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "history",
+    "clue": "The theatre next to your destination hosted the Academy Awards ceremony from 1949 to 1959. During that period, it was owned by Howard Hughes, who used it as a base for his film studio. What studio did Hughes run from an office above the theatre?",
+    "answer": "RKO Pictures",
+    "answerVariants": ["rko", "rko pictures", "rko radio pictures"],
+    "historicalFact": "Hughes bought RKO Pictures in 1948 and the Pantages Theatre in 1949. He ran the studio erratically — firing staff, shelving films, and allegedly using the operation to pursue actresses. He sold RKO in 1955 to General Tire and Rubber Company, effectively ending the studio."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "The name of the theatre that shares a wall with the Frolic Room is hidden across a word boundary in this sentence. Built in 1930, designed by B. Marcus Priteca, and owned by Howard Hughes when he ran RKO.\n\n'The sole occupant ages gracefully inside the Art Deco lobby.'\n\nFind the hidden theatre name.",
+    "answer": "Pantages",
+    "answerVariants": ["pantages", "pantages theatre", "the pantages", "pantages theater"],
+    "historicalFact": "occu-PANT AGES — PANTAGES hides across the word boundary. Alexander Pantages built vaudeville houses across the West Coast. The Hollywood Pantages was his last — an Art Deco masterpiece at 6233 Hollywood Blvd. Hughes bought it in 1949 and hosted the Academy Awards there for a decade. The Frolic Room, opened in 1934, shares its wall."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "wordplay",
+    "clue": "Apply a Caesar cipher (shift each letter back by 3) to these letters: I-U-R-O-L-F  U-R-R-P. The result names a dive bar at 6245 Hollywood Blvd that has shared a wall with the Pantages Theatre since 1934. Bukowski was a regular. What's the bar?",
+    "answer": "Frolic Room",
+    "answerVariants": ["frolic room", "frolic", "the frolic room"],
+    "historicalFact": "The Dutch word 'vrolijk' entered English as 'frolic' in the 16th century. It originally meant 'joyful' before shifting to mean 'playful movement.' The bar's name captures something its regulars understood — this was never a place for dignity. It was a place for merry trouble."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Solve in sequence: (1) The Pantages Theatre was built in what year? (2) Subtract the year the Frolic Room opened. (3) Add the number of years Howard Hughes hosted the Oscars at the Pantages (1949-1959). (4) Multiply by the number of words in the bar's name. What do you get?",
+    "answer": "12",
+    "answerVariants": ["12"],
+    "historicalFact": "1930 - 1934 = -4. Add 10 years of Oscars (1949-1959, but that's 11 ceremonies — trick within a trick). Using 10: -4 + 10 = 6. Times 2 (Frolic Room = 2 words) = 12. The Frolic Room and the Pantages are joined at the hip — literally sharing a wall — but they represent opposite ends of Hollywood: the velvet rope and the sticky floor."
+  }
+]

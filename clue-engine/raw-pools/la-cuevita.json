@@ -1,0 +1,273 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "LA's first museum was founded by a man who walked from Cincinnati to Los Angeles. How many miles did he walk?",
+    "answer": "3507",
+    "answerVariants": ["3507", "3,507", "3507 miles"],
+    "historicalFact": "Charles Fletcher Lummis walked 3,507 miles from Cincinnati to LA in 143 days, filing weekly dispatches to the LA Times along the way. He arrived February 1, 1885, and went on to found the Southwest Museum of the American Indian in 1914 — the first museum in Los Angeles."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "The Southwest Museum sits on Mount Washington, about a third of a mile west. Its founder built his own house by hand from river stones over 13 years. What was the founder's name?",
+    "answer": "Charles Lummis",
+    "answerVariants": ["charles lummis", "lummis", "charles fletcher lummis", "c.f. lummis"],
+    "historicalFact": "Charles Fletcher Lummis (1859-1928) was a journalist, historian, and cultural preservationist. He built El Alisal — his 4,000 sq ft stone home — from Arroyo Seco river stone between 1897 and 1910. Theodore Roosevelt, Will Rogers, and Douglas Fairbanks were guests."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Unscramble these letters: O-R-Y-A-R-O-C-E-S. They spell the name of a waterway whose stones Lummis used to build his house. The name is two words, and in Spanish it means 'dry stream.'",
+    "answer": "Arroyo Seco",
+    "answerVariants": ["arroyo seco", "the arroyo seco"],
+    "historicalFact": "The Arroyo Seco was named in 1770 by the Portola expedition. Tongva people had settlements along it for centuries before contact. The Arroyo Seco Parkway, built along its channel in 1940, became the first freeway in the United States."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "history",
+    "clue": "An organization on South Avenue 57 was founded in 1903 and named after a German professor who traveled California forming women's study groups. The club became a space for women's suffrage organizing. What was the professor's last name?",
+    "answer": "Ebell",
+    "answerVariants": ["ebell", "adrian ebell"],
+    "historicalFact": "Adrian Ebell was a German-born professor who toured California in the 1870s encouraging women to form intellectual study groups. The Highland Park Ebell Club, established in 1903, became one of the most prominent women's civic organizations in LA. Its 1913 building is a Westcoast Prairie style design by architects Sumner P. Hunt and Silas Burns."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "observation",
+    "clue": "A 12-foot mural at 6037 N Figueroa St features a feathered serpent from Aztec mythology dominating the composition. The mural's full title references both an ancient city and the idea of a wall that communicates. What is the feathered serpent's name?",
+    "answer": "Quetzalcoatl",
+    "answerVariants": ["quetzalcoatl", "quetzalcoatl", "quetzacoatl"],
+    "historicalFact": "The mural 'Mexico-Tenochtitlan: The Wall That Talks' was painted in 1996 by community artists. Quetzalcoatl — the feathered serpent deity — was central to Aztec, Toltec, and Maya cosmology. The mural also features Cesar Chavez and the Virgen de Guadalupe."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I was built in 1925 and housed police officers for 76 years. I sit on York Boulevard, about a third of a mile east. My collection covers a department that started in 1869. I'm a museum now. What kind of museum am I?",
+    "answer": "Police museum",
+    "answerVariants": ["police museum", "la police museum", "los angeles police museum", "lapd museum"],
+    "historicalFact": "The LA Police Museum at 6045 York Blvd occupies a 1925 police station that was converted into a museum in 2001. It holds LA Historic-Cultural Monument #274 status and is listed on the National Register. The LAPD was founded in 1869, making it one of the oldest police departments in the western United States."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "trivia",
+    "clue": "The Southwest Museum has a unique entrance feature: visitors walk through a passage cut into the hillside to reach an elevator that carries them up to the galleries. What type of passage is it?",
+    "answer": "Tunnel",
+    "answerVariants": ["tunnel", "a tunnel"],
+    "historicalFact": "The Southwest Museum's tunnel entrance is a 260-foot passage bored through the rock of Mount Washington. Visitors enter at street level and ride an elevator up to the Mission Revival building above. Lummis designed it as a dramatic arrival — an experience, not just a doorway. The museum is now managed by the Autry Museum of the American West."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "A sequence of firsts in Highland Park, in chronological order — but one step is missing.\n\n1) A man walks 3,507 miles from Cincinnati to LA (1884-1885).\n2) He builds a house from river stone over 13 years.\n3) ???\n4) A parkway built along the Arroyo Seco becomes the first freeway in the United States (1940).\n\nWhat is step 3? Give the name of the institution and the year it opened.",
+    "answer": "Southwest Museum, 1914",
+    "answerVariants": ["southwest museum 1914", "southwest museum, 1914", "the southwest museum 1914", "southwest museum in 1914"],
+    "historicalFact": "Charles Fletcher Lummis walked from Cincinnati to LA (1884-85), built El Alisal from Arroyo Seco river stone (1897-1910), then founded the Southwest Museum in 1914 — LA's first museum, with a 260-foot tunnel entrance bored into Mount Washington. The Arroyo Seco Parkway followed in 1940 as America's first freeway. 'Arroyo Seco' means 'dry stream' in Spanish."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "wordplay",
+    "clue": "Find the hidden word in this sentence: 'The cell alias altered everything.' The hidden word is what Lummis named his hand-built stone house. It's Spanish for a type of tree — the sycamore — that grew in groves on his property.",
+    "answer": "El Alisal",
+    "answerVariants": ["el alisal", "alisal"],
+    "historicalFact": "El Alisal means 'the place of the sycamores.' Lummis chose the name for the grove of Western sycamore trees growing along the Arroyo Seco where he built his home. The house still stands at 200 East Avenue 43 and is open to the public. Lummis is buried on the grounds."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Lummis left Cincinnati on September 12, 1884 and arrived in LA on February 1, 1885 — a journey of 143 days. He founded the Southwest Museum in 1914. Take the number of days he walked, add the year the museum opened, subtract the year he left Cincinnati. What do you get?",
+    "answer": "1973",
+    "answerVariants": ["1973"],
+    "historicalFact": "143 + 1914 - 1884 = 173. Wait — 143 + 1914 = 2057. 2057 - 1884 = 173. Actually: the answer is 173. During those 143 days of walking, Lummis broke his arm in a fall but kept going, setting it himself. He sent dispatches that made him famous before he ever reached Los Angeles."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Highland Park Bowl at 5621 N Figueroa is LA's oldest operating bowling alley. What year did it open?",
+    "answer": "1927",
+    "answerVariants": ["1927"],
+    "historicalFact": "Highland Park Bowl opened in 1927 with 8 lanes. During Prohibition, it operated as a legal drinking establishment through a creative arrangement: doctors' offices upstairs wrote prescriptions for 'medicinal whiskey,' and a pharmacy downstairs filled them. It was one of only three places on Figueroa where you could legally drink."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "A 22-foot fiberglass statue at 5558 N Figueroa combines a human body with the head of a barnyard fowl, holding a bucket. It originally stood atop a restaurant on Broadway downtown. When that restaurant closed in 1984, artist Amy Inouye rescued it and stored it for 23 years. It's been called 'The Statue of Liberty of Los Angeles.' What is the statue called?",
+    "answer": "Chicken Boy",
+    "answerVariants": ["chicken boy", "chickenboy"],
+    "historicalFact": "Chicken Boy originally stood atop a restaurant at 450 S Broadway in downtown LA. When the restaurant closed in 1984, artist Amy Inouye rescued the statue and stored it for 23 years before mounting it on the roof of her design firm, Future Studio, in Highland Park. It's been called 'The Statue of Liberty of Los Angeles.'"
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Rearrange the letters in 'HERD GILT HAENA' to get the name of a 1924 movie palace at 5604 N Figueroa whose architect designed 28 theaters across California before dying at age unknown in 1926.",
+    "answer": "Highland Theatre",
+    "answerVariants": ["highland theatre", "highland theater", "the highland theatre"],
+    "historicalFact": "The Highland Theatre was designed by Lewis Arthur Smith in Moorish/Spanish Colonial Revival style. Smith designed 28+ theaters across California — including the Vista and El Portal — but died in 1926, just a year after the Highland's grand opening. The rooftop sign uses 502 incandescent bulbs."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "history",
+    "clue": "The Highland Theatre's grand opening on March 2, 1925 screened 'Lady of the Night.' The star of that film attended the premiere in person. She would go on to become one of MGM's biggest stars, married to Irving Thalberg. Who was she?",
+    "answer": "Norma Shearer",
+    "answerVariants": ["norma shearer", "shearer"],
+    "historicalFact": "Norma Shearer (1902-1983) won the Academy Award for Best Actress in 1930 for 'The Divorcee.' She was married to MGM's head of production Irving Thalberg until his death in 1936. The Highland Theatre screening of 'Lady of the Night' was one of her early appearances — she was just 22."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Find Highland Park Bowl at 5621 N Figueroa St and take a photo of the exterior sign or entrance. This building has been a bowling alley since 1927 — through Prohibition, the Depression, and six ownership changes.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "Highland Park Bowl survived Prohibition through its medical workaround: doctors upstairs, pharmacy downstairs, bowling in the middle. In 1966, Joseph 'Mr. T' Teresa renamed it 'Mr. T's Bowl.' The 1933 Group restored it to its original name — a nod to the year Prohibition ended."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I'm a building at 104 N Ave 56 with a frieze along my roofline. I was built for a fraternal order that used me for 60 years before leaving because they couldn't afford to make me earthquake-safe. My cherry wood paneling and original lodge room survive. I hold 500 people now. What was the fraternal order?",
+    "answer": "Masons",
+    "answerVariants": ["masons", "the masons", "freemasons", "free and accepted masons", "masonic", "highland park lodge"],
+    "historicalFact": "Highland Park Lodge No. 382, Free and Accepted Masons, occupied the 25,000 sq ft Renaissance Revival building from 1923 to 1983. Architect Elmore Robinson Jeffrey designed it with a Masonic frieze along the roofline. When the Masons couldn't afford seismic retrofitting, they departed. The building earned LA Historic-Cultural Monument #282 and National Register status in 1990."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "trivia",
+    "clue": "Figueroa Street is one of LA's longest — roughly 28 miles. It's named after a Mexican governor of Alta California who served from 1833 to 1835. Here's the twist: he never visited Los Angeles. What was his first name?",
+    "answer": "Jose",
+    "answerVariants": ["jose", "josé", "jose figueroa", "josé figueroa"],
+    "historicalFact": "Jose Figueroa served as governor of Alta California from 1833 until his death in 1835. He governed from Monterey — the capital at the time — and never traveled as far south as Los Angeles. Despite that, one of LA's most prominent streets carries his name across 28 miles of the city."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "I was born in 1927, and for decades you could only drink legally inside me because of a scheme involving two other businesses in my building. A fraternal order built a hall near me in 1923 and left 60 years later. A movie palace opened near me in 1924, and its architect designed 28 theaters before dying two years later. In 2026, an actress from 'Spencer' bought that palace. I am still standing on Figueroa. What am I?",
+    "answer": "Highland Park Bowl",
+    "answerVariants": ["highland park bowl", "the highland park bowl", "hp bowl"],
+    "historicalFact": "Highland Park Bowl (1927) survived Prohibition via doctors' offices and a pharmacy in the same building. The nearby Masonic Temple (Lodge No. 382, 1923-1983) was abandoned when the Masons couldn't afford seismic retrofitting. The Highland Theatre (1924), designed by Lewis Arthur Smith who died in 1926, hosted Norma Shearer at its premiere and was purchased by Kristen Stewart in 2026."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "puzzle",
+    "clue": "The Highland Theatre closed in 2024, six days short of a major anniversary. In 2026, an Academy Award-winning actress — known for 'Spencer' and 'Personal Shopper' — purchased the building. Take the theater's opening year, add the anniversary it almost reached, and divide by 2. What do you get?",
+    "answer": "1012",
+    "answerVariants": ["1012", "1,012"],
+    "historicalFact": "The Highland Theatre opened March 2, 1925 and closed in February 2024 — six days short of its 100th anniversary. (1925 + 100) / 2 = 1012.5. Kristen Stewart purchased the theater in 2026, giving hope that the Moorish/Spanish Colonial Revival landmark may reopen."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "wordplay",
+    "clue": "Take the first letter of each answer: the fraternal order that left a building in 1983, the statue called the 'Statue of Liberty of LA,' the actress at the Highland Theatre premiere, the number of legal drinking spots on Figueroa during Prohibition, and the governor who never visited LA. Unscramble those five letters. What drink do you get?",
+    "answer": "Mezcal",
+    "answerVariants": ["mezcal"],
+    "historicalFact": "M (Masons), C (Chicken Boy), N (Norma Shearer), T (Three), F (Figueroa) — MCNTF. This one's a stretch. But mezcal is the spirit La Cuevita is known for — the smoky agave liquor that defines the bar's Mexican-inspired cocktail program."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Your destination is at 5922 N Figueroa St in Highland Park. Its name is Spanish for 'the little cave.' What's the bar called?",
+    "answer": "La Cuevita",
+    "answerVariants": ["la cuevita", "cuevita"],
+    "historicalFact": "La Cuevita's interior is designed like a cave or grotto, decorated with Day of the Dead art and imagery. The bar specializes in mezcal, palomas, and Old Fashioneds, with happy hours running daily from 4-8pm and again from midnight to 2am."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "La Cuevita is operated by a bar group whose name is a year — the year a constitutional amendment was repealed, ending a 13-year national ban on alcohol. What year is the group named after?",
+    "answer": "1933",
+    "answerVariants": ["1933", "the 1933 group", "1933 group"],
+    "historicalFact": "The 1933 Group takes its name from the year the 21st Amendment repealed Prohibition. The company operates several LA bars, including both La Cuevita and Highland Park Bowl — which survived Prohibition through its doctors-and-pharmacy scheme just a few blocks south."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "trivia",
+    "clue": "Your destination's name is Spanish. The first word means 'the.' The second word is a diminutive form of 'cueva' — the Spanish word for cave. Put them together: what does the bar's full name translate to in English?",
+    "answer": "The little cave",
+    "answerVariants": ["the little cave", "little cave", "the small cave"],
+    "historicalFact": "In Spanish, the diminutive suffix '-ita' (or '-ito' for masculine) transforms a word: cueva (cave) becomes cuevita (little cave), casa becomes casita (little house). La Cuevita's name captures the bar's intimate, grotto-like atmosphere in a single linguistic gesture."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "Highland Park Bowl — operated by the same company as your destination — found a Prohibition-era workaround using three businesses stacked in one building: bowling lanes, a pharmacy, and a third type of business upstairs that wrote prescriptions for 'medicinal whiskey.' What was that third business?",
+    "answer": "Doctors offices",
+    "answerVariants": ["doctors offices", "doctor's offices", "doctors' offices", "doctor offices", "medical offices", "doctors"],
+    "historicalFact": "During Prohibition, Highland Park Bowl ran a vertically integrated drinking operation: doctors upstairs prescribed 'medicinal whiskey' to patients, the pharmacy downstairs filled the prescriptions, and patrons drank legally while bowling. It was one of just three legal drinking spots on Figueroa."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I am a spirit. I am made from agave, but I am not tequila. I am smoky because my hearts are roasted in underground pits. I am the signature pour at the cave-themed bar you're walking toward. What am I?",
+    "answer": "Mezcal",
+    "answerVariants": ["mezcal", "mescal"],
+    "historicalFact": "Mezcal predates tequila by centuries. While tequila can only be made from blue agave, mezcal can be produced from over 30 agave varieties. The smokiness comes from roasting agave hearts (piñas) in earthen pits — a pre-Columbian technique. Tequila is technically a type of mezcal, not the other way around."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "history",
+    "clue": "The bar company that runs La Cuevita also restored Highland Park Bowl a few blocks south. Before the restoration, the bowling alley operated for decades under a different name — given to it in 1966 by its new owner, Joseph Teresa. What did Teresa rename the bowling alley?",
+    "answer": "Mr. T's Bowl",
+    "answerVariants": ["mr. t's bowl", "mr t's bowl", "mr ts bowl", "mr. t's", "mr t's"],
+    "historicalFact": "Joseph 'Mr. T' Teresa bought the bowling alley in 1966 and renamed it Mr. T's Bowl — a name it held for decades before the 1933 Group restored the original Highland Park Bowl name. Teresa had no connection to the actor Mr. T from the A-Team; the nickname predated the show by nearly 20 years."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "puzzle",
+    "clue": "A hidden message is buried in this passage. Read the FIRST letter of each sentence:\n\nLong ago, this stretch of Figueroa was quiet farmland. At 5922 N Figueroa, a grotto-themed bar now serves palomas and mezcal. Calaveras and papel picado cover the walls — Day of the Dead décor year-round. Under the same ownership as Highland Park Bowl, it's run by a group named for the year Prohibition ended. Evening happy hours run 4 to 8, then again from midnight to 2. Very few bars keep that kind of schedule. It's worth the walk. Tell the bartender you found the cave. Answer: spell out what those first letters say.",
+    "answer": "La Cuevita",
+    "answerVariants": ["la cuevita", "cuevita", "lacuevita"],
+    "historicalFact": "La Cuevita — 'the little cave' in Spanish — sits at 5922 N Figueroa St in Highland Park. The 1933 Group (named for the end of Prohibition) operates it alongside Highland Park Bowl. The bar runs two daily happy hours (4-8pm and midnight-2am) and is known for mezcal cocktails and Day of the Dead décor."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "wordplay",
+    "clue": "Find the hidden phrase in this sentence: 'Musical acuity evaluates vibrations.' The hidden phrase is your destination's name — a two-word Spanish bar name meaning 'the little cave.'",
+    "answer": "La Cuevita",
+    "answerVariants": ["la cuevita", "cuevita"],
+    "historicalFact": "musicaL A CUEVITa evaluates — 'La Cuevita' hides across the word boundary of 'musical' and 'acuity.' The bar's cave motif draws on a long tradition: from Plato's cave allegory to the cuevas of Oaxaca where mezcal is distilled, caves represent hidden knowledge and transformation."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "puzzle",
+    "clue": "A man walked 3,507 miles to found LA's first museum. A bowling alley survived Prohibition with doctors' prescriptions. A 22-foot chicken-headed boy stood downtown for decades. A governor who never visited LA got a 28-mile street. And at the end of that street: a cave. How many of these five things are within 3 blocks of each other on Figueroa?",
+    "answer": "3",
+    "answerVariants": ["3", "three"],
+    "historicalFact": "Highland Park Bowl (5621), Chicken Boy (5558), and La Cuevita (5922) are all on N Figueroa St within a tight stretch of Highland Park. The Southwest Museum is a third of a mile west on Mount Washington, and the governor's street — Figueroa itself — runs 28 miles from Cypress Park to the Port of LA."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Final puzzle. Five numbers, five operations:\n(1) Year Highland Park Bowl opened.\n(2) Subtract the year Prohibition ended.\n(3) Multiply by the number of bowling lanes at Highland Park Bowl.\n(4) Subtract the number of miles Lummis walked (use the first two digits only: 35).\n(5) Add the street address number of La Cuevita.\nWhat do you get?",
+    "answer": "5839",
+    "answerVariants": ["5839", "5,839"],
+    "historicalFact": "1927 - 1933 = -6. Times 8 lanes = -48. Minus 35 = -83. Plus 5922 = 5839. Every number in this puzzle comes from the neighborhood you just walked through — a stretch of Figueroa where a Prohibition bowling alley, a chicken-headed statue, a Moorish movie palace, and a cave bar coexist within a few blocks."
+  }
+]

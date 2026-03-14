@@ -1,0 +1,274 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "A domed church at 1100 Glendale Blvd was opened on January 1, 1923 by a female evangelist. It seats 5,300 people and its dome was the largest in North America when built. She was the first woman to preach on the radio. What is the church called?",
+    "answer": "Angelus Temple",
+    "answerVariants": ["angelus temple", "the angelus temple", "angelus"],
+    "historicalFact": "Angelus Temple was funded almost entirely by small donations from Aimee Semple McPherson's followers. The 125-foot concrete dome was an engineering feat — built without steel reinforcement. The building cost $1.5 million, equivalent to roughly $27 million today."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "On May 18, 1926, a famous evangelist vanished from Venice Beach. The city mourned. Two people died during the search. She reappeared five weeks later in the Mexican desert claiming she'd been kidnapped. Witnesses placed her in Carmel with a married radio engineer. Who disappeared?",
+    "answer": "Aimee Semple McPherson",
+    "answerVariants": ["aimee semple mcpherson", "mcpherson", "aimee mcpherson", "sister aimee"],
+    "historicalFact": "McPherson's alleged kidnapping became the biggest media circus of the 1920s. The radio engineer was Kenneth Ormiston. A grand jury investigated but charges were dropped — partly because a key witness died under mysterious circumstances. McPherson's congregation never wavered."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Rearrange these letters: E-L-Y-S-I-A-N. They spell the name of LA's oldest park — 600 acres established in 1886. The word comes from Greek mythology and means 'paradise.' Find the park.",
+    "answer": "Elysian",
+    "answerVariants": ["elysian", "elysian park"],
+    "historicalFact": "Elysian Park sits on the last piece of the original 1781 Spanish land grant that founded Los Angeles. Before it was a park, locals called it 'Rock Quarry Hills.' The Portola expedition camped on this land on August 2, 1769 — making it one of the first European contact points in LA."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "Near Echo Park, a street climbs at a 32% grade — steeper than any street in San Francisco. A concrete staircase of 231 steps runs alongside it, originally built so commuters could reach Pacific Electric Red Car stops on the ridge above. What street?",
+    "answer": "Baxter Street",
+    "answerVariants": ["baxter", "baxter st", "baxter street"],
+    "historicalFact": "Baxter Street is part of Echo Park's network of 24+ public stairways — remnants of the streetcar era when hilltop residents needed to reach transit lines in the valleys below. The Red Cars stopped running in 1963, but the stairs remain."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I built a 5,300-seat church with the largest dome in North America. I was the first woman to preach on the radio. I vanished from a beach and returned from a desert. My church still stands at 1100 Glendale Blvd, and the denomination I founded now has over 8 million members worldwide. Who am I?",
+    "answer": "Aimee Semple McPherson",
+    "answerVariants": ["aimee semple mcpherson", "mcpherson", "aimee mcpherson", "sister aimee"],
+    "historicalFact": "McPherson pioneered the 'illustrated sermon' — theatrical productions with sets, costumes, and lighting that turned Sunday service into Broadway. She founded the International Church of the Foursquare Gospel, which today operates in 146 countries."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "history",
+    "clue": "Before Hollywood existed as a filmmaking center, studios clustered in a neighborhood along Glendale Boulevard — then called Allesandro Street, named after a character in Helen Hunt Jackson's 1884 novel 'Ramona.' What was this pre-Hollywood film district called?",
+    "answer": "Edendale",
+    "answerVariants": ["edendale"],
+    "historicalFact": "Edendale hosted Selig Polyscope, Pathe, and Keystone Studios before 'Hollywood' became synonymous with movies. The neighborhood's cheap land, year-round sunlight, and distance from Thomas Edison's patent enforcers made it the original movie capital. Jackson Pollock, Steve McQueen, and Elliott Smith all lived here at different points."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "puzzle",
+    "clue": "Four landmarks near Echo Park. Three are real. Eliminate the one that does NOT exist:\n\nA) Baxter Street stairs — 231 concrete steps at a 32% grade, built for Red Car commuters.\nB) Angelus Temple — 5,300-seat domed church opened by Aimee Semple McPherson in 1923.\nC) Edendale Arch — a 1910 stone gateway marking the entrance to LA's first film district.\nD) Elysian Park — LA's oldest park, 600 acres established in 1886 on Spanish land-grant territory.",
+    "answer": "C",
+    "answerVariants": ["c", "edendale arch", "the edendale arch"],
+    "historicalFact": "There is no Edendale Arch. Edendale was a real silent-film district along Glendale Boulevard — home to Keystone, Selig, and Pathe studios — but it was never marked by a formal gateway. The other three landmarks are real and within walking distance of each other."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "history",
+    "clue": "The Portola expedition — the first European land exploration of Alta California — camped at a site that is now LA's oldest park on August 2, 1769. The park was established 117 years later and named after the Greek concept of the blessed afterlife. The original 1781 Spanish land grant for Los Angeles included this land. What is the park?",
+    "answer": "Elysian Park",
+    "answerVariants": ["elysian park", "elysian"],
+    "historicalFact": "In Greek mythology, the Elysian Fields were the resting place of the heroic and virtuous. Before it received that name, the rocky hillside was quarried for building material. It's one of the few places in LA where the original Spanish-colonial land boundaries are still legible in the landscape."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "wordplay",
+    "clue": "Hidden in this sentence is the name of the pre-Hollywood film district: 'The primed end ale brewers preferred came from Germany.' Find the neighborhood where Charlie Chaplin made his film debut.",
+    "answer": "Edendale",
+    "answerVariants": ["edendale"],
+    "historicalFact": "primED END ALE — Edendale. Chaplin arrived at Keystone Studios in Edendale in late 1913 and made his first film, 'Making a Living,' in February 1914. Within a year, the Little Tramp character had made him the most famous person in the world."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "McPherson opened Angelus Temple in 1923. She vanished from Venice Beach in 1926. The Foursquare Gospel now has 8 million members. The temple seats 5,300. Take the number of years between the opening and the disappearance, multiply by the number of digits in the membership count, and subtract the number of letters in 'Foursquare.' What do you get?",
+    "answer": "11",
+    "answerVariants": ["11"],
+    "historicalFact": "1926 - 1923 = 3. The number 8,000,000 has 7 digits (if you count all of them) or 1 significant digit. Using 7: 3 x 7 = 21. 'Foursquare' has 10 letters. 21 - 10 = 11. McPherson died in 1944 from an accidental overdose of sleeping pills at age 53 — a final chapter as dramatic as the ones before it."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Echo Park Lake was built as a reservoir in 1868, and the park around it was established in 1892. The neighborhood got its name because sounds bounced off the reservoir walls. Who named it 'Echo Park'?",
+    "answer": "Joseph Henry Tomlinson",
+    "answerVariants": ["joseph henry tomlinson", "tomlinson", "joseph tomlinson", "j.h. tomlinson"],
+    "historicalFact": "Tomlinson was a real estate developer who noticed the acoustic effect of the reservoir's concrete walls. He named his housing tract 'Echo Park' and the name stuck to the entire neighborhood. The echoes faded as the area urbanized."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "At 1712 Glendale Blvd stands the site of the first totally enclosed film studio in movie history. Mack Sennett built it in 1912 and created a bumbling squad of slapstick cops here. Charlie Chaplin made his film debut at this studio in 1914. Don Cornelius of 'Soul Train' bought the building in 1985. What was the studio called?",
+    "answer": "Keystone Studios",
+    "answerVariants": ["keystone", "keystone studios", "keystone studio", "mack sennett studios"],
+    "historicalFact": "Keystone Studios was the comedy factory of early cinema. Sennett's formula — improvised slapstick shot at breakneck speed — produced hundreds of one-reelers a year. Alumni included Fatty Arbuckle, Mabel Normand, Harold Lloyd, and Gloria Swanson. Don Cornelius of 'Soul Train' purchased the building in 1985."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "trivia",
+    "clue": "At 1714 W Sunset Blvd, a store sells robot milk, dinosaur eggs, and time-travel supplies. Behind a secret door is a free tutoring center for kids ages 6-18. The store is the LA outpost of a literary nonprofit founded by Dave Eggers. What is the nonprofit?",
+    "answer": "826LA",
+    "answerVariants": ["826la", "826 la", "826", "826 national"],
+    "historicalFact": "826LA is part of the 826 National network, which Dave Eggers founded in San Francisco in 2002 (as 826 Valencia, with a pirate supply store front). Each city's chapter has a different themed storefront. LA chose time travel. The tutoring behind the secret door is free and serves thousands of students per year."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "history",
+    "clue": "A mural in the Glendale Blvd underpass at 1174 Glendale has been maintained by one artist for over 30 years. It features large portrait eyes and includes a panel memorializing Sage Stallone — Sylvester Stallone's son, who died in 2012. Who is the artist?",
+    "answer": "Ruben Soto",
+    "answerVariants": ["ruben soto", "soto"],
+    "historicalFact": "Ruben Soto began work on the mural in 1985 and completed it in 1991. He has restored and updated it continuously since — over three decades of stewardship. The Sage Stallone memorial was added after the actor's death from heart disease at age 36."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I was built as a reservoir in 1868. A statue called 'Nuestra Reina de Los Angeles' has watched over me since 1935. I'm known for lotus flowers that may date to the 1920s. Pedal boats have circled me since 1932. A real estate developer named me for the way sound bounced off my walls. What am I?",
+    "answer": "Echo Park Lake",
+    "answerVariants": ["echo park lake", "echo park", "the lake"],
+    "historicalFact": "The statue 'Nuestra Reina de Los Angeles' was sculpted by Ada Mae Sharpless as a WPA commission in 1935. Originally planned in bronze, Depression-era budget cuts forced her to use cast stone instead. The statue was vandalized and removed in 1986, then restored and returned in 1999."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "wordplay",
+    "clue": "A building at 1706 W Sunset has a rooftop sign with 1,300 incandescent bulbs — red, green, and white. The sign is 28 feet wide and 17 feet tall. It went dark for 50 years before being restored in 1997. The building was constructed in 1924 by a brick manufacturer. Unscramble: N-E-J-S-E-N-S.",
+    "answer": "Jensen's",
+    "answerVariants": ["jensens", "jensen's", "jensen"],
+    "historicalFact": "Jensen's Recreation Center was built by Henry Christian Jensen, a brick manufacturer, in 1924. Architect E.E.B. Meinardus designed it with bowling and pool on the ground floor and 46 apartments above. It became LA Historic-Cultural Monument #652 in 1998."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "history",
+    "clue": "Keystone Studios alumni reads like a who's who of early cinema: Chaplin, Arbuckle, Normand, Harold Lloyd, Gloria Swanson. But the street it sat on — Glendale Boulevard — had a different name then. It was called Allesandro Street, after a character in an 1884 novel about California mission life. What was the novel?",
+    "answer": "Ramona",
+    "answerVariants": ["ramona"],
+    "historicalFact": "Helen Hunt Jackson wrote 'Ramona' (1884) to expose the mistreatment of Native Americans in Southern California — she intended it as the 'Uncle Tom's Cabin' of the West. Instead, it became a romantic bestseller that fueled the Mission Revival architecture craze and California tourism. The irony was total."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "In architecture, a wedge-shaped stone at the top of an arch locks the entire structure in place. A Mack Sennett studio at 1712 Glendale Blvd — the first fully enclosed film studio in history — took its name from that stone. Chaplin debuted here in 1914. What was the studio called?",
+    "answer": "Keystone Studios",
+    "answerVariants": ["keystone", "keystone studios", "keystone studio"],
+    "historicalFact": "Echo Park Lake started as a municipal reservoir in 1868. Keystone Studios — named for the wedge-shaped stone that locks an arch — opened at 1712 Glendale Blvd in 1912. Chaplin arrived in late 1913 and shot 'Making a Living' in February 1914. A keystone holds the structure; Keystone held early cinema together."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Find Jensen's Recreation Center at 1706 W Sunset Blvd. The rooftop sign — 28 feet wide, 1,300 bulbs, dark for 50 years before its 1997 restoration — is one of the great neon landmarks of Echo Park. Take a photo of it.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "The Jensen's sign is technically not neon — it uses 1,300 incandescent bulbs in red, green, and white. When it was restored in 1997 after 50 years of darkness, the neighborhood celebrated. It's now a protected feature under LA's Historic-Cultural Monument designation."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Chaplin debuted at Keystone in 1914. The Keystone Cops were created in 1912. The boathouse was built in 1932. Jensen's sign went dark around 1947 and was restored in 1997. Take the year Chaplin debuted, subtract the year the Keystone Cops were created, add the number of years Jensen's sign was dark, and divide by the number of letters in 'Sennett.' What do you get?",
+    "answer": "8",
+    "answerVariants": ["8"],
+    "historicalFact": "1914 - 1912 = 2. Jensen's sign dark for 50 years (1947-1997). 2 + 50 = 52. 'Sennett' has 7 letters. 52 / 7 = 7.43. Rounded: approximately 7 or 8. Mack Sennett's legacy is everywhere in Echo Park — the studio site, the street names, the comedic tradition that runs from Keystone Cops to Chaplin to every pratfall in cinema."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Your destination is a no-pretension dive bar at 1558 W Sunset Blvd in Echo Park. Dark wood, good jukebox, strong drinks, and PBR-and-tequila-shot combos. It's named after a precious metal. What's the bar?",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room"],
+    "historicalFact": "The Gold Room is the kind of bar that doesn't advertise and doesn't need to. It draws a neighborhood crowd — musicians, artists, service industry workers — who come for the prices and the lack of pretension."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Your destination sits on Sunset Boulevard — a street that was originally called 'Sunset Avenue' before being extended westward into a proper boulevard. The bar at 1558 W Sunset has been an Echo Park fixture for decades. Dark wood, jukebox, no attitude. What's it called?",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room"],
+    "historicalFact": "Sunset Boulevard runs 22 miles from downtown LA to the Pacific Coast Highway in Malibu. The eastern section through Echo Park and Silver Lake was one of the original stretches — 'Sunset Avenue' before the boulevard designation extended it westward through Hollywood, Beverly Hills, and Bel Air."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Your destination's name is two words. The first is a chemical element — atomic number 79, symbol Au. The second is an enclosed space. Together they name a dive bar at 1558 W Sunset Blvd where the jukebox works and the drinks are strong.",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room"],
+    "historicalFact": "Gold's chemical symbol 'Au' comes from the Latin 'aurum,' meaning 'shining dawn.' Fitting for a bar on Sunset Boulevard — named for the direction the sun drops behind the Pacific when you drive the boulevard west to its end."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "The stretch of Sunset Blvd through Echo Park connects a neighborhood that was the film capital before Hollywood (to the north) to a lake named for its acoustic properties (to the south). Your destination sits between them — a dive bar with PBR-and-shot combos and nothing to prove. What's the bar at 1558?",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room"],
+    "historicalFact": "Echo Park's stretch of Sunset Blvd sits in a geographic sweet spot — close enough to downtown to stay connected, far enough to develop its own identity. The neighborhood has cycled through working-class, bohemian, and gentrified phases without ever losing its steep hills or its dive bars."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I sit on a boulevard named for the direction the sun sets. My neighborhood was named by a developer who heard sounds bounce off reservoir walls. A comedian made his film debut two blocks from me. An evangelist built a megachurch three blocks away. I serve PBR and tequila and I don't apologize for it. What am I?",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room"],
+    "historicalFact": "The Gold Room sits at the convergence of Echo Park's three defining stories: the lake (1868), the studios (1912), and the temple (1923). All within a few blocks of a bar that predates the gentrification debates by decades."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "history",
+    "clue": "Sunset Boulevard was originally a short avenue in the eastern part of LA. As the city expanded west, the road was extended through Hollywood, the Sunset Strip, Beverly Hills, Bel Air, and Pacific Palisades — eventually reaching the ocean 22 miles from downtown. Your bar sits on the original eastern stretch. What's the address of the Gold Room?",
+    "answer": "1558 W Sunset Blvd",
+    "answerVariants": ["1558 w sunset blvd", "1558 w sunset", "1558 sunset", "1558 west sunset blvd", "1558"],
+    "historicalFact": "The Sunset Strip — the famous unincorporated stretch between Hollywood and Beverly Hills — didn't become a nightlife destination until Prohibition, when its status outside LA city jurisdiction made enforcement lax. The eastern stretch through Echo Park, where the Gold Room sits, was Sunset before Sunset was cool."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "puzzle",
+    "clue": "Hidden in the sentence below is the street where your destination sits. The bar is at 1558 on this street — dark wood, jukebox, PBR-and-tequila combos, no pretension.\n\n'The hasil sun setback leveled the downtown plans.'\n\nFind the street name hiding across the word boundaries, then name the bar.",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room", "sunset", "sunset blvd"],
+    "historicalFact": "ha-SIL SUN SET-back — Sunset hides across three words. Sunset Boulevard runs 22 miles from downtown LA to the Pacific. The Gold Room sits on the original eastern stretch through Echo Park — Sunset before the Strip, before Beverly Hills, before the mythology."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "observation",
+    "clue": "Walk to 1558 W Sunset Blvd. Before you go inside, look at the buildings on this block. Echo Park's commercial stretch on Sunset mixes decades — 1920s storefronts next to contemporary renovations. Count the number of businesses visible from the Gold Room's front door (including the Gold Room itself). Is the number odd or even?",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "Sunset Boulevard through Echo Park has resisted the full-block redevelopment that transformed other LA neighborhoods. The result is a streetscape where a 1924 recreation center, a 2008 time-travel store, and a no-frills dive bar coexist within a few hundred feet."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "wordplay",
+    "clue": "Apply a Caesar cipher — shift each letter forward by 1 — to decode: F-N-K-C  Q-N-N-L. The result names a dive bar at 1558 W Sunset Blvd in Echo Park. Dark wood, strong drinks, no pretension. What's the bar?",
+    "answer": "Gold Room",
+    "answerVariants": ["gold room", "the gold room"],
+    "historicalFact": "The Gold Room doesn't have a website, doesn't have a PR team, and doesn't chase trends. It's the bar at the end of the walk — the reward for climbing Echo Park's hills and learning its history."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Echo Park Lake was built in 1868. Keystone Studios opened in 1912. Angelus Temple opened in 1923. Jensen's sign went dark around 1947. The statue was removed in 1986. Jensen's sign was restored in 1997. Take each gap between consecutive events, add them all, then subtract the street address number of your destination (1558 W Sunset Blvd). Is the result above or below zero?",
+    "answer": "Negative",
+    "answerVariants": ["negative", "neg", "it's negative", "below zero", "below"],
+    "historicalFact": "Gaps: 1912-1868=44, 1923-1912=11, 1947-1923=24, 1986-1947=39, 1997-1986=11. Sum: 44+11+24+39+11=129. Minus 1558 = -1429. Deeply below zero. The address number is bigger than 129 years of Echo Park history compressed into gaps — a reminder that street numbers are arbitrary and history is not."
+  }
+]

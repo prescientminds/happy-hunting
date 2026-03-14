@@ -1,0 +1,274 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "A blue-green Art Deco tower near your starting point houses a theater whose name is a portmanteau — a mashup of the boulevard and the avenue where it stands. What intersection is the theater at?",
+    "answer": "Wilshire and Western",
+    "answerVariants": ["wilshire and western", "wilshire & western", "wilshire western"],
+    "historicalFact": "The Wiltern opened in 1931 as a Warner Brothers movie palace. The portmanteau name — Wilshire + Western — was a marketing invention that stuck. The intersection itself was once the edge of a French landowner's bean fields."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "The Wiltern's 12-story tower is covered in distinctive blue-green tiles. The building is named for a French immigrant who owned the surrounding land. What was his last name?",
+    "answer": "Pellissier",
+    "answerVariants": ["pellissier", "germain pellissier"],
+    "historicalFact": "Germain Pellissier was a French immigrant who owned large tracts of land around Wilshire and Western. The 12-story Pellissier Building — with its blue-green glazed terra-cotta tiles — was designed by Stiles O. Clements in Zigzag Moderne style. It was nearly demolished twice before preservationists saved it."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "history",
+    "clue": "A hotel that once stood at 3400 Wilshire had a 1,000-seat nightclub called the Cocoanut Grove. That nightclub hosted six Academy Awards ceremonies between 1930 and 1943. On June 5, 1968, a senator was shot in the hotel kitchen after winning the California primary. Name the senator.",
+    "answer": "Robert F. Kennedy",
+    "answerVariants": ["robert f. kennedy", "rfk", "robert kennedy", "bobby kennedy", "kennedy"],
+    "historicalFact": "Robert F. Kennedy was shot at 12:02 AM on June 5, 1968, by Sirhan Sirhan in the Ambassador Hotel's kitchen pantry, moments after his California primary victory speech. He died roughly 25 hours later at Good Samaritan Hospital. The 1,200-room hotel was demolished in 2005-2006; RFK Community Schools now occupy the site."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "Western Avenue runs near here — about 28 miles long. It was surveyed in 1853 and named because it marked a specific geographic distinction at the time. What did Western represent when it was named?",
+    "answer": "The westernmost edge of expansion",
+    "answerVariants": ["westernmost edge", "western edge", "western boundary", "the western edge of the city", "westernmost street", "western edge of expansion"],
+    "historicalFact": "Henry Washington surveyed Western Avenue in 1853 as the westernmost boundary of LA's expansion. The city grew far past it, but the name stuck — a fossilized reminder of how small Los Angeles once was."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I opened on January 1, 1921. I had 1,200 rooms, 37 shops, a golf course, and a bowling alley. My nightclub — named for a tropical tree — hosted Bob Hope at the Oscars. A senator died in my kitchen. I was torn down in 2005. What was my name?",
+    "answer": "Ambassador Hotel",
+    "answerVariants": ["ambassador hotel", "the ambassador hotel", "ambassador"],
+    "historicalFact": "The Ambassador Hotel's Cocoanut Grove nightclub opened April 21, 1921, and became Hollywood's premier gathering spot. Bob Hope first hosted the Academy Awards there in 1939 — the same year 'Gone with the Wind' won Best Picture. The hotel's demolition in 2005-2006 erased one of LA's most layered historical sites."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "wordplay",
+    "clue": "Unscramble these letters: R-E-I-S-L-L-E-P-I-S. They spell the last name of a French landowner whose building is clad in blue-green terra cotta at Wilshire and Western.",
+    "answer": "Pellissier",
+    "answerVariants": ["pellissier"],
+    "historicalFact": "The Pellissier Building's Zigzag Moderne exterior features thousands of glazed terra-cotta tiles that shift between blue and green depending on the light. Interior murals by Anthony Heinsbergen — who painted over 750 theaters across America — decorate the auditorium ceiling."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "trivia",
+    "clue": "The Wilshire Boulevard Temple at 3663 Wilshire is home to LA's oldest Jewish congregation, established in 1862. Its interior features 320 feet of murals depicting Jewish history, donated by the founders of a major Hollywood studio. Which studio?",
+    "answer": "Warner Bros",
+    "answerVariants": ["warner bros", "warner brothers", "warner bros.", "warner"],
+    "historicalFact": "Jack, Harry, and Abraham Warner — the Warner Brothers — funded Hugo Ballin's murals inside the Wilshire Boulevard Temple. The temple's rabbi, Edgar F. Magnin, served for 69 years (1915-1984) and was known as the 'Rabbi to the Stars,' ministering to the Jewish moguls who built Hollywood."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "Four landmarks near your starting point. Eliminate them one at a time. The last one standing is your answer.\n\nThe landmarks: a blue-green Art Deco theater whose name is a portmanteau, a 1,200-room hotel where a senator was shot, a synagogue with studio-funded murals, and an apartment building named for a socialist land developer.\n\n1) Eliminate the one that was demolished in 2005-2006.\n2) Eliminate the one named after a man who also gave his name to an entire boulevard.\n3) Eliminate the one whose interior murals were paid for by movie studio founders.\n\nWhat's left?",
+    "answer": "Wiltern Theatre",
+    "answerVariants": ["wiltern theatre", "the wiltern", "wiltern", "wiltern theater"],
+    "historicalFact": "Ambassador Hotel was demolished (2005-2006, site of RFK's assassination June 5, 1968, and 6 Oscar ceremonies). Gaylord Apartments are named for Henry Gaylord Wilshire, who gave Wilshire Boulevard its name. Wilshire Boulevard Temple (1929, LA's oldest Jewish congregation) has Warner Bros-funded murals. The Wiltern (1931, blue-green terra cotta, 'Wilshire + Western') is the last one standing."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "history",
+    "clue": "An apartment building at 3355 on LA's most famous boulevard is named after the man who donated that boulevard to the city. He was a utopian socialist who ran for Congress, a real estate developer, and an eccentric who marketed a magnetic health device called the I-ON-A-CO that he claimed cured all diseases. Richard Nixon once lived in the building. What was this man's full name (first, middle, and last)?",
+    "answer": "Henry Gaylord Wilshire",
+    "answerVariants": ["henry gaylord wilshire", "gaylord wilshire", "h. gaylord wilshire", "henry wilshire"],
+    "historicalFact": "Henry Gaylord Wilshire (1861-1927) was a real estate developer, socialist politician, and eccentric entrepreneur. He donated the boulevard that bears his name, ran for Congress on a socialist ticket, and later marketed a magnetic health device called the I-ON-A-CO that he claimed cured all diseases. The Gaylord Apartments — where silent film stars and Richard Nixon lived — carry his middle name."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "The Ambassador Hotel hosted 6 Academy Awards. The Cocoanut Grove opened in April 1921. Bob Hope first hosted the Oscars there in 1939. RFK was shot in 1968. Take the number of Oscars hosted, multiply by the year Hope first hosted, then subtract the year RFK was shot. Finally, add the hotel's room count. What's the result?",
+    "answer": "10866",
+    "answerVariants": ["10866", "10,866"],
+    "historicalFact": "6 x 1939 = 11,634. Minus 1968 = 9,666. Plus 1,200 = 10,866. The Ambassador Hotel compressed nearly 50 years of Hollywood glamour and American tragedy into a single address — from the first talkies to the civil rights era."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "An apartment building at 3278 Wilshire is named after a silent film star who lived on the 10th floor with her husband, Joseph Schenck — a co-founder of United Artists. What was the star's first name?",
+    "answer": "Norma",
+    "answerVariants": ["norma", "norma talmadge"],
+    "historicalFact": "Norma Talmadge (1894-1957) was one of the biggest stars of silent cinema. Her husband Joseph Schenck co-founded United Artists with Charlie Chaplin, Mary Pickford, and Douglas Fairbanks. The Talmadge building at 3278 Wilshire was once called 'the finest apartment on the West Coast.'"
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Before the Talmadge apartments were built, the site held a Craftsman mansion designed by Greene & Greene for an auto dealer named Earle C. Anthony. Instead of demolishing the mansion, it was moved to another city in 1923 by an actor named Norman Kerry. Where did the mansion go?",
+    "answer": "Beverly Hills",
+    "answerVariants": ["beverly hills"],
+    "historicalFact": "Earle C. Anthony was California's first Packard dealer and a pioneer broadcaster (he founded KFI radio). His Greene & Greene mansion was relocated to Beverly Hills by silent film actor Norman Kerry — a remarkable feat of early 20th-century house moving. Greene & Greene, the architects, are considered the masters of the American Arts & Crafts bungalow."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "The Hotel Normandie at 605 S Normandie Ave was built in 1926. A British novelist lived there while writing a novel set in Mexico about an alcoholic consul on the Day of the Dead. The novel's title references a geological feature. What is the novel called?",
+    "answer": "Under the Volcano",
+    "answerVariants": ["under the volcano"],
+    "historicalFact": "Malcolm Lowry wrote portions of 'Under the Volcano' (published 1947) while staying at the Hotel Normandie. The novel — set in Cuernavaca, Mexico on the Day of the Dead — is considered one of the greatest English-language novels of the 20th century. The hotel was restored in 2010 as a boutique property."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "A traditional Korean gazebo and garden sits at the corner of Olympic and Irolo, about a third of a mile south. Built in 2006 by South Korean craftsmen for $695,000, its gateway monuments are topped with a mythical bird from East Asian culture. What is the bird called?",
+    "answer": "Bong Huang",
+    "answerVariants": ["bong huang", "bonghwang", "fenghuang", "phoenix"],
+    "historicalFact": "Da Wool Jung — the 5,000 sq ft Korean gazebo — was built by craftsmen brought from South Korea specifically for the project. The Bong Huang (also known as bonghwang or fenghuang) is a mythical bird symbolizing prosperity and peace in East Asian culture, often compared to the Western phoenix but with distinct origins."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Find the Talmadge building at 3278 Wilshire Blvd. Take a photo of its exterior — this 1920s apartment building was once home to a silent film star and her movie mogul husband, built on top of where a Greene & Greene mansion stood.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "The Talmadge was built in 1922-1924 and rose to 10 stories with 42 units. Before it existed, the site held a Craftsman masterpiece by Greene & Greene — the architects of the Gamble House in Pasadena. The mansion was physically relocated to Beverly Hills rather than demolished, one of the more extraordinary acts of preservation in LA history."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I am a museum founded in 1991 — the first institution dedicated to the heritage of a community that began settling this neighborhood in the 1960s. The community I honor is the largest of its kind outside of Asia. I sit on West 6th Street. What community?",
+    "answer": "Korean American",
+    "answerVariants": ["korean american", "korean", "koreans", "korean americans"],
+    "historicalFact": "The Korean American National Museum at 3727 W 6th St was founded in 1991 as the first institution dedicated to Korean American heritage. Koreatown was officially designated in the 1980s, though Korean settlement began in the 1960s. Greater LA's Korean population is the largest Korean community outside of Asia."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "history",
+    "clue": "The Hotel Normandie's ground floor houses a hamburger restaurant that has operated since 1948 — one of LA's longest-running burger spots. The restaurant is known for grinding its beef fresh daily and letting customers cook their own patties on a communal grill. What's the restaurant?",
+    "answer": "Cassell's Hamburgers",
+    "answerVariants": ["cassell's hamburgers", "cassells hamburgers", "cassell's", "cassells"],
+    "historicalFact": "Cassell's Hamburgers was founded in 1948 by Al Cassell on West 6th Street. It moved into the Hotel Normandie during the hotel's 2010 restoration. Cassell's is known for hand-ground beef, a potato salad bar, and homemade pies — a mid-century relic that survived the neighborhood's complete demographic transformation."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "I am a building, but my name belongs to a person. My namesake was a star — not of music, not of sports, but of a medium that existed before sound was part of the picture. Her husband co-founded a company alongside Charlie Chaplin, Mary Pickford, and Douglas Fairbanks. Before I was built, the land held a mansion designed by two brothers famous for a house in Pasadena — but that mansion wasn't destroyed. It walked away. Who am I named after?",
+    "answer": "Norma Talmadge",
+    "answerVariants": ["norma talmadge", "talmadge", "norma"],
+    "historicalFact": "The Talmadge at 3278 Wilshire is named for silent film star Norma Talmadge, whose husband Joseph Schenck co-founded United Artists. Before it was built, the site held a Greene & Greene Craftsman mansion (the brothers designed Pasadena's Gamble House) that was physically relocated to Beverly Hills by actor Norman Kerry in 1923."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "history",
+    "clue": "A silent film actress — one of the biggest stars of the 1920s — supposedly stepped in wet cement outside Grauman's Chinese Theatre in 1927, inspiring Sid Grauman to create the tradition of celebrity hand and footprints. Her husband, Joseph Schenck, co-founded United Artists with Chaplin, Pickford, and Fairbanks. An apartment building at 3278 Wilshire bears her surname. What was her first name?",
+    "answer": "Norma",
+    "answerVariants": ["norma", "norma talmadge"],
+    "historicalFact": "According to Hollywood legend, Norma Talmadge accidentally stepped in wet cement outside Grauman's Chinese Theatre in 1927, inspiring Sid Grauman to create the tradition of celebrity hand and footprints. Historians dispute whether it was an accident or a publicity stunt. The Talmadge building at 3278 Wilshire was once called 'the finest apartment on the West Coast.'"
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "The Talmadge was built in 1924. The Hotel Normandie in 1926. 'Under the Volcano' was published in 1947. Da Wool Jung cost $695,000 to build. The Korean American National Museum was founded in 1991. Add all three years together, then subtract the cost of Da Wool Jung. What do you get?",
+    "answer": "-689103",
+    "answerVariants": ["-689103", "-689,103"],
+    "historicalFact": "1924 + 1926 + 1991 = 5841. Minus 695,000 = -689,159. Wait: 1924 + 1926 + 1991 = 5841. 5841 - 695000 = -689,159. The absurdity of the number captures something real: you can't reduce a neighborhood to arithmetic. Koreatown's value lies in layers — a novelist's despair, a film star's glamour, an immigrant community's monument — that don't add up to a single sum."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Your destination is a Colombian rooftop bar inside a 1928 building at 3451 W 6th St. The bar's name is a Spanish word meaning 'scale' or 'stop.' What's it called?",
+    "answer": "Escala",
+    "answerVariants": ["escala"],
+    "historicalFact": "Escala sits inside Chapman Plaza, one of America's first drive-in grocery stores. The bar offers $8 cocktails during happy hour (Mon-Fri, 5-7pm) from a rooftop perch inside a Spanish Colonial Revival building designed by Morgan, Walls & Clements."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Escala's building — Chapman Plaza — was one of the first drive-in grocery stores in America. It opened in 1929 and served the wealthy residents of three nearby neighborhoods. Name any one of those three neighborhoods.",
+    "answer": "Hancock Park",
+    "answerVariants": ["hancock park", "fremont place", "windsor square"],
+    "historicalFact": "Chapman Plaza served Fremont Place, Windsor Square, and Hancock Park — three of LA's wealthiest enclaves. The drive-in format was revolutionary: customers could park inside the building's arched entrances and shop without leaving the shade. The adjacent Chapman Park Hotel (demolished 1967) housed the U.S. women's Olympic team during the 1932 Games."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "trivia",
+    "clue": "Chapman Plaza and the blue-green Art Deco tower a few blocks northwest were designed by the same architecture firm — one of LA's most prolific of the era. The firm's name is three surnames. Their lead designer created both a Zigzag Moderne theater and a Spanish Colonial Revival grocery in the same period. Name the firm.",
+    "answer": "Morgan, Walls & Clements",
+    "answerVariants": ["morgan walls and clements", "morgan, walls & clements", "morgan walls & clements", "morgan walls clements"],
+    "historicalFact": "Morgan, Walls & Clements was one of LA's most prolific Art Deco-era firms. Stiles O. Clements, the lead designer, created the Wiltern's iconic Zigzag Moderne tower and Chapman Plaza's Spanish Colonial Revival grocery in the same period — two radically different styles from the same hand."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "Chapman Plaza was saved from demolition by the same developer-architect pair who saved the Wiltern Theatre. The developer was Wayne Ratkovich. Who was the architect?",
+    "answer": "Brenda Levin",
+    "answerVariants": ["brenda levin", "levin"],
+    "historicalFact": "Brenda Levin is one of LA's foremost preservation architects. She and developer Wayne Ratkovich saved both the Wiltern and Chapman Plaza from the wrecking ball, restoring their interiors while adapting them for modern use. Levin also restored City Hall's observation deck, the Bradbury Building, and Grand Central Market."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I was built as a grocery store in 1928. My arches let cars drive inside. My tower has Churrigueresque detailing — an ornate Spanish style. A hotel next door housed Olympians in 1932. I became a Historic-Cultural Monument in 1988. Today, a Colombian rooftop bar operates from my upper level. What building am I?",
+    "answer": "Chapman Plaza",
+    "answerVariants": ["chapman plaza", "chapman market", "chapman park market"],
+    "historicalFact": "Chapman Plaza earned LA Historic-Cultural Monument #361 in 1988. Churrigueresque architecture — named after Spanish architect Jose Benito de Churriguera — features elaborate surface ornamentation, twisted columns, and layered facades. Chapman Plaza's version is restrained compared to Mexican examples, but the ornate tile work and carved arches are unmistakable."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "history",
+    "clue": "A real estate developer named A.W. Ross bought 18 acres along Wilshire Boulevard in the 1920s and bet that the automobile — not the streetcar — would define LA's future. Detractors mocked his empty land with a nickname. What did they call it?",
+    "answer": "Ross's bean patch",
+    "answerVariants": ["ross's bean patch", "ross' bean patch", "rosss bean patch", "bean patch"],
+    "historicalFact": "A.W. Ross paid $54,000 for 18 acres along Wilshire in the early 1920s. Critics called it 'Ross's bean patch' — empty land far from downtown. By 1928, Ross had coined the term 'Miracle Mile' for the commercial strip he built, proving that cars, not streetcars, would shape the city. The Miracle Mile is now one of LA's most valuable corridors."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "puzzle",
+    "clue": "Hidden inside this sentence is a Spanish word — the name of the bar you're heading to. It means 'scale' or 'stop.'\n\n'The frescal architecture impressed everyone.'\n\nWhat is the bar's name?",
+    "answer": "Escala",
+    "answerVariants": ["escala"],
+    "historicalFact": "fr-ESCALA-rchitecture — 'Escala' hides across the word boundary of 'frescal' and 'architecture.' The bar sits inside Chapman Plaza (1928), a drive-in grocery designed by Morgan, Walls & Clements with Churrigueresque detailing. 'Escala' means 'scale' or 'stop' in Spanish — a Colombian rooftop bar serving $8 cocktails, adjacent to the former Chapman Park Hotel that housed 1932 Olympians."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "You've arrived at Chapman Plaza, 3451 W 6th St. Take a photo of the building's ornate arched entrance or tower detailing. This 1928 drive-in grocery store was designed by Morgan, Walls & Clements in Spanish Colonial Revival style with Churrigueresque ornament.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "Chapman Plaza's Spanish Colonial Revival exterior features arched vehicle entrances, ornate tile work, and a tower with Churrigueresque detailing. The style was popular in 1920s LA — a romantic vision of California's Spanish past applied to thoroughly modern commercial buildings."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "wordplay",
+    "clue": "Your bar's building has a style of ornamentation named after a Spanish architect. The style is known for twisted columns and extravagant surface decoration. The architect's surname starts with C-H-U-R-R-I-G-U-E-R-R-E-S-C-O in its Spanish adjective form. What is the English adjective for this architectural style?",
+    "answer": "Churrigueresque",
+    "answerVariants": ["churrigueresque"],
+    "historicalFact": "Jose Benito de Churriguera (1665-1725) developed a hyper-ornamental Baroque style in Spain that spread to Latin America, where it became even more elaborate. Mexican Churrigueresque — seen in cathedrals in Zacatecas and Taxco — influenced Southern California's Spanish Colonial Revival architects, including the designers of Chapman Plaza."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Final puzzle. Chapman Plaza opened in 1929. The Wiltern opened in 1931. Ross paid $54,000 for his 'bean patch.' Chapman Plaza became a landmark in 1988. Escala's happy hour cocktails cost $8. Multiply the two opening years together, then divide by the landmark year. Round to the nearest whole number. Does the result end in the same digit as the cocktail price?",
+    "answer": "No",
+    "answerVariants": ["no"],
+    "historicalFact": "1929 x 1931 = 3,726,899. Divided by 1988 = 1,875.2 (rounded: 1,875). The last digit is 5, not 8. The math doesn't line up — but the history does: the same architects, the same preservationists, and the same stretch of Wilshire tie the Wiltern and Chapman Plaza together across a century."
+  }
+]

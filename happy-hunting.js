@@ -37,20 +37,22 @@ const HappyHuntingLanding = {
     // ---- Render Hunt Cards ----
     renderHunts() {
         const grid = document.getElementById('hunts-grid');
-        grid.innerHTML = this.hunts.map(hunt => `
+        grid.innerHTML = this.hunts.filter(h => h.cluePool && h.cluePool.length > 0).map(hunt => `
             <div class="hunt-card" data-hunt-id="${hunt.huntId}">
                 <div class="hunt-card-bar">${hunt.bar.name}</div>
                 <div class="hunt-card-hood">${hunt.bar.neighborhood}</div>
                 <div class="hunt-card-theme">${hunt.theme}</div>
-                <div class="hunt-card-meta">${hunt.totalWalkingDistance} walk &middot; 3 clues${hunt.cluePool ? ' &middot; ' + hunt.cluePool.length + ' variations' : ''}</div>
+                <div class="hunt-card-meta">${hunt.totalWalkingDistance} walk &middot; 3 clues &middot; ${hunt.cluePool.length} variations</div>
                 <div class="hunt-card-styles">
-                    <button class="style-btn active" data-style="free" data-hunt="${hunt.huntId}">Free</button>
-                    <button class="style-btn" data-style="ransom" data-hunt="${hunt.huntId}">Ransom</button>
-                    <button class="style-btn" data-style="script" data-hunt="${hunt.huntId}">Script</button>
-                    <button class="style-btn" data-style="napkin" data-hunt="${hunt.huntId}">Napkin</button>
+                    <button class="style-btn active" data-style="free" data-hunt="${hunt.huntId}">Basic</button>
+                    <span class="style-divider"></span>
+                    <button class="style-btn style-btn-premium" data-style="ransom" data-hunt="${hunt.huntId}">Ransom</button>
+                    <button class="style-btn style-btn-premium" data-style="script" data-hunt="${hunt.huntId}">Script</button>
+                    <button class="style-btn style-btn-premium" data-style="napkin" data-hunt="${hunt.huntId}">Napkin</button>
                 </div>
                 <div class="hunt-card-preview" id="preview-${hunt.huntId}"></div>
                 <div class="hunt-card-bottom" id="bottom-${hunt.huntId}">
+                    <a href="hunt.html?hunt=${hunt.huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>
                     <button class="hunt-card-copy" data-hunt-id="${hunt.huntId}">Copy Link</button>
                 </div>
             </div>
@@ -72,20 +74,14 @@ const HappyHuntingLanding = {
             preview.innerHTML = '';
             preview.className = 'hunt-card-preview';
             bottom.innerHTML = `
+                <a href="hunt.html?hunt=${huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>
                 <button class="hunt-card-copy" data-hunt-id="${huntId}">Copy Link</button>
             `;
         } else {
             this.renderPreview(huntId, style, hunt);
             bottom.innerHTML = `
-                <div class="hunt-card-paid-actions">
-                    <a href="hunt.html?hunt=${huntId}&skin=${style}&preview=1" target="_blank" class="hunt-card-preview-btn">Preview Full Hunt</a>
-                    <button class="hunt-card-send" data-hunt-id="${huntId}" data-skin="${style}">Send Invitation &mdash; $5</button>
-                </div>
-                <div class="hunt-card-addon">
-                    <span class="addon-label">+ Add stops</span>
-                    <span class="addon-price">$1 per additional clue</span>
-                    <span class="addon-soon">Coming soon</span>
-                </div>
+                <a href="hunt.html?hunt=${huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>
+                <button class="hunt-card-send" data-hunt-id="${huntId}" data-skin="${style}">Send Invitation &mdash; $5</button>
             `;
         }
     },

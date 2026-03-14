@@ -1,0 +1,273 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "history",
+    "clue": "In 1849, this downtown avenue was called Charity Street. By 1886, property owners petitioned City Council for a name change — they were sick of jokes about 'living on charity.' The Council took pity. What avenue did Charity become?",
+    "answer": "Grand Avenue",
+    "answerVariants": ["grand", "grand ave", "grand avenue"],
+    "historicalFact": "Grand Avenue was originally Charity Street on the 1849 Ord survey map. When residents petitioned for a change, they suggested Pacific Avenue, but that name was taken. The LA Daily Times reported Council 'took pity on the people who were sick of living on charity.'"
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "trivia",
+    "clue": "Two of DTLA's most famous buildings sit on this avenue: a concert hall designed by Frank Gehry and a contemporary art museum with a honeycomb facade. The avenue itself was originally called Charity — until residents demanded something more dignified. What is it?",
+    "answer": "Grand Avenue",
+    "answerVariants": ["grand", "grand ave", "grand avenue"],
+    "historicalFact": "Walt Disney Concert Hall (Gehry, 2003) and The Broad (Diller Scofidio + Renfro, 2015) both sit on Grand Avenue, the former Charity Street."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Find the 5-letter word hidden in this phrase: 'a flag ran down the hill.' That word is also the avenue that Charity Street became. Head there.",
+    "answer": "Grand",
+    "answerVariants": ["grand", "grand ave", "grand avenue"],
+    "historicalFact": "flaGRANDown — Grand Avenue, renamed from Charity in 1886. The hidden word spans across 'flag,' 'ran,' and 'down.'"
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "puzzle",
+    "clue": "Five DTLA streets in order, going east from Figueroa: Flower, Hope, ___, Olive, Hill. One of these was originally called Charity. Fill in the blank.",
+    "answer": "Grand",
+    "answerVariants": ["grand", "grand ave", "grand avenue"],
+    "historicalFact": "The 1849 Ord survey named these streets. Hope and Charity were neighbors — but while Hope kept its name, Charity was forced to change after 37 years of jokes."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "history",
+    "clue": "Before the 1960s, Bunker Hill was a wealthy residential neighborhood of Victorian mansions. Urban renewal demolished almost everything. One woman born into slavery in 1818 had owned property on a street nearby — one of the first Black women to own land in LA. She won her freedom in an LA courtroom in 1856. Who was she?",
+    "answer": "Biddy Mason",
+    "answerVariants": ["biddy mason", "bridget mason", "biddy", "mason"],
+    "historicalFact": "Biddy Mason (1818-1891) was born enslaved in Mississippi. She walked behind her enslaver's wagon from Mississippi to California. In 1856, she petitioned for freedom in LA and won. She bought property on Spring Street between 3rd and 4th, became a nurse, philanthropist, and one of the wealthiest Black women in early LA."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I drew the first American street map of Los Angeles in 1849. I roomed with William Tecumseh Sherman at West Point. I forced Robert E. Lee to surrender at Appomattox. The streets you're walking — I named them. Who am I?",
+    "answer": "Edward Ord",
+    "answerVariants": ["edward ord", "ord", "lt. edward ord", "lieutenant edward ord", "lt edward ord"],
+    "historicalFact": "Lt. Edward O.C. Ord surveyed and mapped LA in 1849 for the U.S. Army. He named the streets — including Charity (now Grand), Hope, Spring, and Main. He later became a Civil War general and helped force Lee's surrender at Appomattox."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "trivia",
+    "clue": "Pershing Square, the public park at 5th and Hill, has had four different names. It started as La Plaza Abaja, then 6th Street Park, then Central Park, before getting its current name in 1918 to honor a WWI general. What was the general's first name?",
+    "answer": "John",
+    "answerVariants": ["john", "john pershing", "john j. pershing", "john joseph pershing"],
+    "historicalFact": "General John J. 'Black Jack' Pershing commanded the American Expeditionary Forces in WWI. The park was renamed in his honor in 1918. Before that, as 'Central Park,' it was LA's attempt to rival New York's — at a fraction of the acreage."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "puzzle",
+    "clue": "Five DTLA streets run parallel, east from Figueroa. Using these clues, eliminate four of the five until one remains:\n\n1) Remove the street that was originally called Charity (renamed in 1886).\n2) Remove the street named after a geographical feature — a raised mound of earth.\n3) Remove the street named after a plant that produces oil and appears on pizza.\n4) Remove the street named after a botanical product associated with bakeries and florists.\n\nThe last street standing is the only one from Ord's 1849 survey that no one ever petitioned to rename. What is it?",
+    "answer": "Hope",
+    "answerVariants": ["hope", "hope street", "hope st"],
+    "historicalFact": "Grand (formerly Charity) is eliminated first. Hill goes next. Then Olive. Then Flower. Hope is the last one standing — and it's the only street from Ord's 1849 survey that kept both its original name and its dignity. No one petitioned to change it."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "history",
+    "clue": "In 1935, a cafeteria opened on South Broadway with a radical Depression-era policy: diners could pay whatever they could afford — or nothing at all. The owner estimated that 10,000 people ate free during the first year. The restaurant survived for 80 years. What was it called?",
+    "answer": "Clifton's",
+    "answerVariants": ["cliftons", "clifton's", "clifton's cafeteria", "cliftons cafeteria"],
+    "historicalFact": "Clifton's Cafeteria at 648 S Broadway opened in 1935 with a 'pay what you wish' policy. Founder Clifford Clinton lost money for years but believed feeding people mattered more than profit. The restaurant's forest-themed interior — complete with a three-story redwood tree — became a DTLA landmark."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Edward Ord drew LA's first American street map in 1849. Grand Avenue was renamed from Charity in 1886. The Bradbury Building opened in 1893. Angels Flight began running in 1901. Add all four years together. Then subtract 7,000. What number remains?",
+    "answer": "529",
+    "answerVariants": ["529"],
+    "historicalFact": "1849 + 1886 + 1893 + 1901 = 7,529. Minus 7,000 = 529. The Bradbury Building at 304 S Broadway was inspired by Edward Bellamy's 1888 novel 'Looking Backward,' which described a utopian building with a skylit atrium. Mining magnate Lewis Bradbury hired a draftsman named George Wyman, who consulted a Ouija board before accepting the commission."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "history",
+    "clue": "A downtown street may have been named after a woman called 'Primavera' — the Spanish word for a season. Surveyor Edward Ord supposedly met her in 1849 and named a street in her honor. Which season does 'Primavera' mean?",
+    "answer": "Spring",
+    "answerVariants": ["spring", "spring street", "spring st"],
+    "historicalFact": "Spring Street may be named after Trinidad Ortega (1832-1903), Pio Pico's niece, nicknamed 'Primavera' (Spring). Her daughter promoted this origin story at a 1932 luncheon. Historians call the romance angle 'surely hogwash,' but the street is real."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "trivia",
+    "clue": "The world's shortest railway — Angels Flight — has carried riders up Bunker Hill since 1901. It's a funicular: two cars on a track connected by a cable, so when one goes up, the other comes down. How much does a ride cost?",
+    "answer": "$1",
+    "answerVariants": ["$1", "1 dollar", "one dollar", "a dollar", "1"],
+    "historicalFact": "Angels Flight is a 298-foot funicular connecting Hill Street to Grand Avenue (formerly Charity Street) on Bunker Hill. Built in 1901, it was dismantled in 1969, stored for 27 years, and rebuilt 50 feet south of its original location in 1996."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "trivia",
+    "clue": "The Eastern Columbia Building on Broadway has a clock tower covered in glazed terra cotta — one of LA's greatest Art Deco landmarks. It was built in 1929 as a department store. What color dominates the building's facade?",
+    "answer": "Turquoise",
+    "answerVariants": ["turquoise", "teal", "blue", "blue-green", "aqua", "blue green"],
+    "historicalFact": "The Eastern Columbia Building (1929) is clad in glossy turquoise terra cotta with gold trim. Designed by Claud Beelman in the Zigzag Moderne style, it was originally home to the Eastern-Columbia department store, which sold furniture and clothing."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "history",
+    "clue": "Broadway between 3rd and 9th has more pre-war movie palaces per block than anywhere in the world. The first of them opened in 1918 — built by the same showman who later built the Chinese Theatre and Egyptian Theatre in Hollywood. What was the Broadway theater called?",
+    "answer": "Million Dollar Theatre",
+    "answerVariants": ["million dollar theatre", "million dollar theater", "the million dollar theatre", "the million dollar theater"],
+    "historicalFact": "The Million Dollar Theatre at 307 S Broadway was Sid Grauman's first theater — before the Egyptian (1922) and the Chinese (1927) in Hollywood. It opened in 1918 with a Spanish Colonial facade designed by Albert C. Martin. Broadway's Theatre District contains 12 historic movie palaces."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "The Eastern Columbia Building on Broadway (between 8th and 9th) has a clock tower covered in turquoise glazed terra cotta — one of LA's greatest Art Deco landmarks. Find it and take a photo of the clock tower.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "The Eastern Columbia Building's four-sided clock tower rises 13 stories above Broadway. The turquoise terra cotta was manufactured by Gladding McBean, the same company that produced the tile for many of LA's most iconic buildings."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "puzzle",
+    "clue": "I was born enslaved in 1818. I walked behind a wagon from Mississippi to California. I won my freedom in an LA courtroom in 1856. I bought land on Spring Street and became one of the city's first Black property owners. My memorial park is downtown. Who am I?",
+    "answer": "Biddy Mason",
+    "answerVariants": ["biddy mason", "bridget mason", "biddy", "mason"],
+    "historicalFact": "Biddy Mason's homestead was on Spring Street between 3rd and 4th — in the heart of today's DTLA. She became a nurse and midwife, delivered hundreds of babies, founded the first Black church in LA, and donated to flood victims, prisoners, and the poor."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "wordplay",
+    "clue": "The Bradbury Building at 304 S Broadway is one of LA's architectural treasures — a Victorian court with a glass skylight, open cage elevators, and ornate iron railings. It was built in 1893. The architect who designed it consulted an unconventional source before accepting the commission. What did he consult?",
+    "answer": "A Ouija board",
+    "answerVariants": ["ouija board", "a ouija board", "ouija", "the ouija board"],
+    "historicalFact": "George Wyman was a young draftsman when mining magnate Lewis Bradbury offered him the commission. Wyman consulted a Ouija board, which spelled out: 'Take the Bradbury building. It will make you famous.' It did. The building was inspired by Edward Bellamy's 1888 utopian novel 'Looking Backward.'"
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "history",
+    "clue": "I was born enslaved in Mississippi in 1818. I walked behind my enslaver's wagon all the way to California. In 1856, I stood in an LA courtroom and won my freedom. I bought land on Spring Street between 3rd and 4th. I delivered hundreds of babies as a midwife. I founded the first Black church in Los Angeles. My memorial park is in downtown LA. What is my full name?",
+    "answer": "Biddy Mason",
+    "answerVariants": ["biddy mason", "bridget mason", "biddy", "mason"],
+    "historicalFact": "Biddy Mason (1818-1891) walked roughly 1,700 miles from Mississippi to California behind her enslaver's wagon train. After winning her freedom in court, she saved $250 and bought property on Spring Street — becoming one of the first Black women to own land in LA. She founded First African Methodist Episcopal Church and spent her fortune helping the poor, regardless of race."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "history",
+    "clue": "At 453 S Spring Street, a bookstore occupies a former bank vault. It claims to be the world's largest used bookstore and houses over 250,000 books. The second floor has books sculpted into arches, columns, and tunnels. What is it called?",
+    "answer": "The Last Bookstore",
+    "answerVariants": ["the last bookstore", "last bookstore"],
+    "historicalFact": "The Last Bookstore opened in 2005 in a downtown loft and moved to its current location — a former Citizens National Bank building — in 2011. Owner Josh Spencer named it as a comment on the endangered status of physical bookstores. The building's marble columns, high ceilings, and old vault now house one of the most photographed bookstores in the world."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "A compound puzzle:\n\n1) Grand Avenue was originally called Charity. What year was it renamed? (Hint: residents petitioned after 37 years of jokes. The Ord survey was 1849.)\n2) The Million Dollar Theatre opened on Broadway in 1918. The Bradbury Building opened in 1893. What is the difference?\n3) Multiply your answers: (last two digits of Part 1) times (Part 2). What do you get?",
+    "answer": "2150",
+    "answerVariants": ["2150"],
+    "historicalFact": "Part 1: 1849 + 37 = 1886. Part 2: 1918 - 1893 = 25. Part 3: 86 x 25 = 2,150. The Bradbury Building and the Million Dollar Theatre sit three blocks apart on Broadway — 25 years of architectural ambition compressed into a quarter mile."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "trivia",
+    "clue": "Your destination is a whiskey bar at 515 W 7th St, second floor. It has 700+ bottles, taxidermy on the walls, and live jazz. Its name combines the street number with the avenue that Charity became. What's the bar?",
+    "answer": "Seven Grand",
+    "answerVariants": ["seven grand", "7 grand"],
+    "historicalFact": "Seven Grand houses one of the most extensive whiskey collections on the West Coast — over 700 bottles from Scotland, Japan, Ireland, and the American South."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "history",
+    "clue": "Your destination sits at 515 W 7th St, second floor. Inside: taxidermy on the walls, live jazz, and 700 bottles of whiskey. The street was first drawn on a map in 1849 by Lt. Edward Ord — who later forced Robert E. Lee to surrender. What's the bar?",
+    "answer": "Seven Grand",
+    "answerVariants": ["seven grand", "7 grand"],
+    "historicalFact": "Lt. Edward Ord drew the first American map of LA in 1849. He roomed with Sherman at West Point and helped force Lee's surrender at Appomattox. The streets Ord surveyed — including 7th — still form the grid of downtown LA."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "wordplay",
+    "clue": "Take the number of the street (7th). Write it as a word. Add the avenue that Charity became. That's the bar. Second floor, 515.",
+    "answer": "Seven Grand",
+    "answerVariants": ["seven grand", "7 grand"],
+    "historicalFact": "Seven + Grand. The bar sits on 7th Street, one block from Grand Avenue — the former Charity Street. The name is a permanent reminder of Charity's transformation."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "trivia",
+    "clue": "This second-floor whiskey bar has taxidermy deer, elk, and bison mounted on the walls — creating the atmosphere of a hunting lodge. It hosts live jazz regularly. How many bottles of whiskey does it claim to stock? (Round to the nearest hundred.)",
+    "answer": "700",
+    "answerVariants": ["700", "seven hundred", "700+", "over 700"],
+    "historicalFact": "Seven Grand's whiskey collection spans single malts from Islay, Japanese whiskies from Yamazaki and Nikka, rare American bourbons, and Irish pot stills. The hunting-lodge aesthetic — taxidermy, dark wood, leather — was inspired by vintage men's clubs."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "puzzle",
+    "clue": "I'm on 7th Street. My name includes the word for the avenue that was once called Charity. I'm on the second floor. I have more whiskey bottles than the population of some California ghost towns. Dead animals watch you drink. What am I?",
+    "answer": "Seven Grand",
+    "answerVariants": ["seven grand", "7 grand"],
+    "historicalFact": "Seven Grand opened in the 213 Nightlife group's portfolio of DTLA bars. The taxidermy collection includes deer, elk, and bison — all ethically sourced vintage pieces, not hunted for the bar."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "history",
+    "clue": "The man who drew the 1849 map that named these streets — including 7th, where your destination sits — had an extraordinary military career. He roomed with Sherman at West Point, surveyed LA for the U.S. Army, fought in the Civil War, and helped force Lee's surrender at Appomattox. He died of yellow fever in Havana. His last name has only three letters. What was it?",
+    "answer": "Ord",
+    "answerVariants": ["ord", "edward ord", "edward o.c. ord"],
+    "historicalFact": "Edward O.C. Ord (1818-1883) mapped LA in 1849, then spent 30 years in the Army. After the Civil War, he commanded the Department of Texas and invested in railroad development. He died of yellow fever in Havana, Cuba."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "wordplay",
+    "clue": "Your destination's name combines two pieces: a number and a word. The number matches the street it sits on. The word is what Charity Street became in 1886. Dead animals line the walls, 700 bottles line the shelves, and jazz fills the room. Second floor, 515. What's the bar?",
+    "answer": "Seven Grand",
+    "answerVariants": ["seven grand", "7 grand"],
+    "historicalFact": "Seven Grand's name works on two levels: it's the intersection of 7th Street and Grand Avenue (the former Charity Street), and in slang, 'seven grand' means $7,000 — roughly the cost of the bar's most expensive bottle of whiskey. The hunting-lodge interior features vintage taxidermy sourced from estate sales, not hunted for decor."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "history",
+    "clue": "The 1849 Ord survey named three DTLA streets after the three theological virtues. Hope Street kept its name. Charity became Grand. But the third virtue — the one Paul called 'the greatest of these' — never made it onto the final map (or was lost early). What is the missing virtue?",
+    "answer": "Faith",
+    "answerVariants": ["faith", "faith street"],
+    "historicalFact": "Hope, Faith, and Charity are the three theological virtues from 1 Corinthians 13:13. Ord placed Hope and Charity on his 1849 LA map, but Faith either never made it or was renamed so early no record survives. Hope endured. Charity became Grand. Faith vanished — which may say something about the city."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "wordplay",
+    "clue": "Your destination's name has ten letters across two words. The first word has five letters and equals the number of the street. The second word has five letters and was once called Charity. Together they name a bar on the second floor at 515. But 'Seven Grand' also means $7,000 in slang. How many bottles of whiskey could you buy at $10 each with seven grand?",
+    "answer": "700",
+    "answerVariants": ["700", "seven hundred"],
+    "historicalFact": "$7,000 divided by $10 equals 700 — the same number of whiskey bottles on Seven Grand's shelves. Whether the name is a coincidence or a wink, the math works out."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "puzzle",
+    "clue": "Final compound puzzle:\n\n1) Charity Street was renamed Grand in 1886. Edward Ord drew his map in 1849. How many years between? Call that A.\n2) Angels Flight is 298 feet long. Divide by 2. Call that B.\n3) Subtract A from B. Call that C.\n4) The bar at 515 W 7th has how many bottles of whiskey? Divide by C.\n\nWhat do you get? Round to the nearest whole number.",
+    "answer": "6",
+    "answerVariants": ["6", "six"],
+    "historicalFact": "A = 37 (1886 - 1849). B = 149 (298 / 2). C = 112 (149 - 37). 700 / 112 = 6.25, which rounds to 6. Edward Ord surveyed these streets 37 years before Charity became Grand. In that time, LA went from a dusty pueblo of 1,600 to a booming city of 12,000 — all walking on streets one Army lieutenant named in a few weeks."
+  }
+]
