@@ -1,7 +1,7 @@
 /* ============================================
    CREATE A HUNT — Clue Builder + Live Preview
-   Bar selection, street suggestions, editor,
-   carousel preview, link generation
+   3-phase bar selection, dynamic clue list,
+   street suggestions, carousel preview, link gen
    ============================================ */
 
 const CreateHunt = {
@@ -10,21 +10,29 @@ const CreateHunt = {
     selectedBar: null,
     currentSkin: 'ransom',
     currentCard: 0,
-    clues: [
-        { text: '', answer: '' },
-        { text: '', answer: '' },
-        { text: '', answer: '' }
-    ],
+    clues: [],
+    activeClueIndex: 0,
 
     async init() {
         await Promise.all([this.loadBars(), this.loadStreets()]);
+        this.addClue();
+        this.addClue();
+        this.addClue();
         this.bindEvents();
     },
 
     async loadBars() {
         try {
             const res = await fetch('deals.json');
-            this.bars = await res.json();
+            const raw = await res.json();
+            // Deduplicate by restaurant name
+            const seen = new Set();
+            this.bars = raw.filter(b => {
+                const key = b.restaurant.toLowerCase();
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
         } catch (e) { this.bars = []; }
     },
 
@@ -37,8 +45,9 @@ const CreateHunt = {
 
     // ---- Bar Search ----
     searchBars(query) {
+        const results = document.getElementById('bar-results');
         if (!query || query.length < 2) {
-            document.getElementById('bar-results').innerHTML = '';
+            results.innerHTML = '';
             return;
         }
         const q = query.toLowerCase();
@@ -46,7 +55,7 @@ const CreateHunt = {
             .filter(b => b.restaurant.toLowerCase().includes(q) || b.neighborhood.toLowerCase().includes(q))
             .slice(0, 8);
 
-        document.getElementById('bar-results').innerHTML = matches.map(b => `
+        results.innerHTML = matches.map(b => `
             <div class="bar-result-item" data-id="${b.id}">
                 <strong>${b.restaurant}</strong>
                 <span>${b.neighborhood} &middot; ${b.address || ''}</span>
@@ -54,17 +63,31 @@ const CreateHunt = {
         `).join('');
     },
 
+    // Phase 1 → Phase 2: Show pending confirmation
     selectBar(barId) {
-        this.selectedBar = this.bars.find(b => b.id === barId);
-        if (!this.selectedBar) return;
+        const bar = this.bars.find(b => b.id === barId);
+        if (!bar) return;
+        this.selectedBar = bar;
 
         document.getElementById('bar-search').value = '';
         document.getElementById('bar-results').innerHTML = '';
-        document.getElementById('bar-search').parentElement.hidden = true;
-        document.getElementById('bar-selected').hidden = false;
-        document.getElementById('bar-selected-name').textContent = this.selectedBar.restaurant;
-        document.getElementById('bar-selected-detail').textContent =
+        document.getElementById('bar-search-wrap').hidden = true;
+
+        document.getElementById('bar-pending-name').textContent = bar.restaurant;
+        document.getElementById('bar-pending-detail').textContent =
+            `${bar.neighborhood} — ${bar.address || ''}`;
+        document.getElementById('bar-pending').hidden = false;
+    },
+
+    // Phase 2 → Phase 3: Confirm bar, reveal builder
+    confirmBar() {
+        if (!this.selectedBar) return;
+        document.getElementById('bar-pending').hidden = true;
+
+        document.getElementById('bar-confirmed-name').textContent = this.selectedBar.restaurant;
+        document.getElementById('bar-confirmed-detail').textContent =
             `${this.selectedBar.neighborhood} — ${this.selectedBar.address || ''}`;
+        document.getElementById('bar-confirmed').hidden = false;
 
         this.showSuggestions();
         document.getElementById('clues-section').hidden = false;
@@ -72,14 +95,67 @@ const CreateHunt = {
         this.renderCarousel();
     },
 
+    // Reset to Phase 1
     changeBar() {
         this.selectedBar = null;
-        document.getElementById('bar-selected').hidden = true;
-        document.getElementById('bar-search').parentElement.hidden = false;
+        document.getElementById('bar-pending').hidden = true;
+        document.getElementById('bar-confirmed').hidden = true;
+        document.getElementById('bar-search-wrap').hidden = false;
         document.getElementById('suggestions-section').hidden = true;
         document.getElementById('clues-section').hidden = true;
         document.getElementById('generate-section').hidden = true;
+        document.getElementById('bar-search').value = '';
         document.getElementById('bar-search').focus();
+    },
+
+    // ---- Dynamic Clue List ----
+    addClue() {
+        const index = this.clues.length;
+        this.clues.push({ text: '', answer: '' });
+        this.renderClueList();
+        this.setActiveClue(index);
+    },
+
+    removeClue(index) {
+        if (this.clues.length <= 1) return;
+        this.clues.splice(index, 1);
+        if (this.activeClueIndex >= this.clues.length) {
+            this.activeClueIndex = this.clues.length - 1;
+        }
+        this.renderClueList();
+        this.renderCarousel();
+    },
+
+    renderClueList() {
+        const list = document.getElementById('clue-list');
+        list.innerHTML = this.clues.map((clue, i) => {
+            const isLast = i === this.clues.length - 1;
+            const label = isLast ? `Clue ${i + 1} (final — leads to bar)` : `Clue ${i + 1}`;
+            const active = i === this.activeClueIndex ? ' clue-item--active' : '';
+            return `
+            <div class="clue-item${active}" data-index="${i}">
+                <div class="clue-item-header">
+                    <span class="clue-item-label">${label}</span>
+                    ${this.clues.length > 1 ? `<button class="clue-remove-btn" data-remove="${i}">&times;</button>` : ''}
+                </div>
+                <textarea class="clue-item-text" data-field="text" data-index="${i}" placeholder="Write the clue..." rows="3">${clue.text}</textarea>
+                <input class="clue-item-answer" data-field="answer" data-index="${i}" placeholder="Answer (street name, place, word...)" value="${clue.answer}">
+            </div>`;
+        }).join('');
+    },
+
+    setActiveClue(index) {
+        this.activeClueIndex = index;
+        document.querySelectorAll('.clue-item').forEach((el, i) => {
+            el.classList.toggle('clue-item--active', i === index);
+        });
+    },
+
+    onClueInput(index, field, value) {
+        if (index < this.clues.length) {
+            this.clues[index][field] = value;
+            this.updateCardPreview(index);
+        }
     },
 
     // ---- Street Suggestions ----
@@ -87,7 +163,9 @@ const CreateHunt = {
         const hood = this.selectedBar.neighborhood.toLowerCase();
         const nearby = this.streets.filter(s => {
             if (!s.neighborhoods) return false;
-            return s.neighborhoods.some(n => n.toLowerCase().includes(hood) || hood.includes(n.toLowerCase()));
+            return s.neighborhoods.some(n =>
+                n.toLowerCase().includes(hood) || hood.includes(n.toLowerCase())
+            );
         });
 
         const grid = document.getElementById('suggestions-grid');
@@ -101,17 +179,15 @@ const CreateHunt = {
                     <div class="suggestion-fact">${s.facts && s.facts[0] ? s.facts[0] : ''}</div>
                 </button>
             `).join('');
-            // Store for later reference
             this._nearbySuggestions = nearby;
         }
         document.getElementById('suggestions-section').hidden = false;
     },
 
     useSuggestion(index) {
-        const street = this._nearbySuggestions[index];
+        const street = this._nearbySuggestions && this._nearbySuggestions[index];
         if (!street) return;
 
-        // Build a template clue from the street facts
         const facts = street.facts || [];
         const who = street.who || street.namedAfter || 'someone';
         const year = street.year || '';
@@ -126,40 +202,45 @@ const CreateHunt = {
             template = `This street was named after ${who}. Find it.`;
         }
 
-        // Put in current editor
-        const editor = document.getElementById('editor-text');
-        editor.textContent = template;
-        this.clues[this.currentCard].text = template;
+        const i = this.activeClueIndex;
+        this.clues[i].text = template;
+        this.clues[i].answer = street.street;
+        this.renderClueList();
+        this.updateCardPreview(i);
 
-        // Pre-fill answer with street name
-        const answerInput = document.getElementById('editor-answer');
-        answerInput.value = street.street;
-        this.clues[this.currentCard].answer = street.street;
-
-        this.updateCardPreview(this.currentCard);
-        editor.focus();
+        // Scroll to the clue
+        const clueEl = document.querySelector(`.clue-item[data-index="${i}"]`);
+        if (clueEl) clueEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     },
 
     // ---- Carousel ----
     renderCarousel() {
         const viewport = document.getElementById('carousel-viewport');
-        viewport.innerHTML = [0, 1, 2].map(i => `
+        const dots = document.getElementById('carousel-dots');
+        const count = this.clues.length;
+
+        viewport.innerHTML = this.clues.map((_, i) => `
             <div class="carousel-card" data-card="${i}" id="card-preview-${i}">
-                <div class="card-preview-step">Clue ${i + 1} of 3</div>
+                <div class="card-preview-step">Clue ${i + 1} of ${count}</div>
                 <div class="card-preview-text" id="card-text-${i}">
-                    ${this.clues[i].text || '<span class="card-empty">Tap to write clue ' + (i + 1) + '</span>'}
+                    ${this.clues[i].text || '<span class="card-empty">Clue ' + (i + 1) + '</span>'}
                 </div>
             </div>
         `).join('');
+
+        dots.innerHTML = this.clues.map((_, i) =>
+            `<span class="dot${i === this.currentCard ? ' active' : ''}" data-index="${i}"></span>`
+        ).join('');
+
         this.applySkinToCarousel();
+        if (this.currentCard >= count) this.currentCard = count - 1;
         this.goToCard(this.currentCard);
     },
 
     applySkinToCarousel() {
-        const cards = document.querySelectorAll('.carousel-card');
-        cards.forEach(card => {
+        document.querySelectorAll('.carousel-card').forEach((card, i) => {
             card.className = `carousel-card skin-card-${this.currentSkin}`;
-            const i = parseInt(card.dataset.card);
+            card.dataset.card = i;
             this.updateCardPreview(i);
         });
     },
@@ -167,9 +248,9 @@ const CreateHunt = {
     updateCardPreview(index) {
         const textEl = document.getElementById(`card-text-${index}`);
         if (!textEl) return;
-        const text = this.clues[index].text;
+        const text = this.clues[index] ? this.clues[index].text : '';
         if (!text) {
-            textEl.innerHTML = `<span class="card-empty">Tap to write clue ${index + 1}</span>`;
+            textEl.innerHTML = `<span class="card-empty">Clue ${index + 1}</span>`;
             return;
         }
         if (this.currentSkin === 'ransom') {
@@ -180,39 +261,16 @@ const CreateHunt = {
     },
 
     goToCard(index) {
+        const count = this.clues.length;
+        if (index < 0) index = 0;
+        if (index >= count) index = count - 1;
         this.currentCard = index;
         const viewport = document.getElementById('carousel-viewport');
         viewport.style.transform = `translateX(-${index * 100}%)`;
 
-        // Update dots
         document.querySelectorAll('.dot').forEach((d, i) =>
             d.classList.toggle('active', i === index)
         );
-
-        // Update editor
-        document.getElementById('editor-label').textContent = `Clue ${index + 1}`;
-        document.getElementById('editor-text').textContent = this.clues[index].text;
-        document.getElementById('editor-answer').value = this.clues[index].answer;
-
-        // Update hint for last clue
-        if (index === 2) {
-            document.getElementById('editor-hint-text').textContent =
-                'This is the final clue — it should lead to the bar. The answer could be the bar\'s name.';
-        } else {
-            document.getElementById('editor-hint-text').textContent =
-                'The answer unlocks the next clue. Keep it short — a street name, a bar name, a place.';
-        }
-    },
-
-    // ---- Editor ----
-    onEditorInput() {
-        const text = document.getElementById('editor-text').textContent;
-        this.clues[this.currentCard].text = text;
-        this.updateCardPreview(this.currentCard);
-    },
-
-    onAnswerInput() {
-        this.clues[this.currentCard].answer = document.getElementById('editor-answer').value;
     },
 
     // ---- Skin ----
@@ -226,16 +284,20 @@ const CreateHunt = {
 
     // ---- Link Generation ----
     generateLink() {
-        // Validate
-        for (let i = 0; i < 3; i++) {
+        // Validate all clues have text and answer
+        for (let i = 0; i < this.clues.length; i++) {
             if (!this.clues[i].text.trim()) {
-                this.goToCard(i);
-                document.getElementById('editor-text').focus();
+                this.setActiveClue(i);
+                this.renderClueList();
+                const el = document.querySelector(`.clue-item[data-index="${i}"] .clue-item-text`);
+                if (el) el.focus();
                 return;
             }
             if (!this.clues[i].answer.trim()) {
-                this.goToCard(i);
-                document.getElementById('editor-answer').focus();
+                this.setActiveClue(i);
+                this.renderClueList();
+                const el = document.querySelector(`.clue-item[data-index="${i}"] .clue-item-answer`);
+                if (el) el.focus();
                 return;
             }
         }
@@ -295,17 +357,23 @@ const CreateHunt = {
 
     // ---- Events ----
     bindEvents() {
-        // Bar search
+        // Bar search input
         const searchInput = document.getElementById('bar-search');
         searchInput.addEventListener('input', () => this.searchBars(searchInput.value));
 
-        // Bar result click
+        // Bar result click → pending
         document.getElementById('bar-results').addEventListener('click', e => {
             const item = e.target.closest('.bar-result-item');
             if (item) this.selectBar(item.dataset.id);
         });
 
-        // Change bar
+        // Confirm bar
+        document.getElementById('bar-confirm').addEventListener('click', () => this.confirmBar());
+
+        // Different bar (from pending)
+        document.getElementById('bar-change-pending').addEventListener('click', () => this.changeBar());
+
+        // Change bar (from confirmed)
         document.getElementById('bar-change').addEventListener('click', () => this.changeBar());
 
         // Suggestions
@@ -314,32 +382,56 @@ const CreateHunt = {
             if (card) this.useSuggestion(parseInt(card.dataset.index));
         });
 
+        // Clue list — delegated events
+        document.getElementById('clue-list').addEventListener('click', e => {
+            // Remove button
+            const removeBtn = e.target.closest('.clue-remove-btn');
+            if (removeBtn) {
+                this.removeClue(parseInt(removeBtn.dataset.remove));
+                return;
+            }
+            // Click on clue item to activate
+            const item = e.target.closest('.clue-item');
+            if (item && !e.target.closest('textarea') && !e.target.closest('input')) {
+                this.setActiveClue(parseInt(item.dataset.index));
+            }
+        });
+
+        document.getElementById('clue-list').addEventListener('input', e => {
+            const el = e.target;
+            if (el.dataset.field && el.dataset.index !== undefined) {
+                this.onClueInput(parseInt(el.dataset.index), el.dataset.field, el.value);
+            }
+        });
+
+        document.getElementById('clue-list').addEventListener('focus', e => {
+            const el = e.target;
+            if (el.dataset.index !== undefined) {
+                this.setActiveClue(parseInt(el.dataset.index));
+            }
+        }, true);
+
+        // Add stop
+        document.getElementById('add-stop-btn').addEventListener('click', () => {
+            this.addClue();
+            if (!document.getElementById('generate-section').hidden) {
+                this.renderCarousel();
+            }
+        });
+
         // Carousel nav
         document.getElementById('carousel-prev').addEventListener('click', () => {
             if (this.currentCard > 0) this.goToCard(this.currentCard - 1);
         });
         document.getElementById('carousel-next').addEventListener('click', () => {
-            if (this.currentCard < 2) this.goToCard(this.currentCard + 1);
+            if (this.currentCard < this.clues.length - 1) this.goToCard(this.currentCard + 1);
         });
         document.getElementById('carousel-dots').addEventListener('click', e => {
             const dot = e.target.closest('.dot');
             if (dot) this.goToCard(parseInt(dot.dataset.index));
         });
 
-        // Click card to edit
-        document.getElementById('carousel-viewport').addEventListener('click', e => {
-            const card = e.target.closest('.carousel-card');
-            if (card) {
-                this.goToCard(parseInt(card.dataset.card));
-                document.getElementById('editor-text').focus();
-            }
-        });
-
-        // Editor
-        document.getElementById('editor-text').addEventListener('input', () => this.onEditorInput());
-        document.getElementById('editor-answer').addEventListener('input', () => this.onAnswerInput());
-
-        // Skin
+        // Skin buttons
         document.querySelectorAll('.ctrl-btn').forEach(btn => {
             btn.addEventListener('click', () => this.setSkin(btn.dataset.skin));
         });
@@ -348,11 +440,11 @@ const CreateHunt = {
         document.getElementById('create-generate').addEventListener('click', () => this.generateLink());
         document.getElementById('create-copy').addEventListener('click', () => this.copyLink());
 
-        // Keyboard: arrow keys for carousel when not in editor
+        // Arrow keys for carousel
         document.addEventListener('keydown', e => {
-            if (document.activeElement.id === 'editor-text' || document.activeElement.tagName === 'INPUT') return;
+            if (document.activeElement.tagName === 'TEXTAREA' || document.activeElement.tagName === 'INPUT') return;
             if (e.key === 'ArrowLeft' && this.currentCard > 0) this.goToCard(this.currentCard - 1);
-            if (e.key === 'ArrowRight' && this.currentCard < 2) this.goToCard(this.currentCard + 1);
+            if (e.key === 'ArrowRight' && this.currentCard < this.clues.length - 1) this.goToCard(this.currentCard + 1);
         });
     }
 };

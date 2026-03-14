@@ -14,7 +14,7 @@
     <header class="hh-header">
         <a href="happy-hunting.html" class="hh-back">&larr; Happy Hunting</a>
         <h1>Create a Hunt</h1>
-        <p class="hh-tagline">Pick a bar. Build 3 clues. Send it to someone.</p>
+        <p class="hh-tagline">Pick a bar. Build clues. Send it to someone.</p>
     </header>
 
     <main class="create-main">
@@ -22,32 +22,56 @@
         <!-- Step 1: Choose Bar -->
         <section class="create-section" id="bar-section">
             <h2 class="create-section-title">1. Choose your destination</h2>
-            <div class="bar-search-wrap">
-                <input type="text" id="bar-search" class="bar-search" placeholder="Search bars..." autocomplete="off">
+            <div class="bar-search-wrap" id="bar-search-wrap">
+                <input type="text" id="bar-search" class="bar-search" placeholder="Search bars by name or neighborhood..." autocomplete="off">
                 <div class="bar-results" id="bar-results"></div>
             </div>
-            <div class="bar-selected" id="bar-selected" hidden>
-                <div class="bar-selected-name" id="bar-selected-name"></div>
-                <div class="bar-selected-detail" id="bar-selected-detail"></div>
-                <button class="bar-change" id="bar-change">Change</button>
+            <div class="bar-pending" id="bar-pending" hidden>
+                <div class="bar-pending-info">
+                    <div class="bar-pending-name" id="bar-pending-name"></div>
+                    <div class="bar-pending-detail" id="bar-pending-detail"></div>
+                </div>
+                <div class="bar-pending-actions">
+                    <button class="bar-confirm-btn" id="bar-confirm">Confirm</button>
+                    <button class="bar-change-btn" id="bar-change-pending">Different bar</button>
+                </div>
+            </div>
+            <div class="bar-confirmed" id="bar-confirmed" hidden>
+                <div class="bar-confirmed-check">&#10003;</div>
+                <div class="bar-confirmed-info">
+                    <div class="bar-confirmed-name" id="bar-confirmed-name"></div>
+                    <div class="bar-confirmed-detail" id="bar-confirmed-detail"></div>
+                </div>
+                <button class="bar-change-btn" id="bar-change">Change</button>
             </div>
         </section>
 
-        <!-- Suggestions (shown after bar selected) -->
+        <!-- Suggestions (shown after bar confirmed) -->
         <section class="create-section" id="suggestions-section" hidden>
             <h2 class="create-section-title">Nearby facts &amp; streets</h2>
-            <p class="create-hint">Tap a fact to start a clue with it</p>
+            <p class="create-hint">Tap a fact to use it in your current clue</p>
             <div class="suggestions-grid" id="suggestions-grid"></div>
         </section>
 
         <!-- Step 2: Build Clues -->
         <section class="create-section" id="clues-section" hidden>
-            <h2 class="create-section-title">2. Write your clues</h2>
+            <h2 class="create-section-title">2. Build your clues</h2>
 
-            <!-- Skin + Tone selectors -->
+            <!-- Clue list -->
+            <div class="clue-list" id="clue-list">
+                <!-- Rendered by JS -->
+            </div>
+            <button class="add-stop-btn" id="add-stop-btn">+ Add Stop</button>
+        </section>
+
+        <!-- Step 3: Preview + Generate -->
+        <section class="create-section" id="generate-section" hidden>
+            <h2 class="create-section-title">3. Preview &amp; share</h2>
+
+            <!-- Skin selector -->
             <div class="create-controls">
                 <div class="create-control-group">
-                    <span class="control-label">Skin</span>
+                    <span class="control-label">Style</span>
                     <div class="control-btns">
                         <button class="ctrl-btn active" data-skin="ransom">Ransom</button>
                         <button class="ctrl-btn" data-skin="script">Script</button>
@@ -56,42 +80,15 @@
                 </div>
             </div>
 
-            <!-- Carousel -->
+            <!-- Carousel preview -->
             <div class="carousel" id="carousel">
                 <button class="carousel-arrow carousel-prev" id="carousel-prev">&lsaquo;</button>
-                <div class="carousel-viewport" id="carousel-viewport">
-                    <!-- 3 cards rendered by JS -->
-                </div>
+                <div class="carousel-viewport" id="carousel-viewport"></div>
                 <button class="carousel-arrow carousel-next" id="carousel-next">&rsaquo;</button>
-                <div class="carousel-dots" id="carousel-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
-                </div>
+                <div class="carousel-dots" id="carousel-dots"></div>
             </div>
 
-            <!-- Editor (below carousel) -->
-            <div class="clue-editor" id="clue-editor">
-                <div class="editor-label" id="editor-label">Clue 1</div>
-                <div class="editor-field"
-                     id="editor-text"
-                     contenteditable="true"
-                     data-placeholder="Write your clue... or tap a fact above to start"></div>
-                <div class="editor-answer-row">
-                    <label class="editor-answer-label">
-                        <span>Answer</span>
-                        <input type="text" id="editor-answer" placeholder="What do they type to solve this?" autocomplete="off">
-                    </label>
-                </div>
-                <div class="editor-hint">
-                    <span id="editor-hint-text">The answer unlocks the next clue. Keep it short — a street name, a bar name, a place.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Step 3: Theme + Generate -->
-        <section class="create-section" id="generate-section" hidden>
-            <h2 class="create-section-title">3. Name it and share</h2>
+            <!-- Theme + Generate -->
             <label class="create-theme-label">
                 <span>Hunt theme</span>
                 <input type="text" id="hunt-theme-input" placeholder="e.g. Mayors, Fires, and a Street That Lost Its Name" autocomplete="off">
