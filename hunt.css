@@ -234,19 +234,61 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
-.dice-btn {
+/* Difficulty control */
+.difficulty-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.diff-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
-    border: 1px solid rgba(128,128,128,0.25);
-    font-size: 1.2em;
+    border: 1px solid rgba(128,128,128,0.3);
+    border-radius: 50%;
+    font-size: 1em;
     cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 6px;
     opacity: 0.6;
-    transition: opacity 0.2s, transform 0.2s;
+    transition: opacity 0.2s, border-color 0.2s;
+    line-height: 1;
+    color: inherit;
+    font-family: inherit;
+}
+.diff-btn:hover { opacity: 1; border-color: rgba(201, 168, 76, 0.5); }
+.diff-level {
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    min-width: 1.5em;
+    text-align: center;
+}
+
+/* Preview arrows */
+.preview-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    color: #f5f0e8;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
     line-height: 1;
 }
-.dice-btn:hover { opacity: 1; }
-.dice-btn:active { transform: rotate(90deg) scale(0.9); }
+.preview-arrow:hover { background: rgba(0, 0, 0, 0.7); }
+.preview-prev { left: 12px; }
+.preview-next { right: 12px; }
 
 .clue-text {
     font-size: 1.05em;
@@ -1886,4 +1928,21 @@ body.hh-landing {
     .skin-napkin .arrival-bar { font-size: 2em; }
     .hh-header h1 { font-size: 1.8em; }
     .envelope { width: 260px; height: 175px; }
+
+    /* Mobile: next button prominent, fact below */
+    .fact-reveal .action-btn {
+        font-size: 1.1em;
+        padding: 16px 24px;
+    }
+    .fact-text {
+        font-size: 0.8em;
+    }
+
+    /* Preview arrows tighter on mobile */
+    .preview-prev { left: 4px; }
+    .preview-next { right: 4px; }
+    .preview-arrow { width: 36px; height: 36px; font-size: 1.4em; }
+
+    /* Clue items in create-hunt */
+    .suggestions-grid { grid-template-columns: 1fr; }
 }

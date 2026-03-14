@@ -41,7 +41,7 @@
             <div class="card intro-card">
                 <p class="intro-label">Happy Hunting</p>
                 <h1 class="intro-theme" id="hunt-theme"></h1>
-                <p class="intro-meta">3 clues. One destination.<br>Start walking.</p>
+                <p class="intro-meta" id="intro-meta">3 clues. One destination.<br>Start walking.</p>
                 <div class="skin-selector" id="skin-selector">
                     <button class="skin-btn active" data-skin="ransom"><span class="skin-swatch ransom-swatch"></span>Ransom</button>
                     <button class="skin-btn" data-skin="script"><span class="skin-swatch script-swatch"></span>Script</button>
@@ -53,10 +53,15 @@
 
         <!-- Clue -->
         <div id="clue-screen" class="screen">
+            <button class="preview-arrow preview-prev" id="preview-prev" hidden>&lsaquo;</button>
             <div class="card clue-card">
                 <div class="step-header">
                     <div class="step-indicator" id="step-label">Clue 1 of 3</div>
-                    <button class="dice-btn" id="dice-btn" title="Shuffle this clue" hidden>&#x1F3B2;</button>
+                    <div class="difficulty-ctrl" id="difficulty-ctrl" hidden>
+                        <button class="diff-btn diff-minus" id="diff-minus">&minus;</button>
+                        <span class="diff-level" id="diff-level">1</span>
+                        <button class="diff-btn diff-plus" id="diff-plus">+</button>
+                    </div>
                 </div>
                 <div class="clue-body" id="clue-body">
                     <div class="clue-text" id="clue-text"></div>
@@ -72,11 +77,12 @@
                     <p class="answer-feedback" id="answer-feedback"></p>
                 </div>
                 <div class="fact-reveal" id="fact-reveal">
+                    <button id="next-btn" class="action-btn">Next Clue &rarr;</button>
                     <div class="fact-divider"></div>
                     <p class="fact-text" id="fact-text"></p>
-                    <button id="next-btn" class="action-btn">Next Clue &rarr;</button>
                 </div>
             </div>
+            <button class="preview-arrow preview-next" id="preview-next" hidden>&rsaquo;</button>
         </div>
 
         <!-- Arrival -->

@@ -78,7 +78,7 @@ const HappyHuntingLanding = {
             this.renderPreview(huntId, style, hunt);
             bottom.innerHTML = `
                 <div class="hunt-card-paid-actions">
-                    <a href="hunt.html?hunt=${huntId}&skin=${style}" target="_blank" class="hunt-card-preview-btn">Preview Full Hunt</a>
+                    <a href="hunt.html?hunt=${huntId}&skin=${style}&preview=1" target="_blank" class="hunt-card-preview-btn">Preview Full Hunt</a>
                     <button class="hunt-card-send" data-hunt-id="${huntId}" data-skin="${style}">Send Invitation &mdash; $5</button>
                 </div>
                 <div class="hunt-card-addon">

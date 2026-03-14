@@ -1,7 +1,7 @@
 /* ============================================
    HAPPY HUNTING — Hunt Engine
    Envelope unlock, clue cards, answer validation,
-   clue pool shuffling, photo answers
+   difficulty levels, preview mode, photo answers
    ============================================ */
 
 const HappyHunting = {
@@ -10,10 +10,12 @@ const HappyHunting = {
     skin: 'ransom',
     wrongAttempts: 0,
     isInvite: false,
+    isPreview: false,
     senderName: '',
     recipientName: '',
     urlKey: '',
     hasPool: false,
+    difficultyLevel: 1,
     els: {},
     screens: {},
 
@@ -26,8 +28,10 @@ const HappyHunting = {
             'next-btn', 'arrival-bar', 'arrival-address',
             'arrival-hh', 'arrival-vibe', 'arrival-arc',
             'arrival-details', 'envelope-sender', 'unlock-feedback',
-            'envelope', 'code-row', 'dice-btn',
-            'answer-row-text', 'answer-row-photo', 'photo-done-btn'
+            'envelope', 'code-row', 'difficulty-ctrl',
+            'diff-level', 'diff-minus', 'diff-plus',
+            'answer-row-text', 'answer-row-photo', 'photo-done-btn',
+            'preview-prev', 'preview-next'
         ].forEach(id => {
             this.els[id] = document.getElementById(id);
         });
@@ -43,11 +47,18 @@ const HappyHunting = {
     async init() {
         this.cacheElements();
         const params = new URLSearchParams(window.location.search);
-        this.skin = params.get('skin') || 'ransom';
+        this.skin = params.get('skin') || '';
         this.senderName = params.get('from') || '';
         this.recipientName = params.get('to') || '';
         this.urlKey = params.get('key') || '';
         this.isInvite = !!(this.senderName && this.urlKey);
+
+        // Preview mode: no skin, or explicit preview param
+        this.isPreview = (!this.skin || this.skin === 'free' || params.get('preview') === '1') && !this.isInvite;
+
+        if (this.isPreview) {
+            this.skin = 'ransom'; // default body class, but text renders plain
+        }
 
         this.applySkin(this.skin);
 
@@ -121,7 +132,7 @@ const HappyHunting = {
         }
     },
 
-    // ---- Clue Pool ----
+    // ---- Clue Pool + Difficulty ----
     assembleSteps() {
         const pool = this.hunt.cluePool;
         const rings = [1, 2, 3];
@@ -132,17 +143,27 @@ const HappyHunting = {
         });
     },
 
-    shuffleClue() {
+    setDifficulty(level) {
+        if (level < 1) level = 1;
+        if (level > 10) level = 10;
+        this.difficultyLevel = level;
+        this.els['diff-level'].textContent = level;
+
         if (!this.hasPool) return;
+
+        // Pick clue based on difficulty: map level to available clues in this ring
         const currentRing = this.hunt.steps[this.currentStep].ring;
-        const currentClue = this.hunt.steps[this.currentStep].clue;
-        const candidates = this.hunt.cluePool.filter(
-            c => c.ring === currentRing && c.clue !== currentClue
-        );
+        const candidates = this.hunt.cluePool.filter(c => c.ring === currentRing);
         if (candidates.length === 0) return;
-        const pick = candidates[Math.floor(Math.random() * candidates.length)];
-        this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
-        this.renderClue();
+
+        // Map 1-10 difficulty across available clues
+        const index = Math.min(Math.floor((level - 1) / 10 * candidates.length), candidates.length - 1);
+        const pick = candidates[index];
+
+        if (pick.clue !== this.hunt.steps[this.currentStep].clue) {
+            this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
+            this.renderClueContent();
+        }
     },
 
     // ---- Skin ----
@@ -217,7 +238,16 @@ const HappyHunting = {
     // ---- Intro ----
     renderIntro() {
         this.els['hunt-theme'].textContent = this.hunt.theme;
+        const count = this.hunt.steps ? this.hunt.steps.length : 3;
+        const meta = document.getElementById('intro-meta');
+        if (meta) {
+            const label = this.isPreview ? 'Preview' : 'Start walking';
+            meta.innerHTML = `${count} clues. One destination.<br>${label}.`;
+        }
         if (this.isInvite) {
+            this.els['skin-selector'].style.display = 'none';
+        }
+        if (this.isPreview) {
             this.els['skin-selector'].style.display = 'none';
         }
         this.showScreen('intro');
@@ -227,36 +257,59 @@ const HappyHunting = {
     renderClue() {
         const step = this.hunt.steps[this.currentStep];
         this.els['step-label'].textContent = `Clue ${step.stepNumber} of ${this.hunt.steps.length}`;
-        this.renderClueText(step.clue);
 
-        // Show/hide dice button
-        this.els['dice-btn'].hidden = !this.hasPool;
+        this.renderClueContent();
 
-        // Photo vs text answer
-        const isPhoto = step.answerType === 'photo';
-        this.els['answer-row-text'].hidden = isPhoto;
-        this.els['answer-row-photo'].hidden = !isPhoto;
+        // Difficulty ctrl: show for pool hunts, hide in preview
+        this.els['difficulty-ctrl'].hidden = !this.hasPool || this.isPreview;
 
-        // Reset state
-        this.els['answer-section'].classList.remove('solved');
-        this.els['answer-input'].value = '';
-        this.els['answer-input'].disabled = false;
-        this.els['answer-feedback'].textContent = '';
-        this.els['answer-feedback'].className = 'answer-feedback';
-        this.els['fact-reveal'].classList.remove('visible');
-        this.wrongAttempts = 0;
+        if (this.isPreview) {
+            // Preview mode: hide answer section, show arrows
+            this.els['answer-section'].hidden = true;
+            this.els['fact-reveal'].classList.remove('visible');
+            this.els['preview-prev'].hidden = this.currentStep === 0;
+            this.els['preview-next'].hidden = this.currentStep === this.hunt.steps.length - 1;
+        } else {
+            // Interactive mode: show answers, hide preview arrows
+            this.els['answer-section'].hidden = false;
+            this.els['preview-prev'].hidden = true;
+            this.els['preview-next'].hidden = true;
 
-        const isLast = this.currentStep === this.hunt.steps.length - 1;
-        this.els['next-btn'].innerHTML = isLast ? 'You\'ve arrived &rarr;' : 'Next Clue &rarr;';
+            // Photo vs text answer
+            const isPhoto = step.answerType === 'photo';
+            this.els['answer-row-text'].hidden = isPhoto;
+            this.els['answer-row-photo'].hidden = !isPhoto;
+
+            // Reset state
+            this.els['answer-section'].classList.remove('solved');
+            this.els['answer-input'].value = '';
+            this.els['answer-input'].disabled = false;
+            this.els['answer-feedback'].textContent = '';
+            this.els['answer-feedback'].className = 'answer-feedback';
+            this.els['fact-reveal'].classList.remove('visible');
+            this.wrongAttempts = 0;
+
+            const isLast = this.currentStep === this.hunt.steps.length - 1;
+            this.els['next-btn'].innerHTML = isLast ? 'You\'ve arrived &rarr;' : 'Next Clue &rarr;';
+
+            if (!isPhoto) {
+                setTimeout(() => this.els['answer-input'].focus(), 500);
+            }
+        }
 
         this.showScreen('clue');
-        if (!isPhoto) {
-            setTimeout(() => this.els['answer-input'].focus(), 500);
-        }
+    },
+
+    renderClueContent() {
+        const step = this.hunt.steps[this.currentStep];
+        this.renderClueText(step.clue);
     },
 
     renderClueText(text) {
-        if (this.skin === 'ransom') {
+        if (this.isPreview) {
+            // Preview mode: always plain text
+            this.els['clue-text'].textContent = text;
+        } else if (this.skin === 'ransom') {
             this.els['clue-text'].innerHTML = this.renderRansomText(text);
         } else {
             this.els['clue-text'].textContent = text;
@@ -321,6 +374,11 @@ const HappyHunting = {
 
         this.els['fact-text'].textContent = step.historicalFact;
         setTimeout(() => this.els['fact-reveal'].classList.add('visible'), 400);
+
+        // Scroll next button into view on mobile
+        setTimeout(() => {
+            this.els['next-btn'].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 500);
     },
 
     onWrong(step) {
@@ -344,7 +402,25 @@ const HappyHunting = {
             this.showArrival();
         } else {
             this.currentStep++;
+            this.difficultyLevel = 1;
+            this.els['diff-level'].textContent = '1';
             this.renderClue();
+        }
+    },
+
+    prevClue() {
+        if (this.currentStep > 0) {
+            this.currentStep--;
+            this.renderClue();
+        }
+    },
+
+    previewNext() {
+        if (this.currentStep < this.hunt.steps.length - 1) {
+            this.currentStep++;
+            this.renderClue();
+        } else {
+            this.showArrival();
         }
     },
 
@@ -383,11 +459,16 @@ const HappyHunting = {
         // Photo done
         this.els['photo-done-btn'].addEventListener('click', () => this.solvePhoto());
 
-        // Dice shuffle
-        this.els['dice-btn'].addEventListener('click', () => this.shuffleClue());
+        // Difficulty controls
+        this.els['diff-plus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel + 1));
+        this.els['diff-minus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel - 1));
 
         // Next clue
         this.els['next-btn'].addEventListener('click', () => this.nextClue());
+
+        // Preview arrows
+        this.els['preview-prev'].addEventListener('click', () => this.prevClue());
+        this.els['preview-next'].addEventListener('click', () => this.previewNext());
 
         // Code digit inputs
         const digits = document.querySelectorAll('.code-digit');
@@ -408,6 +489,14 @@ const HappyHunting = {
                 }
             });
             input.addEventListener('focus', () => input.select());
+        });
+
+        // Keyboard arrows for preview mode
+        document.addEventListener('keydown', e => {
+            if (!this.isPreview) return;
+            if (document.activeElement.tagName === 'INPUT') return;
+            if (e.key === 'ArrowLeft') this.prevClue();
+            if (e.key === 'ArrowRight') this.previewNext();
         });
     }
 };
