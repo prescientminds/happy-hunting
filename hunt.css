@@ -591,6 +591,48 @@ body {
 
 
 /* ============================================
+   SKIN: PREVIEW — Clean, neutral read-through
+   ============================================ */
+
+body.skin-preview { background: #111; }
+
+.skin-preview .card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #e8e4dc;
+}
+.skin-preview .intro-label { color: #888; }
+.skin-preview .intro-theme {
+    font-family: 'Playfair Display', serif; font-weight: 700; color: #f5f0e8;
+}
+.skin-preview .intro-meta { color: #888; }
+.skin-preview .step-indicator { color: #888; }
+.skin-preview .clue-text {
+    font-size: 1.05em; line-height: 1.8; color: #e8e4dc;
+}
+.skin-preview .fact-divider { background: rgba(255, 255, 255, 0.1); }
+.skin-preview .fact-text { color: #999; }
+.skin-preview .action-btn { background: #c9a84c; color: #111; }
+.skin-preview .action-btn:hover { background: #d4b85c; }
+.skin-preview .see-answer-btn { color: #888; border-color: rgba(255,255,255,0.15); }
+.skin-preview .preview-answer-text { color: #c9a84c; }
+.skin-preview .arrival-bar {
+    font-family: 'Playfair Display', serif; font-weight: 700; color: #f5f0e8;
+}
+.skin-preview .arrival-label { color: #c9a84c; }
+.skin-preview .arrival-details {
+    background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.skin-preview .arrival-arc { color: #999; }
+.skin-preview .browse-link { color: #888; }
+.skin-preview .diff-label,
+.skin-preview .diff-of { color: #666; }
+.skin-preview .diff-level { color: #c9a84c; }
+.skin-preview .diff-btn { color: #888; border-color: rgba(255,255,255,0.1); }
+.skin-preview .diff-btn:hover { color: #c9a84c; border-color: rgba(201,168,76,0.3); }
+
+/* ============================================
    SKIN: RANSOM — Kraft paper, cut-out letters
    ============================================ */
 

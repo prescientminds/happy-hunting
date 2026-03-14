@@ -59,7 +59,7 @@ const HappyHunting = {
         this.isPreview = (!this.skin || this.skin === 'free' || params.get('preview') === '1') && !this.isInvite;
 
         if (this.isPreview) {
-            this.skin = 'ransom'; // default body class, but text renders plain
+            this.skin = 'preview';
             this.els['hunt-back'].hidden = false;
         }
 
