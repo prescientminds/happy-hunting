@@ -35,7 +35,8 @@ const HappyHunting = {
             'arrival-hh', 'arrival-vibe', 'arrival-arc',
             'arrival-details', 'envelope-sender', 'unlock-feedback',
             'envelope', 'code-row',
-            'difficulty-selector', 'diff-pips', 'diff-minus', 'diff-plus',
+            'difficulty-selector', 'diff-number', 'diff-minus', 'diff-plus',
+            'intro-next', 'intro-brand-graphic',
             'answer-selector', 'clue-lock-row', 'clue-lock-btn',
             'answer-row-text', 'answer-row-photo', 'photo-done-btn',
             'preview-prev', 'preview-next',
@@ -180,10 +181,8 @@ const HappyHunting = {
         if (level > max) level = max;
         this.difficultyLevel = level;
 
-        // Update pip active states
-        this.els['diff-pips'].querySelectorAll('.diff-pip').forEach(pip => {
-            pip.classList.toggle('active', parseInt(pip.dataset.level) === level);
-        });
+        // Update number display
+        this.els['diff-number'].textContent = level;
 
         if (!this.hasPool || sorted.length === 0) return;
 
@@ -194,21 +193,6 @@ const HappyHunting = {
             this.renderClueContent();
             this.resetPreviewAnswer();
             this.renderAnswerSelector();
-        }
-    },
-
-    renderDifficultyPips() {
-        const pipsEl = this.els['diff-pips'];
-        if (!pipsEl) return;
-        const candidates = this.getPoolForCurrentRing();
-        const count = candidates.length || 1;
-        pipsEl.innerHTML = '';
-        for (let i = 1; i <= count; i++) {
-            const pip = document.createElement('button');
-            pip.className = 'diff-pip' + (i === this.difficultyLevel ? ' active' : '');
-            pip.dataset.level = i;
-            pip.textContent = i;
-            pipsEl.appendChild(pip);
         }
     },
 
@@ -255,7 +239,7 @@ const HappyHunting = {
         const idx = sorted.indexOf(pick);
         if (idx >= 0) {
             this.difficultyLevel = idx + 1;
-            this.renderDifficultyPips();
+            this.els['diff-number'].textContent = idx + 1;
         }
         this.renderClueContent();
         this.resetPreviewAnswer();
@@ -353,7 +337,13 @@ const HappyHunting = {
             const label = this.isPreview ? 'Preview' : 'Start walking';
             meta.innerHTML = `${count} clues. One destination.<br>${label}.`;
         }
-        if (this.isInvite || this.isPreview) {
+        if (this.isPreview) {
+            // Preview: no begin button, show forward arrow + brand graphic
+            this.els['skin-selector'].style.display = 'none';
+            this.els['begin-btn'].hidden = true;
+            this.els['intro-next'].hidden = false;
+            this.els['intro-brand-graphic'].hidden = false;
+        } else if (this.isInvite) {
             this.els['skin-selector'].style.display = 'none';
         }
         this.showScreen('intro');
@@ -374,7 +364,7 @@ const HappyHunting = {
         const showDiff = this.hasPool && this.isPreview;
         this.els['difficulty-selector'].hidden = !showDiff;
         if (showDiff) {
-            this.renderDifficultyPips();
+            this.els['diff-number'].textContent = this.difficultyLevel;
         }
 
         if (this.isPreview) {
@@ -390,7 +380,6 @@ const HappyHunting = {
 
             // Preview tools
             this.els['clue-tools'].hidden = false;
-            this.els['dice-roll-wrap'].hidden = !this.hasPool;
             this.els['add-clue-btn'].hidden = false;
             this.isEditing = false;
             this.els['clue-text'].hidden = false;
@@ -408,7 +397,7 @@ const HappyHunting = {
             this.els['clue-lock-btn'].classList.toggle('locked', isLocked);
             this.els['difficulty-selector'].classList.toggle('locked', isLocked);
             this.els['answer-selector'].classList.toggle('locked', isLocked);
-            this.els['clue-body'].classList.toggle('clue-locked', isLocked || !!this.editedClues[this.currentStep]);
+            this.els['clue-body'].classList.toggle('clue-locked', isLocked);
 
             this.renderIntervention();
         } else {
@@ -418,7 +407,6 @@ const HappyHunting = {
             this.els['preview-prev'].hidden = true;
             this.els['preview-next'].hidden = true;
             this.els['clue-tools'].hidden = true;
-            this.els['dice-roll-wrap'].hidden = true;
             this.els['add-clue-btn'].hidden = true;
             this.els['visual-intervention'].innerHTML = '';
             this.els['answer-selector'].hidden = true;
@@ -579,8 +567,6 @@ const HappyHunting = {
         this.els['clue-edit-field'].hidden = true;
         this.els['clue-edit-btn'].hidden = false;
         this.els['clue-save-btn'].hidden = true;
-        // Save also locks
-        this.lockClue();
     },
 
     // ---- Dice Roll: Amor Fati ----
@@ -599,7 +585,7 @@ const HappyHunting = {
             const idx = sorted.indexOf(pick);
             if (idx >= 0) {
                 this.difficultyLevel = idx + 1;
-                this.renderDifficultyPips();
+                this.els['diff-number'].textContent = idx + 1;
             }
             this.renderAnswerSelector();
         }, 600);
@@ -804,8 +790,14 @@ const HappyHunting = {
 
     // ---- Events ----
     bindEvents() {
-        // Begin
+        // Begin (interactive mode)
         this.els['begin-btn'].addEventListener('click', () => {
+            this.currentStep = 0;
+            this.renderClue();
+        });
+
+        // Intro forward arrow (preview mode)
+        this.els['intro-next'].addEventListener('click', () => {
             this.currentStep = 0;
             this.renderClue();
         });
@@ -824,13 +816,9 @@ const HappyHunting = {
         // Photo done
         this.els['photo-done-btn'].addEventListener('click', () => this.solvePhoto());
 
-        // Difficulty controls — pips + step buttons
+        // Difficulty controls — +/- buttons
         this.els['diff-plus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel + 1));
         this.els['diff-minus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel - 1));
-        this.els['diff-pips'].addEventListener('click', e => {
-            const pip = e.target.closest('.diff-pip');
-            if (pip) this.setDifficulty(parseInt(pip.dataset.level));
-        });
 
         // Answer selector (delegated)
         this.els['answer-selector'].addEventListener('click', e => {

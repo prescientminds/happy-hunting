@@ -2175,10 +2175,6 @@ body.hh-landing {
 }
 .clue-save-btn:hover { background: #d4b85c; border-color: #d4b85c; }
 
-.dice-roll-wrap {
-    text-align: center;
-    margin: 16px 0;
-}
 .dice-roll-btn {
     display: inline-flex;
     align-items: center;
@@ -2229,17 +2225,41 @@ body.hh-landing {
 }
 .add-clue-btn:hover { opacity: 0.8; border-color: rgba(201, 168, 76, 0.4); }
 
-/* ---- Difficulty Pip Selector ---- */
+/* ---- Intro Brand Graphic ---- */
+.intro-brand-graphic {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    opacity: 0.15;
+    color: currentColor;
+}
+.intro-brand-graphic svg {
+    width: 100%;
+    height: 100%;
+}
+.preview-intro-next {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ---- Difficulty Selector ---- */
 .difficulty-selector {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     justify-content: center;
     padding: 12px 0 16px;
 }
+.diff-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .diff-step-btn {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2255,39 +2275,30 @@ body.hh-landing {
     flex-shrink: 0;
 }
 .diff-step-btn:hover { opacity: 1; border-color: rgba(201, 168, 76, 0.5); }
-.diff-pips {
+.diff-number-wrap {
     display: flex;
-    gap: 6px;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    min-width: 40px;
 }
-.diff-pip {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(128,128,128,0.25);
-    background: transparent;
-    color: inherit;
-    font-size: 0.65em;
-    font-family: inherit;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
+.diff-number {
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1;
+    color: #c9a84c;
+}
+.diff-label {
+    font-size: 0.55em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
     opacity: 0.5;
-    padding: 0;
+    margin-top: 2px;
 }
-.diff-pip:hover { opacity: 0.8; border-color: rgba(201, 168, 76, 0.4); }
-.diff-pip.active {
-    opacity: 1;
-    background: #c9a84c;
-    border-color: #c9a84c;
-    color: #111;
+.skin-ransom .diff-number { color: #3d2b1a; }
+.skin-napkin .diff-number { color: #5a5040; }
+.dice-roll-inline {
+    flex-shrink: 0;
 }
-.skin-ransom .diff-pip.active { background: #3d2b1a; border-color: #3d2b1a; color: #f5f0e8; }
-.skin-napkin .diff-pip.active { background: #5a5040; border-color: #5a5040; color: #f8f4ee; }
 
 /* ---- Answer Selector (pill bar) ---- */
 .answer-selector {
