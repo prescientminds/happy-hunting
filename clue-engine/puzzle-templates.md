@@ -196,3 +196,37 @@ After solving individual clues, answers feed into a final puzzle.
 
 ## NOTE ON "BLICK"
 No company found under this name in the scavenger hunt / outdoor puzzle space. May be remembered under a different name, or too small/local to be indexed. If more details surface, can research again.
+
+---
+
+## NYT GAME MAKERS: DESIGN PRINCIPLES
+
+Distilled from interviews with Tracy Bennett (Wordle/Strands editor), Wyna Liu (Connections), Everdeen Mason (Editorial Director), Zoe Bell (Executive Producer), Joel Fagliano (Mini Crossword), Heidi Erwin (Senior Game Designer).
+
+### Core Philosophy
+
+1. **Challenging but fair.** Never try to defeat the solver. The satisfaction of solving is what brings them back. (Tracy Bennett, citing Merle Reagle)
+
+2. **Solvable problems in an unsolvable world.** Puzzles offer relief because they have answers — unlike real life. This is the emotional contract. (Bennett)
+
+3. **Accessibility over exclusivity.** Serve diverse players. When clues cater to only one demographic, they lose meaning as collaborative experiences. (Everdeen Mason)
+
+4. **Every puzzle tells a story.** Solving is a conversation between creator and solver. The puzzle is a communication medium. (Mason)
+
+5. **Handmade over algorithmic.** Humor, wordplay, and calibrated difficulty are hard for AI. The joy of solving comes from knowing a human put it together for you. (Zoe Bell)
+
+6. **Find the fun fast, kill what doesn't work.** Prototype quickly, playtest internally, greenlight or cut. Many prototypes never reach testing. (Bell)
+
+7. **Difficulty creates satisfaction.** Too easy = no accomplishment. Design from both the solver's and creator's perspective simultaneously — 16 words, 4 categories, each carrying multiple possible interpretations. (Wyna Liu)
+
+8. **Social function matters as much as the puzzle.** "I use it to keep up with my friends from college." Spoiler-free shareability (Wordle's colored grid) was a design breakthrough. (Mason)
+
+9. **Looking up answers is learning, not cheating.** Refusing to look things up prevents learning and creates cycles of repeated mistakes. (Liu)
+
+### How to Apply to Happy Hunting Clues
+
+- **Fair difficulty curve:** Ring 1 (farthest) should be solvable with general knowledge + walking observation. Ring 3 (arrival) can require specialized local knowledge — the solver has earned it.
+- **Conversation, not quiz:** Each clue should feel like the hunt-maker is winking at the solver, not testing them. The historicalFact is the handshake after the solve.
+- **Social by default:** The "I'm stuck" call, the share mechanic, and the two-player send flow all serve connection. Clues should be fun to discuss, not just fun to solve.
+- **Handmade signals:** Ransom text, napkin lines, the dice roll — these telegraph human authorship. Avoid sterile, generated-feeling clue text.
+- **Kill boring clues fast:** If a clue doesn't make the writer smile, it won't make the solver smile. Every clue in the pool should earn its slot.
