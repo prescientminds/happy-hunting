@@ -40,7 +40,7 @@ const HappyHunting = {
             'answer-selector', 'clue-lock-row', 'clue-lock-btn',
             'answer-row-text', 'answer-row-photo', 'photo-done-btn',
             'preview-prev', 'preview-next',
-            'stuck-btn', 'see-answer-btn', 'preview-answer-section',
+            'stuck-btn', 'see-answer-btn', 'preview-answer-block',
             'preview-answer-text', 'hunt-back',
             'visual-intervention', 'clue-edit-field', 'clue-tools',
             'clue-edit-btn', 'clue-save-btn', 'dice-roll-wrap',
@@ -368,9 +368,9 @@ const HappyHunting = {
         }
 
         if (this.isPreview) {
-            // Preview mode: hide interactive answer, show preview answer + arrows
+            // Preview mode: hide interactive answer, show consolidated answer block
             this.els['answer-section'].hidden = true;
-            this.els['preview-answer-section'].hidden = false;
+            this.els['preview-answer-block'].hidden = false;
             this.els['see-answer-btn'].hidden = false;
             this.els['preview-answer-text'].textContent = '';
             this.els['preview-answer-text'].hidden = true;
@@ -387,12 +387,9 @@ const HappyHunting = {
             this.els['clue-edit-btn'].hidden = false;
             this.els['clue-save-btn'].hidden = true;
 
-            // Answer selector
+            // Answer selector + lock (inside consolidated block)
             this.renderAnswerSelector();
-
-            // Lock state
             const isLocked = !!this.lockedClues[this.currentStep];
-            this.els['clue-lock-row'].hidden = false;
             this.els['clue-lock-btn'].textContent = isLocked ? '\u2713 Locked' : 'Lock This Clue';
             this.els['clue-lock-btn'].classList.toggle('locked', isLocked);
             this.els['difficulty-selector'].classList.toggle('locked', isLocked);
@@ -403,14 +400,12 @@ const HappyHunting = {
         } else {
             // Interactive mode: show answers, hide preview elements
             this.els['answer-section'].hidden = false;
-            this.els['preview-answer-section'].hidden = true;
+            this.els['preview-answer-block'].hidden = true;
             this.els['preview-prev'].hidden = true;
             this.els['preview-next'].hidden = true;
             this.els['clue-tools'].hidden = true;
             this.els['add-clue-btn'].hidden = true;
             this.els['visual-intervention'].innerHTML = '';
-            this.els['answer-selector'].hidden = true;
-            this.els['clue-lock-row'].hidden = true;
 
             // Photo vs text answer
             const isPhoto = step.answerType === 'photo';

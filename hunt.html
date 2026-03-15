@@ -91,14 +91,23 @@
                         </button>
                     </div>
                 </div>
-                <div class="answer-selector" id="answer-selector" hidden></div>
-                <div class="clue-lock-row" id="clue-lock-row" hidden>
-                    <button class="clue-lock-btn" id="clue-lock-btn">Lock This Clue</button>
+                <!-- Preview: answer controls (consolidated) -->
+                <div class="preview-answer-block" id="preview-answer-block" hidden>
+                    <div class="answer-selector" id="answer-selector"></div>
+                    <div class="preview-answer-row">
+                        <button class="see-answer-btn" id="see-answer-btn">See Answer</button>
+                        <span class="preview-answer-text" id="preview-answer-text"></span>
+                    </div>
+                    <div class="clue-lock-row" id="clue-lock-row">
+                        <button class="clue-lock-btn" id="clue-lock-btn">Lock This Clue</button>
+                    </div>
                 </div>
+                <!-- Preview: edit tools -->
                 <div class="clue-tools" id="clue-tools" hidden>
                     <button class="clue-edit-btn" id="clue-edit-btn">Edit</button>
                     <button class="clue-save-btn" id="clue-save-btn" hidden>Save</button>
                 </div>
+                <!-- Interactive: answer input -->
                 <div class="answer-section" id="answer-section">
                     <div class="answer-row" id="answer-row-text">
                         <input type="text" id="answer-input" placeholder="Your answer..." autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
@@ -109,10 +118,6 @@
                     </div>
                     <p class="answer-feedback" id="answer-feedback"></p>
                     <button class="stuck-btn" id="stuck-btn" hidden><svg class="stuck-phone" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> <span class="stuck-text">I'm stuck</span></button>
-                </div>
-                <div class="preview-answer-section" id="preview-answer-section" hidden>
-                    <button class="see-answer-btn" id="see-answer-btn">See Answer</button>
-                    <p class="preview-answer-text" id="preview-answer-text"></p>
                 </div>
                 <button class="add-clue-btn" id="add-clue-btn" hidden>+ Add Clue &mdash; $1</button>
                 <div class="fact-reveal" id="fact-reveal">

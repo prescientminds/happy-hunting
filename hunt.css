@@ -317,10 +317,6 @@ body {
     animation-delay: 0.5s;
 }
 
-.preview-answer-section {
-    text-align: center;
-    margin-top: 12px;
-}
 .see-answer-btn {
     padding: 8px 20px;
     background: none;
@@ -335,7 +331,6 @@ body {
 }
 .see-answer-btn:hover { opacity: 1; }
 .preview-answer-text {
-    margin-top: 10px;
     font-size: 1.1em;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -2300,14 +2295,28 @@ body.hh-landing {
     flex-shrink: 0;
 }
 
+/* ---- Preview Answer Block (consolidated) ---- */
+.preview-answer-block {
+    text-align: center;
+    padding: 8px 0 4px;
+}
+.preview-answer-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0;
+}
+
 /* ---- Answer Selector (pill bar) ---- */
 .answer-selector {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
-    padding: 0 0 12px;
+    padding: 0 0 8px;
 }
+.answer-selector:empty { display: none; }
 .answer-pill {
     padding: 6px 14px;
     font-size: 0.75em;
