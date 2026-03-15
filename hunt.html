@@ -57,18 +57,26 @@
         <div id="clue-screen" class="screen">
             <button class="preview-arrow preview-prev" id="preview-prev" hidden>&lsaquo;</button>
             <div class="card clue-card">
+                <div class="visual-intervention" id="visual-intervention"></div>
                 <div class="step-header">
                     <div class="step-indicator" id="step-label">Clue 1 of 3</div>
-                    <div class="difficulty-ctrl" id="difficulty-ctrl" hidden>
-                        <span class="diff-label">Difficulty</span>
-                        <button class="diff-btn diff-minus" id="diff-minus">&minus;</button>
-                        <span class="diff-level" id="diff-level">1</span>
-                        <span class="diff-of" id="diff-of">/ 4</span>
-                        <button class="diff-btn diff-plus" id="diff-plus">+</button>
-                    </div>
                 </div>
                 <div class="clue-body" id="clue-body">
                     <div class="clue-text" id="clue-text"></div>
+                    <textarea class="clue-edit-field" id="clue-edit-field" hidden placeholder="Write your clue..."></textarea>
+                </div>
+                <div class="difficulty-selector" id="difficulty-selector" hidden>
+                    <button class="diff-step-btn diff-minus" id="diff-minus">&minus;</button>
+                    <div class="diff-pips" id="diff-pips"></div>
+                    <button class="diff-step-btn diff-plus" id="diff-plus">+</button>
+                </div>
+                <div class="answer-selector" id="answer-selector" hidden></div>
+                <div class="clue-lock-row" id="clue-lock-row" hidden>
+                    <button class="clue-lock-btn" id="clue-lock-btn">Lock This Clue</button>
+                </div>
+                <div class="clue-tools" id="clue-tools" hidden>
+                    <button class="clue-edit-btn" id="clue-edit-btn">Edit</button>
+                    <button class="clue-save-btn" id="clue-save-btn" hidden>Save</button>
                 </div>
                 <div class="answer-section" id="answer-section">
                     <div class="answer-row" id="answer-row-text">
@@ -79,12 +87,19 @@
                         <button id="photo-done-btn" class="photo-done-btn">I took the photo &checkmark;</button>
                     </div>
                     <p class="answer-feedback" id="answer-feedback"></p>
-                    <button class="stuck-btn" id="stuck-btn" hidden>I'm stuck</button>
+                    <button class="stuck-btn" id="stuck-btn" hidden><svg class="stuck-phone" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> <span class="stuck-text">I'm stuck</span></button>
                 </div>
                 <div class="preview-answer-section" id="preview-answer-section" hidden>
                     <button class="see-answer-btn" id="see-answer-btn">See Answer</button>
                     <p class="preview-answer-text" id="preview-answer-text"></p>
                 </div>
+                <div class="dice-roll-wrap" id="dice-roll-wrap" hidden>
+                    <button class="dice-roll-btn" id="dice-roll-btn">
+                        <svg class="dice-icon-svg" viewBox="0 0 24 24" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="7" cy="17" r="1.5" fill="currentColor"/><circle cx="17" cy="17" r="1.5" fill="currentColor"/></svg>
+                        <span class="dice-label">Amor Fati</span>
+                    </button>
+                </div>
+                <button class="add-clue-btn" id="add-clue-btn" hidden>+ Add Clue &mdash; $1</button>
                 <div class="fact-reveal" id="fact-reveal">
                     <button id="next-btn" class="action-btn">Next Clue &rarr;</button>
                     <div class="fact-divider"></div>
@@ -122,6 +137,20 @@
         </div>
 
     </div>
+
+    <!-- Cost subtotal bar (preview mode, added clues) -->
+    <div class="cost-bar" id="cost-bar" hidden>
+        <div class="cost-bar-info">
+            <span class="cost-bar-count" id="cost-bar-count">0 clues added</span>
+            <span class="cost-bar-total" id="cost-bar-total">$0</span>
+        </div>
+        <div class="cost-bar-promo">
+            <input type="text" id="cost-promo" placeholder="Promo code" autocomplete="off">
+            <button id="cost-promo-apply">Apply</button>
+        </div>
+        <button class="cost-bar-checkout" id="cost-checkout" disabled>Checkout &mdash; Coming Soon</button>
+    </div>
+    <script src="ransom-text.js"></script>
     <script src="hunt.js"></script>
 </body>
 </html>

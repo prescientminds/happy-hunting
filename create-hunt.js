@@ -1,7 +1,7 @@
 /* ============================================
-   CREATE A HUNT — Clue Builder + Live Preview
-   3-phase bar selection, dynamic clue list,
-   street suggestions, carousel preview, link gen
+   CREATE A HUNT — Card-by-Card Builder
+   Bar selection, auto-generated clues from KB,
+   confirm/edit/regenerate flow, carousel preview
    ============================================ */
 
 const CreateHunt = {
@@ -10,14 +10,15 @@ const CreateHunt = {
     selectedBar: null,
     currentSkin: 'ransom',
     currentCard: 0,
-    clues: [],
-    activeClueIndex: 0,
+    clues: [],          // Confirmed clues (backwards compat with carousel/link gen)
+    buildCards: [],      // All build cards (confirmed + current)
+    currentBuildCard: null,
+    _nearbySuggestions: [],
+    _usedStreetIndices: new Set(),
+    isEditingCard: false,
 
     async init() {
         await Promise.all([this.loadBars(), this.loadStreets()]);
-        this.addClue();
-        this.addClue();
-        this.addClue();
         this.bindEvents();
     },
 
@@ -25,7 +26,6 @@ const CreateHunt = {
         try {
             const res = await fetch('deals.json');
             const raw = await res.json();
-            // Deduplicate by restaurant name
             const seen = new Set();
             this.bars = raw.filter(b => {
                 const key = b.restaurant.toLowerCase();
@@ -63,7 +63,6 @@ const CreateHunt = {
         `).join('');
     },
 
-    // Phase 1 → Phase 2: Show pending confirmation
     selectBar(barId) {
         const bar = this.bars.find(b => b.id === barId);
         if (!bar) return;
@@ -79,7 +78,6 @@ const CreateHunt = {
         document.getElementById('bar-pending').hidden = false;
     },
 
-    // Phase 2 → Phase 3: Confirm bar, reveal builder
     confirmBar() {
         if (!this.selectedBar) return;
         document.getElementById('bar-pending').hidden = true;
@@ -89,88 +87,49 @@ const CreateHunt = {
             `${this.selectedBar.neighborhood} — ${this.selectedBar.address || ''}`;
         document.getElementById('bar-confirmed').hidden = false;
 
+        this.loadNearbySuggestions();
         this.showSuggestions();
         document.getElementById('clues-section').hidden = false;
-        document.getElementById('generate-section').hidden = false;
-        this.renderCarousel();
+
+        // Auto-generate first card
+        this.buildNextCard();
     },
 
-    // Reset to Phase 1
     changeBar() {
         this.selectedBar = null;
+        this.buildCards = [];
+        this.clues = [];
+        this.currentBuildCard = null;
+        this._usedStreetIndices.clear();
         document.getElementById('bar-pending').hidden = true;
         document.getElementById('bar-confirmed').hidden = true;
         document.getElementById('bar-search-wrap').hidden = false;
         document.getElementById('suggestions-section').hidden = true;
         document.getElementById('clues-section').hidden = true;
         document.getElementById('generate-section').hidden = true;
+        document.getElementById('build-card').hidden = true;
+        document.getElementById('build-cards-summary').innerHTML = '';
+        document.getElementById('add-stop-btn').hidden = true;
         document.getElementById('bar-search').value = '';
         document.getElementById('bar-search').focus();
     },
 
-    // ---- Dynamic Clue List ----
-    addClue() {
-        const index = this.clues.length;
-        this.clues.push({ text: '', answer: '' });
-        this.renderClueList();
-        this.setActiveClue(index);
-    },
-
-    removeClue(index) {
-        if (this.clues.length <= 1) return;
-        this.clues.splice(index, 1);
-        if (this.activeClueIndex >= this.clues.length) {
-            this.activeClueIndex = this.clues.length - 1;
-        }
-        this.renderClueList();
-        this.renderCarousel();
-    },
-
-    renderClueList() {
-        const list = document.getElementById('clue-list');
-        list.innerHTML = this.clues.map((clue, i) => {
-            const isLast = i === this.clues.length - 1;
-            const label = isLast ? `Clue ${i + 1} (final — leads to bar)` : `Clue ${i + 1}`;
-            const active = i === this.activeClueIndex ? ' clue-item--active' : '';
-            return `
-            <div class="clue-item${active}" data-index="${i}">
-                <div class="clue-item-header">
-                    <span class="clue-item-label">${label}</span>
-                    ${this.clues.length > 1 ? `<button class="clue-remove-btn" data-remove="${i}">&times;</button>` : ''}
-                </div>
-                <textarea class="clue-item-text" data-field="text" data-index="${i}" placeholder="Write the clue..." rows="3">${clue.text}</textarea>
-                <input class="clue-item-answer" data-field="answer" data-index="${i}" placeholder="Answer (street name, place, word...)" value="${clue.answer}">
-            </div>`;
-        }).join('');
-    },
-
-    setActiveClue(index) {
-        this.activeClueIndex = index;
-        document.querySelectorAll('.clue-item').forEach((el, i) => {
-            el.classList.toggle('clue-item--active', i === index);
-        });
-    },
-
-    onClueInput(index, field, value) {
-        if (index < this.clues.length) {
-            this.clues[index][field] = value;
-            this.updateCardPreview(index);
-        }
-    },
-
     // ---- Street Suggestions ----
-    showSuggestions() {
+    loadNearbySuggestions() {
         const hood = this.selectedBar.neighborhood.toLowerCase();
-        const nearby = this.streets.filter(s => {
+        this._nearbySuggestions = this.streets.filter(s => {
             if (!s.neighborhoods) return false;
             return s.neighborhoods.some(n =>
                 n.toLowerCase().includes(hood) || hood.includes(n.toLowerCase())
             );
         });
+    },
 
+    showSuggestions() {
+        const nearby = this._nearbySuggestions;
         const grid = document.getElementById('suggestions-grid');
         if (nearby.length === 0) {
-            grid.innerHTML = '<p class="no-suggestions">No street facts found for this neighborhood yet. Write your own clues below.</p>';
+            grid.innerHTML = '<p class="no-suggestions">No street facts found for this neighborhood yet.</p>';
         } else {
             grid.innerHTML = nearby.map((s, i) => `
                 <button class="suggestion-card" data-index="${i}">
@@ -179,38 +138,164 @@ const CreateHunt = {
                     <div class="suggestion-fact">${s.facts && s.facts[0] ? s.facts[0] : ''}</div>
                 </button>
             `).join('');
-            this._nearbySuggestions = nearby;
         }
         document.getElementById('suggestions-section').hidden = false;
     },
 
     useSuggestion(index) {
-        const street = this._nearbySuggestions && this._nearbySuggestions[index];
+        const street = this._nearbySuggestions[index];
         if (!street) return;
+        this._usedStreetIndices.add(index);
+        const text = this.generateClueText(street);
+        this.currentBuildCard = { text, answer: street.street, street, confirmed: false };
+        this.renderBuildCard();
+    },
 
+    // ---- Clue Text Generation ----
+    generateClueText(street) {
         const facts = street.facts || [];
         const who = street.who || street.namedAfter || 'someone';
         const year = street.year || '';
         const mainFact = facts[0] || '';
 
-        let template = '';
         if (year && mainFact) {
-            template = `In ${year}, ${who} ${mainFact.charAt(0).toLowerCase() + mainFact.slice(1)} Find the street named in their honor.`;
+            return `In ${year}, ${who} ${mainFact.charAt(0).toLowerCase() + mainFact.slice(1)} Find the street named in their honor.`;
         } else if (mainFact) {
-            template = `${mainFact} Find the street that bears this name.`;
-        } else {
-            template = `This street was named after ${who}. Find it.`;
+            return `${mainFact} Find the street that bears this name.`;
+        }
+        return `This street was named after ${who}. Find it.`;
+    },
+
+    // ---- Card-by-Card Build Flow ----
+    buildNextCard() {
+        // Pick an unused nearby street
+        const nearby = this._nearbySuggestions;
+        let pick = null;
+        for (let i = 0; i < nearby.length; i++) {
+            if (!this._usedStreetIndices.has(i)) {
+                pick = nearby[i];
+                this._usedStreetIndices.add(i);
+                break;
+            }
         }
 
-        const i = this.activeClueIndex;
-        this.clues[i].text = template;
-        this.clues[i].answer = street.street;
-        this.renderClueList();
-        this.updateCardPreview(i);
+        if (pick) {
+            const text = this.generateClueText(pick);
+            this.currentBuildCard = { text, answer: pick.street, street: pick, confirmed: false };
+        } else {
+            // No more nearby streets — blank card for manual entry
+            this.currentBuildCard = { text: '', answer: '', street: null, confirmed: false };
+        }
 
-        // Scroll to the clue
-        const clueEl = document.querySelector(`.clue-item[data-index="${i}"]`);
-        if (clueEl) clueEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        this.isEditingCard = !this.currentBuildCard.text;
+        this.renderBuildCard();
+    },
+
+    renderBuildCard() {
+        const card = this.currentBuildCard;
+        if (!card) return;
+
+        const cardEl = document.getElementById('build-card');
+        const num = this.buildCards.length + 1;
+        cardEl.hidden = false;
+
+        document.getElementById('build-card-label').textContent = `Clue ${num}`;
+        document.getElementById('build-card-answer').textContent = card.answer || '?';
+
+        const textEl = document.getElementById('build-card-text');
+        const editEl = document.getElementById('build-card-edit');
+        const actionsEl = document.getElementById('build-card-actions');
+
+        if (this.isEditingCard) {
+            textEl.hidden = true;
+            editEl.hidden = false;
+            editEl.value = card.text;
+            editEl.focus();
+            actionsEl.innerHTML = `
+                <button class="build-btn build-btn-confirm" id="build-save">Save</button>
+                ${card.street ? '<button class="build-btn build-btn-regen" id="build-regen">Regenerate</button>' : ''}
+            `;
+        } else {
+            textEl.hidden = false;
+            textEl.textContent = card.text;
+            editEl.hidden = true;
+            actionsEl.innerHTML = `
+                <button class="build-btn build-btn-confirm" id="build-confirm">Confirm</button>
+                <button class="build-btn build-btn-edit" id="build-edit">Edit</button>
+                ${card.street ? '<button class="build-btn build-btn-regen" id="build-regen">Regenerate</button>' : ''}
+            `;
+        }
+
+        // Scroll card into view
+        cardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    },
+
+    confirmBuildCard() {
+        const card = this.currentBuildCard;
+        if (!card || !card.text.trim()) return;
+
+        // If no answer set, prompt (shouldn't happen with auto-gen but safety)
+        if (!card.answer.trim()) {
+            const answer = prompt('What is the answer to this clue?');
+            if (!answer) return;
+            card.answer = answer;
+        }
+
+        card.confirmed = true;
+        this.buildCards.push({ ...card });
+        this.clues.push({ text: card.text, answer: card.answer });
+        this.currentBuildCard = null;
+
+        this.renderBuildSummary();
+        document.getElementById('build-card').hidden = true;
+
+        const count = this.buildCards.length;
+        if (count >= 3) {
+            // Show "Add Another" + link generation
+            document.getElementById('add-stop-btn').hidden = false;
+            document.getElementById('generate-section').hidden = false;
+            this.renderCarousel();
+        } else {
+            // Auto-generate next card
+            this.buildNextCard();
+        }
+    },
+
+    regenerateCard() {
+        const nearby = this._nearbySuggestions;
+        // Find an unused street
+        let pick = null;
+        for (let i = 0; i < nearby.length; i++) {
+            if (!this._usedStreetIndices.has(i)) {
+                pick = nearby[i];
+                this._usedStreetIndices.add(i);
+                break;
+            }
+        }
+        if (pick) {
+            this.currentBuildCard = {
+                text: this.generateClueText(pick),
+                answer: pick.street,
+                street: pick,
+                confirmed: false
+            };
+            this.isEditingCard = false;
+            this.renderBuildCard();
+        }
+    },
+
+    renderBuildSummary() {
+        const el = document.getElementById('build-cards-summary');
+        el.innerHTML = this.buildCards.map((card, i) => `
+            <div class="build-summary-card">
+                <span class="build-summary-check">&#10003;</span>
+                <div class="build-summary-body">
+                    <div class="build-summary-label">Clue ${i + 1}</div>
+                    <div class="build-summary-text">${card.text}</div>
+                </div>
+                <span class="build-summary-answer">${card.answer}</span>
+            </div>
+        `).join('');
     },
 
     // ---- Carousel ----
@@ -254,7 +339,7 @@ const CreateHunt = {
             return;
         }
         if (this.currentSkin === 'ransom') {
-            textEl.innerHTML = this.renderRansomText(text);
+            textEl.innerHTML = renderRansomText(text);
         } else {
             textEl.textContent = text;
         }
@@ -284,28 +369,15 @@ const CreateHunt = {
 
     // ---- Link Generation ----
     generateLink() {
-        // Validate all clues have text and answer
+        if (this.clues.length === 0) return;
+
         for (let i = 0; i < this.clues.length; i++) {
-            if (!this.clues[i].text.trim()) {
-                this.setActiveClue(i);
-                this.renderClueList();
-                const el = document.querySelector(`.clue-item[data-index="${i}"] .clue-item-text`);
-                if (el) el.focus();
-                return;
-            }
-            if (!this.clues[i].answer.trim()) {
-                this.setActiveClue(i);
-                this.renderClueList();
-                const el = document.querySelector(`.clue-item[data-index="${i}"] .clue-item-answer`);
-                if (el) el.focus();
-                return;
-            }
+            if (!this.clues[i].text.trim() || !this.clues[i].answer.trim()) return;
         }
 
         const theme = document.getElementById('hunt-theme-input').value.trim() || 'A Custom Hunt';
         const bar = this.selectedBar;
 
-        // Compact JSON
         const data = {
             t: theme,
             b: `${bar.restaurant}|${bar.address || ''}|${bar.neighborhood}`,
@@ -327,32 +399,35 @@ const CreateHunt = {
         document.getElementById('create-link').value = url.toString();
     },
 
+    // ---- Clipboard ----
+    async _copy(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            try { await navigator.clipboard.writeText(text); return true; } catch (e) { /* fall through */ }
+        }
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        ta.setSelectionRange(0, 99999);
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { /* noop */ }
+        document.body.removeChild(ta);
+        return ok;
+    },
+
     async copyLink() {
         const input = document.getElementById('create-link');
         const btn = document.getElementById('create-copy');
-        try {
-            await navigator.clipboard.writeText(input.value);
+        const copied = await this._copy(input.value);
+        if (copied) {
             const orig = btn.textContent;
             btn.textContent = 'Copied!';
             setTimeout(() => { btn.textContent = orig; }, 2000);
-        } catch (e) {
+        } else {
             input.select();
         }
-    },
-
-    // ---- Ransom Text ----
-    renderRansomText(text) {
-        const fonts = [
-            'Georgia,serif', '"Arial Black",sans-serif', '"Courier New",monospace',
-            '"Times New Roman",serif', '"Special Elite",cursive', '"Playfair Display",serif'
-        ];
-        const bgs = ['#ffffff', '#fff8dc', '#ffe4e1', '#e8f4f8', '#f0ffe0', '#f5f5dc'];
-        const rots = [-2, -1, 0, 0, 1, 2];
-        const pick = a => a[Math.floor(Math.random() * a.length)];
-
-        return text.split(/\s+/).filter(w => w).map(word =>
-            `<span class="ransom-word" style="font-family:${pick(fonts)};background:${pick(bgs)};transform:rotate(${pick(rots)}deg);font-size:${Math.random() > 0.5 ? '0.9em' : '1em'}">${word}</span>`
-        ).join('');
     },
 
     // ---- Events ----
@@ -376,47 +451,40 @@ const CreateHunt = {
         // Change bar (from confirmed)
         document.getElementById('bar-change').addEventListener('click', () => this.changeBar());
 
-        // Suggestions
+        // Suggestions — tap to use in current build card
         document.getElementById('suggestions-grid').addEventListener('click', e => {
             const card = e.target.closest('.suggestion-card');
             if (card) this.useSuggestion(parseInt(card.dataset.index));
         });
 
-        // Clue list — delegated events
-        document.getElementById('clue-list').addEventListener('click', e => {
-            // Remove button
-            const removeBtn = e.target.closest('.clue-remove-btn');
-            if (removeBtn) {
-                this.removeClue(parseInt(removeBtn.dataset.remove));
-                return;
-            }
-            // Click on clue item to activate
-            const item = e.target.closest('.clue-item');
-            if (item && !e.target.closest('textarea') && !e.target.closest('input')) {
-                this.setActiveClue(parseInt(item.dataset.index));
+        // Build card actions (delegated — buttons are re-rendered)
+        document.getElementById('build-card').addEventListener('click', e => {
+            const btn = e.target.closest('.build-btn');
+            if (!btn) return;
+            if (btn.id === 'build-confirm') {
+                this.confirmBuildCard();
+            } else if (btn.id === 'build-save') {
+                // Save edited text
+                const editEl = document.getElementById('build-card-edit');
+                this.currentBuildCard.text = editEl.value.trim();
+                // If no answer, prompt
+                if (!this.currentBuildCard.answer) {
+                    const answer = prompt('What is the answer to this clue?');
+                    if (answer) this.currentBuildCard.answer = answer;
+                }
+                this.isEditingCard = false;
+                this.renderBuildCard();
+            } else if (btn.id === 'build-edit') {
+                this.isEditingCard = true;
+                this.renderBuildCard();
+            } else if (btn.id === 'build-regen') {
+                this.regenerateCard();
             }
         });
 
-        document.getElementById('clue-list').addEventListener('input', e => {
-            const el = e.target;
-            if (el.dataset.field && el.dataset.index !== undefined) {
-                this.onClueInput(parseInt(el.dataset.index), el.dataset.field, el.value);
-            }
-        });
-
-        document.getElementById('clue-list').addEventListener('focus', e => {
-            const el = e.target;
-            if (el.dataset.index !== undefined) {
-                this.setActiveClue(parseInt(el.dataset.index));
-            }
-        }, true);
-
-        // Add stop
+        // Add another clue (after 3+)
         document.getElementById('add-stop-btn').addEventListener('click', () => {
-            this.addClue();
-            if (!document.getElementById('generate-section').hidden) {
-                this.renderCarousel();
-            }
+            this.buildNextCard();
         });
 
         // Carousel nav

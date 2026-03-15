@@ -43,12 +43,13 @@ const HappyHuntingLanding = {
                 <div class="hunt-card-hood">${hunt.bar.neighborhood}</div>
                 <div class="hunt-card-theme">${hunt.theme}</div>
                 <div class="hunt-card-meta">${hunt.totalWalkingDistance} walk &middot; 3 clues &middot; ${hunt.cluePool.length} variations</div>
+                <div class="hunt-card-price">$5</div>
                 <div class="hunt-card-styles">
                     <button class="style-btn active" data-style="free" data-hunt="${hunt.huntId}">Basic</button>
                     <span class="style-divider"></span>
-                    <button class="style-btn style-btn-premium" data-style="ransom" data-hunt="${hunt.huntId}">Ransom</button>
-                    <button class="style-btn style-btn-premium" data-style="script" data-hunt="${hunt.huntId}">Script</button>
-                    <button class="style-btn style-btn-premium" data-style="napkin" data-hunt="${hunt.huntId}">Napkin</button>
+                    <button class="style-btn style-btn-premium" data-style="ransom" data-hunt="${hunt.huntId}"><span class="premium-pip">&#10022;</span> Ransom</button>
+                    <button class="style-btn style-btn-premium" data-style="script" data-hunt="${hunt.huntId}"><span class="premium-pip">&#10022;</span> Script</button>
+                    <button class="style-btn style-btn-premium" data-style="napkin" data-hunt="${hunt.huntId}"><span class="premium-pip">&#10022;</span> Napkin</button>
                 </div>
                 <div class="hunt-card-preview" id="preview-${hunt.huntId}"></div>
                 <div class="hunt-card-bottom" id="bottom-${hunt.huntId}">
@@ -73,17 +74,14 @@ const HappyHuntingLanding = {
         if (style === 'free') {
             preview.innerHTML = '';
             preview.className = 'hunt-card-preview';
-            bottom.innerHTML = `
-                <a href="hunt.html?hunt=${huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>
-                <button class="hunt-card-copy" data-hunt-id="${huntId}">Copy Link</button>
-            `;
         } else {
             this.renderPreview(huntId, style, hunt);
-            bottom.innerHTML = `
-                <a href="hunt.html?hunt=${huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>
-                <button class="hunt-card-send" data-hunt-id="${huntId}" data-skin="${style}">Send Invitation &mdash; $5</button>
-            `;
         }
+
+        const secondBtn = style === 'free'
+            ? `<button class="hunt-card-copy" data-hunt-id="${huntId}">Copy Link</button>`
+            : `<button class="hunt-card-send" data-hunt-id="${huntId}" data-skin="${style}">Send Invitation &mdash; $5</button>`;
+        bottom.innerHTML = `<a href="hunt.html?hunt=${huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>${secondBtn}`;
     },
 
     // ---- Preview Rendering ----
@@ -91,7 +89,7 @@ const HappyHuntingLanding = {
         const preview = document.getElementById(`preview-${huntId}`);
         const firstClue = hunt.steps[0].clue;
         const clueHtml = skin === 'ransom'
-            ? this.renderRansomText(firstClue)
+            ? renderRansomText(firstClue)
             : `<span>${firstClue}</span>`;
 
         preview.className = `hunt-card-preview preview-${skin} visible`;
@@ -102,42 +100,36 @@ const HappyHuntingLanding = {
         `;
     },
 
-    renderRansomText(text) {
-        const fonts = [
-            'Georgia,serif', '"Arial Black",sans-serif', '"Courier New",monospace',
-            '"Times New Roman",serif', 'Impact,sans-serif', '"Special Elite",cursive',
-            '"Playfair Display",serif', 'Verdana,sans-serif'
-        ];
-        const bgs = [
-            '#ffffff', '#fff8dc', '#ffe4e1', '#e8f4f8', '#f0ffe0',
-            '#fff0f5', '#f5f5dc', '#e6e6fa', '#fdf5e6', '#f0f8ff'
-        ];
-        const rots = [-3, -2.5, -1.5, -1, 0, 0, 0, 1, 1.5, 2.5, 3];
-        const sizes = ['0.82em', '0.88em', '0.92em', '1em', '1em', '1.05em', '1.1em'];
-        const pick = a => a[Math.floor(Math.random() * a.length)];
-
-        return text.split(/\s+/).map(word => {
-            const bold = Math.random() > 0.75 ? 'font-weight:700;' : '';
-            return `<span class="ransom-word" style="font-family:${pick(fonts)};background:${pick(bgs)};transform:rotate(${pick(rots)}deg);font-size:${pick(sizes)};${bold}">${word}</span>`;
-        }).join('');
+    // ---- Clipboard Helper ----
+    async _copy(text) {
+        // Modern API — only works in secure contexts (HTTPS/localhost)
+        if (navigator.clipboard && window.isSecureContext) {
+            try { await navigator.clipboard.writeText(text); return true; } catch (e) { /* fall through */ }
+        }
+        // Fallback for HTTP: temporary textarea + execCommand
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        ta.setSelectionRange(0, 99999);
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { /* noop */ }
+        document.body.removeChild(ta);
+        return ok;
     },
 
     // ---- Free Link Copy ----
     async copyFreeLink(huntId) {
-        const base = window.location.href.replace('happy-hunting.html', 'hunt.html');
-        const url = new URL(base);
-        url.search = '';
-        url.searchParams.set('hunt', huntId);
-        try {
-            await navigator.clipboard.writeText(url.toString());
-            const btn = document.querySelector(`.hunt-card-copy[data-hunt-id="${huntId}"]`);
-            if (btn) {
-                const orig = btn.textContent;
-                btn.textContent = 'Copied!';
-                setTimeout(() => { btn.textContent = orig; }, 2000);
-            }
-        } catch (e) {
-            prompt('Copy this link:', url.toString());
+        const base = window.location.href.replace(/happy-hunting\.html.*$/, 'hunt.html');
+        const url = `${base}?h=${encodeURIComponent(btoa(huntId).replace(/=/g, ''))}`;
+        const copied = await this._copy(url);
+        const btn = document.querySelector(`.hunt-card-copy[data-hunt-id="${huntId}"]`);
+        if (btn && copied) {
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => { btn.textContent = orig; }, 2000);
         }
     },
 
@@ -206,10 +198,10 @@ const HappyHuntingLanding = {
         const last4 = phone.slice(-4);
         const key = btoa(last4 + ':' + this.selectedHunt.huntId).replace(/=/g, '');
 
-        const base = window.location.href.replace('happy-hunting.html', 'hunt.html');
+        const base = window.location.href.replace(/happy-hunting\.html.*$/, 'hunt.html');
         const url = new URL(base);
         url.search = '';
-        url.searchParams.set('hunt', this.selectedHunt.huntId);
+        url.searchParams.set('h', btoa(this.selectedHunt.huntId).replace(/=/g, ''));
         url.searchParams.set('skin', this.selectedSkin);
         url.searchParams.set('from', senderName);
         url.searchParams.set('to', recipientName);
@@ -224,12 +216,23 @@ const HappyHuntingLanding = {
     async copyLink() {
         const input = document.getElementById('send-link');
         const btn = document.getElementById('send-copy');
-        try {
-            await navigator.clipboard.writeText(input.value);
+        let copied = false;
+        // Try modern clipboard API first (HTTPS only)
+        if (navigator.clipboard && window.isSecureContext) {
+            try { await navigator.clipboard.writeText(input.value); copied = true; } catch (e) { /* fall through */ }
+        }
+        // Fallback: select the visible input and execCommand
+        if (!copied) {
+            input.focus();
+            input.select();
+            input.setSelectionRange(0, 99999);
+            try { copied = document.execCommand('copy'); } catch (e) { /* noop */ }
+        }
+        if (copied) {
             const orig = btn.textContent;
             btn.textContent = 'Copied!';
             setTimeout(() => { btn.textContent = orig; }, 2000);
-        } catch (e) {
+        } else {
             input.select();
         }
     },

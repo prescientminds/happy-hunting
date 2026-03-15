@@ -53,15 +53,30 @@
             <div class="suggestions-grid" id="suggestions-grid"></div>
         </section>
 
-        <!-- Step 2: Build Clues -->
+        <!-- Step 2: Build Clues (card-by-card) -->
         <section class="create-section" id="clues-section" hidden>
             <h2 class="create-section-title">2. Build your clues</h2>
 
-            <!-- Clue list -->
-            <div class="clue-list" id="clue-list">
-                <!-- Rendered by JS -->
+            <!-- Completed cards summary -->
+            <div class="build-cards-summary" id="build-cards-summary"></div>
+
+            <!-- Active build card -->
+            <div class="build-card" id="build-card" hidden>
+                <div class="build-card-header">
+                    <span class="build-card-label" id="build-card-label">Clue 1</span>
+                    <span class="build-card-answer" id="build-card-answer"></span>
+                </div>
+                <div class="build-card-text" id="build-card-text"></div>
+                <textarea class="build-card-edit" id="build-card-edit" hidden rows="4" placeholder="Edit the clue..."></textarea>
+                <div class="build-card-actions" id="build-card-actions">
+                    <button class="build-btn build-btn-confirm" id="build-confirm">Confirm</button>
+                    <button class="build-btn build-btn-edit" id="build-edit">Edit</button>
+                    <button class="build-btn build-btn-regen" id="build-regen">Regenerate</button>
+                </div>
             </div>
-            <button class="add-stop-btn" id="add-stop-btn">+ Add Stop</button>
+
+            <!-- Add another (shown after 3+ confirmed) -->
+            <button class="add-stop-btn" id="add-stop-btn" hidden>+ Add Another Clue</button>
         </section>
 
         <!-- Step 3: Preview + Generate -->
@@ -105,6 +120,7 @@
 
     </main>
 
+    <script src="ransom-text.js"></script>
     <script src="create-hunt.js"></script>
 </body>
 </html>
