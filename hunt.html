@@ -71,41 +71,34 @@
                 <div class="step-header">
                     <div class="step-indicator" id="step-label">Clue 1 of 3</div>
                 </div>
+                <!-- Amor Fati: above the clue -->
+                <div class="amor-fati-row" id="amor-fati-row" hidden>
+                    <button class="dice-roll-btn" id="dice-roll-btn">
+                        <svg class="dice-icon-svg" viewBox="0 0 24 24" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="7" cy="17" r="1.5" fill="currentColor"/><circle cx="17" cy="17" r="1.5" fill="currentColor"/></svg>
+                        <span class="dice-label">Amor Fati</span>
+                    </button>
+                </div>
                 <div class="clue-body" id="clue-body">
                     <div class="clue-text" id="clue-text"></div>
                     <textarea class="clue-edit-field" id="clue-edit-field" hidden placeholder="Write your clue..."></textarea>
                 </div>
+                <!-- Difficulty: 1-10 pip bar -->
                 <div class="difficulty-selector" id="difficulty-selector" hidden>
-                    <div class="diff-controls">
-                        <button class="diff-step-btn" id="diff-minus">&minus;</button>
-                        <div class="diff-number-wrap">
-                            <span class="diff-number" id="diff-number">1</span>
-                            <span class="diff-label">Difficulty</span>
-                        </div>
-                        <button class="diff-step-btn" id="diff-plus">+</button>
-                    </div>
-                    <div class="dice-roll-inline" id="dice-roll-wrap">
-                        <button class="dice-roll-btn" id="dice-roll-btn">
-                            <svg class="dice-icon-svg" viewBox="0 0 24 24" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="7" cy="17" r="1.5" fill="currentColor"/><circle cx="17" cy="17" r="1.5" fill="currentColor"/></svg>
-                            <span class="dice-label">Amor Fati</span>
-                        </button>
-                    </div>
+                    <button class="diff-step-btn" id="diff-minus">&minus;</button>
+                    <div class="diff-pips" id="diff-pips"></div>
+                    <button class="diff-step-btn" id="diff-plus">+</button>
                 </div>
-                <!-- Preview: answer controls (consolidated) -->
+                <!-- Preview: answer + tools row -->
                 <div class="preview-answer-block" id="preview-answer-block" hidden>
-                    <div class="answer-selector" id="answer-selector"></div>
                     <div class="preview-answer-row">
                         <button class="see-answer-btn" id="see-answer-btn">See Answer</button>
                         <span class="preview-answer-text" id="preview-answer-text"></span>
                     </div>
-                    <div class="clue-lock-row" id="clue-lock-row">
+                    <div class="clue-actions-row" id="clue-actions-row">
                         <button class="clue-lock-btn" id="clue-lock-btn">Lock This Clue</button>
+                        <button class="clue-edit-btn" id="clue-edit-btn">Edit</button>
+                        <button class="clue-save-btn" id="clue-save-btn" hidden>Save</button>
                     </div>
-                </div>
-                <!-- Preview: edit tools -->
-                <div class="clue-tools" id="clue-tools" hidden>
-                    <button class="clue-edit-btn" id="clue-edit-btn">Edit</button>
-                    <button class="clue-save-btn" id="clue-save-btn" hidden>Save</button>
                 </div>
                 <!-- Interactive: answer input -->
                 <div class="answer-section" id="answer-section">
