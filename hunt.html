@@ -40,6 +40,7 @@
 
         <!-- Intro -->
         <div id="intro-screen" class="screen">
+            <div class="intro-wrapper">
             <div class="card intro-card">
                 <div class="intro-brand-graphic" id="intro-brand-graphic">
                     <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="0.6">
@@ -58,14 +59,18 @@
                     <button class="skin-btn" data-skin="script"><span class="skin-swatch script-swatch"></span>Script</button>
                     <button class="skin-btn" data-skin="napkin"><span class="skin-swatch napkin-swatch"></span>Napkin</button>
                 </div>
+                <button id="preview-start-btn" class="preview-start-btn" hidden>Start</button>
                 <button id="begin-btn" class="action-btn">Begin</button>
             </div>
             <button class="preview-arrow preview-intro-next" id="intro-next" hidden>&rsaquo;</button>
+            </div>
         </div>
 
         <!-- Clue -->
         <div id="clue-screen" class="screen">
+            <div class="preview-carousel" id="preview-carousel">
             <button class="preview-arrow preview-prev" id="preview-prev" hidden>&lsaquo;</button>
+            <div class="peek-card peek-prev" id="peek-prev" hidden></div>
             <div class="card clue-card">
                 <div class="visual-intervention" id="visual-intervention"></div>
                 <div class="step-header">
@@ -84,6 +89,7 @@
                 </div>
                 <!-- Difficulty: 1-10 pip bar -->
                 <div class="difficulty-selector" id="difficulty-selector" hidden>
+                    <span class="diff-label-text">Difficulty</span>
                     <button class="diff-step-btn" id="diff-minus">&minus;</button>
                     <div class="diff-pips" id="diff-pips"></div>
                     <button class="diff-step-btn" id="diff-plus">+</button>
@@ -95,9 +101,9 @@
                         <span class="preview-answer-text" id="preview-answer-text"></span>
                     </div>
                     <div class="clue-actions-row" id="clue-actions-row">
-                        <button class="clue-lock-btn" id="clue-lock-btn">Lock This Clue</button>
                         <button class="clue-edit-btn" id="clue-edit-btn">Edit</button>
                         <button class="clue-save-btn" id="clue-save-btn" hidden>Save</button>
+                        <button class="clue-next-btn" id="clue-next-btn">Next Clue &rarr;</button>
                     </div>
                 </div>
                 <!-- Interactive: answer input -->
@@ -112,14 +118,15 @@
                     <p class="answer-feedback" id="answer-feedback"></p>
                     <button class="stuck-btn" id="stuck-btn" hidden><svg class="stuck-phone" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> <span class="stuck-text">I'm stuck</span></button>
                 </div>
-                <button class="add-clue-btn" id="add-clue-btn" hidden>+ Add Clue &mdash; $1</button>
                 <div class="fact-reveal" id="fact-reveal">
                     <button id="next-btn" class="action-btn">Next Clue &rarr;</button>
                     <div class="fact-divider"></div>
                     <p class="fact-text" id="fact-text"></p>
                 </div>
             </div>
+            <div class="peek-card peek-next" id="peek-next" hidden></div>
             <button class="preview-arrow preview-next" id="preview-next" hidden>&rsaquo;</button>
+            </div>
         </div>
 
         <!-- Arrival -->

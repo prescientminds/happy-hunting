@@ -37,14 +37,16 @@ const HappyHunting = {
             'envelope', 'code-row',
             'difficulty-selector', 'diff-pips', 'diff-minus', 'diff-plus',
             'intro-next', 'intro-brand-graphic', 'amor-fati-row',
-            'clue-lock-btn',
+            'clue-next-btn',
             'answer-row-text', 'answer-row-photo', 'photo-done-btn',
             'preview-prev', 'preview-next',
             'stuck-btn', 'see-answer-btn', 'preview-answer-block',
             'preview-answer-text', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
             'clue-edit-btn', 'clue-save-btn',
-            'dice-roll-btn', 'add-clue-btn',
+            'dice-roll-btn',
+            'peek-prev', 'peek-next',
+            'preview-start-btn', 'preview-carousel',
             'cost-bar', 'cost-bar-count', 'cost-bar-total',
             'cost-promo', 'cost-promo-apply', 'cost-checkout'
         ].forEach(id => {
@@ -212,16 +214,10 @@ const HappyHunting = {
         }
     },
 
-    // ---- Lock Clue ----
+    // ---- Lock Clue (implicit — called by Save and Next) ----
     lockClue() {
         const step = this.hunt.steps[this.currentStep];
         this.lockedClues[this.currentStep] = { ...step };
-
-        // Visual lock state
-        this.els['clue-lock-btn'].textContent = '\u2713 Locked';
-        this.els['clue-lock-btn'].classList.add('locked');
-        this.els['difficulty-selector'].classList.add('locked');
-        this.els['clue-body'].classList.add('clue-locked');
     },
 
     // ---- Skin ----
@@ -303,9 +299,10 @@ const HappyHunting = {
             meta.innerHTML = `${count} clues. One destination.<br>${label}.`;
         }
         if (this.isPreview) {
-            // Preview: no begin button, show forward arrow + brand graphic
+            // Preview: show Start button + forward arrow + brand graphic
             this.els['skin-selector'].style.display = 'none';
             this.els['begin-btn'].hidden = true;
+            this.els['preview-start-btn'].hidden = false;
             this.els['intro-next'].hidden = false;
             this.els['intro-brand-graphic'].hidden = false;
         } else if (this.isInvite) {
@@ -338,27 +335,38 @@ const HappyHunting = {
             this.els['answer-section'].hidden = true;
             this.els['preview-answer-block'].hidden = false;
             this.els['see-answer-btn'].hidden = false;
+            this.els['see-answer-btn'].textContent = 'See Answer';
             this.els['preview-answer-text'].textContent = '';
             this.els['preview-answer-text'].hidden = true;
             this.els['fact-reveal'].classList.remove('visible');
-            this.els['preview-prev'].hidden = this.currentStep === 0;
-            this.els['preview-next'].hidden = this.currentStep === this.hunt.steps.length - 1;
 
-            // Preview tools
-            this.els['add-clue-btn'].hidden = false;
+            // Navigation arrows
+            this.els['preview-prev'].hidden = this.currentStep === 0;
+            const isLast = this.currentStep === this.hunt.steps.length - 1;
+            // Show next arrow if not last, OR if last and past 3 cards (add clue available)
+            this.els['preview-next'].hidden = isLast && !(isLast && this.currentStep >= 2);
+
+            // Edit state
             this.isEditing = false;
             this.els['clue-text'].hidden = false;
             this.els['clue-edit-field'].hidden = true;
             this.els['clue-edit-btn'].hidden = false;
             this.els['clue-save-btn'].hidden = true;
 
-            // Lock state
-            const isLocked = !!this.lockedClues[this.currentStep];
-            this.els['clue-lock-btn'].textContent = isLocked ? '\u2713 Locked' : 'Lock This Clue';
-            this.els['clue-lock-btn'].classList.toggle('locked', isLocked);
-            this.els['difficulty-selector'].classList.toggle('locked', isLocked);
-            this.els['clue-body'].classList.toggle('clue-locked', isLocked);
+            // Next Clue button text
+            if (isLast && this.currentStep >= 2) {
+                this.els['clue-next-btn'].innerHTML = '+ Add Clue &mdash; $1';
+                this.els['clue-next-btn'].dataset.action = 'add';
+            } else if (isLast) {
+                this.els['clue-next-btn'].innerHTML = 'Done &rarr;';
+                this.els['clue-next-btn'].dataset.action = 'done';
+            } else {
+                this.els['clue-next-btn'].innerHTML = 'Next Clue &rarr;';
+                this.els['clue-next-btn'].dataset.action = 'next';
+            }
 
+            // Peek cards
+            this.renderPeekCards();
             this.renderIntervention();
         } else {
             // Interactive mode: show answers, hide preview elements
@@ -367,7 +375,8 @@ const HappyHunting = {
             this.els['preview-prev'].hidden = true;
             this.els['preview-next'].hidden = true;
             this.els['amor-fati-row'].hidden = true;
-            this.els['add-clue-btn'].hidden = true;
+            this.els['peek-prev'].hidden = true;
+            this.els['peek-next'].hidden = true;
             this.els['visual-intervention'].innerHTML = '';
 
             // Photo vs text answer
@@ -477,18 +486,21 @@ const HappyHunting = {
         this.els['answer-input'].select();
     },
 
-    // ---- Preview: See Answer ----
-    revealAnswer() {
-        const step = this.hunt.steps[this.currentStep];
-        const answer = step.answer || '(no answer set)';
-        this.els['see-answer-btn'].hidden = true;
-        this.els['preview-answer-text'].textContent = answer;
-        this.els['preview-answer-text'].hidden = false;
-
-        // Also show the historical fact
-        if (step.historicalFact) {
-            this.els['fact-text'].textContent = step.historicalFact;
-            this.els['fact-reveal'].classList.add('visible');
+    // ---- Preview: See Answer (toggle) ----
+    toggleAnswer() {
+        const isVisible = !this.els['preview-answer-text'].hidden;
+        if (isVisible) {
+            // Hide answer
+            this.els['preview-answer-text'].hidden = true;
+            this.els['preview-answer-text'].textContent = '';
+            this.els['see-answer-btn'].textContent = 'See Answer';
+        } else {
+            // Show answer
+            const step = this.hunt.steps[this.currentStep];
+            const answer = step.answer || '(no answer set)';
+            this.els['preview-answer-text'].textContent = answer;
+            this.els['preview-answer-text'].hidden = false;
+            this.els['see-answer-btn'].textContent = 'Hide Answer';
         }
     },
 
@@ -496,9 +508,9 @@ const HappyHunting = {
     resetPreviewAnswer() {
         if (!this.isPreview) return;
         this.els['see-answer-btn'].hidden = false;
+        this.els['see-answer-btn'].textContent = 'See Answer';
         this.els['preview-answer-text'].textContent = '';
         this.els['preview-answer-text'].hidden = true;
-        this.els['fact-reveal'].classList.remove('visible');
     },
 
     // ---- Edit Clue ----
@@ -525,6 +537,7 @@ const HappyHunting = {
         this.els['clue-edit-field'].hidden = true;
         this.els['clue-edit-btn'].hidden = false;
         this.els['clue-save-btn'].hidden = true;
+        this.lockClue();
     },
 
     // ---- Dice Roll: Amor Fati ----
@@ -548,7 +561,7 @@ const HappyHunting = {
                     pip.classList.toggle('active', parseInt(pip.dataset.level) === idx + 1);
                 });
             }
-            this.renderAnswerSelector();
+            this.renderPeekCards();
         }, 600);
     },
 
@@ -636,6 +649,38 @@ const HappyHunting = {
             '<svg viewBox="0 0 60 60"><g stroke="currentColor" fill="none" stroke-width="0.8"><line x1="5" y1="10" x2="55" y2="10"/><line x1="12" y1="20" x2="48" y2="20"/><line x1="18" y1="30" x2="42" y2="30"/><line x1="23" y1="40" x2="37" y2="40"/><line x1="27" y1="50" x2="33" y2="50"/><line x1="5" y1="10" x2="27" y2="50"/><line x1="55" y1="10" x2="33" y2="50"/></g></svg>'
         ];
         el.innerHTML = svgs[idx];
+    },
+
+    // ---- Peek Cards (carousel preview) ----
+    renderPeekCards() {
+        const prevEl = this.els['peek-prev'];
+        const nextEl = this.els['peek-next'];
+        if (!prevEl || !nextEl) return;
+
+        // Previous peek card
+        if (this.currentStep > 0) {
+            const prevStep = this.hunt.steps[this.currentStep - 1];
+            const cluePreview = (prevStep.clue || '').slice(0, 80) + (prevStep.clue.length > 80 ? '...' : '');
+            prevEl.innerHTML = `<div class="peek-step">Clue ${prevStep.stepNumber}</div><div class="peek-text">${cluePreview}</div>`;
+            prevEl.hidden = false;
+        } else {
+            prevEl.hidden = true;
+        }
+
+        // Next peek card
+        const isLast = this.currentStep === this.hunt.steps.length - 1;
+        if (!isLast) {
+            const nextStep = this.hunt.steps[this.currentStep + 1];
+            const cluePreview = (nextStep.clue || '').slice(0, 80) + (nextStep.clue.length > 80 ? '...' : '');
+            nextEl.innerHTML = `<div class="peek-step">Clue ${nextStep.stepNumber}</div><div class="peek-text">${cluePreview}</div>`;
+            nextEl.hidden = false;
+        } else if (isLast && this.currentStep >= 2) {
+            // After 3+ cards: show Add Clue as next peek
+            nextEl.innerHTML = `<div class="peek-step">Add Clue</div><div class="peek-text peek-add">+ $1</div>`;
+            nextEl.hidden = false;
+        } else {
+            nextEl.hidden = true;
+        }
     },
 
     // ---- I'm Stuck: Call Center Comedy ----
@@ -785,8 +830,18 @@ const HappyHunting = {
             if (pip) this.setDifficulty(parseInt(pip.dataset.level));
         });
 
-        // Lock clue
-        this.els['clue-lock-btn'].addEventListener('click', () => this.lockClue());
+        // Next Clue button (preview mode — locks + advances or adds clue)
+        this.els['clue-next-btn'].addEventListener('click', () => {
+            this.lockClue();
+            const action = this.els['clue-next-btn'].dataset.action;
+            if (action === 'add') {
+                this.addClue();
+            } else if (action === 'done') {
+                this.showArrival();
+            } else {
+                this.previewNext();
+            }
+        });
 
         // Cost bar promo
         this.els['cost-promo-apply'].addEventListener('click', () => this.applyPromo());
@@ -822,8 +877,8 @@ const HappyHunting = {
             input.addEventListener('focus', () => input.select());
         });
 
-        // See Answer (preview mode)
-        this.els['see-answer-btn'].addEventListener('click', () => this.revealAnswer());
+        // See Answer toggle (preview mode)
+        this.els['see-answer-btn'].addEventListener('click', () => this.toggleAnswer());
 
         // Edit/Save clue (preview mode)
         this.els['clue-edit-btn'].addEventListener('click', () => this.toggleEdit());
@@ -832,8 +887,22 @@ const HappyHunting = {
         // Dice roll (preview mode)
         this.els['dice-roll-btn'].addEventListener('click', () => this.rollDice());
 
-        // Add clue (preview mode)
-        this.els['add-clue-btn'].addEventListener('click', () => this.addClue());
+        // Peek card clicks (preview mode)
+        this.els['peek-prev'].addEventListener('click', () => this.prevClue());
+        this.els['peek-next'].addEventListener('click', () => {
+            const isLast = this.currentStep === this.hunt.steps.length - 1;
+            if (isLast && this.currentStep >= 2) {
+                this.addClue();
+            } else {
+                this.previewNext();
+            }
+        });
+
+        // Preview Start button
+        this.els['preview-start-btn'].addEventListener('click', () => {
+            this.currentStep = 0;
+            this.renderClue();
+        });
 
         // I'm stuck (interactive mode)
         this.els['stuck-btn'].addEventListener('click', () => this.triggerStuckCall());
