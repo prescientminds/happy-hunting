@@ -1,0 +1,619 @@
+{
+  "barId": "gold-room",
+  "generatedBy": "/recon",
+  "generatedDate": "2026-03-16",
+  "bar": {
+    "name": "Gold Room",
+    "address": "1558 W Sunset Blvd, Los Angeles, CA 90026",
+    "neighborhood": "Echo Park / Angeleno Heights",
+    "lat": 34.0765,
+    "lng": -118.2571,
+    "happyHour": "Daily specials, PBR + tequila shot combos",
+    "vibe": "Latino-owned dive bar, LGBTQ+ friendly, dark wood, jukebox, free peanuts, cash only",
+    "barFacts": [
+      "Latino-owned Echo Park institution",
+      "LGBTQ+ and transgender safe space",
+      "2009 upscale remodel with $15 champagne alienated regulars — minor gentrification controversy",
+      "Immortalized in Dave Lefner's color linocut print series"
+    ]
+  },
+  "discoveryStats": {
+    "wikipediaHits": 7,
+    "overpassFeatures": 14,
+    "overpassDatedBuildings": 1262,
+    "hmdbMarkers": 14,
+    "localColorFinds": 11,
+    "totalRaw": 46,
+    "afterDedup": 21,
+    "aboveThreshold": 12,
+    "selectedForRoute": 3
+  },
+  "route": {
+    "startPoint": {
+      "lat": 34.0763,
+      "lng": -118.2610,
+      "label": "Angelus Temple"
+    },
+    "endPoint": {
+      "lat": 34.0765,
+      "lng": -118.2571,
+      "label": "Gold Room"
+    },
+    "totalDistance": "0.6 mi",
+    "estimatedWalkTime": "12 min",
+    "stops": [
+      {
+        "stopNumber": 1,
+        "ring": 1,
+        "lat": 34.0763,
+        "lng": -118.2610,
+        "poiId": "angelus-temple",
+        "label": "Angelus Temple",
+        "nearbySupplemental": ["jose-marti-bust", "aimee-lotus-marker"]
+      },
+      {
+        "stopNumber": 2,
+        "ring": 2,
+        "lat": 34.0743,
+        "lng": -118.2608,
+        "poiId": "echo-park-lake",
+        "label": "Echo Park Lake & Lady of the Lake",
+        "nearbySupplemental": ["lady-of-the-lake", "bicicleta-sculpture", "healthy-foods-mosaic"]
+      },
+      {
+        "stopNumber": 3,
+        "ring": 3,
+        "lat": 34.0770,
+        "lng": -118.2589,
+        "poiId": "jensens-826la-block",
+        "label": "Jensen's / Avenue of Athletes / 826LA",
+        "nearbySupplemental": ["avenue-of-athletes", "826la-time-travel-mart"]
+      }
+    ]
+  },
+  "pois": [
+    {
+      "poiId": "angelus-temple",
+      "name": "Angelus Temple",
+      "address": "1100 Glendale Blvd",
+      "lat": 34.0763,
+      "lng": -118.2610,
+      "category": "historic-building",
+      "distanceFromBar": "350m",
+      "year": 1923,
+      "designations": ["National Historic Landmark (1992)", "HMDB m=219917", "HMDB m=250268"],
+      "facts": [
+        "5,300-seat megachurch — largest in America when built",
+        "Founded by Aimee Semple McPherson, first woman to preach on radio",
+        "Dome coated with ground abalone shells, giving it a distinctive shimmer",
+        "McPherson vanished from Venice Beach May 18, 1926 — two people died searching. Reappeared 5 weeks later claiming kidnapping. Witnesses placed her in Carmel with married radio engineer Kenneth Ormiston",
+        "Pioneered 'illustrated sermons' — theatrical productions with sets, costumes, lighting",
+        "Founded International Church of the Foursquare Gospel (8M+ members, 146 countries)",
+        "Cornerstone inscription: 'Dedicated unto the cause of inter-denominational and worldwide evangelism'",
+        "Architect: Brook Hawkins. Class A fireproof construction",
+        "8 stained glass windows by George Haskins depicting scenes from Jesus's life",
+        "McPherson imported lotus flowers from China, planted them in Echo Park Lake in the 1920s",
+        "After founding, Echo Park's population surged as followers moved closer to 'Sister Aimee'",
+        "Bronze NPS plaque reported missing as of 2024"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Massive unsupported concrete dome — one of largest in North America when built", "material": "concrete coated with ground abalone shells" },
+          { "type": "architecture", "detail": "Lighted cross atop dome — visible LA landmark", "location": "top of dome" },
+          { "type": "architecture", "detail": "Semicircular facade described as 'half Roman Colosseum, half Parisian opera house'" },
+          { "type": "sign", "text": "Dedicated unto the cause of inter-denominational and worldwide evangelism", "material": "carved in cornerstone", "location": "cornerstone" },
+          { "type": "architecture", "detail": "8 stained glass windows by George Haskins", "needsVerification": true },
+          { "type": "architecture", "detail": "Height approximately 28 meters (from Overpass data)" },
+          { "type": "plaque", "text": "National Historic Landmark plaque — reportedly missing as of 2024", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Aimee Semple McPherson", "to": "Echo Park Lake", "link": "McPherson imported lotus from China, planted in the lake in the 1920s" },
+        { "type": "person-to-neighborhood", "from": "Aimee Semple McPherson", "to": "Echo Park", "link": "Population surged after founding as followers moved to be near Sister Aimee" },
+        { "type": "era-link", "from": "Angelus Temple (1923)", "to": "Jensen's (1924)", "link": "Built within a year of each other during Echo Park's 1920s boom" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 42.25
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter", "photo-challenge", "elimination", "cipher-lite"]
+    },
+    {
+      "poiId": "echo-park-lake",
+      "name": "Echo Park Lake",
+      "address": "751 N Echo Park Ave",
+      "lat": 34.0743,
+      "lng": -118.2608,
+      "category": "park",
+      "distanceFromBar": "300m",
+      "year": 1868,
+      "designations": ["LA Historic-Cultural Monument #836 (2006)", "HMDB m=252652"],
+      "facts": [
+        "Started as a reservoir in 1868 to power a woolen mill at 6th and Figueroa",
+        "Named 'Echo Park' by parks superintendent Joseph Henry Tomlinson in 1892, who heard echoes shouting across the arroyo during construction",
+        "Lotus flowers planted by Aimee Semple McPherson's missionaries in the 1920s with seeds from China",
+        "In 2005, a horticulturalist illegally pilfered a lotus cutting, cultivated 376 plants, and sold them for $30,000",
+        "Keystone Studios (Keystone Cops) were banned from filming here because they trampled too many flowers",
+        "At least 60 people have drowned in the lake over its 100+ year history",
+        "Boathouse built 1932 with Depression-era unemployment bonds",
+        "Pedal boats have circled the lake since 1932",
+        "Annual Lotus Festival since 1972 ('Day of the Lotus') celebrates Asian and Pacific Islander communities"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Boathouse structure at east end of lake", "location": "east shore" },
+          { "type": "oddity", "detail": "Lotus beds — seasonal, bloom July/August", "needsVerification": true },
+          { "type": "oddity", "detail": "Pedal boats (swan-shaped) on the water" },
+          { "type": "architecture", "detail": "Fountain visible in the lake" },
+          { "type": "count", "element": "Palm trees along the shore", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Aimee Semple McPherson", "to": "Echo Park Lake", "link": "Planted lotus from China in the lake" },
+        { "type": "person-to-place", "from": "Joseph Henry Tomlinson", "to": "Echo Park Lake", "link": "Named the park for the echoes he heard" },
+        { "type": "event-link", "from": "Keystone Studios", "to": "Echo Park Lake", "link": "Banned from filming for trampling flowers" },
+        { "type": "place-to-place", "from": "Echo Park Lake", "to": "Lady of the Lake", "link": "Statue on the lake's peninsula since 1935" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 9,
+        "connection": 10,
+        "uniqueness": 8,
+        "composite": 39.5
+      },
+      "bestStructures": ["connector", "reframe", "narrative-riddle", "photo-challenge", "sequence", "spotter"]
+    },
+    {
+      "poiId": "lady-of-the-lake",
+      "name": "Lady of the Lake / Nuestra Reina de Los Angeles",
+      "address": "Echo Park Lake peninsula",
+      "lat": 34.0743,
+      "lng": -118.2608,
+      "category": "public-art",
+      "distanceFromBar": "320m",
+      "year": 1935,
+      "designations": ["Part of HCM #836", "HMDB m=229144"],
+      "facts": [
+        "14-foot Art Deco cast stone statue by Ada Mae Sharpless (born Hilo, Hawaii 1904, studied in Paris)",
+        "Official name: 'Nuestra Reina de Los Angeles' (Queen of the Angels)",
+        "WPA/PWAP commission, 1934-35. Originally planned in bronze — Depression-era budget cuts forced cast stone ('liquid stone' / poured concrete)",
+        "Pedestal has 4 bas-relief panels depicting: Hollywood Bowl, LA Harbor, San Gabriel Mountains, LA Central Library",
+        "Vandalized, covered in graffiti, fingers broken off. Put in storage 1986. Restored and returned 1999 with anti-graffiti sealant",
+        "Conserved by City of LA Cultural Affairs with Councilmember Jackie Goldberg, DWP, Rec & Parks, Echo Park Historical Society"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "14-foot Art Deco female figure on pedestal", "material": "cast stone / poured concrete" },
+          { "type": "count", "element": "Bas-relief panels on pedestal", "count": 4 },
+          { "type": "artwork", "detail": "Panel 1: Hollywood Bowl", "location": "pedestal" },
+          { "type": "artwork", "detail": "Panel 2: LA Harbor", "location": "pedestal" },
+          { "type": "artwork", "detail": "Panel 3: San Gabriel Mountains", "location": "pedestal" },
+          { "type": "artwork", "detail": "Panel 4: LA Central Library", "location": "pedestal" },
+          { "type": "oddity", "detail": "Rose bushes surrounding the statue" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Lady of the Lake (1935)", "to": "Echo Park Lake boathouse (1932)", "link": "Both Depression-era projects — WPA statue, unemployment bond boathouse" },
+        { "type": "theme-link", "from": "Lady of the Lake", "to": "Angelus Temple", "link": "Both monumental structures built by women (Sharpless / McPherson) within 0.3mi of each other" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 8,
+        "uniqueness": 8,
+        "composite": 39.5
+      },
+      "bestStructures": ["spotter", "connector", "reframe", "cipher-lite", "photo-challenge"]
+    },
+    {
+      "poiId": "jensens-recreation-center",
+      "name": "Jensen's Recreation Center",
+      "address": "1706 W Sunset Blvd",
+      "lat": 34.0770,
+      "lng": -118.2589,
+      "category": "historic-building",
+      "distanceFromBar": "170m",
+      "year": 1924,
+      "designations": ["LA Historic-Cultural Monument #652 (1998)", "HMDB m=188577"],
+      "facts": [
+        "Built by Henry Christian Jensen, German immigrant who made fortune manufacturing bricks for LA's expansion",
+        "Architect: E.E.B. Meinardus. Three stories: bowling/pool at street level, 46 apartments with Murphy beds above",
+        "Rooftop sign: 28 ft wide × 17 ft tall, 1,300 red/green/white incandescent bulbs",
+        "Sign depicts animated bowler throwing strike — motors switch bulbs on/off to simulate motion",
+        "Billed as the last remaining articulated incandescent sign in the United States",
+        "Sign dark for ~50 years, restored by Paul Greenstein. Building sold for $15M in 2014",
+        "Egyptian-inspired ornamentation wraps around walls near ceiling of large interior rooms",
+        "'Jensen Recreation Center' spelled in large terra cotta letters above front entrance",
+        "Corner of Sunset Blvd & Logan Street"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "Animated bowling figure — 28×17 ft, 1,300 bulbs (red/green/white)", "location": "rooftop" },
+          { "type": "sign", "text": "JENSEN RECREATION CENTER", "material": "terra cotta", "location": "above front entrance" },
+          { "type": "architecture", "detail": "Three-story brick building", "material": "brick" },
+          { "type": "count", "element": "Stories/floors", "count": 3 },
+          { "type": "count", "element": "Incandescent bulbs in rooftop sign", "count": 1300 },
+          { "type": "oddity", "detail": "Some original decorative tilework covered by modern storefront signage", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Jensen's (1924)", "to": "Angelus Temple (1923)", "link": "Built within a year — Echo Park's 1920s building boom" },
+        { "type": "material-link", "from": "Jensen (brick manufacturer)", "to": "LA expansion", "link": "Jensen's bricks literally built the city; then he built himself a building" },
+        { "type": "proximity", "from": "Jensen's", "to": "826LA", "link": "Same block of Sunset Blvd, 0.06mi apart" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 8,
+        "connection": 6,
+        "uniqueness": 8,
+        "composite": 39.0
+      },
+      "bestStructures": ["spotter", "cipher-lite", "connector", "reframe", "narrative-riddle", "photo-challenge"]
+    },
+    {
+      "poiId": "avenue-of-athletes",
+      "name": "Avenue of the Athletes",
+      "address": "Sunset Blvd sidewalks, McDuff St to Mohawk St",
+      "lat": 34.0773,
+      "lng": -118.2585,
+      "category": "public-art",
+      "distanceFromBar": "132m",
+      "year": 1976,
+      "designations": ["City of LA designation (1974)", "Wikipedia article"],
+      "facts": [
+        "32 brass sidewalk plaques (17×16 inches each) honoring athletes, many Olympians with LA connections",
+        "Created by L. Andrew Castle — local business owner, Dodgers photographer, and professor",
+        "Castle conceived the project, got city approval in 1974. First plaques placed 1976, second set 1977",
+        "Castle died in 1978, just 2 years after the first plaques were placed. Project stopped.",
+        "Plaque designs were literally lost for years before Chamber of Commerce revived the project in 1980",
+        "Honorees include: Jesse Owens, Jackie Robinson, Sandy Koufax, Billie Jean King, Kareem Abdul-Jabbar, Elgin Baylor, Wyomia Tyus, Kenny Washington",
+        "10 blocks of Sunset Blvd between Elysian Park Blvd and Alvarado St declared 'Avenue of the Athletes'",
+        "Most people walk over the plaques every day without noticing them"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "plaque", "text": "Bronze sidewalk plaques with athlete names and sport pictograms", "material": "brass", "location": "embedded in sidewalk concrete" },
+          { "type": "count", "element": "Total athlete plaques", "count": 32 },
+          { "type": "oddity", "detail": "Plaques blend into gray concrete — easy to miss, you have to look down" },
+          { "type": "count", "element": "Plaque dimensions", "count": "17x16 inches" }
+        ]
+      },
+      "connections": [
+        { "type": "proximity", "from": "Avenue of Athletes", "to": "Gold Room", "link": "Plaques are IN the sidewalk at the Gold Room's block" },
+        { "type": "theme-link", "from": "Athletes (Olympians)", "to": "Echo Park", "link": "Castle wanted to bring tourists to Echo Park — the walk of fame nobody notices" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 7,
+        "connection": 8,
+        "uniqueness": 9,
+        "composite": 39.75
+      },
+      "bestStructures": ["spotter", "sequence", "elimination", "cipher-lite", "photo-challenge", "connector"]
+    },
+    {
+      "poiId": "826la-time-travel-mart",
+      "name": "826LA / Echo Park Time Travel Mart",
+      "address": "1714 W Sunset Blvd",
+      "lat": 34.0768,
+      "lng": -118.2593,
+      "category": "unusual-business",
+      "distanceFromBar": "220m",
+      "year": 2008,
+      "designations": ["Atlas Obscura listing"],
+      "facts": [
+        "Storefront themed as 'a convenience store for time travelers'",
+        "Motto: 'Whenever You Are, We're Already There'",
+        "Products include: Viking Odorant, Robot Milk, Robot Toupees, Mammoth Chunks, Robot Emotions, Time-Freezy Hyper Slush",
+        "Behind a secret door in the back: free tutoring center where 826LA teaches 20-30 students per day",
+        "All proceeds fund 826LA nonprofit for students ages 6-18",
+        "Part of 826 National network co-founded by Dave Eggers (SF's Pirate Supply Store was the first)",
+        "LA chose time travel as its theme. Student publications displayed in a freezer.",
+        "Window displays caveman shaking hands with robot"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "Whenever You Are, We're Already There", "location": "storefront" },
+          { "type": "artwork", "detail": "Caveman shaking hands with robot in window", "location": "storefront window" },
+          { "type": "oddity", "detail": "Time travel products visible through window — Robot Milk, Viking Odorant, etc." },
+          { "type": "oddity", "detail": "Slushy machine with sign 'Out of Order Come Back Yesterday'" },
+          { "type": "oddity", "detail": "Poster with facial hair styles throughout history visible through window" }
+        ]
+      },
+      "connections": [
+        { "type": "proximity", "from": "826LA", "to": "Jensen's", "link": "Same block of Sunset Blvd" },
+        { "type": "theme-link", "from": "826LA (fake storefront)", "to": "Gold Room (dive bar)", "link": "Both are things that aren't what they appear from outside" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 5,
+        "connection": 5,
+        "uniqueness": 10,
+        "composite": 36.0
+      },
+      "bestStructures": ["spotter", "reframe", "photo-challenge"]
+    },
+    {
+      "poiId": "jose-marti-bust",
+      "name": "Jose Marti Monument",
+      "address": "Glendale Blvd & Park Ave (near Echo Park Lake)",
+      "lat": 34.0757,
+      "lng": -118.2613,
+      "category": "memorial",
+      "distanceFromBar": "400m",
+      "year": 1976,
+      "designations": ["HMDB m=229697"],
+      "facts": [
+        "Bronze bust by sculptor Sergio Lopez Mesa (born Havana, studied at San Alejandro Academy and School of Fine Arts in Rome)",
+        "Commemorates Jose Marti (born Havana 1853, died in battle at Dos Rios, Cuba, May 19, 1895, fighting for Cuban independence from Spain)",
+        "Built 1976 by Patronato Jose Marti with City of LA Recreation and Parks",
+        "Restored by LA Cultural Affairs Dept in 2002",
+        "Echo Park became the social/cultural heart of LA's Cuban immigrant community after 1962, when a local Presbyterian church met the first flight of Cuban refugees",
+        "Inscription: 'El que tenga Patria que la honre, el que no, que la conquiste' — 'He who has a homeland, honor it; he who does not, conquer one'"
+      ],
+      "observable": {
+        "source": "overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Bronze bust on pedestal", "material": "bronze" },
+          { "type": "plaque", "text": "El que tenga Patria que la honre, el que no, que la conquiste", "material": "inscribed" },
+          { "type": "plaque", "text": "Con todos y para el bien de todos", "material": "inscribed" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Jose Marti (Cuban independence)", "to": "Echo Park (Cuban community)", "link": "Park became Cuban cultural heart after 1962 refugee flights" },
+        { "type": "proximity", "from": "Jose Marti bust", "to": "Echo Park Lake", "link": "At the edge of the lake" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 7,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 33.25
+      },
+      "bestStructures": ["spotter", "narrative-riddle", "connector", "cipher-lite"]
+    },
+    {
+      "poiId": "taix-restaurant",
+      "name": "Taix French Restaurant",
+      "address": "1911 Sunset Blvd",
+      "lat": 34.0782,
+      "lng": -118.2614,
+      "category": "historic-business",
+      "distanceFromBar": "439m",
+      "year": 1927,
+      "designations": ["LA Historic-Cultural Monument #1227", "HMDB m=229699"],
+      "facts": [
+        "French restaurant founded 1927 by Marius Taix Jr.",
+        "Moved to Echo Park location 1962, remodeled 1969",
+        "Features 321 Lounge (cocktail lounge with live music) and banquet halls",
+        "PERMANENTLY CLOSING MARCH 29, 2026 — after 99 years of operation",
+        "Sunset & Glendale Blvd Viaduct (nearby) built 1934, New Deal Federal Public Works program"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "Taix restaurant signage", "needsVerification": true },
+          { "type": "architecture", "detail": "Large restaurant complex with multiple dining rooms" }
+        ]
+      },
+      "score": {
+        "observable": 6,
+        "historical": 8,
+        "connection": 5,
+        "uniqueness": 7,
+        "composite": 30.75
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "carroll-avenue-victorians",
+      "name": "Carroll Avenue Historic District",
+      "address": "1300 block Carroll Ave, Angelino Heights",
+      "lat": 34.0692,
+      "lng": -118.2541,
+      "category": "historic-district",
+      "distanceFromBar": "830m",
+      "year": 1886,
+      "designations": ["National Register of Historic Places (1976)", "Angelino Heights HPOZ", "HMDB m=167925"],
+      "facts": [
+        "Finest collection of Victorian domestic architecture remaining in Los Angeles",
+        "Queen Anne and Eastlake styles from the late 19th century",
+        "Angelino Heights subdivided 1886 by William Stilson and Everett Hall during land boom",
+        "Banking recession of 1888 halted construction — accidentally preserving the Victorian character",
+        "1329 Carroll Ave: The 'Charmed' house (Halliwell Manor exterior)",
+        "1345 Carroll Ave: Featured in Michael Jackson's 'Thriller' video",
+        "The Foy House: Oldest on the block, built 1872, moved twice"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Queen Anne facades with turrets, gingerbread trim, ornate porches" },
+          { "type": "architecture", "detail": "Eastlake style wooden detailing" },
+          { "type": "count", "element": "Victorian houses on 1300 block", "needsVerification": true }
+        ]
+      },
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 5,
+        "uniqueness": 8,
+        "composite": 36.5
+      },
+      "bestStructures": ["spotter", "photo-challenge", "sequence", "narrative-riddle"],
+      "routeNote": "Outside 0.5mi radius — supplemental POI, not a route stop"
+    },
+    {
+      "poiId": "phantasma-gloria",
+      "name": "Phantasma Gloria at Randyland",
+      "address": "1646 Lemoyne St",
+      "lat": 34.0748,
+      "lng": -118.2545,
+      "category": "public-art",
+      "distanceFromBar": "290m",
+      "year": null,
+      "designations": ["Atlas Obscura listing"],
+      "facts": [
+        "24-foot-tall, 50-foot-long sculpture in a residential front yard",
+        "Built by artist Randlett Lawrence entirely from glass bottles, wire, and colored water",
+        "Bottles refract morning sunlight into prismatic color — best seen around 9am on clear days",
+        "Patterns inside bottles include stylized dolphins and a Virgin de Guadalupe honoring Echo Park's multicultural community",
+        "Still a work in progress"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "24-ft tall glass bottle sculpture visible from street", "material": "glass bottles, wire, colored water" },
+          { "type": "color", "element": "Prismatic light refraction through bottles", "value": "rainbow/prismatic, best at 9am" },
+          { "type": "oddity", "detail": "In a residential front yard — looks like outsider art installation" }
+        ]
+      },
+      "score": {
+        "observable": 9,
+        "historical": 3,
+        "connection": 2,
+        "uniqueness": 10,
+        "composite": 31.0
+      },
+      "bestStructures": ["photo-challenge", "spotter"]
+    },
+    {
+      "poiId": "tom-of-finland-house",
+      "name": "Tom of Finland House (TOM House)",
+      "address": "1421 Laveta Terrace",
+      "lat": 34.0780,
+      "lng": -118.2570,
+      "category": "historic-building",
+      "distanceFromBar": "170m",
+      "year": 1911,
+      "designations": ["LA Historic-Cultural Monument #1135 (2016)", "HMDB m=230310"],
+      "facts": [
+        "Studio and residence of Finnish queer artist Touko Laaksonen (Tom of Finland) from 1980-1991",
+        "House built 1911",
+        "World's largest repository of erotic art — over 100,000 images",
+        "Now the Tom of Finland Foundation, open by appointment (Thurs/Sat 2-4pm)",
+        "Declared HCM in 2016 by Cultural Heritage Commission"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Two-story residential house, built 1911", "needsVerification": true }
+        ]
+      },
+      "score": {
+        "observable": 4,
+        "historical": 7,
+        "connection": 3,
+        "uniqueness": 9,
+        "composite": 27.25
+      },
+      "bestStructures": ["narrative-riddle"]
+    },
+    {
+      "poiId": "healthy-foods-mosaic",
+      "name": "Healthy Foods Mosaic",
+      "address": "Near 1558 W Sunset Blvd",
+      "lat": 34.0766,
+      "lng": -118.2587,
+      "category": "public-art",
+      "distanceFromBar": "155m",
+      "year": null,
+      "designations": [],
+      "facts": [
+        "Mosaic artwork by artist Katrina Alexy",
+        "Located on or near Sunset Blvd in Echo Park"
+      ],
+      "observable": {
+        "source": "overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Wall mosaic", "material": "tile/mosaic" }
+        ]
+      },
+      "score": {
+        "observable": 7,
+        "historical": 3,
+        "connection": 3,
+        "uniqueness": 5,
+        "composite": 22.75
+      },
+      "bestStructures": ["spotter", "photo-challenge"]
+    }
+  ],
+  "cluePotentialMatrix": {
+    "stop1_angelusTemple": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "McPherson bio is a natural 3-hint narrative riddle. Dome + abalone coating is a reframe. Cornerstone text is a spotter. Lotus connection to lake is a connector."
+    },
+    "stop2_echoParkLake": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "Lady of the Lake's 4 bas-reliefs are countable and identifiable (spotter gold). 'What was this lake before it was a park?' is a reframe. Reservoir→park→lotus→festival is a sequence. Jose Marti inscription is a cipher-lite source."
+    },
+    "stop3_jensensSunsetBlock": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "Jensen's sign (1,300 bulbs, animated bowler) is the richest spotter in the system. Avenue of Athletes plaques are countable, nameable — elimination and sequence gold. 826LA's 'time travel store is actually a tutoring center' is a perfect reframe. Castle dying 2 years after starting the project is a narrative riddle."
+    }
+  },
+  "metadata": {
+    "overpassBuildingStock": {
+      "total": 1262,
+      "preWar": 868,
+      "preWarPercent": "69%",
+      "oldestDecade": "1890s (13 buildings)",
+      "peakDecade": "1920s (337 buildings)",
+      "note": "Echo Park's building stock is overwhelmingly pre-war. 69% of dated buildings were constructed 1900-1929."
+    },
+    "thinCoverageWarning": false,
+    "verificationFlags": [
+      "Angelus Temple stained glass windows — count (8) from web source, needs Street View confirmation",
+      "Angelus Temple NPS plaque — reportedly missing as of 2024",
+      "Jensen's original tilework — may be covered by modern signage",
+      "Lady of the Lake bas-relief panels — need to confirm all 4 are intact and identifiable",
+      "Avenue of Athletes plaques — need to confirm condition and readability",
+      "826LA window display — products may change; confirm current display"
+    ]
+  }
+}

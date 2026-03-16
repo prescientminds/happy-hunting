@@ -1,0 +1,291 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're standing at the base of a building shaped like a stack of vinyl records. The walk ahead passes a silent-film alley, Art Deco starbursts, and a neon sign from Howard Hughes. Take a photo here — you'll want one at the start and one at the bar.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The Capitol Records Building at 1750 Vine St was the world's first circular office building, completed in 1956. Architect Louis Naidorf denies designing it to look like records on a turntable — but nobody believes him. The light at the top has been blinking 'HOLLYWOOD' in Morse code since opening day."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Look at the sidewalk in front of 1750 Vine St. You're standing on the Hollywood Walk of Fame. Each star has a small emblem indicating the category — a camera, a TV, a record, a microphone, or a mask. Find a star with the phonograph record emblem. What shape is the star?",
+    "answer": "Five-pointed",
+    "answerVariants": ["five-pointed", "5-pointed", "five pointed", "5 pointed", "five point", "5 point star", "a five-pointed star"],
+    "historicalFact": "The Walk of Fame has 2,800+ five-pointed terrazzo-and-brass stars stretched across 15 blocks of Hollywood Blvd and 3 blocks of Vine St. The first batch — 1,600 stars — went in during 1960. Then the city shut it down for 8 years because the selection process was a mess."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Look up at the Capitol Records Building. Count the stacked floors — each one has a wraparound sunshade that rings the building like a record on a spindle. How many floors does the tower have?",
+    "answer": "13",
+    "answerVariants": ["13", "thirteen"],
+    "historicalFact": "The 13 floors were built to the 150-foot height limit in 1950s Hollywood. The wraparound sunshades are porcelain enamel — they keep the offices cool and make every floor look like a disc on a turntable. EMI built it after acquiring Capitol Records in 1955 for their expanding stable of artists."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "persona",
+    "clue": "I recorded 'Unforgettable,' 'Mona Lisa,' and 'Nature Boy' in the studios below your feet. I sold so many records they called this tower 'the house that I built.' My voice made Capitol Records rich enough to construct the world's first circular office building. Find my star on the Walk of Fame near 1750 Vine. What is my full name as it appears on the star?",
+    "answer": "Nat King Cole",
+    "answerVariants": ["nat king cole", "Nat King Cole"],
+    "verificationNeeded": "Confirm Nat King Cole's Walk of Fame star is near 1750 Vine St / Capitol Records. His star is reportedly at 6372 Hollywood Blvd — may be further west. Adjust address reference if needed.",
+    "historicalFact": "The Capitol Records tower was nicknamed 'The House That Nat Built.' Cole was Capitol's biggest-selling artist when the building opened in 1956. He recorded in the basement studios designed by Les Paul — the same studios where Frank Sinatra, the Beach Boys, and the Beatles later tracked albums."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "spotter",
+    "clue": "The Walk of Fame stars use five different emblems to mark their category. Find all five by scanning the sidewalk. One looks like a movie camera. One is a television set. One is a phonograph record. One is a radio microphone. What does the fifth emblem depict?",
+    "answer": "A theatrical mask",
+    "answerVariants": ["theatrical mask", "a theatrical mask", "mask", "masks", "theater mask", "theatre mask", "comedy/tragedy masks", "comedy tragedy masks", "drama masks", "a mask"],
+    "historicalFact": "The five categories are motion pictures, television, recording, radio, and live theatre/performance. A few honorees have stars in multiple categories — Gene Autry holds the record with all five. Each star costs $85,000 to create, install, and maintain."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "The spire on top of the Capitol Records tower has a blinking light that's been flashing a message since 1956. The message is a single word — the name of the neighborhood you're standing in. It's broadcast in a code invented in the 1830s. What word is the light spelling?",
+    "answer": "HOLLYWOOD",
+    "answerVariants": ["hollywood", "HOLLYWOOD"],
+    "historicalFact": "The light spells H-O-L-L-Y-W-O-O-D in Morse code, day and night, since April 1956. At the opening ceremony, the person who flipped the switch was Leila Morse — granddaughter of Samuel Morse, the code's inventor. You can't read Morse code by watching the light, but the fact that it's up there broadcasting to nobody in particular is the point."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "connector",
+    "clue": "The Capitol Records Building is round. The Walk of Fame stars have five points. Both are embedded in the same sidewalk intersection. Look at the material the stars are made of — a smooth, polished, colored stone surface with brass inlays. What is the stone-like flooring material?",
+    "answer": "Terrazzo",
+    "answerVariants": ["terrazzo", "terazzo"],
+    "historicalFact": "Terrazzo — marble chips suspended in concrete, then ground and polished smooth — was the standard material for civic surfaces in mid-century LA. The Walk of Fame stars use coral-pink terrazzo with brass lettering and emblems. The material was chosen for durability: 2,800+ stars, millions of feet per year, still legible after six decades."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "persona",
+    "clue": "I'm the only honoree with a Walk of Fame star in all five categories — film, TV, recording, radio, and live performance. I was a singing cowboy from Texas who bought an entire baseball team. Scan the sidewalk near Hollywood and Vine. Find one of my five stars. What is my full name as it appears?",
+    "answer": "Gene Autry",
+    "answerVariants": ["gene autry", "Gene Autry", "GENE AUTRY"],
+    "verificationNeeded": "Confirm Gene Autry has a Walk of Fame star near Hollywood and Vine. He has stars at multiple locations on Hollywood Blvd — verify at least one is within walking distance of the Vine St intersection.",
+    "historicalFact": "Gene Autry is the only person to hold Walk of Fame stars in all five categories. He recorded 'Rudolph the Red-Nosed Reindeer' and 'Back in the Saddle Again,' starred in 93 films, had his own TV show, and performed live at Madison Square Garden. He bought the California Angels baseball team in 1961 for $2.4 million. Five stars, five categories, one cowboy.",
+    "reasoning": "Solver identifies Autry from the biography clues (singing cowboy, five categories, baseball team) then scans the sidewalk to find and read his name. Presence required: the solver must locate the physical star among thousands. D8 difficulty because it chains persona identification with a targeted physical search."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "Find the intersection of Hollywood Blvd and Vine St. Look at the buildings on three corners — each one is a pre-war highrise built in the 1920s. The southeast corner has a 12-story Beaux-Arts tower built in just 65 days. What is the name on the building?",
+    "answer": "Taft",
+    "answerVariants": ["taft", "Taft", "taft building", "Taft Building", "the taft building", "the Taft Building"],
+    "verificationNeeded": "Confirm 'Taft' or 'Taft Building' signage is visible from street level after the 2014 renovation.",
+    "historicalFact": "The Taft Building was LA's first high-rise office building, constructed in 65 days in 1924. Charlie Chaplin kept offices here. The Academy of Motion Picture Arts and Sciences ran its headquarters from the Taft from 1935 to 1946 — then the Oscars moved one block east to the Pantages stage. The name on the building belongs to developer Alfred Z. Taft, who tore down a church to build it."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Two blocks south of Capitol Records, a bank at the corner of Sunset and Vine has a two-story mosaic covering its entire facade. The mosaic depicts 15+ Golden Age movie stars — the same faces you've been walking over on the Walk of Fame. One medium connects them on the sidewalk: terrazzo and brass. A different medium connects them on the bank wall. Look at the mosaic. What material are the tiny pieces made of?",
+    "answer": "Glass",
+    "answerVariants": ["glass", "glass mosaic", "glass tiles", "glass tesserae", "mosaic glass"],
+    "verificationNeeded": "Confirm Chase Bank / former Home Savings mosaic at 1500 Vine St (Sunset & Vine) is intact and that glass mosaic tesserae are identifiable from sidewalk level.",
+    "historicalFact": "The Millard Sheets mosaic at 1500 Vine St was commissioned by Home Savings and Loan in 1968. Sheets depicted Mary Pickford, Douglas Fairbanks, Chaplin, Dolores Del Rio, Bette Davis, and Julie Andrews in glass mosaic tesserae — designed to look like strips of film. The building sits on the exact spot where The Squaw Man was filmed in 1913 — Hollywood's first feature-length movie. Most Chase customers walk past the mosaic without looking up.",
+    "reasoning": "Solver walks from Capitol Records area to Sunset & Vine (2 blocks south, still near Ring 1). They identify the mosaic on the bank facade and connect two physical representations of the same stars — terrazzo on the sidewalk, glass on the wall. D10 difficulty because it chains a physical walk to a new location, material identification requiring close observation, and synthesis of the connection between two mediums honoring the same people."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You've arrived at an alley that looks like nothing — a service lane between two buildings. A hundred years ago, the three greatest comedians in the world filmed here on the same block. Walk through it. Take a photo from inside the alley looking out toward the street.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "Chaplin-Keaton-Lloyd Alley runs south of Hollywood Blvd between Cahuenga and Cosmo. Charlie Chaplin filmed The Kid here in 1921. Buster Keaton filmed Cops in 1922. Harold Lloyd filmed Safety Last! in 1923. All three films are in the Library of Congress National Film Registry. Most people walk through it every day without knowing."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Find the alley that runs south of Hollywood Blvd between Cahuenga and Cosmo. Near the entrance, look for a metal plaque. It names three silent film comedians. What are the three last names on the plaque?",
+    "answer": "Chaplin, Keaton, Lloyd",
+    "answerVariants": ["chaplin keaton lloyd", "Chaplin Keaton Lloyd", "chaplin, keaton, lloyd", "Chaplin, Keaton, Lloyd", "chaplin keaton and lloyd"],
+    "verificationNeeded": "Confirm the Chaplin-Keaton-Lloyd Alley plaque is still in place at the Cahuenga entrance. Dedicated by Hollywood Heritage on National Silent Movie Day, 9-29-2021.",
+    "historicalFact": "Hollywood Heritage dedicated the plaque on National Silent Movie Day, September 29, 2021. The alley was identified by John Bengtson, a film location researcher the New York Times called 'the great detective of silent film locations.' He matched frames from century-old films to this unremarkable service lane."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Stand in the alley and look at its orientation. It runs between two streets in a specific direction. Filmmakers chose this alley because it stayed well-lit all day long. Which compass direction does the alley run — north-south or east-west?",
+    "answer": "East-west",
+    "answerVariants": ["east-west", "east west", "east to west", "e-w"],
+    "historicalFact": "Silent films needed daylight — electric lighting wasn't powerful enough for early cameras. An east-west alley catches sunlight from morning to late afternoon. In the 1920s, most of LA was still undeveloped, so this alley was one of the few locations that looked urban enough to pass for a city street on camera."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "persona",
+    "clue": "I never spoke onscreen. I wore a bowler hat, a tight coat, baggy trousers, and carried a bamboo cane. In 1921, I filmed a scene in this alley where a kid threw rocks through windows while I replaced the glass behind him. I had offices in the Taft Building on Vine and invested in the Guaranty Building on Hollywood Blvd. Find the plaque in the alley. What is my last name, as inscribed?",
+    "answer": "Chaplin",
+    "answerVariants": ["chaplin", "Chaplin"],
+    "verificationNeeded": "Confirm Chaplin's name appears on the alley plaque.",
+    "historicalFact": "Chaplin filmed The Kid in this alley — the scene where Jackie Coogan breaks windows and the Tramp follows behind offering to fix them. Chaplin's Hollywood footprint within three blocks: he had offices in the Taft Building, invested in the Guaranty Building, and shot his breakthrough film in this service alley. All still standing."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "spotter",
+    "clue": "Walk to 6363 Selma Ave — a quiet side street south of Hollywood Blvd. Look for a storefront with signage that sounds like it belongs in a horror film. What is the name of the museum?",
+    "answer": "Museum of Death",
+    "answerVariants": ["museum of death", "Museum of Death", "the museum of death", "The Museum of Death"],
+    "historicalFact": "The Museum of Death was founded in San Diego in 1995 inside the city's first mortuary, then relocated to Hollywood in 2000. The founders' stated goal: 'to make people happy to be alive.' The building was previously Westbeach Recorders, where Pink Floyd recorded. The soundproofing now dampens a different kind of noise."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "connector",
+    "clue": "The plaque in the alley names three comedians who filmed here a century ago. One block east, the Taft Building at Hollywood and Vine housed the Academy of Motion Picture Arts and Sciences from 1935 to 1946. One of the three comedians on the plaque also kept offices in the Taft Building. Which one?",
+    "answer": "Chaplin",
+    "answerVariants": ["chaplin", "Chaplin", "charlie chaplin", "Charlie Chaplin"],
+    "historicalFact": "Chaplin filmed in the alley (1921), kept offices in the Taft Building, and invested in the Guaranty Building at 6331 Hollywood Blvd. Three blocks, three traces of one career. The alley plaque connects the man to the street he worked on — he wasn't just visiting."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "spotter",
+    "clue": "Walk to the Guaranty Building at 6331 Hollywood Blvd — a 12-story Beaux-Arts tower. It was built in 1923 by the same architectural duo who designed Griffith Observatory. A different organization purchased the building in 1988. Look at the ground-floor signage or branding. What organization occupies it now?",
+    "answer": "Church of Scientology",
+    "answerVariants": ["church of scientology", "Church of Scientology", "scientology", "Scientology"],
+    "verificationNeeded": "Confirm Church of Scientology signage or branding is visible on the Guaranty Building exterior at 6331 Hollywood Blvd.",
+    "historicalFact": "The Guaranty Building was built in 1923 by architects John C. Austin and Frederic M. Ashley — the same pair who designed Griffith Observatory. Charlie Chaplin and Cecil B. DeMille were among its first investors. The building's loan association went bankrupt in the Depression. Scientology bought it in 1988 for $5.1 million."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "persona",
+    "clue": "I invented narrative cinema — close-ups, crosscuts, parallel editing. Every filmmaker who came after me used my grammar. I spent the last year of my life in a hotel two blocks from the alley where my proteges filmed their masterpieces. They found me unconscious in the lobby on July 23, 1948. The hotel is on Ivar Ave. Find the building. What is the name on it?",
+    "answer": "Knickerbocker",
+    "answerVariants": ["knickerbocker", "Knickerbocker", "hollywood knickerbocker", "Hollywood Knickerbocker"],
+    "verificationNeeded": "Confirm Knickerbocker signage or marquee is visible on the building at 1714 Ivar Ave (now a retirement home).",
+    "historicalFact": "D.W. Griffith — the father of narrative cinema — spent his final year broke and forgotten at the Hollywood Knickerbocker Hotel, 1714 Ivar Ave. He died in the lobby in 1948. Two blocks away, the alley where Chaplin, Keaton, and Lloyd shot their silent films is now marked with a plaque. Griffith taught them everything. Nobody marked where he died."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "The Guaranty Building at 6331 Hollywood Blvd was designed by two architects who also built one of the most visited landmarks in Los Angeles — a hilltop observatory with a copper dome overlooking the city. You can see it from Hollywood on a clear day. The same architects, the same Beaux-Arts hand. What is the name of the observatory they designed?",
+    "answer": "Griffith Observatory",
+    "answerVariants": ["griffith observatory", "Griffith Observatory", "griffith", "the griffith observatory"],
+    "historicalFact": "John C. Austin and Frederic M. Ashley designed both the Guaranty Building (1923) and Griffith Observatory (1935). The Guaranty Building was their commercial work — Chaplin and DeMille invested. The observatory was their civic masterpiece — Griffith J. Griffith donated $100,000 in his will to build it, insisting every Angeleno deserved access to a telescope. Same architects, two buildings that define LA from two different vantage points.",
+    "reasoning": "Solver reads the Guaranty Building's signage (already encountered at D7), connects the architects to a famous landmark, and names it. D9 difficulty because it requires cross-referencing architectural history with a well-known LA landmark — the clue gives strong hints (hilltop, copper dome, observatory) but the solver still needs to make the connection. Presence test: the solver is standing at the Guaranty Building, connecting what they see to another building they know."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Two Hollywood institutions made celebrity caricatures their signature. The Vine Street Brown Derby — the most famous restaurant in Golden Age Hollywood, now demolished — covered its walls with drawings of its famous patrons. Two blocks east, a dive bar has kept the same tradition alive since 1963: a mural of 24+ caricatures in the style of a New York Times illustrator who hid his daughter's name in every drawing. The bar is still open. Walk to 6245 Hollywood Blvd. Look at the mural through the window or step inside. What name did the illustrator hide?",
+    "answer": "Nina",
+    "answerVariants": ["nina", "Nina", "NINA"],
+    "verificationNeeded": "Confirm the Hirschfeld-style mural is visible through the Frolic Room's front window, or that 'Nina' is identifiable in the caricatures from the bar interior.",
+    "historicalFact": "The Brown Derby at 1628 Vine St opened Valentine's Day 1929 and invented the Cobb Salad (Bob Cobb chopped leftovers for Sid Grauman, who'd just had dental work). Celebrity caricatures covered its walls. Clark Gable proposed to Carole Lombard in booth 54. The restaurant burned and was demolished in 1994. Two blocks east, the Frolic Room's 1963 mural carries the same tradition — Hirschfeld-style caricatures of Einstein, Gable, Monroe, Chaplin, Sinatra. One demolished, one still pouring. The drawings outlasted the Derby.",
+    "reasoning": "Solver connects two physical traditions (Brown Derby caricatures, Frolic Room mural), walks to the bar, and identifies the hidden name. D10 difficulty because it chains historical knowledge of the Brown Derby (now a ghost site) with physical observation at the Frolic Room, requiring the solver to look closely at the mural and find 'Nina' — a detail that rewards careful looking."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're almost at the bar. The Pantages Theatre is right in front of you — the last movie palace built in Hollywood, dripping with Art Deco geometry. Look at the facade. Take a photo of whatever detail catches your eye first. The bar is next door.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The Pantages opened June 4, 1930 — vaudeville impresario Alexander Pantages' last theater and Hollywood's last movie palace. He planned a 12-story office tower above it. The 1929 stock market crash stopped construction at two stories, where it remains. For 11 consecutive years (1949-1960), the Academy Awards were held on its stage."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Find the theater at 6233 Hollywood Blvd. Look up at the marquee above the main entrance. What name is on it?",
+    "answer": "Pantages",
+    "answerVariants": ["pantages", "Pantages", "PANTAGES", "the pantages", "Pantages Theatre", "pantages theatre"],
+    "historicalFact": "Alexander Pantages was a Greek immigrant who started as a janitor in a Klondike saloon during the Gold Rush. He built a vaudeville empire of 84 theaters stretching from Alaska to Mexico. This one — his last and most lavish — opened in 1930, the year after the crash that killed his plans for a 12-story tower above it."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "The Pantages facade is covered in Art Deco decoration — geometric patterns carved into every surface from the sidewalk to the roofline. Look closely. The carved shapes include chevrons, zigzags, and a repeating pattern that radiates outward like rays of light. What is the radiating pattern — what does it look like?",
+    "answer": "Starbursts",
+    "answerVariants": ["starbursts", "starburst", "sunbursts", "sunburst", "sunrays", "sun rays", "rays", "rays of light", "radiating lines"],
+    "historicalFact": "The Pantages' facade is a catalogue of Art Deco motifs — chevrons, zigzags, and starbursts carved in stone and terra cotta. Designer B. Marcus Priteca gave every surface a pattern. The interior murals, by Anthony B. Heinsbergen, are even more elaborate — a polychromatic fan-vaulted lobby in gold and henna."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "connector",
+    "clue": "One man owned both the theater at 6233 Hollywood Blvd and the bar next door at 6245 Hollywood Blvd from 1949 to 1954. He was an aviator, film producer, and billionaire. Look at the neon sign outside the bar — he installed it. Now look at the theater marquee. Both buildings carry his legacy. What is the bar's name, as spelled on its neon sign?",
+    "answer": "Frolic Room",
+    "answerVariants": ["frolic room", "Frolic Room", "FROLIC ROOM", "the frolic room", "The Frolic Room"],
+    "historicalFact": "Howard Hughes owned both the Pantages Theatre and the Frolic Room from 1949 to 1954. He installed the neon sign that still hangs outside the bar. During those same years, the Pantages hosted 11 consecutive Academy Awards ceremonies — and the Frolic Room was where Hollywood went after the show."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "spotter",
+    "clue": "The Pantages was supposed to be much taller. Alexander Pantages planned a 12-story office tower above the theater. A financial catastrophe in October 1929 stopped construction. Look at the building — how many stories tall is it?",
+    "answer": "2",
+    "answerVariants": ["2", "two"],
+    "historicalFact": "The 1929 stock market crash killed 10 stories of the Pantages. What was supposed to be a 12-story tower opened as a 2-story theater. The missing floors are a monument to the Depression — you can see it in the building's proportions. The facade is too elaborate for something so short."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "Look at the facade material of the Pantages Theatre. The Art Deco patterns aren't painted on — they're carved into a specific material. The same material is used on thousands of ornamental building facades from the 1920s. Touch it if you can reach. It's not stone, not concrete, not brick. What material are the decorative elements made of?",
+    "answer": "Terra cotta",
+    "answerVariants": ["terra cotta", "terracotta", "Terra cotta", "Terracotta", "terra-cotta"],
+    "historicalFact": "Terra cotta — fired clay — was the material of choice for Art Deco facades in 1920s LA. It could be molded into any shape before firing, which meant architects could mass-produce intricate geometric patterns. The Pantages uses it on every visible surface. Stone would have cost ten times more and taken ten times longer to carve."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "persona",
+    "clue": "I drew caricatures for the New York Times for 75 years — every theater critic in America knew my line. I hid my daughter's name in every drawing. In 1963, someone painted my caricatures onto the wall of a Hollywood dive bar, steps from a theater that once hosted the Oscars. The mural has been there for 60 years. Find the bar at 6245 Hollywood Blvd. Look at the neon sign. What color is the neon?",
+    "answer": "Red",
+    "answerVariants": ["red", "Red", "red neon"],
+    "verificationNeeded": "Confirm the Frolic Room neon sign color — widely described as red/pinkish-red neon. Verify on site.",
+    "historicalFact": "The mural inside the Frolic Room depicts 24+ caricatures in the style of Al Hirschfeld — Einstein, Gable, Monroe, Chaplin, the Marx Brothers, Louis Armstrong, Sinatra. Hirschfeld hid his daughter Nina's name in every drawing he made after her birth in 1945. The mural reportedly contains 'Nina' hidden three times. The owner says it's a scale reproduction, not a Hirschfeld original."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "spotter",
+    "clue": "At the corner of Hollywood and Vine (one block west of the Pantages), look at the northeast corner. A two-tower building blends two architectural styles that shouldn't work together — pointed Gothic arches with geometric Art Deco detailing. It opened in 1929 and was Hollywood's second high-rise. What style are the pointed arches on the upper facade?",
+    "answer": "Gothic",
+    "answerVariants": ["gothic", "Gothic", "gothic revival", "Gothic Revival", "late gothic", "Late Gothic Revival"],
+    "historicalFact": "The Equitable Building at 6253 Hollywood Blvd is a hybrid — architect Aleck Curlett fused Gothic Revival arches with Art Deco geometry. It opened in two phases (May 1929 and late 1930), the second phase doubling its size to become Hollywood's largest office building. It was converted to lofts in 2008. The architectural clash is the point — the building was designed during the exact moment one style was dying and the other was being born."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "connector",
+    "clue": "The Academy of Motion Picture Arts and Sciences had its headquarters in the Taft Building at Hollywood and Vine from 1935 to 1946. Then, starting in 1949, the Academy Awards ceremony moved to a stage one block east. Walk from the Taft Building to the theater that hosted the Oscars for 11 straight years. How far did the Oscars travel — how many blocks?",
+    "answer": "1",
+    "answerVariants": ["1", "one", "one block", "1 block"],
+    "historicalFact": "The Oscars moved one block — from the Taft Building (Academy HQ, 1935-1946) to the Pantages Theatre (ceremony venue, 1949-1960). The first televised Academy Awards broadcast was from the Pantages in 1953. The Frolic Room, steps from the Pantages stage door, was where nominees drank before the show and winners drank after."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "spotter",
+    "clue": "You're steps from your destination. Before you go in, look at the bar's facade at 6245 Hollywood Blvd. The building opened in 1930 as a speakeasy called Freddy's — patrons slipped in through a hidden door from the theater next door. A billionaire bought both buildings and added the neon sign. A woman was reportedly seen here before she became LA's most infamous unsolved murder. In 1963, an artist painted caricatures of two dozen celebrities on the interior wall. One of those celebrities won four gold medals in Berlin in 1936 while a dictator watched from the stands. His caricature is in the mural. What is his name?",
+    "answer": "Jesse Owens",
+    "answerVariants": ["jesse owens", "Jesse Owens", "JESSE OWENS", "owens"],
+    "verificationNeeded": "Confirm Jesse Owens is depicted in the Frolic Room's Hirschfeld-style mural. The mural includes 24+ caricatures — Owens' inclusion is referenced in some sources but needs on-site verification.",
+    "historicalFact": "The Frolic Room mural was painted in 1963 and restored by Oscar Ropide in 2012. The caricatures span Hollywood and beyond — Einstein, Gable, Monroe, Chaplin, the Marx Brothers, Louis Armstrong, Sinatra, and reportedly Jesse Owens. Owens won four golds at the 1936 Berlin Olympics while Hitler refused to shake his hand. He came home to a country that wouldn't let him eat at the same restaurants as his white teammates. His face on a dive-bar wall in Hollywood is an odd kind of immortality.",
+    "reasoning": "Solver identifies the athlete from the biography (four golds, Berlin, 1936, dictator watching) then enters or peers into the bar to find the caricature and confirm the name. D10 difficulty because it chains persona-style identification with physical observation inside the bar — the solver must locate the specific caricature among 24+ figures. Presence required: the mural is not consistently reproduced online with all figures labeled."
+  }
+]

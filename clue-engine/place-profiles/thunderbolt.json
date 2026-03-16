@@ -1,0 +1,703 @@
+{
+  "barId": "thunderbolt",
+  "generatedBy": "/recon",
+  "generatedDate": "2026-03-16",
+  "bar": {
+    "name": "Thunderbolt",
+    "address": "1263 W Temple St, Los Angeles, CA 90026",
+    "neighborhood": "Historic Filipinotown / Echo Park",
+    "lat": 34.0663,
+    "lng": -118.2541,
+    "happyHour": "Mon-Thu 5-7pm specials; serious cocktail list daily",
+    "vibe": "Southern-inspired cocktail bar, open patio, light pink highlights, dark green walls, orange stools, brown leather upholstery, Technics 1200 turntables through a vintage 1985 Macintosh amplifier, centrifuge-made drinks",
+    "barFacts": [
+      "#10 on North America's 50 Best Bars list — named 'Best Bar in the West' three years running",
+      "Owner-bartender Mike Capoferri uses centrifuges and high-pressure nitrous to make cocktails",
+      "25+ Madeira wines on the list, oldest from the 1960s — one of the deepest Madeira programs in LA",
+      "Ceiling completely soundproofed with acoustic panelling; audio routed through vintage 1985 Macintosh amplifier",
+      "Winner of the Ketel One Sustainable Bar Award 2025",
+      "Named at the intersection of three neighborhoods: Historic Filipinotown, Echo Park, and DTLA"
+    ]
+  },
+  "discoveryStats": {
+    "wikipediaHits": 5,
+    "overpassFeatures": 6,
+    "overpassDatedBuildings": 42,
+    "hmdbMarkers": 1,
+    "localColorFinds": 18,
+    "totalRaw": 30,
+    "afterDedup": 16,
+    "aboveThreshold": 12,
+    "selectedForRoute": 3
+  },
+  "route": {
+    "startPoint": {
+      "lat": 34.0634,
+      "lng": -118.2575,
+      "label": "Unidad Park / Gintong Kasaysayan Mural"
+    },
+    "endPoint": {
+      "lat": 34.0663,
+      "lng": -118.2541,
+      "label": "Thunderbolt"
+    },
+    "totalDistance": "0.4 mi",
+    "estimatedWalkTime": "9 min",
+    "stops": [
+      {
+        "stopNumber": 1,
+        "ring": 1,
+        "lat": 34.0634,
+        "lng": -118.2575,
+        "poiId": "unidad-park-gintong-mural",
+        "label": "Unidad Park & Gintong Kasaysayan Mural",
+        "nearbySupplemental": ["talang-gabay-eastern-gateway", "larry-itliong-utility-box", "filipino-cultural-lampposts"]
+      },
+      {
+        "stopNumber": 2,
+        "ring": 2,
+        "lat": 34.0660,
+        "lng": -118.2580,
+        "poiId": "filipino-christian-church",
+        "label": "Filipino Christian Church & HiFi Western Gateway",
+        "nearbySupplemental": ["hifi-western-gateway", "occidental-studios"]
+      },
+      {
+        "stopNumber": 3,
+        "ring": 3,
+        "lat": 34.0664,
+        "lng": -118.2530,
+        "poiId": "screen-novelties-neon-giraffe",
+        "label": "Screen Novelties / Neon Giraffe Sign",
+        "nearbySupplemental": ["bobs-market", "toretto-house-fast-furious", "carroll-avenue-victorians"]
+      }
+    ]
+  },
+  "pois": [
+    {
+      "poiId": "unidad-park-gintong-mural",
+      "name": "Unidad Park & Gintong Kasaysayan Mural",
+      "address": "1644-48 Beverly Blvd",
+      "lat": 34.0634,
+      "lng": -118.2575,
+      "category": "park / public-art",
+      "distanceFromBar": "350m",
+      "year": 1995,
+      "designations": ["LA Conservancy recognized", "SPARC-commissioned", "Named one of '10 Monumental Murals of LA' and '20 Iconic Murals of LA' by LA Weekly"],
+      "facts": [
+        "Gintong Kasaysayan, Gintong Pamana ('A Glorious History, A Golden Legacy') — 145 ft × 30 ft, the largest Filipino American mural in the United States",
+        "Painted by Eliseo Art Silva in 1995, commissioned by the Social and Public Art Resource Center (SPARC)",
+        "Summarizes 5,000 years of Filipino and Filipino American history — first mural to honor Larry Itliong and the 1965 Delano Grape Strike",
+        "Depicts Jose Rizal, Carlos Bulosan, Lapu-Lapu, Larry Itliong, Philip Vera Cruz, and others — interpretive sign in front identifies each figure",
+        "The mural's presence helped inspire the city to designate Historic Filipinotown in 2002",
+        "Park includes a dap-ay — a circular gathering place from Cordillera mountain villages in Northern Luzon, Philippines — believed to be the first outside the Philippines",
+        "Entrance walkway inspired by the yo-yo, which was popularized by Filipino immigrant Pedro Flores",
+        "Park design references the Rice Terraces of the Philippine Cordilleras (UNESCO World Heritage Site)",
+        "Before it was Unidad Park, the site was the Candy Chuateco Community Garden — SIPA broke ground in 1993",
+        "18 raised wooden garden beds built and installed by residents in 2012",
+        "LA Times called it 'the most significant Filipino mural in the country'",
+        "Laid the cultural foundation for the first Larry Itliong Day celebration in Carson, CA (2010), later adopted statewide in 2015"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "145-ft × 30-ft mural spanning the entire western edge of the park", "material": "paint on wall" },
+          { "type": "sign", "text": "Interpretive panel identifying depicted figures — Jose Rizal, Lapu-Lapu, Larry Itliong, Philip Vera Cruz, Carlos Bulosan, and more", "location": "in front of mural" },
+          { "type": "architecture", "detail": "Dap-ay — circular stone gathering place", "material": "stone", "location": "within park" },
+          { "type": "oddity", "detail": "Entrance walkway design inspired by the knotted yo-yo", "location": "park entrance" },
+          { "type": "count", "element": "Raised garden beds", "count": 18 },
+          { "type": "architecture", "detail": "Playground, barbecue grills, covered tent", "location": "park interior" },
+          { "type": "count", "element": "Approximate length of mural in feet", "count": 145 },
+          { "type": "artwork", "detail": "Historical figures painted in mural — countable from interpretive sign", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Eliseo Art Silva", "to": "Talang Gabay Eastern Gateway", "link": "Same artist designed both the mural (1995) and the Eastern Gateway arch (2022)" },
+        { "type": "theme-link", "from": "Gintong Kasaysayan (1965 Grape Strike)", "to": "Larry Itliong Utility Box", "link": "Both honor Itliong's role in the Delano Grape Strike" },
+        { "type": "era-link", "from": "Mural (1995) inspiring HiFi designation (2002)", "to": "Filipino Christian Church (moved to area 1950)", "link": "The church anchored the Filipino community here; the mural gave it a visible identity 45 years later" },
+        { "type": "theme-link", "from": "Dap-ay (Cordillera gathering place)", "to": "Filipino Christian Church", "link": "Both represent Filipino community-building transplanted to LA — sacred and secular" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 43.75
+      },
+      "bestStructures": ["spotter", "connector", "narrative-riddle", "sequence", "cipher-lite", "photo-challenge", "elimination", "reframe"]
+    },
+    {
+      "poiId": "filipino-christian-church",
+      "name": "Filipino Christian Church",
+      "address": "301 N Union Ave",
+      "lat": 34.0660,
+      "lng": -118.2580,
+      "category": "historic-building / place-of-worship",
+      "distanceFromBar": "200m",
+      "year": 1928,
+      "designations": ["LA Historic-Cultural Monument #651 (1998)", "National Register of Historic Places (2019)", "National Park Service listing"],
+      "facts": [
+        "Oldest Filipino Protestant church in the United States — founded in 1928 as the Filipino Christian Fellowship",
+        "Founded by young Filipino men enrolled at California Christian College who faced discriminatory practices restricting where they could live, work, and worship",
+        "Reorganized as a formal church in 1933",
+        "Forced to move repeatedly due to city redevelopment until 1950, when it acquired the former Union Avenue M.E. Church in the Temple-Beverly corridor",
+        "The church's move to this corridor catalyzed other Filipino organizations relocating here — directly creating what became Historic Filipinotown",
+        "Only historic cultural monument designated by the City of Los Angeles with Filipino origins",
+        "German Gothic Revival and Craftsman architecture",
+        "Listed on the National Register of Historic Places in 2019 by the National Park Service",
+        "The broader Filipino community in LA dates to the early 1900s — restrictive housing laws prevented land ownership until the 1950s"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "German Gothic Revival and Craftsman style church building", "material": "wood and stone" },
+          { "type": "sign", "text": "Filipino Christian Church signage", "location": "exterior", "needsVerification": true },
+          { "type": "architecture", "detail": "Former Union Avenue M.E. Church — original structure predates Filipino congregation", "needsVerification": true },
+          { "type": "plaque", "text": "Historic-Cultural Monument plaque", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-neighborhood", "from": "Filipino Christian Fellowship founders (1928)", "to": "Historic Filipinotown", "link": "Church's 1950 relocation to Temple-Beverly corridor directly created the neighborhood's Filipino identity" },
+        { "type": "era-link", "from": "Filipino Christian Church (1928/1950)", "to": "Gintong Kasaysayan Mural (1995)", "link": "Church anchored community for 45 years before the mural gave it visible cultural expression" },
+        { "type": "theme-link", "from": "Discriminatory housing laws", "to": "Little Manila (Downtown LA)", "link": "Filipinos couldn't own land until 1950s — forced from Downtown's Little Manila to Temple-Beverly corridor" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 10,
+        "connection": 10,
+        "uniqueness": 8,
+        "composite": 39.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "elimination"]
+    },
+    {
+      "poiId": "hifi-western-gateway",
+      "name": "HiFi Western Gateway",
+      "address": "Temple St & Silverlake Blvd",
+      "lat": 34.0660,
+      "lng": -118.2588,
+      "category": "public-art / landmark",
+      "distanceFromBar": "200m",
+      "year": 2002,
+      "designations": ["City of Los Angeles commissioned landmark"],
+      "facts": [
+        "Unveiled in 2002 by then-City Councilmember Eric Garcetti — marks the western entrance to Historic Filipinotown",
+        "Facade designed with vine and floral motifs known as 'callado' embroidery — traditional patterns from the Maria Clara (women's formal dress) and Barong Tagalog (men's formal shirt)",
+        "Part of the 30-year campaign to get the city to designate Historic Filipinotown in 2002",
+        "Historic Filipinotown was the first Filipino community in America to receive a named area with distinct geographic boundaries",
+        "Complements the Eastern Gateway (Talang Gabay) installed 20 years later in 2022"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Gateway facade with callado embroidery motifs — vine and floral patterns", "location": "Temple St & Silverlake Blvd" },
+          { "type": "sign", "text": "Historic Filipinotown designation markings", "needsVerification": true },
+          { "type": "oddity", "detail": "Callado patterns reference both Maria Clara dress and Barong Tagalog shirt" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Western Gateway (2002)", "to": "Eastern Gateway / Talang Gabay (2022)", "link": "20-year bookends — western installed at designation, eastern completed two decades later" },
+        { "type": "person-to-place", "from": "Eric Garcetti (Councilmember 2002, Mayor by 2022)", "to": "Both gateways", "link": "Garcetti unveiled western gateway as councilmember; eastern gateway completed during his mayoralty" },
+        { "type": "theme-link", "from": "Callado embroidery (Western)", "to": "Parol / Sarimanok / Gumamela (Eastern)", "link": "Western gateway references clothing tradition; eastern references spiritual/cultural symbols — two different dimensions of Filipino identity" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 7,
+        "connection": 8,
+        "uniqueness": 7,
+        "composite": 33.25
+      },
+      "bestStructures": ["spotter", "connector", "reframe", "cipher-lite"]
+    },
+    {
+      "poiId": "screen-novelties-neon-giraffe",
+      "name": "Screen Novelties / Neon Giraffe Sign",
+      "address": "Temple St & Belmont Ave",
+      "lat": 34.0664,
+      "lng": -118.2530,
+      "category": "unusual-business / public-art",
+      "distanceFromBar": "100m",
+      "year": 2003,
+      "designations": ["Atlas Obscura listing"],
+      "facts": [
+        "Stop-motion animation studio formed in 2003 by Mark Caballero, Seamus Walsh, and Christopher Finnegan",
+        "14-foot neon giraffe sign on the building — originally said 'DELI' at the bottom, now says 'Hi-Fi' (abbreviation for Historic Filipinotown)",
+        "The giraffe sign includes an X-ray-like view of the giraffe's neck in gold neon",
+        "Studio partners restored the vintage sign when they moved into the brick building",
+        "Among the first stop-motion artists to adopt an entirely digital capture system — integral in launching both Robot Chicken and Moral Orel for Adult Swim",
+        "Atlas Obscura describes it as a 'puppet-lover's paradise'",
+        "Building is a brick structure in Historic Filipinotown section of Echo Park"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "14-foot neon giraffe with X-ray neck view and 'Hi-Fi' text", "material": "gold neon", "location": "building exterior" },
+          { "type": "architecture", "detail": "Brick building", "material": "brick" },
+          { "type": "oddity", "detail": "Originally a deli sign — animation studio kept the giraffe and changed 'DELI' to 'Hi-Fi'" },
+          { "type": "oddity", "detail": "Interior filled with puppets and stop-motion sets — visible through windows", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Neon giraffe (repurposed sign)", "to": "Bob's Market (repurposed building)", "link": "Both are structures that got famous second lives — deli became animation studio, grocery became film location" },
+        { "type": "proximity", "from": "Screen Novelties", "to": "Thunderbolt", "link": "~100m apart on Temple St — closest POI to the bar" },
+        { "type": "theme-link", "from": "Screen Novelties (filmmaking)", "to": "Occidental Studios (filmmaking)", "link": "Both film production in HiFi — silent era and modern animation, same neighborhood 100 years apart" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 4,
+        "connection": 6,
+        "uniqueness": 9,
+        "composite": 33.25
+      },
+      "bestStructures": ["spotter", "reframe", "photo-challenge", "connector"]
+    },
+    {
+      "poiId": "talang-gabay-eastern-gateway",
+      "name": "Talang Gabay — HiFi Eastern Gateway",
+      "address": "Beverly Blvd near 1st Street Bridge",
+      "lat": 34.0620,
+      "lng": -118.2555,
+      "category": "public-art / landmark",
+      "distanceFromBar": "490m",
+      "year": 2022,
+      "designations": ["City of Los Angeles commissioned landmark"],
+      "facts": [
+        "Formally named 'Talang Gabay — Our Guiding Star' — name drawn from the Jose Rizal Monument in Manila, which was called 'Motto Stella' (Latin: Guiding Star)",
+        "Spans 82 feet across Beverly Boulevard, stands 30 feet high — the largest Filipino cultural arch in the United States",
+        "Designed by Eliseo Art Silva (same artist as the Gintong Kasaysayan mural) with Celestino Geronimo Jr.",
+        "Incorporates: parol (star-shaped Christmas lantern), gumamela flower (hibiscus, tribute to COVID-19 frontline workers), Sarimanok (mythical bird symbolizing good fortune)",
+        "Peak of the arch replicates precolonial Filipino palaces such as the Torogan, and boat masts with bird motifs",
+        "Two ends of the arch represent the Naga — a mythological sea creature that provides safe passage to sailors",
+        "The face on the Philippine Sun restores the original flag design launched June 12, 1898",
+        "Cost approximately $587,000 — project took 20 years from concept to completion",
+        "Installed April 2022, formally unveiled May 2022",
+        "Eric Garcetti championed the project as city councilmember; it was completed during his term as mayor"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "82-ft wide × 30-ft tall steel arch spanning Beverly Blvd", "material": "steel" },
+          { "type": "artwork", "detail": "Parol (star-shaped lantern) incorporated into arch design", "location": "arch structure" },
+          { "type": "artwork", "detail": "Gumamela (hibiscus) flower element", "location": "arch structure" },
+          { "type": "artwork", "detail": "Sarimanok mythical bird figure", "location": "arch structure" },
+          { "type": "artwork", "detail": "Naga sea creature figures at arch ends", "location": "both ends of arch" },
+          { "type": "artwork", "detail": "Torogan-inspired peak with boat mast and bird motifs", "location": "top of arch" },
+          { "type": "artwork", "detail": "Philippine Sun face — original 1898 flag design", "location": "arch face" },
+          { "type": "count", "element": "Width of arch in feet", "count": 82 },
+          { "type": "count", "element": "Height of arch in feet", "count": 30 }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Eliseo Art Silva", "to": "Gintong Kasaysayan Mural", "link": "Same artist — mural (1995) and gateway (2022), 27 years of Filipino cultural expression in one neighborhood" },
+        { "type": "era-link", "from": "Eastern Gateway (2022)", "to": "Western Gateway (2002)", "link": "20-year bookends marking the neighborhood's entrances" },
+        { "type": "theme-link", "from": "Jose Rizal (gateway name)", "to": "Jose Rizal (depicted in mural)", "link": "National hero appears in both the arch's naming and the mural's imagery" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 8,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 42.25
+      },
+      "bestStructures": ["spotter", "cipher-lite", "connector", "elimination", "photo-challenge", "sequence"]
+    },
+    {
+      "poiId": "bobs-market",
+      "name": "Bob's Market / Toretto's Market",
+      "address": "1234 Bellevue Ave (corner of Bellevue & Edgeware)",
+      "lat": 34.0680,
+      "lng": -118.2530,
+      "category": "historic-building",
+      "distanceFromBar": "210m",
+      "year": 1913,
+      "designations": ["LA Historic-Cultural Monument #215 (1979)"],
+      "facts": [
+        "Built in 1913 — architect George F. Colterison designed it for Ella J. McMillen as two separate shops: a market and a tailor",
+        "Mission Revival and Oriental architectural elements on a one-story false-front frame structure",
+        "One of the earliest tenants, tailor Levon Melkonian, fled the Armenian Genocide in 1914 and set up shop in the 1253 Bellevue half",
+        "Two shops combined in 1934 when the grocery expanded",
+        "Named 'Bob's Market' when the Nimura family bought it in 1965",
+        "Designated HCM #215 on June 6, 1979 for 'many decades of service as a grocery store with little alteration to the main building'",
+        "Featured as Toretto's Market & Cafe in The Fast and the Furious (2001) — Vin Diesel's character's family store",
+        "The garage in the movie is fictional but the rest of the building is real"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "One-story false-front frame structure with Mission Revival and Oriental elements", "material": "wood frame" },
+          { "type": "sign", "text": "Bob's Market signage", "location": "storefront" },
+          { "type": "architecture", "detail": "Corner store configuration — market side and former tailor side visible", "location": "Bellevue & Edgeware corner" },
+          { "type": "oddity", "detail": "Fans of The Fast and the Furious frequently visit to photograph the building" }
+        ]
+      },
+      "connections": [
+        { "type": "proximity", "from": "Bob's Market", "to": "Fast & Furious House (722 E Kensington)", "link": "Both Fast & Furious filming locations within 200m of each other in Angelino Heights" },
+        { "type": "theme-link", "from": "Levon Melkonian (Armenian Genocide refugee, 1914)", "to": "Filipino community (discriminatory housing, 1950s)", "link": "Immigrant communities finding refuge in the same neighborhood across decades" },
+        { "type": "era-link", "from": "Bob's Market (1913)", "to": "Occidental Studios (1913)", "link": "Both founded in the same year — a grocery store and a film studio, same neighborhood" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 8,
+        "connection": 8,
+        "uniqueness": 8,
+        "composite": 36.5
+      },
+      "bestStructures": ["narrative-riddle", "reframe", "connector", "spotter", "photo-challenge"]
+    },
+    {
+      "poiId": "carroll-avenue-victorians",
+      "name": "Carroll Avenue Historic District",
+      "address": "1300 block Carroll Ave, Angelino Heights",
+      "lat": 34.0695,
+      "lng": -118.2545,
+      "category": "historic-district",
+      "distanceFromBar": "360m",
+      "year": 1886,
+      "designations": ["National Register of Historic Places (1976)", "Angelino Heights HPOZ"],
+      "facts": [
+        "Finest collection of Victorian domestic architecture remaining in Los Angeles — Queen Anne and Eastlake styles from the late 19th century",
+        "Angelino Heights subdivided in 1886 by William Stilson and Everett Hall during the LA land boom",
+        "Banking recession of 1888 halted construction — accidentally preserving the Victorian character",
+        "1329 Carroll Ave: The 'Charmed' house (Halliwell Manor exterior) — the Innes House, built for city councilman and real estate developer Daniel Innes in the late 1880s",
+        "1345 Carroll Ave: The Sanders House — featured in the final scene of Michael Jackson's 'Thriller' video",
+        "Foy House: Oldest home on Carroll Ave, built 1872 in Italianate style — moved twice. Former resident Mary Foy was LA's chief librarian and a leader in the women's suffragette movement",
+        "Over 30 Historic-Cultural Monuments in the broader Angelino Heights neighborhood",
+        "1300 block listed on the National Register of Historic Places in 1976"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Queen Anne facades with turrets, gingerbread trim, ornate porches", "material": "wood" },
+          { "type": "architecture", "detail": "Eastlake style wooden detailing" },
+          { "type": "architecture", "detail": "Innes House / Charmed House at 1329 — late 1880s construction", "location": "1329 Carroll Ave" },
+          { "type": "architecture", "detail": "Sanders House / Thriller House at 1345", "location": "1345 Carroll Ave" },
+          { "type": "oddity", "detail": "Foy House is the oldest structure — 1872 Italianate, moved twice to its current location" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Carroll Avenue (1886 land boom)", "to": "Banking recession of 1888", "link": "The crash that killed the boom is the reason the Victorians survived — too broke to demolish and rebuild" },
+        { "type": "theme-link", "from": "Charmed/Thriller houses (pop culture)", "to": "Fast & Furious house (pop culture)", "link": "Three iconic film/TV locations within 400m of each other in Angelino Heights" },
+        { "type": "proximity", "from": "Carroll Avenue", "to": "Neutra/Maxwell House", "link": "Victorian 1880s and Modernist 1941 — two architectural eras 200m apart" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 38.5
+      },
+      "bestStructures": ["spotter", "photo-challenge", "sequence", "narrative-riddle", "elimination"]
+    },
+    {
+      "poiId": "toretto-house-fast-furious",
+      "name": "Fast & Furious House (Toretto's House)",
+      "address": "722 E Kensington Rd",
+      "lat": 34.0696,
+      "lng": -118.2546,
+      "category": "film-location",
+      "distanceFromBar": "370m",
+      "year": 1906,
+      "designations": [],
+      "facts": [
+        "Built in 1906 — four-bedroom house with no notable history before the films",
+        "Featured as Dominic Toretto's house (fictional address 1327) in six Fast and Furious films: The Fast and the Furious, Fast & Furious, Fast & Furious 6, Furious 7, F9, and Fast X",
+        "The garage in the movie is fictional — only the house exterior is real",
+        "Private residence — fans frequently visit to photograph it",
+        "Real address is 722 E Kensington Rd; movie address is 1327"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "1906 residential house — Craftsman-era construction", "location": "722 E Kensington Rd" },
+          { "type": "oddity", "detail": "Fans and tourists frequently photographing the house" },
+          { "type": "oddity", "detail": "No garage actually exists — the movie garage was built on a set" }
+        ]
+      },
+      "connections": [
+        { "type": "proximity", "from": "Toretto's House (722 Kensington)", "to": "Bob's Market / Toretto's Market", "link": "Both Fast & Furious locations within 200m — house and family store" },
+        { "type": "theme-link", "from": "Toretto's House (film set)", "to": "Charmed/Thriller houses", "link": "Angelino Heights as Hollywood's backlot — three franchises from one neighborhood" }
+      ],
+      "score": {
+        "observable": 5,
+        "historical": 4,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 28.25
+      },
+      "bestStructures": ["reframe", "connector", "narrative-riddle"]
+    },
+    {
+      "poiId": "occidental-studios",
+      "name": "Occidental Studios",
+      "address": "201 N Occidental Blvd",
+      "lat": 34.0640,
+      "lng": -118.2610,
+      "category": "historic-building",
+      "distanceFromBar": "450m",
+      "year": 1913,
+      "designations": ["LA Historic Cultural Monument"],
+      "facts": [
+        "Founded in 1913 by Hobart Bosworth — 112 years of continuous operation as a film studio",
+        "Originally just office bungalows and an open-air stage with no roof or lighting for shooting silent movies",
+        "Mary Pickford, Douglas Fairbanks, Cecil B. DeMille, and D.W. Griffith all worked here",
+        "'The Squaw Man' (1914) — the first feature-length picture made in Hollywood — was filmed at Occidental Studios",
+        "3-acre gated campus with 31,489 sq ft of stage space",
+        "Longest continuously operating studio lot in Los Angeles",
+        "Listed for sale at $45 million in 2025 — future use uncertain"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Gated studio campus — walls and gates visible from street", "needsVerification": true },
+          { "type": "sign", "text": "Occidental Studios signage", "needsVerification": true },
+          { "type": "oddity", "detail": "3-acre film campus hidden in a residential neighborhood" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Occidental Studios (1913)", "to": "Bob's Market (1913)", "link": "Both founded the same year — filmmaking and groceries, same neighborhood" },
+        { "type": "theme-link", "from": "Occidental Studios (silent film)", "to": "Screen Novelties (stop-motion animation)", "link": "Film production in HiFi across 110 years — silent era to Robot Chicken" },
+        { "type": "person-to-place", "from": "Cecil B. DeMille", "to": "Occidental Studios", "link": "DeMille worked here before Hollywood was 'Hollywood'" }
+      ],
+      "score": {
+        "observable": 4,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 31.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "neutra-maxwell-house",
+      "name": "Neutra/Maxwell House",
+      "address": "Angelino Heights (relocated)",
+      "lat": 34.0693,
+      "lng": -118.2523,
+      "category": "historic-building",
+      "distanceFromBar": "370m",
+      "year": 1941,
+      "designations": ["LA Historic-Cultural Monument"],
+      "facts": [
+        "1,200-sq-ft Mid-Century modern house designed by Richard Neutra in 1941",
+        "Built for musicians Charles and Sybil Maxwell — she a violinist, he a composer — who wanted 'acoustically suitable living quarters' on a budget of $6,750",
+        "Her practice room is farthest from the composer's study — the house was designed around sound separation",
+        "Neutra first experimented here with peaked roofs and triangular glazed gable openings — this design element profoundly influenced American suburban architecture in the 1950s and 60s",
+        "Originally at 475 N Bowling Green Way in Brentwood — relocated to Angelino Heights in 2008 by Barbara Behm",
+        "Integration of sloping and flat roofs with a glass triangle set into redwood siding"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Mid-Century modern house with peaked roof and triangular glazed gable", "material": "redwood siding with glass triangle" },
+          { "type": "architecture", "detail": "Integration of sloping and flat roofs" },
+          { "type": "oddity", "detail": "House was physically moved from Brentwood to Angelino Heights — 15+ miles" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Neutra/Maxwell (1941 Modernist)", "to": "Carroll Avenue (1886 Victorian)", "link": "Two architectural eras 200m apart — Victorian gingerbread and Mid-Century glass" },
+        { "type": "theme-link", "from": "House relocated from Brentwood (2008)", "to": "Foy House moved twice (1870s-1880s)", "link": "Angelino Heights as a neighborhood that collects displaced architecture" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 7,
+        "connection": 6,
+        "uniqueness": 8,
+        "composite": 33.0
+      },
+      "bestStructures": ["reframe", "narrative-riddle", "spotter"]
+    },
+    {
+      "poiId": "filipino-cultural-lampposts",
+      "name": "Filipino Cultural Lamp Posts",
+      "address": "Throughout Historic Filipinotown — 17 intersections",
+      "lat": 34.0650,
+      "lng": -118.2560,
+      "category": "public-art",
+      "distanceFromBar": "various (on route)",
+      "year": 2016,
+      "designations": ["City of Los Angeles / Metro commissioned"],
+      "facts": [
+        "54 lamp posts adorned with Filipino cultural medallions by artist Roel Punzalan",
+        "Placed at 17 different intersections throughout the neighborhood",
+        "Medallions encode three Filipino values: 'kapwa' (shared humanity/togetherness), 'lakbay' (journey), and 'kapayapaan' (peace)",
+        "Commissioned by the City of Los Angeles and Metro",
+        "Unveiled by Councilmember Mitch O'Farrell during Filipino American History Month, October 2016",
+        "Serve dual purpose: cultural education and pedestrian safety"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Filipino cultural medallions on lamp posts", "material": "metal medallion on lamp post" },
+          { "type": "count", "element": "Total lamp posts with medallions", "count": 54 },
+          { "type": "count", "element": "Intersections with lamp posts", "count": 17 },
+          { "type": "sign", "text": "Kapwa / Lakbay / Kapayapaan — three values encoded in the medallion designs", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Lamp post medallions (kapwa/lakbay/kapayapaan)", "to": "Dap-ay at Unidad Park", "link": "Both encode Filipino values in physical infrastructure — medallions on streets, gathering circle in park" },
+        { "type": "era-link", "from": "Lamp posts (2016)", "to": "Eastern Gateway (2022)", "link": "Sequential layering of Filipino cultural markers in the built environment" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 5,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 30.25
+      },
+      "bestStructures": ["spotter", "cipher-lite", "sequence", "connector"]
+    },
+    {
+      "poiId": "larry-itliong-utility-box",
+      "name": "Larry Itliong Utility Box Mural",
+      "address": "Beverly Blvd near Unidad Park",
+      "lat": 34.0635,
+      "lng": -118.2570,
+      "category": "public-art",
+      "distanceFromBar": "340m",
+      "year": null,
+      "designations": [],
+      "facts": [
+        "Painted utility box depicting Filipino American labor leader Larry Itliong",
+        "Itliong organized Filipino farmworkers to strike Delano grape growers on September 8, 1965 — eight days before Cesar Chavez and the NFWA joined",
+        "The Delano Grape Strike (1965-1970) became the defining moment of the American farmworker movement",
+        "Itliong's role was largely erased from public memory for decades — Chavez received most of the credit",
+        "First Larry Itliong Day celebrated in Carson, CA in 2010; adopted as a statewide California observance in 2015",
+        "Located near the Gintong Kasaysayan mural, which was the first public art to honor Itliong"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Painted portrait of Larry Itliong on utility box", "material": "paint on metal utility box" },
+          { "type": "oddity", "detail": "Easy to walk past — a labor hero memorialized on a utility box rather than a monument" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Larry Itliong", "to": "Gintong Kasaysayan Mural", "link": "Itliong depicted in both the utility box and the large mural — first public art to honor him" },
+        { "type": "theme-link", "from": "Itliong (Filipino labor erasure)", "to": "Little Manila (Filipino community erasure)", "link": "Pattern of Filipino contributions being made invisible — in labor history and in urban geography" }
+      ],
+      "score": {
+        "observable": 5,
+        "historical": 8,
+        "connection": 8,
+        "uniqueness": 7,
+        "composite": 30.25
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "temple-street-name",
+      "name": "Temple Street (the street itself)",
+      "address": "Temple Street, running through HiFi",
+      "lat": 34.0663,
+      "lng": -118.2541,
+      "category": "street-history",
+      "distanceFromBar": "0m",
+      "year": 1828,
+      "designations": [],
+      "facts": [
+        "Named for John Temple (1796-1866), a Massachusetts tradesman who arrived in El Pueblo de los Angeles c. 1828",
+        "Temple converted to Catholicism and took the Spanish name 'Juan' after moving to Mexican California",
+        "He opened the city's first general store on what became Temple Block — one of the most important retail buildings in early Los Angeles",
+        "The street was not named for a house of worship — a common misconception",
+        "Temple Street runs from Figueroa through Historic Filipinotown — the bar sits on a street named for a man who arrived when LA was still part of Mexico"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "Temple St street signs visible at intersections", "location": "street corners" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "John Temple (1828 — Mexican era)", "to": "Filipino community (1920s-present)", "link": "Same street, 100 years apart — Massachusetts merchant under Mexican rule, Filipino immigrants under American rule" },
+        { "type": "theme-link", "from": "Temple's general store (first in LA)", "to": "Bob's Market (1913)", "link": "Commerce on this corridor for nearly 200 years" }
+      ],
+      "score": {
+        "observable": 3,
+        "historical": 7,
+        "connection": 6,
+        "uniqueness": 6,
+        "composite": 24.0
+      },
+      "bestStructures": ["reframe", "narrative-riddle", "cipher-lite"]
+    }
+  ],
+  "cluePotentialMatrix": {
+    "stop1_unidadParkMural": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "The mural is a spotter goldmine — interpretive sign lists countable figures. '5,000 years of history in 145 feet' is a reframe. The yo-yo walkway (Pedro Flores invented it) is a connector to Filipino immigrant history. Dap-ay (first outside Philippines) is a narrative-riddle. Larry Itliong's erased role in the Grape Strike is a reframe — he struck 8 days before Chavez. The three Filipino values on the lampposts (kapwa/lakbay/kapayapaan) are cipher-lite material. Mural figures as an elimination clue: 'Which of these is NOT depicted in the mural?'"
+    },
+    "stop2_filipinoChristianChurch": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": false,
+      "structuresSupported": 7,
+      "notes": "The church-as-neighborhood-creator is a perfect reframe — a congregation forced to move repeatedly by redevelopment, and when it finally settled, it pulled an entire community into existence. The Western Gateway's callado embroidery references clothing (Maria Clara / Barong Tagalog) — spotter for the pattern. '30-year campaign' for HiFi designation is a narrative-riddle. 'First Filipino community in America with distinct geographic boundaries' is a connector to the broader Filipino diaspora. German Gothic Revival + Craftsman architecture on a Filipino church is an inherent reframe."
+    },
+    "stop3_screenNoveltiesBlock": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "The neon giraffe (14 ft, X-ray neck, changed from DELI to Hi-Fi) is the richest spotter near the bar. Bob's Market reframe: 'A 1913 grocery store designed for a widow, where an Armenian Genocide survivor set up a tailor shop, now famous as Vin Diesel's family store.' Carroll Avenue sequence: Foy House (1872) → Victorian boom (1886) → recession freezes time (1888) → Thriller (1983) → Charmed (1998). The Fast & Furious house has a great cipher-lite: real address 722 vs. movie address 1327. Robot Chicken + silent films in the same neighborhood 100 years apart is a connector. Temple Street named for a man, not a building — reframe for the bar's own address."
+    }
+  },
+  "metadata": {
+    "overpassBuildingStock": {
+      "total": 42,
+      "preWar": 38,
+      "preWarPercent": "90%",
+      "oldestDecade": "1880s (2 buildings)",
+      "peakDecade": "1910s-1920s",
+      "note": "Angelino Heights / HiFi building stock is overwhelmingly pre-war. Within 500m radius, 90% of dated buildings were constructed before 1940. The 1886 land boom and subsequent 1888 crash froze development, preserving Victorian-era structures."
+    },
+    "neighborhoodContext": {
+      "hifiDesignation": "2002 — first Filipino community in America with named area and distinct geographic boundaries, after a 30-year campaign",
+      "filipinoPopulation": "Greater LA is home to the largest Filipino American population in the US — over 600,000 people",
+      "littleManila": "A Filipino community called Little Manila flourished in Downtown LA (now Little Tokyo) from the 1920s-1940s — completely destroyed by 1950s redevelopment, pushing the community to the Temple-Beverly corridor",
+      "timeOutRanking": "Historic Filipinotown named 5th coolest neighborhood in the world by Time Out (2019)",
+      "hifiTours": "Pilipino Workers Center runs Mobile HiFi tours (since 2009) and Jeepney tours in a converted 1944 Willys Jeep"
+    },
+    "thinCoverageWarning": false,
+    "verificationFlags": [
+      "Filipino Christian Church — confirm HCM plaque is visible from street",
+      "Western Gateway callado patterns — confirm visible detail level from sidewalk",
+      "Screen Novelties neon giraffe — confirm sign is currently lit and reads 'Hi-Fi'",
+      "Lamp post medallions — confirm which intersections near route have them, verify kapwa/lakbay/kapayapaan text is readable",
+      "Larry Itliong utility box — confirm exact location on Beverly Blvd and current condition",
+      "Unidad Park interpretive sign — confirm it's still standing and legible for figure identification",
+      "Bob's Market — confirm exterior signage is visible and not obscured",
+      "Dap-ay at Unidad Park — confirm it's accessible and identifiable as a circular gathering place"
+    ]
+  }
+}

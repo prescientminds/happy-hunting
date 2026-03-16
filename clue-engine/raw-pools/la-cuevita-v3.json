@@ -1,0 +1,289 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're starting on Figueroa Street in Highland Park. Look up. Way up. There's a 22-foot figure watching over this block from a rooftop. Snap a photo of it against the sky — you'll want to explain this one later.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The walk ahead covers half a mile of Figueroa — Highland Park's commercial spine since the 1920s. You'll pass a 1925 movie palace, a Prohibition-era bowling alley, and a 75-foot Chicano mural before arriving at a bar built behind 100-year-old church doors from Mexico."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "The giant figure on the rooftop at 5558 N Figueroa is holding something in its hand. What is it holding?",
+    "answer": "A bucket of chicken",
+    "answerVariants": ["a bucket of chicken", "bucket of chicken", "a bucket", "bucket", "chicken bucket"],
+    "historicalFact": "Chicken Boy was built in the 1960s as a restaurant mascot for a fried chicken joint on Broadway in downtown LA. The restaurant closed in 1984. An art director named Amy Inouye rescued the statue and stored it in a warehouse for 23 years before installing it here in 2007."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Now look down. The sidewalk near 5558 N Figueroa has tile mosaics embedded in the concrete — most people walk right over them. Find the mosaic closest to the rooftop statue. What does it depict?",
+    "answer": "Chicken Boy",
+    "answerVariants": ["chicken boy", "the chicken boy", "a chicken boy statue", "the statue", "the rooftop statue"],
+    "verificationNeeded": "Confirm exact subject of nearest mosaic to 5558 N Figueroa. Profile says Chicken Boy mosaic is 'near base of building.'",
+    "historicalFact": "Tile artist Wick Alexander created 14 mosaics embedded in the Figueroa sidewalk between Avenues 53 and 60 — each one depicting a Highland Park landmark. They were funded by a $149,000 city grant in 2018. The art is above you and below you on the same block, and most people miss both."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "Read the signage on the building beneath the rooftop figure. A business operates at street level. What is the name of the studio?",
+    "answer": "Future Studios",
+    "answerVariants": ["future studios", "future studio"],
+    "historicalFact": "Future Studios is a graphic design firm that agreed to host a 22-foot fiberglass chicken man on its roof — partly funded by a grant from the LA Office of City Beautification. Governor Schwarzenegger gave the statue a Governor's Historic Preservation Award in 2010. A fried chicken mascot, preserved for history."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "persona",
+    "clue": "I stood on Broadway in downtown LA for 20 years, selling fried chicken to anyone who walked by. When my owner died in 1984, I was homeless. A woman put me in storage for 23 years before giving me a new rooftop in Highland Park. What am I made of? Look closely — I'm not metal.",
+    "answer": "Fiberglass",
+    "answerVariants": ["fiberglass", "fiberglass and polyester resin", "polyester resin", "fiberglass resin"],
+    "historicalFact": "Chicken Boy is a customized Muffler Man — a type of oversized fiberglass statue mass-produced by International Fiberglass Company in Venice, CA during the 1960s. Hundreds were made for gas stations, restaurants, and car washes. Most are gone. This one survived because one person spent 23 years and her own money keeping it alive."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "connector",
+    "clue": "Walk to the corner of Avenue 56 and Figueroa. A three-story building stands on the corner — built in 1923 for a secret society that met on the second floor. The same building is now a music venue. The building material tells you what era built this stretch of Figueroa. What is it made of?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "bricks"],
+    "historicalFact": "Highland Park Lodge 382, Free and Accepted Masons, built this three-story brick hall in 1923. The Masons met upstairs for 60 years, then left in 1983 when they couldn't afford seismic retrofitting. The building sat empty, became a wedding venue, and in 2017 reopened as Lodge Room — a 500-capacity music venue. The original cherry wood paneling and Masonic paintings are still inside."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "spotter",
+    "clue": "The sidewalk mosaics stretch for blocks along Figueroa. One of them shows a building with a trolley car rolling past it — a scene from the 1920s when streetcars ran down this street. What building does that mosaic depict?",
+    "answer": "Highland Theatre",
+    "answerVariants": ["highland theatre", "the highland theatre", "highland theater", "the highland theater"],
+    "verificationNeeded": "Confirm mosaic showing Highland Theatre with trolley is within walking-route range (Ave 56-60).",
+    "historicalFact": "Streetcars ran down Figueroa through the 1950s. Wick Alexander's mosaic captures the moment when this street had four blocks of movie theaters, a trolley line, and crowds on the sidewalk. The Highland Theatre is still standing three blocks south — but the trolleys are gone and the theater closed in 2024, six days short of its 100th anniversary."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "connector",
+    "clue": "You've been looking up at a 22-foot statue and down at tile mosaics — all on the same block. The statue arrived in 2007 from a warehouse. The mosaics arrived in 2018 from a city grant. One artist created all 14 mosaics, depicting Highland Park landmarks he photographed over years of walking this street. His name appears on or near the mosaics. What is the artist's last name?",
+    "answer": "Alexander",
+    "answerVariants": ["alexander", "wick alexander"],
+    "verificationNeeded": "Confirm Wick Alexander's name is credited on or near the sidewalk mosaics — look for an artist credit tile or plaque.",
+    "historicalFact": "Wick Alexander spent years photographing Highland Park before translating what he saw into 14 tile mosaics. The $149,000 city grant paid for materials and installation, but the subjects came from Alexander's own walks — Chicken Boy, the Highland Theatre, the Ebell Club women. He embedded the neighborhood's memory into the same concrete people use to get to their cars."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "Count the total number of tile mosaics you can find embedded in the sidewalk between Avenue 56 and the Chicken Boy building. Each mosaic is roughly the same size, flush with the concrete. How many are there?",
+    "answer": "14",
+    "answerVariants": ["14", "fourteen"],
+    "verificationNeeded": "Confirm how many of the 14 total mosaics fall between Ave 56 and 5558 N Figueroa. The full set of 14 spans Ave 53 to Ave 60. The walk may only pass a subset.",
+    "historicalFact": "Wick Alexander's 14 mosaics tell the story of Highland Park from the trolley era to the present — the Ebell Club women, Chicken Boy, the Highland Theatre. Most pedestrians walk over them without a second look. You had to get on your knees to count them all."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "spotter",
+    "clue": "One of the sidewalk mosaics depicts a group of women standing in front of a building — members of a club founded in 1903 that organized for women's suffrage before California granted the vote in 1911. The mosaic shows the women in period dress outside their clubhouse. What is the name of the club shown in the mosaic?",
+    "answer": "Ebell Club",
+    "answerVariants": ["ebell club", "the ebell club", "highland park ebell club", "ebell"],
+    "verificationNeeded": "Confirm Ebell Club mosaic is within walking range (Ave 56-60) and that the club name is identifiable on or near the mosaic.",
+    "historicalFact": "The Highland Park Ebell Club was founded in December 1903 by women who raised their own money, bought their own land, and built their own clubhouse. They awarded scholarships starting in 1907 and organized for California women's suffrage, which passed in 1911 — nine years before the 19th Amendment. Wick Alexander put them in the sidewalk so you'd have to look down to find the women who looked up and changed the state."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You've reached the grandest building on this stretch of Figueroa — a three-story movie palace with arches that belong in a different century. Stand across the street and take a photo of the full facade. This building turns 101 this year.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The Highland Theatre opened March 5, 1925 with 1,450 seats and a film premiere attended by Norma Shearer herself. The architect, Lewis A. Smith, designed movie palaces across LA — the Vista, El Portal, the Rialto — but died at roughly 30 years old, just one year after this one opened. Kristen Stewart bought the building in February 2026."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Look at the Highland Theatre facade at 5604 N Figueroa. The building's architectural style uses ornate arches and decorative plasterwork borrowed from North Africa and Spain. What material are the decorative elements made of? Look at the texture.",
+    "answer": "Terra cotta",
+    "answerVariants": ["terra cotta", "terracotta", "terra cotta and plaster", "plaster", "ornamental terra cotta"],
+    "verificationNeeded": "Confirm terra cotta elements are visually distinguishable from plaster on exterior. Profile lists 'ornamental terra cotta and plaster.'",
+    "historicalFact": "Moorish Revival was the hot theater style in the 1920s — arches, minarets, and ornamental details that made a night at the movies feel like entering a palace. Lewis A. Smith specialized in this look, designing four LA theaters in the style before dying at roughly 30."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Walk half a block south to 5621 N Figueroa. A sign on the building front spells out a name that includes three words. The first word is the name of this neighborhood. What are the full three words on the sign?",
+    "answer": "Highland Park Bowl",
+    "answerVariants": ["highland park bowl"],
+    "historicalFact": "Highland Park Bowl opened in 1927 as a bowling alley with a scheme: doctors' offices upstairs wrote prescriptions for 'medicinal whiskey,' filled at the pharmacy downstairs, consumed while bowling. It was a Prohibition-era loophole disguised as a recreation center."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "Through the windows or entrance of Highland Park Bowl, you can see the original lanes — they've been bowling here since 1927. How many lanes are there?",
+    "answer": "8",
+    "answerVariants": ["8", "eight"],
+    "verificationNeeded": "Confirm 8 lanes are visible from exterior/entrance. Profile says '8 original Brunswick bowling lanes visible through windows/entry.'",
+    "historicalFact": "Eight Brunswick lanes, original equipment. The building housed bowling downstairs, doctors' offices and a pharmacy upstairs — the doctors wrote prescriptions for whiskey during Prohibition, filled at the Highland Park Drug Company pharmacy in the same building. You bowled, you drank, and it was all technically legal."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "persona",
+    "clue": "I designed theaters across Los Angeles — Moorish arches, ornamental facades, places that made moviegoers feel like royalty. The Vista in Los Feliz. El Portal in North Hollywood. The Rialto in Pasadena. And this one on Figueroa, opened March 1925. I never saw any of them age. Find the building at 5604 N Figueroa. How many stories tall is it?",
+    "answer": "3",
+    "answerVariants": ["3", "three"],
+    "historicalFact": "Lewis A. Smith died in 1926, roughly a year after the Highland Theatre opened and about 30 years old. He designed a constellation of LA movie palaces in Moorish Revival style — buildings meant to last centuries — and barely lived to see any of them finished. A hundred years later, Kristen Stewart bought this one to reopen as a community cultural center."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "connector",
+    "clue": "The building at 5621 N Figueroa (the bowling alley) and the bar you're walking toward (La Cuevita at 5922 N Figueroa) are run by the same company. That company is named after a year — the year a certain federal law was repealed. Look at the bowling alley's facade. What architectural style is it? The same style La Cuevita's building wears.",
+    "answer": "Spanish Revival",
+    "answerVariants": ["spanish revival", "spanish colonial revival", "spanish colonial", "mission revival", "spanish"],
+    "verificationNeeded": "Confirm La Cuevita's exterior reads as Spanish Revival to match HP Bowl. Profile describes HP Bowl as 'Spanish Revival facade.'",
+    "historicalFact": "1933 Group — named for the year Prohibition ended — operates both Highland Park Bowl and La Cuevita, three blocks apart on Figueroa. They specialize in resurrecting old buildings: stripping decades of renovation to reveal the original bones. At La Cuevita, they peeled off stucco and paneling to expose 1930s brick walls. At the Bowl, they restored the original Spanish Revival facade and 1927 bowling lanes."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "spotter",
+    "clue": "Look at the Highland Theatre and Highland Park Bowl — both on Figueroa, both from the 1920s. Count the number of street-facing arches visible on the Highland Theatre facade. Just the arches on the front of the building.",
+    "answer": "",
+    "answerVariants": [],
+    "verificationNeeded": "CRITICAL: Cannot determine exact arch count from web research alone. This clue requires on-site verification. Placeholder — replace answer after site visit. Profile confirms 'Moorish-style arches and decorative elements visible from street' but gives no count.",
+    "historicalFact": "The Highland Theatre and Highland Park Bowl were built within two years of each other — 1925 and 1927 — on the same stretch of Figueroa during Highland Park's entertainment boom. Four blocks of theaters, bowling alleys, and gathering places, all built before the Depression hit.",
+    "_note": "NEEDS SITE VISIT: Replace this clue with confirmed arch count or substitute another spotter using a verified observable feature."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "persona",
+    "clue": "During Prohibition, I wasn't a bar — I was a bowling alley. But I had doctors upstairs writing prescriptions for 'medicinal' spirits, and a pharmacy downstairs filling them. You bowled, you drank, and none of it was illegal. A punk band played behind my black curtain in the '90s. Find me at 5621 N Figueroa. What word appears first on my sign?",
+    "answer": "Highland",
+    "answerVariants": ["highland"],
+    "historicalFact": "Highland Park Bowl was renamed Mr. T's Bowl in 1966 for owner Joseph 'Mr. T' Theresa. In the early 1990s, a black curtain blocked off the lanes for punk shows — The Breeders and the Germs played here. It closed in 2014 and 1933 Group restored the original 1927 character: Spanish Revival facade, original lanes, Prohibition-era charm."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "The Highland Theatre at 5604 N Figueroa has a marquee — the protruding sign structure above the entrance where movie titles once went. Look at it. One word dominates the marquee, larger than anything else. What does it say?",
+    "answer": "Highland",
+    "answerVariants": ["highland", "HIGHLAND"],
+    "verificationNeeded": "CRITICAL: Confirm marquee is still present and readable. The theater closed in 2024 and Kristen Stewart purchased it in February 2026 — renovation may have altered exterior signage. If marquee is removed or covered, this clue fails.",
+    "historicalFact": "The marquee once advertised double features to Figueroa foot traffic. When the theater closed in 2024 — six days short of its 100th anniversary — the marquee went dark for the first time since 1925. Kristen Stewart bought the building in February 2026, planning to reopen it as a cultural center. Whether the marquee lights up again depends on what she builds."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "The Highland Theatre (1925) and Highland Park Bowl (1927) sit across the street from each other. Both closed. Both were resurrected. The theater was bought by a Hollywood actress in 2026. The bowling alley was restored by a bar company named after a year. That year is when a constitutional amendment was repealed — the same amendment that made the bowling alley's prescription-whiskey scheme necessary in the first place. What year is the company named after?",
+    "answer": "1933",
+    "answerVariants": ["1933", "nineteen thirty-three"],
+    "verificationNeeded": "Confirm '1933 Group' branding is visible somewhere on Highland Park Bowl exterior or entrance — a sign, a logo, a menu board visible through the window.",
+    "historicalFact": "The 21st Amendment repealed Prohibition on December 5, 1933. The company that restored Highland Park Bowl named itself after that date. During Prohibition, the Bowl's doctors wrote prescriptions for whiskey so patrons could drink legally. Ninety years later, a company named for the law that made the workaround unnecessary brought the building back to life. The irony is built into the business card."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're almost at the bar. On the corner of Figueroa and Avenue 61, a 75-foot mural covers an entire building wall — faces, symbols, colors you can't miss. Stand back and take it in. Snap a photo and send it ahead. You're about to walk through the door.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The mural is called 'Mexico-Tenochtitlan: The Wall That Talks.' It was painted in 1996 by the Quetzalcoatl Mural Project after a member lost a friend to gang violence. The artists turned grief into the most significant Chicano mural in Northeast LA — and when the building owner threatened to paint over it in 2020, the community fought to get it nominated as a historic landmark."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "The massive mural on the corner of Figueroa and Avenue 61 is filled with figures from ancient civilizations. What kind of cultural imagery dominates the mural? Look for headdresses, pyramids, and warriors.",
+    "answer": "Aztec",
+    "answerVariants": ["aztec", "mayan", "aztec and mayan", "indigenous", "aztec mayan", "mesoamerican"],
+    "historicalFact": "The mural blends Aztec, Mayan, Native American, African, and other indigenous iconography — cultures in unity, painted on a Highland Park wall by the Quetzalcoatl Mural Project. Quetzalcoatl is the Aztec feathered serpent deity associated with wind, knowledge, and creation."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Walk to La Cuevita at 5922 N Figueroa. Before you go inside, look at the entrance. The doors are not modern — they're salvaged from somewhere far away and very old. What material are the entrance doors made of?",
+    "answer": "Wood",
+    "answerVariants": ["wood", "wooden", "old wood", "carved wood"],
+    "historicalFact": "Those doors are over 100 years old, salvaged from a church in Mexico. When 1933 Group converted this space from a dive bar called Little Cave into La Cuevita in 2012, they stripped the building down to its 1930s bones — exposed brick, original structure — then dressed it with salvaged materials: church doors, marble tables, wrought iron."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "Step inside La Cuevita and look at the walls. During the 2012 renovation, the owners stripped away decades of stucco, plaster, and paneling to reveal what was underneath. What material are the walls?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "exposed brick", "bricks"],
+    "historicalFact": "La Cuevita's building dates to the early 1930s. When 1933 Group acquired it, they peeled back every layer of renovation — stucco, plaster, paneling — until they hit the original brick. The same company did the same thing three blocks south at Highland Park Bowl. Their whole business model is resurrection: find a building with good bones, strip it down, let the original speak."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "connector",
+    "clue": "The 75-foot mural on Figueroa and Avenue 61 celebrates Aztec and Mayan culture. The bar 110 meters away is decorated with skulls, skeletons, and upside-down bats. Both draw from the same Mexican tradition — a holiday that honors the dead with color, not grief. Look around La Cuevita's interior. What holiday does the decor celebrate?",
+    "answer": "Dia de los Muertos",
+    "answerVariants": ["dia de los muertos", "day of the dead", "dia de muertos", "el dia de los muertos"],
+    "historicalFact": "La Cuevita means 'the little cave' — the bar is designed as a grotto for the dead, with skulls, skeletons, candles, and stained glass creating a Dia de los Muertos atmosphere year-round. The mural down the block and the bar share a cultural root: Mexican and indigenous identity as a living presence on Figueroa Street, not a museum exhibit."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "Inside La Cuevita, look up at the ceiling and along the walls. The lighting comes through colored panels — not standard glass. What kind of decorative glass provides the light?",
+    "answer": "Stained glass",
+    "answerVariants": ["stained glass", "stained-glass", "colored glass"],
+    "historicalFact": "The stained glass, the church doors from Mexico, the wrought iron fixtures — La Cuevita borrows the vocabulary of a Catholic church and repurposes it for a mezcal bar. The name means 'little cave,' and the designers wanted the feeling of descending into a candlelit grotto, sacred and a little unsettling."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "persona",
+    "clue": "I lost a friend to gang violence in the 1990s. Instead of a funeral, I gathered artists and we covered a building wall with the faces and symbols of our ancestors. Warriors, serpents, pyramids. The city tried to erase me in 2020. Find me at Figueroa and Avenue 61. My full title is painted on the wall — it begins with the name of a country and ends with a phrase about speaking. What is the full title?",
+    "answer": "Mexico-Tenochtitlan: The Wall That Talks",
+    "answerVariants": ["mexico-tenochtitlan the wall that talks", "mexico tenochtitlan the wall that talks", "the wall that talks"],
+    "verificationNeeded": "Confirm full title is painted/written on or near the mural. If title is not physically readable at the site, this clue fails the Presence Test.",
+    "historicalFact": "Anthony 'Eagle' Ortega founded the Quetzalcoatl Mural Project and led the painting in 1996. When the building owner rumored erasure in 2020, the community mobilized. The mural was nominated for LA Historic-Cultural Monument status in 2022 — permanent protection for a painting born from permanent loss."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "spotter",
+    "clue": "Look at the decorative animals inside La Cuevita. Among the skulls and skeletons, some creatures hang upside down from the ceiling or walls — the same animals you'd find in a real cave. What are they?",
+    "answer": "Bats",
+    "answerVariants": ["bats", "bat", "upside-down bats"],
+    "historicalFact": "La Cuevita means 'the little cave' in Spanish — the bar is designed as a candlelit grotto, complete with bats. Before 2012, this spot was a dive bar called Little Cave, one of the first bars to open in Highland Park in decades. 1933 Group kept the name (translated it to Spanish) and rebuilt the interior around salvaged materials: century-old church doors, marble tables, stained glass."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "Inside La Cuevita, the furniture is built from salvaged materials. The tables aren't wood — they're made from something heavier, something you'd expect to find in an old hotel lobby or a church vestibule. Run your hand across the surface of a table. What material is it?",
+    "answer": "Marble",
+    "answerVariants": ["marble", "salvaged marble", "stone"],
+    "verificationNeeded": "Confirm marble tables are present and identifiable by touch/sight. Profile says 'salvaged marble tables.'",
+    "historicalFact": "Every surface in La Cuevita was chosen for texture: 100-year-old church doors from Mexico, exposed 1930s brick, wrought iron fixtures, stained glass, and salvaged marble tables. 1933 Group builds bars the way set designers build films — material by material, each piece with a provenance."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "You've walked past a 75-foot Chicano mural, through 100-year-old church doors from Mexico, past Dia de los Muertos skulls and stained glass salvaged from a church. The bar's name is Spanish — it translates to a geological feature you might find underground, where bats actually live. The name is on the sign outside. What does the bar's name mean in English?",
+    "answer": "The little cave",
+    "answerVariants": ["the little cave", "little cave", "a little cave", "small cave"],
+    "historicalFact": "La Cuevita — 'the little cave.' Before 2012, this spot was literally called Little Cave, a dive bar that was one of the first to open in Highland Park in decades. 1933 Group kept the meaning, translated it to Spanish, and built the interior to match: a candlelit grotto with bats, skulls, stained glass, and church doors. The name, the decor, the mural down the block — this stretch of Figueroa wears its Mexican identity in the architecture."
+  }
+]

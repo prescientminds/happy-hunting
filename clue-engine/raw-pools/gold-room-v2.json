@@ -1,0 +1,275 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Walk toward 1100 Glendale Blvd. A massive dome rises above the rooftops — and something sits on top of it, lit up day and night since 1923. Photograph what's on top of the dome.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "The lighted cross atop the dome has been a beacon in Echo Park for over a century. Its founder insisted it stay lit all night — a signal that she was always watching over the neighborhood. The dome beneath it was the largest unsupported concrete span in North America when built."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Find the cornerstone of the domed church at 1100 Glendale Blvd. Carved into the stone is an inscription beginning with 'Dedicated.' The inscription contains one word that means 'throughout the world.' What is that word?",
+    "answer": "worldwide",
+    "answerVariants": ["worldwide"],
+    "historicalFact": "The full cornerstone reads: 'Dedicated unto the cause of inter-denominational and worldwide evangelism.' The woman who carved those words into stone meant them literally — the denomination she founded from this building now operates in 146 countries with over 8 million members."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "narrative",
+    "clue": "She was the first woman to preach on the radio. She turned Sunday services into Broadway productions — sets, costumes, lighting. In 1926, she vanished from a beach, and two people died searching for her. Who was she?",
+    "answer": "Aimee Semple McPherson",
+    "answerVariants": ["aimee semple mcpherson", "mcpherson", "aimee mcpherson", "sister aimee"],
+    "historicalFact": "McPherson pioneered the 'illustrated sermon' — full theatrical productions that packed 5,300 seats every Sunday. When she disappeared from Venice Beach in 1926, the city mourned as if a president had died. She reappeared five weeks later walking out of the Mexican desert, claiming kidnapping. Witnesses placed her in a Carmel cottage with her married radio engineer."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "elimination",
+    "clue": "Four claims about the domed building at 1100 Glendale Blvd. Three are true:\n\nA) Its dome shimmers because it's coated in crushed seashells.\nB) Its architect also designed the Hollywood sign.\nC) Its founder was the first woman to preach on the radio.\nD) The denomination founded here has over 8 million members.\n\nWhich claim is false?",
+    "answer": "B",
+    "answerVariants": ["b"],
+    "historicalFact": "The architect was Brook Hawkins, who had nothing to do with the Hollywood sign. Everything else is true: the dome is coated with ground abalone shells (giving it that shimmer), McPherson pioneered radio evangelism, and the Foursquare Gospel spans 146 countries. The building itself is a National Historic Landmark."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "connector",
+    "clue": "A woman builds a megachurch in 1923. Across the street sits a lake. In the 1920s, her missionaries travel to China, bring something back, and plant it in that lake. Every July, what they planted still blooms — and 50 years later, a city festival was named after it. What did they plant?",
+    "answer": "Lotus",
+    "answerVariants": ["lotus", "lotus flowers", "lotuses"],
+    "historicalFact": "McPherson's missionaries brought lotus seeds from China and planted them in Echo Park Lake. The flowers took hold and became the lake's signature. The annual Lotus Festival, launched in 1972 as the 'Day of the Lotus,' now celebrates LA's Asian and Pacific Islander communities. In 2005, a horticulturalist stole a cutting, cultivated 376 plants, and sold them for $30,000."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "The dome at 1100 Glendale Blvd doesn't look like other concrete buildings. In certain light, it catches and shimmers. That's not paint — it's an animal product, ground up and mixed into the coating. The animal lives in the ocean and has a shell prized by jewelers. What animal?",
+    "answer": "Abalone",
+    "answerVariants": ["abalone"],
+    "historicalFact": "The dome was coated with ground abalone shells — the same iridescent material found inside abalone jewelry. The effect is subtle from a distance but unmistakable up close: a sacred building covered in crushed sea creatures. The 125-foot dome was built without steel reinforcement, a Class A fireproof structure designed by architect Brook Hawkins."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "reframe",
+    "clue": "Near the lake, you'll find a bronze bust inscribed in Spanish. The inscription translates: 'He who has a homeland, honor it; he who does not, conquer one.' The man honored here was born in Havana in 1853 and died fighting for his country's freedom. But this bust isn't in Cuba. Why is it here — in Echo Park?",
+    "answer": "Cuban community",
+    "answerVariants": ["cuban community", "cuban immigrants", "cuban refugees", "cubans", "cuban exile community"],
+    "historicalFact": "After 1962, when a local Presbyterian church met the first flight of Cuban refugees at the airport, Echo Park became the social and cultural heart of LA's Cuban exile community. The bust of Jose Marti — Cuba's national hero — was placed here in 1976 to anchor that identity. The sculptor, Sergio Lopez Mesa, was born in Havana and studied in Rome."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "cipher",
+    "clue": "The domed church sits at 1100 on its boulevard. Take the street number — 1100. The building opened in the first month of 1923. Add the month number to the street number. What do you get?",
+    "answer": "1101",
+    "answerVariants": ["1101"],
+    "historicalFact": "1100 + 1 (January) = 1101. The temple opened on New Year's Day, 1923 — all 5,300 seats filled on opening night. The building cost $1.5 million, roughly $27 million today, funded almost entirely by small donations."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "narrative",
+    "clue": "Born in Havana. Studied poetry in Madrid. Imprisoned at 17 for advocating independence. Founded a newspaper in New York. Organized a revolution from exile. Died in the first battle, on horseback, at Dos Rios. His country won its freedom three years later. Who is he — and why does his face watch over a lake in Los Angeles?",
+    "answer": "Jose Marti",
+    "answerVariants": ["jose marti", "josé martí", "marti"],
+    "historicalFact": "Jose Marti died fighting Spain at Dos Rios, Cuba on May 19, 1895. Cuba won independence in 1898. His bust sits at Echo Park Lake because this neighborhood became the heart of LA's Cuban exile community after 1962 — when a local church met the first refugee flight and the diaspora rooted itself here."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Within 0.3 miles of each other, two women built monuments that still stand a century later. One was a preacher from Canada who became the most famous woman in America. The other was a sculptor from Hawaii who studied in Paris. One built with concrete and abalone. The other carved in stone during the Depression because the budget for bronze ran out. Name either woman.",
+    "answer": "Aimee Semple McPherson",
+    "answerVariants": ["aimee semple mcpherson", "mcpherson", "ada mae sharpless", "sharpless", "ada sharpless"],
+    "historicalFact": "McPherson built the temple in 1923; Sharpless carved the Lady of the Lake in 1935 — both within a few blocks of each other in Echo Park. McPherson was from Ontario, Canada; Sharpless was born in Hilo, Hawaii in 1904 and trained at the Ecole des Beaux-Arts in Paris. Two women, two monuments, one neighborhood — still standing."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Walk to the lake. On the peninsula near the boathouse, a 14-foot statue of a woman stands on a pedestal. She's been watching over this water since 1935. Photograph her.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "Her official name is 'Nuestra Reina de Los Angeles' — Queen of the Angels. Sculptor Ada Mae Sharpless carved her from 'liquid stone' (poured concrete) because Depression-era budget cuts killed the plan for bronze. She was vandalized, lost her fingers, spent 13 years in storage, and came back in 1999 sealed with anti-graffiti coating. She's tougher than she looks."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Find the 14-foot statue near the boathouse. Look at her pedestal — it has carved panels on its sides, each depicting a different LA landmark. How many panels are there?",
+    "answer": "4",
+    "answerVariants": ["4", "four"],
+    "historicalFact": "The four bas-reliefs depict the Hollywood Bowl, LA Harbor, the San Gabriel Mountains, and the LA Central Library — the sculptor's love letter to the city, carved into concrete in 1935. Ada Mae Sharpless was 30 years old when she finished it."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "reframe",
+    "clue": "You're standing beside a lake with pedal boats and palm trees. But this body of water wasn't built for leisure. In 1868, it was built to power a factory that processed animal fibers into fabric — sheep to thread to cloth. What animal's output did the factory process?",
+    "answer": "Wool",
+    "answerVariants": ["wool", "sheep wool", "sheep"],
+    "historicalFact": "Echo Park Lake started as a reservoir in 1868, feeding a woolen factory at 6th and Figueroa — miles from here. A parks superintendent converted it to recreation in 1892 after he heard his own voice bounce off the arroyo walls. He named it for the sound."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "narrative",
+    "clue": "A parks superintendent is inspecting a new reservoir in 1892. He shouts across the water and hears his own voice come back. He's so charmed that he names the entire park after that experience. What did he hear?",
+    "answer": "An echo",
+    "answerVariants": ["echo", "an echo", "echoes", "his echo"],
+    "historicalFact": "Joseph Henry Tomlinson heard echoes bouncing off the reservoir walls and named his park accordingly. The irony: as Echo Park urbanized, the echoes faded. The acoustic effect that gave the neighborhood its name hasn't been heard in decades."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "connector",
+    "clue": "A silent film studio in the 1910s sent its actors to this lake to shoot chase scenes. The studio was banned — permanently — for a surprisingly delicate reason. They didn't disturb the peace or damage the shore. What did they destroy that got them kicked out?",
+    "answer": "Flowers",
+    "answerVariants": ["flowers", "the flowers", "plants", "flower beds"],
+    "historicalFact": "Keystone Studios — home of the Keystone Cops, Charlie Chaplin's first film, and the entire slapstick comedy tradition — was banned from Echo Park Lake because their actors trampled too many flowers during chase scenes. The studio was half a mile north on Glendale Boulevard."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "Look at the pedestal panels on the 14-foot statue. Each panel depicts a different LA landmark. One shows a venue where orchestras perform outdoors. One shows a place where ships dock. One shows a mountain range. One shows a building full of books. Name the building full of books.",
+    "answer": "LA Central Library",
+    "answerVariants": ["la central library", "central library", "los angeles central library", "la library", "the library"],
+    "historicalFact": "The LA Central Library depicted in the bas-relief was designed by Bertram Goodhue and completed in 1926. Sharpless carved it into the pedestal in 1935 as one of four symbols of Los Angeles — bowl, harbor, mountains, library. The real building survived two devastating arsons in 1986."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "sequence",
+    "clue": "This lake tells its own history in dates. 1868: reservoir. 1892: park. 1932: boathouse. 1935: statue. Each milestone came with a new purpose — power, leisure, shelter, art. Following the pattern, what came next in 1972?",
+    "answer": "Lotus Festival",
+    "answerVariants": ["lotus festival", "the lotus festival", "day of the lotus", "festival"],
+    "historicalFact": "The Lotus Festival, launched in 1972 as 'The Day of the Lotus,' added community celebration to the lake's résumé. The lotus flowers themselves trace back to the 1920s, when an evangelist's missionaries brought seeds from China. The festival now celebrates LA's Asian and Pacific Islander communities every July."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "connector",
+    "clue": "In the 1920s, missionaries planted something in this lake. For 80 years, it grew undisturbed. Then in 2005, a horticulturalist committed a crime involving the plants: he took a single cutting, grew it into 376 specimens, and sold them. How much did he make from one stolen cutting?",
+    "answer": "$30,000",
+    "answerVariants": ["$30,000", "30000", "30,000", "$30000", "thirty thousand"],
+    "historicalFact": "The lotus flowers that McPherson's missionaries planted in the 1920s became Echo Park's signature. The 2005 theft — one cutting yielding 376 plants sold for $30,000 — proved their value was more than spiritual. The lotus blooms every July, drawing thousands."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "cipher",
+    "clue": "Near the lake, a bronze bust carries two inscriptions in Spanish. The second one reads: 'Con todos y para el bien de todos.' Count the words in that inscription. Now subtract the number of bas-relief panels on the nearby statue's pedestal. What's the result?",
+    "answer": "4",
+    "answerVariants": ["4", "four"],
+    "historicalFact": "'Con todos y para el bien de todos' — 'With all, and for the good of all' — 8 words minus 4 panels. Marti wrote that line in 1891 while organizing a revolution from a New York apartment. He died in the first battle, four years later, on horseback at Dos Rios."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "elimination",
+    "clue": "Four stories about this lake. Three are true:\n\nA) A parks superintendent named it after hearing his voice bounce off the walls.\nB) Keystone Studios was banned for trampling flowers during chase scenes.\nC) At least 60 people have drowned here over the lake's history.\nD) The lake was drained and refilled in 1969 after a body was found preserved in the mud for 40 years.\n\nWhich is false?",
+    "answer": "D",
+    "answerVariants": ["d"],
+    "historicalFact": "No body was ever found preserved in the mud. But the other three facts are grimly, delightfully true: Tomlinson named it for echoes, Keystone got banned for flower trampling, and at least 60 people have drowned in this lake over its 150+ year history. The dark facts make the pedal boats feel different."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "photo",
+    "answerType": "photo",
+    "clue": "Look down. You're walking on a hall of fame that most people never notice. Bronze plaques are embedded in the sidewalk — each one honoring an athlete. Find one and photograph it.",
+    "answer": "",
+    "answerVariants": [],
+    "historicalFact": "You're standing on the Avenue of the Athletes — 32 brass plaques honoring Olympians and sports legends, embedded in 10 blocks of Sunset Blvd sidewalk. A Dodgers photographer named L. Andrew Castle created the project in 1976. He died two years later and the designs were lost for years."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "At 1714 W Sunset Blvd, a storefront window displays something unexpected: two figures shaking hands. One is from the distant past. One is from the distant future. What two figures are shaking hands?",
+    "answer": "A caveman and a robot",
+    "answerVariants": ["caveman and robot", "a caveman and a robot", "caveman and a robot", "robot and caveman"],
+    "historicalFact": "The Echo Park Time Travel Mart is a 'convenience store for time travelers' selling Viking Odorant, Robot Milk, and Mammoth Chunks. Behind a secret door in the back: a free tutoring center run by 826LA, a nonprofit co-founded by Dave Eggers. Every purchase funds writing education for kids ages 6-18."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "At 1706 W Sunset, look up at the rooftop. A massive animated sign depicts a figure mid-motion — throwing something. The sign uses bulbs in exactly three colors. Name the three colors.",
+    "answer": "Red, green, and white",
+    "answerVariants": ["red green white", "red, green, and white", "red green and white"],
+    "historicalFact": "The Jensen's sign uses 1,300 incandescent bulbs — red, green, and white — with electric motors that switch them on and off to simulate a bowler throwing a strike. It's billed as the last articulated incandescent sign in America. It went dark for 50 years before being restored."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "narrative",
+    "clue": "He was a local business owner, a Dodgers photographer, and a college professor. In 1974, he convinced the city to let him embed bronze plaques in 10 blocks of sidewalk — a walk of fame for athletes that nobody had asked for. The first plaques went in 1976. He died in 1978. The plaque designs were lost. Who was he?",
+    "answer": "L. Andrew Castle",
+    "answerVariants": ["l. andrew castle", "l andrew castle", "castle", "andrew castle"],
+    "historicalFact": "Castle wanted to bring tourists to Echo Park the way Hollywood's Walk of Fame drew crowds to Hollywood Blvd. He handpicked athletes with LA connections — Jesse Owens, Jackie Robinson, Billie Jean King, Sandy Koufax. Two years of plaques, then he died and the project stopped. The designs were literally lost until the Chamber of Commerce found them in 1980."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "reframe",
+    "clue": "The storefront at 1714 W Sunset sells Robot Milk, Viking Odorant, and Time-Freezy Hyper Slush. The motto reads: 'Whenever You Are, We're Already There.' But none of this is real. Behind a secret door in the back, something completely different is happening — and it's free. What's behind the door?",
+    "answer": "A tutoring center",
+    "answerVariants": ["tutoring center", "a tutoring center", "tutoring", "free tutoring", "826la", "writing center"],
+    "historicalFact": "826LA teaches 20-30 students per day in creative writing — all free, funded entirely by the fake time travel store. Dave Eggers started the concept in San Francisco with a pirate supply store. Each city picks its own theme. LA chose time travel."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "elimination",
+    "clue": "Four athletes are honored with sidewalk plaques on this stretch of Sunset Blvd. Three of them won Olympic gold medals. One never competed in the Olympics at all — their fame came from a different arena.\n\nA) Jesse Owens\nB) Sandy Koufax\nC) Billie Jean King\nD) Wyomia Tyus\n\nWho never competed in the Olympics?",
+    "answer": "B",
+    "answerVariants": ["b", "sandy koufax", "koufax"],
+    "historicalFact": "Koufax was a baseball legend — three Cy Young Awards, a perfect game, four no-hitters — but baseball wasn't an Olympic sport during his career. Owens won 4 golds in 1936 Berlin, King won doubles gold in 1988 Seoul (demonstration sport), and Tyus was the first to win back-to-back Olympic 100m golds (1964, 1968)."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "connector",
+    "clue": "A German immigrant made his fortune manufacturing one building material — the material that LA needed more of than anything else as the city expanded in the early 1900s. Then in 1924, he used that same material to build himself a recreation center, right here on Sunset Blvd. What material?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "bricks"],
+    "historicalFact": "Henry Christian Jensen manufactured bricks for LA's rapid expansion — his product literally built the city. Then he built himself a three-story recreation center at 1706 W Sunset: bowling and pool downstairs, 46 apartments with Murphy beds upstairs. The building still stands. The animated rooftop sign — 1,300 bulbs depicting a bowler mid-strike — is now a protected historic landmark."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "cipher",
+    "clue": "Above the entrance at 1706 W Sunset, the building's name is spelled out in terra cotta letters. Count the letters in just the first word of the name. Now look at the sidewalk — count the number of colors used in the athlete plaques (brass is one color; the background concrete is another). Multiply the letters by the colors. What do you get?",
+    "answer": "12",
+    "answerVariants": ["12", "twelve"],
+    "historicalFact": "JENSEN has 6 letters. The plaques use 2 colors (brass and concrete). 6 × 2 = 12. Jensen's Recreation Center and the Avenue of the Athletes share this block of Sunset Blvd — a 1924 brick building and 1976 brass plaques, both stubbornly analog in a digital city."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "connector",
+    "clue": "In 1923, a church went up on Glendale Blvd. In 1924, a recreation center went up on Sunset. One was built by a Canadian preacher who drew 5,300 people every Sunday. The other was built by a German brick manufacturer who put 46 apartments above a bowling alley. Both buildings still stand. They're less than 0.2 miles apart. What single event explains why both were built at the same time?",
+    "answer": "The 1920s boom",
+    "answerVariants": ["the boom", "1920s boom", "building boom", "1920s building boom", "population boom", "la boom", "echo park boom"],
+    "historicalFact": "Echo Park's population exploded in the early 1920s — partly because McPherson's congregation moved to be near her, partly because LA itself was doubling every decade. Jensen saw the crowds and built entertainment. McPherson saw the crowds and built a megachurch. Same boom, different bets, both still standing a century later."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "sequence",
+    "clue": "Jesse Owens. Jackie Robinson. Billie Jean King. All three have plaques in this sidewalk. All three are athletes. But there's a deeper pattern — something they share that goes beyond sports, something that made headlines far bigger than any game. What's the pattern?",
+    "answer": "Barrier breakers",
+    "answerVariants": ["broke barriers", "civil rights", "racial barriers", "broke racial barriers", "equality", "barrier breakers", "social justice", "broke color barrier", "they broke barriers"],
+    "historicalFact": "Owens humiliated Hitler's Aryan supremacy in Berlin. Robinson broke baseball's color line. King beat Bobby Riggs in the Battle of the Sexes. Castle chose every name on this sidewalk — the pattern isn't accidental."
+  }
+]

@@ -1,0 +1,297 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're standing at the edge of the largest Filipino American mural in the country — 145 feet of history painted onto a park wall. Take a photo of the section that grabs you. Save it. By the time you reach the bar, you'll know why it's here.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "Gintong Kasaysayan, Gintong Pamana — 'A Glorious History, A Golden Legacy.' Eliseo Art Silva painted it in 1995 to compress 5,000 years of Filipino and Filipino American history into one wall. It was the first public artwork anywhere to honor Larry Itliong's role in the 1965 Delano Grape Strike — eight days before Cesar Chavez joined. The mural helped inspire the city to designate Historic Filipinotown in 2002."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "In front of the mural at Unidad Park, there's an interpretive panel that identifies the historical figures depicted. Find the panel. One figure is described as a national hero of the Philippines — a poet and revolutionary executed by the Spanish. What is his name, as written on the sign?",
+    "answer": "Jose Rizal",
+    "answerVariants": ["jose rizal", "José Rizal", "rizal"],
+    "historicalFact": "Jose Rizal was a novelist, poet, ophthalmologist, and the face of Philippine independence. Spain executed him by firing squad in Manila on December 30, 1896 — he was 35. His two novels, written in Spanish, exposed colonial abuses so effectively that the Spanish government banned them. His death ignited the Philippine Revolution.",
+    "verificationNeeded": "Confirm interpretive sign is still standing and legible, and that Jose Rizal is named on it."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "connector",
+    "clue": "In the mountains of Northern Luzon, Philippines, village elders gather in a circular space called a dap-ay to settle disputes and pass down traditions. This park has one — believed to be the first built outside the Philippines. Find it. Look at the material — it matches the Cordillera originals. What is it built from?",
+    "answer": "Stone",
+    "answerVariants": ["stone", "stones", "rock", "rocks"],
+    "historicalFact": "The dap-ay connects two places: the Cordillera mountains of the Philippines and a small park in Los Angeles. In Cordillera culture, the dap-ay is where oral traditions are transmitted, harvests planned, and disputes resolved. Building one here was a way of saying the community's roots didn't stop at the Pacific.",
+    "verificationNeeded": "Confirm dap-ay is accessible and that its stone construction is visible."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "The interpretive panel gives the mural's full title in two languages. The English translation is 'A Glorious History, A Golden Legacy.' Read the original title. What is the first word?",
+    "answer": "Gintong",
+    "answerVariants": ["gintong"],
+    "historicalFact": "'Gintong Kasaysayan, Gintong Pamana' — the word 'gintong' means 'golden' in Tagalog. Eliseo Art Silva chose a title that works as a claim: this history isn't just important, it's precious. The mural was commissioned by the Social and Public Art Resource Center (SPARC), founded by Judy Baca, who also created the Great Wall of LA in the Tujunga Wash.",
+    "verificationNeeded": "Confirm title appears on interpretive panel in Tagalog."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "persona",
+    "clue": "I organized Filipino farmworkers to walk off the grape fields on September 8, 1965. Eight days later, Cesar Chavez joined us. History remembered him. It forgot me — for decades. Find my portrait near the park. I'm painted on a small metal box most people walk right past. What is my name?",
+    "answer": "Larry Itliong",
+    "answerVariants": ["larry itliong", "itliong"],
+    "historicalFact": "Larry Itliong led the Filipino grape strike in Delano eight days before Chavez and the NFWA joined. The combined strike lasted five years and reshaped American labor rights. Itliong's role was systematically erased — Chavez received the credit, the holiday, the schools named after him. California didn't establish Larry Itliong Day until 2015, fifty years after the strike.",
+    "verificationNeeded": "Confirm Larry Itliong utility box portrait and name are readable near Beverly Blvd."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "Walk to the park entrance. The walkway design was inspired by a toy that a Filipino immigrant named Pedro Flores popularized in the United States in the late 1920s. Look at the walkway's shape. What toy is it modeled after?",
+    "answer": "A yo-yo",
+    "answerVariants": ["yo-yo", "a yo-yo", "yoyo", "a yoyo", "the yo-yo"],
+    "historicalFact": "Pedro Flores opened the Yo-Yo Manufacturing Company in Santa Barbara in 1928 — the first to mass-produce the toy in America. He didn't invent it (versions existed in the Philippines for centuries), but he turned it into a craze. Duncan bought his company in 1930, but Flores kept working as a demonstrator. The park entrance pays tribute to his role in the story.",
+    "verificationNeeded": "Confirm yo-yo-inspired walkway design is identifiable at park entrance."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "connector",
+    "clue": "The artist who painted this 145-foot mural in 1995 also designed a massive arch 27 years later — the largest Filipino cultural arch in the United States, spanning Beverly Boulevard at the other end of this neighborhood. Both the mural and the arch honor the same national hero. You already found his name on the interpretive sign. Who is the artist who created both? Find his name on the mural's credit or interpretive panel.",
+    "answer": "Eliseo Art Silva",
+    "answerVariants": ["eliseo art silva", "eliseo silva", "silva"],
+    "verificationNeeded": "Confirm Eliseo Art Silva's name appears on interpretive sign or a credit plaque at the mural.",
+    "historicalFact": "Eliseo Art Silva spent 27 years building Filipino identity into the physical landscape of Historic Filipinotown. The mural (1995) was the seed — it helped the city see the neighborhood's cultural significance. The Talang Gabay Eastern Gateway (2022) was the capstone — an 82-foot steel arch that took 20 years from concept to completion. Same artist, same mission, same neighborhood."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "spotter",
+    "clue": "Look at the interpretive panel in front of the mural. Multiple historical figures are identified. One led a resistance against Ferdinand Magellan in 1521 — the first recorded act of Filipino resistance against European colonization. Find his name on the panel. What is it?",
+    "answer": "Lapu-Lapu",
+    "answerVariants": ["lapu-lapu", "lapu lapu", "lapulapu"],
+    "verificationNeeded": "Confirm Lapu-Lapu is named on interpretive sign.",
+    "historicalFact": "Lapu-Lapu killed Ferdinand Magellan at the Battle of Mactan on April 27, 1521. Magellan arrived with Spanish soldiers and demanded the island chiefs convert to Christianity. Lapu-Lapu refused. He's considered the first Filipino national hero — a warrior chief who fought colonization 375 years before Jose Rizal."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "persona",
+    "clue": "I wrote a book in 1946 called 'America Is in the Heart' — a story of Filipino farmworkers facing exploitation and racism in Depression-era California. The Saturday Evening Post printed my words alongside FDR and Lincoln. I died penniless at 42. Find my name on the interpretive panel in front of this mural. What is my last name?",
+    "answer": "Bulosan",
+    "answerVariants": ["bulosan", "carlos bulosan"],
+    "verificationNeeded": "Confirm Carlos Bulosan is named on interpretive panel.",
+    "historicalFact": "Carlos Bulosan wrote 'America Is in the Heart' (1946), a searing account of Filipino migrant workers facing exploitation and racism in Depression-era California. The book was so powerful the Saturday Evening Post excerpted it alongside work by FDR and Lincoln. Bulosan died penniless at 42. The mural honors him alongside Rizal and Itliong — revolutionaries of pen, field, and nation."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "spotter",
+    "clue": "You've read about Jose Rizal, Lapu-Lapu, and Larry Itliong on the interpretive panel. All three are also depicted in the mural. Stand back and look at the full 145-foot painting — it tells history from left to right, ancient to modern. Of these three, which one appears closest to the right side of the mural?",
+    "answer": "Larry Itliong",
+    "answerVariants": ["larry itliong", "itliong"],
+    "verificationNeeded": "Confirm mural reads left-to-right chronologically and that Itliong is identifiable near the right end.",
+    "historicalFact": "The mural sweeps from Lapu-Lapu (1521, far left) through Rizal (1896, center) to Itliong (1965, far right). 444 years compressed into 145 feet of paint. Itliong's position at the end makes a statement: this history didn't stop. The mural was the first public artwork to honor his role in the grape strike — eight days before Chavez joined, and fifty years before California gave him a holiday."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You've arrived at one of the oldest Filipino landmarks in America. Before you read anything, look at the building in front of you — the architecture, the materials, the way it sits on the corner. Take a photo. This building changed a neighborhood.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The Filipino Christian Church at 301 N Union Ave is the oldest Filipino Protestant church in the United States, founded in 1928 by young Filipino men who were barred from worshipping in white congregations. Forced to relocate repeatedly by city redevelopment, the congregation finally settled here in 1950 — and their presence pulled the entire Filipino community to this corridor, creating what became Historic Filipinotown."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Look at the church at 301 N Union Ave. The building has pointed arches and steep roof lines — the same medieval European style you'd see at Notre-Dame or Westminster Abbey (at a much smaller scale). What is that architectural style?",
+    "answer": "Gothic",
+    "answerVariants": ["gothic", "gothic revival", "german gothic", "german gothic revival"],
+    "historicalFact": "The building is German Gothic Revival mixed with Craftsman elements — a combination that tells you it was built for someone else. This was originally the Union Avenue M.E. Church, constructed for a white Methodist congregation. The Filipino Christian Fellowship acquired it in 1950. They inherited Gothic arches that were never designed for them — and made them their own."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "persona",
+    "clue": "We crossed the Pacific to study at a Christian college. We wanted to pray, but the local churches wouldn't have us. So in 1928, we started our own congregation. We were pushed out four times before we found a home. Look at the sign at 301 N Union Ave. What country of origin is in the name?",
+    "answer": "Filipino",
+    "answerVariants": ["filipino", "the philippines", "philippines"],
+    "verificationNeeded": "Confirm exterior signage includes the word 'Filipino' — exact wording needed.",
+    "historicalFact": "The name is deliberate. When it was founded in 1928, Filipino immigrants in LA couldn't worship alongside white congregants, couldn't own property, and couldn't live where they chose. Calling it the Filipino Christian Church wasn't just a description — it was a declaration of existence. It remains the oldest Filipino Protestant church in the country."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "Walk to the intersection of Temple St and Silverlake Blvd. A decorative gateway structure marks the entrance to Historic Filipinotown. Look at the facade — the patterns are not random. They're based on traditional Filipino embroidery found on formal clothing. What type of motifs do you see on the gateway?",
+    "answer": "Vine and floral",
+    "answerVariants": ["vine and floral", "floral", "vines and flowers", "vine and floral motifs", "floral and vine", "callado"],
+    "verificationNeeded": "Confirm Western Gateway callado patterns are visible and identifiable from sidewalk level.",
+    "historicalFact": "The patterns are called callado embroidery — the same decorative needlework found on the Maria Clara (women's formal dress) and the Barong Tagalog (men's formal shirt). The gateway was unveiled in 2002 by then-Councilmember Eric Garcetti, marking the culmination of a 30-year campaign to get the city to officially designate Historic Filipinotown."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "connector",
+    "clue": "The Western Gateway at Temple & Silverlake (2002) marks one entrance to Historic Filipinotown. Twenty years later, a sister arch was installed at the other end of the neighborhood on Beverly Boulevard. One marks the west, one marks the east. Both were championed by the same politician — first as a councilmember, then as mayor. The Western Gateway has a name on it or near it. What neighborhood does it mark the entrance to?",
+    "answer": "Historic Filipinotown",
+    "answerVariants": ["historic filipinotown", "filipinotown", "hi-fi", "hifi"],
+    "verificationNeeded": "Confirm 'Historic Filipinotown' text is readable on or near the Western Gateway.",
+    "historicalFact": "Historic Filipinotown was designated in 2002 — the first Filipino community in America to receive a named area with distinct geographic boundaries. It took 30 years of organizing. The Western Gateway went up the same year. The Eastern Gateway, Talang Gabay, took another 20 years — an 82-foot steel arch designed by the same artist who painted the mural you just saw at Unidad Park."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "The church at 301 N Union Ave blends Gothic arches with a distinctly American style. Look at the simpler elements — the exposed woodwork, the low-pitched details, the emphasis on natural materials. It's the same style you'd see at Pasadena's Gamble House or the bungalows of Craftsman-era California. What is that American style?",
+    "answer": "Craftsman",
+    "answerVariants": ["craftsman", "arts and crafts", "craftsman style", "american craftsman"],
+    "verificationNeeded": "Confirm Craftsman elements (exposed woodwork, horizontal lines, natural materials) are visible on the church exterior.",
+    "historicalFact": "German Gothic Revival meets American Craftsman — a combination that reveals the building's layered identity. This was the Union Avenue M.E. Church before the Filipino congregation acquired it in 1950. The Craftsman movement prized handmade detail and natural materials — ironic for a building that was abandoned by one community and adopted by another."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "spotter",
+    "clue": "The Filipino Christian Church is a designated Los Angeles Historic-Cultural Monument. Look for a plaque or marker on or near the building. What HCM number is it?",
+    "answer": "651",
+    "answerVariants": ["651", "#651"],
+    "verificationNeeded": "Confirm HCM plaque is visible from street and that #651 is readable.",
+    "historicalFact": "HCM #651, designated in 1998. Twenty-one years later, in 2019, the church was also listed on the National Register of Historic Places by the National Park Service. It is the only historic cultural monument designated by the City of Los Angeles with Filipino origins — a distinction that says as much about what the city overlooked as what it chose to honor."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "connector",
+    "clue": "The dap-ay at Unidad Park (Ring 1) and the lamp post medallions near this church both embed Filipino values into physical infrastructure. Find a medallion on one of the lamp posts near the church. Three Tagalog words are encoded in the designs — one means 'shared humanity,' one means 'journey,' one means 'peace.' The word for shared humanity starts with 'K.' What is it?",
+    "answer": "Kapwa",
+    "answerVariants": ["kapwa"],
+    "verificationNeeded": "Confirm lamp post medallions are present near the church intersection and that 'kapwa' text is readable on them.",
+    "historicalFact": "Kapwa, lakbay, kapayapaan — shared humanity, journey, peace. 54 lamp posts across 17 intersections, designed by Roel Punzalan, unveiled in October 2016. The dap-ay in the park encodes community through architecture. The medallions encode it through street furniture. Both say the same thing in different materials: this neighborhood belongs to us."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "You found 'kapwa' on the lamp post medallion. Two other Tagalog words are encoded in the designs nearby. One means 'journey.' One means 'peace.' Find the word for 'journey.' What is it?",
+    "answer": "Lakbay",
+    "answerVariants": ["lakbay"],
+    "verificationNeeded": "Confirm 'lakbay' text appears on lamp post medallions near the church.",
+    "historicalFact": "Lakbay — journey. The word choice is precise. For the Filipino community in LA, the journey was literal: across the Pacific, through discriminatory housing laws, past church doors that wouldn't open. The 54 lamp posts mark the territory that journey created. Each medallion is a claim staked in municipal infrastructure — permanent, public, and in Tagalog."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Three Tagalog words on the lamp posts. A dap-ay in the park. Callado embroidery on the gateway. A mural spanning 145 feet. All were built within a 0.4-mile radius. The HCM plaque on the church tells you when this building was designated a landmark. The gateway tells you when the neighborhood was officially named. Read both. Which came first — the landmark designation or the neighborhood name?",
+    "answer": "The landmark designation",
+    "answerVariants": ["the landmark designation", "landmark designation", "the landmark", "hcm", "1998", "the church"],
+    "verificationNeeded": "Confirm HCM plaque shows 1998 and gateway shows 2002. Church landmark (1998) came 4 years before HiFi designation (2002).",
+    "historicalFact": "The church became HCM #651 in 1998. Historic Filipinotown was designated in 2002. The landmark came first — proof that the community existed before the city acknowledged it. The mural (1995) preceded both. Eliseo Art Silva painted the neighborhood's identity before the government drew its boundaries."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're almost at your destination. But first — look up. A 14-foot neon giraffe is watching you from the side of a building. Take a photo with the giraffe. This is the one you send ahead to whoever's waiting at the bar.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The neon giraffe has been on this building since it was a deli. When three stop-motion animators moved their studio here in 2003, they kept the giraffe, restored the neon, and changed the word at the bottom from 'DELI' to 'Hi-Fi' — the neighborhood abbreviation for Historic Filipinotown. The studio inside created Robot Chicken and Moral Orel for Adult Swim."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Find the 14-foot neon giraffe sign near Temple St and Belmont Ave. At the bottom of the sign, four letters spell out a word. What does it say?",
+    "answer": "Hi-Fi",
+    "answerVariants": ["hi-fi", "hifi", "Hi-Fi", "HI-FI"],
+    "verificationNeeded": "Confirm neon giraffe sign currently reads 'Hi-Fi' at the bottom.",
+    "historicalFact": "The sign originally said 'DELI' when this was a neighborhood delicatessen. The stop-motion animation studio Screen Novelties moved in and swapped it to 'Hi-Fi' — short for Historic Filipinotown. It's a double meaning: the neighborhood name, and a nod to high-fidelity sound, fitting for a studio that obsesses over detail in every frame."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "connector",
+    "clue": "The neon giraffe sign hangs on a building that houses a stop-motion animation studio — the studio behind Robot Chicken. Look closely at the giraffe. The artist included an X-ray view of the giraffe's neck, revealing its interior — the kind of detail only animators would obsess over. What color is the neon that shows the inside of the neck?",
+    "answer": "Gold",
+    "answerVariants": ["gold", "gold neon", "yellow", "amber"],
+    "verificationNeeded": "Confirm X-ray neck detail is visible and gold-colored neon.",
+    "historicalFact": "The X-ray giraffe neck connects the sign to the studio inside: Screen Novelties builds puppets and sets where every detail matters. The gold neon skeletal interior is the kind of thing most people walk past without noticing — but stop-motion animators see skeletons inside everything. They build armatures (metal skeletons) inside every puppet they make."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "The building with the neon giraffe houses an animation studio. Look at the building itself — not the sign. What material is the building made of?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "bricks"],
+    "historicalFact": "Screen Novelties — formed in 2003 by Mark Caballero, Seamus Walsh, and Christopher Finnegan — were among the first stop-motion artists to adopt entirely digital capture systems. Their work launched both Robot Chicken and Moral Orel for Adult Swim. Atlas Obscura calls it 'a puppet-lover's paradise.'"
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "persona",
+    "clue": "I was built in 1913 as two separate shops: a market and a tailor. A man who fled a genocide in 1914 set up in my other half. In 2001, Hollywood turned me into a family store owned by a street racer. Find me at the corner of Bellevue and Edgeware. What name is on my sign today?",
+    "answer": "Bob's Market",
+    "answerVariants": ["bob's market", "bobs market", "Bob's Market"],
+    "verificationNeeded": "Confirm Bob's Market exterior signage is visible and readable.",
+    "historicalFact": "Architect George F. Colterison designed this building in 1913 — a market on one side, a tailor on the other. The tailor, Levon Melkonian, fled the Armenian Genocide in 1914. The two shops combined in 1934. The Nimura family named it Bob's Market in 1965. And in 2001, it became Toretto's Market in The Fast and the Furious — Vin Diesel's family store. Four lives in one building."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "Bob's Market at Bellevue & Edgeware has decorative arched details and ornamental trim above the storefront — the same style you'd see on Spanish missions along the California coast and at Stanford University's Main Quad. What architectural style is it?",
+    "answer": "Mission Revival",
+    "answerVariants": ["mission revival", "mission", "mission style", "mission revival style"],
+    "verificationNeeded": "Confirm Mission Revival architectural elements are visible from street.",
+    "historicalFact": "Bob's Market has Mission Revival and Oriental architectural elements on a one-story false-front frame — designed by George F. Colterison in 1913. The building housed two shops: a market and a tailor. The tailor, Levon Melkonian, had fled the Armenian Genocide. In 2001, Vin Diesel's character parked out front. The building outlived everyone's plans for it."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "spotter",
+    "clue": "Walk to the 1300 block of Carroll Avenue. You're looking at the finest collection of Victorian houses remaining in Los Angeles. One of these houses appeared as a manor where three sisters practiced witchcraft for eight seasons on TV. The show ran from 1998 to 2006. Find the house — it stands out. What is the street number on it?",
+    "answer": "1329",
+    "answerVariants": ["1329"],
+    "historicalFact": "The Innes House at 1329 Carroll Ave was built for city councilman and real estate developer Daniel Innes in the late 1880s. A century later, it became the Halliwell Manor on Charmed (1998-2006). The real story is why it's still standing: the banking recession of 1888 halted construction across LA. Developers were too broke to tear down and rebuild. The crash that killed the land boom is the reason these Victorians survived."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "persona",
+    "clue": "I learned to walk backward before I could moonwalk forward. In 1983, I filmed the most famous music video ever made — the final scene was shot in a house on this block. I changed music videos forever. Find the house. What is my name?",
+    "answer": "Michael Jackson",
+    "answerVariants": ["michael jackson", "jackson"],
+    "historicalFact": "The Sanders House at 1345 Carroll Ave appeared in the final scene of Michael Jackson's 'Thriller' video — the most influential music video ever made. Three pop culture franchises filmed within 400 meters of each other on this block: Thriller (1983), Charmed (1998), and The Fast and the Furious (2001). Angelino Heights became Hollywood's backlot without trying.",
+    "verificationNeeded": "Confirm 1345 Carroll Ave is identifiable as the Thriller house from the street."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "connector",
+    "clue": "Three buildings on your walk got famous second lives: the deli became an animation studio (the giraffe sign), the grocery store became a movie set (Bob's Market / Toretto's), and the Victorian became a witch's manor (Charmed house). All three kept their original facades. Look at all three buildings. Two are made of wood. One is not. Which building is built from a different material — and what is that material?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "the giraffe building", "screen novelties", "the animation studio"],
+    "historicalFact": "Bob's Market: wood-frame false front (1913). The Charmed house: wood Victorian (1880s). The giraffe building: brick (date unknown). Three buildings, three eras, three materials — but only one needed brick to survive a century on a commercial street. The Victorians survived because a recession stopped developers from tearing them down. The brick building survived because brick just lasts."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Your walk started at a mural honoring Filipino farmworkers and ended at Victorian houses used as Hollywood sets. Between them: a church that created a neighborhood, lamp posts that speak Tagalog, and a neon giraffe that marks an animation studio. One artist connects the beginning to the end of your route — the same person who painted the mural also designed the arch on Beverly Boulevard. You already found his name. Now: the neon giraffe sign used to say 'DELI.' It was changed to 'Hi-Fi' when the studio moved in. What does 'Hi-Fi' stand for in this neighborhood?",
+    "answer": "Historic Filipinotown",
+    "answerVariants": ["historic filipinotown", "historic filipino town"],
+    "historicalFact": "Hi-Fi is the neighborhood abbreviation for Historic Filipinotown — designated in 2002, three decades after the Filipino community rooted itself here. The neon giraffe's text swap from DELI to Hi-Fi is a one-word history of gentrification: a neighborhood deli becomes a boutique animation studio, but the new tenants honor the community they moved into. The whole walk you just took — mural, church, gateway, lamp posts, giraffe — is a community writing itself into the physical landscape so it can't be erased."
+  }
+]

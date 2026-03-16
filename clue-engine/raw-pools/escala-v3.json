@@ -1,0 +1,292 @@
+[
+  {
+    "ring": 1,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're starting at a building designed for cars to drive inside. Stand at the arched entrance on 6th Street, look up at the towers and the red-tiled roof, and take a photo. Send it ahead — your date should know what kind of neighborhood they're walking into.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "Chapman Plaza opened in 1929 as America's first drive-in grocery store. Wealthy families from Hancock Park and Windsor Square drove under the arched entrance, parked in the central courtyard, and shopped without leaving the shade. The same architecture firm — Morgan, Walls & Clements — also designed the Wiltern Theatre two years later."
+  },
+  {
+    "ring": 1,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Stand on 6th Street facing Chapman Plaza. The roof is covered in tiles. What color are they?",
+    "answer": "Red",
+    "answerVariants": ["red", "terra cotta", "terracotta", "orange-red", "clay red"],
+    "historicalFact": "Red clay tiles are the signature of Spanish Revival architecture — the style Southern California adopted in the 1920s as its romantic vision of a Spanish past that mostly never existed. Chapman Plaza's red roof signals the style from blocks away."
+  },
+  {
+    "ring": 1,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Chapman Plaza has a massive arched opening on its 6th Street facade. This arch wasn't decorative — it was functional. What were the vehicles that originally drove through it?",
+    "answer": "Cars",
+    "answerVariants": ["cars", "automobiles", "vehicles", "autos"],
+    "historicalFact": "The arch was wide enough for 1929 automobiles to drive through and park in the central courtyard. Chapman Plaza was built for the car — not the streetcar — at a time when Wilshire Boulevard was being designed as LA's first automobile-oriented commercial strip. Two blocks south, 6th Street still had streetcar tracks."
+  },
+  {
+    "ring": 1,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "Look at the facade of Chapman Plaza. The ornate towers use a style of decoration with elaborate carvings and layered surfaces — a Spanish Baroque import that became popular in 1920s LA. What material is the building made of?",
+    "answer": "Concrete",
+    "answerVariants": ["concrete", "poured concrete", "reinforced concrete"],
+    "historicalFact": "Chapman Plaza is 50,000 square feet of fortress-like concrete walls dressed up in Spanish Baroque ornament. The Churrigueresque towers — named for 17th-century Spanish architect Jose Benito de Churriguera — give the building a cathedral-like presence that masks what is, structurally, a concrete box designed to hold groceries and parked cars."
+  },
+  {
+    "ring": 1,
+    "difficulty": 5,
+    "type": "connector",
+    "clue": "Chapman Plaza was built in 1929. Two blocks northwest, a church tower rises from the corner of Wilshire and Normandie — built in 1927 by the family that also built this market. The same family donated the land for both. Look across the intersection from Chapman Plaza toward Normandie Avenue. Can you spot a church tower? What shape are the arches on the church facade — pointed or rounded?",
+    "answer": "Rounded",
+    "answerVariants": ["rounded", "round", "semicircular", "roman", "romanesque"],
+    "verificationNeeded": "Confirm Oasis Church arches are visible from Chapman Plaza intersection and are rounded/Romanesque style.",
+    "historicalFact": "The Chapman family built the market and donated the land for Oasis Church (originally Wilshire Christian Church) across the intersection. The church's rounded Romanesque arches contrast with the Gothic pointed arches of Immanuel Presbyterian a few blocks east — two monumental churches facing each other across Wilshire, built within two years of each other."
+  },
+  {
+    "ring": 1,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "Walk into Chapman Plaza's courtyard. The hallways are unusually wide — double the width of a normal corridor. Look at the windows lining the interior. What shape are they?",
+    "answer": "Arched",
+    "answerVariants": ["arched", "arches", "arched windows", "rounded", "semicircular"],
+    "historicalFact": "The double-wide hallways were designed for foot traffic from shoppers who'd parked in the courtyard. The arched windows echo the building's grand entry arch — the architects carried the arch motif from the scale of a car entrance down to the scale of a window. Morgan, Walls & Clements did the same thing at the Wiltern, where the lobby arches mirror the building's exterior curves."
+  },
+  {
+    "ring": 1,
+    "difficulty": 7,
+    "type": "persona",
+    "clue": "I designed a drive-in grocery in 1929 and an Art Deco theater in 1931 — one in Spanish Revival, one in Zigzag Moderne. Two buildings, two styles, same boulevard. My theater's name is a mashup of the boulevard and the cross street. Find the grocery I built — what architectural style is visible on the facade towers? Look for the elaborate carved ornamentation layered onto the concrete.",
+    "answer": "Churrigueresque",
+    "answerVariants": ["churrigueresque", "spanish baroque", "baroque"],
+    "verificationNeeded": "Confirm Churrigueresque detailing is clearly identifiable on Chapman Plaza towers by a non-expert observer. May need to simplify answer to 'Spanish Revival' if too obscure.",
+    "historicalFact": "Stiles O. Clements was the lead architect at Morgan, Walls & Clements. He designed Chapman Plaza in Spanish Revival with Churrigueresque towers and the Wiltern in Zigzag Moderne — two radically different styles, two years apart, on the same corridor. The range was the point. LA in the 1920s was a city trying on identities, and Clements could dress it in whatever it wanted."
+  },
+  {
+    "ring": 1,
+    "difficulty": 8,
+    "type": "spotter",
+    "clue": "Step outside Chapman Plaza onto 6th Street and look at the storefronts on the block. These buildings sit directly on the sidewalk — no setback, no parking lot, no driveway. They were built for people stepping off a vehicle that ran on tracks down the middle of the street. What vehicle were these storefronts designed for?",
+    "answer": "Streetcar",
+    "answerVariants": ["streetcar", "trolley", "streetcars", "trolleys", "the streetcar", "a streetcar"],
+    "historicalFact": "The 6th Street Streetcar Commercial Historic District is eligible for the National Register — a rare intact stretch of 1920s storefronts built for streetcar riders, not drivers. Chapman Plaza straddles two worlds: its 6th Street facade faces a streetcar corridor where buildings hug the sidewalk, while its Wilshire side faces a boulevard designed for automobiles. Two transportation philosophies, one building."
+  },
+  {
+    "ring": 1,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "Chapman Plaza was restored in 1990 by the same developer-architect pair who saved another LA landmark from demolition nine years earlier — a theater on Wilshire and Western with a blue-green terra cotta facade. The theater's name is a mashup of the boulevard and the cross street. Now look at the storefronts inside Chapman Plaza's arcade. Escala, KazuNori, Uncle Tetsu — the tenants have changed, but the arcade layout hasn't. How many restaurant storefronts can you count lining the main interior corridor?",
+    "answer": "",
+    "answerVariants": [],
+    "verificationNeeded": "CRITICAL: Cannot set answer until the number of distinct storefronts in the Chapman Plaza arcade is confirmed by site visit. Profile lists Escala, KazuNori, Uncle Tetsu, and Origin Korean BBQ — at least 4, but the full count is unknown. Must be under 12 and clearly discernible. Placeholder pending verification.",
+    "historicalFact": "Wayne Ratkovich and architect Brenda Levin saved the Wiltern from demolition in 1981, then turned around and restored Chapman Plaza in 1990. The arcade that once held a drive-in grocery now holds Korean BBQ joints, a hand-roll sushi bar, and a Japanese cheesecake shop — the Koreatown economy filling a 1929 Spanish Revival shell. The storefronts that served Hancock Park housewives now serve the densest neighborhood west of Manhattan."
+  },
+  {
+    "ring": 1,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Chapman Plaza (1929) and the Gaylord Apartments (1924) were both built during the same decade-long boom that transformed this corridor. One is Spanish Revival, the other is Renaissance Revival. One is concrete, the other is something else entirely. Walk from Chapman Plaza toward Wilshire and look south at the Gaylord tower. Touch the facade if you can. What material clads it?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "bricks", "brick and terra cotta"],
+    "historicalFact": "Chapman Plaza is concrete dressed in Spanish ornament. The Gaylord is brick and terra cotta in Renaissance Revival style. Both were built within five years of each other, five blocks apart, for the same clientele — wealthy Angelenos drawn to the Wilshire corridor. Different architects, different materials, same ambition: anchor a neighborhood that didn't exist 10 years earlier."
+  },
+  {
+    "ring": 2,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You've arrived at one of LA's oldest dive bars — the nautical-themed saloon on the ground floor of a 13-story 1924 apartment tower. Step inside if you can. If not, find the entrance and take a photo of the signage. This bar has had three names in a century. You're seeing the third.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The ground-floor bar started as 'The Gay Room' (named for the building's namesake, Henry Gaylord Wilshire), became 'The Secret Harbor,' and finally HMS Bounty in 1962. Jack Webb, Walter Winchell, and William Randolph Hearst drank in previous incarnations. The nautical decor — wood paneling, red leather booths — has barely changed since the 1960s."
+  },
+  {
+    "ring": 2,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Look up at the apartment tower at 3355 Wilshire. Count the floors. How many stories tall is it?",
+    "answer": "13",
+    "answerVariants": ["13", "thirteen"],
+    "historicalFact": "The Gaylord was one of the tallest residential buildings on Wilshire when it opened in 1924 — 13 stories, 199 units, 50 meters tall. The LA Times called it 'one of the largest and most pretentious apartment houses in the country.' It was marketed as 'own-your-own' apartments with LA's first central refrigeration system, letting tenants freeze their own ice cubes."
+  },
+  {
+    "ring": 2,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Find the bar entrance at the ground floor of the Gaylord building. What is the current name of the bar, as shown on the signage?",
+    "answer": "HMS Bounty",
+    "answerVariants": ["hms bounty", "the hms bounty", "bounty"],
+    "verificationNeeded": "Confirm HMS Bounty signage is visible and the bar is still operating at this location.",
+    "historicalFact": "HMS Bounty opened in 1962, but bars have occupied this ground-floor space since the building opened in 1924. The nautical theme was a mid-century addition — wood paneling, model ships, red leather booths. It's been featured in Mad Men and half a dozen other film productions that needed a bar frozen in 1962."
+  },
+  {
+    "ring": 2,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "Look at the Gaylord building's exterior materials. The tower is clad in two materials — a structural one and a decorative one. The structural material is the same one you'd find in a New England factory. The decorative material is fired clay shaped into ornamental details. Name either material.",
+    "answer": "Brick",
+    "answerVariants": ["brick", "terra cotta", "terracotta", "brick and terra cotta"],
+    "historicalFact": "Brick and terra cotta were the prestige materials of 1920s LA apartment construction. The Gaylord's architects — Walker & Eisen — used the same combination on the Hotel Normandie two years later and the Beverly Wilshire Hotel in 1928. Terra cotta let architects mold ornamental details that would have cost a fortune to carve in stone."
+  },
+  {
+    "ring": 2,
+    "difficulty": 5,
+    "type": "persona",
+    "clue": "I gave my name to LA's most famous boulevard — 16 miles of it. I was a socialist who ran for Congress. I sold a magnetic health device called the I-ON-A-CO that I claimed cured all diseases. An apartment tower at 3355 Wilshire carries my middle name. Find the building and look up. What is my middle name — the one on the building?",
+    "answer": "Gaylord",
+    "answerVariants": ["gaylord"],
+    "verificationNeeded": "Confirm 'Gaylord' or 'The Gaylord' name is visible on the building exterior (signage, awning, or lettering).",
+    "historicalFact": "Henry Gaylord Wilshire (1861-1927) donated the land for the boulevard, ran for Congress on a socialist ticket twice, published a socialist magazine, and made a fortune selling the I-ON-A-CO — a magnetic collar he claimed cured everything from deafness to cancer. The apartment building carrying his middle name outlived his political career, his health device empire, and the boulevard's original purpose as a dirt road connecting downtown to the sea."
+  },
+  {
+    "ring": 2,
+    "difficulty": 6,
+    "type": "spotter",
+    "clue": "If you step inside HMS Bounty, the interior hasn't changed much since 1962. The booths are upholstered in a specific color of leather. The walls are covered in wood. What color are the booth seats?",
+    "answer": "Red",
+    "answerVariants": ["red", "dark red", "burgundy", "maroon", "crimson"],
+    "verificationNeeded": "Confirm red leather booths are still in place at HMS Bounty. Interior may have been updated.",
+    "historicalFact": "The red leather booths and wood-paneled walls at HMS Bounty look the same as they did when the bar opened in 1962. This is why film scouts keep coming back — the bar is a living set piece. Mad Men used it because the production designers didn't have to change a thing."
+  },
+  {
+    "ring": 2,
+    "difficulty": 7,
+    "type": "connector",
+    "clue": "Two towers face each other across Wilshire near this stop. One is a 13-story apartment building from 1924. The other is a church with a tower that rises over 200 feet — French Gothic, built in 1929. The church has a stained glass window above its main entrance that medieval cathedrals made famous. Look east along Wilshire toward the church. What shape is that prominent window?",
+    "answer": "Circle",
+    "answerVariants": ["circle", "circular", "round", "rose", "rose window", "a circle", "a rose window"],
+    "verificationNeeded": "Confirm Immanuel Presbyterian's rose window is visible from the Gaylord/HMS Bounty location looking east on Wilshire.",
+    "historicalFact": "The rose window at Immanuel Presbyterian Church was made by the Dixon Art Glass Company of Los Angeles. The church's 205-foot tower — French Gothic over a steel frame — went up the same year as Chapman Plaza. Two blocks apart, one Gothic and one Spanish Revival, both completed in 1929 as the neighborhood's last pre-Depression building boom."
+  },
+  {
+    "ring": 2,
+    "difficulty": 8,
+    "type": "persona",
+    "clue": "I drank myself to death writing about a man drinking himself to death. My novel about an alcoholic British consul in Mexico is ranked #11 on the Modern Library's 100 Best Novels. I wrote significant portions of it in a fading hotel two blocks west of here — on a street named for a French region. Find that hotel. What is its name, as shown on the sign?",
+    "answer": "Hotel Normandie",
+    "answerVariants": ["hotel normandie", "the normandie", "normandie"],
+    "verificationNeeded": "Confirm Hotel Normandie signage is visible from the street.",
+    "historicalFact": "Malcolm Lowry wrote much of 'Under the Volcano' (1947) while living at the Hotel Normandie. The novel — about a consul destroying himself with mescal in a Mexican town — was written by a man destroying himself with alcohol in a Koreatown hotel. The Normandie hit its own rock bottom by 2011, then was restored for $5 million into a boutique property. Lowry died at 47. His masterpiece outlived every version of the hotel he wrote it in."
+  },
+  {
+    "ring": 2,
+    "difficulty": 9,
+    "type": "spotter",
+    "clue": "The Gaylord's upper stories have decorative detailing at the roofline — ornamental work crowning the top of the building. Look up at the uppermost floors. The decorative band running along the top edge of the building is called a cornice. What material is it made of — the same fired-clay material used for the window details?",
+    "answer": "Terra cotta",
+    "answerVariants": ["terra cotta", "terracotta", "terra-cotta"],
+    "verificationNeeded": "Confirm ornamental cornice at upper stories is visible and identifiable as terra cotta from street level.",
+    "historicalFact": "Terra cotta — Italian for 'baked earth' — was the secret weapon of 1920s LA architects. It could be molded into any shape, glazed in any color, and bolted onto a steel frame. Walker & Eisen used it to give the Gaylord a Renaissance Revival crown that looks like carved stone but was manufactured in a kiln. The same trick shows up on the Wiltern's blue-green facade — glazed terra cotta tiles, not paint."
+  },
+  {
+    "ring": 2,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "Two luxury apartment towers opened the same year on the same boulevard — 1924, six blocks apart. You're standing at one of them: the 13-story Gaylord. The other was named for a silent film actress whose husband, a movie studio executive, lived on the tenth floor. Walk east on Wilshire and look for a 12-story brick tower near 3278 Wilshire. You'll see two towers from the same year, built for the same clientele. Count the floors on the second tower. How many stories?",
+    "answer": "12",
+    "answerVariants": ["12", "twelve"],
+    "verificationNeeded": "Confirm the Talmadge at 3278 Wilshire is visible from the Gaylord area and that its 12 stories are countable from street level.",
+    "historicalFact": "The Gaylord (13 stories) and the Talmadge (12 stories) both opened in 1924. The Talmadge was named for silent film star Norma Talmadge and owned by her husband Joseph Schenck, who ran United Artists. It rose on the site of a Greene & Greene Craftsman mansion that was literally moved to Beverly Hills to make room. Two towers, same year, same clientele — the Wilshire corridor replacing mansions with apartment living in real time."
+  },
+  {
+    "ring": 3,
+    "difficulty": 1,
+    "type": "moment",
+    "clue": "You're standing where the Ambassador Hotel stood for 84 years. The hotel is gone — replaced by a school. But there's a mural on the exterior wall that carries the neighborhood's entire history in one image. Find it and take a photo. Look for a woman's face surrounded by patterns that don't quite match the Hollywood era she represents.",
+    "answer": "",
+    "answerVariants": [],
+    "answerType": "photo",
+    "historicalFact": "The original mural (2016) depicted Ava Gardner with sun-ray motifs honoring the Ambassador's Cocoanut Grove nightclub. Korean Americans objected — the radiating lines resembled the Imperial Japanese battle flag used during Japan's 35-year colonial occupation of Korea. A 3-year community debate ended with a 2021 revision adding a Korean phoenix pattern and immigrant worker figures. The mural is a physical artifact of the neighborhood's identity collision."
+  },
+  {
+    "ring": 3,
+    "difficulty": 2,
+    "type": "spotter",
+    "clue": "Find the large mural on the exterior wall of the school at 3400 Wilshire. A woman's face dominates the image. Surrounding her, look for a mythical bird pattern woven into the design. What kind of bird pattern is depicted — the traditional Korean creature with elaborate tail feathers?",
+    "answer": "Phoenix",
+    "answerVariants": ["phoenix", "korean phoenix", "bonghwang", "bong huang", "fenghuang"],
+    "verificationNeeded": "Confirm the Korean phoenix pattern is clearly identifiable in the revised 2021 mural.",
+    "historicalFact": "The Korean phoenix (bonghwang) was added in the 2021 revision after the original sun-ray motif was seen as resembling the Imperial Japanese battle flag. The phoenix is a symbol of rebirth in Korean culture — fitting for a mural on a site that went from Hollywood glamour to political assassination to demolition to a $578 million public school."
+  },
+  {
+    "ring": 3,
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "The mural on the school wall depicts several figures besides the central woman's face. One figure shows a worker harvesting fruit from a tree — based on a historic photograph of an immigrant laborer. What fruit is being harvested?",
+    "answer": "Oranges",
+    "answerVariants": ["oranges", "orange", "citrus"],
+    "verificationNeeded": "Confirm the migrant worker harvesting oranges is clearly visible in the mural.",
+    "historicalFact": "The orange-harvesting figure in the mural references the citrus industry that brought the first wave of immigrant labor to this part of LA. Before Koreatown was Koreatown, before the Ambassador Hotel was the Ambassador Hotel, this corridor was orange groves. The mural layers the neighborhood's identities — Hollywood glamour, immigrant labor, Korean-American community — onto a single wall."
+  },
+  {
+    "ring": 3,
+    "difficulty": 4,
+    "type": "spotter",
+    "clue": "The school complex at 3400 Wilshire replaced a famous hotel that was demolished in 2005-2006. The school is named after a political figure who was killed inside that hotel. Look for the name of the school on the building or its signage. What are the initials?",
+    "answer": "RFK",
+    "answerVariants": ["rfk", "r.f.k.", "r f k"],
+    "historicalFact": "Senator Robert F. Kennedy was shot in the Ambassador Hotel's kitchen pantry on June 5, 1968, moments after winning the California Democratic presidential primary. The hotel closed in 1989, sat empty for 16 years, survived a decade-long preservation battle, and was demolished in 2005-2006. The $578 million school that replaced it was the most expensive public school in US history."
+  },
+  {
+    "ring": 3,
+    "difficulty": 5,
+    "type": "persona",
+    "clue": "I opened in 1921 with 1,200 rooms, 37 shops, a golf course, and a bowling alley. My nightclub had papier-mache palm trees from a Valentino film with mechanical monkeys hanging from them. I hosted 6 Academy Awards ceremonies. A senator died in my kitchen. I was torn down in 2005. A school stands where I stood. Find the school and read its full name on the signage. What word comes after 'RFK'?",
+    "answer": "Community",
+    "answerVariants": ["community"],
+    "verificationNeeded": "Confirm 'RFK Community Schools' is the text on the building/campus signage.",
+    "historicalFact": "The Ambassador Hotel's Cocoanut Grove nightclub featured papier-mache palm trees recycled from Rudolph Valentino's 1921 film 'The Sheik,' with mechanical monkeys that moved through the fronds. The hotel served alcohol during Prohibition — partly why it became Hollywood's gathering place. Every US president from Hoover to Nixon stayed there."
+  },
+  {
+    "ring": 3,
+    "difficulty": 6,
+    "type": "connector",
+    "clue": "Two buildings on this walk were designed by the same architecture firm: Walker & Eisen. One is the 13-story apartment tower you passed at Ring 2. The other is a 1926 hotel two blocks west on a street named for a French region — now a boutique property with a famous burger restaurant on the ground floor. Find the hotel sign. What is the hotel's full name?",
+    "answer": "Hotel Normandie",
+    "answerVariants": ["hotel normandie", "the normandie", "normandie"],
+    "historicalFact": "Walker & Eisen designed the Gaylord (1924), the Hotel Normandie (1926), and the Beverly Wilshire Hotel (1928) — three buildings in four years that defined luxury on the Wilshire corridor. The Hotel Normandie operated for 90 years, hit rock bottom by 2011, and was rescued by a preservationist who spent $5 million restoring it. The ground-floor tenant: Cassell's Hamburgers, grinding beef since 1948."
+  },
+  {
+    "ring": 3,
+    "difficulty": 7,
+    "type": "spotter",
+    "clue": "The school grounds at the Ambassador site include a public park. Look for the green space on the property. The park is named after the same political figure as the school. Find the park signage. What is the park's full name?",
+    "answer": "RFK Inspiration Park",
+    "answerVariants": ["rfk inspiration park", "robert f kennedy inspiration park", "rfk inspiration"],
+    "verificationNeeded": "Confirm RFK Inspiration Park signage exists and is publicly visible from the street or sidewalk.",
+    "historicalFact": "The Ambassador Hotel's grounds once included formal gardens, a swimming pool, and a golf course — all behind walls, all private. The school that replaced it turned part of the site into a public park. The neighborhood lost a hotel and gained open space. Whether that's progress depends on which decade's version of the neighborhood you're mourning."
+  },
+  {
+    "ring": 3,
+    "difficulty": 8,
+    "type": "spotter",
+    "clue": "You've seen the mural, the school signage, and the park. Now look at the school building itself — the architecture. The roofline has a distinctive slope. The original Ambassador Hotel (1921) had a flat Mediterranean roof. The school that replaced it doesn't try to mimic the hotel. What color is the dominant exterior material on the school buildings?",
+    "answer": "",
+    "answerVariants": [],
+    "verificationNeeded": "CRITICAL: Cannot set answer until school exterior color/material is confirmed by site visit. Profile describes 'modern school complex' with 'contemporary palette' but does not specify the color. Placeholder pending verification.",
+    "historicalFact": "The RFK Community Schools were designed by four different architecture firms working in parallel — each taking a different section of the 24-acre campus. The result is a modern complex that deliberately does not try to recreate the Ambassador Hotel. The Cocoanut Grove ballroom was preserved as a 582-seat school theatre, and the Embassy Ballroom's vaulted ceiling was reconstructed as a student library — pieces of the old hotel embedded in a new building."
+  },
+  {
+    "ring": 3,
+    "difficulty": 9,
+    "type": "persona",
+    "clue": "I painted a woman's face on a school wall in 2016 and surrounded her with sun rays — a tribute to the nightclub that once stood on this exact site. The neighborhood erupted. Korean Americans saw something else in my radiating lines: the Imperial Japanese battle flag that flew during 35 years of colonial occupation. It took three years and a complete redesign before the wall was right. Look at the mural. The central woman is a 1940s Hollywood actress who was a regular at that nightclub. What is her first name?",
+    "answer": "Ava",
+    "answerVariants": ["ava", "ava gardner"],
+    "verificationNeeded": "Confirm Ava Gardner's name or likeness is identifiable in the mural, either through an interpretive sign, caption, or recognizable portrait. If no text identifies her, this clue may need to reference the interpretive panel instead.",
+    "historicalFact": "Beau Stanton's original 2016 mural honored the Ambassador Hotel's Cocoanut Grove nightclub through Ava Gardner's face and Art Deco sun-ray motifs. Korean Americans objected — the radiating lines resembled the Rising Sun flag used during Japan's colonial occupation of Korea (1910-1945). Even Shepard Fairey defended Stanton publicly. The 2021 revision replaced the sun rays with a Korean phoenix pattern and added immigrant worker figures. The mural is a physical record of a community negotiation that took three years to resolve."
+  },
+  {
+    "ring": 3,
+    "difficulty": 10,
+    "type": "connector",
+    "clue": "The Ambassador Hotel was demolished, but two of its rooms survived — preserved inside the school that replaced it. One room hosted 6 Academy Awards ceremonies and had papier-mache palm trees with mechanical monkeys. It's now a 582-seat school theatre. The other had a vaulted ceiling and is now a student library. The theatre was originally the hotel's most famous nightclub. Look for any signage, plaques, or markers on the school campus that reference the original nightclub. What was the nightclub's name?",
+    "answer": "Cocoanut Grove",
+    "answerVariants": ["cocoanut grove", "the cocoanut grove", "coconut grove", "the coconut grove"],
+    "verificationNeeded": "Confirm that signage, a plaque, or a marker referencing the Cocoanut Grove is visible on the RFK Community Schools campus exterior. If no external marker exists, this clue fails the Presence Test and would need to be reworked around a different observable.",
+    "historicalFact": "The Cocoanut Grove opened in 1921 with palm trees recycled from Rudolph Valentino's film 'The Sheik' — papier-mache trunks with mechanical monkeys that moved through the fronds. It hosted 6 Oscar ceremonies, served bootleg liquor during Prohibition, and drew every president from Hoover to Nixon. When the school was built, architects preserved the Grove as a 582-seat theatre and reconstructed the Embassy Ballroom's vaulted ceiling as a library. The most expensive public school in US history is built around the skeleton of a nightclub."
+  }
+]

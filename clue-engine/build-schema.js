@@ -18,7 +18,7 @@ const OUTPUT = path.join(ROOT, 'scavenger-hunt-schema.json');
 const hunts = [
     {
         huntId: 'thunderbolt',
-        poolFile: 'thunderbolt.json',
+        poolFile: 'thunderbolt-v3.json',
         bar: {
             name: 'Thunderbolt',
             address: '1263 W Temple St',
@@ -33,7 +33,7 @@ const hunts = [
     },
     {
         huntId: 'seven-grand',
-        poolFile: 'seven-grand.json',
+        poolFile: 'seven-grand-v3.json',
         bar: {
             name: 'Seven Grand',
             address: '515 W 7th St, 2nd Floor',
@@ -48,7 +48,7 @@ const hunts = [
     },
     {
         huntId: 'frolic-room',
-        poolFile: 'frolic-room.json',
+        poolFile: 'frolic-room-v3.json',
         bar: {
             name: 'Frolic Room',
             address: '6245 Hollywood Blvd',
@@ -63,7 +63,7 @@ const hunts = [
     },
     {
         huntId: 'gold-room',
-        poolFile: 'gold-room.json',
+        poolFile: 'gold-room-v3.json',
         bar: {
             name: 'Gold Room',
             address: '1558 W Sunset Blvd',
@@ -78,7 +78,7 @@ const hunts = [
     },
     {
         huntId: 'la-cuevita',
-        poolFile: 'la-cuevita.json',
+        poolFile: 'la-cuevita-v3.json',
         bar: {
             name: 'La Cuevita',
             address: '5922 N Figueroa St',
@@ -93,7 +93,7 @@ const hunts = [
     },
     {
         huntId: 'escala',
-        poolFile: 'escala.json',
+        poolFile: 'escala-v3.json',
         bar: {
             name: 'Escala',
             address: '3451 W 6th St',

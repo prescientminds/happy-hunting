@@ -1,0 +1,715 @@
+{
+  "barId": "la-cuevita",
+  "generatedBy": "/recon",
+  "generatedDate": "2026-03-16",
+  "bar": {
+    "name": "La Cuevita",
+    "address": "5922 N Figueroa St, Los Angeles, CA 90042",
+    "neighborhood": "Highland Park",
+    "lat": 34.1106,
+    "lng": -118.1905,
+    "happyHour": "Tequila and mezcal focused, agave spirit cocktails",
+    "vibe": "Mexican grotto bar, Dia de los Muertos decor, exposed brick, wood beams, stained glass, 100-year-old church doors from Mexico, leather stools, salvaged marble tables, dim candlelit cave atmosphere",
+    "barFacts": [
+      "Formerly a dive bar called Little Cave — one of the first bars to open in Highland Park in decades (2003). Transformed by 1933 Group into La Cuevita on May 4, 2012",
+      "During renovation, stripping stucco/plaster/paneling revealed the building's early 1930s bones — exposed brick walls and original structure",
+      "Entrance features 100-year-old doors salvaged from a church in Mexico",
+      "1933 Group also operates Highland Park Bowl (3 blocks south) — both are Prohibition-era-adjacent Highland Park restorations",
+      "Interior decorated with skulls, skeletons, upside-down bats, reclaimed wood, stained glass lighting, wrought iron fixtures"
+    ]
+  },
+  "discoveryStats": {
+    "wikipediaHits": 8,
+    "overpassFeatures": 12,
+    "overpassDatedBuildings": 1095,
+    "hmdbMarkers": 10,
+    "localColorFinds": 16,
+    "totalRaw": 46,
+    "afterDedup": 22,
+    "aboveThreshold": 14,
+    "selectedForRoute": 3
+  },
+  "route": {
+    "startPoint": {
+      "lat": 34.1085,
+      "lng": -118.1943,
+      "label": "Chicken Boy"
+    },
+    "endPoint": {
+      "lat": 34.1106,
+      "lng": -118.1905,
+      "label": "La Cuevita"
+    },
+    "totalDistance": "0.5 mi",
+    "estimatedWalkTime": "10 min",
+    "stops": [
+      {
+        "stopNumber": 1,
+        "ring": 1,
+        "lat": 34.1085,
+        "lng": -118.1943,
+        "poiId": "chicken-boy",
+        "label": "Chicken Boy / Figueroa Sidewalk Mosaics",
+        "nearbySupplemental": ["figueroa-sidewalk-mosaics", "highland-park-masonic-lodge-room"]
+      },
+      {
+        "stopNumber": 2,
+        "ring": 2,
+        "lat": 34.1090,
+        "lng": -118.1937,
+        "poiId": "highland-theatre",
+        "label": "Highland Theatre (Kristen Stewart's theater)",
+        "nearbySupplemental": ["highland-park-bowl", "highland-park-ebell-club"]
+      },
+      {
+        "stopNumber": 3,
+        "ring": 3,
+        "lat": 34.1106,
+        "lng": -118.1870,
+        "poiId": "tenochtitlan-wall-that-talks",
+        "label": "Mexico-Tenochtitlan: The Wall That Talks",
+        "nearbySupplemental": ["temple-beth-israel", "pisgah-home"]
+      }
+    ]
+  },
+  "pois": [
+    {
+      "poiId": "chicken-boy",
+      "name": "Chicken Boy",
+      "address": "5558 N Figueroa St",
+      "lat": 34.1085,
+      "lng": -118.1943,
+      "category": "public-art",
+      "distanceFromBar": "420m",
+      "year": 1960,
+      "designations": ["Governor's Historic Preservation Award (2010)", "Wikipedia article", "Atlas Obscura listing"],
+      "facts": [
+        "22-foot-tall fiberglass statue — man's body with a chicken head, holding a bucket of chicken",
+        "Originally built in the 1960s for the Chicken Boy Fried Chicken Restaurant on Broadway in downtown LA, near Grand Central Market",
+        "Customized Muffler Man statue from International Fiberglass Company in Venice, CA — fiberglass and polyester resin on a steel frame",
+        "Restaurant owner died in 1984. Art director Amy Inouye rescued the statue and stored it for 23 years",
+        "Installed atop Future Studios at 5558 N Figueroa in 2007, funded partly by a grant from the Office of City Beautification",
+        "Governor Schwarzenegger granted it a Governor's Historic Preservation Award in 2010",
+        "Called 'the Statue of Liberty of Los Angeles' by locals",
+        "Inspired a tile mosaic by Wick Alexander in the Figueroa Street sidewalk (installed 2018)"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "22-foot fiberglass statue: man's body, chicken head, holding bucket", "material": "fiberglass and polyester resin on steel frame", "location": "rooftop of Future Studios" },
+          { "type": "oddity", "detail": "Visible from blocks away — towers over the street from building rooftop" },
+          { "type": "artwork", "detail": "Sidewalk tile mosaic of Chicken Boy by Wick Alexander", "material": "tile", "location": "sidewalk near base of building" },
+          { "type": "sign", "text": "Future Studios signage on building facade", "location": "building front" }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Chicken Boy (downtown Broadway)", "to": "Chicken Boy (Highland Park Figueroa)", "link": "Statue traveled from Broadway to 23 years of storage to Figueroa Street — the neighborhood adopted a downtown castoff" },
+        { "type": "theme-link", "from": "Chicken Boy (Muffler Man)", "to": "Highland Park Bowl (Prohibition bowling)", "link": "Both are midcentury commercial Americana repurposed as cultural landmarks" },
+        { "type": "proximity", "from": "Chicken Boy", "to": "Figueroa sidewalk mosaics", "link": "Chicken Boy inspired one of the 14 Wick Alexander mosaics in the sidewalk below" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 7,
+        "connection": 8,
+        "uniqueness": 10,
+        "composite": 42.0
+      },
+      "bestStructures": ["spotter", "photo-challenge", "reframe", "narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "highland-theatre",
+      "name": "Highland Theatre",
+      "address": "5604 N Figueroa St",
+      "lat": 34.1090,
+      "lng": -118.1937,
+      "category": "historic-building",
+      "distanceFromBar": "345m",
+      "year": 1925,
+      "designations": ["LA Historic-Cultural Monument (1991)", "HMDB m=219047", "Wikipedia article"],
+      "facts": [
+        "Opened March 5, 1925. First film: 'The Lady of the Night' starring Norma Shearer, who attended the premiere in person",
+        "Designed by theater architect Lewis A. Smith in Moorish Revival style — Smith also designed the Vista Theatre (Los Feliz), El Portal (North Hollywood), Rialto (Pasadena). He died in 1926, just a year after Highland opened",
+        "Originally 1,450-seat single-screen palace. Later converted to triplex",
+        "Part of a 4-block Figueroa theater district in the 1920s-30s",
+        "Closed in spring 2024, six days short of its 100th anniversary — business never recovered post-pandemic",
+        "Purchased by Kristen Stewart in February 2026, who plans to reopen it as a cultural center: 'We want to make it a family affair, something for the community'",
+        "Stewart's vision: screenings, events, community programs — restoring original architectural elements while creating a gathering place"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Moorish Revival three-story facade on Figueroa", "material": "ornamental terra cotta and plaster" },
+          { "type": "architecture", "detail": "Ornate Moorish-style arches and decorative elements visible from street" },
+          { "type": "sign", "text": "HIGHLAND marquee", "location": "building front", "needsVerification": true },
+          { "type": "architecture", "detail": "Three-story building dominates the block" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Highland Theatre (1925)", "to": "Highland Park Bowl (1927)", "link": "Built within two years of each other — Highland Park's 1920s entertainment boom on Figueroa" },
+        { "type": "era-link", "from": "Highland Theatre (1925)", "to": "Highland Park Masonic Temple (1923)", "link": "Three-block cluster of 1920s institutional buildings on Figueroa" },
+        { "type": "person-to-place", "from": "Lewis A. Smith (architect)", "to": "Vista Theatre, El Portal, Rialto", "link": "Smith designed a constellation of LA theaters but died at ~30, one year after Highland opened" },
+        { "type": "person-to-place", "from": "Kristen Stewart", "to": "Highland Theatre", "link": "Stewart purchased 2026 — Hollywood actress buying the neighborhood's original movie palace" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 43.75
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter", "elimination", "cipher-lite"]
+    },
+    {
+      "poiId": "highland-park-bowl",
+      "name": "Highland Park Bowl",
+      "address": "5621 N Figueroa St",
+      "lat": 34.1094,
+      "lng": -118.1936,
+      "category": "historic-business",
+      "distanceFromBar": "320m",
+      "year": 1927,
+      "designations": ["Atlas Obscura listing", "Wikipedia article", "National Trust for Historic Preservation feature"],
+      "facts": [
+        "Opened 1927 during Prohibition — oldest operating bowling alley in Los Angeles",
+        "Prohibition business model: doctors' offices upstairs issued prescriptions for 'medicinal whiskey', filled at the Highland Park Drug Company pharmacy downstairs, consumed while bowling",
+        "Building housed 8 bowling lanes, doctors' offices, a pharmacy, and a music store",
+        "Renamed Mr. T's Bowl in 1966 for new owner Joseph 'Mr. T' Theresa",
+        "Became a prominent punk rock venue in the early 1990s — black curtain blocked off lanes for performances. The Breeders and Germs played here",
+        "Closed 2014. 1933 Group (same operators as La Cuevita) acquired and restored the Spanish Revival facade, original lanes, and ball-return machinery",
+        "Reopened 2016 with Roaring Twenties aesthetic — the same company runs both La Cuevita and Highland Park Bowl"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Spanish Revival facade, restored by 1933 Group", "material": "plaster/stucco" },
+          { "type": "sign", "text": "HIGHLAND PARK BOWL", "location": "building front" },
+          { "type": "architecture", "detail": "Multi-story building — bowling below, former offices above" },
+          { "type": "oddity", "detail": "8 original Brunswick bowling lanes visible through windows/entry" }
+        ]
+      },
+      "connections": [
+        { "type": "operator-link", "from": "Highland Park Bowl (1933 Group)", "to": "La Cuevita (1933 Group)", "link": "Same bar group operates both — 3 blocks apart on Figueroa" },
+        { "type": "era-link", "from": "Highland Park Bowl (1927)", "to": "Highland Theatre (1925)", "link": "Both 1920s Figueroa entertainment institutions" },
+        { "type": "theme-link", "from": "Prohibition whiskey prescriptions", "to": "La Cuevita (mezcal/tequila)", "link": "Both buildings found ways to serve booze through unconventional means" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 10,
+        "connection": 10,
+        "uniqueness": 9,
+        "composite": 43.25
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "sequence", "elimination"]
+    },
+    {
+      "poiId": "highland-park-masonic-lodge-room",
+      "name": "Highland Park Masonic Temple / Lodge Room",
+      "address": "104 N Avenue 56 (at Figueroa)",
+      "lat": 34.1091,
+      "lng": -118.1946,
+      "category": "historic-building",
+      "distanceFromBar": "430m",
+      "year": 1923,
+      "designations": ["LA Historic-Cultural Monument (1984)", "National Register of Historic Places (1990)", "Wikipedia article"],
+      "facts": [
+        "Three-story brick building completed 1923 for Lodge 382, Free and Accepted Masons",
+        "Ground floor: retail shops. Second floor: lodge hall and banquet room",
+        "Lodge Room has 18-foot ceiling, cherry wood paneling, original embossed cotton anaglypta wall coverings",
+        "Paintings at both ends of the hall depict Egyptian scenes — sphinx, pyramid",
+        "Masons vacated 1983 — couldn't afford seismic retrofitting costs",
+        "Reopened 1988 as Highland Hall Cultural Center (weddings, quinceañeras, film shoots)",
+        "Converted to 500-capacity music venue 'Lodge Room' in 2017 — original cherry wood paneling and Masonic details preserved",
+        "Corner of Avenue 56 and North Figueroa"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Three-story brick building on corner of Ave 56 and Figueroa", "material": "brick" },
+          { "type": "architecture", "detail": "Masonic architectural details on exterior", "needsVerification": true },
+          { "type": "sign", "text": "LODGE ROOM signage or marquee", "location": "building front", "needsVerification": true },
+          { "type": "count", "element": "Stories/floors", "count": 3 }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Masonic Temple (1923)", "to": "Highland Theatre (1925)", "link": "Both anchor the same Figueroa corridor, built 2 years apart" },
+        { "type": "theme-link", "from": "Masonic Temple → Lodge Room", "to": "Highland Park Bowl → 1933 Group", "link": "Both buildings: original purpose died, building sat dormant, revived as entertainment venue" },
+        { "type": "proximity", "from": "Lodge Room", "to": "Chicken Boy", "link": "Same intersection — Ave 56 & Figueroa" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 8,
+        "composite": 38.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter"]
+    },
+    {
+      "poiId": "figueroa-sidewalk-mosaics",
+      "name": "Figueroa Street Sidewalk Mosaics",
+      "address": "N Figueroa St between Ave 53 and Ave 60",
+      "lat": 34.1088,
+      "lng": -118.1940,
+      "category": "public-art",
+      "distanceFromBar": "300m",
+      "year": 2018,
+      "designations": ["City of LA Dept of Transportation public art commission"],
+      "facts": [
+        "14 tile mosaics depicting Highland Park landmarks and history, embedded in Figueroa Street sidewalks between Avenues 53 and 60",
+        "Created by tile artist Wick Alexander, based on photos of local landmarks and people",
+        "Funded by a $149,000 grant from the LA City Department of Transportation",
+        "Subjects include: Chicken Boy, Highland Theatre with trolley cars, women of the Ebell Club in front of their 1912 clubhouse, street name markers",
+        "Mosaics depict both past (trolley era) and present (current landmarks)",
+        "Most pedestrians walk over them without noticing — you have to look down"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Tile mosaics embedded flush in sidewalk", "material": "tile", "location": "sidewalk" },
+          { "type": "count", "element": "Total mosaics between Ave 53 and Ave 60", "count": 14 },
+          { "type": "artwork", "detail": "Chicken Boy mosaic near 5558 N Figueroa" },
+          { "type": "artwork", "detail": "Highland Theatre with trolley car mosaic" },
+          { "type": "artwork", "detail": "Ebell Club women mosaic" },
+          { "type": "oddity", "detail": "Flush with sidewalk — easy to miss unless looking down" }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Mosaics", "to": "Chicken Boy", "link": "Chicken Boy mosaic is embedded in the sidewalk beneath the actual statue" },
+        { "type": "place-to-place", "from": "Mosaics", "to": "Highland Theatre", "link": "One mosaic depicts the theater with trolley cars — showing what Figueroa looked like in the 1920s" },
+        { "type": "theme-link", "from": "Sidewalk mosaics (you have to look down)", "to": "Chicken Boy (you have to look up)", "link": "Same block: the art is above and below — most people miss both" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 6,
+        "connection": 9,
+        "uniqueness": 8,
+        "composite": 38.5
+      },
+      "bestStructures": ["spotter", "sequence", "photo-challenge", "connector", "elimination"]
+    },
+    {
+      "poiId": "tenochtitlan-wall-that-talks",
+      "name": "Mexico-Tenochtitlan: The Wall That Talks",
+      "address": "N Figueroa St at N Avenue 61",
+      "lat": 34.1115,
+      "lng": -118.1900,
+      "category": "public-art",
+      "distanceFromBar": "110m",
+      "year": 1996,
+      "designations": ["Nominated for LA Historic-Cultural Monument status (2022)"],
+      "facts": [
+        "12-by-75-foot mural on the corner of N Figueroa and N Avenue 61",
+        "Painted in 1996 by the Quetzalcoatl Mural Project art collective, founded by Anthony 'Eagle' Ortega",
+        "Created after the loss of a friend to gang violence — the mural was a response to that grief",
+        "Celebrates Chicano culture by blending Aztec, Mayan, Native American, African and other cultural iconography representing indigenous cultures in unity",
+        "Threatened with erasure in 2020 — building owner denied plans but the rumor sparked community mobilization",
+        "Nominated for historic landmark status in 2022 to permanently protect it",
+        "One of the most significant Chicano murals in Northeast LA"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "12×75 ft mural spanning building facade", "material": "painted mural", "location": "corner of Figueroa & Ave 61" },
+          { "type": "artwork", "detail": "Bold colors — Aztec, Mayan, and indigenous figures and symbols" },
+          { "type": "artwork", "detail": "Portraiture blended with cultural symbolism and natural imagery" },
+          { "type": "oddity", "detail": "Closest POI to La Cuevita — 110m, visible from the bar's block" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Tenochtitlan mural (Chicano/indigenous)", "to": "La Cuevita (Dia de los Muertos decor)", "link": "Both celebrate Mexican and indigenous cultural identity on the same stretch of Figueroa" },
+        { "type": "theme-link", "from": "Tenochtitlan (1996, response to violence)", "to": "Judy Baca's History of Highland Park (1977)", "link": "Two generations of Chicano murals in the same neighborhood — both community-created responses to neighborhood trauma" },
+        { "type": "proximity", "from": "Wall That Talks", "to": "La Cuevita", "link": "110m — the mural is practically the bar's front yard" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 41.75
+      },
+      "bestStructures": ["spotter", "photo-challenge", "narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "highland-park-ebell-club",
+      "name": "Highland Park Ebell Club",
+      "address": "131 S Avenue 57",
+      "lat": 34.1088,
+      "lng": -118.1922,
+      "category": "historic-building",
+      "distanceFromBar": "230m",
+      "year": 1912,
+      "designations": ["LA Historic-Cultural Monument #284 (1984)", "HMDB m=175867"],
+      "facts": [
+        "Women's club founded December 1903 at the Highland Park home of Ella G. Lunt",
+        "Named for Dr. Adrian Ebell, 19th-century pioneer in women's education who traveled from Oakland organizing 'circles for the study of arts and science'",
+        "Local women raised the money, bought the land, and financed construction themselves",
+        "Designed by Sumner Hunt and Silas Burns — same architects as the Southwest Museum",
+        "Completed 1912. Style: eclectic blend of Italianate, Mission Revival, and Prairie elements",
+        "Members awarded scholarships starting 1907 and organized for women's suffrage — California granted women the vote in 1911, 9 years before the 19th Amendment",
+        "One of the largest women's clubs in the nation in the early 1900s, rivaled only by the Friday Morning Club in downtown LA",
+        "Depicted in one of Wick Alexander's sidewalk mosaics on Figueroa"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Italianate/Mission Revival/Prairie style clubhouse", "material": "mixed" },
+          { "type": "architecture", "detail": "Distinctive enough to be subject of a sidewalk mosaic" },
+          { "type": "sign", "text": "Ebell Club signage", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Sumner Hunt & Silas Burns (architects)", "to": "Southwest Museum", "link": "Same architects designed both — the women's club and the museum, both in Highland Park" },
+        { "type": "theme-link", "from": "Ebell Club (women's suffrage organizing)", "to": "Highland Park as progressive neighborhood", "link": "California women got the vote in 1911, partly organized from this building" },
+        { "type": "place-to-place", "from": "Ebell Club", "to": "Figueroa sidewalk mosaics", "link": "Ebell women depicted in one of the 14 Wick Alexander mosaics" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 34.75
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "temple-beth-israel",
+      "name": "Temple Beth Israel of Highland Park and Eagle Rock",
+      "address": "5711 Monte Vista St",
+      "lat": 34.1122,
+      "lng": -118.1941,
+      "category": "historic-building",
+      "distanceFromBar": "390m",
+      "year": 1930,
+      "designations": ["Wikipedia article"],
+      "facts": [
+        "Oldest synagogue in Los Angeles exclusively operating in its original location",
+        "Organized as the Highland Park Hebrew School Association in 1923. Building completed 1930 at a cost of $4,078 (today ~$79,000)",
+        "Spanish Colonial Revival style, designed by USC student Gerson C. Cohen, built by carpenter Abe Goldberg and congregants",
+        "Sanctuary later remodeled by Jerome Share in a mid-century Art Deco style",
+        "In July 2023, Rabbi Alex Weisz became the first Gen Z rabbi serving as spiritual leader of an American synagogue",
+        "Conservative Jewish congregation — still active"
+      ],
+      "observable": {
+        "source": "overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Spanish Colonial Revival exterior", "needsVerification": true },
+          { "type": "architecture", "detail": "Small-scale synagogue building on Monte Vista St" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Temple Beth Israel (1930)", "to": "Highland Park Bowl (1927)", "link": "Both late-1920s Highland Park institutions — the neighborhood's diverse roots" },
+        { "type": "theme-link", "from": "Temple Beth Israel (oldest synagogue in original location)", "to": "Highland Park (preservation overlay zone)", "link": "The synagogue survived because Highland Park preserved what other LA neighborhoods demolished" }
+      ],
+      "score": {
+        "observable": 5,
+        "historical": 8,
+        "connection": 6,
+        "uniqueness": 8,
+        "composite": 32.0
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "pisgah-home",
+      "name": "Pisgah Home Historic District",
+      "address": "N Figueroa St at Ave 61 (approx)",
+      "lat": 34.1106,
+      "lng": -118.1867,
+      "category": "historic-district",
+      "distanceFromBar": "349m",
+      "year": 1900,
+      "designations": ["National Register of Historic Places", "Wikipedia article"],
+      "facts": [
+        "Site of the Pisgah Home movement founded by Finis E. Yoakum, a doctor who became a faith healer after a near-fatal buggy accident in 1894",
+        "Yoakum specialized in mental and neurological disorders at Gross Medical College in Denver before moving to LA in 1895",
+        "Started ~1900 as 'Yoakum's Sanatorium' — 8-bed home 'to give free care to drunkards and outcasts who wished to reform'",
+        "By 1903 the LA Times called Yoakum the 'leading apostle of the faith-healing movement in this city', claiming 800+ healings",
+        "Named 'Pisgah' after the biblical mountain from which Moses first saw the promised land",
+        "During the Azusa Street revival (founding of Pentecostal Church), Yoakum hosted followers at the Highland Park mission site",
+        "Closely aligned with the founding of the modern Pentecostal church",
+        "Today operated as Christ Faith Mission / Old Pisgah Home"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Historic district with early 1900s structures", "needsVerification": true },
+          { "type": "sign", "text": "Christ Faith Mission signage", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Pisgah Home (faith healing, 1900)", "to": "Highland Park (progressive/radical neighborhood)", "link": "Highland Park attracted reformers, healers, and religious movements from its founding" },
+        { "type": "era-link", "from": "Pisgah Home (1900)", "to": "Smith Estate (1887)", "link": "Both from Highland Park's first generation — before the 1920s building boom" }
+      ],
+      "score": {
+        "observable": 4,
+        "historical": 9,
+        "connection": 6,
+        "uniqueness": 8,
+        "composite": 32.0
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "smith-estate-el-mio",
+      "name": "Smith Estate / El Mio",
+      "address": "El Mio Dr, Highland Park",
+      "lat": 34.1147,
+      "lng": -118.1919,
+      "category": "historic-building",
+      "distanceFromBar": "474m",
+      "year": 1887,
+      "designations": ["LA Historic-Cultural Monument #142", "National Register of Historic Places"],
+      "facts": [
+        "Victorian Queen Anne hilltop mansion built 1887, designed by Abram M. Edelman",
+        "Named 'El Mio' (Spanish: 'mine' or 'my place') by the Smith family — the street is named after the house",
+        "Residents include: a judge who wrote books on occultism, the head of the Los Angeles Railway, a deputy mayor",
+        "Filming location for cult films: Spider Baby (1964), Silent Scream, Insidious: Chapter 2",
+        "One of the oldest surviving Victorian homes in Highland Park"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Queen Anne Victorian mansion on hilltop", "material": "wood frame" },
+          { "type": "oddity", "detail": "Perched on hilltop — dramatic visibility from below" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "LA Railway head", "to": "Highland Park", "link": "The person who ran LA's trolley system lived on a hill overlooking Highland Park — the trolleys that ran past the Highland Theatre" },
+        { "type": "theme-link", "from": "Spider Baby (horror film, 1964)", "to": "La Cuevita (Day of the Dead bar)", "link": "Highland Park has a strain of the macabre running through its history — horror films, Dia de los Muertos, grotto bars" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 8,
+        "connection": 5,
+        "uniqueness": 7,
+        "composite": 31.0
+      },
+      "bestStructures": ["narrative-riddle", "reframe"],
+      "routeNote": "Outside comfortable walking radius — supplemental POI, not a route stop"
+    },
+    {
+      "poiId": "southwest-museum",
+      "name": "Southwest Museum of the American Indian",
+      "address": "234 Museum Dr, Highland Park",
+      "lat": 34.1095,
+      "lng": -118.1947,
+      "category": "museum",
+      "distanceFromBar": "500m+",
+      "year": 1914,
+      "designations": ["LA Historic-Cultural Monument", "California Historic Landmark", "Wikipedia article"],
+      "facts": [
+        "Founded by Charles Lummis in 1907 — LA's first museum. Opened to the public 1914",
+        "Lummis walked from Ohio to Los Angeles in 1884, documenting the journey as a journalist",
+        "He founded the Landmarks Club in 1895 to restore California's deteriorating 18th-century missions — considered the father of historic preservation in Southern California",
+        "Designed by Sumner Hunt & Silas Burns (same architects as the Ebell Club) in Mission Revival style",
+        "Housed one of the world's finest collections of Native American artifacts",
+        "Collections transferred to Autry Museum in Griffith Park after 2003 merger — building largely closed to public",
+        "Lummis also built his own home, El Alisal, by hand from arroyo stones over 12 years (completed 1910), a few blocks away"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Mission Revival building on hilltop above Arroyo Seco", "needsVerification": true },
+          { "type": "architecture", "detail": "Dramatic hilltop position visible from distance" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Charles Lummis", "to": "El Alisal (Lummis House)", "link": "Lummis built the museum and his own stone house by hand — both within a mile of each other" },
+        { "type": "person-to-place", "from": "Sumner Hunt & Silas Burns", "to": "Ebell Club + Southwest Museum", "link": "Same architects designed both — Highland Park's two civic anchors" },
+        { "type": "theme-link", "from": "Southwest Museum (preservation)", "to": "Highland Park HPOZ (1994)", "link": "Lummis's preservation ethic became the neighborhood's identity — LA's largest Historic Preservation Overlay Zone" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 10,
+        "connection": 8,
+        "uniqueness": 8,
+        "composite": 38.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"],
+      "routeNote": "Outside 500m walk radius — contextual POI, enriches neighborhood narrative"
+    },
+    {
+      "poiId": "lummis-house-el-alisal",
+      "name": "Lummis House / El Alisal",
+      "address": "200 E Avenue 43, Highland Park",
+      "lat": 34.0975,
+      "lng": -118.1960,
+      "category": "historic-building",
+      "distanceFromBar": "1.5km",
+      "year": 1898,
+      "designations": ["California Historic Landmark", "LA Historic-Cultural Monument", "Wikipedia article"],
+      "facts": [
+        "Hand-built stone house constructed by Charles Lummis over 12 years (1898-1910) using boulders from the Arroyo Seco",
+        "'El Alisal' means 'alder grove' in Spanish",
+        "Lummis trained a few Native American laborers in carpentry — they assisted, but the stones were gathered and placed by hand",
+        "Built during the Arts and Crafts movement in Southern California — the hand-hewn character was deliberate, ideological",
+        "Now a city-run house museum with a garden of native plants",
+        "Historical Society of Southern California occupied it for 50 years until 2015"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Rustic Craftsman stone house on edge of Arroyo Seco", "material": "river stone from Arroyo Seco" },
+          { "type": "oddity", "detail": "Entirely hand-built from river boulders — visible in every wall" }
+        ]
+      },
+      "score": {
+        "observable": 8,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 9,
+        "composite": 39.25
+      },
+      "bestStructures": ["narrative-riddle", "reframe", "photo-challenge"],
+      "routeNote": "1.5km from bar — background POI for Highland Park narrative, not a route stop"
+    },
+    {
+      "poiId": "heritage-square-museum",
+      "name": "Heritage Square Museum",
+      "address": "3800 Homer St, Montecito Heights",
+      "lat": 34.0924,
+      "lng": -118.1956,
+      "category": "museum",
+      "distanceFromBar": "2km",
+      "year": 1969,
+      "designations": ["Wikipedia article"],
+      "facts": [
+        "Open-air architecture museum of 8 Victorian-era buildings saved from demolition during LA's 1960s expansion",
+        "Created by the Cultural Heritage Foundation in 1969 at the request of the LA Cultural Heritage Commission",
+        "Buildings include Hale House (HCM #40, declared 1966 — saved when a gas station was planned for the site)",
+        "Structures were physically relocated to Heritage Square as a 'last-chance haven'",
+        "Hale House relocated in 1970 — one of the first buildings saved by the LA historic monument program"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Cluster of Victorian houses from different LA neighborhoods", "material": "wood frame" }
+        ]
+      },
+      "score": {
+        "observable": 7,
+        "historical": 8,
+        "connection": 5,
+        "uniqueness": 7,
+        "composite": 32.0
+      },
+      "bestStructures": ["narrative-riddle", "reframe"],
+      "routeNote": "2km from bar — background context only"
+    },
+    {
+      "poiId": "judy-baca-history-of-highland-park",
+      "name": "History of Highland Park (Judy Baca mural)",
+      "address": "1207 N Avenue 56 (AT&T building)",
+      "lat": 34.1092,
+      "lng": -118.1948,
+      "category": "public-art",
+      "distanceFromBar": "430m",
+      "year": 1977,
+      "designations": [],
+      "facts": [
+        "125-foot-long mural by Judy Baca (1977-78) on two walls of the AT&T building at 1207 N Avenue 56",
+        "Baca is the artist behind The Great Wall of Los Angeles in the San Fernando Valley — the longest mural in the world",
+        "Restored in 2011 with a $78,000 project led by Baca, funded by AT&T, SPARC, and Councilman Jose Huizar",
+        "Part of Baca's citywide program of community murals"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "125-ft mural spanning two walls of AT&T building", "material": "painted mural" },
+          { "type": "oddity", "detail": "On a telephone company building — corporate infrastructure as art canvas" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Judy Baca", "to": "Great Wall of Los Angeles", "link": "Same artist painted the longest mural in the world — this Highland Park mural is from the same era" },
+        { "type": "theme-link", "from": "History of Highland Park (1977)", "to": "Tenochtitlan: Wall That Talks (1996)", "link": "Two generations of Chicano muralism on the same streets — Baca's generation and Ortega's generation" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 7,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 34.75
+      },
+      "bestStructures": ["spotter", "connector", "photo-challenge"]
+    }
+  ],
+  "cluePotentialMatrix": {
+    "stop1_chickenBoy": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": false,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 7,
+      "notes": "Chicken Boy is a spotter home run — 22ft fiberglass statue you have to look UP to see, then 14 sidewalk mosaics you have to look DOWN to see, in the same block. Reframe: 'It was an ad for a chicken restaurant before it was a landmark. It lived in storage for 23 years.' Sequence: the mosaics form a numbered set. Narrative riddle: Amy Inouye's 23-year rescue story. Masonic Temple/Lodge Room adds the Egyptian paintings and cherry wood paneling for supplemental spotter material."
+    },
+    "stop2_highlandTheatre": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "Highland Theatre is the strongest single POI. Narrative riddle: 'An architect designed theaters across LA but died at ~30, a year after this one opened. 100 years later, a Twilight actress bought it.' Reframe: 'It closed 6 days before its 100th birthday.' Connector: links to Highland Park Bowl (same era, same street, same Prohibition-era ecosystem). Cipher-lite: 'The Lady of the Night' (first film) or Lewis A. Smith. HP Bowl's Prohibition prescription scheme is a devastating narrative riddle on its own. Ebell Club adds suffrage and the Hunt/Burns architect connection."
+    },
+    "stop3_tenochtitlanWall": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": false,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": false,
+      "structuresSupported": 6,
+      "notes": "The Wall That Talks is a 75-foot mural with identifiable Aztec/Mayan figures — rich photo-challenge and spotter territory. Narrative riddle: 'It was painted after a friend was killed by gang violence — the artists turned grief into the most important Chicano mural in Northeast LA.' Connector to La Cuevita: both celebrate Mexican cultural identity on the same stretch of Figueroa. Temple Beth Israel and Pisgah Home add depth — oldest synagogue in its original location, Pentecostal founding site. Reframe: the mural was nearly erased in 2020."
+    }
+  },
+  "metadata": {
+    "overpassBuildingStock": {
+      "total": 1095,
+      "preWar": "~900 (estimated 82%)",
+      "preWarPercent": "~82%",
+      "oldestDecade": "1890s",
+      "peakDecade": "1900s-1910s (dense cluster of buildings from 1903-1915 visible in sample)",
+      "note": "Highland Park's building stock is overwhelmingly pre-war, with a notable concentration of 1900-1915 construction. The neighborhood's 1994 Historic Preservation Overlay Zone (LA's largest) protected this stock from demolition."
+    },
+    "neighborhoodContext": {
+      "hpoz": "Highland Park-Garvanza HPOZ established 1994 — LA's largest Historic Preservation Overlay Zone, protecting pre-war housing and commercial stock",
+      "figueraStreet": "Figueroa is the commercial spine. In the 1920s-30s it had 4 blocks of theaters. The trolley ran down it. Today: 14 sidewalk mosaics tell the story.",
+      "1933Group": "1933 Group operates both La Cuevita and Highland Park Bowl — the bar group most responsible for Highland Park's nightlife identity. Named for the year Prohibition ended.",
+      "chicanoCulture": "Deep Chicano cultural infrastructure: Tenochtitlan mural, Judy Baca mural, Avenue 50 Studio (non-profit Chicano art gallery at 3714 N Figueroa), Self Help Graphics Dia de los Muertos exhibitions, La Cuevita's own Day of the Dead theming"
+    },
+    "thinCoverageWarning": false,
+    "verificationFlags": [
+      "Highland Theatre marquee/signage — confirm current state (closed since 2024, Stewart renovation may change exterior)",
+      "Lodge Room exterior Masonic details — confirm what's visible from street vs. interior-only",
+      "Tenochtitlan mural condition — threatened in 2020, confirm still intact and not deteriorated",
+      "Sidewalk mosaics — confirm count of 14 and which subjects are between Ave 56-60 (walking route range)",
+      "Chicken Boy — confirm still atop Future Studios and not moved/damaged",
+      "Highland Park Bowl signage — confirm current exterior appearance post-2016 renovation",
+      "Pisgah Home — confirm what's visible from street; it's an active religious mission",
+      "Judy Baca mural — last restored 2011, confirm current condition"
+    ]
+  }
+}

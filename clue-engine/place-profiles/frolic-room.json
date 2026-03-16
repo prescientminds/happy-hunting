@@ -1,0 +1,842 @@
+{
+  "barId": "frolic-room",
+  "generatedBy": "/recon",
+  "generatedDate": "2026-03-16",
+  "bar": {
+    "name": "Frolic Room",
+    "address": "6245 Hollywood Blvd, Los Angeles, CA 90028",
+    "neighborhood": "Hollywood",
+    "lat": 34.1017,
+    "lng": -118.3260,
+    "happyHour": "Daily drink specials, classic dive pricing",
+    "vibe": "Oldest bar in Hollywood, neon-lit dive, Al Hirschfeld mural, Pantages Theatre adjacent, noir atmosphere",
+    "barFacts": [
+      "Opened as a speakeasy called 'Freddy's' in 1930 — patrons entered through a secret door from the Pantages Theatre",
+      "Howard Hughes owned both the Pantages and the Frolic Room from 1949-1954, added the neon sign that still hangs today",
+      "Last place Elizabeth Short (the Black Dahlia) was reportedly seen alive before her 1947 murder — disputed, Biltmore Hotel also claims the distinction",
+      "Charles Bukowski was a regular; Frank Sinatra drank here during Pantages award season",
+      "1963 Al Hirschfeld mural on the east wall depicts 24+ caricatures — Einstein, Gable, Monroe, Marx Brothers, Chaplin, Louis Armstrong, Sinatra. 'Nina' hidden 3 times. Restored by Oscar Ropide in 2012. Owner says it's a scale reproduction, not a Hirschfeld original",
+      "Featured in L.A. Confidential (1997) as Detective Jack Vincennes' haunt",
+      "During the Pantages' 11-year run hosting the Academy Awards (1949-1960), the Frolic Room was the de facto after-party bar",
+      "Robert Nunley purchased the bar in 1982 and kept it running through Hollywood's roughest decades"
+    ]
+  },
+  "discoveryStats": {
+    "wikipediaHits": 50,
+    "overpassFeatures": 357,
+    "overpassDatedBuildings": 306,
+    "hmdbMarkers": 12,
+    "localColorFinds": 18,
+    "totalRaw": 82,
+    "afterDedup": 28,
+    "aboveThreshold": 16,
+    "selectedForRoute": 3
+  },
+  "route": {
+    "startPoint": {
+      "lat": 34.1031,
+      "lng": -118.3262,
+      "label": "Capitol Records Building"
+    },
+    "endPoint": {
+      "lat": 34.1017,
+      "lng": -118.3260,
+      "label": "Frolic Room"
+    },
+    "totalDistance": "0.5 mi",
+    "estimatedWalkTime": "10 min",
+    "stops": [
+      {
+        "stopNumber": 1,
+        "ring": 1,
+        "lat": 34.1031,
+        "lng": -118.3262,
+        "poiId": "capitol-records-building",
+        "label": "Capitol Records Building",
+        "nearbySupplemental": ["hollywood-vine-intersection", "hollywood-walk-of-fame", "checkers-speech-site"]
+      },
+      {
+        "stopNumber": 2,
+        "ring": 2,
+        "lat": 34.1012,
+        "lng": -118.3294,
+        "poiId": "chaplin-keaton-lloyd-alley",
+        "label": "Chaplin-Keaton-Lloyd Alley",
+        "nearbySupplemental": ["museum-of-death", "guaranty-building", "vine-street-brown-derby-site"]
+      },
+      {
+        "stopNumber": 3,
+        "ring": 1,
+        "lat": 34.1020,
+        "lng": -118.3260,
+        "poiId": "pantages-theatre",
+        "label": "Hollywood Pantages Theatre",
+        "nearbySupplemental": ["equitable-building", "taft-building", "hirschfeld-mural-interior"]
+      }
+    ]
+  },
+  "pois": [
+    {
+      "poiId": "capitol-records-building",
+      "name": "Capitol Records Building",
+      "address": "1750 Vine St",
+      "lat": 34.1031,
+      "lng": -118.3262,
+      "category": "historic-building",
+      "distanceFromBar": "155m",
+      "year": 1956,
+      "designations": ["LA Historic-Cultural Monument (2006)", "National Register of Historic Places", "Hollywood Blvd Commercial and Entertainment District"],
+      "facts": [
+        "World's first circular office building — designed by Louis Naidorf of Welton Becket Associates to resemble a stack of records on a turntable spindle",
+        "13 stories, conforms to the 150-foot zoning height limit of 1950s Hollywood",
+        "Blinking light atop the spire spells 'HOLLYWOOD' in Morse code — switched on at opening in 1956 by Leila Morse, granddaughter of Samuel Morse",
+        "Nicknamed 'The House That Nat Built' after Nat King Cole, Capitol Records' biggest star",
+        "Three recording studios and eight underground echo chambers designed by Les Paul — concrete rooms where engineers pump in and re-record sound to create cathedral-like reverberations",
+        "Continuous wraparound porcelain enamel sunshades on every floor — functional and iconic",
+        "Construction began after EMI acquired Capitol Records in 1955, completed April 1956",
+        "One of the most photographed buildings in Los Angeles — popular backdrop for films set in Hollywood"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Circular tower — 13 stacked 'records' with wraparound sunshades", "material": "concrete and porcelain enamel" },
+          { "type": "sign", "text": "Blinking light spelling HOLLYWOOD in Morse code", "location": "top of spire" },
+          { "type": "architecture", "detail": "Needle/spire at the top of the building", "location": "roof" },
+          { "type": "count", "element": "Stories/floors", "count": 13 },
+          { "type": "oddity", "detail": "The building appears to be a stack of vinyl records from certain angles" },
+          { "type": "architecture", "detail": "Ground-floor lobby with Capitol Records branding and music memorabilia visible through glass" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Capitol Records (1956)", "to": "Pantages Theatre (1930)", "link": "Both anchored Hollywood's entertainment identity — one for film/stage, one for music" },
+        { "type": "person-to-place", "from": "Les Paul", "to": "Capitol echo chambers", "link": "Guitar legend designed the building's revolutionary underground echo chambers" },
+        { "type": "theme-link", "from": "Capitol Records spire (Morse code)", "to": "Hollywood Walk of Fame (terrazzo stars)", "link": "Both embed coded messages in plain sight — one in light, one in stone" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 10,
+        "composite": 44.5
+      },
+      "bestStructures": ["spotter", "reframe", "narrative-riddle", "cipher-lite", "photo-challenge", "connector"]
+    },
+    {
+      "poiId": "pantages-theatre",
+      "name": "Hollywood Pantages Theatre",
+      "address": "6233 Hollywood Blvd",
+      "lat": 34.1020,
+      "lng": -118.3260,
+      "category": "historic-building",
+      "distanceFromBar": "33m",
+      "year": 1930,
+      "designations": ["LA Historic-Cultural Monument #193 (1978)", "Hollywood Blvd Commercial and Entertainment District (NRHP)"],
+      "facts": [
+        "Last theater built by vaudeville impresario Alexander Pantages — and the last movie palace built in Hollywood",
+        "Designed by B. Marcus Priteca, interior by muralist Anthony B. Heinsbergen, opened June 4, 1930 with MGM's The Floradora Girl",
+        "Alexander Pantages planned a 12-story office tower above — the 1929 stock market crash stopped construction at two stories, where it remains",
+        "Grand lobby is 110 feet wide and 60 feet deep — a poly-chromatic fan-vaulted space in gold and henna with zigzag geometric Art Deco patterns",
+        "20-foot-wide stairways lined with Egyptian and Assyro-Babylonian styled statues, one depicting an Art Deco camera crew filming",
+        "Double ceiling: fretwork sunray effects converging to the center, from which hangs a frosted glass and bronze chandelier. Above it: a blue sky ceiling with twinkling stars",
+        "Hosted the Academy Awards for 11 consecutive years (1949-1960), including the ceremony's first live television broadcast in 1953",
+        "Howard Hughes owned it 1949-1954 — also owned the Frolic Room next door during this period",
+        "Cost $1.25 million to build in 1930 (~$22 million today). 10,000-square-foot stage with state-of-the-art hydraulics",
+        "LA Conservancy Preservation Award in 2001 after massive 2000 rehabilitation uncovered original Art Deco grandeur"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Art Deco facade — chevrons, zigzags, starbursts, exotic figures on every surface from sidewalk to entrance", "material": "carved stone and terra cotta" },
+          { "type": "architecture", "detail": "Grand marquee with 'PANTAGES' lettering", "location": "above main entrance" },
+          { "type": "architecture", "detail": "Egyptian and Assyro-Babylonian statues flanking the stairways", "location": "interior lobby, visible through doors" },
+          { "type": "count", "element": "Stories (building capped at 2 due to 1929 crash)", "count": 2 },
+          { "type": "oddity", "detail": "One statue depicts an Art Deco camera crew — a filmmaker immortalized in stone inside a theater", "needsVerification": true },
+          { "type": "architecture", "detail": "Lobby fan-vaulted ceiling in gold and henna zigzag geometric patterns", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Howard Hughes", "to": "Frolic Room", "link": "Owned both buildings 1949-1954, installed the Frolic Room's neon sign" },
+        { "type": "event-link", "from": "Academy Awards (1949-1960)", "to": "Frolic Room", "link": "11 years of Oscar ceremonies — the Frolic Room was the after-party bar steps away" },
+        { "type": "era-link", "from": "Pantages (1930)", "to": "Taft Building (1924)", "link": "Both anchored Hollywood and Vine during the Golden Age" },
+        { "type": "theme-link", "from": "Pantages (planned 12 stories, built 2)", "to": "1929 crash", "link": "The Depression literally truncated the building — its missing 10 stories are a monument to the crash" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 10,
+        "connection": 10,
+        "uniqueness": 9,
+        "composite": 44.75
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter", "photo-challenge", "sequence"]
+    },
+    {
+      "poiId": "chaplin-keaton-lloyd-alley",
+      "name": "Chaplin-Keaton-Lloyd Alley",
+      "address": "1640 Cahuenga Blvd (alley runs south of Hollywood Blvd, Cahuenga to Cosmo)",
+      "lat": 34.1012,
+      "lng": -118.3294,
+      "category": "historic-landmark",
+      "distanceFromBar": "316m",
+      "year": 1921,
+      "designations": ["Hollywood Heritage plaque (dedicated 9-29-2021, National Silent Movie Day)", "Atlas Obscura listing"],
+      "facts": [
+        "Three of the greatest comedies ever made — Chaplin's The Kid (1921), Keaton's Cops (1922), Lloyd's Safety Last! (1923) — were all filmed in this alley",
+        "All three films are in the Library of Congress National Film Registry",
+        "At least 24 silent-era films shot here, also starring Douglas Fairbanks, Oliver Hardy, and Harry Houdini",
+        "Filmmakers chose it because the east-west orientation kept it well-lit all day, and LA was so undeveloped that this was one of the few urban-looking locations",
+        "Identified by silent film location researcher John Bengtson ('the great detective of silent film locations' — New York Times)",
+        "Plaque dedicated by Hollywood Heritage on National Silent Movie Day, 2021",
+        "Most people walk through it every day without knowing they're on a film set"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "plaque", "text": "Chaplin-Keaton-Lloyd Alley dedication plaque", "location": "alley entrance near Cahuenga", "material": "metal plaque" },
+          { "type": "architecture", "detail": "Narrow alley running east-west between Cahuenga and Cosmo, south of Hollywood Blvd" },
+          { "type": "oddity", "detail": "Looks like a generic service alley — no visual indication of its film history without the plaque" },
+          { "type": "oddity", "detail": "East-west orientation means full-day sunlight, exactly why silent filmmakers chose it" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Charlie Chaplin", "to": "Taft Building", "link": "Chaplin had offices in the Taft Building and filmed in this alley — two blocks of his Hollywood life" },
+        { "type": "person-to-place", "from": "Charlie Chaplin", "to": "Guaranty Building", "link": "Chaplin was an investor in the Guaranty Building at 6331 Hollywood Blvd" },
+        { "type": "era-link", "from": "Silent film era (1920s)", "to": "Pantages Theatre (1930)", "link": "The alley's film era ended just as the Pantages opened — silent to talkies transition" },
+        { "type": "theme-link", "from": "Chaplin-Keaton-Lloyd Alley (hidden history)", "to": "Walk of Fame (visible history)", "link": "One celebrates fame in brass stars everyone sees; the other hides it in a service alley no one notices" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 10,
+        "composite": 42.75
+      },
+      "bestStructures": ["narrative-riddle", "reframe", "connector", "photo-challenge", "cipher-lite"]
+    },
+    {
+      "poiId": "hollywood-walk-of-fame",
+      "name": "Hollywood Walk of Fame",
+      "address": "Hollywood Blvd & Vine St (15 blocks of Hollywood Blvd + 3 blocks of Vine St)",
+      "lat": 34.1016,
+      "lng": -118.3268,
+      "category": "landmark",
+      "distanceFromBar": "70m",
+      "year": 1960,
+      "designations": ["LA Historic-Cultural Monument #194 (1978)"],
+      "facts": [
+        "2,800+ five-pointed terrazzo-and-brass stars embedded in sidewalks along 15 blocks of Hollywood Blvd and 3 blocks of Vine St",
+        "1,600 stars installed in the first year (1960) — then an 8-year hiatus until 1968 after LA City Council required the Chamber of Commerce to overhaul its selection process",
+        "Muhammad Ali's star is mounted on a wall at the Dolby Theatre, not the sidewalk — he refused to let people walk on his name",
+        "Three dogs have stars: Strongheart, Rin Tin Tin, and Lassie. 19 fictional characters including Godzilla, Big Bird, and the Simpsons",
+        "Terrazzo and brass construction. Nomination costs $85,000 (as of 2025) to create, install, and maintain",
+        "Barbra Streisand refused to attend her 1976 unveiling — a reporter interviewed her wax figure at the Hollywood Wax Museum instead",
+        "The Chevrolet Suburban has a star — the only inanimate object honored, having 'starred' in 1,750+ films"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Terrazzo and brass five-pointed stars with celebrity names embedded in pink sidewalk", "material": "terrazzo and brass" },
+          { "type": "count", "element": "Total stars", "count": "2,800+" },
+          { "type": "oddity", "detail": "Stars have 5 category emblems: motion picture camera, TV set, phonograph record, radio microphone, theatrical mask" },
+          { "type": "oddity", "detail": "Stars run along both sides of the sidewalk — easy to miss the one you're looking for" }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Walk of Fame", "to": "Pantages Theatre", "link": "Stars line the sidewalk directly in front of the Pantages" },
+        { "type": "place-to-place", "from": "Walk of Fame", "to": "Frolic Room", "link": "The bar sits on the Walk of Fame — you walk over stars to reach the door" },
+        { "type": "theme-link", "from": "Walk of Fame (public fame)", "to": "Frolic Room (private noir)", "link": "Hollywood's two faces — the bright sidewalk stars and the dark bar behind the neon" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 7,
+        "composite": 40.75
+      },
+      "bestStructures": ["spotter", "elimination", "sequence", "cipher-lite", "photo-challenge"]
+    },
+    {
+      "poiId": "hollywood-vine-intersection",
+      "name": "Hollywood and Vine",
+      "address": "Hollywood Blvd & Vine St",
+      "lat": 34.1016,
+      "lng": -118.3267,
+      "category": "landmark",
+      "distanceFromBar": "60m",
+      "year": 1887,
+      "designations": ["HMDB m=143391", "HMDB m=167867"],
+      "facts": [
+        "Originally Prospect Avenue and Weyse Avenue — renamed Hollywood Boulevard and Vine Street",
+        "Three 1920s highrises — Taft, Equitable, and Broadway buildings — each built to the 150-foot height limit, celebrating Hollywood as the 'movie capital of the world'",
+        "Hollywood and Vine metro station tile murals depict movie star bus tours and Golden Age Hollywood scenes",
+        "The intersection was the heart of radio broadcasting in the 1930s-40s — NBC, CBS, and Mutual all had studios within a block"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "Hollywood Blvd and Vine St street signs", "location": "intersection corners" },
+          { "type": "architecture", "detail": "Three 1920s highrises visible at corners — Taft (SE), Equitable (NE), Broadway (SW)" },
+          { "type": "artwork", "detail": "Metro station tile murals", "location": "Hollywood/Vine station entrance" }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Hollywood and Vine", "to": "Pantages Theatre", "link": "One block east — the intersection's entertainment anchor" },
+        { "type": "era-link", "from": "Hollywood and Vine (1920s peak)", "to": "Taft Building (1924)", "link": "The Taft was the first high-rise, establishing the intersection's skyline" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 9,
+        "connection": 9,
+        "uniqueness": 6,
+        "composite": 37.5
+      },
+      "bestStructures": ["connector", "reframe", "sequence"]
+    },
+    {
+      "poiId": "taft-building",
+      "name": "Taft Building",
+      "address": "6280 Hollywood Blvd (SE corner Hollywood & Vine)",
+      "lat": 34.1014,
+      "lng": -118.3264,
+      "category": "historic-building",
+      "distanceFromBar": "49m",
+      "year": 1924,
+      "designations": ["LA Historic-Cultural Monument #666 (1999)", "HMDB m=231851", "Hollywood Blvd Commercial and Entertainment District (NRHP)"],
+      "facts": [
+        "LA's first high-rise office building — constructed in 65 days, opened 1924",
+        "Beaux-Arts facade designed by Percy Eisen and Albert Walker",
+        "Academy of Motion Picture Arts and Sciences headquarters from 1935-1946",
+        "Tenants included Charlie Chaplin and Will Rogers, plus agents, casting companies, and entertainment lawyers",
+        "Built on the site where developer Alfred Z. Taft tore down Hollywood Memorial Church",
+        "Known as 'the Times Square of Hollywood Boulevard'",
+        "12-story brick-and-concrete structure, 150-foot height limit",
+        "Renovated in 2014, restoring original features"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "12-story Beaux-Arts facade — classical detailing on upper floors", "material": "brick and concrete" },
+          { "type": "sign", "text": "Taft Building signage", "location": "upper facade", "needsVerification": true },
+          { "type": "count", "element": "Stories/floors", "count": 12 },
+          { "type": "architecture", "detail": "Ground-floor retail with ornamental entrance" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Charlie Chaplin", "to": "Taft Building", "link": "Had offices here — and filmed in the alley two blocks west" },
+        { "type": "era-link", "from": "Taft Building (1924)", "to": "Pantages Theatre (1930)", "link": "Taft established the intersection; Pantages crowned it" },
+        { "type": "event-link", "from": "Academy of Motion Picture Arts and Sciences (1935-1946)", "to": "Pantages Academy Awards (1949-1960)", "link": "The Oscars moved from the Taft Building office to the Pantages stage — a one-block journey" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 9,
+        "connection": 9,
+        "uniqueness": 7,
+        "composite": 37.75
+      },
+      "bestStructures": ["connector", "narrative-riddle", "reframe", "sequence"]
+    },
+    {
+      "poiId": "equitable-building",
+      "name": "Equitable Building of Hollywood",
+      "address": "6253 Hollywood Blvd (NE corner Hollywood & Vine)",
+      "lat": 34.1020,
+      "lng": -118.3263,
+      "category": "historic-building",
+      "distanceFromBar": "42m",
+      "year": 1929,
+      "designations": ["LA Historic-Cultural Monument", "Hollywood Blvd Commercial and Entertainment District (NRHP)"],
+      "facts": [
+        "Two-tower office building designed by Aleck Curlett in a blend of late Gothic Revival and Art Deco — opened in two phases: May 1929 and late 1930",
+        "Second phase more than doubled its size, making it the largest office building in Hollywood",
+        "Lobby is the most ornate interior: marble and stone floors, decorative mouldings, vault ceiling, vestibule with pilasters",
+        "Was the second high-rise at Hollywood and Vine (after the Taft Building)",
+        "Converted to lofts in 2008 by Palisades Development Group"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Gothic Revival and Art Deco hybrid facade — pointed arches with geometric Art Deco detailing", "material": "stone and terra cotta" },
+          { "type": "architecture", "detail": "Two-tower configuration visible from the street" },
+          { "type": "architecture", "detail": "Ornate lobby with marble floors and vault ceiling", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Equitable Building (1929)", "to": "Pantages Theatre (1930)", "link": "Opened within a year of each other — the intersection's Art Deco twins" },
+        { "type": "place-to-place", "from": "Equitable Building (NE corner)", "to": "Taft Building (SE corner)", "link": "The two highrises that defined Hollywood and Vine's skyline" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 7,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 34.75
+      },
+      "bestStructures": ["spotter", "connector"]
+    },
+    {
+      "poiId": "hollywood-knickerbocker",
+      "name": "Hollywood Knickerbocker Hotel",
+      "address": "1714 Ivar Ave",
+      "lat": 34.1024,
+      "lng": -118.3278,
+      "category": "historic-building",
+      "distanceFromBar": "182m",
+      "year": 1925,
+      "designations": ["HMDB m=235258"],
+      "facts": [
+        "Known as 'the Hotel of the Stars' and 'Home of the Famous' in the 1940s",
+        "D.W. Griffith — the father of narrative cinema — spent the last year of his life here, broke and forgotten. Died July 23, 1948, discovered unconscious in the lobby",
+        "On Halloween 1936, Bess Houdini held her tenth and final seance on the rooftop to contact her dead husband Harry. She gave up. Some claim Houdini's spirit never left",
+        "Betty Grable hosted a costume party for Jackie Coogan's 21st birthday here in 1935 — Lucille Ball, Johnny Mercer among guests",
+        "Costume designer Irene Lentz committed suicide by jumping from an 11th-floor window in 1962",
+        "Elvis Presley and Joe DiMaggio stayed here. Rudolph Valentino lived here",
+        "Now a retirement home (Hollywood Knickerbocker Apartments)"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Multi-story hotel building on Ivar Ave, visible from Vine St" },
+          { "type": "sign", "text": "Knickerbocker signage or marquee", "needsVerification": true },
+          { "type": "oddity", "detail": "Now a retirement home — the glamour is gone but the building remains" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "D.W. Griffith", "to": "Chaplin-Keaton-Lloyd Alley", "link": "Griffith pioneered the narrative film techniques Chaplin, Keaton, and Lloyd perfected in that alley. He died forgotten two blocks away" },
+        { "type": "person-to-place", "from": "Harry Houdini", "to": "Chaplin-Keaton-Lloyd Alley", "link": "Houdini himself filmed in the alley during the silent era. His widow's final seance was on this hotel's roof" },
+        { "type": "theme-link", "from": "Knickerbocker (forgotten fame)", "to": "Walk of Fame (preserved fame)", "link": "Griffith died alone in a hotel lobby; his name lives on a brass star outside" }
+      ],
+      "score": {
+        "observable": 5,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 38.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "guaranty-building",
+      "name": "Guaranty Building",
+      "address": "6331 Hollywood Blvd",
+      "lat": 34.1019,
+      "lng": -118.3279,
+      "category": "historic-building",
+      "distanceFromBar": "173m",
+      "year": 1923,
+      "designations": ["Hollywood Blvd Commercial and Entertainment District (NRHP)", "HMDB m=173414"],
+      "facts": [
+        "Built 1923 by Guaranty Building and Loan Association — Charlie Chaplin and Cecil B. DeMille were investors",
+        "Designed by John C. Austin and Frederic M. Ashley — the same duo who designed Griffith Observatory",
+        "12-story Beaux-Arts building, 170 feet tall — second building on Hollywood Blvd to hit the height limit",
+        "Appraised at $1.325 million upon completion (~$25 million in 2025 dollars)",
+        "Tenants included Chaplin, DeMille, and entertainment columnist Hedda Hopper",
+        "Guaranty Building and Loan went bankrupt in 1930 (the Depression)",
+        "Church of Scientology purchased it in 1988 for $5.1 million"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "12-story Beaux-Arts facade", "material": "stone" },
+          { "type": "count", "element": "Stories/floors", "count": 12 },
+          { "type": "sign", "text": "Church of Scientology signage or branding", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Charlie Chaplin", "to": "Guaranty Building", "link": "Chaplin invested in this building, had offices in the Taft, and filmed in the alley — all within 3 blocks" },
+        { "type": "person-to-place", "from": "John C. Austin (architect)", "to": "Griffith Observatory", "link": "Same architects designed both — Hollywood's skyline and LA's most famous hilltop" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 8,
+        "connection": 8,
+        "uniqueness": 7,
+        "composite": 33.75
+      },
+      "bestStructures": ["connector", "narrative-riddle"]
+    },
+    {
+      "poiId": "museum-of-death",
+      "name": "Museum of Death",
+      "address": "6363 Selma Ave",
+      "lat": 34.0999,
+      "lng": -118.3290,
+      "category": "unusual-business",
+      "distanceFromBar": "299m",
+      "year": 2000,
+      "designations": ["Atlas Obscura listing"],
+      "facts": [
+        "Originally opened 1995 in San Diego's first mortuary — relocated to Hollywood in 2000",
+        "Founded by J.D. Healy and Catherine Shultz with the stated goal: 'to make people happy to be alive'",
+        "Building was previously Westbeach Recorders and Producers Studio where Pink Floyd recorded — soundproofing walls double as acoustic dampening for the exhibits",
+        "Exhibits: body bags, coffins, Manson Family photos, severed head of Henri Landru, Heaven's Gate cult recruiting video, full-size execution device replicas",
+        "Self-guided tour, approximately 45 minutes to an hour"
+      ],
+      "observable": {
+        "source": "overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "Museum of Death signage", "location": "exterior facade on Selma Ave" },
+          { "type": "oddity", "detail": "Unassuming storefront on a quiet side street — no indication of what's inside from the exterior" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Museum of Death (death as spectacle)", "to": "Frolic Room (Black Dahlia)", "link": "Hollywood's morbid fascination — the last bar, the death museum, separated by two blocks" },
+        { "type": "theme-link", "from": "Museum of Death (Pink Floyd recording studio)", "to": "Capitol Records (echo chambers)", "link": "Both buildings have music history baked into their walls" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 5,
+        "connection": 7,
+        "uniqueness": 10,
+        "composite": 33.5
+      },
+      "bestStructures": ["reframe", "narrative-riddle"]
+    },
+    {
+      "poiId": "chase-bank-millard-sheets-mosaics",
+      "name": "Chase Bank / Millard Sheets Mosaic (former Home Savings)",
+      "address": "1500 Vine St (Sunset & Vine)",
+      "lat": 34.0982,
+      "lng": -118.3266,
+      "category": "public-art",
+      "distanceFromBar": "390m",
+      "year": 1968,
+      "designations": ["LA Historic-Cultural Monument nomination pending (1500 Vine)", "Atlas Obscura listing"],
+      "facts": [
+        "Built 1968 as Home Savings and Loan — designed by Millard Sheets, one of his favorite buildings",
+        "Facade mosaic covers nearly the entire two-story building: 15+ legendary movie stars in their best-known roles, rendered in strips referencing strips of film",
+        "Depicts Mary Pickford, Douglas Fairbanks, Chaplin, Dolores Del Rio, Bette Davis, Julie Andrews as Mary Poppins",
+        "Built on the exact site where The Squaw Man (1913) was filmed — Hollywood's first full-length feature",
+        "Back of building (by ATM): stained glass windows depicting scenes from The Squaw Man and chase sequences",
+        "Granite panels on the side carry additional names of Hollywood figures",
+        "One of a dwindling number of Millard Sheets' mural-bearing bank buildings still intact in LA"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Full-facade mosaic depicting 15+ movie stars in iconic roles", "material": "glass mosaic tesserae" },
+          { "type": "artwork", "detail": "Stained glass windows at rear depicting The Squaw Man and chase scenes", "location": "back of building near ATM" },
+          { "type": "artwork", "detail": "Granite name panels on side facade", "material": "granite" },
+          { "type": "oddity", "detail": "It's a functioning Chase bank — most customers don't look up at the mural" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "The Squaw Man site (1913)", "to": "Chaplin-Keaton-Lloyd Alley (1921-23)", "link": "Hollywood's first feature was filmed here; a decade later, the alley two blocks north became silent film's greatest stage" },
+        { "type": "person-to-place", "from": "Millard Sheets", "to": "Home Savings mural tradition", "link": "Sheets designed dozens of bank murals across LA — this Hollywood one was his personal favorite" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 8,
+        "uniqueness": 9,
+        "composite": 40.75
+      },
+      "bestStructures": ["spotter", "photo-challenge", "connector", "elimination", "cipher-lite"]
+    },
+    {
+      "poiId": "avalon-hollywood",
+      "name": "Avalon Hollywood (former Hollywood Palace / Hollywood Playhouse)",
+      "address": "1735 Vine St",
+      "lat": 34.1027,
+      "lng": -118.3270,
+      "category": "historic-building",
+      "distanceFromBar": "143m",
+      "year": 1927,
+      "designations": ["HMDB m=238894"],
+      "facts": [
+        "Opened 1927 as the Hollywood Playhouse — Spanish Baroque style",
+        "Renamed Hollywood Palace during the ABC variety show The Hollywood Palace (1964-1970)",
+        "Rolling Stones made their first US television appearance here on June 6, 1964 — host Dean Martin repeatedly ridiculed them",
+        "Beatles' 'Penny Lane' and 'Strawberry Fields Forever' music videos had their American TV debut here (Feb 25, 1967)",
+        "Beatles' first West Coast performance was in this building in 1964, before their Hollywood Bowl show",
+        "In 1943 was renamed El Capitan Theatre (not the current El Capitan on Hollywood Blvd)",
+        "Now Avalon Hollywood nightclub since 2002"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Spanish Baroque facade on Vine St", "needsVerification": true },
+          { "type": "sign", "text": "Avalon Hollywood signage/marquee", "location": "facade" }
+        ]
+      },
+      "connections": [
+        { "type": "event-link", "from": "Rolling Stones first US TV (1964)", "to": "Beatles first West Coast show (1964)", "link": "Both happened in this building in the same year — 1964 British Invasion ground zero" },
+        { "type": "era-link", "from": "Hollywood Playhouse (1927)", "to": "Pantages Theatre (1930)", "link": "Two theatres on Vine St, built 3 years apart, defining the street's entertainment identity" }
+      ],
+      "score": {
+        "observable": 5,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 8,
+        "composite": 35.25
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "fonda-theatre",
+      "name": "The Fonda Theatre (former Music Box Theatre)",
+      "address": "6126 Hollywood Blvd",
+      "lat": 34.1016,
+      "lng": -118.3233,
+      "category": "historic-building",
+      "distanceFromBar": "254m",
+      "year": 1926,
+      "designations": [],
+      "facts": [
+        "Opened Oct 20, 1926 as the Carter DeHaven Music Box — built for $500,000 to 'bring a bit of Times Square to Hollywood'",
+        "First investors: John Barrymore, John Gilbert, Reginald Denny, King Vidor, Mae Murray",
+        "West coast premiere of Chicago (starring Clark Gable and Nancy Carroll) in 1927",
+        "Used as Lux Radio Theater broadcasting studio starting 1936",
+        "Renamed for Henry Fonda in 1985 by the Nederlander Organization",
+        "Now a Goldenvoice live music venue (since 2012)"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "The Fonda Theatre marquee", "location": "facade" },
+          { "type": "architecture", "detail": "Historic theater facade on Hollywood Blvd" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Music Box (1926)", "to": "Pantages (1930)", "link": "Two showplaces built 4 years apart on the same boulevard — Carter DeHaven and Alexander Pantages competing for Hollywood's audience" },
+        { "type": "person-to-place", "from": "Clark Gable", "to": "Frolic Room Hirschfeld mural", "link": "Gable's career launched at this theater's premiere of Chicago — his caricature lives in the Frolic Room mural" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 8,
+        "connection": 7,
+        "uniqueness": 6,
+        "composite": 31.75
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "montalban-theatre",
+      "name": "Ricardo Montalban Theatre (former Vine Street / Doolittle Theatre)",
+      "address": "1615 Vine St",
+      "lat": 34.1003,
+      "lng": -118.3269,
+      "category": "historic-building",
+      "distanceFromBar": "174m",
+      "year": 1927,
+      "designations": [],
+      "facts": [
+        "Opened Jan 19, 1927 as Wilkes' Vine Street Theatre — first Broadway-style legitimate theater in Los Angeles",
+        "Beaux-Arts design by Myron Hunt and H.C. Chambers (the architects who designed the Huntington Library)",
+        "James Doolittle (who outbid Cary Grant) ran it 1964-1984 as the Doolittle Theatre — most successful era",
+        "Home to Center Theatre Group productions: Fences (James Earl Jones), Six Degrees of Separation, Falsettos",
+        "Nosotros Foundation bought it in 1999, reopened May 2004 as the Ricardo Montalban Theatre to promote Latino stage productions"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Beaux-Arts theater facade on Vine St" },
+          { "type": "sign", "text": "The Montalban marquee", "location": "facade" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Vine Street Theatre (1927)", "to": "Pantages (1930)", "link": "Both opened within 3 years — Vine Street's theater row emerged in the late 1920s" },
+        { "type": "theme-link", "from": "Montalban Theatre (Latino stage)", "to": "Chase mosaics (Dolores Del Rio)", "link": "Del Rio on the Millard Sheets mosaic and Latino productions at the Montalban — Hollywood's evolving cultural identity" }
+      ],
+      "score": {
+        "observable": 5,
+        "historical": 8,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 31.5
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "hollywood-tower",
+      "name": "Hollywood Tower Apartments",
+      "address": "6200 Franklin Ave",
+      "lat": 34.1049,
+      "lng": -118.3244,
+      "category": "historic-building",
+      "distanceFromBar": "380m",
+      "year": 1929,
+      "designations": ["National Register of Historic Places (1988)", "HMDB m=231561", "Atlas Obscura listing"],
+      "facts": [
+        "Originally 'LaBelle Tour' — French-Normandy style designed by Cramer & Wise, opened 1929",
+        "Extended-stay residence for visiting actors, directors, writers, and studio employees",
+        "Famous residents: Humphrey Bogart (while building his Hollywoodland house), William Powell, Marilyn Monroe, Charlie Chaplin, Errol Flynn",
+        "Art Deco neon sign atop the building — one of Hollywood's most recognizable nighttime silhouettes",
+        "Survived construction of the 101 Freeway, which curved around the building rather than demolishing it",
+        "Renamed from La Belle Tour to Hollywood Tower in the 1950s"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "sign", "text": "HOLLYWOOD TOWER neon sign", "location": "top of building", "material": "neon" },
+          { "type": "architecture", "detail": "French-Normandy style tower set on a hill above Hollywood Blvd", "material": "stone and stucco" },
+          { "type": "oddity", "detail": "Visible from many vantage points in Hollywood — the neon sign is a landmark" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Humphrey Bogart", "to": "Hollywoodland", "link": "Lived in the Tower while his Hollywoodland house was being built — the sign and the tower in one biography" },
+        { "type": "era-link", "from": "Hollywood Tower (1929)", "to": "Pantages Theatre (1930)", "link": "Built within a year — actors lived at the Tower and performed at the Pantages" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 8,
+        "connection": 6,
+        "uniqueness": 8,
+        "composite": 36.5
+      },
+      "bestStructures": ["spotter", "narrative-riddle", "photo-challenge"]
+    },
+    {
+      "poiId": "vine-street-brown-derby-site",
+      "name": "Site of the Vine Street Brown Derby",
+      "address": "1628 Vine St (demolished 1994)",
+      "lat": 34.1003,
+      "lng": -118.3266,
+      "category": "demolished-landmark",
+      "distanceFromBar": "180m",
+      "year": 1929,
+      "designations": ["HMDB m=167873", "Hollywood Blvd Commercial and Entertainment District (NRHP) — contributing property"],
+      "facts": [
+        "Opened Valentine's Day 1929 — the most famous Hollywood restaurant of its day",
+        "Birthplace of the Cobb Salad: owner Bob Cobb chopped leftovers fine for showman Sid Grauman, who'd just had dental work and couldn't chew",
+        "First restaurant to install telephones at tables — celebrities' popularity measured by how many phone pages they received",
+        "Clark Gable proposed to Carole Lombard in booth 54",
+        "Celebrity caricatures covered the walls",
+        "Damaged by fire and earthquake, demolished 1994"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "plaque", "text": "HMDB historical marker for the Brown Derby site", "location": "near 1628 Vine St", "needsVerification": true },
+          { "type": "oddity", "detail": "Nothing remains of the restaurant — ghost site, marker only" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Clark Gable", "to": "Frolic Room mural", "link": "Gable proposed to Lombard at the Brown Derby and is immortalized in the Hirschfeld mural next door at the Frolic Room" },
+        { "type": "theme-link", "from": "Brown Derby (celebrity dining)", "to": "Frolic Room (celebrity drinking)", "link": "Two blocks apart, one demolished, one still pouring — the two sides of Golden Age Hollywood nightlife" }
+      ],
+      "score": {
+        "observable": 3,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 7,
+        "composite": 30.5
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "checkers-speech-site",
+      "name": "Checkers Speech Site (El Capitan Theatre / now Hollywood Palace)",
+      "address": "1735 Vine St",
+      "lat": 34.1027,
+      "lng": -118.3270,
+      "category": "historic-event",
+      "distanceFromBar": "143m",
+      "year": 1952,
+      "designations": ["Wikipedia article"],
+      "facts": [
+        "On September 23, 1952, Richard Nixon delivered the 'Checkers speech' from the El Capitan Theatre (now Avalon Hollywood) on Vine St",
+        "Nixon was defending himself against accusations of a secret slush fund while running as Eisenhower's VP candidate",
+        "Named 'Checkers speech' because Nixon said the only gift he'd keep was a cocker spaniel named Checkers that his daughters loved",
+        "60 million Americans watched — the largest TV audience in history at that time",
+        "The speech saved Nixon's place on the ticket and pioneered the use of television in political crisis management"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "oddity", "detail": "No marker or plaque visible — the building is now a nightclub (Avalon Hollywood)" }
+        ]
+      },
+      "connections": [
+        { "type": "event-link", "from": "Checkers speech (1952, first TV crisis)", "to": "Pantages Oscars TV debut (1953)", "link": "Two buildings on Vine St, back-to-back years, both pioneered live television — one political, one cultural" },
+        { "type": "theme-link", "from": "Nixon (saved by TV)", "to": "Rolling Stones (ridiculed on TV)", "link": "Same building, 12 years apart — TV made and broke reputations here" }
+      ],
+      "score": {
+        "observable": 2,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 9,
+        "composite": 32.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    }
+  ],
+  "cluePotentialMatrix": {
+    "stop1_capitolRecords": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "Morse code blinking light is a natural cipher-lite. 'World's first circular office building' is a reframe. 13 stories, round shape, porcelain sunshades — rich spotter material. 'The House That Nat Built' is a narrative riddle. Les Paul echo chambers connect music history to architecture. Walk of Fame stars surround the base."
+    },
+    "stop2_chaplinKeatonLloydAlley": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": false,
+      "structuresSupported": 7,
+      "notes": "'Three greatest comedies filmed in this alley' is a narrative riddle (The Kid, Cops, Safety Last!). 'An alley that looks like nothing IS a National Film Registry location' is a perfect reframe. Museum of Death's origin story ('to make people happy to be alive') is a reframe. Guaranty Building connects Chaplin as investor. Brown Derby site is a ghost-location connector. D.W. Griffith dying forgotten at the Knickerbocker while his proteges' alley is celebrated — devastating narrative riddle."
+    },
+    "stop3_pantagesTheatre": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "Art Deco facade is the richest spotter surface in Hollywood — chevrons, zigzags, starbursts, Egyptian statues, camera crew statue. 'Planned 12 stories, built 2' is a reframe about the Depression. Academy Awards history (1949-1960) is a sequence. Howard Hughes owning both the Pantages and Frolic Room is a connector. Taft Building (Academy HQ) → Pantages (Academy ceremony) is a one-block journey. Hirschfeld mural inside the Frolic Room connects everyone — Gable, Monroe, Chaplin — to the bar steps from the stage."
+    }
+  },
+  "metadata": {
+    "overpassBuildingStock": {
+      "total": 306,
+      "preWar": 212,
+      "preWarPercent": "69%",
+      "oldestDecade": "1900s (14 buildings)",
+      "peakDecade": "1920s (107 buildings)",
+      "note": "Hollywood's building stock around Vine is overwhelmingly pre-war. 69% of dated buildings were built before 1940, with the 1920s peak (107 buildings) coinciding with the movie industry's Golden Age explosion."
+    },
+    "thinCoverageWarning": false,
+    "neighborhoodDensityNote": "Hollywood and Vine is one of the densest POI clusters in all of LA. Within 500m: 50 Wikipedia articles, 5 theaters, 3 Art Deco highrises, the Walk of Fame, Capitol Records, a silent-film alley, and a death museum. Coverage is overwhelming — the challenge is selection, not discovery.",
+    "verificationFlags": [
+      "Pantages camera crew statue — Art Deco relief depicting a film crew. Reported in multiple sources but interior visibility from outside needs confirmation",
+      "Pantages lobby fan-vaulted ceiling — visible through doors or requires ticket",
+      "Equitable Building lobby — may not be publicly accessible (converted to lofts in 2008)",
+      "Knickerbocker Hotel signage — building is now a retirement home, original signage status unclear",
+      "Chase bank Millard Sheets mosaic — confirm all 15+ movie star figures still intact and identifiable",
+      "Chase bank stained glass windows at rear — confirm still visible near ATM",
+      "Chaplin-Keaton-Lloyd Alley plaque — confirm still in place at Cahuenga entrance (dedicated 2021)",
+      "Brown Derby HMDB marker — confirm location and condition near 1628 Vine St",
+      "Frolic Room Hirschfeld mural — owner claims it's a scale reproduction, not an original. Both claims circulate",
+      "Taft Building signage — confirm visibility from street level after 2014 renovation",
+      "Hollywood Tower neon sign — confirm still illuminated at night"
+    ]
+  }
+}

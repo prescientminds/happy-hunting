@@ -1,0 +1,836 @@
+{
+  "barId": "seven-grand",
+  "generatedBy": "/recon",
+  "generatedDate": "2026-03-16",
+  "bar": {
+    "name": "Seven Grand",
+    "address": "515 W 7th St, 2nd Floor, Los Angeles, CA 90014",
+    "neighborhood": "DTLA (Downtown Los Angeles) — Financial District / Jewelry District",
+    "lat": 34.0468,
+    "lng": -118.2557,
+    "happyHour": "Mon-Fri 5-7pm, $8 select whiskeys, $6 draft beers",
+    "vibe": "Dimly lit whiskey lodge with taxidermy, dark wood paneling, vintage jewelry display cases repurposed as whiskey showcases, hunting-lodge-meets-speakeasy atmosphere, pool table, live DJs on weekends, hidden bar (The Bar at Seven Grand / Jackalope) behind a bookcase",
+    "barFacts": [
+      "Opened April 6, 2007 by Cedd Moses (213 Nightlife / Pouring with Heart) — signaled the rebirth of craft cocktails in DTLA",
+      "Named for the intersection of 7th Street and Grand Avenue",
+      "Housed in the 1922 Brock & Company Jewelry Emporium building (HCM #358) — vintage jewelry cases now display 900+ whiskeys",
+      "After Brock's closed, the space became Clifton's Silver Spoon Cafeteria in 1974 — the taxidermy aesthetic comes from that lineage",
+      "Moses' original rent for the entire 25,000 sq ft space: $1,600/month",
+      "Inspired by The Stags' Head pub in Dublin — founder Cedd Moses wanted to replicate its warmth in LA",
+      "Hidden bar Jackalope accessible through a bookcase door — speakeasy within a whiskey bar",
+      "Second location opened in San Diego's North Park in 2012"
+    ]
+  },
+  "discoveryStats": {
+    "wikipediaHits": 50,
+    "overpassFeatures": 16,
+    "overpassDatedBuildings": 4,
+    "hmdbMarkers": 12,
+    "localColorFinds": 18,
+    "totalRaw": 78,
+    "afterDedup": 32,
+    "aboveThreshold": 15,
+    "selectedForRoute": 3
+  },
+  "route": {
+    "startPoint": {
+      "lat": 34.0463,
+      "lng": -118.2530,
+      "label": "Route 66 Terminus / Los Angeles Theatre (Broadway & 7th)"
+    },
+    "endPoint": {
+      "lat": 34.0468,
+      "lng": -118.2557,
+      "label": "Seven Grand"
+    },
+    "totalDistance": "0.4 mi",
+    "estimatedWalkTime": "9 min",
+    "direction": "West along 7th Street — Broadway to Grand",
+    "stops": [
+      {
+        "stopNumber": 1,
+        "ring": 1,
+        "lat": 34.0463,
+        "lng": -118.2530,
+        "poiId": "los-angeles-theatre",
+        "label": "Los Angeles Theatre / Route 66 Terminus",
+        "nearbySupplemental": ["route-66-terminus", "cliftons-cafeteria", "palace-theater"]
+      },
+      {
+        "stopNumber": 2,
+        "ring": 2,
+        "lat": 34.0475,
+        "lng": -118.2539,
+        "poiId": "oviatt-building",
+        "label": "James Oviatt Building",
+        "nearbySupplemental": ["st-vincent-court", "spring-street-financial-district"]
+      },
+      {
+        "stopNumber": 3,
+        "ring": 3,
+        "lat": 34.0470,
+        "lng": -118.2557,
+        "poiId": "brock-building",
+        "label": "Brock & Company Building (Seven Grand)",
+        "nearbySupplemental": ["brockman-building", "bank-of-italy-building", "foreman-clark-building"]
+      }
+    ]
+  },
+  "pois": [
+    {
+      "poiId": "los-angeles-theatre",
+      "name": "Los Angeles Theatre",
+      "address": "615 S Broadway",
+      "lat": 34.0464,
+      "lng": -118.2525,
+      "category": "historic-building",
+      "distanceFromBar": "300m",
+      "year": 1931,
+      "designations": ["National Register of Historic Places (1979)", "LA Historic-Cultural Monument #225", "HMDB marker"],
+      "facts": [
+        "Last and most extravagant of the 12 ornate movie palaces built on Broadway between 1911 and 1931",
+        "Opened January 30, 1931 with the premiere of Charlie Chaplin's 'City Lights' — Chaplin's guests that night: Albert Einstein and his wife Elsa",
+        "Chaplin helped finance completion of the theatre so it could open in time for his premiere",
+        "Designed by S. Charles Lee and Samuel Tilden Norton in French Baroque style — interior modeled after the Hall of Mirrors at Versailles",
+        "Built in less than 6 months — hole in the ground in August 1930, grand opening January 1931",
+        "2,000-seat auditorium with working fountain in the lobby, children's playroom, full restaurant and ballroom, crying rooms for mothers, radio broadcast studio",
+        "Lee installed a periscope and prism system to relay the film image into the basement lounges",
+        "Electric seat indicators for ushers — cutting-edge tech in 1931",
+        "Part of the Broadway Theater and Commercial District — first and largest theater district listed on the National Register (1979)"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "French Baroque facade with ornate terra cotta detailing on Broadway frontage", "location": "615 S Broadway" },
+          { "type": "architecture", "detail": "Grand marquee projecting over sidewalk", "location": "main entrance" },
+          { "type": "architecture", "detail": "Elaborate lobby with working fountain visible through doors", "needsVerification": true },
+          { "type": "sign", "text": "LOS ANGELES", "material": "vertical blade sign on facade", "location": "facade" },
+          { "type": "count", "element": "Movie palaces on Broadway between 3rd and 9th streets", "count": 12 }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Charlie Chaplin", "to": "Los Angeles Theatre", "link": "Financed completion and premiered 'City Lights' here with Einstein in attendance" },
+        { "type": "era-link", "from": "Los Angeles Theatre (1931)", "to": "Oviatt Building (1928)", "link": "Both built during the peak of DTLA's pre-war golden era" },
+        { "type": "place-to-place", "from": "Los Angeles Theatre", "to": "Route 66 Terminus", "link": "Sits at the exact intersection (7th & Broadway) that was the western terminus of Route 66 from 1926-1936" },
+        { "type": "theme-link", "from": "Broadway Theater District", "to": "Spring Street Financial District", "link": "Two parallel streets — entertainment on Broadway, money on Spring — that powered DTLA's golden age" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 10,
+        "connection": 10,
+        "uniqueness": 9,
+        "composite": 42.75
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter", "sequence", "elimination", "cipher-lite", "photo-challenge"]
+    },
+    {
+      "poiId": "route-66-terminus",
+      "name": "Original Western Terminus of Route 66",
+      "address": "Intersection of 7th Street & Broadway",
+      "lat": 34.0458,
+      "lng": -118.2530,
+      "category": "historic-marker",
+      "distanceFromBar": "260m",
+      "year": 1926,
+      "designations": ["HMDB m=189349", "Hampton Hotels Save-A-Landmark marker (2003)"],
+      "facts": [
+        "From 1926 to 1936, this intersection was the official western terminus of US Route 66 — where the 2,448-mile road from Chicago ended",
+        "In 1924, this intersection saw 504,000 pedestrians per day — one of the busiest in the world",
+        "The route inherited the path of the National Old Trails Road (NOTR), established 1912",
+        "In 1936, the terminus was extended to Santa Monica — the Santa Monica pier 'End of the Trail' sign came later",
+        "Historical marker erected 2003 by Hampton Hotels in the sidewalk",
+        "Thousands of Dust Bowl migrants and dreamers ended their westward journey at this exact corner"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "plaque", "text": "Original terminus of Route 66 (1926-1936)", "material": "sidewalk marker", "location": "sidewalk at 7th & Broadway intersection" },
+          { "type": "sign", "text": "Historic Route 66 marker", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Route 66 Terminus", "to": "Los Angeles Theatre", "link": "Chaplin's premiere happened steps from where Route 66 ended — every traveler's first view of LA glamour" },
+        { "type": "theme-link", "from": "Route 66 (migration)", "to": "DTLA (destination)", "link": "The road that brought America to LA ended in the middle of its theater district" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 10,
+        "composite": 40.5
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "cipher-lite"]
+    },
+    {
+      "poiId": "oviatt-building",
+      "name": "James Oviatt Building",
+      "address": "617 S Olive St",
+      "lat": 34.0475,
+      "lng": -118.2539,
+      "category": "historic-building",
+      "distanceFromBar": "184m",
+      "year": 1928,
+      "designations": ["National Register of Historic Places (1983)", "LA Historic-Cultural Monument", "HMDB m=164333"],
+      "facts": [
+        "Built 1928 for haberdasher James Oviatt — LA's most fashionable men's clothier",
+        "Oviatt visited the 1925 Exposition Internationale des Arts Decoratifs in Paris and was so stunned by Rene Lalique's glass pavilion that he commissioned the artisan's first-ever commercial installation",
+        "30 tons of Lalique glass shipped from France — the largest commercial Lalique installation ever undertaken",
+        "Front doors: two angels holding a California mission bell, each door 7.5 feet tall — believed to be the largest panels of lead crystal Lalique ever produced",
+        "Elevator doors feature Lalique glass carved with foliage and fruit",
+        "Lalique created a glass ceiling and massive chandelier with arms resembling palm fronds for the main shopping space",
+        "Penthouse featured: Turkish bath, gym, tennis court, practice golf links, rooftop garden, pool with sand imported from France for a private beach",
+        "Penthouse decorated by Parisian firm Saddler et fils — burled mahogany, parquet floors in geometric patterns",
+        "Designed by Walker & Eisen — excavation August 1927, completed May 1928",
+        "Oviatt was later accused of Nazi sympathies — reportedly attended German-American Bund meetings in the 1930s"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Art Deco facade with geometric ornamentation", "location": "617 S Olive St" },
+          { "type": "architecture", "detail": "Lalique glass entrance doors — two angels holding a mission bell", "material": "lead crystal glass", "location": "main entrance" },
+          { "type": "architecture", "detail": "Ornate lobby with Lalique glass ceiling and chandelier", "needsVerification": true },
+          { "type": "count", "element": "Tons of Lalique glass in the building", "count": 30 },
+          { "type": "architecture", "detail": "12-story building, height approximately 58.5 meters (Overpass data)" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-event", "from": "James Oviatt", "to": "1925 Paris Exposition", "link": "One visit to the Paris expo that invented Art Deco changed the LA skyline — Oviatt brought Lalique to America" },
+        { "type": "era-link", "from": "Oviatt Building (1928)", "to": "Brock Building (1922)", "link": "Both luxury retail empires on 7th Street — Oviatt sold suits, Brock sold jewels" },
+        { "type": "theme-link", "from": "Oviatt (Lalique glass)", "to": "Fine Arts Building (Batchelder tile)", "link": "Two buildings within 2 blocks where a single artisan's work defines the entire structure" },
+        { "type": "place-to-place", "from": "Oviatt Building", "to": "Spring Street Financial District", "link": "Oviatt's building sits at the edge of the 'Wall Street of the West' — the clothier dressed the bankers" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 10,
+        "composite": 44.5
+      },
+      "bestStructures": ["spotter", "narrative-riddle", "connector", "reframe", "cipher-lite", "photo-challenge"]
+    },
+    {
+      "poiId": "cliftons-cafeteria",
+      "name": "Clifton's Cafeteria (Clifton's Republic)",
+      "address": "648 S Broadway",
+      "lat": 34.0453,
+      "lng": -118.2529,
+      "category": "historic-business",
+      "distanceFromBar": "310m",
+      "year": 1935,
+      "designations": ["LA Historic-Cultural Monument #1006 (2010)", "Atlas Obscura listing"],
+      "facts": [
+        "Founded 1931 by Clifford Clinton during the Great Depression as 'a poor man's nightclub'",
+        "Business policy printed on every check: 'Regardless of the amount of this check, our cashier will cheerfully accept whatever you wish to pay — or you may dine free'",
+        "During a 90-day period, 10,000 people ate for free",
+        "Interior transformed by rock sculptor Francois Scotti: 20-foot waterfall, faux redwood trees concealing steel columns, a sylvan wonderland inspired by Santa Cruz Mountains",
+        "Current 40-foot-tall fake redwood tree installed during 2015 renovation — branches reinforced to hold aerialists",
+        "Clinton became a civic crusader — helped bust the corrupt Shaw-Parrot administration (LAPD corruption ring) in the late 1930s. A bomb was planted in his basement in retaliation",
+        "Building originally opened 1913 as Boos Brothers Cafeteria",
+        "Clinton family: five generations as California restaurateurs, starting 1888 when David Harrison Clinton bought the Southern Hotel dining room",
+        "Clifton's Silver Spoon — a second cafeteria — later occupied the Brock & Co building at 515 W 7th (now Seven Grand)"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Multi-story facade with forest/nature theming visible from street", "location": "648 S Broadway" },
+          { "type": "oddity", "detail": "40-foot fake redwood tree visible through windows", "needsVerification": true },
+          { "type": "sign", "text": "CLIFTON'S", "location": "facade signage" }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Clifton's Cafeteria (648 S Broadway)", "to": "Seven Grand (515 W 7th)", "link": "Clifton's Silver Spoon Cafeteria occupied the Brock building from 1974 until Seven Grand opened — the taxidermy in Seven Grand descends from Clifton's aesthetic" },
+        { "type": "person-to-era", "from": "Clifford Clinton", "to": "Great Depression", "link": "Fed 10,000 people free during the Depression, then fought city hall corruption — a bomb in his basement was the price" },
+        { "type": "era-link", "from": "Clifton's (1935)", "to": "Los Angeles Theatre (1931)", "link": "Both Depression-era openings on Broadway — entertainment and food for a city in crisis" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 10,
+        "connection": 10,
+        "uniqueness": 10,
+        "composite": 42.5
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter"]
+    },
+    {
+      "poiId": "brock-building",
+      "name": "Brock & Company Building (Seven Grand)",
+      "address": "515 W 7th St",
+      "lat": 34.0468,
+      "lng": -118.2557,
+      "category": "historic-building",
+      "distanceFromBar": "0m",
+      "year": 1922,
+      "designations": ["LA Historic-Cultural Monument #358"],
+      "facts": [
+        "Built 1922 for George A. Brock's jewelry emporium — LA's most important jewelry and giftware store",
+        "Brock & Co. founded 1903 (as Brock & Feagans), officially 1911",
+        "Designed by Dodd and Richards — four-story Spanish Colonial Revival with engaged columns, stacked floral motifs, and a swan's neck broken pediment at the parapet",
+        "Brock signed a 99-year lease on the property",
+        "In 1923, Brock merged with Simon Nordlinger & Co., which had operated since 1870 on Commercial Street",
+        "Ben Weingart bought Brock & Co. in 1964",
+        "Clifton's Silver Spoon Cafeteria moved into the space in 1974 after Brock's lost its lease",
+        "Cedd Moses opened Seven Grand in the building April 6, 2007 — original rent: $1,600/month for 25,000 sq ft",
+        "Vintage Brock & Co. jewelry display cases repurposed to showcase 900+ whiskeys"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Spanish Colonial Revival facade — thin engaged columns, stacked floral motifs", "location": "515 W 7th St" },
+          { "type": "architecture", "detail": "Swan's neck broken pediment at the parapet line", "location": "roofline" },
+          { "type": "oddity", "detail": "Vintage jewelry display cases visible inside, now holding whiskey bottles", "location": "interior, visible from street" },
+          { "type": "sign", "text": "SEVEN GRAND", "location": "entrance/marquee" },
+          { "type": "count", "element": "Stories", "count": 4 }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Brock Building", "to": "Clifton's Cafeteria", "link": "Clifton's Silver Spoon occupied this space 1974-2007 — the taxidermy connection" },
+        { "type": "era-link", "from": "Brock Building (1922)", "to": "Brockman Building (1912)", "link": "Both anchored the westward expansion of DTLA's commercial district along 7th Street" },
+        { "type": "theme-link", "from": "Brock (jewelry cases)", "to": "Seven Grand (whiskey cases)", "link": "Same display cases, different treasure — jewels became whiskey" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 9,
+        "connection": 10,
+        "uniqueness": 8,
+        "composite": 38.5
+      },
+      "bestStructures": ["connector", "reframe", "narrative-riddle", "spotter"]
+    },
+    {
+      "poiId": "spring-street-financial-district",
+      "name": "Spring Street Financial District ('Wall Street of the West')",
+      "address": "S Spring St between 4th and 7th Streets",
+      "lat": 34.0470,
+      "lng": -118.2530,
+      "category": "historic-district",
+      "distanceFromBar": "250m",
+      "year": 1902,
+      "designations": ["National Register of Historic Places — Spring Street Financial District", "23 listed structures"],
+      "facts": [
+        "Nicknamed 'Wall Street of the West' — financial center of Los Angeles through the first half of the 20th century",
+        "23 financial structures plus 3 hotels along S Spring St from just north of 4th to just south of 7th",
+        "Named 'Spring Street' by city surveyor E.O.C. Ord in 1849 — he was wooing a woman named Trinidad de la Guerra and called her 'mi primavera, my springtime'",
+        "Headquarters for Bank of America, Farmers and Merchants Bank, Crocker National Bank, California Bank & Trust, International Savings & Exchange Bank",
+        "At least 10 buildings designed by John Parkinson, who later designed City Hall and Union Station",
+        "Hellman and Continental Buildings (1902) were the first major structures to anchor the district",
+        "Beaux Arts facades remain virtually intact — the district is a popular film shooting location for period productions",
+        "Now known as 'Gallery Row' as art galleries moved into the old bank buildings, many converted to lofts"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Continuous Beaux Arts facades along both sides of Spring Street", "location": "S Spring St between 4th-7th" },
+          { "type": "count", "element": "Historic financial structures in the district", "count": 23 },
+          { "type": "architecture", "detail": "Ornate terra cotta detailing, classical columns, and elaborate cornices on multiple buildings" },
+          { "type": "sign", "text": "Various bank names carved into building facades", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Spring Street (finance)", "to": "Broadway (entertainment)", "link": "Two parallel streets — the money and the show — that powered DTLA's golden age" },
+        { "type": "person-to-place", "from": "John Parkinson", "to": "Spring Street", "link": "Designed at least 10 buildings on this one street, plus City Hall and Union Station" },
+        { "type": "era-link", "from": "Spring Street Financial District", "to": "Oviatt Building", "link": "Oviatt dressed the bankers who worked on Spring Street — his building sits one block west" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 8,
+        "composite": 41.0
+      },
+      "bestStructures": ["connector", "reframe", "narrative-riddle", "sequence"]
+    },
+    {
+      "poiId": "st-vincent-court",
+      "name": "St. Vincent Court",
+      "address": "Alley between Broadway and Hill, 6th and 7th Streets",
+      "lat": 34.0457,
+      "lng": -118.2537,
+      "category": "historic-district",
+      "distanceFromBar": "220m",
+      "year": 1868,
+      "designations": ["HMDB m=121001", "Atlas Obscura listing", "Wikipedia article"],
+      "facts": [
+        "Hidden alley named for St. Vincent's College (now Loyola University) — first institution of higher learning in Southern California, founded 1865 by Vincentian Fathers",
+        "This was the site of Saint Vincent's College from 1868 to 1887",
+        "Became Bullock's department store delivery alley when the massive store opened next door",
+        "In 1957, the plain alleyway was decorated like an ancient European lane — plaster facades, brick paving, Italian restaurants and espresso bars",
+        "When Bullock's closed in 1983, the complex became St. Vincent Jewelry Center — 'the largest jewelry collective in the world'",
+        "Now home to mostly Middle Eastern restaurants — feels like Rome or Florence, not downtown LA",
+        "The journey: Jesuit college (1868) → delivery alley → Italian restaurants (1957) → jewelry collective (1983) → kebab corridor (today)"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Narrow brick-paved alley with European-style plaster facades", "location": "between Broadway and Hill" },
+          { "type": "oddity", "detail": "Feels like a European courtyard hidden behind modern storefronts", "location": "alley entrance" },
+          { "type": "sign", "text": "St. Vincent Court signage", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "St. Vincent Court", "to": "Bullock's Department Store", "link": "The delivery alley for the biggest department store on 7th Street" },
+        { "type": "theme-link", "from": "St. Vincent Court (hidden alley)", "to": "Seven Grand (hidden bar Jackalope)", "link": "Both are concealed spaces in plain sight — one behind modern storefronts, one behind a bookcase" },
+        { "type": "era-link", "from": "St. Vincent's College (1868)", "to": "Pershing Square (1866)", "link": "Both established within 2 years — among the oldest civic institutions in LA" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 8,
+        "uniqueness": 10,
+        "composite": 40.0
+      },
+      "bestStructures": ["reframe", "connector", "narrative-riddle", "photo-challenge", "spotter"]
+    },
+    {
+      "poiId": "pershing-square",
+      "name": "Pershing Square",
+      "address": "532 S Olive St",
+      "lat": 34.0483,
+      "lng": -118.2530,
+      "category": "park",
+      "distanceFromBar": "310m",
+      "year": 1866,
+      "designations": ["Wikipedia article", "HMDB markers"],
+      "facts": [
+        "Original pueblo lands — ownership traceable to 1781, when Spain granted them to the City of Los Angeles",
+        "Dedicated 1866 by Mayor Cristobal Aguilar as 'La Plaza Abaja' — LA's oldest public park",
+        "Renamed for General John J. Pershing in 1918",
+        "Contains LA's oldest public art sculpture: the Spanish American War Memorial (1900) by Samuel M. Goddard — first piece of public art in the city",
+        "Beethoven statue (1932) by Arnold Foerster — commissioned by William Andrews Clark Jr., founder of the LA Philharmonic, to honor his favorite composer. A man named T.P. Hull protested: no statues of foreigners in an American park",
+        "WWI 'Doughboy' statue (1924) by Humberto Pedretti",
+        "1910 redesign by John Parkinson (who also designed City Hall and Union Station) — three-tier fountain with four life-size concrete cherubs",
+        "$14.5M 1994 redesign by Mexican architect Ricardo Legorreta: 10-story purple bell tower (campanile), earthquake fault line walkway by artist Barbara McCarren",
+        "Currently under three-phase renovation for the 2028 Summer Olympics"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "10-story purple bell tower (campanile)", "location": "center of park" },
+          { "type": "artwork", "detail": "Beethoven statue on marble base", "material": "bronze on marble", "location": "park grounds" },
+          { "type": "artwork", "detail": "Spanish American War Memorial (1900) — LA's oldest public art", "material": "sculpture", "location": "park grounds" },
+          { "type": "artwork", "detail": "WWI Doughboy statue (1924)", "material": "sculpture", "location": "park grounds" },
+          { "type": "oddity", "detail": "Walkway representing an earthquake fault line by Barbara McCarren", "location": "ground level" },
+          { "type": "count", "element": "Orange sphere sculptures (Overpass data)", "count": 3 }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "John Parkinson", "to": "Pershing Square", "link": "Parkinson redesigned the park in 1910, designed Spring Street banks, plus City Hall and Union Station" },
+        { "type": "era-link", "from": "Pershing Square (1866)", "to": "St. Vincent's College (1868)", "link": "Two of LA's oldest civic institutions, 2 blocks apart" },
+        { "type": "theme-link", "from": "Pershing Square (public art)", "to": "Oviatt Building (private art)", "link": "LA's oldest public sculpture garden vs. the world's largest private Lalique installation — 2 blocks apart" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 10,
+        "connection": 8,
+        "uniqueness": 7,
+        "composite": 39.25
+      },
+      "bestStructures": ["spotter", "sequence", "connector", "elimination", "reframe", "photo-challenge"]
+    },
+    {
+      "poiId": "bank-of-italy-building",
+      "name": "Bank of Italy Building (Hotel Per La)",
+      "address": "649 S Olive St (corner of 7th & Olive)",
+      "lat": 34.0469,
+      "lng": -118.2557,
+      "category": "historic-building",
+      "distanceFromBar": "14m",
+      "year": 1922,
+      "designations": ["Wikipedia article"],
+      "facts": [
+        "12-story Neoclassical building completed 1922 — LA headquarters of the Bank of Italy, forerunner to Bank of America",
+        "Founded by Amadeo Giannini, who built Bank of America into the world's largest bank by lending to immigrants and small businesses that other banks wouldn't touch",
+        "Designed by Morgan, Walls & Clements in Neoclassical style — Doric columns, ornate golden ceiling, marble floors",
+        "Bronze front doors surrounded by terra cotta sculptures of American coins",
+        "Colonnade at the top for extra visibility of classical imagery — the building was designed to communicate power and continuity",
+        "Converted to Hotel Per La (now Hotel Per La, formerly NoMad LA) in 2018",
+        "Directly adjacent to Seven Grand's building — the banker and the jeweler shared a property line"
+      ],
+      "observable": {
+        "source": "web-research + wikipedia",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "12-story Neoclassical facade with Doric columns at top", "location": "corner of 7th & Olive" },
+          { "type": "architecture", "detail": "Bronze front doors with terra cotta coin sculptures", "material": "bronze + terra cotta", "location": "main entrance" },
+          { "type": "architecture", "detail": "Colonnade at top stories", "location": "upper floors" },
+          { "type": "count", "element": "Stories", "count": 12 }
+        ]
+      },
+      "connections": [
+        { "type": "proximity", "from": "Bank of Italy Building", "to": "Seven Grand / Brock Building", "link": "Directly adjacent — the banker and the jeweler shared a property line on 7th Street" },
+        { "type": "person-to-theme", "from": "Amadeo Giannini", "to": "immigrant banking", "link": "Giannini built Bank of America by lending to immigrants other banks rejected — the building is a monument to that bet" },
+        { "type": "era-link", "from": "Bank of Italy (1922)", "to": "Brock Building (1922)", "link": "Built the same year, on the same block — finance and luxury retail growing in lockstep" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 9,
+        "connection": 9,
+        "uniqueness": 7,
+        "composite": 37.75
+      },
+      "bestStructures": ["spotter", "connector", "reframe", "narrative-riddle"]
+    },
+    {
+      "poiId": "warner-bros-theatre",
+      "name": "Old Warner Bros. Theatre (Downtown Jewelry Exchange)",
+      "address": "411 W 7th St (corner of 7th & Hill)",
+      "lat": 34.0462,
+      "lng": -118.2545,
+      "category": "historic-building",
+      "distanceFromBar": "130m",
+      "year": 1920,
+      "designations": ["LA Conservancy listing", "Atlas Obscura listing"],
+      "facts": [
+        "Designed by B. Marcus Priteca — opened August 17, 1920 as Pantages Theatre (vaudeville + film)",
+        "Sold to RKO in 1929, then to Warner Brothers — became Warner Bros. Downtown Theatre, debuting 'Gold Diggers of Broadway'",
+        "Closed 1975, used as a church, then converted to the Downtown Jewelry Exchange in the late 1980s",
+        "The original baroque theater interior is still intact INSIDE the jewelry exchange — red curtains, gold chandeliers, projectors visible from the balcony",
+        "The Warner Bros. emblem is still visible behind the current diamond motif above the corner marquee",
+        "Security is notoriously averse to photography — you can wander in during business hours but camera use is risky",
+        "One of the most extraordinary hidden-in-plain-sight spaces in LA"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "9-story building with corner marquee at 7th & Hill", "location": "corner of 7th & Hill" },
+          { "type": "sign", "text": "Warner Bros. emblem behind diamond motif", "location": "above corner marquee", "needsVerification": true },
+          { "type": "oddity", "detail": "Original baroque theater interior visible inside jewelry exchange — red curtains, gold chandeliers, projectors" },
+          { "type": "architecture", "detail": "Pantages-era facade detailing", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Warner Bros. Theatre", "to": "Seven Grand", "link": "Both on 7th Street, 130m apart — a movie palace hidden inside a jewelry exchange, a whiskey bar inside a jewelry emporium" },
+        { "type": "theme-link", "from": "Warner Bros. Theatre (hidden theater)", "to": "Seven Grand (hidden bar Jackalope)", "link": "DTLA's theme: magnificent spaces concealed behind mundane facades" },
+        { "type": "era-link", "from": "Pantages Theatre (1920)", "to": "Brock Building (1922)", "link": "Both opened during 7th Street's transformation into DTLA's premier commercial corridor" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 10,
+        "composite": 39.75
+      },
+      "bestStructures": ["reframe", "spotter", "narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "brockman-building",
+      "name": "Brockman Building",
+      "address": "530 W 7th St",
+      "lat": 34.0470,
+      "lng": -118.2564,
+      "category": "historic-building",
+      "distanceFromBar": "70m",
+      "year": 1912,
+      "designations": ["National Register of Historic Places (2009)", "Wikipedia article"],
+      "facts": [
+        "Built 1912 for John Brockman — first building west of the Broadway Commercial District to reach the city's 150-foot height limit",
+        "Brockman's move started the westward expansion of DTLA's commercial district and turned 7th Street into the city's high-end retail corridor",
+        "Designed by George D. Barnett of Barnett, Haynes & Barnett — 12-story Beaux-Arts, Classical, and Romanesque Revival",
+        "Features elaborate terra cotta detailing and a copper cornice — the only copper cornice in the city at time of construction",
+        "J.W. Robinson Co. department store and other retailers followed Brockman westward along 7th Street",
+        "Converted to 80 condos in 2006-2008 — owner went bankrupt before completion"
+      ],
+      "observable": {
+        "source": "web-research + wikipedia",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "12-story Beaux-Arts facade with elaborate terra cotta detailing", "location": "530 W 7th St" },
+          { "type": "architecture", "detail": "Copper cornice — unique in LA at time of construction", "material": "copper", "location": "roofline" },
+          { "type": "count", "element": "Stories", "count": 12 }
+        ]
+      },
+      "connections": [
+        { "type": "proximity", "from": "Brockman Building", "to": "Seven Grand / Brock Building", "link": "Directly across 7th Street — Brockman and Brock, two different men who both bet on 7th Street" },
+        { "type": "era-link", "from": "Brockman Building (1912)", "to": "Brock Building (1922)", "link": "Brockman opened the corridor, Brock followed 10 years later" },
+        { "type": "theme-link", "from": "Brockman (started westward expansion)", "to": "7th Street retail corridor", "link": "One building decision created the gravitational pull that brought Brock, Bullock's, and the entire retail district westward" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 8,
+        "connection": 9,
+        "uniqueness": 7,
+        "composite": 35.75
+      },
+      "bestStructures": ["connector", "reframe", "narrative-riddle"]
+    },
+    {
+      "poiId": "foreman-clark-building",
+      "name": "Foreman & Clark Building",
+      "address": "701 S Hill St (corner of 7th & Hill)",
+      "lat": 34.0458,
+      "lng": -118.2549,
+      "category": "historic-building",
+      "distanceFromBar": "133m",
+      "year": 1929,
+      "designations": ["LA Historic-Cultural Monument (2009)", "Wikipedia article"],
+      "facts": [
+        "Built 1929 for Foreman & Clark clothing retailer — their flagship store and corporate offices",
+        "Designed by Curlett & Beelman — superb example of Art Deco-Gothic architecture, combining both styles",
+        "17 stories — towered over the surrounding retail district",
+        "Foreman & Clark was headquartered here for approximately 30 years before Downtown's mid-century decline",
+        "Reopened 2023 as an adaptive reuse hotel — one of several 7th Street landmarks converted to hospitality"
+      ],
+      "observable": {
+        "source": "web-research + wikipedia",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "17-story Art Deco-Gothic tower with distinctive stepped profile", "location": "corner of 7th & Hill" },
+          { "type": "architecture", "detail": "Gothic tracery combined with Art Deco geometric ornamentation", "location": "facade" },
+          { "type": "count", "element": "Stories", "count": 17 }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Foreman & Clark (1929)", "to": "Oviatt Building (1928)", "link": "Two clothing empires, built one year apart, within 2 blocks on 7th Street" },
+        { "type": "theme-link", "from": "Foreman & Clark (Art Deco-Gothic)", "to": "Oviatt (Art Deco-Lalique)", "link": "Two competing interpretations of Art Deco — one married to Gothic, one to French glass" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 7,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 33.25
+      },
+      "bestStructures": ["spotter", "connector"]
+    },
+    {
+      "poiId": "fine-arts-building",
+      "name": "Fine Arts Building",
+      "address": "811 W 7th St",
+      "lat": 34.0473,
+      "lng": -118.2597,
+      "category": "historic-building",
+      "distanceFromBar": "380m",
+      "year": 1926,
+      "designations": ["LA Historic-Cultural Monument #125", "National Register of Historic Places", "HMDB m=231295 & m=183788", "Atlas Obscura listing"],
+      "facts": [
+        "13-story Romanesque building designed by Walker & Eisen (same firm as the Oviatt Building) — built 1926 as studios and galleries for downtown artists",
+        "Two-story lobby with 17 bronze-and-glass display cases for artist-tenants to showcase their work — a 'living above the shop' arrangement",
+        "Walls decorated with ceramic relief panels by Ernest A. Batchelder — the nation's premiere decorative tile designer and critical force in the Arts and Crafts movement",
+        "Batchelder tile: small sculptural inserts, tile panels, and ornamental details throughout the lobby and common areas",
+        "Originally housed artist studios with skylights on upper floors",
+        "One of the few buildings in LA purpose-built for art production, not just display"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "13-story Romanesque facade", "location": "811 W 7th St" },
+          { "type": "architecture", "detail": "Batchelder tile throughout lobby — ceramic relief panels, small sculptural inserts", "material": "Batchelder tile / ceramic", "location": "lobby" },
+          { "type": "count", "element": "Bronze-and-glass display cases in lobby", "count": 17 },
+          { "type": "architecture", "detail": "Two-story ornate lobby atrium", "location": "ground floor" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Fine Arts Building (Batchelder tile)", "to": "Oviatt Building (Lalique glass)", "link": "Two buildings defined by a single artisan's lifework — Batchelder's American craft tile vs. Lalique's French crystal" },
+        { "type": "theme-link", "from": "Fine Arts Building (artist studios)", "to": "Spring Street (Gallery Row)", "link": "Art production and art commerce, both on the same stretch of DTLA" },
+        { "type": "era-link", "from": "Fine Arts Building (1926)", "to": "LA Central Library (1926)", "link": "Both opened in 1926 — Walker & Eisen designed one, Goodhue designed the other" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 7,
+        "uniqueness": 9,
+        "composite": 38.25
+      },
+      "bestStructures": ["spotter", "connector", "reframe", "photo-challenge"],
+      "routeNote": "At edge of 500m radius — supplemental POI"
+    },
+    {
+      "poiId": "la-central-library",
+      "name": "Los Angeles Central Library",
+      "address": "630 W 5th St",
+      "lat": 34.0502,
+      "lng": -118.2563,
+      "category": "historic-building",
+      "distanceFromBar": "380m",
+      "year": 1926,
+      "designations": ["LA Historic-Cultural Monument #46", "National Register of Historic Places", "HMDB m=167915"],
+      "facts": [
+        "Designed by New York architect Bertram Goodhue — his last project. He died of a heart attack in April 1924; associate Carleton Winslow completed it in 1926",
+        "Early example of Art Deco with Egyptian and Mediterranean Revival influences — modeled after Goodhue's Nebraska State Capitol",
+        "Central tower topped with a tiled mosaic pyramid with suns on the sides — the hand holding a torch at the apex represents the 'Light of Learning'",
+        "Sculptor Lee Lawrie created all exterior sculptures — same artist who later carved the Atlas at Rockefeller Center",
+        "Theme ('Light of Learning') devised by University of Nebraska philosophy professor Hartley Burr Alexander",
+        "Maguire Gardens adjacent to the library houses the World Peace Bell (2001) — cast from coins and medals donated by 103 countries, Japanese-style bell rung by striking the outside (no clapper)",
+        "1993 addition named for former mayor Tom Bradley"
+      ],
+      "observable": {
+        "source": "web-research + overpass",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Central tower with tiled mosaic pyramid and hand-holding-torch finial", "location": "top of building" },
+          { "type": "architecture", "detail": "Egyptian and Mediterranean Revival facade with Art Deco geometric forms", "location": "630 W 5th St" },
+          { "type": "artwork", "detail": "Lee Lawrie sculptures on exterior — same sculptor as Rockefeller Center Atlas", "location": "exterior walls and entrance" },
+          { "type": "oddity", "detail": "World Peace Bell in adjacent Maguire Gardens — Japanese-style, no clapper, rung from outside", "location": "Maguire Gardens" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-person", "from": "Lee Lawrie (LA Library)", "to": "Lee Lawrie (Rockefeller Center Atlas)", "link": "Same sculptor carved DTLA's library and NYC's most famous statue" },
+        { "type": "era-link", "from": "LA Central Library (1926)", "to": "Fine Arts Building (1926)", "link": "Both opened 1926 — the year DTLA's cultural institutions crystallized" },
+        { "type": "theme-link", "from": "Library (Light of Learning)", "to": "Oviatt Building (Art Deco)", "link": "Both are Art Deco monuments to aspiration — one for knowledge, one for style" }
+      ],
+      "score": {
+        "observable": 10,
+        "historical": 10,
+        "connection": 7,
+        "uniqueness": 9,
+        "composite": 41.25
+      },
+      "bestStructures": ["spotter", "narrative-riddle", "connector", "cipher-lite", "photo-challenge"],
+      "routeNote": "North of bar — supplemental POI, not on main route but within radius"
+    },
+    {
+      "poiId": "biltmore-hotel",
+      "name": "The Biltmore Los Angeles",
+      "address": "506 S Grand Ave",
+      "lat": 34.0489,
+      "lng": -118.2533,
+      "category": "historic-building",
+      "distanceFromBar": "323m",
+      "year": 1923,
+      "designations": ["LA Historic-Cultural Monument", "National Register of Historic Places", "HMDB m=184909"],
+      "facts": [
+        "Opened October 1, 1923 — largest hotel west of Chicago when built. Cost: just under $9 million",
+        "Opening gala: 3,000 guests, seven courses, seven orchestras, caged canaries providing birdsong",
+        "Designed by Schultze & Weaver (same firm as New York's Waldorf-Astoria) in Beaux Arts / Spanish-Italian Renaissance Revival",
+        "5,200 tons of steel in the frame alone",
+        "Italian artist John B. Smeraldi spent 7 months painting Greco-Roman frescoes — satyrs, cherubs, nymphs across the ceilings",
+        "Hosted Academy Awards ceremonies in the mid-to-late 1930s — Clark Gable and Ginger Rogers both won their Oscars here",
+        "Elizabeth Short (the 'Black Dahlia') was last seen alive in the Biltmore lobby, January 1947 — her body found the next day, bisected at the waist. Case remains unsolved",
+        "Her ghost reportedly haunts the lobby and the 10th and 11th floors",
+        "Built in 18 months"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Massive Beaux Arts / Renaissance Revival facade on Grand Avenue", "location": "506 S Grand Ave" },
+          { "type": "architecture", "detail": "Ornate lobby with Smeraldi ceiling frescoes — satyrs, cherubs, nymphs", "location": "lobby" },
+          { "type": "architecture", "detail": "Spanish-Italian Renaissance Revival ornamentation on exterior", "location": "facade" },
+          { "type": "sign", "text": "THE BILTMORE LOS ANGELES", "location": "main entrance" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Biltmore (1923)", "to": "Bank of Italy (1922)", "link": "Opened within a year of each other — the hotel and the bank that anchored Olive Street" },
+        { "type": "theme-link", "from": "Biltmore (Schultze & Weaver)", "to": "Oviatt (Walker & Eisen)", "link": "Two buildings by elite architectural firms, 2 blocks apart, competing for DTLA's most opulent interior" },
+        { "type": "person-to-place", "from": "Elizabeth Short (Black Dahlia)", "to": "Biltmore Hotel", "link": "Last seen alive in the lobby — the most infamous unsolved murder in LA history" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 10,
+        "connection": 8,
+        "uniqueness": 9,
+        "composite": 41.75
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter"],
+      "routeNote": "Northeast of bar — supplemental POI"
+    },
+    {
+      "poiId": "palace-theater",
+      "name": "Palace Theatre",
+      "address": "636 S Broadway",
+      "lat": 34.0460,
+      "lng": -118.2530,
+      "category": "historic-building",
+      "distanceFromBar": "264m",
+      "year": 1911,
+      "designations": ["LA Historic-Cultural Monument #449 (1989)", "Wikipedia article"],
+      "facts": [
+        "Oldest remaining original Orpheum theater in the United States — opened 1911",
+        "Designed by G. Albert Lansburgh and Robert Brown Young",
+        "Home of LA's Orpheum Circuit — Harry Houdini, Will Rogers, Fred Astaire, and Rita Hayworth all performed here",
+        "Converted to silent movie theater 'Broadway Palace' in 1926, Fox West Coast Theatres took over in 1929",
+        "$1 million restoration in 2010, reopened as live venue in June 2011"
+      ],
+      "observable": {
+        "source": "web-research + wikipedia",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Ornate theater facade on Broadway", "location": "636 S Broadway" },
+          { "type": "sign", "text": "PALACE", "location": "marquee" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Harry Houdini", "to": "Palace Theatre", "link": "Houdini performed on this stage — the oldest surviving Orpheum in America" },
+        { "type": "era-link", "from": "Palace Theatre (1911)", "to": "Brockman Building (1912)", "link": "Entertainment and commerce expanding simultaneously in early DTLA" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 36.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "sequence"]
+    }
+  ],
+  "cluePotentialMatrix": {
+    "stop1_losAngelesTheatre": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "Chaplin + Einstein premiere is a natural 3-hint narrative riddle. Route 66 terminus marker is a spotter in the sidewalk. 'This corner was once the busiest in the world — 504,000 people a day' is a reframe. The 12 movie palaces on Broadway support a sequence clue. Clifton's 'pay what you wish' policy is a connector to the bar's own building history."
+    },
+    "stop2_oviattBuilding": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": false,
+      "structuresSupported": 7,
+      "notes": "Lalique glass doors (two angels holding a mission bell) are spotter gold — observable, specific, countable. '30 tons of glass shipped from France' is a cipher-lite number. 'A haberdasher saw one exhibition in Paris and changed the LA skyline' is a reframe. Spring Street as 'Wall Street of the West' (named for a love interest) is a narrative riddle. St. Vincent Court's transformation from Jesuit college to kebab alley is a connector to the theme of DTLA reinvention."
+    },
+    "stop3_brockBuilding": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "The building's journey (jewelry emporium → cafeteria → whiskey bar) is a perfect sequence. 'The same display cases that once held diamonds now hold whiskey' is THE reframe for the entire hunt. The Bank of Italy building next door (Giannini lending to immigrants) is a narrative riddle. Brockman vs. Brock — two different men, same street, 10 years apart — is an elimination/connector. '$1,600/month for 25,000 sq ft' is a cipher-lite anchor."
+    }
+  },
+  "metadata": {
+    "overpassBuildingStock": {
+      "total": 4,
+      "note": "Overpass returned limited dated buildings due to server load — the area has hundreds of pre-war structures. Key dated buildings from Overpass: Fine Arts Building (1926), LA Central Library (1926), Los Angeles Theatre (1930), James Oviatt Building (undated in OSM but confirmed 1928)."
+    },
+    "neighborhoodContext": {
+      "7thStreetCorridor": "7th Street between Broadway and Figueroa was DTLA's upscale retail district from 1912 (Brockman Building) through the 1960s. Bullock's department store occupied an entire block (Broadway to Hill). The corridor's decline mirrors DTLA's mid-century hollowing out; its revival (Seven Grand, hotel conversions) mirrors the current renaissance.",
+      "broadwayTheaterDistrict": "12 movie palaces built 1911-1931 between 3rd and 9th on Broadway. First and largest theater district on the National Register (1979). Still the densest concentration of historic theaters in the world.",
+      "springStreetFinancialDistrict": "23 financial structures, 'Wall Street of the West.' Named for a love interest. Now Gallery Row. One block east of the bar.",
+      "route66Connection": "The original 1926 western terminus of Route 66 was at 7th & Broadway — one block east of the bar's building. Every Dust Bowl migrant, every dreamer driving west, ended their journey within walking distance of where Seven Grand now stands."
+    },
+    "thinCoverageWarning": false,
+    "verificationFlags": [
+      "Los Angeles Theatre fountain in lobby — confirm still operational and visible from outside",
+      "Route 66 terminus sidewalk marker — confirm exact location and condition at 7th & Broadway",
+      "Oviatt Building Lalique glass doors — confirm visible from street without entering",
+      "St. Vincent Court — confirm current restaurant/shop mix and accessibility",
+      "Warner Bros. emblem above Jewelry Exchange marquee — confirm still visible",
+      "Brock Building swan's neck pediment — confirm visible from street level",
+      "Pershing Square statues — confirm locations given ongoing Olympic renovation",
+      "Seven Grand exterior signage — confirm current sign text and placement"
+    ]
+  }
+}

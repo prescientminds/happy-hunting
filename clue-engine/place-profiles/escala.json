@@ -1,0 +1,708 @@
+{
+  "barId": "escala",
+  "generatedBy": "/recon",
+  "generatedDate": "2026-03-16",
+  "bar": {
+    "name": "Escala",
+    "address": "3451 W 6th St, Los Angeles, CA 90020",
+    "neighborhood": "Mid-Wilshire / Koreatown",
+    "lat": 34.0637,
+    "lng": -118.2968,
+    "happyHour": "Sun-Wed 11:30am-12am, Thu-Sat 11:30am-2am — Colombian/Korean fusion with DJ brunch Sundays",
+    "vibe": "Colombian-Korean fusion mashup inside Chapman Plaza, bright colorful interior, DJ culture, urban art-inspired, full bar and late-night",
+    "barFacts": [
+      "Located inside Chapman Plaza — the 1929 Spanish Revival complex that was America's first drive-in grocery store",
+      "Opened 2014 as a mashup of Colombian and Korean flavors, with initial menu by Chef Chris Oh and later additions by Colombia's Chef Alex DJ Skull Torres",
+      "Sits in a courtyard complex originally designed by Morgan, Walls & Clements — the same firm that built the Wiltern Theatre and Pellissier Building",
+      "The 'Escala' name means 'scale' or 'stop' in Spanish — fitting for a bar inside a building designed for automobiles to drive under a high arch and park in the central courtyard"
+    ]
+  },
+  "discoveryStats": {
+    "wikipediaHits": 19,
+    "overpassFeatures": 32,
+    "overpassDatedBuildings": 203,
+    "hmdbMarkers": 6,
+    "localColorFinds": 15,
+    "totalRaw": 72,
+    "afterDedup": 24,
+    "aboveThreshold": 14,
+    "selectedForRoute": 3
+  },
+  "route": {
+    "startPoint": {
+      "lat": 34.0639,
+      "lng": -118.2973,
+      "label": "Chapman Plaza"
+    },
+    "endPoint": {
+      "lat": 34.0637,
+      "lng": -118.2968,
+      "label": "Escala"
+    },
+    "totalDistance": "0.5 mi",
+    "estimatedWalkTime": "10 min",
+    "stops": [
+      {
+        "stopNumber": 1,
+        "ring": 1,
+        "lat": 34.0639,
+        "lng": -118.2973,
+        "poiId": "chapman-plaza",
+        "label": "Chapman Plaza / America's First Drive-In Market",
+        "nearbySupplemental": ["oasis-church", "the-haig-site"]
+      },
+      {
+        "stopNumber": 2,
+        "ring": 2,
+        "lat": 34.0621,
+        "lng": -118.2970,
+        "poiId": "gaylord-hms-bounty",
+        "label": "The Gaylord Apartments & HMS Bounty",
+        "nearbySupplemental": ["talmadge-apartments", "immanuel-presbyterian"]
+      },
+      {
+        "stopNumber": 3,
+        "ring": 3,
+        "lat": 34.0597,
+        "lng": -118.2972,
+        "poiId": "ambassador-hotel-site",
+        "label": "Ambassador Hotel Site / RFK Community Schools",
+        "nearbySupplemental": ["hotel-normandie", "embassy-apartments", "ava-gardner-mural"]
+      }
+    ]
+  },
+  "pois": [
+    {
+      "poiId": "chapman-plaza",
+      "name": "Chapman Plaza (Chapman Park Market)",
+      "address": "3465 W 6th St, Los Angeles, CA 90020",
+      "lat": 34.0639,
+      "lng": -118.2973,
+      "category": "historic-building",
+      "distanceFromBar": "50m",
+      "year": 1929,
+      "designations": ["LA Historic-Cultural Monument #386 (1988)"],
+      "facts": [
+        "America's first drive-in grocery store — automobiles drove under a high arch and parked in the central courtyard",
+        "Designed by Morgan, Walls & Clements in Spanish Revival style with Churrigueresque towers — same firm that built the Wiltern Theatre and Pellissier Building",
+        "Built to serve the wealthy families of Fremont Place, Windsor Square, and Hancock Park who drove to buy groceries",
+        "50,000 square feet of fortress-like facade with thick concrete walls and ornate towers",
+        "Interior courtyard featured groceries, shopfronts, lush landscaping, statues and fountains",
+        "Restored in 1990 by Wayne Ratkovich and architect Brenda Levin — the same pair who saved the Wiltern from demolition in 1981",
+        "Now houses Escala, KazuNori, Uncle Tetsu, Origin Korean BBQ, and other Koreatown dining in its arcade",
+        "The Chapman family also donated the land for the first church in Wilshire Center (now Oasis Church) across the intersection"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Spanish Revival facade with Churrigueresque towers and ornate detailing", "material": "concrete" },
+          { "type": "architecture", "detail": "Large entry arch — originally for automobiles to drive through into courtyard", "location": "6th Street facade" },
+          { "type": "sign", "text": "Chapman", "material": "large signage on red-tiled roof", "location": "rooftop", "needsVerification": true },
+          { "type": "architecture", "detail": "Central courtyard with arched windows and double-wide hallways" },
+          { "type": "architecture", "detail": "Fountains and statues in courtyard", "needsVerification": true },
+          { "type": "architecture", "detail": "Red-tiled roof typical of Spanish Revival", "location": "visible from street" },
+          { "type": "count", "element": "Churrigueresque towers on facade", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "architect-link", "from": "Morgan, Walls & Clements (Chapman Plaza 1929)", "to": "Pellissier Building / Wiltern Theatre (1931)", "link": "Same firm designed both — Stiles O. Clements was lead architect on all three" },
+        { "type": "person-to-place", "from": "Chapman family", "to": "Oasis Church (Wilshire Christian Church)", "link": "Chapman family donated the land for the first church in Wilshire Center, directly across the intersection" },
+        { "type": "person-to-place", "from": "Wayne Ratkovich / Brenda Levin", "to": "Wiltern Theatre", "link": "Same developer-architect team restored both Chapman Plaza (1990) and the Wiltern (1985)" },
+        { "type": "era-link", "from": "Chapman Plaza (1929)", "to": "Gaylord Apartments (1924)", "link": "Both built during Wilshire Center's 1920s boom, five blocks apart on the same corridor" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 9,
+        "connection": 10,
+        "uniqueness": 9,
+        "composite": 43.75
+      },
+      "bestStructures": ["reframe", "connector", "narrative-riddle", "spotter", "photo-challenge", "cipher-lite"]
+    },
+    {
+      "poiId": "gaylord-hms-bounty",
+      "name": "The Gaylord Apartments & HMS Bounty",
+      "address": "3355 Wilshire Blvd, Los Angeles, CA 90010",
+      "lat": 34.0621,
+      "lng": -118.2970,
+      "category": "historic-building",
+      "distanceFromBar": "230m",
+      "year": 1924,
+      "designations": ["Wikipedia article", "LA Conservancy listing"],
+      "facts": [
+        "13-story Early Renaissance Revival apartment tower designed by Walker & Eisen — the same firm that designed the Beverly Wilshire Hotel and Hotel Normandie",
+        "Named for Henry Gaylord Wilshire, socialist land developer and founder of Wilshire Boulevard — LA's most famous socialist namesake",
+        "Marketed as 'own-your-own' apartments with LA's first central refrigeration system letting tenants freeze their own ice cubes",
+        "The LA Times called it 'one of the largest and most pretentious apartment houses in the country' when it opened",
+        "Ground-floor bar was originally called 'The Gay Room' (named for Gaylord Wilshire), then 'The Secret Harbor,' before becoming HMS Bounty in 1962",
+        "HMS Bounty was frequented by Jack Webb, Walter Winchell, and William Randolph Hearst when previous establishments occupied the space",
+        "Built directly across Wilshire from the Ambassador Hotel — the two buildings anchored the neighborhood's glamour era",
+        "Featured in Mad Men and other film/TV productions for its preserved mid-century nautical interior",
+        "199 units, 50.3m tall — one of the tallest 1920s residential buildings on Wilshire"
+      ],
+      "observable": {
+        "source": "web-research + overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "13-story Early Renaissance Revival tower — brick and terra cotta", "material": "brick" },
+          { "type": "sign", "text": "HMS Bounty signage", "location": "ground floor exterior", "needsVerification": true },
+          { "type": "architecture", "detail": "Nautical-themed bar interior with wood paneling, red leather booths", "location": "ground floor" },
+          { "type": "count", "element": "Stories/floors", "count": 13 },
+          { "type": "architecture", "detail": "Ornamental cornice and window detailing at upper stories", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "architect-link", "from": "Walker & Eisen (Gaylord 1924)", "to": "Hotel Normandie (1926)", "link": "Same firm designed both — Percy Eisen and Albert Walker were among LA's most prolific 1920s architects" },
+        { "type": "place-to-place", "from": "The Gaylord", "to": "Ambassador Hotel", "link": "Built directly across Wilshire from each other — the Gaylord's residents could look down at the Ambassador's Cocoanut Grove" },
+        { "type": "person-to-neighborhood", "from": "Henry Gaylord Wilshire", "to": "Wilshire Boulevard", "link": "Socialist who gave his name to LA's most famous boulevard — and this building" },
+        { "type": "era-link", "from": "Gaylord (1924)", "to": "Talmadge (1924)", "link": "Both luxury apartment towers opened the same year on Wilshire, six blocks apart" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 9,
+        "connection": 8,
+        "uniqueness": 9,
+        "composite": 40.25
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "spotter", "cipher-lite"]
+    },
+    {
+      "poiId": "ambassador-hotel-site",
+      "name": "Ambassador Hotel Site / RFK Community Schools",
+      "address": "3400 Wilshire Blvd, Los Angeles, CA 90010",
+      "lat": 34.0597,
+      "lng": -118.2972,
+      "category": "historic-site",
+      "distanceFromBar": "440m",
+      "year": 1921,
+      "designations": ["Former National Register nomination (denied)", "Wikipedia article"],
+      "facts": [
+        "The Ambassador Hotel (1921-2006) was a 1,200-room entertainment complex with 37 shops, a golf course, bowling alley, and the legendary 1,000-seat Cocoanut Grove nightclub",
+        "Designed by architect Myron Hunt; later renovated by Paul Williams, first Black AIA fellow",
+        "Hosted 6 Academy Awards ceremonies between 1930 and 1943, and every US president from Hoover to Nixon",
+        "The Cocoanut Grove featured papier-mache palm trees recycled from Rudolph Valentino's film 'The Sheik,' with mechanical monkeys hanging from them",
+        "Senator Robert F. Kennedy was shot in the hotel's kitchen pantry on June 5, 1968 after winning the California Democratic presidential primary",
+        "The hotel served alcohol during Prohibition — partly why it became Hollywood's gathering place",
+        "Closed 1989, demolished 2005-2006 after a decade-long preservation battle led by the LA Conservancy",
+        "Replaced by RFK Community Schools ($578 million — most expensive public school in US history), which preserved the Cocoanut Grove as a 582-seat theatre and reconstructed the Embassy Ballroom vaulted ceiling as a student library",
+        "The Ava Gardner mural on the school exterior (by Beau Stanton, 2016) sparked a 3-year controversy — its sun-ray motif was seen as resembling the Imperial Japanese battle flag. Revised in 2021 to include Korean cultural imagery"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Modern school complex echoing the Ambassador's massing — sloped roof, large lawn, contemporary palette" },
+          { "type": "artwork", "detail": "Revised Ava Gardner / Koreatown mural on school exterior wall (2021 version)", "location": "exterior wall facing street" },
+          { "type": "architecture", "detail": "Preserved Cocoanut Grove now functioning as 582-seat school theatre", "location": "interior, may not be accessible" },
+          { "type": "plaque", "text": "Robert F. Kennedy memorial elements", "needsVerification": true },
+          { "type": "architecture", "detail": "Marble memorial to RFK", "needsVerification": true },
+          { "type": "architecture", "detail": "Public park (RFK Inspiration Park) on the grounds" }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "Ambassador Hotel", "to": "The Gaylord", "link": "Built directly across Wilshire from each other — the Gaylord's residents witnessed the Ambassador's entire arc from glamour to decline" },
+        { "type": "place-to-place", "from": "Ambassador Hotel (Cocoanut Grove)", "to": "The Haig jazz club", "link": "The Haig was in a bungalow directly across the street from the Ambassador — West Coast jazz met Hollywood supper club culture" },
+        { "type": "event-to-neighborhood", "from": "RFK assassination (1968)", "to": "Koreatown/Wilshire Center", "link": "The assassination and hotel's subsequent decline paralleled the neighborhood's transformation from old-money LA to immigrant gateway" },
+        { "type": "theme-link", "from": "Ava Gardner mural controversy", "to": "Koreatown identity", "link": "The mural debate encapsulates the neighborhood's layered history — Hollywood glamour, Japanese colonial trauma, Korean-American community" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 10,
+        "connection": 9,
+        "uniqueness": 9,
+        "composite": 40.75
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe", "sequence", "elimination"]
+    },
+    {
+      "poiId": "hotel-normandie",
+      "name": "Hotel Normandie",
+      "address": "605 S Normandie Ave, Los Angeles, CA 90005",
+      "lat": 34.0633,
+      "lng": -118.3007,
+      "category": "historic-building",
+      "distanceFromBar": "370m",
+      "year": 1926,
+      "designations": ["LA Historic-Cultural Monument #1013 (2012)"],
+      "facts": [
+        "1926 Renaissance Revival hotel designed by Walker & Eisen — same firm that designed the Gaylord and the Beverly Wilshire",
+        "Author Malcolm Lowry wrote significant portions of 'Under the Volcano' while living here — now ranked #11 on Modern Library's 100 Best Novels",
+        "Operated continuously for 90 years, though by 2011 it was barely functioning with rooms littered with trash and some housing illegal activities",
+        "Acquired in 2010 for $4.4M by preservationist Jingbo Lou, who spent $5M restoring it into an upscale boutique hotel",
+        "Now houses Cassell's Hamburgers (founded 1948) on the ground floor — one of LA's original burger institutions",
+        "92 guest rooms and suites in the restored building"
+      ],
+      "observable": {
+        "source": "web-research + overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Renaissance Revival facade — 1926 detailing preserved through restoration", "material": "brick and terra cotta" },
+          { "type": "sign", "text": "Hotel Normandie", "location": "building exterior" },
+          { "type": "architecture", "detail": "21.3m height (from Overpass data)" },
+          { "type": "oddity", "detail": "Cassell's Hamburgers signage at ground floor", "location": "street level" }
+        ]
+      },
+      "connections": [
+        { "type": "architect-link", "from": "Walker & Eisen (Hotel Normandie 1926)", "to": "Gaylord Apartments (1924)", "link": "Same firm designed both within two years" },
+        { "type": "person-to-place", "from": "Malcolm Lowry", "to": "Hotel Normandie", "link": "Wrote parts of Under the Volcano here — a novel about an alcoholic British consul in Mexico, written in a fading LA hotel" },
+        { "type": "theme-link", "from": "Hotel Normandie (decline/restoration)", "to": "Koreatown revitalization", "link": "The hotel's arc from luxury to squalor to boutique revival mirrors the entire neighborhood" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 38.0
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "immanuel-presbyterian",
+      "name": "Immanuel Presbyterian Church",
+      "address": "3300 Wilshire Blvd, Los Angeles, CA 90010",
+      "lat": 34.0613,
+      "lng": -118.2945,
+      "category": "historic-building",
+      "distanceFromBar": "320m",
+      "year": 1929,
+      "designations": ["LA Historic-Cultural Monument (2003)"],
+      "facts": [
+        "French Gothic Revival church with a 205-foot stone-clad corner tower — one of the tallest church towers in LA",
+        "Designed by architect Chauncey Fitch Skilling, completed 1929",
+        "Steel-framed tower allows for a strikingly spacious interior despite the Gothic appearance",
+        "Stained glass rose window above the entry, with windows throughout by Dixon Art Glass Company of Los Angeles",
+        "Interior features beam trusses, columns, arches, carved wood pulpit, chandeliers and oak furnishings",
+        "Congregation established 1888 as a spinoff from First Presbyterian Church in downtown LA — has occupied 3 buildings",
+        "The rose window at Oasis Church across Wilshire is said to be a copy of one in Rheims Cathedral — two monumental churches face each other across the boulevard"
+      ],
+      "observable": {
+        "source": "web-research + overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "205-foot French Gothic tower — stone-clad with steel frame", "material": "stone cladding over steel" },
+          { "type": "architecture", "detail": "Stained glass rose window above main entry", "location": "main facade" },
+          { "type": "architecture", "detail": "62m height (from Overpass data)" },
+          { "type": "architecture", "detail": "Gothic arches, beam trusses, carved wood pulpit visible through doors", "location": "interior" }
+        ]
+      },
+      "connections": [
+        { "type": "era-link", "from": "Immanuel Presbyterian (1929)", "to": "Chapman Plaza (1929)", "link": "Both completed in 1929 — the neighborhood's last pre-Depression building boom" },
+        { "type": "place-to-place", "from": "Immanuel Presbyterian", "to": "Oasis Church", "link": "Two monumental churches face each other across Wilshire — both with rose windows, both LA landmarks" }
+      ],
+      "score": {
+        "observable": 9,
+        "historical": 8,
+        "connection": 6,
+        "uniqueness": 8,
+        "composite": 37.5
+      },
+      "bestStructures": ["spotter", "photo-challenge", "cipher-lite"]
+    },
+    {
+      "poiId": "oasis-church",
+      "name": "Oasis Church (Wilshire Christian Church)",
+      "address": "634 S Normandie Ave, Los Angeles, CA 90005",
+      "lat": 34.0622,
+      "lng": -118.3000,
+      "category": "historic-building",
+      "distanceFromBar": "350m",
+      "year": 1927,
+      "designations": ["LA Historic-Cultural Monument #209 (1979)"],
+      "facts": [
+        "First church built in Wilshire Center — Chapman family donated the land",
+        "Massive Romanesque structure with Byzantine elements, designed by Robert H. Orr for maximum visibility from passing cars",
+        "200-foot tower on a corner orientation — designed to be seen from Wilshire Boulevard at driving speed",
+        "Rose window by Judson Studios, said to be a copy of one in Rheims Cathedral in France",
+        "The original 1911 church on this site was a bungalow-style structure — replaced by this building in 1927 as the neighborhood became a major boulevard",
+        "Built 1927 — the same era as the architect-designed-for-cars philosophy that shaped the entire Wilshire corridor"
+      ],
+      "observable": {
+        "source": "web-research + overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "200-foot Romanesque/Byzantine tower on corner", "location": "Wilshire & Normandie corner" },
+          { "type": "architecture", "detail": "Rose window by Judson Studios", "location": "main facade" },
+          { "type": "architecture", "detail": "47.3m height (from Overpass data)" },
+          { "type": "architecture", "detail": "Massive stone facade with Romanesque arches" }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Chapman family", "to": "Oasis Church", "link": "Same family that built Chapman Plaza donated the land for this church" },
+        { "type": "place-to-place", "from": "Oasis Church", "to": "Immanuel Presbyterian", "link": "Two monumental churches face each other across Wilshire" },
+        { "type": "theme-link", "from": "Oasis Church (designed for cars)", "to": "Chapman Plaza (drive-in market)", "link": "Both designed for the automobile — the church tower to be seen at speed, the market to be driven into" }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 8,
+        "connection": 7,
+        "uniqueness": 7,
+        "composite": 35.75
+      },
+      "bestStructures": ["spotter", "connector", "photo-challenge"]
+    },
+    {
+      "poiId": "talmadge-apartments",
+      "name": "The Talmadge",
+      "address": "3278 Wilshire Blvd, Los Angeles, CA 90010",
+      "lat": 34.0614,
+      "lng": -118.2938,
+      "category": "historic-building",
+      "distanceFromBar": "360m",
+      "year": 1924,
+      "designations": ["LA Conservancy listing", "Wikipedia article"],
+      "facts": [
+        "12-story brick apartment tower named for silent film actress Norma Talmadge, owned by her husband — movie studio executive Joseph M. Schenck",
+        "Designed by William and Alexander Curlett & Claud Beelman — Beelman later designed the Eastern Columbia Building",
+        "Rose on the site of a Craftsman mansion designed by Greene & Greene for automobile dealer Earle C. Anthony in 1909 — the house was moved to Beverly Hills to make way",
+        "Opened with a summer garden party attended by socialites and business leaders; the Schenks lived on the tenth floor",
+        "49 units — originally marketed to socialites and heirs",
+        "One of the first luxury high-rises on Wilshire Boulevard, anchoring the corridor's shift from residential mansions to apartment living"
+      ],
+      "observable": {
+        "source": "web-research + overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "12-story brick residential tower", "material": "brick" },
+          { "type": "architecture", "detail": "47.3m height (from Overpass data)" },
+          { "type": "architecture", "detail": "Renaissance Revival detailing", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "person-to-place", "from": "Norma Talmadge / Joseph Schenck", "to": "Hollywood silent film era", "link": "A silent film power couple named an apartment building — the era's equivalent of a vanity project" },
+        { "type": "era-link", "from": "Talmadge (1924)", "to": "Gaylord (1924)", "link": "Both luxury apartment towers opened the same year on Wilshire" },
+        { "type": "place-to-place", "from": "Talmadge site", "to": "Greene & Greene mansion", "link": "A masterpiece Craftsman house was literally moved to Beverly Hills to make room for this tower — the neighborhood's identity shift in one transaction" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 9,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 36.5
+      },
+      "bestStructures": ["narrative-riddle", "connector", "reframe"]
+    },
+    {
+      "poiId": "the-haig-site",
+      "name": "The Haig (demolished)",
+      "address": "638 S Kenmore Ave, Los Angeles, CA 90005",
+      "lat": 34.0621,
+      "lng": -118.2964,
+      "category": "historic-site",
+      "distanceFromBar": "178m",
+      "year": 1950,
+      "designations": ["Wikipedia article"],
+      "facts": [
+        "Premier West Coast jazz club of the 1950s — 'the best-known Los Angeles jazz club of the day' (James Lincoln Collier)",
+        "Originally a bungalow home converted by owner John Bennett into a club — 'looked more like a doll house than a club'",
+        "Located directly across from the Ambassador Hotel and its Cocoanut Grove supper club",
+        "In early 1952, Gerry Mulligan walked in, found Erroll Garner and Bobby Short jamming without amplification, and joined in — leading to his legendary pianoless quartet with Chet Baker",
+        "Hampton Hawes, Warne Marsh, Lee Konitz, Bud Shank, Red Norvo's trio, Wardell Gray, and Curtis Counce all played here",
+        "Closed April 4, 1956; demolished one year later for a parking garage",
+        "The club where West Coast cool jazz was essentially born — destroyed for parking"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "oddity", "detail": "Nothing remains — the site is now a parking structure. The jazz is gone.", "needsVerification": true }
+        ]
+      },
+      "connections": [
+        { "type": "place-to-place", "from": "The Haig", "to": "Ambassador Hotel (Cocoanut Grove)", "link": "Directly across the street — a bungalow jazz club facing a 1,000-seat Hollywood supper club" },
+        { "type": "theme-link", "from": "The Haig (demolished for parking)", "to": "Ambassador Hotel (demolished for school)", "link": "Both landmarks obliterated — the neighborhood's cultural history exists only in memory" }
+      ],
+      "score": {
+        "observable": 3,
+        "historical": 8,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 29.5
+      },
+      "bestStructures": ["narrative-riddle", "connector"]
+    },
+    {
+      "poiId": "equitable-life-building",
+      "name": "Equitable Life Building",
+      "address": "3435 Wilshire Blvd, Los Angeles, CA 90010",
+      "lat": 34.0624,
+      "lng": -118.2986,
+      "category": "landmark-building",
+      "distanceFromBar": "170m",
+      "year": 1969,
+      "designations": ["Wikipedia article"],
+      "facts": [
+        "138m (453 ft) tall, 34 floors — tied with LA City Hall for 43rd-tallest building in Los Angeles",
+        "International Style skyscraper designed by Welton Becket & Associates for Equitable Life Insurance Company",
+        "Facade of precast concrete sandblasted to expose beige Texas limestone aggregate",
+        "Houses the Philippine Consulate General on the 5th floor since 2015",
+        "Also houses the Consulate General of Indonesia next door at 3457 Wilshire (built 1946) — two Southeast Asian consulates bookend the block",
+        "Lobby contains 'Equitable Vitrines' — glass cases hosting rotating contemporary art exhibitions",
+        "Consulate of the Republic of Korea is also nearby at 3243 Wilshire — three Asian-Pacific consulates within 3 blocks"
+      ],
+      "observable": {
+        "source": "overpass-api + web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "34-story International Style tower — tallest building in Koreatown", "material": "precast concrete with exposed Texas limestone aggregate" },
+          { "type": "sign", "text": "Philippine Consulate signage", "location": "building entrance", "needsVerification": true },
+          { "type": "count", "element": "Floors", "count": 34 }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Equitable Life Building (consulates)", "to": "Koreatown identity", "link": "Three Asian-Pacific consulates within 3 blocks — the neighborhood is a de facto diplomatic quarter" }
+      ],
+      "score": {
+        "observable": 6,
+        "historical": 5,
+        "connection": 5,
+        "uniqueness": 6,
+        "composite": 25.5
+      },
+      "bestStructures": ["spotter"]
+    },
+    {
+      "poiId": "embassy-apartments",
+      "name": "Embassy Apartments",
+      "address": "706 S Mariposa Ave, Los Angeles, CA 90005",
+      "lat": 34.0596,
+      "lng": -118.2984,
+      "category": "historic-building",
+      "distanceFromBar": "470m",
+      "year": 1926,
+      "designations": [],
+      "facts": [
+        "1926 apartment building — 34 units, 19.1m tall",
+        "Part of the dense 1920s apartment stock surrounding the Ambassador Hotel",
+        "Representative of the Mid-Wilshire apartment construction boom"
+      ],
+      "observable": {
+        "source": "overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "1920s apartment building facade", "material": "brick" }
+        ]
+      },
+      "score": {
+        "observable": 5,
+        "historical": 5,
+        "connection": 4,
+        "uniqueness": 4,
+        "composite": 22.75
+      },
+      "bestStructures": ["spotter"]
+    },
+    {
+      "poiId": "ava-gardner-mural",
+      "name": "Ava Gardner / Koreatown Mural (revised 2021)",
+      "address": "RFK Community Schools, 3400 Wilshire Blvd",
+      "lat": 34.0597,
+      "lng": -118.2972,
+      "category": "public-art",
+      "distanceFromBar": "440m",
+      "year": 2021,
+      "designations": [],
+      "facts": [
+        "Original mural by Beau Stanton (2016) depicted Ava Gardner's profile with sun-ray motif as tribute to the Ambassador Hotel's Cocoanut Grove",
+        "Korean Americans objected: the radiating lines resembled the Imperial Japanese battle flag used during Japan's colonial occupation of Korea (1910-1945)",
+        "3-year community debate — even Shepard Fairey defended the original artist",
+        "Revised 2021: now includes a traditional Korean phoenix pattern, a migrant worker harvesting oranges from a historic photograph, and a 1935 Koreatown hotel worker in uniform",
+        "The mural is a physical artifact of the neighborhood's identity collision — Hollywood nostalgia, Korean-American trauma, immigrant community assertion"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "artwork", "detail": "Large exterior mural on school wall — Ava Gardner profile with Korean cultural imagery (revised version)", "location": "exterior wall facing street" },
+          { "type": "artwork", "detail": "Korean phoenix pattern and immigrant worker figures integrated into design" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "Ava Gardner mural", "to": "Ambassador Hotel history", "link": "The original was a tribute to the Cocoanut Grove nightclub that once stood on this exact site" },
+        { "type": "theme-link", "from": "Mural controversy", "to": "Koreatown identity", "link": "A mural honoring Hollywood's past collided with the Korean community's colonial trauma — on the site of RFK's assassination. History layered on history." }
+      ],
+      "score": {
+        "observable": 8,
+        "historical": 7,
+        "connection": 8,
+        "uniqueness": 9,
+        "composite": 38.25
+      },
+      "bestStructures": ["reframe", "connector", "narrative-riddle", "photo-challenge"]
+    },
+    {
+      "poiId": "sixth-street-streetcar-district",
+      "name": "6th Street Streetcar Commercial Historic District",
+      "address": "6th St at Oxford Ave and 6th St at Western Ave",
+      "lat": 34.0637,
+      "lng": -118.2968,
+      "category": "historic-district",
+      "distanceFromBar": "0m (Escala is in the district)",
+      "year": 1920,
+      "designations": ["Eligible for National Register of Historic Places"],
+      "facts": [
+        "Eligible for the National Register as a rare intact example of 1920s streetcar commercialization in Los Angeles",
+        "Developed around the streetcar track that ran down 6th Street — all buildings were built while the streetcar was operating",
+        "Architectural styles: Italian Renaissance, Tudor Revival, Art Deco — all with pedestrian-oriented storefronts and no automobile accommodation on parcels",
+        "Most of LA's streetcar corridors have been demolished or made unrecognizable — this concentration of intact buildings is extremely rare",
+        "Six contributing buildings, all with storefronts on the sidewalk",
+        "The district is the commercial counterpart to the Wilshire corridor's car-oriented design — 6th Street was for streetcar riders, Wilshire was for drivers"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Intact 1920s commercial storefronts — Italian Renaissance, Tudor Revival, Art Deco styles" },
+          { "type": "oddity", "detail": "Buildings set directly on the sidewalk with no setback — designed for streetcar pedestrians, not cars" },
+          { "type": "architecture", "detail": "Consistent 1920s parcel patterns and building massing" }
+        ]
+      },
+      "connections": [
+        { "type": "theme-link", "from": "6th Street (streetcar)", "to": "Wilshire Blvd (automobile)", "link": "Two parallel corridors, two transportation philosophies — 6th Street for trolley riders, Wilshire for drivers. Chapman Plaza bridged both." },
+        { "type": "era-link", "from": "Streetcar district (1920s)", "to": "Chapman Plaza (1929)", "link": "Chapman Plaza was built at the intersection of the streetcar corridor and the automobile corridor" }
+      ],
+      "score": {
+        "observable": 7,
+        "historical": 8,
+        "connection": 7,
+        "uniqueness": 8,
+        "composite": 34.5
+      },
+      "bestStructures": ["reframe", "connector"]
+    },
+    {
+      "poiId": "cafe-jack",
+      "name": "Cafe Jack (Titanic Cafe)",
+      "address": "508 S Western Ave, Los Angeles, CA 90020",
+      "lat": 34.0650,
+      "lng": -118.3090,
+      "category": "unusual-business",
+      "distanceFromBar": "700m",
+      "year": 2007,
+      "designations": ["Atlas Obscura listing"],
+      "facts": [
+        "A cafe built to look like the Titanic, anchored on Western Avenue between an H&R Block and a dry cleaner",
+        "Owner Jack Shin saw James Cameron's film hundreds of times and changed his legal name to Jack after DiCaprio's character",
+        "Shin built the entire bow — black and white hull, yellow trim, white railings — with his bare hands",
+        "Interior is a maze of private rooms, karaoke rooms, patios, and snugs decorated with hearts, twinkling lights, and fake plants",
+        "Shin gives tarot card readings in his booth between serving Asian fusion sushi and shaved ice",
+        "Atlas Obscura calls it 'a tarot-reading Titanic superfan's cafe shrine'"
+      ],
+      "observable": {
+        "source": "web-research",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "Full-scale Titanic bow structure protruding from storefront", "material": "painted wood/metal" },
+          { "type": "sign", "text": "Cafe Jack signage with nautical elements", "location": "Western Ave" },
+          { "type": "oddity", "detail": "Captain's wheel, engine order telegraph, and Titanic memorabilia visible through entrance" }
+        ]
+      },
+      "score": {
+        "observable": 9,
+        "historical": 2,
+        "connection": 2,
+        "uniqueness": 10,
+        "composite": 29.0
+      },
+      "bestStructures": ["photo-challenge", "spotter"],
+      "routeNote": "Outside 500m radius — supplemental POI for extended hunt"
+    },
+    {
+      "poiId": "line-hotel-break-room-86",
+      "name": "The Line Hotel / Break Room 86",
+      "address": "3515 Wilshire Blvd, Los Angeles, CA 90010",
+      "lat": 34.0622,
+      "lng": -118.3010,
+      "category": "unusual-business",
+      "distanceFromBar": "400m",
+      "year": 1965,
+      "designations": [],
+      "facts": [
+        "The Line Hotel occupies the former Radisson Wilshire Plaza (1965) — now a Sydell Group property",
+        "Break Room 86 is an 80s-themed speakeasy entered through a loading dock off Ardmore Avenue, past hotel kitchens and ice machines",
+        "The actual entrance is a vending machine that swivels to reveal the hidden bar",
+        "Interior: stacked TVs playing Garfield and Ghostbusters, a wall covered in cassette tapes, VHS cassette menus, vintage arcade games, high school lockers",
+        "Originally designed as the actual hotel employee break room — repurposed into a bar",
+        "Rooftop features Openaire, a greenhouse restaurant by Josiah Citrin"
+      ],
+      "observable": {
+        "source": "web-research + overpass-api",
+        "captureDate": "2026-03",
+        "features": [
+          { "type": "architecture", "detail": "380-unit hotel tower, 43.8m tall" },
+          { "type": "oddity", "detail": "Loading dock entrance on Ardmore Ave leads to hidden bar", "location": "west side of building, Ardmore Ave" }
+        ]
+      },
+      "score": {
+        "observable": 5,
+        "historical": 4,
+        "connection": 4,
+        "uniqueness": 8,
+        "composite": 25.5
+      },
+      "bestStructures": ["reframe"]
+    }
+  ],
+  "cluePotentialMatrix": {
+    "stop1_chapmanPlaza": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "'What kind of building has an arch big enough to drive a car through?' is a reframe. Churrigueresque towers are countable (spotter). The Chapman family connection to Oasis Church across the street is a connector. Morgan Walls & Clements linking to the Wiltern is a narrative thread. The courtyard fountains/statues are photo-challenge material. 'America's first ___' is a cipher-lite source."
+    },
+    "stop2_gaylordHmsBounty": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": false,
+      "sequence": true,
+      "structuresSupported": 7,
+      "notes": "The name evolution (Gay Room → Secret Harbor → HMS Bounty) is a perfect sequence. 'Named for LA's most famous socialist' is a narrative riddle. Walker & Eisen connecting to Hotel Normandie is a connector. The 13 stories and 199 units are countable. The ice cube refrigeration innovation is a reframe. Henry Gaylord Wilshire's socialism is unexpected material."
+    },
+    "stop3_ambassadorSite": {
+      "spotter": true,
+      "connector": true,
+      "reframe": true,
+      "elimination": true,
+      "cipherLite": true,
+      "narrativeRiddle": true,
+      "photoChallenge": true,
+      "sequence": true,
+      "structuresSupported": 8,
+      "notes": "The Ambassador's arc (1921 hotel → 6 Oscars → RFK assassination → demolished → $578M school) is a narrative sequence. 'Papier-mache palm trees from a Valentino film' is a narrative riddle. The Ava Gardner mural controversy (Hollywood vs. Korean colonial trauma) is a reframe. The RFK memorial is a spotter. The Cocoanut Grove preserved as a school theatre is a connector between eras. Most expensive public school in US history is a cipher-lite source."
+    }
+  },
+  "metadata": {
+    "overpassBuildingStock": {
+      "total": 203,
+      "preWar": "~130 (estimated from decade breakdown: 1920s-1930s account for majority)",
+      "preWarPercent": "~64%",
+      "oldestDecade": "1920s (dense cluster: 1921-1929)",
+      "peakDecade": "1920s-1930s (1920s: ~40 buildings, 1930s: ~32 buildings)",
+      "note": "Koreatown's building stock is heavily weighted toward the 1920s-1960s. The 1920s boom produced most of the architectural landmarks (Gaylord, Talmadge, Hotel Normandie, Chapman Plaza, churches). A second wave of mid-century construction (1950s-1960s) added commercial towers. The neighborhood retains its 1920s bones more than most LA districts."
+    },
+    "thinCoverageWarning": false,
+    "coverageNotes": "Koreatown/Mid-Wilshire has excellent coverage. Wikipedia returned 19 geosearch hits (strong). The Ambassador Hotel site, Chapman Plaza, and the cluster of 1920s buildings provide deep historical material. The neighborhood's identity layers — old-money LA, Hollywood glamour, Korean-American community, immigrant gateway — create rich connective tissue between POIs. The demolished sites (Ambassador, The Haig) are ghosts with strong stories but no physical observable, balanced by the surviving 1920s buildings.",
+    "verificationFlags": [
+      "Chapman Plaza rooftop 'Chapman' sign — may have been replaced or modified during renovation",
+      "Chapman Plaza courtyard fountains and statues — condition and current state unknown",
+      "Chapman Plaza Churrigueresque tower count — need Street View confirmation",
+      "Gaylord Apartments exterior signage — HMS Bounty sign style and placement",
+      "Ambassador Hotel site RFK memorial — need to confirm marble memorial is publicly accessible",
+      "Ava Gardner mural — confirm 2021 revised version is still in place",
+      "The Haig site — confirm current state (parking garage?)",
+      "Oasis Church rose window — confirm visibility from street level",
+      "Cafe Jack — Yelp shows 'CLOSED' as of Dec 2025 — may no longer be operating"
+    ],
+    "keyConnection": "Escala sits inside Chapman Plaza, which was designed by the same firm (Morgan, Walls & Clements) that built the Wiltern Theatre. The same developer-architect pair (Ratkovich/Levin) restored both buildings. The Chapman family that built the market also donated the land for Oasis Church across the street. This is the densest web of connections in the profile — the bar's own building is the best clue source."
+  }
+}
