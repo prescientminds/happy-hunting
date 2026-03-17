@@ -2441,7 +2441,6 @@ body.hh-landing {
     background: rgba(201, 168, 76, 0.15);
     border-color: #c9a84c;
     font-weight: 600;
-    margin-left: auto;
 }
 .pa-btn.pa-primary:hover { background: rgba(201, 168, 76, 0.25); }
 /* Send Hunt (applied via JS class swap) */
@@ -2451,8 +2450,15 @@ body.hh-landing {
     color: #111;
     font-weight: 600;
     padding: 8px 24px;
-    margin-left: auto;
 }
+/* Delete Clue — subtle danger */
+.pa-btn.pa-delete {
+    opacity: 0.5;
+    font-size: 0.7em;
+    border-color: rgba(224, 112, 112, 0.3);
+    color: #e07070;
+}
+.pa-btn.pa-delete:hover { opacity: 1; background: rgba(224, 112, 112, 0.1); border-color: #e07070; }
 .pa-btn.pa-send:hover { background: #d4b85c; }
 .skin-ransom .pa-btn.pa-send { background: #3d2b1a; color: #f5f0e8; border-color: #3d2b1a; }
 .skin-ransom .pa-btn.pa-send:hover { background: #2a1c0f; }

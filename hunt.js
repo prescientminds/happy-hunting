@@ -47,7 +47,7 @@ const HappyHunting = {
             'stuck-btn', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
             'dice-roll-btn',
-            'pa-prev', 'pa-edit', 'pa-add', 'pa-primary', 'preview-actions',
+            'pa-prev', 'pa-edit', 'pa-delete', 'pa-add', 'pa-primary', 'preview-actions',
             'send-back',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
@@ -652,6 +652,28 @@ const HappyHunting = {
         }, 600);
     },
 
+    // ---- Delete Clue (user-added only) ----
+    deleteClue() {
+        const step = this.hunt.steps[this.currentStep];
+        if (!step.isAdded) return;
+
+        this.hunt.steps.splice(this.currentStep, 1);
+        // Renumber remaining steps
+        this.hunt.steps.forEach((s, i) => { s.stepNumber = i + 1; });
+
+        // Clean up state for removed card
+        delete this.stepDifficulties[this.currentStep];
+        delete this.cardDirty[this.currentStep];
+
+        // Cost tracking
+        this.addedCluesCount = Math.max(0, this.addedCluesCount - 1);
+        this.updateCostBar();
+
+        // Navigate: go to previous card (or stay on last)
+        if (this.currentStep > 0) this.currentStep--;
+        this.renderClue();
+    },
+
     // ---- Add Clue ----
     addClue() {
         let newStep;
@@ -738,6 +760,7 @@ const HappyHunting = {
 
         const dirty = this.cardDirty[this.currentStep];
         const isLast = this.currentStep === this.hunt.steps.length - 1;
+        const step = this.hunt.steps[this.currentStep];
 
         // ← Previous: always visible except card 1
         this.els['pa-prev'].hidden = this.currentStep === 0;
@@ -745,8 +768,8 @@ const HappyHunting = {
         // Edit: always visible
         this.els['pa-edit'].hidden = false;
 
-        // Add Clue: only on last card, always visible there
-        this.els['pa-add'].hidden = !isLast;
+        // Delete: only on user-added clues
+        this.els['pa-delete'].hidden = !step.isAdded;
 
         // Primary button: text changes based on dirty state
         const primary = this.els['pa-primary'];
@@ -760,6 +783,9 @@ const HappyHunting = {
             primary.innerHTML = 'Next Clue &rarr;';
             primary.className = 'pa-btn pa-primary';
         }
+
+        // Add Clue: only on last card, to the right of primary
+        this.els['pa-add'].hidden = !isLast;
     },
 
     // ---- Visual Interventions ----
@@ -1177,6 +1203,7 @@ const HappyHunting = {
         // Preview action buttons
         this.els['pa-prev'].addEventListener('click', () => this.prevClue());
         this.els['pa-edit'].addEventListener('click', () => this.toggleEdit());
+        this.els['pa-delete'].addEventListener('click', () => this.deleteClue());
         this.els['pa-add'].addEventListener('click', () => this.addClue());
         this.els['pa-primary'].addEventListener('click', () => {
             if (this.cardDirty[this.currentStep]) {
