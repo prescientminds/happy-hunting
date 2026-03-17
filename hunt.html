@@ -106,13 +106,12 @@
                     <div class="diff-pips" id="diff-pips"></div>
                     <button class="diff-step-btn" id="diff-plus">+</button>
                 </div>
-                <!-- Preview: action buttons (state machine) -->
+                <!-- Preview: action buttons -->
                 <div class="preview-actions" id="preview-actions" hidden>
+                    <button id="pa-prev" class="pa-btn pa-prev" hidden>&larr; Previous</button>
                     <button id="pa-edit" class="pa-btn">Edit</button>
-                    <button id="pa-save" class="pa-btn">Save</button>
-                    <button id="pa-next" class="pa-btn pa-primary" hidden>Next Clue &rarr;</button>
-                    <button id="pa-add" class="pa-btn" hidden>+ Add Clue</button>
-                    <button id="pa-send" class="pa-btn pa-send" hidden>Send Hunt</button>
+                    <button id="pa-add" class="pa-btn pa-add" hidden>+ Add Clue</button>
+                    <button id="pa-primary" class="pa-btn pa-primary">Next Clue &rarr;</button>
                 </div>
                 <!-- Interactive: answer input -->
                 <div class="answer-section" id="answer-section">
@@ -170,6 +169,7 @@
         <!-- Send -->
         <div id="send-screen" class="screen">
             <div class="card send-card">
+                <button class="pa-btn pa-prev send-back" id="send-back">&larr; Back</button>
                 <p class="send-label">Send this hunt</p>
                 <h2 class="send-hunt-title" id="send-hunt-title"></h2>
                 <div class="send-form" id="send-hunt-form">

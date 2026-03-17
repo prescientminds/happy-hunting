@@ -16,7 +16,7 @@ const HappyHunting = {
     urlKey: '',
     hasPool: false,
     stepDifficulties: {},
-    cardStates: {},
+    cardDirty: {},
     els: {},
     screens: {},
     isEditing: false,
@@ -47,7 +47,8 @@ const HappyHunting = {
             'stuck-btn', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
             'dice-roll-btn',
-            'pa-edit', 'pa-save', 'pa-next', 'pa-add', 'pa-send', 'preview-actions',
+            'pa-prev', 'pa-edit', 'pa-add', 'pa-primary', 'preview-actions',
+            'send-back',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
             'send-generate-btn', 'send-hunt-result', 'send-hunt-link', 'send-hunt-copy',
@@ -211,6 +212,8 @@ const HappyHunting = {
                 isBlank: false
             };
             this.renderClueContent();
+            this.cardDirty[this.currentStep] = true;
+            this.updatePreviewActions();
         }
     },
 
@@ -356,26 +359,15 @@ const HappyHunting = {
             this.els['answer-section'].hidden = true;
             this.els['fact-reveal'].classList.remove('visible');
 
-            // Navigation arrows
+            // Navigation arrows (carousel)
             this.els['preview-prev'].hidden = this.currentStep === 0;
             const isLast = this.currentStep === this.hunt.steps.length - 1;
             this.els['preview-next'].hidden = isLast && !(isLast && this.currentStep >= 2);
 
-            // Restore edit state from card state
-            const state = this.cardStates[this.currentStep] || 'viewing';
-            if (state === 'editing') {
-                this.els['clue-text'].hidden = true;
-                this.els['clue-edit-field'].hidden = false;
-            } else {
-                this.isEditing = false;
-                this.els['clue-text'].hidden = false;
-                this.els['clue-edit-field'].hidden = true;
-            }
-
-            // Set initial state if none
-            if (!this.cardStates[this.currentStep]) {
-                this.cardStates[this.currentStep] = 'viewing';
-            }
+            // Reset edit state when navigating to a card
+            this.isEditing = false;
+            this.els['clue-text'].hidden = false;
+            this.els['clue-edit-field'].hidden = true;
 
             // Update button states
             this.updatePreviewActions();
@@ -612,22 +604,25 @@ const HappyHunting = {
         this.els['clue-text'].hidden = true;
         this.els['clue-edit-field'].hidden = false;
         this.els['clue-edit-field'].focus();
-        this.cardStates[this.currentStep] = 'editing';
+        this.cardDirty[this.currentStep] = true;
         this.updatePreviewActions();
     },
 
-    saveClue() {
-        const text = this.els['clue-edit-field'].value.trim();
-        if (!text) return;
-        this.isEditing = false;
-        const step = this.hunt.steps[this.currentStep];
-        step.clue = text;
-        this.editedClues[this.currentStep] = true;
-        this.renderClueText(text);
-        this.els['clue-text'].hidden = false;
-        this.els['clue-edit-field'].hidden = true;
+    // ---- Save Current Card (unified — handles edit text + difficulty locks) ----
+    saveCurrentCard() {
+        if (this.isEditing) {
+            const text = this.els['clue-edit-field'].value.trim();
+            if (!text) return;
+            this.isEditing = false;
+            const step = this.hunt.steps[this.currentStep];
+            step.clue = text;
+            this.editedClues[this.currentStep] = true;
+            this.renderClueText(text);
+            this.els['clue-text'].hidden = false;
+            this.els['clue-edit-field'].hidden = true;
+        }
         this.lockClue();
-        this.cardStates[this.currentStep] = 'saved';
+        this.cardDirty[this.currentStep] = false;
         this.updatePreviewActions();
     },
 
@@ -651,6 +646,8 @@ const HappyHunting = {
                     pip.classList.toggle('active', parseInt(pip.dataset.level) === idx + 1);
                 });
             }
+            this.cardDirty[this.currentStep] = true;
+            this.updatePreviewActions();
             this.renderPeekCards();
         }, 600);
     },
@@ -695,7 +692,7 @@ const HappyHunting = {
         this.hunt.steps.push(newStep);
         this.currentStep = this.hunt.steps.length - 1;
         this.stepDifficulties[this.currentStep] = 0;
-        this.cardStates[this.currentStep] = 'viewing';
+        this.cardDirty[this.currentStep] = false;
 
         // Cost tracking
         this.addedCluesCount++;
@@ -732,40 +729,36 @@ const HappyHunting = {
         }
     },
 
-    // ---- Preview Actions State Machine ----
+    // ---- Preview Actions ----
     updatePreviewActions() {
         if (!this.isPreview) return;
         const actions = this.els['preview-actions'];
         if (!actions) return;
         actions.hidden = false;
 
-        const state = this.cardStates[this.currentStep] || 'viewing';
+        const dirty = this.cardDirty[this.currentStep];
         const isLast = this.currentStep === this.hunt.steps.length - 1;
 
-        // Hide all first
-        this.els['pa-edit'].hidden = true;
-        this.els['pa-save'].hidden = true;
-        this.els['pa-next'].hidden = true;
-        this.els['pa-add'].hidden = true;
-        this.els['pa-send'].hidden = true;
+        // ← Previous: always visible except card 1
+        this.els['pa-prev'].hidden = this.currentStep === 0;
 
-        if (state === 'viewing') {
-            this.els['pa-edit'].hidden = false;
-            this.els['pa-edit'].disabled = false;
-            this.els['pa-save'].hidden = false;
-        } else if (state === 'editing') {
-            this.els['pa-edit'].hidden = false;
-            this.els['pa-edit'].disabled = true;
-            this.els['pa-save'].hidden = false;
-        } else if (state === 'saved') {
-            if (isLast) {
-                this.els['pa-edit'].hidden = false;
-                this.els['pa-edit'].disabled = false;
-                this.els['pa-add'].hidden = false;
-                this.els['pa-send'].hidden = false;
-            } else {
-                this.els['pa-next'].hidden = false;
-            }
+        // Edit: always visible
+        this.els['pa-edit'].hidden = false;
+
+        // Add Clue: only on last card, always visible there
+        this.els['pa-add'].hidden = !isLast;
+
+        // Primary button: text changes based on dirty state
+        const primary = this.els['pa-primary'];
+        if (dirty) {
+            primary.innerHTML = 'Save';
+            primary.className = 'pa-btn pa-primary';
+        } else if (isLast) {
+            primary.innerHTML = 'Send Hunt';
+            primary.className = 'pa-btn pa-send';
+        } else {
+            primary.innerHTML = 'Next Clue &rarr;';
+            primary.className = 'pa-btn pa-primary';
         }
     },
 
@@ -1181,14 +1174,26 @@ const HappyHunting = {
             if (pip) this.setDifficulty(parseInt(pip.dataset.level));
         });
 
-        // Preview action buttons (state machine)
+        // Preview action buttons
+        this.els['pa-prev'].addEventListener('click', () => this.prevClue());
         this.els['pa-edit'].addEventListener('click', () => this.toggleEdit());
-        this.els['pa-save'].addEventListener('click', () => this.saveClue());
-        this.els['pa-next'].addEventListener('click', () => { this.lockClue(); this.previewNext(); });
         this.els['pa-add'].addEventListener('click', () => this.addClue());
-        this.els['pa-send'].addEventListener('click', () => this.showSendScreen());
+        this.els['pa-primary'].addEventListener('click', () => {
+            if (this.cardDirty[this.currentStep]) {
+                this.saveCurrentCard();
+            } else if (this.currentStep === this.hunt.steps.length - 1) {
+                this.showSendScreen();
+            } else {
+                this.lockClue();
+                this.previewNext();
+            }
+        });
 
         // Send screen
+        this.els['send-back'].addEventListener('click', () => {
+            this.currentStep = this.hunt.steps.length - 1;
+            this.renderClue();
+        });
         this.els['send-promo-apply'].addEventListener('click', () => this.checkSendPromo());
         this.els['send-generate-btn'].addEventListener('click', () => this.generateSendLink());
         this.els['send-hunt-copy'].addEventListener('click', () => this.copySendLink());

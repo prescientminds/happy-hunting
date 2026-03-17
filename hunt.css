@@ -449,9 +449,9 @@ body {
 }
 
 .clue-text {
-    font-size: 1.05em;
-    line-height: 1.75;
-    margin-bottom: 24px;
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
 
@@ -679,8 +679,8 @@ body {
     padding: 10px 14px;
     font-size: 1em;
     font-family: inherit;
-    background: rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(128,128,128,0.25);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.3);
     border-radius: 4px;
     color: inherit;
     outline: none;
@@ -688,7 +688,13 @@ body {
     box-sizing: border-box;
 }
 .send-card .send-form input:focus { border-color: #c9a84c; }
-.send-card .send-form input::placeholder { color: rgba(128,128,128,0.5); }
+.send-card .send-form input::placeholder { color: rgba(180,170,150,0.7); }
+.skin-ransom .send-card .send-form input { background: rgba(255,255,255,0.25); color: #1a1a1a; }
+.skin-ransom .send-card .send-form input::placeholder { color: #6a5a48; }
+.skin-script .send-card .send-form input { background: rgba(255,255,255,0.08); color: #f5f0e8; }
+.skin-script .send-card .send-form input::placeholder { color: #8a7a68; }
+.skin-napkin .send-card .send-form input { background: rgba(255,255,255,0.6); color: #2c2c2c; }
+.skin-napkin .send-card .send-form input::placeholder { color: #8a7a68; }
 .send-promo-row {
     display: flex;
     gap: 8px;
@@ -2400,17 +2406,18 @@ body.hh-landing {
 .skin-ransom .diff-pip.active { background: #3d2b1a; border-color: #3d2b1a; color: #f5f0e8; }
 .skin-napkin .diff-pip.active { background: #5a5040; border-color: #5a5040; color: #f8f4ee; }
 
-/* ---- Preview Actions (state machine buttons) ---- */
+/* ---- Preview Actions ---- */
 .preview-actions {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    min-height: 48px;
     padding: 12px 0 4px;
 }
 .pa-btn {
-    padding: 8px 20px;
-    font-size: 0.8em;
+    padding: 8px 16px;
+    font-size: 0.75em;
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -2420,27 +2427,54 @@ body.hh-landing {
     color: inherit;
     cursor: pointer;
     transition: all 0.2s;
+    white-space: nowrap;
 }
 .pa-btn:hover { background: rgba(201, 168, 76, 0.12); border-color: rgba(201, 168, 76, 0.5); }
-.pa-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+/* ← Previous */
+.pa-btn.pa-prev {
+    opacity: 0.6;
+    font-size: 0.7em;
+}
+.pa-btn.pa-prev:hover { opacity: 1; }
+/* Primary action (Next Clue / Save / Send Hunt) */
 .pa-btn.pa-primary {
     background: rgba(201, 168, 76, 0.15);
     border-color: #c9a84c;
     font-weight: 600;
+    margin-left: auto;
 }
 .pa-btn.pa-primary:hover { background: rgba(201, 168, 76, 0.25); }
+/* Send Hunt (applied via JS class swap) */
 .pa-btn.pa-send {
     background: #c9a84c;
     border-color: #c9a84c;
     color: #111;
     font-weight: 600;
-    padding: 10px 28px;
+    padding: 8px 24px;
+    margin-left: auto;
 }
 .pa-btn.pa-send:hover { background: #d4b85c; }
 .skin-ransom .pa-btn.pa-send { background: #3d2b1a; color: #f5f0e8; border-color: #3d2b1a; }
 .skin-ransom .pa-btn.pa-send:hover { background: #2a1c0f; }
 .skin-napkin .pa-btn.pa-send { background: #5a5040; color: #f8f4ee; border-color: #5a5040; }
 .skin-napkin .pa-btn.pa-send:hover { background: #4a4030; }
+/* Add Clue — prominent accent */
+.pa-btn.pa-add {
+    background: rgba(106, 191, 105, 0.15);
+    border-color: #6abf69;
+    color: #6abf69;
+    font-weight: 600;
+}
+.pa-btn.pa-add:hover { background: rgba(106, 191, 105, 0.25); }
+.skin-ransom .pa-btn.pa-add { background: rgba(106, 191, 105, 0.2); border-color: #4a9a49; color: #2d5a1e; }
+.skin-napkin .pa-btn.pa-add { background: rgba(106, 191, 105, 0.15); border-color: #4a9a49; color: #3a6a2a; }
+/* Send screen back button */
+.send-back {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+}
 
 /* ---- Answer Selector (pill bar) ---- */
 .answer-selector {
