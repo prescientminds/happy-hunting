@@ -32,6 +32,18 @@ const hunts = [
             label: 'Unidad Park, Beverly Blvd & Glendale Blvd',
             transit: 'Metro B Line (Red) to Vermont/Beverly, walk 5 min west'
         },
+        routeMap: {
+            stops: [
+                { lat: 34.0634, lng: -118.2575, ring: 1 },
+                { lat: 34.066, lng: -118.258, ring: 2 },
+                { lat: 34.0664, lng: -118.253, ring: 3 }
+            ],
+            streets: [
+                { name: 'Beverly Blvd', from: [34.063, -118.260], to: [34.063, -118.252] },
+                { name: 'Temple St', from: [34.067, -118.260], to: [34.067, -118.251] },
+                { name: 'Glendale Blvd', from: [34.062, -118.258], to: [34.068, -118.254] }
+            ]
+        },
         theme: 'Mayors, Fires, and the Man Who Built Temple Street',
         totalWalkingDistance: '~0.3 miles',
         narrativeArc: 'From a French mayor\'s infrastructure legacy, through the fire stations that once protected this hillside, to a bar that transforms Southern tradition with laboratory precision.',
@@ -52,6 +64,19 @@ const hunts = [
             lng: -118.253,
             label: 'Broadway & 7th St (Route 66 Terminus)',
             transit: 'Metro B/D Line to Pershing Square, walk 2 blocks south'
+        },
+        routeMap: {
+            stops: [
+                { lat: 34.0463, lng: -118.253, ring: 1 },
+                { lat: 34.0475, lng: -118.2539, ring: 2 },
+                { lat: 34.047, lng: -118.2557, ring: 3 }
+            ],
+            streets: [
+                { name: '7th St', from: [34.047, -118.251], to: [34.047, -118.258] },
+                { name: 'Broadway', from: [34.044, -118.253], to: [34.049, -118.253] },
+                { name: 'Olive St', from: [34.044, -118.256], to: [34.049, -118.256] },
+                { name: 'Spring St', from: [34.044, -118.2545], to: [34.049, -118.2545] }
+            ]
         },
         theme: 'Charity, Grasshoppers, and the Girl Named Spring',
         totalWalkingDistance: '~0.35 miles',
@@ -74,6 +99,18 @@ const hunts = [
             label: 'Capitol Records Building, Vine St & Hollywood Blvd',
             transit: 'Metro B Line (Red) to Hollywood/Vine, street level'
         },
+        routeMap: {
+            stops: [
+                { lat: 34.1031, lng: -118.3262, ring: 1 },
+                { lat: 34.1012, lng: -118.3294, ring: 2 },
+                { lat: 34.102, lng: -118.326, ring: 3 }
+            ],
+            streets: [
+                { name: 'Hollywood Blvd', from: [34.1018, -118.322], to: [34.1018, -118.332] },
+                { name: 'Vine St', from: [34.100, -118.327], to: [34.104, -118.327] },
+                { name: 'Cahuenga Blvd', from: [34.100, -118.330], to: [34.104, -118.330] }
+            ]
+        },
         theme: 'A Fox Path, a Disgraced Vintner, and the Boulevard That Wasn\'t',
         totalWalkingDistance: '~0.35 miles',
         narrativeArc: 'An indigenous footpath. A disgraced man\'s street renamed for a senator\'s grapes. And a boulevard whose origin story no one can agree on — leading to a bar that\'s been telling stories since 1934.',
@@ -94,6 +131,18 @@ const hunts = [
             lng: -118.261,
             label: 'Angelus Temple, Glendale Blvd & Park Ave',
             transit: 'Metro B Line (Red) to Vermont/Sunset, walk 10 min east on Sunset'
+        },
+        routeMap: {
+            stops: [
+                { lat: 34.0763, lng: -118.261, ring: 1 },
+                { lat: 34.0743, lng: -118.2608, ring: 2 },
+                { lat: 34.077, lng: -118.2589, ring: 3 }
+            ],
+            streets: [
+                { name: 'Glendale Blvd', from: [34.074, -118.262], to: [34.078, -118.257] },
+                { name: 'Echo Park Ave', from: [34.073, -118.260], to: [34.078, -118.259] },
+                { name: 'Sunset Blvd', from: [34.077, -118.262], to: [34.077, -118.255] }
+            ]
         },
         theme: 'Chaplin, McPherson, and the Lake That Echoes',
         totalWalkingDistance: '~0.3 miles',
@@ -116,6 +165,18 @@ const hunts = [
             label: 'Chicken Boy, Figueroa St & Ave 56',
             transit: 'Metro A Line (Gold) to Highland Park, walk 5 min north on Figueroa'
         },
+        routeMap: {
+            stops: [
+                { lat: 34.1085, lng: -118.1943, ring: 1 },
+                { lat: 34.109, lng: -118.1937, ring: 2 },
+                { lat: 34.1106, lng: -118.187, ring: 3 }
+            ],
+            streets: [
+                { name: 'Figueroa St', from: [34.107, -118.196], to: [34.112, -118.189] },
+                { name: 'Ave 56', from: [34.1085, -118.196], to: [34.1085, -118.190] },
+                { name: 'York Blvd', from: [34.109, -118.195], to: [34.111, -118.188] }
+            ]
+        },
         theme: 'The Man Who Walked to LA and the Street Named for a Ghost',
         totalWalkingDistance: '~0.3 miles',
         narrativeArc: 'A man walked 3,507 miles from Ohio to build a museum with a tunnel cut into rock. A Prohibition bowling alley hid its whiskey behind doctors\' prescriptions. A governor who never visited LA left his name on a 28-mile street. And at the end: a cave.',
@@ -136,6 +197,18 @@ const hunts = [
             lng: -118.2973,
             label: 'Chapman Plaza, 3451 W 6th St',
             transit: 'Metro B/D Line to Wilshire/Normandie, walk 2 blocks north'
+        },
+        routeMap: {
+            stops: [
+                { lat: 34.0639, lng: -118.2973, ring: 1 },
+                { lat: 34.0621, lng: -118.297, ring: 2 },
+                { lat: 34.0597, lng: -118.2972, ring: 3 }
+            ],
+            streets: [
+                { name: '6th St', from: [34.064, -118.300], to: [34.064, -118.294] },
+                { name: 'Wilshire Blvd', from: [34.062, -118.300], to: [34.062, -118.294] },
+                { name: 'Normandie Ave', from: [34.058, -118.297], to: [34.065, -118.297] }
+            ]
         },
         theme: 'Bean Patches, Blue Tiles, and the Night Bobby Died',
         totalWalkingDistance: '~0.25 miles',
@@ -202,6 +275,7 @@ for (const hunt of hunts) {
         huntId: hunt.huntId,
         bar: hunt.bar,
         startLocation: hunt.startLocation,
+        routeMap: hunt.routeMap,
         theme: hunt.theme,
         totalWalkingDistance: hunt.totalWalkingDistance,
         narrativeArc: hunt.narrativeArc,

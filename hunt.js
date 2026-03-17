@@ -50,6 +50,7 @@ const HappyHunting = {
             'clue-edit-btn', 'clue-save-btn',
             'dice-roll-btn',
             'peek-prev', 'peek-next',
+            'route-map',
             'preview-start-btn', 'preview-carousel',
             'cost-bar', 'cost-bar-count', 'cost-bar-total',
             'cost-promo', 'cost-promo-apply', 'cost-checkout'
@@ -79,7 +80,8 @@ const HappyHunting = {
         this.isPreview = (!this.skin || this.skin === 'free' || params.get('preview') === '1') && !this.isInvite;
 
         if (this.isPreview) {
-            this.skin = 'preview';
+            // Default to ransom skin in preview — show the hunt styled, not plain
+            if (!this.skin || this.skin === 'free') this.skin = 'ransom';
             this.els['hunt-back'].hidden = false;
         }
 
@@ -197,8 +199,14 @@ const HappyHunting = {
 
         let pick = sorted.find(c => c.difficulty === level) || sorted[level - 1];
 
-        if (pick.clue !== this.hunt.steps[this.currentStep].clue) {
-            this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
+        const current = this.hunt.steps[this.currentStep];
+        if (pick.clue !== current.clue || current.isBlank) {
+            this.hunt.steps[this.currentStep] = {
+                ...pick,
+                stepNumber: this.currentStep + 1,
+                isAdded: current.isAdded,
+                isBlank: false
+            };
             this.renderClueContent();
             this.resetPreviewAnswer();
         }
@@ -309,8 +317,8 @@ const HappyHunting = {
             }
         }
         if (this.isPreview) {
-            // Preview: show Start button + forward arrow + brand graphic
-            this.els['skin-selector'].style.display = 'none';
+            // Preview: show skin selector + Start button + forward arrow
+            this.els['skin-selector'].style.display = '';
             this.els['begin-btn'].hidden = true;
             this.els['preview-start-btn'].hidden = false;
             this.els['intro-next'].hidden = false;
@@ -376,9 +384,10 @@ const HappyHunting = {
                 this.els['clue-next-btn'].dataset.action = 'next';
             }
 
-            // Peek cards
+            // Peek cards + route map
             this.renderPeekCards();
             this.renderIntervention();
+            this.renderRouteMap();
         } else {
             // Interactive mode: show answers, hide preview elements
             this.els['answer-section'].hidden = false;
@@ -389,6 +398,7 @@ const HappyHunting = {
             this.els['peek-prev'].hidden = true;
             this.els['peek-next'].hidden = true;
             this.els['visual-intervention'].innerHTML = '';
+            this.renderRouteMap();
 
             // Photo vs text answer
             const isPhoto = step.answerType === 'photo';
@@ -427,14 +437,15 @@ const HappyHunting = {
 
     renderClueContent() {
         const step = this.hunt.steps[this.currentStep];
+        if (step.isBlank) {
+            this.els['clue-text'].innerHTML = '<span class="blank-clue-hint">Select a difficulty to see this clue</span>';
+            return;
+        }
         this.renderClueText(step.clue);
     },
 
     renderClueText(text) {
-        if (this.isPreview) {
-            // Preview mode: always plain text
-            this.els['clue-text'].textContent = text;
-        } else if (this.skin === 'ransom') {
+        if (this.skin === 'ransom') {
             this.els['clue-text'].innerHTML = renderRansomText(text);
         } else {
             this.els['clue-text'].textContent = text;
@@ -493,7 +504,6 @@ const HappyHunting = {
     showStartScreen() {
         const sl = this.hunt.startLocation;
         if (!sl) {
-            // No start location data — skip straight to clues
             this.currentStep = 0;
             this.renderClue();
             return;
@@ -501,12 +511,21 @@ const HappyHunting = {
         this.els['start-location'].textContent = sl.label;
         this.els['start-transit'].textContent = sl.transit || '';
         this.els['start-distance'].textContent = '';
+        // In preview mode, show "Continue" instead of geo check
+        this.els['start-checkin-btn'].textContent = this.isPreview ? 'Continue' : "I'm here";
         this.showScreen('start');
     },
 
     checkLocation() {
         const sl = this.hunt.startLocation;
         if (!sl) { this.currentStep = 0; this.renderClue(); return; }
+
+        // Preview mode: skip geolocation, go straight to clues
+        if (this.isPreview) {
+            this.currentStep = 0;
+            this.renderClue();
+            return;
+        }
 
         const btn = this.els['start-checkin-btn'];
         btn.textContent = 'Checking...';
@@ -680,22 +699,27 @@ const HappyHunting = {
     addClue() {
         let newStep;
         if (this.hasPool) {
-            // Pick an unused pool entry, preferring underrepresented rings
+            // Determine which ring to use for the new clue
+            const ringCounts = {};
+            this.hunt.steps.forEach(s => { ringCounts[s.ring] = (ringCounts[s.ring] || 0) + 1; });
             const usedClues = new Set(this.hunt.steps.map(s => s.clue));
             const unused = this.hunt.cluePool.filter(c => !usedClues.has(c.clue));
-            if (unused.length > 0) {
-                // Count ring usage
-                const ringCounts = {};
-                this.hunt.steps.forEach(s => { ringCounts[s.ring] = (ringCounts[s.ring] || 0) + 1; });
-                // Sort unused by ring frequency (least used first)
-                unused.sort((a, b) => (ringCounts[a.ring] || 0) - (ringCounts[b.ring] || 0));
-                const pick = unused[0];
-                newStep = { ...pick, stepNumber: this.hunt.steps.length + 1, isAdded: true };
-            } else {
-                // All pool entries used — pick random
-                const pick = this.hunt.cluePool[Math.floor(Math.random() * this.hunt.cluePool.length)];
-                newStep = { ...pick, stepNumber: this.hunt.steps.length + 1, isAdded: true };
-            }
+            // Pick ring with least usage
+            unused.sort((a, b) => (ringCounts[a.ring] || 0) - (ringCounts[b.ring] || 0));
+            const targetRing = unused.length > 0 ? unused[0].ring : 1;
+
+            // Start blank — user picks difficulty to fill
+            newStep = {
+                stepNumber: this.hunt.steps.length + 1,
+                ring: targetRing,
+                clue: '',
+                answer: '',
+                answerVariants: [],
+                answerType: 'text',
+                historicalFact: '',
+                isAdded: true,
+                isBlank: true
+            };
         } else {
             newStep = {
                 stepNumber: this.hunt.steps.length + 1,
@@ -710,13 +734,14 @@ const HappyHunting = {
 
         this.hunt.steps.push(newStep);
         this.currentStep = this.hunt.steps.length - 1;
+        this.difficultyLevel = 0; // no pip selected yet
 
         // Cost tracking
         this.addedCluesCount++;
         this.updateCostBar();
 
         this.renderClue();
-        if (!this.hasPool || !newStep.clue) {
+        if (!this.hasPool) {
             this.toggleEdit();
         }
     },
@@ -760,6 +785,102 @@ const HappyHunting = {
             '<svg viewBox="0 0 60 60"><g stroke="currentColor" fill="none" stroke-width="0.8"><line x1="5" y1="10" x2="55" y2="10"/><line x1="12" y1="20" x2="48" y2="20"/><line x1="18" y1="30" x2="42" y2="30"/><line x1="23" y1="40" x2="37" y2="40"/><line x1="27" y1="50" x2="33" y2="50"/><line x1="5" y1="10" x2="27" y2="50"/><line x1="55" y1="10" x2="33" y2="50"/></g></svg>'
         ];
         el.innerHTML = svgs[idx];
+    },
+
+    // ---- Route Map ----
+    renderRouteMap() {
+        const el = this.els['route-map'];
+        if (!el) return;
+        const rm = this.hunt.routeMap;
+        if (!rm) { el.innerHTML = ''; return; }
+
+        const bar = this.hunt.bar;
+        const barLat = this.hunt.startLocation?.lat || rm.stops[rm.stops.length - 1].lat;
+        const barLng = this.hunt.startLocation?.lng || rm.stops[rm.stops.length - 1].lng;
+
+        // Collect all points for bounds
+        const pts = [
+            ...rm.stops.map(s => [s.lat, s.lng]),
+            ...rm.streets.flatMap(st => [st.from, st.to])
+        ];
+        const lats = pts.map(p => p[0]);
+        const lngs = pts.map(p => p[1]);
+        const minLat = Math.min(...lats);
+        const maxLat = Math.max(...lats);
+        const minLng = Math.min(...lngs);
+        const maxLng = Math.max(...lngs);
+
+        const W = 300, H = 140, PAD = 28;
+        // LA latitude: 1° lat ≈ 111km, 1° lng ≈ 93km
+        const latScale = 111000;
+        const lngScale = 93000;
+        const meterW = (maxLng - minLng) * lngScale || 100;
+        const meterH = (maxLat - minLat) * latScale || 100;
+        const scaleX = (W - 2 * PAD) / meterW;
+        const scaleY = (H - 2 * PAD) / meterH;
+        const scale = Math.min(scaleX, scaleY);
+        const oX = PAD + ((W - 2 * PAD) - meterW * scale) / 2;
+        const oY = PAD + ((H - 2 * PAD) - meterH * scale) / 2;
+
+        const toX = lng => oX + (lng - minLng) * lngScale * scale;
+        const toY = lat => oY + (maxLat - lat) * latScale * scale;
+
+        // Deterministic wobble
+        const wobble = (seed, amp) => {
+            const x = Math.sin(seed * 127.1 + 311.7) * 43758.5453;
+            return ((x - Math.floor(x)) - 0.5) * amp;
+        };
+
+        let svg = `<svg viewBox="0 0 ${W} ${H}" class="route-map-svg" xmlns="http://www.w3.org/2000/svg">`;
+
+        // Streets — hand-drawn lines
+        rm.streets.forEach((st, si) => {
+            const x1 = toX(st.from[1]), y1 = toY(st.from[0]);
+            const x2 = toX(st.to[1]), y2 = toY(st.to[0]);
+            const mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+            const dx = x2 - x1, dy = y2 - y1;
+            const len = Math.sqrt(dx * dx + dy * dy);
+            const nx = -dy / len, ny = dx / len;
+            const w = wobble(si * 7 + 3, len * 0.04);
+            const cx = mx + nx * w, cy = my + ny * w;
+            svg += `<path d="M${x1.toFixed(1)},${y1.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}" class="rm-street"/>`;
+            // Label
+            const lx = mx + nx * 6, ly = my + ny * 6;
+            let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+            if (angle > 90 || angle < -90) angle += 180;
+            svg += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" transform="rotate(${angle.toFixed(1)} ${lx.toFixed(1)} ${ly.toFixed(1)})" class="rm-label">${st.name}</text>`;
+        });
+
+        // Route path — dashed, connecting stops in order
+        const routePts = rm.stops.map(s => [toX(s.lng), toY(s.lat)]);
+        let pathD = `M${routePts[0][0].toFixed(1)},${routePts[0][1].toFixed(1)}`;
+        for (let i = 1; i < routePts.length; i++) {
+            const px = routePts[i][0], py = routePts[i][1];
+            const ppx = routePts[i - 1][0], ppy = routePts[i - 1][1];
+            const cmx = (ppx + px) / 2 + wobble(i * 13, 4);
+            const cmy = (ppy + py) / 2 + wobble(i * 17, 4);
+            pathD += ` Q${cmx.toFixed(1)},${cmy.toFixed(1)} ${px.toFixed(1)},${py.toFixed(1)}`;
+        }
+        svg += `<path d="${pathD}" class="rm-route"/>`;
+
+        // Stop markers
+        rm.stops.forEach((s, i) => {
+            const x = toX(s.lng), y = toY(s.lat);
+            const active = i === this.currentStep;
+            svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${active ? 7 : 5}" class="rm-stop${active ? ' active' : ''}"/>`;
+            svg += `<text x="${x.toFixed(1)}" y="${(y + 3.5).toFixed(1)}" class="rm-stop-num">${s.ring}</text>`;
+        });
+
+        // Bar marker (destination)
+        const bx = toX(barLng), by = toY(barLat);
+        // Only show if not overlapping stop 1
+        const s1x = routePts[0][0], s1y = routePts[0][1];
+        if (Math.abs(bx - s1x) > 8 || Math.abs(by - s1y) > 8) {
+            svg += `<circle cx="${bx.toFixed(1)}" cy="${by.toFixed(1)}" r="4" class="rm-bar"/>`;
+        }
+
+        svg += '</svg>';
+        el.innerHTML = svg;
     },
 
     // ---- Peek Cards (carousel preview) ----
@@ -922,9 +1043,9 @@ const HappyHunting = {
 
     // ---- Events ----
     bindEvents() {
-        // Begin (interactive mode) → start screen (geo-gated) or clue 1
+        // Begin → start screen (all modes) or clue 1
         this.els['begin-btn'].addEventListener('click', () => {
-            if (this.hunt.startLocation && !this.isPreview) {
+            if (this.hunt.startLocation) {
                 this.showStartScreen();
             } else {
                 this.currentStep = 0;
@@ -932,10 +1053,14 @@ const HappyHunting = {
             }
         });
 
-        // Intro forward arrow (preview mode)
+        // Intro forward arrow (preview mode) → also through start screen
         this.els['intro-next'].addEventListener('click', () => {
-            this.currentStep = 0;
-            this.renderClue();
+            if (this.hunt.startLocation) {
+                this.showStartScreen();
+            } else {
+                this.currentStep = 0;
+                this.renderClue();
+            }
         });
 
         // Start screen check-in
@@ -1037,10 +1162,14 @@ const HappyHunting = {
             }
         });
 
-        // Preview Start button
+        // Preview Start button → also through start screen
         this.els['preview-start-btn'].addEventListener('click', () => {
-            this.currentStep = 0;
-            this.renderClue();
+            if (this.hunt.startLocation) {
+                this.showStartScreen();
+            } else {
+                this.currentStep = 0;
+                this.renderClue();
+            }
         });
 
         // I'm stuck (interactive mode)

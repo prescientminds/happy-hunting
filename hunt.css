@@ -2598,6 +2598,77 @@ body.hh-landing {
 
 
 /* ============================================
+   ROUTE MAP (hand-drawn sketch)
+   ============================================ */
+
+.route-map { margin: -8px -4px 16px; }
+.route-map-svg { width: 100%; height: auto; display: block; }
+.rm-street {
+    stroke: currentColor;
+    stroke-width: 0.7;
+    fill: none;
+    opacity: 0.15;
+}
+.rm-label {
+    font-size: 5.5px;
+    fill: currentColor;
+    opacity: 0.35;
+    text-anchor: middle;
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+}
+.rm-route {
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-dasharray: 5 3;
+    fill: none;
+    opacity: 0.45;
+    stroke-linecap: round;
+}
+.rm-stop {
+    fill: currentColor;
+    opacity: 0.2;
+}
+.rm-stop.active {
+    opacity: 0.8;
+}
+.rm-stop-num {
+    font-size: 6px;
+    fill: white;
+    text-anchor: middle;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+.rm-bar {
+    fill: currentColor;
+    opacity: 0.5;
+}
+
+/* Skin overrides for route map */
+.skin-ransom .rm-label { font-family: 'Special Elite', cursive; font-size: 5px; }
+.skin-ransom .rm-stop-num { fill: #f5f0e8; }
+.skin-script .rm-route { stroke: #c9a84c; opacity: 0.35; }
+.skin-script .rm-stop.active { fill: #c9a84c; }
+.skin-script .rm-label { font-family: 'Cormorant Garamond', serif; font-style: italic; }
+.skin-napkin .rm-label { font-size: 6px; }
+.skin-napkin .rm-stop-num { fill: #f8f4ee; }
+
+
+/* ============================================
+   BLANK CLUE HINT (new clue card)
+   ============================================ */
+
+.blank-clue-hint {
+    font-size: 0.9em;
+    opacity: 0.35;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    padding: 32px 0;
+}
+
+
+/* ============================================
    START LOCATION SCREEN (geo-gated)
    ============================================ */
 
