@@ -15,7 +15,8 @@ const HappyHunting = {
     recipientName: '',
     urlKey: '',
     hasPool: false,
-    difficultyLevel: 1,
+    stepDifficulties: {},
+    cardStates: {},
     els: {},
     screens: {},
     isEditing: false,
@@ -38,17 +39,18 @@ const HappyHunting = {
             'envelope', 'code-row',
             'difficulty-selector', 'diff-pips', 'diff-minus', 'diff-plus',
             'intro-next', 'intro-brand-graphic', 'amor-fati-row',
-            'clue-next-btn',
             'answer-row-text', 'answer-row-photo',
             'photo-input', 'photo-capture-btn', 'photo-thumbnail-wrap', 'photo-thumbnail',
             'start-location', 'start-transit', 'start-distance', 'start-checkin-btn',
             'arrival-gallery', 'arrival-gallery-grid',
             'preview-prev', 'preview-next',
-            'stuck-btn', 'see-answer-btn', 'preview-answer-block',
-            'preview-answer-text', 'hunt-back',
+            'stuck-btn', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
-            'clue-edit-btn', 'clue-save-btn',
             'dice-roll-btn',
+            'pa-edit', 'pa-save', 'pa-next', 'pa-add', 'pa-send', 'preview-actions',
+            'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
+            'send-promo', 'send-promo-apply', 'send-promo-feedback',
+            'send-generate-btn', 'send-hunt-result', 'send-hunt-link', 'send-hunt-copy',
             'peek-prev', 'peek-next',
             'route-map',
             'preview-start-btn', 'preview-carousel',
@@ -63,6 +65,7 @@ const HappyHunting = {
             start: document.getElementById('start-screen'),
             clue: document.getElementById('clue-screen'),
             arrival: document.getElementById('arrival-screen'),
+            send: document.getElementById('send-screen'),
             error: document.getElementById('error-screen')
         };
     },
@@ -188,7 +191,7 @@ const HappyHunting = {
         const max = sorted.length || 1;
         if (level < 1) level = 1;
         if (level > max) level = max;
-        this.difficultyLevel = level;
+        this.stepDifficulties[this.currentStep] = level;
 
         // Update pip highlights
         this.els['diff-pips'].querySelectorAll('.diff-pip').forEach(pip => {
@@ -208,7 +211,6 @@ const HappyHunting = {
                 isBlank: false
             };
             this.renderClueContent();
-            this.resetPreviewAnswer();
         }
     },
 
@@ -217,10 +219,11 @@ const HappyHunting = {
         if (!pipsEl) return;
         const candidates = this.getPoolForCurrentRing();
         const count = candidates.length || 1;
+        const currentDiff = this.stepDifficulties[this.currentStep] || 1;
         pipsEl.innerHTML = '';
         for (let i = 1; i <= count; i++) {
             const pip = document.createElement('button');
-            pip.className = 'diff-pip' + (i === this.difficultyLevel ? ' active' : '');
+            pip.className = 'diff-pip' + (i === currentDiff ? ' active' : '');
             pip.dataset.level = i;
             pip.textContent = i;
             pipsEl.appendChild(pip);
@@ -349,40 +352,33 @@ const HappyHunting = {
         }
 
         if (this.isPreview) {
-            const isPhoto = step.answerType === 'photo';
-            // Preview mode: hide interactive answer, show consolidated answer block
+            // Preview mode: hide interactive answer, show preview actions
             this.els['answer-section'].hidden = true;
-            this.els['preview-answer-block'].hidden = false;
-            this.els['see-answer-btn'].hidden = false;
-            this.els['see-answer-btn'].textContent = isPhoto ? 'Continue' : 'See Answer';
-            this.els['preview-answer-text'].textContent = '';
-            this.els['preview-answer-text'].hidden = true;
             this.els['fact-reveal'].classList.remove('visible');
 
             // Navigation arrows
             this.els['preview-prev'].hidden = this.currentStep === 0;
             const isLast = this.currentStep === this.hunt.steps.length - 1;
-            // Show next arrow if not last, OR if last and past 3 cards (add clue available)
             this.els['preview-next'].hidden = isLast && !(isLast && this.currentStep >= 2);
 
-            // Edit state
-            this.isEditing = false;
-            this.els['clue-text'].hidden = false;
-            this.els['clue-edit-field'].hidden = true;
-            this.els['clue-edit-btn'].hidden = false;
-            this.els['clue-save-btn'].hidden = true;
-
-            // Next Clue button text
-            if (isLast && this.currentStep >= 2) {
-                this.els['clue-next-btn'].innerHTML = '+ Add Clue &mdash; $1';
-                this.els['clue-next-btn'].dataset.action = 'add';
-            } else if (isLast) {
-                this.els['clue-next-btn'].innerHTML = 'Done &rarr;';
-                this.els['clue-next-btn'].dataset.action = 'done';
+            // Restore edit state from card state
+            const state = this.cardStates[this.currentStep] || 'viewing';
+            if (state === 'editing') {
+                this.els['clue-text'].hidden = true;
+                this.els['clue-edit-field'].hidden = false;
             } else {
-                this.els['clue-next-btn'].innerHTML = 'Next Clue &rarr;';
-                this.els['clue-next-btn'].dataset.action = 'next';
+                this.isEditing = false;
+                this.els['clue-text'].hidden = false;
+                this.els['clue-edit-field'].hidden = true;
             }
+
+            // Set initial state if none
+            if (!this.cardStates[this.currentStep]) {
+                this.cardStates[this.currentStep] = 'viewing';
+            }
+
+            // Update button states
+            this.updatePreviewActions();
 
             // Peek cards + route map
             this.renderPeekCards();
@@ -391,7 +387,7 @@ const HappyHunting = {
         } else {
             // Interactive mode: show answers, hide preview elements
             this.els['answer-section'].hidden = false;
-            this.els['preview-answer-block'].hidden = true;
+            this.els['preview-actions'].hidden = true;
             this.els['preview-prev'].hidden = true;
             this.els['preview-next'].hidden = true;
             this.els['amor-fati-row'].hidden = true;
@@ -608,41 +604,6 @@ const HappyHunting = {
         this.els['answer-input'].select();
     },
 
-    // ---- Preview: See Answer (toggle) / Continue (photo) ----
-    toggleAnswer() {
-        const step = this.hunt.steps[this.currentStep];
-        // Photo clues in preview: "Continue" skips to fact reveal
-        if (step.answerType === 'photo') {
-            this.els['fact-text'].textContent = step.historicalFact || '';
-            this.els['fact-reveal'].classList.add('visible');
-            this.els['see-answer-btn'].hidden = true;
-            return;
-        }
-
-        const isVisible = !this.els['preview-answer-text'].hidden;
-        if (isVisible) {
-            // Hide answer
-            this.els['preview-answer-text'].hidden = true;
-            this.els['preview-answer-text'].textContent = '';
-            this.els['see-answer-btn'].textContent = 'See Answer';
-        } else {
-            // Show answer
-            const answer = step.answer || '(no answer set)';
-            this.els['preview-answer-text'].textContent = answer;
-            this.els['preview-answer-text'].hidden = false;
-            this.els['see-answer-btn'].textContent = 'Hide Answer';
-        }
-    },
-
-    // ---- Preview: Reset Answer on Difficulty Change ----
-    resetPreviewAnswer() {
-        if (!this.isPreview) return;
-        this.els['see-answer-btn'].hidden = false;
-        this.els['see-answer-btn'].textContent = 'See Answer';
-        this.els['preview-answer-text'].textContent = '';
-        this.els['preview-answer-text'].hidden = true;
-    },
-
     // ---- Edit Clue ----
     toggleEdit() {
         this.isEditing = true;
@@ -651,8 +612,8 @@ const HappyHunting = {
         this.els['clue-text'].hidden = true;
         this.els['clue-edit-field'].hidden = false;
         this.els['clue-edit-field'].focus();
-        this.els['clue-edit-btn'].hidden = true;
-        this.els['clue-save-btn'].hidden = false;
+        this.cardStates[this.currentStep] = 'editing';
+        this.updatePreviewActions();
     },
 
     saveClue() {
@@ -665,9 +626,9 @@ const HappyHunting = {
         this.renderClueText(text);
         this.els['clue-text'].hidden = false;
         this.els['clue-edit-field'].hidden = true;
-        this.els['clue-edit-btn'].hidden = false;
-        this.els['clue-save-btn'].hidden = true;
         this.lockClue();
+        this.cardStates[this.currentStep] = 'saved';
+        this.updatePreviewActions();
     },
 
     // ---- Dice Roll: Amor Fati ----
@@ -681,11 +642,10 @@ const HappyHunting = {
             const pick = candidates[Math.floor(Math.random() * candidates.length)];
             this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
             this.renderClueContent();
-            this.resetPreviewAnswer();
             const sorted = candidates.slice().sort((a, b) => (a.difficulty || 0) - (b.difficulty || 0));
             const idx = sorted.indexOf(pick);
             if (idx >= 0) {
-                this.difficultyLevel = idx + 1;
+                this.stepDifficulties[this.currentStep] = idx + 1;
                 // Highlight the pip it landed on
                 this.els['diff-pips'].querySelectorAll('.diff-pip').forEach(pip => {
                     pip.classList.toggle('active', parseInt(pip.dataset.level) === idx + 1);
@@ -734,7 +694,8 @@ const HappyHunting = {
 
         this.hunt.steps.push(newStep);
         this.currentStep = this.hunt.steps.length - 1;
-        this.difficultyLevel = 0; // no pip selected yet
+        this.stepDifficulties[this.currentStep] = 0;
+        this.cardStates[this.currentStep] = 'viewing';
 
         // Cost tracking
         this.addedCluesCount++;
@@ -768,6 +729,43 @@ const HappyHunting = {
             this.els['cost-promo'].value = '';
             this.els['cost-promo'].placeholder = 'Applied!';
             this.updateCostBar();
+        }
+    },
+
+    // ---- Preview Actions State Machine ----
+    updatePreviewActions() {
+        if (!this.isPreview) return;
+        const actions = this.els['preview-actions'];
+        if (!actions) return;
+        actions.hidden = false;
+
+        const state = this.cardStates[this.currentStep] || 'viewing';
+        const isLast = this.currentStep === this.hunt.steps.length - 1;
+
+        // Hide all first
+        this.els['pa-edit'].hidden = true;
+        this.els['pa-save'].hidden = true;
+        this.els['pa-next'].hidden = true;
+        this.els['pa-add'].hidden = true;
+        this.els['pa-send'].hidden = true;
+
+        if (state === 'viewing') {
+            this.els['pa-edit'].hidden = false;
+            this.els['pa-edit'].disabled = false;
+            this.els['pa-save'].hidden = false;
+        } else if (state === 'editing') {
+            this.els['pa-edit'].hidden = false;
+            this.els['pa-edit'].disabled = true;
+            this.els['pa-save'].hidden = false;
+        } else if (state === 'saved') {
+            if (isLast) {
+                this.els['pa-edit'].hidden = false;
+                this.els['pa-edit'].disabled = false;
+                this.els['pa-add'].hidden = false;
+                this.els['pa-send'].hidden = false;
+            } else {
+                this.els['pa-next'].hidden = false;
+            }
         }
     },
 
@@ -851,20 +849,26 @@ const HappyHunting = {
             svg += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" transform="rotate(${angle.toFixed(1)} ${lx.toFixed(1)} ${ly.toFixed(1)})" class="rm-label">${st.name}</text>`;
         });
 
-        // Route path — dashed, connecting stops in order
-        const routePts = rm.stops.map(s => [toX(s.lng), toY(s.lat)]);
-        let pathD = `M${routePts[0][0].toFixed(1)},${routePts[0][1].toFixed(1)}`;
-        for (let i = 1; i < routePts.length; i++) {
-            const px = routePts[i][0], py = routePts[i][1];
-            const ppx = routePts[i - 1][0], ppy = routePts[i - 1][1];
-            const cmx = (ppx + px) / 2 + wobble(i * 13, 4);
-            const cmy = (ppy + py) / 2 + wobble(i * 17, 4);
-            pathD += ` Q${cmx.toFixed(1)},${cmy.toFixed(1)} ${px.toFixed(1)},${py.toFixed(1)}`;
-        }
-        svg += `<path d="${pathD}" class="rm-route"/>`;
+        // Progressive reveal: show stops up to current step in preview
+        const visibleCount = this.isPreview ? this.currentStep + 1 : rm.stops.length;
+        const visibleStops = rm.stops.slice(0, visibleCount);
 
-        // Stop markers
-        rm.stops.forEach((s, i) => {
+        // Route path — dashed, connecting visible stops in order
+        if (visibleStops.length > 0) {
+            const routePts = visibleStops.map(s => [toX(s.lng), toY(s.lat)]);
+            let pathD = `M${routePts[0][0].toFixed(1)},${routePts[0][1].toFixed(1)}`;
+            for (let i = 1; i < routePts.length; i++) {
+                const px = routePts[i][0], py = routePts[i][1];
+                const ppx = routePts[i - 1][0], ppy = routePts[i - 1][1];
+                const cmx = (ppx + px) / 2 + wobble(i * 13, 4);
+                const cmy = (ppy + py) / 2 + wobble(i * 17, 4);
+                pathD += ` Q${cmx.toFixed(1)},${cmy.toFixed(1)} ${px.toFixed(1)},${py.toFixed(1)}`;
+            }
+            svg += `<path d="${pathD}" class="rm-route"/>`;
+        }
+
+        // Stop markers — visible stops only
+        visibleStops.forEach((s, i) => {
             const x = toX(s.lng), y = toY(s.lat);
             const active = i === this.currentStep;
             svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${active ? 7 : 5}" class="rm-stop${active ? ' active' : ''}"/>`;
@@ -873,10 +877,11 @@ const HappyHunting = {
 
         // Bar marker (destination)
         const bx = toX(barLng), by = toY(barLat);
-        // Only show if not overlapping stop 1
-        const s1x = routePts[0][0], s1y = routePts[0][1];
-        if (Math.abs(bx - s1x) > 8 || Math.abs(by - s1y) > 8) {
-            svg += `<circle cx="${bx.toFixed(1)}" cy="${by.toFixed(1)}" r="4" class="rm-bar"/>`;
+        if (visibleStops.length > 0) {
+            const s1x = toX(visibleStops[0].lng), s1y = toY(visibleStops[0].lat);
+            if (Math.abs(bx - s1x) > 8 || Math.abs(by - s1y) > 8) {
+                svg += `<circle cx="${bx.toFixed(1)}" cy="${by.toFixed(1)}" r="4" class="rm-bar"/>`;
+            }
         }
 
         svg += '</svg>';
@@ -992,7 +997,6 @@ const HappyHunting = {
             this.showArrival();
         } else {
             this.currentStep++;
-            this.difficultyLevel = 1;
             this.renderClue();
         }
     },
@@ -1010,6 +1014,89 @@ const HappyHunting = {
             this.renderClue();
         } else {
             this.showArrival();
+        }
+    },
+
+    // ---- Send Screen ----
+    showSendScreen() {
+        this.els['send-hunt-title'].textContent = this.hunt.theme;
+        this.els['send-hunt-form'].hidden = false;
+        this.els['send-hunt-result'].hidden = true;
+        this.els['send-your-name'].value = '';
+        this.els['send-their-name'].value = '';
+        this.els['send-their-phone'].value = '';
+        this.els['send-promo'].value = '';
+        this.els['send-promo-feedback'].textContent = '';
+        this.els['send-generate-btn'].textContent = 'Generate Invitation \u2014 $5';
+        this.sendPromoApplied = false;
+        this.showScreen('send');
+    },
+
+    checkSendPromo() {
+        const code = this.els['send-promo'].value.trim().toLowerCase();
+        const fb = this.els['send-promo-feedback'];
+        const btn = this.els['send-generate-btn'];
+        if (code === 'prescientminds') {
+            this.sendPromoApplied = true;
+            fb.textContent = 'Applied \u2014 invitation is free';
+            fb.className = 'send-promo-feedback valid';
+            btn.textContent = 'Generate Invitation \u2014 Free';
+        } else if (code.length > 0) {
+            this.sendPromoApplied = false;
+            fb.textContent = 'Invalid code';
+            fb.className = 'send-promo-feedback invalid';
+            btn.textContent = 'Generate Invitation \u2014 $5';
+        } else {
+            this.sendPromoApplied = false;
+            fb.textContent = '';
+            fb.className = 'send-promo-feedback';
+            btn.textContent = 'Generate Invitation \u2014 $5';
+        }
+    },
+
+    generateSendLink() {
+        const senderName = this.els['send-your-name'].value.trim();
+        const recipientName = this.els['send-their-name'].value.trim();
+        const phone = this.els['send-their-phone'].value.replace(/\D/g, '');
+
+        if (!senderName) { this.els['send-your-name'].focus(); return; }
+        if (!recipientName) { this.els['send-their-name'].focus(); return; }
+        if (phone.length < 4) { this.els['send-their-phone'].focus(); return; }
+
+        const last4 = phone.slice(-4);
+        const key = btoa(last4 + ':' + this.hunt.huntId).replace(/=/g, '');
+
+        const base = window.location.href.replace(/hunt\.html.*$/, 'hunt.html');
+        const url = new URL(base);
+        url.search = '';
+        url.searchParams.set('h', btoa(this.hunt.huntId).replace(/=/g, ''));
+        url.searchParams.set('skin', this.skin);
+        url.searchParams.set('from', senderName);
+        url.searchParams.set('to', recipientName);
+        url.searchParams.set('key', key);
+
+        this.els['send-hunt-form'].hidden = true;
+        this.els['send-hunt-result'].hidden = false;
+        this.els['send-hunt-link'].value = url.toString();
+    },
+
+    async copySendLink() {
+        const input = this.els['send-hunt-link'];
+        const btn = this.els['send-hunt-copy'];
+        let copied = false;
+        if (navigator.clipboard && window.isSecureContext) {
+            try { await navigator.clipboard.writeText(input.value); copied = true; } catch (e) { /* fall through */ }
+        }
+        if (!copied) {
+            input.focus();
+            input.select();
+            input.setSelectionRange(0, 99999);
+            try { copied = document.execCommand('copy'); } catch (e) { /* noop */ }
+        }
+        if (copied) {
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => { btn.textContent = orig; }, 2000);
         }
     },
 
@@ -1087,25 +1174,24 @@ const HappyHunting = {
         });
 
         // Difficulty controls — +/- buttons + pip clicks
-        this.els['diff-plus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel + 1));
-        this.els['diff-minus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel - 1));
+        this.els['diff-plus'].addEventListener('click', () => this.setDifficulty((this.stepDifficulties[this.currentStep] || 1) + 1));
+        this.els['diff-minus'].addEventListener('click', () => this.setDifficulty((this.stepDifficulties[this.currentStep] || 1) - 1));
         this.els['diff-pips'].addEventListener('click', e => {
             const pip = e.target.closest('.diff-pip');
             if (pip) this.setDifficulty(parseInt(pip.dataset.level));
         });
 
-        // Next Clue button (preview mode — locks + advances or adds clue)
-        this.els['clue-next-btn'].addEventListener('click', () => {
-            this.lockClue();
-            const action = this.els['clue-next-btn'].dataset.action;
-            if (action === 'add') {
-                this.addClue();
-            } else if (action === 'done') {
-                this.showArrival();
-            } else {
-                this.previewNext();
-            }
-        });
+        // Preview action buttons (state machine)
+        this.els['pa-edit'].addEventListener('click', () => this.toggleEdit());
+        this.els['pa-save'].addEventListener('click', () => this.saveClue());
+        this.els['pa-next'].addEventListener('click', () => { this.lockClue(); this.previewNext(); });
+        this.els['pa-add'].addEventListener('click', () => this.addClue());
+        this.els['pa-send'].addEventListener('click', () => this.showSendScreen());
+
+        // Send screen
+        this.els['send-promo-apply'].addEventListener('click', () => this.checkSendPromo());
+        this.els['send-generate-btn'].addEventListener('click', () => this.generateSendLink());
+        this.els['send-hunt-copy'].addEventListener('click', () => this.copySendLink());
 
         // Cost bar promo
         this.els['cost-promo-apply'].addEventListener('click', () => this.applyPromo());
@@ -1140,13 +1226,6 @@ const HappyHunting = {
             });
             input.addEventListener('focus', () => input.select());
         });
-
-        // See Answer toggle (preview mode)
-        this.els['see-answer-btn'].addEventListener('click', () => this.toggleAnswer());
-
-        // Edit/Save clue (preview mode)
-        this.els['clue-edit-btn'].addEventListener('click', () => this.toggleEdit());
-        this.els['clue-save-btn'].addEventListener('click', () => this.saveClue());
 
         // Dice roll (preview mode)
         this.els['dice-roll-btn'].addEventListener('click', () => this.rollDice());

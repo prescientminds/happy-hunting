@@ -317,24 +317,6 @@ body {
     animation-delay: 0.5s;
 }
 
-.see-answer-btn {
-    padding: 8px 20px;
-    background: none;
-    border: 1px solid rgba(128,128,128,0.3);
-    border-radius: 6px;
-    color: inherit;
-    font-family: inherit;
-    font-size: 0.85em;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-.see-answer-btn:hover { opacity: 1; }
-.preview-answer-text {
-    font-size: 1.1em;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-}
 
 /* Preview arrows */
 .preview-arrow {
@@ -464,25 +446,6 @@ body {
     color: #888;
     margin-right: 4px;
     flex-shrink: 0;
-}
-
-/* ---- Next Clue Button (preview actions) ---- */
-.clue-next-btn {
-    padding: 8px 20px;
-    font-size: 0.8em;
-    font-family: inherit;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    background: transparent;
-    border: 1px solid rgba(201, 168, 76, 0.4);
-    border-radius: 6px;
-    color: inherit;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-}
-.clue-next-btn:hover {
-    border-color: #c9a84c;
-    color: #c9a84c;
 }
 
 .clue-text {
@@ -687,6 +650,92 @@ body {
 .error-card p { margin-bottom: 20px; opacity: 0.7; }
 
 
+/* ---- Send Screen (preview flow) ---- */
+.send-card {
+    text-align: center;
+}
+.send-card .send-label {
+    font-size: 0.75em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+.send-card .send-hunt-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.send-card .send-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+.send-card .send-form input[type="text"],
+.send-card .send-form input[type="tel"] {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1em;
+    font-family: inherit;
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(128,128,128,0.25);
+    border-radius: 4px;
+    color: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+.send-card .send-form input:focus { border-color: #c9a84c; }
+.send-card .send-form input::placeholder { color: rgba(128,128,128,0.5); }
+.send-promo-row {
+    display: flex;
+    gap: 8px;
+}
+.send-promo-row input { flex: 1; }
+.send-promo-btn {
+    padding: 10px 16px;
+    font-size: 0.8em;
+    font-family: inherit;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid rgba(128,128,128,0.25);
+    border-radius: 4px;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.send-promo-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+.send-promo-feedback {
+    font-size: 0.8em;
+    min-height: 1.2em;
+}
+.send-promo-feedback.valid { color: #6abf69; }
+.send-promo-feedback.invalid { color: #e07070; }
+.send-card .send-result {
+    text-align: left;
+}
+.send-card .send-result p {
+    font-size: 0.85em;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+.send-card .send-result input[type="text"] {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.85em;
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(128,128,128,0.2);
+    border-radius: 4px;
+    color: #c9a84c;
+    outline: none;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+
 /* ============================================
    ANIMATIONS
    ============================================ */
@@ -712,48 +761,6 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-
-/* ============================================
-   SKIN: PREVIEW — Clean, neutral read-through
-   ============================================ */
-
-body.skin-preview { background: #111; }
-
-.skin-preview .card {
-    background: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    color: #e8e4dc;
-}
-.skin-preview .intro-label { color: #888; }
-.skin-preview .intro-theme {
-    font-family: 'Playfair Display', serif; font-weight: 700; color: #f5f0e8;
-}
-.skin-preview .intro-meta { color: #888; }
-.skin-preview .step-indicator { color: #888; }
-.skin-preview .clue-text {
-    font-size: 1.05em; line-height: 1.8; color: #e8e4dc;
-}
-.skin-preview .fact-divider { background: rgba(255, 255, 255, 0.1); }
-.skin-preview .fact-text { color: #999; }
-.skin-preview .action-btn { background: #c9a84c; color: #111; }
-.skin-preview .action-btn:hover { background: #d4b85c; }
-.skin-preview .see-answer-btn { color: #888; border-color: rgba(255,255,255,0.15); }
-.skin-preview .preview-answer-text { color: #c9a84c; }
-.skin-preview .arrival-bar {
-    font-family: 'Playfair Display', serif; font-weight: 700; color: #f5f0e8;
-}
-.skin-preview .arrival-label { color: #c9a84c; }
-.skin-preview .arrival-details {
-    background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);
-}
-.skin-preview .arrival-arc { color: #999; }
-.skin-preview .browse-link { color: #888; }
-.skin-preview .diff-label,
-.skin-preview .diff-of { color: #666; }
-.skin-preview .diff-level { color: #c9a84c; }
-.skin-preview .diff-btn { color: #888; border-color: rgba(255,255,255,0.1); }
-.skin-preview .diff-btn:hover { color: #c9a84c; border-color: rgba(201,168,76,0.3); }
 
 /* ============================================
    SKIN: RANSOM — Kraft paper, cut-out letters
@@ -2264,33 +2271,6 @@ body.hh-landing {
     padding: 12px;
 }
 
-/* clue-tools removed — Edit/Save now in clue-actions-row */
-.clue-edit-btn,
-.clue-save-btn {
-    padding: 6px 16px;
-    font-size: 0.75em;
-    font-family: inherit;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.clue-edit-btn {
-    background: transparent;
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    color: inherit;
-    opacity: 0.7;
-}
-.clue-edit-btn:hover { opacity: 1; border-color: rgba(201, 168, 76, 0.5); }
-.clue-save-btn {
-    background: #c9a84c;
-    border: 1px solid #c9a84c;
-    color: #111;
-    font-weight: 600;
-}
-.clue-save-btn:hover { background: #d4b85c; border-color: #d4b85c; }
-
 .dice-roll-btn {
     display: inline-flex;
     align-items: center;
@@ -2420,26 +2400,47 @@ body.hh-landing {
 .skin-ransom .diff-pip.active { background: #3d2b1a; border-color: #3d2b1a; color: #f5f0e8; }
 .skin-napkin .diff-pip.active { background: #5a5040; border-color: #5a5040; color: #f8f4ee; }
 
-/* ---- Clue Actions Row (Edit/Save + Next Clue) ---- */
-.clue-actions-row {
+/* ---- Preview Actions (state machine buttons) ---- */
+.preview-actions {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     justify-content: center;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 12px 0 4px;
 }
-
-/* ---- Preview Answer Block (consolidated) ---- */
-.preview-answer-block {
-    text-align: center;
-    padding: 8px 0 4px;
+.pa-btn {
+    padding: 8px 20px;
+    font-size: 0.8em;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(128,128,128,0.3);
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
 }
-.preview-answer-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin: 8px 0;
+.pa-btn:hover { background: rgba(201, 168, 76, 0.12); border-color: rgba(201, 168, 76, 0.5); }
+.pa-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+.pa-btn.pa-primary {
+    background: rgba(201, 168, 76, 0.15);
+    border-color: #c9a84c;
+    font-weight: 600;
 }
+.pa-btn.pa-primary:hover { background: rgba(201, 168, 76, 0.25); }
+.pa-btn.pa-send {
+    background: #c9a84c;
+    border-color: #c9a84c;
+    color: #111;
+    font-weight: 600;
+    padding: 10px 28px;
+}
+.pa-btn.pa-send:hover { background: #d4b85c; }
+.skin-ransom .pa-btn.pa-send { background: #3d2b1a; color: #f5f0e8; border-color: #3d2b1a; }
+.skin-ransom .pa-btn.pa-send:hover { background: #2a1c0f; }
+.skin-napkin .pa-btn.pa-send { background: #5a5040; color: #f8f4ee; border-color: #5a5040; }
+.skin-napkin .pa-btn.pa-send:hover { background: #4a4030; }
 
 /* ---- Answer Selector (pill bar) ---- */
 .answer-selector {

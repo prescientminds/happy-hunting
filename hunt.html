@@ -106,17 +106,13 @@
                     <div class="diff-pips" id="diff-pips"></div>
                     <button class="diff-step-btn" id="diff-plus">+</button>
                 </div>
-                <!-- Preview: answer + tools row -->
-                <div class="preview-answer-block" id="preview-answer-block" hidden>
-                    <div class="preview-answer-row">
-                        <button class="see-answer-btn" id="see-answer-btn">See Answer</button>
-                        <span class="preview-answer-text" id="preview-answer-text"></span>
-                    </div>
-                    <div class="clue-actions-row" id="clue-actions-row">
-                        <button class="clue-edit-btn" id="clue-edit-btn">Edit</button>
-                        <button class="clue-save-btn" id="clue-save-btn" hidden>Save</button>
-                        <button class="clue-next-btn" id="clue-next-btn">Next Clue &rarr;</button>
-                    </div>
+                <!-- Preview: action buttons (state machine) -->
+                <div class="preview-actions" id="preview-actions" hidden>
+                    <button id="pa-edit" class="pa-btn">Edit</button>
+                    <button id="pa-save" class="pa-btn">Save</button>
+                    <button id="pa-next" class="pa-btn pa-primary" hidden>Next Clue &rarr;</button>
+                    <button id="pa-add" class="pa-btn" hidden>+ Add Clue</button>
+                    <button id="pa-send" class="pa-btn pa-send" hidden>Send Hunt</button>
                 </div>
                 <!-- Interactive: answer input -->
                 <div class="answer-section" id="answer-section">
@@ -167,6 +163,30 @@
                 <div class="arrival-actions">
                     <a href="happy-hunting.html" class="action-btn" style="text-align:center;text-decoration:none;">Send a Hunt</a>
                     <a href="index.html" class="browse-link">Browse Happy Hours &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Send -->
+        <div id="send-screen" class="screen">
+            <div class="card send-card">
+                <p class="send-label">Send this hunt</p>
+                <h2 class="send-hunt-title" id="send-hunt-title"></h2>
+                <div class="send-form" id="send-hunt-form">
+                    <input type="text" id="send-your-name" placeholder="Your name" autocomplete="given-name">
+                    <input type="text" id="send-their-name" placeholder="Their name" autocomplete="off">
+                    <input type="tel" id="send-their-phone" placeholder="Their phone number" autocomplete="tel">
+                    <div class="send-promo-row">
+                        <input type="text" id="send-promo" placeholder="Promo code" autocomplete="off">
+                        <button id="send-promo-apply" class="send-promo-btn">Apply</button>
+                    </div>
+                    <p class="send-promo-feedback" id="send-promo-feedback"></p>
+                    <button id="send-generate-btn" class="action-btn">Generate Invitation &mdash; $5</button>
+                </div>
+                <div class="send-result" id="send-hunt-result" hidden>
+                    <p>Share this link:</p>
+                    <input type="text" id="send-hunt-link" readonly>
+                    <button id="send-hunt-copy" class="action-btn">Copy Link</button>
                 </div>
             </div>
         </div>

@@ -78,10 +78,13 @@ const HappyHuntingLanding = {
             this.renderPreview(huntId, style, hunt);
         }
 
+        const previewHref = style === 'free'
+            ? `hunt.html?hunt=${huntId}`
+            : `hunt.html?hunt=${huntId}&skin=${style}&preview=1`;
         const secondBtn = style === 'free'
             ? `<button class="hunt-card-copy" data-hunt-id="${huntId}">Copy Link</button>`
             : `<button class="hunt-card-send" data-hunt-id="${huntId}" data-skin="${style}">Send Invitation &mdash; $5</button>`;
-        bottom.innerHTML = `<a href="hunt.html?hunt=${huntId}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>${secondBtn}`;
+        bottom.innerHTML = `<a href="${previewHref}" class="hunt-card-preview-btn" target="_blank">Preview Hunt</a>${secondBtn}`;
     },
 
     // ---- Preview Rendering ----
