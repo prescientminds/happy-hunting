@@ -13,16 +13,6 @@
     "ring": 1,
     "difficulty": 2,
     "type": "spotter",
-    "clue": "Find the sidewalk marker at the corner of 7th and Broadway. A historic plaque marks the end point of a famous road. What is the road's number?",
-    "answer": "66",
-    "answerVariants": ["66", "route 66", "us 66", "us route 66"],
-    "verificationNeeded": "Confirm Route 66 sidewalk marker is still present and legible at 7th & Broadway.",
-    "historicalFact": "The Hampton Hotels Save-A-Landmark program installed this marker in 2003. The original western terminus of Route 66 sat at this corner from 1926 to 1936 — before the route was extended to Santa Monica. The famous pier sign came later. This was the real end of the road."
-  },
-  {
-    "ring": 1,
-    "difficulty": 3,
-    "type": "spotter",
     "clue": "Look up at 615 S Broadway. A vertical blade sign spells out a city name in large letters on the facade. What does it say?",
     "answer": "LOS ANGELES",
     "answerVariants": ["los angeles", "LOS ANGELES"],
@@ -30,27 +20,7 @@
   },
   {
     "ring": 1,
-    "difficulty": 4,
-    "type": "spotter",
-    "clue": "Stand on Broadway between 3rd and 9th Streets. You're in the densest concentration of historic theaters in the world. Count the ornate theater marquees visible from street level on this stretch. How many movie palaces were built on this strip between 1911 and 1931?",
-    "answer": "12",
-    "answerVariants": ["12", "twelve"],
-    "verificationNeeded": "Confirm that signage, plaques, or Broadway Historic Theatre District markers reference the count of 12 movie palaces on-site.",
-    "historicalFact": "Twelve ornate movie palaces were built on Broadway between 1911 and 1931 — the Palace (1911), the Million Dollar (1918), the State (1921), the Tower (1927), the Los Angeles (1931), and seven more. It's the first and largest historic theater district listed on the National Register, added in 1979."
-  },
-  {
-    "ring": 1,
-    "difficulty": 5,
-    "type": "persona",
-    "clue": "I made a tramp famous. I made the world cry without saying a word. In January 1931, I needed a theater for my new film — so I helped pay to finish one. My guest that night won a Nobel Prize for explaining how light bends. Find the theater at 615 S Broadway. What style is the facade — French ___?",
-    "answer": "Baroque",
-    "answerVariants": ["baroque", "french baroque"],
-    "verificationNeeded": "Confirm that 'French Baroque' or 'Baroque' appears on any exterior plaque, HCM marker, or signage at the Los Angeles Theatre.",
-    "historicalFact": "Charlie Chaplin helped finance the completion of the Los Angeles Theatre so it could open in time to premiere 'City Lights' on January 30, 1931. He brought Albert Einstein as his date. The theater was designed by S. Charles Lee in French Baroque style — its lobby modeled after the Hall of Mirrors at Versailles."
-  },
-  {
-    "ring": 1,
-    "difficulty": 6,
+    "difficulty": 3,
     "type": "spotter",
     "clue": "At 648 S Broadway, a sign spells out a name above a multi-story facade. The business behind that sign fed 10,000 people for free during the Great Depression. What name is on the sign?",
     "answer": "CLIFTON'S",
@@ -59,16 +29,7 @@
   },
   {
     "ring": 1,
-    "difficulty": 7,
-    "type": "connector",
-    "clue": "Clifton's Cafeteria at 648 S Broadway once ran a second location — Clifton's Silver Spoon — in a jewelry emporium building at 515 W 7th St. That building is your final destination tonight. The Silver Spoon's decorating style left something behind in the new tenant's space. Walk into the bar later and look for mounted animals on the walls. What kind of decorations are they?",
-    "answer": "Taxidermy",
-    "answerVariants": ["taxidermy", "mounted animals", "animal heads", "taxidermied animals"],
-    "historicalFact": "Clifton's Silver Spoon Cafeteria occupied the Brock & Company building at 515 W 7th from 1974 until Cedd Moses opened Seven Grand there in 2007. The taxidermy throughout Seven Grand descends from the Clifton's aesthetic — a hunting-lodge-meets-cafeteria style that became the whiskey bar's signature."
-  },
-  {
-    "ring": 1,
-    "difficulty": 8,
+    "difficulty": 4,
     "type": "spotter",
     "clue": "Walk to 636 S Broadway — an ornate theater facade with the word PALACE on its marquee. This is the oldest surviving Orpheum theater in the United States, opened in 1911. Harry Houdini, Will Rogers, and Fred Astaire all performed on its stage. Look at the marquee. What single word is displayed in the largest letters?",
     "answer": "PALACE",
@@ -78,23 +39,12 @@
   },
   {
     "ring": 1,
-    "difficulty": 9,
-    "type": "spotter",
-    "clue": "The Los Angeles Theatre facade has ornate detailing in a specific material above its entrance and along its Broadway frontage — the same material used on dozens of DTLA buildings from this era, fired and glazed into decorative panels. Look at the facade. What is the material?",
-    "answer": "Terra cotta",
-    "answerVariants": ["terra cotta", "terracotta", "terra-cotta"],
-    "verificationNeeded": "Confirm terra cotta detailing is visible and identifiable on the Los Angeles Theatre facade from street level.",
-    "historicalFact": "Glazed terra cotta was the defining material of DTLA's golden age. Cheaper than carved stone but capable of intricate ornamentation, it let architects like S. Charles Lee create French Baroque fantasies on Broadway budgets. The Los Angeles Theatre's terra cotta facade has survived 95 years of sun, smog, and earthquakes."
-  },
-  {
-    "ring": 1,
-    "difficulty": 10,
+    "difficulty": 5,
     "type": "connector",
-    "clue": "Two buildings on this block opened during the same crisis: the Los Angeles Theatre at 615 S Broadway (1931) and Clifton's Cafeteria at 648 S Broadway (1931). One sold fantasy — a French Baroque lobby modeled after Versailles. The other sold survival — free meals, no questions asked. Both are still standing. Look at both facades. The theater's facade uses glazed terra cotta. Clifton's facade has a different look — more organic, with forest and nature elements visible from the street. What natural feature dominates Clifton's exterior design?",
-    "answer": "Trees",
-    "answerVariants": ["trees", "redwood trees", "redwoods", "a tree", "forest", "redwood"],
-    "verificationNeeded": "Confirm nature/forest theming is visible on Clifton's exterior facade from street level at 648 S Broadway.",
-    "historicalFact": "Both buildings opened in 1931 — the worst year of the Great Depression. The Los Angeles Theatre offered escape: a 2,000-seat palace where you forgot you were broke. Clifton's offered sustenance: a cafeteria where you ate whether you could pay or not. The theater's lobby was modeled after Versailles. Clifton's interior was modeled after the Santa Cruz Mountains — rock sculptor Francois Scotti built a 20-foot waterfall and faux redwood trees that concealed the steel columns. One building hid your poverty in glamour, the other hid it in nature."
+    "clue": "Clifton's Cafeteria at 648 S Broadway once ran a second location — Clifton's Silver Spoon — in a jewelry emporium building at 515 W 7th St. That building is your final destination tonight. The Silver Spoon's decorating style left something behind in the new tenant's space. Walk into the bar later and look for mounted animals on the walls. What kind of decorations are they?",
+    "answer": "Taxidermy",
+    "answerVariants": ["taxidermy", "mounted animals", "animal heads", "taxidermied animals"],
+    "historicalFact": "Clifton's Silver Spoon Cafeteria occupied the Brock & Company building at 515 W 7th from 1974 until Cedd Moses opened Seven Grand there in 2007. The taxidermy throughout Seven Grand descends from the Clifton's aesthetic — a hunting-lodge-meets-cafeteria style that became the whiskey bar's signature."
   },
   {
     "ring": 2,
@@ -110,16 +60,6 @@
     "ring": 2,
     "difficulty": 2,
     "type": "spotter",
-    "clue": "Look at the front doors of the building at 617 S Olive St. Two figures are carved into the glass panels. What are the two figures holding between them?",
-    "answer": "A mission bell",
-    "answerVariants": ["a bell", "bell", "mission bell", "a mission bell", "California mission bell"],
-    "verificationNeeded": "Confirm Lalique glass doors with two angels holding a mission bell are visible from street without entering the building.",
-    "historicalFact": "Rene Lalique carved two angels holding a California mission bell into lead crystal — each door panel 7.5 feet tall. These are believed to be the largest panels of lead crystal Lalique ever produced. A haberdasher from LA saw a glass pavilion in Paris and decided his clothing store needed the same thing."
-  },
-  {
-    "ring": 2,
-    "difficulty": 3,
-    "type": "spotter",
     "clue": "The figures on the Oviatt Building doors aren't people — they have wings. What are they?",
     "answer": "Angels",
     "answerVariants": ["angels", "two angels", "angel"],
@@ -128,7 +68,7 @@
   },
   {
     "ring": 2,
-    "difficulty": 4,
+    "difficulty": 3,
     "type": "spotter",
     "clue": "Count the stories on the Oviatt Building at 617 S Olive St. How many floors does it have?",
     "answer": "12",
@@ -137,17 +77,7 @@
   },
   {
     "ring": 2,
-    "difficulty": 5,
-    "type": "persona",
-    "clue": "I sold suits to the richest men in Los Angeles. In 1925, I visited an exposition in Paris and saw a glass pavilion that changed my life. I shipped 30 tons of crystal across the Atlantic to decorate my building. Find my doors at 617 S Olive. The material they're made of has a French name — what is it?",
-    "answer": "Lalique",
-    "answerVariants": ["lalique", "Lalique", "René Lalique", "Rene Lalique"],
-    "verificationNeeded": "Confirm 'Lalique' is referenced on any plaque, HCM marker, or signage at or near the Oviatt Building entrance.",
-    "historicalFact": "James Oviatt visited the 1925 Exposition Internationale des Arts Decoratifs in Paris — the event that gave Art Deco its name. He was so stunned by Rene Lalique's glass pavilion that he commissioned the artisan's first-ever commercial installation. Thirty tons of Lalique glass crossed the ocean for a clothing store in downtown LA."
-  },
-  {
-    "ring": 2,
-    "difficulty": 6,
+    "difficulty": 4,
     "type": "spotter",
     "clue": "Between Broadway and Hill Street, south of 7th, a narrow brick-paved alley hides behind modern storefronts. It looks more like Florence than Los Angeles. Find the alley. What is its name?",
     "answer": "St. Vincent Court",
@@ -157,43 +87,13 @@
   },
   {
     "ring": 2,
-    "difficulty": 7,
-    "type": "connector",
-    "clue": "St. Vincent Court started as the grounds of Southern California's first college. The Oviatt Building's doors were carved by France's greatest glass artist. Both St. Vincent Court and the Oviatt Building share a material on their ground surfaces — one paved with it, one floored with it. Look down as you walk through the court. What material are you walking on?",
-    "answer": "Brick",
-    "answerVariants": ["brick", "bricks", "brick paving"],
-    "verificationNeeded": "Confirm brick paving is still present in St. Vincent Court.",
-    "historicalFact": "The brick paving in St. Vincent Court was part of the 1957 renovation that transformed a delivery alley into a European-style dining lane. Italian restaurants and espresso bars opened behind plaster facades designed to evoke Rome. The bricks outlasted every business that walked on them."
-  },
-  {
-    "ring": 2,
-    "difficulty": 8,
+    "difficulty": 5,
     "type": "persona",
     "clue": "I lent money to immigrants that every other bank turned away. I built the largest bank in the world from those bets. My LA headquarters — 12 stories of Neoclassical columns — stands at the corner of 7th and Olive, right next to your final destination. Find the building. What decorative objects surround the bronze front doors?",
     "answer": "Coins",
     "answerVariants": ["coins", "terra cotta coins", "sculptures of coins", "American coins", "coin sculptures"],
     "verificationNeeded": "Confirm terra cotta coin sculptures surrounding the bronze doors of the Bank of Italy Building (now Hotel Per La) at 649 S Olive are visible from street level.",
     "historicalFact": "Amadeo Giannini founded the Bank of Italy in 1904, lending to Italian immigrants, fishermen, and small farmers that other banks wouldn't touch. He renamed it Bank of America in 1930. The terra cotta coins framing his LA headquarters' doors weren't decorative — they were a statement. Money belongs to everyone."
-  },
-  {
-    "ring": 2,
-    "difficulty": 9,
-    "type": "spotter",
-    "clue": "The Oviatt Building's architectural style has a name — one that came from the very Paris exposition James Oviatt attended in 1925. Look at the facade: geometric ornamentation, clean vertical lines, stylized floral motifs. The style's name is two words, and the second word is 'Deco.' What's the full name?",
-    "answer": "Art Deco",
-    "answerVariants": ["art deco", "Art Deco"],
-    "verificationNeeded": "Confirm that 'Art Deco' appears on any HCM plaque, architectural marker, or walking tour signage at or near the Oviatt Building.",
-    "historicalFact": "The term 'Art Deco' comes directly from the 1925 Exposition Internationale des Arts Decoratifs et Industriels Modernes in Paris — the same exhibition where Oviatt saw Lalique's glass. The style didn't get its name until the 1960s, though. In 1928, Oviatt just called it modern."
-  },
-  {
-    "ring": 2,
-    "difficulty": 10,
-    "type": "connector",
-    "clue": "One block east of where you're standing, Spring Street was called the 'Wall Street of the West' — the financial center of Los Angeles. A surveyor named E.O.C. Ord gave the street its name in 1849, but not for the season. He was courting a woman named Trinidad de la Guerra and called her 'mi primavera' — my springtime. Walk to the corner of Spring and 7th. The buildings on both sides have continuous ornate facades in a style borrowed from French academies and Parisian boulevards — the same style as the Paris Opera House. What is that architectural style?",
-    "answer": "Beaux Arts",
-    "answerVariants": ["beaux arts", "Beaux Arts", "beaux-arts", "Beaux-Arts"],
-    "verificationNeeded": "Confirm Beaux Arts facades are identifiable on Spring Street buildings from 7th Street intersection, and that an architectural marker or walking tour sign references the style.",
-    "historicalFact": "Spring Street got its name from a love letter. E.O.C. Ord surveyed the city in 1849 and named streets after his friends' wives — Spring for Trinidad de la Guerra, whom he called 'mi primavera.' The street became LA's financial center, with 23 historic structures in the National Register district. John Parkinson designed at least 10 buildings on this one street before going on to design City Hall and Union Station."
   },
   {
     "ring": 3,
@@ -218,36 +118,6 @@
     "ring": 3,
     "difficulty": 3,
     "type": "spotter",
-    "clue": "Look at the facade of 515 W 7th St. The building has thin decorative columns that don't hold anything up — they're flush against the wall. These are called 'engaged columns.' Between them, the facade has repeating decorative motifs stacked vertically. What do these motifs depict — geometric shapes or floral forms?",
-    "answer": "Floral",
-    "answerVariants": ["floral", "floral forms", "flowers", "floral motifs"],
-    "verificationNeeded": "Confirm stacked floral motifs are visible on the Brock Building facade from street level.",
-    "historicalFact": "Spanish Colonial Revival architecture loved mixing structural drama with botanical ornament. The Brock Building's engaged columns and stacked floral motifs were designed to evoke old California missions — appropriate for a jewelry store that wanted to feel like a treasure vault with Mediterranean warmth."
-  },
-  {
-    "ring": 3,
-    "difficulty": 4,
-    "type": "spotter",
-    "clue": "Look at the very top of the Brock Building — the roofline. There's a decorative element called a 'broken pediment' with a distinctive curved shape, like the neck of a swan arching in two directions. What animal does the pediment's shape resemble?",
-    "answer": "A swan",
-    "answerVariants": ["swan", "a swan"],
-    "verificationNeeded": "Confirm swan's neck broken pediment is visible from street level at the Brock Building parapet.",
-    "historicalFact": "A swan's neck pediment splits a classical triangle into two S-curves that never meet — an architectural flourish borrowed from Baroque churches and colonial furniture makers. Dodd and Richards placed one at the parapet of a jewelry store, as if crowning a cabinet of precious things. The pediment survived the jeweler, the cafeteria, and the whiskey bar."
-  },
-  {
-    "ring": 3,
-    "difficulty": 5,
-    "type": "connector",
-    "clue": "The building directly next to Seven Grand, at the corner of 7th and Olive, has a row of classical columns visible near the top — the kind you'd see on a Greek temple. The Brock Building at 515 W 7th has thin columns flush against its wall. Both buildings use columns, but in opposite ways: one freestanding, one engaged. Look at the tall building next door. What style of column does it use at the top — Doric, Ionic, or Corinthian?",
-    "answer": "Doric",
-    "answerVariants": ["doric", "Doric"],
-    "verificationNeeded": "Confirm Doric colonnade is visible at the top of the Bank of Italy Building (649 S Olive) from street level near Seven Grand.",
-    "historicalFact": "The Bank of Italy Building used a Doric colonnade at its crown to project stability and classical authority — you could see those columns from blocks away and know a bank lived there. The Brock Building used engaged columns purely for decoration. One building wanted you to trust it. The other wanted you to desire what was inside."
-  },
-  {
-    "ring": 3,
-    "difficulty": 6,
-    "type": "spotter",
     "clue": "Look across 7th Street from Seven Grand. A 12-story building at 530 W 7th has a distinctive metal trim running along its roofline — a different color than the surrounding stonework. It was the only one of its kind in LA when built. What metal is it?",
     "answer": "Copper",
     "answerVariants": ["copper"],
@@ -256,7 +126,7 @@
   },
   {
     "ring": 3,
-    "difficulty": 7,
+    "difficulty": 4,
     "type": "persona",
     "clue": "I opened the finest jewelry store in Los Angeles in 1922. I signed a 99-year lease on my building at 515 W 7th. My display cases were built to hold diamonds, sapphires, and gold watches. I've been gone for decades, but my cases are still here — holding something amber now. Walk inside. What are the vintage display cases holding today?",
     "answer": "Whiskey",
@@ -265,31 +135,11 @@
   },
   {
     "ring": 3,
-    "difficulty": 8,
-    "type": "spotter",
-    "clue": "Walk half a block east on 7th Street to the corner of 7th and Hill. A 17-story tower at 701 S Hill rises above the surrounding buildings. Its facade combines two styles: Gothic pointed arches and Art Deco geometric patterns — like a medieval cathedral wearing a 1920s suit. This was the Foreman & Clark flagship clothing store. Count the stories. How many floors does it have?",
-    "answer": "17",
-    "answerVariants": ["17", "seventeen"],
-    "verificationNeeded": "Confirm Foreman & Clark Building at 701 S Hill is visible from 7th Street and story count is discernible from street level.",
-    "historicalFact": "Curlett & Beelman designed this tower in 1929 for Foreman & Clark, a clothing retailer that competed with Oviatt two blocks west. The building combines Art Deco geometry with Gothic tracery — pointed arches meeting zigzag ornament. Two haberdashers on the same street, one year apart, each commissioning a building that embodied a different vision of modern style."
-  },
-  {
-    "ring": 3,
-    "difficulty": 9,
+    "difficulty": 5,
     "type": "connector",
     "clue": "The Brockman Building (530 W 7th, across the street) was built in 1912 by John Brockman. The Brock Building (515 W 7th, where you're standing) was built in 1922 by George Brock. Two different men. Same street. Similar names. One arrived first and pulled the other westward. Look at both buildings. The older one across the street is taller. How many more stories does the Brockman Building have than the Brock Building?",
     "answer": "8",
     "answerVariants": ["8", "eight"],
     "historicalFact": "Brockman: 12 stories (1912). Brock: 4 stories (1922). Difference: 8. John Brockman's gamble on 7th Street — the first building west of Broadway to hit the 150-foot height limit — created the gravitational pull that drew George Brock, Bullock's department store, and the entire retail district westward. Two unrelated men with near-identical names, building the same corridor a decade apart."
-  },
-  {
-    "ring": 3,
-    "difficulty": 10,
-    "type": "spotter",
-    "clue": "One more building before you go in. At the corner of 7th and Hill, the old Warner Bros. Theatre hides behind a jewelry exchange. The building opened in 1920 as a Pantages vaudeville house — Houdini performed here. Warner Bros. took it over in 1929. Look above the corner marquee at 411 W 7th. Behind the current diamond motif, the original studio emblem is still faintly visible. What letters or logo can you make out?",
-    "answer": "WB",
-    "answerVariants": ["wb", "WB", "warner bros", "warner brothers", "Warner Bros", "warner bros.", "W B"],
-    "verificationNeeded": "Confirm Warner Bros. emblem is still visible behind the diamond motif above the corner marquee at 411 W 7th St.",
-    "historicalFact": "B. Marcus Priteca designed this theater in 1920 for the Pantages vaudeville circuit. Warner Bros. bought it in 1929 and debuted 'Gold Diggers of Broadway' here. When the theater closed in 1975, it became a church, then a jewelry exchange. The baroque interior — red curtains, gold chandeliers, film projectors still in the balcony — is intact behind the jewelry counters. The WB emblem on the facade is the last visible trace of a movie palace hiding inside a mall."
   }
 ]

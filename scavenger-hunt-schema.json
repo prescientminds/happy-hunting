@@ -1,13 +1,13 @@
 {
   "$schema": "hunt-schema-v3",
-  "description": "Each hunt has a cluePool of 30 clues across 3 rings (distance tiers), with difficulty 1-10 per ring. Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Difficulty selector picks clue by difficulty level within ring.",
+  "description": "Each hunt has a cluePool of 15 clues across 3 rings (distance tiers), with difficulty 1-5 per ring. Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Difficulty selector picks clue by difficulty level within ring.",
   "constraints": {
     "maxTotalDistance": "0.4 miles",
     "maxStartDistance": "0.3 miles from bar",
     "direction": "inward — each step closer to the bar",
     "noFreewaysCrossed": true,
     "stepsPerHunt": 3,
-    "difficultiesPerRing": 10
+    "difficultiesPerRing": 5
   },
   "hunts": [
     {
@@ -18,6 +18,12 @@
         "neighborhood": "Historic Filipinotown",
         "happyHour": "Check thunderboltla.com",
         "vibe": "Southern-inspired cocktails, centrifuge technique, Madeira list. North America's 50 Best Bars."
+      },
+      "startLocation": {
+        "lat": 34.0634,
+        "lng": -118.2575,
+        "label": "Unidad Park, Beverly Blvd & Glendale Blvd",
+        "transit": "Metro B Line (Red) to Vermont/Beverly, walk 5 min west"
       },
       "theme": "Mayors, Fires, and the Man Who Built Temple Street",
       "totalWalkingDistance": "~0.3 miles",
@@ -69,18 +75,6 @@
         {
           "ring": 1,
           "difficulty": 4,
-          "type": "spotter",
-          "clue": "The interpretive panel gives the mural's full title in two languages. The English translation is 'A Glorious History, A Golden Legacy.' Read the original title. What is the first word?",
-          "answer": "Gintong",
-          "answerVariants": [
-            "gintong"
-          ],
-          "historicalFact": "'Gintong Kasaysayan, Gintong Pamana' — the word 'gintong' means 'golden' in Tagalog. Eliseo Art Silva chose a title that works as a claim: this history isn't just important, it's precious. The mural was commissioned by the Social and Public Art Resource Center (SPARC), founded by Judy Baca, who also created the Great Wall of LA in the Tujunga Wash.",
-          "verificationNeeded": "Confirm title appears on interpretive panel in Tagalog."
-        },
-        {
-          "ring": 1,
-          "difficulty": 5,
           "type": "persona",
           "clue": "I organized Filipino farmworkers to walk off the grape fields on September 8, 1965. Eight days later, Cesar Chavez joined us. History remembered him. It forgot me — for decades. Find my portrait near the park. I'm painted on a small metal box most people walk right past. What is my name?",
           "answer": "Larry Itliong",
@@ -93,64 +87,7 @@
         },
         {
           "ring": 1,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "Walk to the park entrance. The walkway design was inspired by a toy that a Filipino immigrant named Pedro Flores popularized in the United States in the late 1920s. Look at the walkway's shape. What toy is it modeled after?",
-          "answer": "A yo-yo",
-          "answerVariants": [
-            "yo-yo",
-            "a yo-yo",
-            "yoyo",
-            "a yoyo",
-            "the yo-yo"
-          ],
-          "historicalFact": "Pedro Flores opened the Yo-Yo Manufacturing Company in Santa Barbara in 1928 — the first to mass-produce the toy in America. He didn't invent it (versions existed in the Philippines for centuries), but he turned it into a craze. Duncan bought his company in 1930, but Flores kept working as a demonstrator. The park entrance pays tribute to his role in the story.",
-          "verificationNeeded": "Confirm yo-yo-inspired walkway design is identifiable at park entrance."
-        },
-        {
-          "ring": 1,
-          "difficulty": 7,
-          "type": "connector",
-          "clue": "The artist who painted this 145-foot mural in 1995 also designed a massive arch 27 years later — the largest Filipino cultural arch in the United States, spanning Beverly Boulevard at the other end of this neighborhood. Both the mural and the arch honor the same national hero. You already found his name on the interpretive sign. Who is the artist who created both? Find his name on the mural's credit or interpretive panel.",
-          "answer": "Eliseo Art Silva",
-          "answerVariants": [
-            "eliseo art silva",
-            "eliseo silva",
-            "silva"
-          ],
-          "verificationNeeded": "Confirm Eliseo Art Silva's name appears on interpretive sign or a credit plaque at the mural.",
-          "historicalFact": "Eliseo Art Silva spent 27 years building Filipino identity into the physical landscape of Historic Filipinotown. The mural (1995) was the seed — it helped the city see the neighborhood's cultural significance. The Talang Gabay Eastern Gateway (2022) was the capstone — an 82-foot steel arch that took 20 years from concept to completion. Same artist, same mission, same neighborhood."
-        },
-        {
-          "ring": 1,
-          "difficulty": 8,
-          "type": "spotter",
-          "clue": "Look at the interpretive panel in front of the mural. Multiple historical figures are identified. One led a resistance against Ferdinand Magellan in 1521 — the first recorded act of Filipino resistance against European colonization. Find his name on the panel. What is it?",
-          "answer": "Lapu-Lapu",
-          "answerVariants": [
-            "lapu-lapu",
-            "lapu lapu",
-            "lapulapu"
-          ],
-          "verificationNeeded": "Confirm Lapu-Lapu is named on interpretive sign.",
-          "historicalFact": "Lapu-Lapu killed Ferdinand Magellan at the Battle of Mactan on April 27, 1521. Magellan arrived with Spanish soldiers and demanded the island chiefs convert to Christianity. Lapu-Lapu refused. He's considered the first Filipino national hero — a warrior chief who fought colonization 375 years before Jose Rizal."
-        },
-        {
-          "ring": 1,
-          "difficulty": 9,
-          "type": "persona",
-          "clue": "I wrote a book in 1946 called 'America Is in the Heart' — a story of Filipino farmworkers facing exploitation and racism in Depression-era California. The Saturday Evening Post printed my words alongside FDR and Lincoln. I died penniless at 42. Find my name on the interpretive panel in front of this mural. What is my last name?",
-          "answer": "Bulosan",
-          "answerVariants": [
-            "bulosan",
-            "carlos bulosan"
-          ],
-          "verificationNeeded": "Confirm Carlos Bulosan is named on interpretive panel.",
-          "historicalFact": "Carlos Bulosan wrote 'America Is in the Heart' (1946), a searing account of Filipino migrant workers facing exploitation and racism in Depression-era California. The book was so powerful the Saturday Evening Post excerpted it alongside work by FDR and Lincoln. Bulosan died penniless at 42. The mural honors him alongside Rizal and Itliong — revolutionaries of pen, field, and nation."
-        },
-        {
-          "ring": 1,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "You've read about Jose Rizal, Lapu-Lapu, and Larry Itliong on the interpretive panel. All three are also depicted in the mural. Stand back and look at the full 145-foot painting — it tells history from left to right, ancient to modern. Of these three, which one appears closest to the right side of the mural?",
           "answer": "Larry Itliong",
@@ -174,20 +111,6 @@
         {
           "ring": 2,
           "difficulty": 2,
-          "type": "spotter",
-          "clue": "Look at the church at 301 N Union Ave. The building has pointed arches and steep roof lines — the same medieval European style you'd see at Notre-Dame or Westminster Abbey (at a much smaller scale). What is that architectural style?",
-          "answer": "Gothic",
-          "answerVariants": [
-            "gothic",
-            "gothic revival",
-            "german gothic",
-            "german gothic revival"
-          ],
-          "historicalFact": "The building is German Gothic Revival mixed with Craftsman elements — a combination that tells you it was built for someone else. This was originally the Union Avenue M.E. Church, constructed for a white Methodist congregation. The Filipino Christian Fellowship acquired it in 1950. They inherited Gothic arches that were never designed for them — and made them their own."
-        },
-        {
-          "ring": 2,
-          "difficulty": 3,
           "type": "persona",
           "clue": "We crossed the Pacific to study at a Christian college. We wanted to pray, but the local churches wouldn't have us. So in 1928, we started our own congregation. We were pushed out four times before we found a home. Look at the sign at 301 N Union Ave. What country of origin is in the name?",
           "answer": "Filipino",
@@ -201,54 +124,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 4,
-          "type": "spotter",
-          "clue": "Walk to the intersection of Temple St and Silverlake Blvd. A decorative gateway structure marks the entrance to Historic Filipinotown. Look at the facade — the patterns are not random. They're based on traditional Filipino embroidery found on formal clothing. What type of motifs do you see on the gateway?",
-          "answer": "Vine and floral",
-          "answerVariants": [
-            "vine and floral",
-            "floral",
-            "vines and flowers",
-            "vine and floral motifs",
-            "floral and vine",
-            "callado"
-          ],
-          "verificationNeeded": "Confirm Western Gateway callado patterns are visible and identifiable from sidewalk level.",
-          "historicalFact": "The patterns are called callado embroidery — the same decorative needlework found on the Maria Clara (women's formal dress) and the Barong Tagalog (men's formal shirt). The gateway was unveiled in 2002 by then-Councilmember Eric Garcetti, marking the culmination of a 30-year campaign to get the city to officially designate Historic Filipinotown."
-        },
-        {
-          "ring": 2,
-          "difficulty": 5,
-          "type": "connector",
-          "clue": "The Western Gateway at Temple & Silverlake (2002) marks one entrance to Historic Filipinotown. Twenty years later, a sister arch was installed at the other end of the neighborhood on Beverly Boulevard. One marks the west, one marks the east. Both were championed by the same politician — first as a councilmember, then as mayor. The Western Gateway has a name on it or near it. What neighborhood does it mark the entrance to?",
-          "answer": "Historic Filipinotown",
-          "answerVariants": [
-            "historic filipinotown",
-            "filipinotown",
-            "hi-fi",
-            "hifi"
-          ],
-          "verificationNeeded": "Confirm 'Historic Filipinotown' text is readable on or near the Western Gateway.",
-          "historicalFact": "Historic Filipinotown was designated in 2002 — the first Filipino community in America to receive a named area with distinct geographic boundaries. It took 30 years of organizing. The Western Gateway went up the same year. The Eastern Gateway, Talang Gabay, took another 20 years — an 82-foot steel arch designed by the same artist who painted the mural you just saw at Unidad Park."
-        },
-        {
-          "ring": 2,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "The church at 301 N Union Ave blends Gothic arches with a distinctly American style. Look at the simpler elements — the exposed woodwork, the low-pitched details, the emphasis on natural materials. It's the same style you'd see at Pasadena's Gamble House or the bungalows of Craftsman-era California. What is that American style?",
-          "answer": "Craftsman",
-          "answerVariants": [
-            "craftsman",
-            "arts and crafts",
-            "craftsman style",
-            "american craftsman"
-          ],
-          "verificationNeeded": "Confirm Craftsman elements (exposed woodwork, horizontal lines, natural materials) are visible on the church exterior.",
-          "historicalFact": "German Gothic Revival meets American Craftsman — a combination that reveals the building's layered identity. This was the Union Avenue M.E. Church before the Filipino congregation acquired it in 1950. The Craftsman movement prized handmade detail and natural materials — ironic for a building that was abandoned by one community and adopted by another."
-        },
-        {
-          "ring": 2,
-          "difficulty": 7,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "The Filipino Christian Church is a designated Los Angeles Historic-Cultural Monument. Look for a plaque or marker on or near the building. What HCM number is it?",
           "answer": "651",
@@ -261,7 +137,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 8,
+          "difficulty": 4,
           "type": "connector",
           "clue": "The dap-ay at Unidad Park (Ring 1) and the lamp post medallions near this church both embed Filipino values into physical infrastructure. Find a medallion on one of the lamp posts near the church. Three Tagalog words are encoded in the designs — one means 'shared humanity,' one means 'journey,' one means 'peace.' The word for shared humanity starts with 'K.' What is it?",
           "answer": "Kapwa",
@@ -273,19 +149,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "You found 'kapwa' on the lamp post medallion. Two other Tagalog words are encoded in the designs nearby. One means 'journey.' One means 'peace.' Find the word for 'journey.' What is it?",
-          "answer": "Lakbay",
-          "answerVariants": [
-            "lakbay"
-          ],
-          "verificationNeeded": "Confirm 'lakbay' text appears on lamp post medallions near the church.",
-          "historicalFact": "Lakbay — journey. The word choice is precise. For the Filipino community in LA, the journey was literal: across the Pacific, through discriminatory housing laws, past church doors that wouldn't open. The 54 lamp posts mark the territory that journey created. Each medallion is a claim staked in municipal infrastructure — permanent, public, and in Tagalog."
-        },
-        {
-          "ring": 2,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "connector",
           "clue": "Three Tagalog words on the lamp posts. A dap-ay in the park. Callado embroidery on the gateway. A mural spanning 145 feet. All were built within a 0.4-mile radius. The HCM plaque on the church tells you when this building was designated a landmark. The gateway tells you when the neighborhood was officially named. Read both. Which came first — the landmark designation or the neighborhood name?",
           "answer": "The landmark designation",
@@ -343,18 +207,6 @@
         {
           "ring": 3,
           "difficulty": 4,
-          "type": "spotter",
-          "clue": "The building with the neon giraffe houses an animation studio. Look at the building itself — not the sign. What material is the building made of?",
-          "answer": "Brick",
-          "answerVariants": [
-            "brick",
-            "bricks"
-          ],
-          "historicalFact": "Screen Novelties — formed in 2003 by Mark Caballero, Seamus Walsh, and Christopher Finnegan — were among the first stop-motion artists to adopt entirely digital capture systems. Their work launched both Robot Chicken and Moral Orel for Adult Swim. Atlas Obscura calls it 'a puppet-lover's paradise.'"
-        },
-        {
-          "ring": 3,
-          "difficulty": 5,
           "type": "persona",
           "clue": "I was built in 1913 as two separate shops: a market and a tailor. A man who fled a genocide in 1914 set up in my other half. In 2001, Hollywood turned me into a family store owned by a street racer. Find me at the corner of Bellevue and Edgeware. What name is on my sign today?",
           "answer": "Bob's Market",
@@ -368,22 +220,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "Bob's Market at Bellevue & Edgeware has decorative arched details and ornamental trim above the storefront — the same style you'd see on Spanish missions along the California coast and at Stanford University's Main Quad. What architectural style is it?",
-          "answer": "Mission Revival",
-          "answerVariants": [
-            "mission revival",
-            "mission",
-            "mission style",
-            "mission revival style"
-          ],
-          "verificationNeeded": "Confirm Mission Revival architectural elements are visible from street.",
-          "historicalFact": "Bob's Market has Mission Revival and Oriental architectural elements on a one-story false-front frame — designed by George F. Colterison in 1913. The building housed two shops: a market and a tailor. The tailor, Levon Melkonian, had fled the Armenian Genocide. In 2001, Vin Diesel's character parked out front. The building outlived everyone's plans for it."
-        },
-        {
-          "ring": 3,
-          "difficulty": 7,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "Walk to the 1300 block of Carroll Avenue. You're looking at the finest collection of Victorian houses remaining in Los Angeles. One of these houses appeared as a manor where three sisters practiced witchcraft for eight seasons on TV. The show ran from 1998 to 2006. Find the house — it stands out. What is the street number on it?",
           "answer": "1329",
@@ -391,45 +228,6 @@
             "1329"
           ],
           "historicalFact": "The Innes House at 1329 Carroll Ave was built for city councilman and real estate developer Daniel Innes in the late 1880s. A century later, it became the Halliwell Manor on Charmed (1998-2006). The real story is why it's still standing: the banking recession of 1888 halted construction across LA. Developers were too broke to tear down and rebuild. The crash that killed the land boom is the reason these Victorians survived."
-        },
-        {
-          "ring": 3,
-          "difficulty": 8,
-          "type": "persona",
-          "clue": "I learned to walk backward before I could moonwalk forward. In 1983, I filmed the most famous music video ever made — the final scene was shot in a house on this block. I changed music videos forever. Find the house. What is my name?",
-          "answer": "Michael Jackson",
-          "answerVariants": [
-            "michael jackson",
-            "jackson"
-          ],
-          "historicalFact": "The Sanders House at 1345 Carroll Ave appeared in the final scene of Michael Jackson's 'Thriller' video — the most influential music video ever made. Three pop culture franchises filmed within 400 meters of each other on this block: Thriller (1983), Charmed (1998), and The Fast and the Furious (2001). Angelino Heights became Hollywood's backlot without trying.",
-          "verificationNeeded": "Confirm 1345 Carroll Ave is identifiable as the Thriller house from the street."
-        },
-        {
-          "ring": 3,
-          "difficulty": 9,
-          "type": "connector",
-          "clue": "Three buildings on your walk got famous second lives: the deli became an animation studio (the giraffe sign), the grocery store became a movie set (Bob's Market / Toretto's), and the Victorian became a witch's manor (Charmed house). All three kept their original facades. Look at all three buildings. Two are made of wood. One is not. Which building is built from a different material — and what is that material?",
-          "answer": "Brick",
-          "answerVariants": [
-            "brick",
-            "the giraffe building",
-            "screen novelties",
-            "the animation studio"
-          ],
-          "historicalFact": "Bob's Market: wood-frame false front (1913). The Charmed house: wood Victorian (1880s). The giraffe building: brick (date unknown). Three buildings, three eras, three materials — but only one needed brick to survive a century on a commercial street. The Victorians survived because a recession stopped developers from tearing them down. The brick building survived because brick just lasts."
-        },
-        {
-          "ring": 3,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "Your walk started at a mural honoring Filipino farmworkers and ended at Victorian houses used as Hollywood sets. Between them: a church that created a neighborhood, lamp posts that speak Tagalog, and a neon giraffe that marks an animation studio. One artist connects the beginning to the end of your route — the same person who painted the mural also designed the arch on Beverly Boulevard. You already found his name. Now: the neon giraffe sign used to say 'DELI.' It was changed to 'Hi-Fi' when the studio moved in. What does 'Hi-Fi' stand for in this neighborhood?",
-          "answer": "Historic Filipinotown",
-          "answerVariants": [
-            "historic filipinotown",
-            "historic filipino town"
-          ],
-          "historicalFact": "Hi-Fi is the neighborhood abbreviation for Historic Filipinotown — designated in 2002, three decades after the Filipino community rooted itself here. The neon giraffe's text swap from DELI to Hi-Fi is a one-word history of gentrification: a neighborhood deli becomes a boutique animation studio, but the new tenants honor the community they moved into. The whole walk you just took — mural, church, gateway, lamp posts, giraffe — is a community writing itself into the physical landscape so it can't be erased."
         }
       ]
     },
@@ -441,6 +239,12 @@
         "neighborhood": "DTLA",
         "happyHour": "Mon–Fri 5–7pm, $10 cocktails, $6 beers",
         "vibe": "Hunting-lodge whiskey bar with 700+ bottles. Taxidermy. Live jazz."
+      },
+      "startLocation": {
+        "lat": 34.0463,
+        "lng": -118.253,
+        "label": "Broadway & 7th St (Route 66 Terminus)",
+        "transit": "Metro B/D Line to Pershing Square, walk 2 blocks south"
       },
       "theme": "Charity, Grasshoppers, and the Girl Named Spring",
       "totalWalkingDistance": "~0.35 miles",
@@ -463,21 +267,6 @@
           "ring": 1,
           "difficulty": 2,
           "type": "spotter",
-          "clue": "Find the sidewalk marker at the corner of 7th and Broadway. A historic plaque marks the end point of a famous road. What is the road's number?",
-          "answer": "66",
-          "answerVariants": [
-            "66",
-            "route 66",
-            "us 66",
-            "us route 66"
-          ],
-          "verificationNeeded": "Confirm Route 66 sidewalk marker is still present and legible at 7th & Broadway.",
-          "historicalFact": "The Hampton Hotels Save-A-Landmark program installed this marker in 2003. The original western terminus of Route 66 sat at this corner from 1926 to 1936 — before the route was extended to Santa Monica. The famous pier sign came later. This was the real end of the road."
-        },
-        {
-          "ring": 1,
-          "difficulty": 3,
-          "type": "spotter",
           "clue": "Look up at 615 S Broadway. A vertical blade sign spells out a city name in large letters on the facade. What does it say?",
           "answer": "LOS ANGELES",
           "answerVariants": [
@@ -488,33 +277,7 @@
         },
         {
           "ring": 1,
-          "difficulty": 4,
-          "type": "spotter",
-          "clue": "Stand on Broadway between 3rd and 9th Streets. You're in the densest concentration of historic theaters in the world. Count the ornate theater marquees visible from street level on this stretch. How many movie palaces were built on this strip between 1911 and 1931?",
-          "answer": "12",
-          "answerVariants": [
-            "12",
-            "twelve"
-          ],
-          "verificationNeeded": "Confirm that signage, plaques, or Broadway Historic Theatre District markers reference the count of 12 movie palaces on-site.",
-          "historicalFact": "Twelve ornate movie palaces were built on Broadway between 1911 and 1931 — the Palace (1911), the Million Dollar (1918), the State (1921), the Tower (1927), the Los Angeles (1931), and seven more. It's the first and largest historic theater district listed on the National Register, added in 1979."
-        },
-        {
-          "ring": 1,
-          "difficulty": 5,
-          "type": "persona",
-          "clue": "I made a tramp famous. I made the world cry without saying a word. In January 1931, I needed a theater for my new film — so I helped pay to finish one. My guest that night won a Nobel Prize for explaining how light bends. Find the theater at 615 S Broadway. What style is the facade — French ___?",
-          "answer": "Baroque",
-          "answerVariants": [
-            "baroque",
-            "french baroque"
-          ],
-          "verificationNeeded": "Confirm that 'French Baroque' or 'Baroque' appears on any exterior plaque, HCM marker, or signage at the Los Angeles Theatre.",
-          "historicalFact": "Charlie Chaplin helped finance the completion of the Los Angeles Theatre so it could open in time to premiere 'City Lights' on January 30, 1931. He brought Albert Einstein as his date. The theater was designed by S. Charles Lee in French Baroque style — its lobby modeled after the Hall of Mirrors at Versailles."
-        },
-        {
-          "ring": 1,
-          "difficulty": 6,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "At 648 S Broadway, a sign spells out a name above a multi-story facade. The business behind that sign fed 10,000 people for free during the Great Depression. What name is on the sign?",
           "answer": "CLIFTON'S",
@@ -528,21 +291,7 @@
         },
         {
           "ring": 1,
-          "difficulty": 7,
-          "type": "connector",
-          "clue": "Clifton's Cafeteria at 648 S Broadway once ran a second location — Clifton's Silver Spoon — in a jewelry emporium building at 515 W 7th St. That building is your final destination tonight. The Silver Spoon's decorating style left something behind in the new tenant's space. Walk into the bar later and look for mounted animals on the walls. What kind of decorations are they?",
-          "answer": "Taxidermy",
-          "answerVariants": [
-            "taxidermy",
-            "mounted animals",
-            "animal heads",
-            "taxidermied animals"
-          ],
-          "historicalFact": "Clifton's Silver Spoon Cafeteria occupied the Brock & Company building at 515 W 7th from 1974 until Cedd Moses opened Seven Grand there in 2007. The taxidermy throughout Seven Grand descends from the Clifton's aesthetic — a hunting-lodge-meets-cafeteria style that became the whiskey bar's signature."
-        },
-        {
-          "ring": 1,
-          "difficulty": 8,
+          "difficulty": 4,
           "type": "spotter",
           "clue": "Walk to 636 S Broadway — an ornate theater facade with the word PALACE on its marquee. This is the oldest surviving Orpheum theater in the United States, opened in 1911. Harry Houdini, Will Rogers, and Fred Astaire all performed on its stage. Look at the marquee. What single word is displayed in the largest letters?",
           "answer": "PALACE",
@@ -556,34 +305,17 @@
         },
         {
           "ring": 1,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "The Los Angeles Theatre facade has ornate detailing in a specific material above its entrance and along its Broadway frontage — the same material used on dozens of DTLA buildings from this era, fired and glazed into decorative panels. Look at the facade. What is the material?",
-          "answer": "Terra cotta",
-          "answerVariants": [
-            "terra cotta",
-            "terracotta",
-            "terra-cotta"
-          ],
-          "verificationNeeded": "Confirm terra cotta detailing is visible and identifiable on the Los Angeles Theatre facade from street level.",
-          "historicalFact": "Glazed terra cotta was the defining material of DTLA's golden age. Cheaper than carved stone but capable of intricate ornamentation, it let architects like S. Charles Lee create French Baroque fantasies on Broadway budgets. The Los Angeles Theatre's terra cotta facade has survived 95 years of sun, smog, and earthquakes."
-        },
-        {
-          "ring": 1,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "connector",
-          "clue": "Two buildings on this block opened during the same crisis: the Los Angeles Theatre at 615 S Broadway (1931) and Clifton's Cafeteria at 648 S Broadway (1931). One sold fantasy — a French Baroque lobby modeled after Versailles. The other sold survival — free meals, no questions asked. Both are still standing. Look at both facades. The theater's facade uses glazed terra cotta. Clifton's facade has a different look — more organic, with forest and nature elements visible from the street. What natural feature dominates Clifton's exterior design?",
-          "answer": "Trees",
+          "clue": "Clifton's Cafeteria at 648 S Broadway once ran a second location — Clifton's Silver Spoon — in a jewelry emporium building at 515 W 7th St. That building is your final destination tonight. The Silver Spoon's decorating style left something behind in the new tenant's space. Walk into the bar later and look for mounted animals on the walls. What kind of decorations are they?",
+          "answer": "Taxidermy",
           "answerVariants": [
-            "trees",
-            "redwood trees",
-            "redwoods",
-            "a tree",
-            "forest",
-            "redwood"
+            "taxidermy",
+            "mounted animals",
+            "animal heads",
+            "taxidermied animals"
           ],
-          "verificationNeeded": "Confirm nature/forest theming is visible on Clifton's exterior facade from street level at 648 S Broadway.",
-          "historicalFact": "Both buildings opened in 1931 — the worst year of the Great Depression. The Los Angeles Theatre offered escape: a 2,000-seat palace where you forgot you were broke. Clifton's offered sustenance: a cafeteria where you ate whether you could pay or not. The theater's lobby was modeled after Versailles. Clifton's interior was modeled after the Santa Cruz Mountains — rock sculptor Francois Scotti built a 20-foot waterfall and faux redwood trees that concealed the steel columns. One building hid your poverty in glamour, the other hid it in nature."
+          "historicalFact": "Clifton's Silver Spoon Cafeteria occupied the Brock & Company building at 515 W 7th from 1974 until Cedd Moses opened Seven Grand there in 2007. The taxidermy throughout Seven Grand descends from the Clifton's aesthetic — a hunting-lodge-meets-cafeteria style that became the whiskey bar's signature."
         },
         {
           "ring": 2,
@@ -599,22 +331,6 @@
           "ring": 2,
           "difficulty": 2,
           "type": "spotter",
-          "clue": "Look at the front doors of the building at 617 S Olive St. Two figures are carved into the glass panels. What are the two figures holding between them?",
-          "answer": "A mission bell",
-          "answerVariants": [
-            "a bell",
-            "bell",
-            "mission bell",
-            "a mission bell",
-            "California mission bell"
-          ],
-          "verificationNeeded": "Confirm Lalique glass doors with two angels holding a mission bell are visible from street without entering the building.",
-          "historicalFact": "Rene Lalique carved two angels holding a California mission bell into lead crystal — each door panel 7.5 feet tall. These are believed to be the largest panels of lead crystal Lalique ever produced. A haberdasher from LA saw a glass pavilion in Paris and decided his clothing store needed the same thing."
-        },
-        {
-          "ring": 2,
-          "difficulty": 3,
-          "type": "spotter",
           "clue": "The figures on the Oviatt Building doors aren't people — they have wings. What are they?",
           "answer": "Angels",
           "answerVariants": [
@@ -627,7 +343,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 4,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "Count the stories on the Oviatt Building at 617 S Olive St. How many floors does it have?",
           "answer": "12",
@@ -639,22 +355,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 5,
-          "type": "persona",
-          "clue": "I sold suits to the richest men in Los Angeles. In 1925, I visited an exposition in Paris and saw a glass pavilion that changed my life. I shipped 30 tons of crystal across the Atlantic to decorate my building. Find my doors at 617 S Olive. The material they're made of has a French name — what is it?",
-          "answer": "Lalique",
-          "answerVariants": [
-            "lalique",
-            "Lalique",
-            "René Lalique",
-            "Rene Lalique"
-          ],
-          "verificationNeeded": "Confirm 'Lalique' is referenced on any plaque, HCM marker, or signage at or near the Oviatt Building entrance.",
-          "historicalFact": "James Oviatt visited the 1925 Exposition Internationale des Arts Decoratifs in Paris — the event that gave Art Deco its name. He was so stunned by Rene Lalique's glass pavilion that he commissioned the artisan's first-ever commercial installation. Thirty tons of Lalique glass crossed the ocean for a clothing store in downtown LA."
-        },
-        {
-          "ring": 2,
-          "difficulty": 6,
+          "difficulty": 4,
           "type": "spotter",
           "clue": "Between Broadway and Hill Street, south of 7th, a narrow brick-paved alley hides behind modern storefronts. It looks more like Florence than Los Angeles. Find the alley. What is its name?",
           "answer": "St. Vincent Court",
@@ -669,21 +370,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 7,
-          "type": "connector",
-          "clue": "St. Vincent Court started as the grounds of Southern California's first college. The Oviatt Building's doors were carved by France's greatest glass artist. Both St. Vincent Court and the Oviatt Building share a material on their ground surfaces — one paved with it, one floored with it. Look down as you walk through the court. What material are you walking on?",
-          "answer": "Brick",
-          "answerVariants": [
-            "brick",
-            "bricks",
-            "brick paving"
-          ],
-          "verificationNeeded": "Confirm brick paving is still present in St. Vincent Court.",
-          "historicalFact": "The brick paving in St. Vincent Court was part of the 1957 renovation that transformed a delivery alley into a European-style dining lane. Italian restaurants and espresso bars opened behind plaster facades designed to evoke Rome. The bricks outlasted every business that walked on them."
-        },
-        {
-          "ring": 2,
-          "difficulty": 8,
+          "difficulty": 5,
           "type": "persona",
           "clue": "I lent money to immigrants that every other bank turned away. I built the largest bank in the world from those bets. My LA headquarters — 12 stories of Neoclassical columns — stands at the corner of 7th and Olive, right next to your final destination. Find the building. What decorative objects surround the bronze front doors?",
           "answer": "Coins",
@@ -696,34 +383,6 @@
           ],
           "verificationNeeded": "Confirm terra cotta coin sculptures surrounding the bronze doors of the Bank of Italy Building (now Hotel Per La) at 649 S Olive are visible from street level.",
           "historicalFact": "Amadeo Giannini founded the Bank of Italy in 1904, lending to Italian immigrants, fishermen, and small farmers that other banks wouldn't touch. He renamed it Bank of America in 1930. The terra cotta coins framing his LA headquarters' doors weren't decorative — they were a statement. Money belongs to everyone."
-        },
-        {
-          "ring": 2,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "The Oviatt Building's architectural style has a name — one that came from the very Paris exposition James Oviatt attended in 1925. Look at the facade: geometric ornamentation, clean vertical lines, stylized floral motifs. The style's name is two words, and the second word is 'Deco.' What's the full name?",
-          "answer": "Art Deco",
-          "answerVariants": [
-            "art deco",
-            "Art Deco"
-          ],
-          "verificationNeeded": "Confirm that 'Art Deco' appears on any HCM plaque, architectural marker, or walking tour signage at or near the Oviatt Building.",
-          "historicalFact": "The term 'Art Deco' comes directly from the 1925 Exposition Internationale des Arts Decoratifs et Industriels Modernes in Paris — the same exhibition where Oviatt saw Lalique's glass. The style didn't get its name until the 1960s, though. In 1928, Oviatt just called it modern."
-        },
-        {
-          "ring": 2,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "One block east of where you're standing, Spring Street was called the 'Wall Street of the West' — the financial center of Los Angeles. A surveyor named E.O.C. Ord gave the street its name in 1849, but not for the season. He was courting a woman named Trinidad de la Guerra and called her 'mi primavera' — my springtime. Walk to the corner of Spring and 7th. The buildings on both sides have continuous ornate facades in a style borrowed from French academies and Parisian boulevards — the same style as the Paris Opera House. What is that architectural style?",
-          "answer": "Beaux Arts",
-          "answerVariants": [
-            "beaux arts",
-            "Beaux Arts",
-            "beaux-arts",
-            "Beaux-Arts"
-          ],
-          "verificationNeeded": "Confirm Beaux Arts facades are identifiable on Spring Street buildings from 7th Street intersection, and that an architectural marker or walking tour sign references the style.",
-          "historicalFact": "Spring Street got its name from a love letter. E.O.C. Ord surveyed the city in 1849 and named streets after his friends' wives — Spring for Trinidad de la Guerra, whom he called 'mi primavera.' The street became LA's financial center, with 23 historic structures in the National Register district. John Parkinson designed at least 10 buildings on this one street before going on to design City Hall and Union Station."
         },
         {
           "ring": 3,
@@ -751,47 +410,6 @@
           "ring": 3,
           "difficulty": 3,
           "type": "spotter",
-          "clue": "Look at the facade of 515 W 7th St. The building has thin decorative columns that don't hold anything up — they're flush against the wall. These are called 'engaged columns.' Between them, the facade has repeating decorative motifs stacked vertically. What do these motifs depict — geometric shapes or floral forms?",
-          "answer": "Floral",
-          "answerVariants": [
-            "floral",
-            "floral forms",
-            "flowers",
-            "floral motifs"
-          ],
-          "verificationNeeded": "Confirm stacked floral motifs are visible on the Brock Building facade from street level.",
-          "historicalFact": "Spanish Colonial Revival architecture loved mixing structural drama with botanical ornament. The Brock Building's engaged columns and stacked floral motifs were designed to evoke old California missions — appropriate for a jewelry store that wanted to feel like a treasure vault with Mediterranean warmth."
-        },
-        {
-          "ring": 3,
-          "difficulty": 4,
-          "type": "spotter",
-          "clue": "Look at the very top of the Brock Building — the roofline. There's a decorative element called a 'broken pediment' with a distinctive curved shape, like the neck of a swan arching in two directions. What animal does the pediment's shape resemble?",
-          "answer": "A swan",
-          "answerVariants": [
-            "swan",
-            "a swan"
-          ],
-          "verificationNeeded": "Confirm swan's neck broken pediment is visible from street level at the Brock Building parapet.",
-          "historicalFact": "A swan's neck pediment splits a classical triangle into two S-curves that never meet — an architectural flourish borrowed from Baroque churches and colonial furniture makers. Dodd and Richards placed one at the parapet of a jewelry store, as if crowning a cabinet of precious things. The pediment survived the jeweler, the cafeteria, and the whiskey bar."
-        },
-        {
-          "ring": 3,
-          "difficulty": 5,
-          "type": "connector",
-          "clue": "The building directly next to Seven Grand, at the corner of 7th and Olive, has a row of classical columns visible near the top — the kind you'd see on a Greek temple. The Brock Building at 515 W 7th has thin columns flush against its wall. Both buildings use columns, but in opposite ways: one freestanding, one engaged. Look at the tall building next door. What style of column does it use at the top — Doric, Ionic, or Corinthian?",
-          "answer": "Doric",
-          "answerVariants": [
-            "doric",
-            "Doric"
-          ],
-          "verificationNeeded": "Confirm Doric colonnade is visible at the top of the Bank of Italy Building (649 S Olive) from street level near Seven Grand.",
-          "historicalFact": "The Bank of Italy Building used a Doric colonnade at its crown to project stability and classical authority — you could see those columns from blocks away and know a bank lived there. The Brock Building used engaged columns purely for decoration. One building wanted you to trust it. The other wanted you to desire what was inside."
-        },
-        {
-          "ring": 3,
-          "difficulty": 6,
-          "type": "spotter",
           "clue": "Look across 7th Street from Seven Grand. A 12-story building at 530 W 7th has a distinctive metal trim running along its roofline — a different color than the surrounding stonework. It was the only one of its kind in LA when built. What metal is it?",
           "answer": "Copper",
           "answerVariants": [
@@ -802,7 +420,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 7,
+          "difficulty": 4,
           "type": "persona",
           "clue": "I opened the finest jewelry store in Los Angeles in 1922. I signed a 99-year lease on my building at 515 W 7th. My display cases were built to hold diamonds, sapphires, and gold watches. I've been gone for decades, but my cases are still here — holding something amber now. Walk inside. What are the vintage display cases holding today?",
           "answer": "Whiskey",
@@ -817,20 +435,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 8,
-          "type": "spotter",
-          "clue": "Walk half a block east on 7th Street to the corner of 7th and Hill. A 17-story tower at 701 S Hill rises above the surrounding buildings. Its facade combines two styles: Gothic pointed arches and Art Deco geometric patterns — like a medieval cathedral wearing a 1920s suit. This was the Foreman & Clark flagship clothing store. Count the stories. How many floors does it have?",
-          "answer": "17",
-          "answerVariants": [
-            "17",
-            "seventeen"
-          ],
-          "verificationNeeded": "Confirm Foreman & Clark Building at 701 S Hill is visible from 7th Street and story count is discernible from street level.",
-          "historicalFact": "Curlett & Beelman designed this tower in 1929 for Foreman & Clark, a clothing retailer that competed with Oviatt two blocks west. The building combines Art Deco geometry with Gothic tracery — pointed arches meeting zigzag ornament. Two haberdashers on the same street, one year apart, each commissioning a building that embodied a different vision of modern style."
-        },
-        {
-          "ring": 3,
-          "difficulty": 9,
+          "difficulty": 5,
           "type": "connector",
           "clue": "The Brockman Building (530 W 7th, across the street) was built in 1912 by John Brockman. The Brock Building (515 W 7th, where you're standing) was built in 1922 by George Brock. Two different men. Same street. Similar names. One arrived first and pulled the other westward. Look at both buildings. The older one across the street is taller. How many more stories does the Brockman Building have than the Brock Building?",
           "answer": "8",
@@ -839,24 +444,6 @@
             "eight"
           ],
           "historicalFact": "Brockman: 12 stories (1912). Brock: 4 stories (1922). Difference: 8. John Brockman's gamble on 7th Street — the first building west of Broadway to hit the 150-foot height limit — created the gravitational pull that drew George Brock, Bullock's department store, and the entire retail district westward. Two unrelated men with near-identical names, building the same corridor a decade apart."
-        },
-        {
-          "ring": 3,
-          "difficulty": 10,
-          "type": "spotter",
-          "clue": "One more building before you go in. At the corner of 7th and Hill, the old Warner Bros. Theatre hides behind a jewelry exchange. The building opened in 1920 as a Pantages vaudeville house — Houdini performed here. Warner Bros. took it over in 1929. Look above the corner marquee at 411 W 7th. Behind the current diamond motif, the original studio emblem is still faintly visible. What letters or logo can you make out?",
-          "answer": "WB",
-          "answerVariants": [
-            "wb",
-            "WB",
-            "warner bros",
-            "warner brothers",
-            "Warner Bros",
-            "warner bros.",
-            "W B"
-          ],
-          "verificationNeeded": "Confirm Warner Bros. emblem is still visible behind the diamond motif above the corner marquee at 411 W 7th St.",
-          "historicalFact": "B. Marcus Priteca designed this theater in 1920 for the Pantages vaudeville circuit. Warner Bros. bought it in 1929 and debuted 'Gold Diggers of Broadway' here. When the theater closed in 1975, it became a church, then a jewelry exchange. The baroque interior — red curtains, gold chandeliers, film projectors still in the balcony — is intact behind the jewelry counters. The WB emblem on the facade is the last visible trace of a movie palace hiding inside a mall."
         }
       ]
     },
@@ -868,6 +455,12 @@
         "neighborhood": "Hollywood",
         "happyHour": "Daily 4–7pm, $5 wells, $4 beers",
         "vibe": "Legendary dive bar since 1934. Al Hirschfeld mural. Adjacent to the Pantages Theatre."
+      },
+      "startLocation": {
+        "lat": 34.1031,
+        "lng": -118.3262,
+        "label": "Capitol Records Building, Vine St & Hollywood Blvd",
+        "transit": "Metro B Line (Red) to Hollywood/Vine, street level"
       },
       "theme": "A Fox Path, a Disgraced Vintner, and the Boulevard That Wasn't",
       "totalWalkingDistance": "~0.35 miles",
@@ -918,19 +511,6 @@
         {
           "ring": 1,
           "difficulty": 4,
-          "type": "persona",
-          "clue": "I recorded 'Unforgettable,' 'Mona Lisa,' and 'Nature Boy' in the studios below your feet. I sold so many records they called this tower 'the house that I built.' My voice made Capitol Records rich enough to construct the world's first circular office building. Find my star on the Walk of Fame near 1750 Vine. What is my full name as it appears on the star?",
-          "answer": "Nat King Cole",
-          "answerVariants": [
-            "nat king cole",
-            "Nat King Cole"
-          ],
-          "verificationNeeded": "Confirm Nat King Cole's Walk of Fame star is near 1750 Vine St / Capitol Records. His star is reportedly at 6372 Hollywood Blvd — may be further west. Adjust address reference if needed.",
-          "historicalFact": "The Capitol Records tower was nicknamed 'The House That Nat Built.' Cole was Capitol's biggest-selling artist when the building opened in 1956. He recorded in the basement studios designed by Les Paul — the same studios where Frank Sinatra, the Beach Boys, and the Beatles later tracked albums."
-        },
-        {
-          "ring": 1,
-          "difficulty": 5,
           "type": "spotter",
           "clue": "The Walk of Fame stars use five different emblems to mark their category. Find all five by scanning the sidewalk. One looks like a movie camera. One is a television set. One is a phonograph record. One is a radio microphone. What does the fifth emblem depict?",
           "answer": "A theatrical mask",
@@ -950,7 +530,7 @@
         },
         {
           "ring": 1,
-          "difficulty": 6,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "The spire on top of the Capitol Records tower has a blinking light that's been flashing a message since 1956. The message is a single word — the name of the neighborhood you're standing in. It's broadcast in a code invented in the 1830s. What word is the light spelling?",
           "answer": "HOLLYWOOD",
@@ -959,67 +539,6 @@
             "HOLLYWOOD"
           ],
           "historicalFact": "The light spells H-O-L-L-Y-W-O-O-D in Morse code, day and night, since April 1956. At the opening ceremony, the person who flipped the switch was Leila Morse — granddaughter of Samuel Morse, the code's inventor. You can't read Morse code by watching the light, but the fact that it's up there broadcasting to nobody in particular is the point."
-        },
-        {
-          "ring": 1,
-          "difficulty": 7,
-          "type": "connector",
-          "clue": "The Capitol Records Building is round. The Walk of Fame stars have five points. Both are embedded in the same sidewalk intersection. Look at the material the stars are made of — a smooth, polished, colored stone surface with brass inlays. What is the stone-like flooring material?",
-          "answer": "Terrazzo",
-          "answerVariants": [
-            "terrazzo",
-            "terazzo"
-          ],
-          "historicalFact": "Terrazzo — marble chips suspended in concrete, then ground and polished smooth — was the standard material for civic surfaces in mid-century LA. The Walk of Fame stars use coral-pink terrazzo with brass lettering and emblems. The material was chosen for durability: 2,800+ stars, millions of feet per year, still legible after six decades."
-        },
-        {
-          "ring": 1,
-          "difficulty": 8,
-          "type": "persona",
-          "clue": "I'm the only honoree with a Walk of Fame star in all five categories — film, TV, recording, radio, and live performance. I was a singing cowboy from Texas who bought an entire baseball team. Scan the sidewalk near Hollywood and Vine. Find one of my five stars. What is my full name as it appears?",
-          "answer": "Gene Autry",
-          "answerVariants": [
-            "gene autry",
-            "Gene Autry",
-            "GENE AUTRY"
-          ],
-          "verificationNeeded": "Confirm Gene Autry has a Walk of Fame star near Hollywood and Vine. He has stars at multiple locations on Hollywood Blvd — verify at least one is within walking distance of the Vine St intersection.",
-          "historicalFact": "Gene Autry is the only person to hold Walk of Fame stars in all five categories. He recorded 'Rudolph the Red-Nosed Reindeer' and 'Back in the Saddle Again,' starred in 93 films, had his own TV show, and performed live at Madison Square Garden. He bought the California Angels baseball team in 1961 for $2.4 million. Five stars, five categories, one cowboy.",
-          "reasoning": "Solver identifies Autry from the biography clues (singing cowboy, five categories, baseball team) then scans the sidewalk to find and read his name. Presence required: the solver must locate the physical star among thousands. D8 difficulty because it chains persona identification with a targeted physical search."
-        },
-        {
-          "ring": 1,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "Find the intersection of Hollywood Blvd and Vine St. Look at the buildings on three corners — each one is a pre-war highrise built in the 1920s. The southeast corner has a 12-story Beaux-Arts tower built in just 65 days. What is the name on the building?",
-          "answer": "Taft",
-          "answerVariants": [
-            "taft",
-            "Taft",
-            "taft building",
-            "Taft Building",
-            "the taft building",
-            "the Taft Building"
-          ],
-          "verificationNeeded": "Confirm 'Taft' or 'Taft Building' signage is visible from street level after the 2014 renovation.",
-          "historicalFact": "The Taft Building was LA's first high-rise office building, constructed in 65 days in 1924. Charlie Chaplin kept offices here. The Academy of Motion Picture Arts and Sciences ran its headquarters from the Taft from 1935 to 1946 — then the Oscars moved one block east to the Pantages stage. The name on the building belongs to developer Alfred Z. Taft, who tore down a church to build it."
-        },
-        {
-          "ring": 1,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "Two blocks south of Capitol Records, a bank at the corner of Sunset and Vine has a two-story mosaic covering its entire facade. The mosaic depicts 15+ Golden Age movie stars — the same faces you've been walking over on the Walk of Fame. One medium connects them on the sidewalk: terrazzo and brass. A different medium connects them on the bank wall. Look at the mosaic. What material are the tiny pieces made of?",
-          "answer": "Glass",
-          "answerVariants": [
-            "glass",
-            "glass mosaic",
-            "glass tiles",
-            "glass tesserae",
-            "mosaic glass"
-          ],
-          "verificationNeeded": "Confirm Chase Bank / former Home Savings mosaic at 1500 Vine St (Sunset & Vine) is intact and that glass mosaic tesserae are identifiable from sidewalk level.",
-          "historicalFact": "The Millard Sheets mosaic at 1500 Vine St was commissioned by Home Savings and Loan in 1968. Sheets depicted Mary Pickford, Douglas Fairbanks, Chaplin, Dolores Del Rio, Bette Davis, and Julie Andrews in glass mosaic tesserae — designed to look like strips of film. The building sits on the exact spot where The Squaw Man was filmed in 1913 — Hollywood's first feature-length movie. Most Chase customers walk past the mosaic without looking up.",
-          "reasoning": "Solver walks from Capitol Records area to Sunset & Vine (2 blocks south, still near Ring 1). They identify the mosaic on the bank facade and connect two physical representations of the same stars — terrazzo on the sidewalk, glass on the wall. D10 difficulty because it chains a physical walk to a new location, material identification requiring close observation, and synthesis of the connection between two mediums honoring the same people."
         },
         {
           "ring": 2,
@@ -1051,33 +570,6 @@
           "ring": 2,
           "difficulty": 3,
           "type": "spotter",
-          "clue": "Stand in the alley and look at its orientation. It runs between two streets in a specific direction. Filmmakers chose this alley because it stayed well-lit all day long. Which compass direction does the alley run — north-south or east-west?",
-          "answer": "East-west",
-          "answerVariants": [
-            "east-west",
-            "east west",
-            "east to west",
-            "e-w"
-          ],
-          "historicalFact": "Silent films needed daylight — electric lighting wasn't powerful enough for early cameras. An east-west alley catches sunlight from morning to late afternoon. In the 1920s, most of LA was still undeveloped, so this alley was one of the few locations that looked urban enough to pass for a city street on camera."
-        },
-        {
-          "ring": 2,
-          "difficulty": 4,
-          "type": "persona",
-          "clue": "I never spoke onscreen. I wore a bowler hat, a tight coat, baggy trousers, and carried a bamboo cane. In 1921, I filmed a scene in this alley where a kid threw rocks through windows while I replaced the glass behind him. I had offices in the Taft Building on Vine and invested in the Guaranty Building on Hollywood Blvd. Find the plaque in the alley. What is my last name, as inscribed?",
-          "answer": "Chaplin",
-          "answerVariants": [
-            "chaplin",
-            "Chaplin"
-          ],
-          "verificationNeeded": "Confirm Chaplin's name appears on the alley plaque.",
-          "historicalFact": "Chaplin filmed The Kid in this alley — the scene where Jackie Coogan breaks windows and the Tramp follows behind offering to fix them. Chaplin's Hollywood footprint within three blocks: he had offices in the Taft Building, invested in the Guaranty Building, and shot his breakthrough film in this service alley. All still standing."
-        },
-        {
-          "ring": 2,
-          "difficulty": 5,
-          "type": "spotter",
           "clue": "Walk to 6363 Selma Ave — a quiet side street south of Hollywood Blvd. Look for a storefront with signage that sounds like it belongs in a horror film. What is the name of the museum?",
           "answer": "Museum of Death",
           "answerVariants": [
@@ -1090,21 +582,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 6,
-          "type": "connector",
-          "clue": "The plaque in the alley names three comedians who filmed here a century ago. One block east, the Taft Building at Hollywood and Vine housed the Academy of Motion Picture Arts and Sciences from 1935 to 1946. One of the three comedians on the plaque also kept offices in the Taft Building. Which one?",
-          "answer": "Chaplin",
-          "answerVariants": [
-            "chaplin",
-            "Chaplin",
-            "charlie chaplin",
-            "Charlie Chaplin"
-          ],
-          "historicalFact": "Chaplin filmed in the alley (1921), kept offices in the Taft Building, and invested in the Guaranty Building at 6331 Hollywood Blvd. Three blocks, three traces of one career. The alley plaque connects the man to the street he worked on — he wasn't just visiting."
-        },
-        {
-          "ring": 2,
-          "difficulty": 7,
+          "difficulty": 4,
           "type": "spotter",
           "clue": "Walk to the Guaranty Building at 6331 Hollywood Blvd — a 12-story Beaux-Arts tower. It was built in 1923 by the same architectural duo who designed Griffith Observatory. A different organization purchased the building in 1988. Look at the ground-floor signage or branding. What organization occupies it now?",
           "answer": "Church of Scientology",
@@ -1119,37 +597,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 8,
-          "type": "persona",
-          "clue": "I invented narrative cinema — close-ups, crosscuts, parallel editing. Every filmmaker who came after me used my grammar. I spent the last year of my life in a hotel two blocks from the alley where my proteges filmed their masterpieces. They found me unconscious in the lobby on July 23, 1948. The hotel is on Ivar Ave. Find the building. What is the name on it?",
-          "answer": "Knickerbocker",
-          "answerVariants": [
-            "knickerbocker",
-            "Knickerbocker",
-            "hollywood knickerbocker",
-            "Hollywood Knickerbocker"
-          ],
-          "verificationNeeded": "Confirm Knickerbocker signage or marquee is visible on the building at 1714 Ivar Ave (now a retirement home).",
-          "historicalFact": "D.W. Griffith — the father of narrative cinema — spent his final year broke and forgotten at the Hollywood Knickerbocker Hotel, 1714 Ivar Ave. He died in the lobby in 1948. Two blocks away, the alley where Chaplin, Keaton, and Lloyd shot their silent films is now marked with a plaque. Griffith taught them everything. Nobody marked where he died."
-        },
-        {
-          "ring": 2,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "The Guaranty Building at 6331 Hollywood Blvd was designed by two architects who also built one of the most visited landmarks in Los Angeles — a hilltop observatory with a copper dome overlooking the city. You can see it from Hollywood on a clear day. The same architects, the same Beaux-Arts hand. What is the name of the observatory they designed?",
-          "answer": "Griffith Observatory",
-          "answerVariants": [
-            "griffith observatory",
-            "Griffith Observatory",
-            "griffith",
-            "the griffith observatory"
-          ],
-          "historicalFact": "John C. Austin and Frederic M. Ashley designed both the Guaranty Building (1923) and Griffith Observatory (1935). The Guaranty Building was their commercial work — Chaplin and DeMille invested. The observatory was their civic masterpiece — Griffith J. Griffith donated $100,000 in his will to build it, insisting every Angeleno deserved access to a telescope. Same architects, two buildings that define LA from two different vantage points.",
-          "reasoning": "Solver reads the Guaranty Building's signage (already encountered at D7), connects the architects to a famous landmark, and names it. D9 difficulty because it requires cross-referencing architectural history with a well-known LA landmark — the clue gives strong hints (hilltop, copper dome, observatory) but the solver still needs to make the connection. Presence test: the solver is standing at the Guaranty Building, connecting what they see to another building they know."
-        },
-        {
-          "ring": 2,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "connector",
           "clue": "Two Hollywood institutions made celebrity caricatures their signature. The Vine Street Brown Derby — the most famous restaurant in Golden Age Hollywood, now demolished — covered its walls with drawings of its famous patrons. Two blocks east, a dive bar has kept the same tradition alive since 1963: a mural of 24+ caricatures in the style of a New York Times illustrator who hid his daughter's name in every drawing. The bar is still open. Walk to 6245 Hollywood Blvd. Look at the mural through the window or step inside. What name did the illustrator hide?",
           "answer": "Nina",
@@ -1160,7 +608,7 @@
           ],
           "verificationNeeded": "Confirm the Hirschfeld-style mural is visible through the Frolic Room's front window, or that 'Nina' is identifiable in the caricatures from the bar interior.",
           "historicalFact": "The Brown Derby at 1628 Vine St opened Valentine's Day 1929 and invented the Cobb Salad (Bob Cobb chopped leftovers for Sid Grauman, who'd just had dental work). Celebrity caricatures covered its walls. Clark Gable proposed to Carole Lombard in booth 54. The restaurant burned and was demolished in 1994. Two blocks east, the Frolic Room's 1963 mural carries the same tradition — Hirschfeld-style caricatures of Einstein, Gable, Monroe, Chaplin, Sinatra. One demolished, one still pouring. The drawings outlasted the Derby.",
-          "reasoning": "Solver connects two physical traditions (Brown Derby caricatures, Frolic Room mural), walks to the bar, and identifies the hidden name. D10 difficulty because it chains historical knowledge of the Brown Derby (now a ghost site) with physical observation at the Frolic Room, requiring the solver to look closely at the mural and find 'Nina' — a detail that rewards careful looking."
+          "reasoning": "Solver connects two physical traditions (Brown Derby caricatures, Frolic Room mural), walks to the bar, and identifies the hidden name. D5 difficulty because it chains historical knowledge of the Brown Derby (now a ghost site) with physical observation at the Frolic Room, requiring the solver to look closely at the mural and find 'Nina' — a detail that rewards careful looking."
         },
         {
           "ring": 3,
@@ -1175,41 +623,6 @@
         {
           "ring": 3,
           "difficulty": 2,
-          "type": "spotter",
-          "clue": "Find the theater at 6233 Hollywood Blvd. Look up at the marquee above the main entrance. What name is on it?",
-          "answer": "Pantages",
-          "answerVariants": [
-            "pantages",
-            "Pantages",
-            "PANTAGES",
-            "the pantages",
-            "Pantages Theatre",
-            "pantages theatre"
-          ],
-          "historicalFact": "Alexander Pantages was a Greek immigrant who started as a janitor in a Klondike saloon during the Gold Rush. He built a vaudeville empire of 84 theaters stretching from Alaska to Mexico. This one — his last and most lavish — opened in 1930, the year after the crash that killed his plans for a 12-story tower above it."
-        },
-        {
-          "ring": 3,
-          "difficulty": 3,
-          "type": "spotter",
-          "clue": "The Pantages facade is covered in Art Deco decoration — geometric patterns carved into every surface from the sidewalk to the roofline. Look closely. The carved shapes include chevrons, zigzags, and a repeating pattern that radiates outward like rays of light. What is the radiating pattern — what does it look like?",
-          "answer": "Starbursts",
-          "answerVariants": [
-            "starbursts",
-            "starburst",
-            "sunbursts",
-            "sunburst",
-            "sunrays",
-            "sun rays",
-            "rays",
-            "rays of light",
-            "radiating lines"
-          ],
-          "historicalFact": "The Pantages' facade is a catalogue of Art Deco motifs — chevrons, zigzags, and starbursts carved in stone and terra cotta. Designer B. Marcus Priteca gave every surface a pattern. The interior murals, by Anthony B. Heinsbergen, are even more elaborate — a polychromatic fan-vaulted lobby in gold and henna."
-        },
-        {
-          "ring": 3,
-          "difficulty": 4,
           "type": "connector",
           "clue": "One man owned both the theater at 6233 Hollywood Blvd and the bar next door at 6245 Hollywood Blvd from 1949 to 1954. He was an aviator, film producer, and billionaire. Look at the neon sign outside the bar — he installed it. Now look at the theater marquee. Both buildings carry his legacy. What is the bar's name, as spelled on its neon sign?",
           "answer": "Frolic Room",
@@ -1224,7 +637,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 5,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "The Pantages was supposed to be much taller. Alexander Pantages planned a 12-story office tower above the theater. A financial catastrophe in October 1929 stopped construction. Look at the building — how many stories tall is it?",
           "answer": "2",
@@ -1236,52 +649,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "Look at the facade material of the Pantages Theatre. The Art Deco patterns aren't painted on — they're carved into a specific material. The same material is used on thousands of ornamental building facades from the 1920s. Touch it if you can reach. It's not stone, not concrete, not brick. What material are the decorative elements made of?",
-          "answer": "Terra cotta",
-          "answerVariants": [
-            "terra cotta",
-            "terracotta",
-            "Terra cotta",
-            "Terracotta",
-            "terra-cotta"
-          ],
-          "historicalFact": "Terra cotta — fired clay — was the material of choice for Art Deco facades in 1920s LA. It could be molded into any shape before firing, which meant architects could mass-produce intricate geometric patterns. The Pantages uses it on every visible surface. Stone would have cost ten times more and taken ten times longer to carve."
-        },
-        {
-          "ring": 3,
-          "difficulty": 7,
-          "type": "persona",
-          "clue": "I drew caricatures for the New York Times for 75 years — every theater critic in America knew my line. I hid my daughter's name in every drawing. In 1963, someone painted my caricatures onto the wall of a Hollywood dive bar, steps from a theater that once hosted the Oscars. The mural has been there for 60 years. Find the bar at 6245 Hollywood Blvd. Look at the neon sign. What color is the neon?",
-          "answer": "Red",
-          "answerVariants": [
-            "red",
-            "Red",
-            "red neon"
-          ],
-          "verificationNeeded": "Confirm the Frolic Room neon sign color — widely described as red/pinkish-red neon. Verify on site.",
-          "historicalFact": "The mural inside the Frolic Room depicts 24+ caricatures in the style of Al Hirschfeld — Einstein, Gable, Monroe, Chaplin, the Marx Brothers, Louis Armstrong, Sinatra. Hirschfeld hid his daughter Nina's name in every drawing he made after her birth in 1945. The mural reportedly contains 'Nina' hidden three times. The owner says it's a scale reproduction, not a Hirschfeld original."
-        },
-        {
-          "ring": 3,
-          "difficulty": 8,
-          "type": "spotter",
-          "clue": "At the corner of Hollywood and Vine (one block west of the Pantages), look at the northeast corner. A two-tower building blends two architectural styles that shouldn't work together — pointed Gothic arches with geometric Art Deco detailing. It opened in 1929 and was Hollywood's second high-rise. What style are the pointed arches on the upper facade?",
-          "answer": "Gothic",
-          "answerVariants": [
-            "gothic",
-            "Gothic",
-            "gothic revival",
-            "Gothic Revival",
-            "late gothic",
-            "Late Gothic Revival"
-          ],
-          "historicalFact": "The Equitable Building at 6253 Hollywood Blvd is a hybrid — architect Aleck Curlett fused Gothic Revival arches with Art Deco geometry. It opened in two phases (May 1929 and late 1930), the second phase doubling its size to become Hollywood's largest office building. It was converted to lofts in 2008. The architectural clash is the point — the building was designed during the exact moment one style was dying and the other was being born."
-        },
-        {
-          "ring": 3,
-          "difficulty": 9,
+          "difficulty": 4,
           "type": "connector",
           "clue": "The Academy of Motion Picture Arts and Sciences had its headquarters in the Taft Building at Hollywood and Vine from 1935 to 1946. Then, starting in 1949, the Academy Awards ceremony moved to a stage one block east. Walk from the Taft Building to the theater that hosted the Oscars for 11 straight years. How far did the Oscars travel — how many blocks?",
           "answer": "1",
@@ -1295,7 +663,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "You're steps from your destination. Before you go in, look at the bar's facade at 6245 Hollywood Blvd. The building opened in 1930 as a speakeasy called Freddy's — patrons slipped in through a hidden door from the theater next door. A billionaire bought both buildings and added the neon sign. A woman was reportedly seen here before she became LA's most infamous unsolved murder. In 1963, an artist painted caricatures of two dozen celebrities on the interior wall. One of those celebrities won four gold medals in Berlin in 1936 while a dictator watched from the stands. His caricature is in the mural. What is his name?",
           "answer": "Jesse Owens",
@@ -1307,7 +675,7 @@
           ],
           "verificationNeeded": "Confirm Jesse Owens is depicted in the Frolic Room's Hirschfeld-style mural. The mural includes 24+ caricatures — Owens' inclusion is referenced in some sources but needs on-site verification.",
           "historicalFact": "The Frolic Room mural was painted in 1963 and restored by Oscar Ropide in 2012. The caricatures span Hollywood and beyond — Einstein, Gable, Monroe, Chaplin, the Marx Brothers, Louis Armstrong, Sinatra, and reportedly Jesse Owens. Owens won four golds at the 1936 Berlin Olympics while Hitler refused to shake his hand. He came home to a country that wouldn't let him eat at the same restaurants as his white teammates. His face on a dive-bar wall in Hollywood is an odd kind of immortality.",
-          "reasoning": "Solver identifies the athlete from the biography (four golds, Berlin, 1936, dictator watching) then enters or peers into the bar to find the caricature and confirm the name. D10 difficulty because it chains persona-style identification with physical observation inside the bar — the solver must locate the specific caricature among 24+ figures. Presence required: the mural is not consistently reproduced online with all figures labeled."
+          "reasoning": "Solver identifies the athlete from the biography (four golds, Berlin, 1936, dictator watching) then enters or peers into the bar to find the caricature and confirm the name. D5 difficulty because it chains persona-style identification with physical observation inside the bar — the solver must locate the specific caricature among 24+ figures. Presence required: the mural is not consistently reproduced online with all figures labeled."
         }
       ]
     },
@@ -1319,6 +687,12 @@
         "neighborhood": "Echo Park",
         "happyHour": "Daily 3–7pm, PBR + tequila shot combos",
         "vibe": "No-pretension dive. Strong drinks, dark wood, good jukebox. The kind of bar that rewards you for walking hills."
+      },
+      "startLocation": {
+        "lat": 34.0763,
+        "lng": -118.261,
+        "label": "Angelus Temple, Glendale Blvd & Park Ave",
+        "transit": "Metro B Line (Red) to Vermont/Sunset, walk 10 min east on Sunset"
       },
       "theme": "Chaplin, McPherson, and the Lake That Echoes",
       "totalWalkingDistance": "~0.3 miles",
@@ -1367,20 +741,6 @@
         {
           "ring": 1,
           "difficulty": 4,
-          "type": "spotter",
-          "clue": "Near Echo Park Lake, find a bronze bust on a pedestal. A poet and revolutionary watches over the water. What is his name, as inscribed on the bust?",
-          "answer": "Jose Marti",
-          "answerVariants": [
-            "jose marti",
-            "josé martí",
-            "marti",
-            "josé marti"
-          ],
-          "historicalFact": "Jose Marti died fighting Spain at Dos Rios, Cuba on May 19, 1895. Cuba won independence three years later. His bust sits at Echo Park Lake because this neighborhood became the heart of LA's Cuban exile community after 1962 — when a local Presbyterian church met the first flight of Cuban refugees at the airport."
-        },
-        {
-          "ring": 1,
-          "difficulty": 5,
           "type": "persona",
           "clue": "I was the first woman to preach on the radio. I drew 5,300 every Sunday. In 1926, I disappeared from a beach and a city mourned. Find my temple at 1100 Glendale Blvd — read the cornerstone. How many words are in the full inscription?",
           "answer": "9",
@@ -1392,29 +752,7 @@
         },
         {
           "ring": 1,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "The bronze bust near the lake carries two inscriptions in Spanish. The longer one begins with 'El que tenga...' Find the shorter inscription. What is its first word?",
-          "answer": "Con",
-          "answerVariants": [
-            "con"
-          ],
-          "historicalFact": "'Con todos y para el bien de todos' — 'With all, and for the good of all.' Marti wrote that line in 1891 while organizing a revolution from a New York apartment. He died in battle four years later, on horseback at Dos Rios. He was 42."
-        },
-        {
-          "ring": 1,
-          "difficulty": 7,
-          "type": "persona",
-          "clue": "Born in Havana. Imprisoned at 17 for advocating independence. Organized a revolution from exile. Died on horseback in the first battle. Find his bust near Echo Park Lake — the longer inscription contains one Spanish word meaning 'homeland.' What is it?",
-          "answer": "Patria",
-          "answerVariants": [
-            "patria"
-          ],
-          "historicalFact": "The full inscription reads: 'El que tenga Patria que la honre, el que no, que la conquiste' — 'He who has a homeland, honor it; he who does not, conquer one.' After 1962, Echo Park became the social and cultural heart of LA's Cuban exile community. The sculptor, Sergio Lopez Mesa, was born in Havana and studied in Rome."
-        },
-        {
-          "ring": 1,
-          "difficulty": 8,
+          "difficulty": 5,
           "type": "connector",
           "clue": "The domed church at 1100 Glendale Blvd was built by a Canadian woman in 1923. The bust near the lake was placed by Cuban exiles in 1976. Both are declarations carved into permanent materials by communities of newcomers. Read the longer inscription on the bust — it ends with an imperative verb in Spanish, a command to those without a homeland. What is the last word of that inscription?",
           "answer": "Conquiste",
@@ -1422,29 +760,6 @@
             "conquiste"
           ],
           "historicalFact": "'El que tenga Patria que la honre, el que no, que la conquiste' — 'He who has a homeland, honor it; he who does not, conquer one.' McPherson carved her mission into a cornerstone. The Cuban community carved their rallying cry into a pedestal. Fifty-three years apart, same neighborhood, same impulse: write it in stone so it lasts."
-        },
-        {
-          "ring": 1,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "The cornerstone inscription contains two compound words. One is 'worldwide' — easy to spot. The other is hyphenated and harder to notice. What is the hyphenated word?",
-          "answer": "inter-denominational",
-          "answerVariants": [
-            "inter-denominational",
-            "interdenominational"
-          ],
-          "historicalFact": "McPherson's vision was inter-denominational — she didn't care what church you came from, as long as you showed up. At a time when Protestant denominations fought over doctrine, she built a 5,300-seat tent that welcomed everyone. The building cost $1.5 million in 1923 dollars — roughly $27 million today — funded almost entirely by small donations from followers."
-        },
-        {
-          "ring": 1,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "The cornerstone inscription at the temple and the longer inscription on the bust near the lake were carved 53 years apart. Both contain a word that reveals their builders' ambitions — one in English, one in Spanish. The cornerstone uses a word meaning 'across the entire earth.' The bust uses a word meaning 'homeland.' You've already found both. The English word has 9 letters. The Spanish word has 6. Now look at the bust's shorter inscription — the one beginning with 'Con.' It contains one Spanish word meaning 'good.' What is it?",
-          "answer": "Bien",
-          "answerVariants": [
-            "bien"
-          ],
-          "historicalFact": "'Con todos y para el bien de todos' — 'With all, and for the good of all.' Two inscriptions at two monuments in one park, both asking the same question in different languages: who belongs here? McPherson answered 'everyone who believes.' Marti answered 'everyone, period.' Echo Park held both answers for a century."
         },
         {
           "ring": 2,
@@ -1460,18 +775,6 @@
           "ring": 2,
           "difficulty": 2,
           "type": "spotter",
-          "clue": "Find the 14-foot statue near the boathouse. Her pedestal has carved panels on each side, each depicting a different LA landmark. How many panels are there?",
-          "answer": "4",
-          "answerVariants": [
-            "4",
-            "four"
-          ],
-          "historicalFact": "The four bas-reliefs depict the Hollywood Bowl, LA Harbor, the San Gabriel Mountains, and the LA Central Library — a love letter to the city, carved into concrete by a 30-year-old sculptor from Hawaii in 1935."
-        },
-        {
-          "ring": 2,
-          "difficulty": 3,
-          "type": "spotter",
           "clue": "What kind of boats are on the lake?",
           "answer": "Pedal boats",
           "answerVariants": [
@@ -1484,22 +787,19 @@
         },
         {
           "ring": 2,
-          "difficulty": 4,
-          "type": "persona",
-          "clue": "I was a parks superintendent inspecting a new reservoir in 1892. I shouted across the water and heard my own voice come back. I was so charmed that I named the entire park after what I heard. What did I hear?",
-          "answer": "An echo",
+          "difficulty": 3,
+          "type": "spotter",
+          "clue": "Find the 14-foot statue near the boathouse. Her pedestal has carved panels on each side, each depicting a different LA landmark. How many panels are there?",
+          "answer": "4",
           "answerVariants": [
-            "echo",
-            "an echo",
-            "echoes",
-            "his echo",
-            "my echo"
+            "4",
+            "four"
           ],
-          "historicalFact": "Joseph Henry Tomlinson heard echoes bouncing off the reservoir walls and named his park accordingly. The irony: as Echo Park urbanized, the echoes faded. The acoustic phenomenon that gave the neighborhood its name hasn't been heard in decades."
+          "historicalFact": "The four bas-reliefs depict the Hollywood Bowl, LA Harbor, the San Gabriel Mountains, and the LA Central Library — a love letter to the city, carved into concrete by a 30-year-old sculptor from Hawaii in 1935."
         },
         {
           "ring": 2,
-          "difficulty": 5,
+          "difficulty": 4,
           "type": "spotter",
           "clue": "Look at the pedestal panels on the statue. Each depicts a different LA landmark. One shows a venue where orchestras perform outdoors. One shows a place where ships dock. One shows a mountain range. One shows a building full of books. Name the building full of books.",
           "answer": "LA Central Library",
@@ -1514,20 +814,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "One pedestal panel depicts a venue where orchestras perform under the stars. It's been hosting concerts since 1922. What is the venue?",
-          "answer": "Hollywood Bowl",
-          "answerVariants": [
-            "hollywood bowl",
-            "the hollywood bowl",
-            "the bowl"
-          ],
-          "historicalFact": "The Hollywood Bowl opened in 1922, one year before Angelus Temple. Both were built for crowds — one for music, one for sermons. The sculptor chose it as one of four landmarks that defined LA in 1935. The Bowl's distinctive band shell, the one everyone pictures, wasn't built until 1929."
-        },
-        {
-          "ring": 2,
-          "difficulty": 7,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "The statue was planned in bronze, but Depression-era budget cuts forced the sculptor to use something cheaper. Look at the statue — it's not metal. What material is it actually made of?",
           "answer": "Stone",
@@ -1539,45 +826,6 @@
             "liquid stone"
           ],
           "historicalFact": "Ada Mae Sharpless was born in Hilo, Hawaii in 1904 and trained at the Ecole des Beaux-Arts in Paris. She was 30 when she carved the Queen of the Angels from 'liquid stone' — poured concrete — because the WPA budget for bronze ran out. The statue was vandalized, lost her fingers, spent 13 years in storage, and came back in 1999 sealed with anti-graffiti coating. She's tougher than she looks."
-        },
-        {
-          "ring": 2,
-          "difficulty": 8,
-          "type": "spotter",
-          "clue": "Three of the four pedestal panels depict man-made structures. One depicts something natural — something you might see on the horizon on a clear day. Which landmark is the natural one?",
-          "answer": "San Gabriel Mountains",
-          "answerVariants": [
-            "san gabriel mountains",
-            "san gabriels",
-            "the mountains",
-            "mountains",
-            "san gabriel"
-          ],
-          "historicalFact": "The San Gabriels rise to 10,064 feet just 15 miles north of downtown LA. On clear winter days after rain, they're snow-capped and visible from Echo Park Lake. The sculptor included them alongside the Hollywood Bowl, LA Harbor, and the Central Library — the only natural landmark among four symbols of the city."
-        },
-        {
-          "ring": 2,
-          "difficulty": 9,
-          "type": "connector",
-          "clue": "The temple at 1100 Glendale Blvd was built by a woman from Ontario, Canada. The statue at the lake was carved by a woman from Hilo, Hawaii. Both came from elsewhere to leave their mark on Echo Park. The statue's sculptor gave her work a Spanish title beginning with 'Nuestra.' If that title is inscribed on the pedestal, what is the second word?",
-          "answer": "Reina",
-          "answerVariants": [
-            "reina"
-          ],
-          "verificationNeeded": "Confirm 'Nuestra Reina de Los Angeles' is inscribed on the pedestal.",
-          "historicalFact": "'Nuestra Reina de Los Angeles' — Queen of the Angels. McPherson built a temple in 1923; Sharpless carved a queen in 1935. Two women, two monuments, both from islands or peninsulas, both still standing in Echo Park a century later."
-        },
-        {
-          "ring": 2,
-          "difficulty": 10,
-          "type": "persona",
-          "clue": "I was born in Hilo, Hawaii in 1904. I studied sculpture at the Ecole des Beaux-Arts in Paris. The government hired me to build a monument in bronze, but the Depression took the budget — so I poured her from concrete instead. She lost her fingers to vandals and spent 13 years in a warehouse. She came back in 1999. Find her at the lake. Her pedestal carries a Spanish title. What is the first word of that title?",
-          "answer": "Nuestra",
-          "answerVariants": [
-            "nuestra"
-          ],
-          "verificationNeeded": "Confirm 'Nuestra Reina de Los Angeles' is inscribed on the pedestal.",
-          "historicalFact": "Ada Mae Sharpless carved the Queen of the Angels from 'liquid stone' — poured concrete — because the WPA budget for bronze ran out. The statue was vandalized, lost her fingers, spent 13 years in storage, and came back in 1999 sealed with anti-graffiti coating. 'Nuestra Reina de Los Angeles' — Our Queen of the Angels. Sharpless was 30 years old. She'd come from Hawaii, trained in Paris, and left a 14-foot monument in a city that nearly forgot it."
         },
         {
           "ring": 3,
@@ -1640,68 +888,6 @@
             "bricks"
           ],
           "historicalFact": "Henry Christian Jensen manufactured bricks for LA's rapid expansion — his product literally built the city. Then in 1924, he built himself a three-story recreation center at 1706 W Sunset using his own bricks. Bowling downstairs, 46 apartments upstairs. The building still stands. The rooftop sign is now a protected historic landmark."
-        },
-        {
-          "ring": 3,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "Above the entrance at 1706 W Sunset, the building's name is spelled out in terra cotta letters. Count the letters in just the first word. How many?",
-          "answer": "6",
-          "answerVariants": [
-            "6",
-            "six"
-          ],
-          "historicalFact": "JENSEN — six letters in terra cotta, still crisp after a century. Jensen's Recreation Center was built in 1924 at the corner of Sunset and Logan. The building sold for $15 million in 2014 — a brick building by a brick man, outlasting everything around it."
-        },
-        {
-          "ring": 3,
-          "difficulty": 7,
-          "type": "persona",
-          "clue": "I won four gold medals in Berlin in 1936 while a dictator watched from the stands. I proved him wrong without saying a word. My name is in the sidewalk beneath your feet. Find my plaque. What is my name?",
-          "answer": "Jesse Owens",
-          "answerVariants": [
-            "jesse owens",
-            "owens"
-          ],
-          "historicalFact": "Jesse Owens won the 100m, 200m, long jump, and 4×100m relay at the 1936 Berlin Olympics — humiliating Hitler's claims of Aryan supremacy on his home turf. L. Andrew Castle chose Owens for his sidewalk hall of fame because the story transcended sports. Castle picked every name on this pavement for a reason."
-        },
-        {
-          "ring": 3,
-          "difficulty": 8,
-          "type": "persona",
-          "clue": "I broke baseball's color line in 1947. Before me, no Black man had played in the major leagues in the 20th century. I endured death threats and bean balls for a whole season before I was allowed to fight back. My name is in the sidewalk. Find my plaque. What is my last name?",
-          "answer": "Robinson",
-          "answerVariants": [
-            "robinson",
-            "jackie robinson"
-          ],
-          "historicalFact": "Jackie Robinson's plaque is embedded in the same sidewalk as Jesse Owens and Billie Jean King. Castle saw the pattern when he designed this walk of fame — every name on this pavement broke a barrier that went far beyond their sport. Robinson was told by Branch Rickey that he needed 'the courage not to fight back' for his first two seasons. He did it for one. Then he fought back."
-        },
-        {
-          "ring": 3,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "At 1714 W Sunset, the slushy machine has a sign that's not quite a normal 'Out of Order' notice. Read the sign carefully. What does it actually say?",
-          "answer": "Out of Order Come Back Yesterday",
-          "answerVariants": [
-            "out of order come back yesterday",
-            "come back yesterday"
-          ],
-          "verificationNeeded": "Confirm slushy machine sign text is still displayed at 826LA.",
-          "historicalFact": "Every detail in the Echo Park Time Travel Mart is a bit — the slushy machine, the robot milk, the facial hair timeline poster. Dave Eggers started the concept in San Francisco with a pirate supply store. Each city in the 826 network picks its own theme. LA chose time travel. Behind the gag storefront, 826LA teaches 20-30 students per day in creative writing — all free, funded by the fake store."
-        },
-        {
-          "ring": 3,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "At 1714 W Sunset, a fake store sells Robot Milk to fund a free tutoring center. At 1706 W Sunset — the same block — a German brick manufacturer built a bowling alley with 46 apartments on top. One building pretends to be something it's not. The other is exactly what it says on the sign. Look at the storefront at 1714. The store's motto is written somewhere visible. What is it?",
-          "answer": "Whenever You Are, We're Already There",
-          "answerVariants": [
-            "whenever you are, we're already there",
-            "whenever you are we're already there"
-          ],
-          "verificationNeeded": "Confirm motto 'Whenever You Are, We're Already There' is displayed on storefront.",
-          "historicalFact": "Two buildings, one block, a century apart. Jensen's Recreation Center (1924) is a brick manufacturer's monument to himself — bowling, apartments, a 1,300-bulb neon sign, all built from his own product. The Echo Park Time Travel Mart (2008) is a joke with a serious punchline — every dollar from Viking Odorant and Mammoth Chunks funds writing classes for kids. Jensen put his name in terra cotta. Dave Eggers put a time-travel motto on the glass."
         }
       ]
     },
@@ -1713,6 +899,12 @@
         "neighborhood": "Highland Park",
         "happyHour": "Daily 4–8pm + late night midnight–2am Sun–Thu, $7 cocktails",
         "vibe": "Day of the Dead cave grotto. Palomas, Old Fashioneds, mezcal. Arrival feels earned."
+      },
+      "startLocation": {
+        "lat": 34.1085,
+        "lng": -118.1943,
+        "label": "Chicken Boy, Figueroa St & Ave 56",
+        "transit": "Metro A Line (Gold) to Highland Park, walk 5 min north on Figueroa"
       },
       "theme": "The Man Who Walked to LA and the Street Named for a Ghost",
       "totalWalkingDistance": "~0.3 miles",
@@ -1778,20 +970,6 @@
         {
           "ring": 1,
           "difficulty": 5,
-          "type": "persona",
-          "clue": "I stood on Broadway in downtown LA for 20 years, selling fried chicken to anyone who walked by. When my owner died in 1984, I was homeless. A woman put me in storage for 23 years before giving me a new rooftop in Highland Park. What am I made of? Look closely — I'm not metal.",
-          "answer": "Fiberglass",
-          "answerVariants": [
-            "fiberglass",
-            "fiberglass and polyester resin",
-            "polyester resin",
-            "fiberglass resin"
-          ],
-          "historicalFact": "Chicken Boy is a customized Muffler Man — a type of oversized fiberglass statue mass-produced by International Fiberglass Company in Venice, CA during the 1960s. Hundreds were made for gas stations, restaurants, and car washes. Most are gone. This one survived because one person spent 23 years and her own money keeping it alive."
-        },
-        {
-          "ring": 1,
-          "difficulty": 6,
           "type": "connector",
           "clue": "Walk to the corner of Avenue 56 and Figueroa. A three-story building stands on the corner — built in 1923 for a secret society that met on the second floor. The same building is now a music venue. The building material tells you what era built this stretch of Figueroa. What is it made of?",
           "answer": "Brick",
@@ -1800,62 +978,6 @@
             "bricks"
           ],
           "historicalFact": "Highland Park Lodge 382, Free and Accepted Masons, built this three-story brick hall in 1923. The Masons met upstairs for 60 years, then left in 1983 when they couldn't afford seismic retrofitting. The building sat empty, became a wedding venue, and in 2017 reopened as Lodge Room — a 500-capacity music venue. The original cherry wood paneling and Masonic paintings are still inside."
-        },
-        {
-          "ring": 1,
-          "difficulty": 7,
-          "type": "spotter",
-          "clue": "The sidewalk mosaics stretch for blocks along Figueroa. One of them shows a building with a trolley car rolling past it — a scene from the 1920s when streetcars ran down this street. What building does that mosaic depict?",
-          "answer": "Highland Theatre",
-          "answerVariants": [
-            "highland theatre",
-            "the highland theatre",
-            "highland theater",
-            "the highland theater"
-          ],
-          "verificationNeeded": "Confirm mosaic showing Highland Theatre with trolley is within walking-route range (Ave 56-60).",
-          "historicalFact": "Streetcars ran down Figueroa through the 1950s. Wick Alexander's mosaic captures the moment when this street had four blocks of movie theaters, a trolley line, and crowds on the sidewalk. The Highland Theatre is still standing three blocks south — but the trolleys are gone and the theater closed in 2024, six days short of its 100th anniversary."
-        },
-        {
-          "ring": 1,
-          "difficulty": 8,
-          "type": "connector",
-          "clue": "You've been looking up at a 22-foot statue and down at tile mosaics — all on the same block. The statue arrived in 2007 from a warehouse. The mosaics arrived in 2018 from a city grant. One artist created all 14 mosaics, depicting Highland Park landmarks he photographed over years of walking this street. His name appears on or near the mosaics. What is the artist's last name?",
-          "answer": "Alexander",
-          "answerVariants": [
-            "alexander",
-            "wick alexander"
-          ],
-          "verificationNeeded": "Confirm Wick Alexander's name is credited on or near the sidewalk mosaics — look for an artist credit tile or plaque.",
-          "historicalFact": "Wick Alexander spent years photographing Highland Park before translating what he saw into 14 tile mosaics. The $149,000 city grant paid for materials and installation, but the subjects came from Alexander's own walks — Chicken Boy, the Highland Theatre, the Ebell Club women. He embedded the neighborhood's memory into the same concrete people use to get to their cars."
-        },
-        {
-          "ring": 1,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "Count the total number of tile mosaics you can find embedded in the sidewalk between Avenue 56 and the Chicken Boy building. Each mosaic is roughly the same size, flush with the concrete. How many are there?",
-          "answer": "14",
-          "answerVariants": [
-            "14",
-            "fourteen"
-          ],
-          "verificationNeeded": "Confirm how many of the 14 total mosaics fall between Ave 56 and 5558 N Figueroa. The full set of 14 spans Ave 53 to Ave 60. The walk may only pass a subset.",
-          "historicalFact": "Wick Alexander's 14 mosaics tell the story of Highland Park from the trolley era to the present — the Ebell Club women, Chicken Boy, the Highland Theatre. Most pedestrians walk over them without a second look. You had to get on your knees to count them all."
-        },
-        {
-          "ring": 1,
-          "difficulty": 10,
-          "type": "spotter",
-          "clue": "One of the sidewalk mosaics depicts a group of women standing in front of a building — members of a club founded in 1903 that organized for women's suffrage before California granted the vote in 1911. The mosaic shows the women in period dress outside their clubhouse. What is the name of the club shown in the mosaic?",
-          "answer": "Ebell Club",
-          "answerVariants": [
-            "ebell club",
-            "the ebell club",
-            "highland park ebell club",
-            "ebell"
-          ],
-          "verificationNeeded": "Confirm Ebell Club mosaic is within walking range (Ave 56-60) and that the club name is identifiable on or near the mosaic.",
-          "historicalFact": "The Highland Park Ebell Club was founded in December 1903 by women who raised their own money, bought their own land, and built their own clubhouse. They awarded scholarships starting in 1907 and organized for California women's suffrage, which passed in 1911 — nine years before the 19th Amendment. Wick Alexander put them in the sidewalk so you'd have to look down to find the women who looked up and changed the state."
         },
         {
           "ring": 2,
@@ -1871,22 +993,6 @@
           "ring": 2,
           "difficulty": 2,
           "type": "spotter",
-          "clue": "Look at the Highland Theatre facade at 5604 N Figueroa. The building's architectural style uses ornate arches and decorative plasterwork borrowed from North Africa and Spain. What material are the decorative elements made of? Look at the texture.",
-          "answer": "Terra cotta",
-          "answerVariants": [
-            "terra cotta",
-            "terracotta",
-            "terra cotta and plaster",
-            "plaster",
-            "ornamental terra cotta"
-          ],
-          "verificationNeeded": "Confirm terra cotta elements are visually distinguishable from plaster on exterior. Profile lists 'ornamental terra cotta and plaster.'",
-          "historicalFact": "Moorish Revival was the hot theater style in the 1920s — arches, minarets, and ornamental details that made a night at the movies feel like entering a palace. Lewis A. Smith specialized in this look, designing four LA theaters in the style before dying at roughly 30."
-        },
-        {
-          "ring": 2,
-          "difficulty": 3,
-          "type": "spotter",
           "clue": "Walk half a block south to 5621 N Figueroa. A sign on the building front spells out a name that includes three words. The first word is the name of this neighborhood. What are the full three words on the sign?",
           "answer": "Highland Park Bowl",
           "answerVariants": [
@@ -1896,7 +1002,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 4,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "Through the windows or entrance of Highland Park Bowl, you can see the original lanes — they've been bowling here since 1927. How many lanes are there?",
           "answer": "8",
@@ -1909,7 +1015,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 5,
+          "difficulty": 4,
           "type": "persona",
           "clue": "I designed theaters across Los Angeles — Moorish arches, ornamental facades, places that made moviegoers feel like royalty. The Vista in Los Feliz. El Portal in North Hollywood. The Rialto in Pasadena. And this one on Figueroa, opened March 1925. I never saw any of them age. Find the building at 5604 N Figueroa. How many stories tall is it?",
           "answer": "3",
@@ -1921,58 +1027,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 6,
-          "type": "connector",
-          "clue": "The building at 5621 N Figueroa (the bowling alley) and the bar you're walking toward (La Cuevita at 5922 N Figueroa) are run by the same company. That company is named after a year — the year a certain federal law was repealed. Look at the bowling alley's facade. What architectural style is it? The same style La Cuevita's building wears.",
-          "answer": "Spanish Revival",
-          "answerVariants": [
-            "spanish revival",
-            "spanish colonial revival",
-            "spanish colonial",
-            "mission revival",
-            "spanish"
-          ],
-          "verificationNeeded": "Confirm La Cuevita's exterior reads as Spanish Revival to match HP Bowl. Profile describes HP Bowl as 'Spanish Revival facade.'",
-          "historicalFact": "1933 Group — named for the year Prohibition ended — operates both Highland Park Bowl and La Cuevita, three blocks apart on Figueroa. They specialize in resurrecting old buildings: stripping decades of renovation to reveal the original bones. At La Cuevita, they peeled off stucco and paneling to expose 1930s brick walls. At the Bowl, they restored the original Spanish Revival facade and 1927 bowling lanes."
-        },
-        {
-          "ring": 2,
-          "difficulty": 7,
-          "type": "spotter",
-          "clue": "Look at the Highland Theatre and Highland Park Bowl — both on Figueroa, both from the 1920s. Count the number of street-facing arches visible on the Highland Theatre facade. Just the arches on the front of the building.",
-          "answer": "",
-          "answerVariants": [],
-          "verificationNeeded": "CRITICAL: Cannot determine exact arch count from web research alone. This clue requires on-site verification. Placeholder — replace answer after site visit. Profile confirms 'Moorish-style arches and decorative elements visible from street' but gives no count.",
-          "historicalFact": "The Highland Theatre and Highland Park Bowl were built within two years of each other — 1925 and 1927 — on the same stretch of Figueroa during Highland Park's entertainment boom. Four blocks of theaters, bowling alleys, and gathering places, all built before the Depression hit.",
-          "_note": "NEEDS SITE VISIT: Replace this clue with confirmed arch count or substitute another spotter using a verified observable feature."
-        },
-        {
-          "ring": 2,
-          "difficulty": 8,
-          "type": "persona",
-          "clue": "During Prohibition, I wasn't a bar — I was a bowling alley. But I had doctors upstairs writing prescriptions for 'medicinal' spirits, and a pharmacy downstairs filling them. You bowled, you drank, and none of it was illegal. A punk band played behind my black curtain in the '90s. Find me at 5621 N Figueroa. What word appears first on my sign?",
-          "answer": "Highland",
-          "answerVariants": [
-            "highland"
-          ],
-          "historicalFact": "Highland Park Bowl was renamed Mr. T's Bowl in 1966 for owner Joseph 'Mr. T' Theresa. In the early 1990s, a black curtain blocked off the lanes for punk shows — The Breeders and the Germs played here. It closed in 2014 and 1933 Group restored the original 1927 character: Spanish Revival facade, original lanes, Prohibition-era charm."
-        },
-        {
-          "ring": 2,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "The Highland Theatre at 5604 N Figueroa has a marquee — the protruding sign structure above the entrance where movie titles once went. Look at it. One word dominates the marquee, larger than anything else. What does it say?",
-          "answer": "Highland",
-          "answerVariants": [
-            "highland",
-            "HIGHLAND"
-          ],
-          "verificationNeeded": "CRITICAL: Confirm marquee is still present and readable. The theater closed in 2024 and Kristen Stewart purchased it in February 2026 — renovation may have altered exterior signage. If marquee is removed or covered, this clue fails.",
-          "historicalFact": "The marquee once advertised double features to Figueroa foot traffic. When the theater closed in 2024 — six days short of its 100th anniversary — the marquee went dark for the first time since 1925. Kristen Stewart bought the building in February 2026, planning to reopen it as a cultural center. Whether the marquee lights up again depends on what she builds."
-        },
-        {
-          "ring": 2,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "connector",
           "clue": "The Highland Theatre (1925) and Highland Park Bowl (1927) sit across the street from each other. Both closed. Both were resurrected. The theater was bought by a Hollywood actress in 2026. The bowling alley was restored by a bar company named after a year. That year is when a constitutional amendment was repealed — the same amendment that made the bowling alley's prescription-whiskey scheme necessary in the first place. What year is the company named after?",
           "answer": "1933",
@@ -1997,22 +1052,6 @@
           "ring": 3,
           "difficulty": 2,
           "type": "spotter",
-          "clue": "The massive mural on the corner of Figueroa and Avenue 61 is filled with figures from ancient civilizations. What kind of cultural imagery dominates the mural? Look for headdresses, pyramids, and warriors.",
-          "answer": "Aztec",
-          "answerVariants": [
-            "aztec",
-            "mayan",
-            "aztec and mayan",
-            "indigenous",
-            "aztec mayan",
-            "mesoamerican"
-          ],
-          "historicalFact": "The mural blends Aztec, Mayan, Native American, African, and other indigenous iconography — cultures in unity, painted on a Highland Park wall by the Quetzalcoatl Mural Project. Quetzalcoatl is the Aztec feathered serpent deity associated with wind, knowledge, and creation."
-        },
-        {
-          "ring": 3,
-          "difficulty": 3,
-          "type": "spotter",
           "clue": "Walk to La Cuevita at 5922 N Figueroa. Before you go inside, look at the entrance. The doors are not modern — they're salvaged from somewhere far away and very old. What material are the entrance doors made of?",
           "answer": "Wood",
           "answerVariants": [
@@ -2025,7 +1064,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 4,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "Step inside La Cuevita and look at the walls. During the 2012 renovation, the owners stripped away decades of stucco, plaster, and paneling to reveal what was underneath. What material are the walls?",
           "answer": "Brick",
@@ -2038,7 +1077,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 5,
+          "difficulty": 4,
           "type": "connector",
           "clue": "The 75-foot mural on Figueroa and Avenue 61 celebrates Aztec and Mayan culture. The bar 110 meters away is decorated with skulls, skeletons, and upside-down bats. Both draw from the same Mexican tradition — a holiday that honors the dead with color, not grief. Look around La Cuevita's interior. What holiday does the decor celebrate?",
           "answer": "Dia de los Muertos",
@@ -2052,34 +1091,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "Inside La Cuevita, look up at the ceiling and along the walls. The lighting comes through colored panels — not standard glass. What kind of decorative glass provides the light?",
-          "answer": "Stained glass",
-          "answerVariants": [
-            "stained glass",
-            "stained-glass",
-            "colored glass"
-          ],
-          "historicalFact": "The stained glass, the church doors from Mexico, the wrought iron fixtures — La Cuevita borrows the vocabulary of a Catholic church and repurposes it for a mezcal bar. The name means 'little cave,' and the designers wanted the feeling of descending into a candlelit grotto, sacred and a little unsettling."
-        },
-        {
-          "ring": 3,
-          "difficulty": 7,
-          "type": "persona",
-          "clue": "I lost a friend to gang violence in the 1990s. Instead of a funeral, I gathered artists and we covered a building wall with the faces and symbols of our ancestors. Warriors, serpents, pyramids. The city tried to erase me in 2020. Find me at Figueroa and Avenue 61. My full title is painted on the wall — it begins with the name of a country and ends with a phrase about speaking. What is the full title?",
-          "answer": "Mexico-Tenochtitlan: The Wall That Talks",
-          "answerVariants": [
-            "mexico-tenochtitlan the wall that talks",
-            "mexico tenochtitlan the wall that talks",
-            "the wall that talks"
-          ],
-          "verificationNeeded": "Confirm full title is painted/written on or near the mural. If title is not physically readable at the site, this clue fails the Presence Test.",
-          "historicalFact": "Anthony 'Eagle' Ortega founded the Quetzalcoatl Mural Project and led the painting in 1996. When the building owner rumored erasure in 2020, the community mobilized. The mural was nominated for LA Historic-Cultural Monument status in 2022 — permanent protection for a painting born from permanent loss."
-        },
-        {
-          "ring": 3,
-          "difficulty": 8,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "Look at the decorative animals inside La Cuevita. Among the skulls and skeletons, some creatures hang upside down from the ceiling or walls — the same animals you'd find in a real cave. What are they?",
           "answer": "Bats",
@@ -2089,34 +1101,6 @@
             "upside-down bats"
           ],
           "historicalFact": "La Cuevita means 'the little cave' in Spanish — the bar is designed as a candlelit grotto, complete with bats. Before 2012, this spot was a dive bar called Little Cave, one of the first bars to open in Highland Park in decades. 1933 Group kept the name (translated it to Spanish) and rebuilt the interior around salvaged materials: century-old church doors, marble tables, stained glass."
-        },
-        {
-          "ring": 3,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "Inside La Cuevita, the furniture is built from salvaged materials. The tables aren't wood — they're made from something heavier, something you'd expect to find in an old hotel lobby or a church vestibule. Run your hand across the surface of a table. What material is it?",
-          "answer": "Marble",
-          "answerVariants": [
-            "marble",
-            "salvaged marble",
-            "stone"
-          ],
-          "verificationNeeded": "Confirm marble tables are present and identifiable by touch/sight. Profile says 'salvaged marble tables.'",
-          "historicalFact": "Every surface in La Cuevita was chosen for texture: 100-year-old church doors from Mexico, exposed 1930s brick, wrought iron fixtures, stained glass, and salvaged marble tables. 1933 Group builds bars the way set designers build films — material by material, each piece with a provenance."
-        },
-        {
-          "ring": 3,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "You've walked past a 75-foot Chicano mural, through 100-year-old church doors from Mexico, past Dia de los Muertos skulls and stained glass salvaged from a church. The bar's name is Spanish — it translates to a geological feature you might find underground, where bats actually live. The name is on the sign outside. What does the bar's name mean in English?",
-          "answer": "The little cave",
-          "answerVariants": [
-            "the little cave",
-            "little cave",
-            "a little cave",
-            "small cave"
-          ],
-          "historicalFact": "La Cuevita — 'the little cave.' Before 2012, this spot was literally called Little Cave, a dive bar that was one of the first to open in Highland Park in decades. 1933 Group kept the meaning, translated it to Spanish, and built the interior to match: a candlelit grotto with bats, skulls, stained glass, and church doors. The name, the decor, the mural down the block — this stretch of Figueroa wears its Mexican identity in the architecture."
         }
       ]
     },
@@ -2128,6 +1112,12 @@
         "neighborhood": "Mid-Wilshire / Koreatown",
         "happyHour": "Mon–Fri 5–7pm, $8 cocktails, $6 beer/wine",
         "vibe": "Colombian rooftop inside a 1928 drive-in grocery. The building is the destination."
+      },
+      "startLocation": {
+        "lat": 34.0639,
+        "lng": -118.2973,
+        "label": "Chapman Plaza, 3451 W 6th St",
+        "transit": "Metro B/D Line to Wilshire/Normandie, walk 2 blocks north"
       },
       "theme": "Bean Patches, Blue Tiles, and the Night Bobby Died",
       "totalWalkingDistance": "~0.25 miles",
@@ -2166,28 +1156,29 @@
           "ring": 1,
           "difficulty": 3,
           "type": "spotter",
-          "clue": "Chapman Plaza has a massive arched opening on its 6th Street facade. This arch wasn't decorative — it was functional. What were the vehicles that originally drove through it?",
-          "answer": "Cars",
+          "clue": "Walk into Chapman Plaza's courtyard. The hallways are unusually wide — double the width of a normal corridor. Look at the windows lining the interior. What shape are they?",
+          "answer": "Arched",
           "answerVariants": [
-            "cars",
-            "automobiles",
-            "vehicles",
-            "autos"
+            "arched",
+            "arches",
+            "arched windows",
+            "rounded",
+            "semicircular"
           ],
-          "historicalFact": "The arch was wide enough for 1929 automobiles to drive through and park in the central courtyard. Chapman Plaza was built for the car — not the streetcar — at a time when Wilshire Boulevard was being designed as LA's first automobile-oriented commercial strip. Two blocks south, 6th Street still had streetcar tracks."
+          "historicalFact": "The double-wide hallways were designed for foot traffic from shoppers who'd parked in the courtyard. The arched windows echo the building's grand entry arch — the architects carried the arch motif from the scale of a car entrance down to the scale of a window. Morgan, Walls & Clements did the same thing at the Wiltern, where the lobby arches mirror the building's exterior curves."
         },
         {
           "ring": 1,
           "difficulty": 4,
-          "type": "spotter",
-          "clue": "Look at the facade of Chapman Plaza. The ornate towers use a style of decoration with elaborate carvings and layered surfaces — a Spanish Baroque import that became popular in 1920s LA. What material is the building made of?",
-          "answer": "Concrete",
+          "type": "connector",
+          "clue": "Chapman Plaza (1929) and the Gaylord Apartments (1924) were both built during the same decade-long boom that transformed this corridor. One is Spanish Revival, the other is Renaissance Revival. One is concrete, the other is something else entirely. Walk from Chapman Plaza toward Wilshire and look south at the Gaylord tower. Touch the facade if you can. What material clads it?",
+          "answer": "Brick",
           "answerVariants": [
-            "concrete",
-            "poured concrete",
-            "reinforced concrete"
+            "brick",
+            "bricks",
+            "brick and terra cotta"
           ],
-          "historicalFact": "Chapman Plaza is 50,000 square feet of fortress-like concrete walls dressed up in Spanish Baroque ornament. The Churrigueresque towers — named for 17th-century Spanish architect Jose Benito de Churriguera — give the building a cathedral-like presence that masks what is, structurally, a concrete box designed to hold groceries and parked cars."
+          "historicalFact": "Chapman Plaza is concrete dressed in Spanish ornament. The Gaylord is brick and terra cotta in Renaissance Revival style. Both were built within five years of each other, five blocks apart, for the same clientele — wealthy Angelenos drawn to the Wilshire corridor. Different architects, different materials, same ambition: anchor a neighborhood that didn't exist 10 years earlier."
         },
         {
           "ring": 1,
@@ -2204,74 +1195,6 @@
           ],
           "verificationNeeded": "Confirm Oasis Church arches are visible from Chapman Plaza intersection and are rounded/Romanesque style.",
           "historicalFact": "The Chapman family built the market and donated the land for Oasis Church (originally Wilshire Christian Church) across the intersection. The church's rounded Romanesque arches contrast with the Gothic pointed arches of Immanuel Presbyterian a few blocks east — two monumental churches facing each other across Wilshire, built within two years of each other."
-        },
-        {
-          "ring": 1,
-          "difficulty": 6,
-          "type": "spotter",
-          "clue": "Walk into Chapman Plaza's courtyard. The hallways are unusually wide — double the width of a normal corridor. Look at the windows lining the interior. What shape are they?",
-          "answer": "Arched",
-          "answerVariants": [
-            "arched",
-            "arches",
-            "arched windows",
-            "rounded",
-            "semicircular"
-          ],
-          "historicalFact": "The double-wide hallways were designed for foot traffic from shoppers who'd parked in the courtyard. The arched windows echo the building's grand entry arch — the architects carried the arch motif from the scale of a car entrance down to the scale of a window. Morgan, Walls & Clements did the same thing at the Wiltern, where the lobby arches mirror the building's exterior curves."
-        },
-        {
-          "ring": 1,
-          "difficulty": 7,
-          "type": "persona",
-          "clue": "I designed a drive-in grocery in 1929 and an Art Deco theater in 1931 — one in Spanish Revival, one in Zigzag Moderne. Two buildings, two styles, same boulevard. My theater's name is a mashup of the boulevard and the cross street. Find the grocery I built — what architectural style is visible on the facade towers? Look for the elaborate carved ornamentation layered onto the concrete.",
-          "answer": "Churrigueresque",
-          "answerVariants": [
-            "churrigueresque",
-            "spanish baroque",
-            "baroque"
-          ],
-          "verificationNeeded": "Confirm Churrigueresque detailing is clearly identifiable on Chapman Plaza towers by a non-expert observer. May need to simplify answer to 'Spanish Revival' if too obscure.",
-          "historicalFact": "Stiles O. Clements was the lead architect at Morgan, Walls & Clements. He designed Chapman Plaza in Spanish Revival with Churrigueresque towers and the Wiltern in Zigzag Moderne — two radically different styles, two years apart, on the same corridor. The range was the point. LA in the 1920s was a city trying on identities, and Clements could dress it in whatever it wanted."
-        },
-        {
-          "ring": 1,
-          "difficulty": 8,
-          "type": "spotter",
-          "clue": "Step outside Chapman Plaza onto 6th Street and look at the storefronts on the block. These buildings sit directly on the sidewalk — no setback, no parking lot, no driveway. They were built for people stepping off a vehicle that ran on tracks down the middle of the street. What vehicle were these storefronts designed for?",
-          "answer": "Streetcar",
-          "answerVariants": [
-            "streetcar",
-            "trolley",
-            "streetcars",
-            "trolleys",
-            "the streetcar",
-            "a streetcar"
-          ],
-          "historicalFact": "The 6th Street Streetcar Commercial Historic District is eligible for the National Register — a rare intact stretch of 1920s storefronts built for streetcar riders, not drivers. Chapman Plaza straddles two worlds: its 6th Street facade faces a streetcar corridor where buildings hug the sidewalk, while its Wilshire side faces a boulevard designed for automobiles. Two transportation philosophies, one building."
-        },
-        {
-          "ring": 1,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "Chapman Plaza was restored in 1990 by the same developer-architect pair who saved another LA landmark from demolition nine years earlier — a theater on Wilshire and Western with a blue-green terra cotta facade. The theater's name is a mashup of the boulevard and the cross street. Now look at the storefronts inside Chapman Plaza's arcade. Escala, KazuNori, Uncle Tetsu — the tenants have changed, but the arcade layout hasn't. How many restaurant storefronts can you count lining the main interior corridor?",
-          "answer": "",
-          "answerVariants": [],
-          "verificationNeeded": "CRITICAL: Cannot set answer until the number of distinct storefronts in the Chapman Plaza arcade is confirmed by site visit. Profile lists Escala, KazuNori, Uncle Tetsu, and Origin Korean BBQ — at least 4, but the full count is unknown. Must be under 12 and clearly discernible. Placeholder pending verification.",
-          "historicalFact": "Wayne Ratkovich and architect Brenda Levin saved the Wiltern from demolition in 1981, then turned around and restored Chapman Plaza in 1990. The arcade that once held a drive-in grocery now holds Korean BBQ joints, a hand-roll sushi bar, and a Japanese cheesecake shop — the Koreatown economy filling a 1929 Spanish Revival shell. The storefronts that served Hancock Park housewives now serve the densest neighborhood west of Manhattan."
-        },
-        {
-          "ring": 1,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "Chapman Plaza (1929) and the Gaylord Apartments (1924) were both built during the same decade-long boom that transformed this corridor. One is Spanish Revival, the other is Renaissance Revival. One is concrete, the other is something else entirely. Walk from Chapman Plaza toward Wilshire and look south at the Gaylord tower. Touch the facade if you can. What material clads it?",
-          "answer": "Brick",
-          "answerVariants": [
-            "brick",
-            "bricks",
-            "brick and terra cotta"
-          ],
-          "historicalFact": "Chapman Plaza is concrete dressed in Spanish ornament. The Gaylord is brick and terra cotta in Renaissance Revival style. Both were built within five years of each other, five blocks apart, for the same clientele — wealthy Angelenos drawn to the Wilshire corridor. Different architects, different materials, same ambition: anchor a neighborhood that didn't exist 10 years earlier."
         },
         {
           "ring": 2,
@@ -2312,20 +1235,6 @@
         {
           "ring": 2,
           "difficulty": 4,
-          "type": "spotter",
-          "clue": "Look at the Gaylord building's exterior materials. The tower is clad in two materials — a structural one and a decorative one. The structural material is the same one you'd find in a New England factory. The decorative material is fired clay shaped into ornamental details. Name either material.",
-          "answer": "Brick",
-          "answerVariants": [
-            "brick",
-            "terra cotta",
-            "terracotta",
-            "brick and terra cotta"
-          ],
-          "historicalFact": "Brick and terra cotta were the prestige materials of 1920s LA apartment construction. The Gaylord's architects — Walker & Eisen — used the same combination on the Hotel Normandie two years later and the Beverly Wilshire Hotel in 1928. Terra cotta let architects mold ornamental details that would have cost a fortune to carve in stone."
-        },
-        {
-          "ring": 2,
-          "difficulty": 5,
           "type": "persona",
           "clue": "I gave my name to LA's most famous boulevard — 16 miles of it. I was a socialist who ran for Congress. I sold a magnetic health device called the I-ON-A-CO that I claimed cured all diseases. An apartment tower at 3355 Wilshire carries my middle name. Find the building and look up. What is my middle name — the one on the building?",
           "answer": "Gaylord",
@@ -2337,7 +1246,7 @@
         },
         {
           "ring": 2,
-          "difficulty": 6,
+          "difficulty": 5,
           "type": "spotter",
           "clue": "If you step inside HMS Bounty, the interior hasn't changed much since 1962. The booths are upholstered in a specific color of leather. The walls are covered in wood. What color are the booth seats?",
           "answer": "Red",
@@ -2350,65 +1259,6 @@
           ],
           "verificationNeeded": "Confirm red leather booths are still in place at HMS Bounty. Interior may have been updated.",
           "historicalFact": "The red leather booths and wood-paneled walls at HMS Bounty look the same as they did when the bar opened in 1962. This is why film scouts keep coming back — the bar is a living set piece. Mad Men used it because the production designers didn't have to change a thing."
-        },
-        {
-          "ring": 2,
-          "difficulty": 7,
-          "type": "connector",
-          "clue": "Two towers face each other across Wilshire near this stop. One is a 13-story apartment building from 1924. The other is a church with a tower that rises over 200 feet — French Gothic, built in 1929. The church has a stained glass window above its main entrance that medieval cathedrals made famous. Look east along Wilshire toward the church. What shape is that prominent window?",
-          "answer": "Circle",
-          "answerVariants": [
-            "circle",
-            "circular",
-            "round",
-            "rose",
-            "rose window",
-            "a circle",
-            "a rose window"
-          ],
-          "verificationNeeded": "Confirm Immanuel Presbyterian's rose window is visible from the Gaylord/HMS Bounty location looking east on Wilshire.",
-          "historicalFact": "The rose window at Immanuel Presbyterian Church was made by the Dixon Art Glass Company of Los Angeles. The church's 205-foot tower — French Gothic over a steel frame — went up the same year as Chapman Plaza. Two blocks apart, one Gothic and one Spanish Revival, both completed in 1929 as the neighborhood's last pre-Depression building boom."
-        },
-        {
-          "ring": 2,
-          "difficulty": 8,
-          "type": "persona",
-          "clue": "I drank myself to death writing about a man drinking himself to death. My novel about an alcoholic British consul in Mexico is ranked #11 on the Modern Library's 100 Best Novels. I wrote significant portions of it in a fading hotel two blocks west of here — on a street named for a French region. Find that hotel. What is its name, as shown on the sign?",
-          "answer": "Hotel Normandie",
-          "answerVariants": [
-            "hotel normandie",
-            "the normandie",
-            "normandie"
-          ],
-          "verificationNeeded": "Confirm Hotel Normandie signage is visible from the street.",
-          "historicalFact": "Malcolm Lowry wrote much of 'Under the Volcano' (1947) while living at the Hotel Normandie. The novel — about a consul destroying himself with mescal in a Mexican town — was written by a man destroying himself with alcohol in a Koreatown hotel. The Normandie hit its own rock bottom by 2011, then was restored for $5 million into a boutique property. Lowry died at 47. His masterpiece outlived every version of the hotel he wrote it in."
-        },
-        {
-          "ring": 2,
-          "difficulty": 9,
-          "type": "spotter",
-          "clue": "The Gaylord's upper stories have decorative detailing at the roofline — ornamental work crowning the top of the building. Look up at the uppermost floors. The decorative band running along the top edge of the building is called a cornice. What material is it made of — the same fired-clay material used for the window details?",
-          "answer": "Terra cotta",
-          "answerVariants": [
-            "terra cotta",
-            "terracotta",
-            "terra-cotta"
-          ],
-          "verificationNeeded": "Confirm ornamental cornice at upper stories is visible and identifiable as terra cotta from street level.",
-          "historicalFact": "Terra cotta — Italian for 'baked earth' — was the secret weapon of 1920s LA architects. It could be molded into any shape, glazed in any color, and bolted onto a steel frame. Walker & Eisen used it to give the Gaylord a Renaissance Revival crown that looks like carved stone but was manufactured in a kiln. The same trick shows up on the Wiltern's blue-green facade — glazed terra cotta tiles, not paint."
-        },
-        {
-          "ring": 2,
-          "difficulty": 10,
-          "type": "connector",
-          "clue": "Two luxury apartment towers opened the same year on the same boulevard — 1924, six blocks apart. You're standing at one of them: the 13-story Gaylord. The other was named for a silent film actress whose husband, a movie studio executive, lived on the tenth floor. Walk east on Wilshire and look for a 12-story brick tower near 3278 Wilshire. You'll see two towers from the same year, built for the same clientele. Count the floors on the second tower. How many stories?",
-          "answer": "12",
-          "answerVariants": [
-            "12",
-            "twelve"
-          ],
-          "verificationNeeded": "Confirm the Talmadge at 3278 Wilshire is visible from the Gaylord area and that its 12 stories are countable from street level.",
-          "historicalFact": "The Gaylord (13 stories) and the Talmadge (12 stories) both opened in 1924. The Talmadge was named for silent film star Norma Talmadge and owned by her husband Joseph Schenck, who ran United Artists. It rose on the site of a Greene & Greene Craftsman mansion that was literally moved to Beverly Hills to make room. Two towers, same year, same clientele — the Wilshire corridor replacing mansions with apartment living in real time."
         },
         {
           "ring": 3,
@@ -2424,22 +1274,6 @@
           "ring": 3,
           "difficulty": 2,
           "type": "spotter",
-          "clue": "Find the large mural on the exterior wall of the school at 3400 Wilshire. A woman's face dominates the image. Surrounding her, look for a mythical bird pattern woven into the design. What kind of bird pattern is depicted — the traditional Korean creature with elaborate tail feathers?",
-          "answer": "Phoenix",
-          "answerVariants": [
-            "phoenix",
-            "korean phoenix",
-            "bonghwang",
-            "bong huang",
-            "fenghuang"
-          ],
-          "verificationNeeded": "Confirm the Korean phoenix pattern is clearly identifiable in the revised 2021 mural.",
-          "historicalFact": "The Korean phoenix (bonghwang) was added in the 2021 revision after the original sun-ray motif was seen as resembling the Imperial Japanese battle flag. The phoenix is a symbol of rebirth in Korean culture — fitting for a mural on a site that went from Hollywood glamour to political assassination to demolition to a $578 million public school."
-        },
-        {
-          "ring": 3,
-          "difficulty": 3,
-          "type": "spotter",
           "clue": "The mural on the school wall depicts several figures besides the central woman's face. One figure shows a worker harvesting fruit from a tree — based on a historic photograph of an immigrant laborer. What fruit is being harvested?",
           "answer": "Oranges",
           "answerVariants": [
@@ -2452,7 +1286,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 4,
+          "difficulty": 3,
           "type": "spotter",
           "clue": "The school complex at 3400 Wilshire replaced a famous hotel that was demolished in 2005-2006. The school is named after a political figure who was killed inside that hotel. Look for the name of the school on the building or its signage. What are the initials?",
           "answer": "RFK",
@@ -2465,7 +1299,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 5,
+          "difficulty": 4,
           "type": "persona",
           "clue": "I opened in 1921 with 1,200 rooms, 37 shops, a golf course, and a bowling alley. My nightclub had papier-mache palm trees from a Valentino film with mechanical monkeys hanging from them. I hosted 6 Academy Awards ceremonies. A senator died in my kitchen. I was torn down in 2005. A school stands where I stood. Find the school and read its full name on the signage. What word comes after 'RFK'?",
           "answer": "Community",
@@ -2477,57 +1311,7 @@
         },
         {
           "ring": 3,
-          "difficulty": 6,
-          "type": "connector",
-          "clue": "Two buildings on this walk were designed by the same architecture firm: Walker & Eisen. One is the 13-story apartment tower you passed at Ring 2. The other is a 1926 hotel two blocks west on a street named for a French region — now a boutique property with a famous burger restaurant on the ground floor. Find the hotel sign. What is the hotel's full name?",
-          "answer": "Hotel Normandie",
-          "answerVariants": [
-            "hotel normandie",
-            "the normandie",
-            "normandie"
-          ],
-          "historicalFact": "Walker & Eisen designed the Gaylord (1924), the Hotel Normandie (1926), and the Beverly Wilshire Hotel (1928) — three buildings in four years that defined luxury on the Wilshire corridor. The Hotel Normandie operated for 90 years, hit rock bottom by 2011, and was rescued by a preservationist who spent $5 million restoring it. The ground-floor tenant: Cassell's Hamburgers, grinding beef since 1948."
-        },
-        {
-          "ring": 3,
-          "difficulty": 7,
-          "type": "spotter",
-          "clue": "The school grounds at the Ambassador site include a public park. Look for the green space on the property. The park is named after the same political figure as the school. Find the park signage. What is the park's full name?",
-          "answer": "RFK Inspiration Park",
-          "answerVariants": [
-            "rfk inspiration park",
-            "robert f kennedy inspiration park",
-            "rfk inspiration"
-          ],
-          "verificationNeeded": "Confirm RFK Inspiration Park signage exists and is publicly visible from the street or sidewalk.",
-          "historicalFact": "The Ambassador Hotel's grounds once included formal gardens, a swimming pool, and a golf course — all behind walls, all private. The school that replaced it turned part of the site into a public park. The neighborhood lost a hotel and gained open space. Whether that's progress depends on which decade's version of the neighborhood you're mourning."
-        },
-        {
-          "ring": 3,
-          "difficulty": 8,
-          "type": "spotter",
-          "clue": "You've seen the mural, the school signage, and the park. Now look at the school building itself — the architecture. The roofline has a distinctive slope. The original Ambassador Hotel (1921) had a flat Mediterranean roof. The school that replaced it doesn't try to mimic the hotel. What color is the dominant exterior material on the school buildings?",
-          "answer": "",
-          "answerVariants": [],
-          "verificationNeeded": "CRITICAL: Cannot set answer until school exterior color/material is confirmed by site visit. Profile describes 'modern school complex' with 'contemporary palette' but does not specify the color. Placeholder pending verification.",
-          "historicalFact": "The RFK Community Schools were designed by four different architecture firms working in parallel — each taking a different section of the 24-acre campus. The result is a modern complex that deliberately does not try to recreate the Ambassador Hotel. The Cocoanut Grove ballroom was preserved as a 582-seat school theatre, and the Embassy Ballroom's vaulted ceiling was reconstructed as a student library — pieces of the old hotel embedded in a new building."
-        },
-        {
-          "ring": 3,
-          "difficulty": 9,
-          "type": "persona",
-          "clue": "I painted a woman's face on a school wall in 2016 and surrounded her with sun rays — a tribute to the nightclub that once stood on this exact site. The neighborhood erupted. Korean Americans saw something else in my radiating lines: the Imperial Japanese battle flag that flew during 35 years of colonial occupation. It took three years and a complete redesign before the wall was right. Look at the mural. The central woman is a 1940s Hollywood actress who was a regular at that nightclub. What is her first name?",
-          "answer": "Ava",
-          "answerVariants": [
-            "ava",
-            "ava gardner"
-          ],
-          "verificationNeeded": "Confirm Ava Gardner's name or likeness is identifiable in the mural, either through an interpretive sign, caption, or recognizable portrait. If no text identifies her, this clue may need to reference the interpretive panel instead.",
-          "historicalFact": "Beau Stanton's original 2016 mural honored the Ambassador Hotel's Cocoanut Grove nightclub through Ava Gardner's face and Art Deco sun-ray motifs. Korean Americans objected — the radiating lines resembled the Rising Sun flag used during Japan's colonial occupation of Korea (1910-1945). Even Shepard Fairey defended Stanton publicly. The 2021 revision replaced the sun rays with a Korean phoenix pattern and added immigrant worker figures. The mural is a physical record of a community negotiation that took three years to resolve."
-        },
-        {
-          "ring": 3,
-          "difficulty": 10,
+          "difficulty": 5,
           "type": "connector",
           "clue": "The Ambassador Hotel was demolished, but two of its rooms survived — preserved inside the school that replaced it. One room hosted 6 Academy Awards ceremonies and had papier-mache palm trees with mechanical monkeys. It's now a 582-seat school theatre. The other had a vaulted ceiling and is now a student library. The theatre was originally the hotel's most famous nightclub. Look for any signage, plaques, or markers on the school campus that reference the original nightclub. What was the nightclub's name?",
           "answer": "Cocoanut Grove",

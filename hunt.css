@@ -2389,12 +2389,12 @@ body.hh-landing {
 .diff-step-btn:hover { opacity: 1; border-color: rgba(201, 168, 76, 0.5); }
 .diff-pips {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     align-items: center;
 }
 .diff-pip {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     border: 1.5px solid rgba(128,128,128,0.2);
     background: transparent;
@@ -2595,6 +2595,131 @@ body.hh-landing {
     letter-spacing: 0.04em;
     opacity: 0.6;
 }
+
+
+/* ============================================
+   START LOCATION SCREEN (geo-gated)
+   ============================================ */
+
+.start-card {
+    text-align: center;
+}
+.start-label {
+    font-size: 0.75em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.start-location {
+    font-size: 1.4em;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+.start-transit {
+    font-size: 0.85em;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin-bottom: 24px;
+}
+.start-distance {
+    font-size: 0.9em;
+    min-height: 1.5em;
+    margin-bottom: 16px;
+}
+
+/* Skin overrides for start screen */
+.skin-preview .start-label { color: #888; }
+.skin-preview .start-location { font-family: 'Playfair Display', serif; font-weight: 700; color: #f5f0e8; }
+.skin-preview .start-transit { color: #999; }
+.skin-preview .start-distance { color: #c9a84c; }
+.skin-ransom .start-label { font-family: 'Special Elite', cursive; color: #3d2b1a; }
+.skin-ransom .start-location { font-family: 'Playfair Display', serif; font-weight: 700; }
+.skin-ransom .start-distance { color: #5a3e28; }
+.skin-script .start-label { color: #c9a84c; }
+.skin-script .start-location { font-family: 'Great Vibes', cursive; font-size: 1.8em; color: #c9a84c; }
+.skin-script .start-transit { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #a0917a; }
+.skin-script .start-distance { color: #e8dfd0; }
+.skin-napkin .start-label { font-family: 'Caveat', cursive; font-size: 0.95em; text-transform: none; }
+.skin-napkin .start-location { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.6em; }
+.skin-napkin .start-transit { font-family: 'Caveat', cursive; }
+.skin-napkin .start-distance { font-family: 'Caveat', cursive; color: #5a5040; }
+
+
+/* ============================================
+   PHOTO CAPTURE + GALLERY
+   ============================================ */
+
+.photo-capture-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: 600;
+    border: 2px dashed rgba(128,128,128,0.3);
+    background: rgba(128,128,128,0.05);
+    color: inherit;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.photo-capture-btn:hover {
+    border-color: rgba(128,128,128,0.5);
+    background: rgba(128,128,128,0.1);
+}
+.photo-capture-btn svg { flex-shrink: 0; }
+
+.photo-thumbnail-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border: 1px solid rgba(128,128,128,0.2);
+    border-radius: 6px;
+    background: rgba(128,128,128,0.05);
+}
+.photo-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.photo-saved-label {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+/* Arrival photo gallery */
+.arrival-gallery {
+    margin-bottom: 24px;
+}
+.arrival-gallery-label {
+    font-size: 0.75em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.6;
+}
+.arrival-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+}
+.arrival-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Skin overrides for gallery */
+.skin-preview .arrival-gallery-label { color: #888; }
+.skin-ransom .arrival-gallery-label { font-family: 'Special Elite', cursive; color: #3d2b1a; }
+.skin-script .arrival-gallery-label { color: #c9a84c; }
+.skin-napkin .arrival-gallery-label { font-family: 'Caveat', cursive; text-transform: none; }
 
 
 /* ============================================

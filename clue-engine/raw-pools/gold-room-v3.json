@@ -30,15 +30,6 @@
   {
     "ring": 1,
     "difficulty": 4,
-    "type": "spotter",
-    "clue": "Near Echo Park Lake, find a bronze bust on a pedestal. A poet and revolutionary watches over the water. What is his name, as inscribed on the bust?",
-    "answer": "Jose Marti",
-    "answerVariants": ["jose marti", "josé martí", "marti", "josé marti"],
-    "historicalFact": "Jose Marti died fighting Spain at Dos Rios, Cuba on May 19, 1895. Cuba won independence three years later. His bust sits at Echo Park Lake because this neighborhood became the heart of LA's Cuban exile community after 1962 — when a local Presbyterian church met the first flight of Cuban refugees at the airport."
-  },
-  {
-    "ring": 1,
-    "difficulty": 5,
     "type": "persona",
     "clue": "I was the first woman to preach on the radio. I drew 5,300 every Sunday. In 1926, I disappeared from a beach and a city mourned. Find my temple at 1100 Glendale Blvd — read the cornerstone. How many words are in the full inscription?",
     "answer": "9",
@@ -47,48 +38,12 @@
   },
   {
     "ring": 1,
-    "difficulty": 6,
-    "type": "spotter",
-    "clue": "The bronze bust near the lake carries two inscriptions in Spanish. The longer one begins with 'El que tenga...' Find the shorter inscription. What is its first word?",
-    "answer": "Con",
-    "answerVariants": ["con"],
-    "historicalFact": "'Con todos y para el bien de todos' — 'With all, and for the good of all.' Marti wrote that line in 1891 while organizing a revolution from a New York apartment. He died in battle four years later, on horseback at Dos Rios. He was 42."
-  },
-  {
-    "ring": 1,
-    "difficulty": 7,
-    "type": "persona",
-    "clue": "Born in Havana. Imprisoned at 17 for advocating independence. Organized a revolution from exile. Died on horseback in the first battle. Find his bust near Echo Park Lake — the longer inscription contains one Spanish word meaning 'homeland.' What is it?",
-    "answer": "Patria",
-    "answerVariants": ["patria"],
-    "historicalFact": "The full inscription reads: 'El que tenga Patria que la honre, el que no, que la conquiste' — 'He who has a homeland, honor it; he who does not, conquer one.' After 1962, Echo Park became the social and cultural heart of LA's Cuban exile community. The sculptor, Sergio Lopez Mesa, was born in Havana and studied in Rome."
-  },
-  {
-    "ring": 1,
-    "difficulty": 8,
+    "difficulty": 5,
     "type": "connector",
     "clue": "The domed church at 1100 Glendale Blvd was built by a Canadian woman in 1923. The bust near the lake was placed by Cuban exiles in 1976. Both are declarations carved into permanent materials by communities of newcomers. Read the longer inscription on the bust — it ends with an imperative verb in Spanish, a command to those without a homeland. What is the last word of that inscription?",
     "answer": "Conquiste",
     "answerVariants": ["conquiste"],
     "historicalFact": "'El que tenga Patria que la honre, el que no, que la conquiste' — 'He who has a homeland, honor it; he who does not, conquer one.' McPherson carved her mission into a cornerstone. The Cuban community carved their rallying cry into a pedestal. Fifty-three years apart, same neighborhood, same impulse: write it in stone so it lasts."
-  },
-  {
-    "ring": 1,
-    "difficulty": 9,
-    "type": "spotter",
-    "clue": "The cornerstone inscription contains two compound words. One is 'worldwide' — easy to spot. The other is hyphenated and harder to notice. What is the hyphenated word?",
-    "answer": "inter-denominational",
-    "answerVariants": ["inter-denominational", "interdenominational"],
-    "historicalFact": "McPherson's vision was inter-denominational — she didn't care what church you came from, as long as you showed up. At a time when Protestant denominations fought over doctrine, she built a 5,300-seat tent that welcomed everyone. The building cost $1.5 million in 1923 dollars — roughly $27 million today — funded almost entirely by small donations from followers."
-  },
-  {
-    "ring": 1,
-    "difficulty": 10,
-    "type": "connector",
-    "clue": "The cornerstone inscription at the temple and the longer inscription on the bust near the lake were carved 53 years apart. Both contain a word that reveals their builders' ambitions — one in English, one in Spanish. The cornerstone uses a word meaning 'across the entire earth.' The bust uses a word meaning 'homeland.' You've already found both. The English word has 9 letters. The Spanish word has 6. Now look at the bust's shorter inscription — the one beginning with 'Con.' It contains one Spanish word meaning 'good.' What is it?",
-    "answer": "Bien",
-    "answerVariants": ["bien"],
-    "historicalFact": "'Con todos y para el bien de todos' — 'With all, and for the good of all.' Two inscriptions at two monuments in one park, both asking the same question in different languages: who belongs here? McPherson answered 'everyone who believes.' Marti answered 'everyone, period.' Echo Park held both answers for a century."
   },
   {
     "ring": 2,
@@ -104,15 +59,6 @@
     "ring": 2,
     "difficulty": 2,
     "type": "spotter",
-    "clue": "Find the 14-foot statue near the boathouse. Her pedestal has carved panels on each side, each depicting a different LA landmark. How many panels are there?",
-    "answer": "4",
-    "answerVariants": ["4", "four"],
-    "historicalFact": "The four bas-reliefs depict the Hollywood Bowl, LA Harbor, the San Gabriel Mountains, and the LA Central Library — a love letter to the city, carved into concrete by a 30-year-old sculptor from Hawaii in 1935."
-  },
-  {
-    "ring": 2,
-    "difficulty": 3,
-    "type": "spotter",
     "clue": "What kind of boats are on the lake?",
     "answer": "Pedal boats",
     "answerVariants": ["pedal boats", "swan boats", "swan pedal boats", "paddle boats"],
@@ -120,16 +66,16 @@
   },
   {
     "ring": 2,
-    "difficulty": 4,
-    "type": "persona",
-    "clue": "I was a parks superintendent inspecting a new reservoir in 1892. I shouted across the water and heard my own voice come back. I was so charmed that I named the entire park after what I heard. What did I hear?",
-    "answer": "An echo",
-    "answerVariants": ["echo", "an echo", "echoes", "his echo", "my echo"],
-    "historicalFact": "Joseph Henry Tomlinson heard echoes bouncing off the reservoir walls and named his park accordingly. The irony: as Echo Park urbanized, the echoes faded. The acoustic phenomenon that gave the neighborhood its name hasn't been heard in decades."
+    "difficulty": 3,
+    "type": "spotter",
+    "clue": "Find the 14-foot statue near the boathouse. Her pedestal has carved panels on each side, each depicting a different LA landmark. How many panels are there?",
+    "answer": "4",
+    "answerVariants": ["4", "four"],
+    "historicalFact": "The four bas-reliefs depict the Hollywood Bowl, LA Harbor, the San Gabriel Mountains, and the LA Central Library — a love letter to the city, carved into concrete by a 30-year-old sculptor from Hawaii in 1935."
   },
   {
     "ring": 2,
-    "difficulty": 5,
+    "difficulty": 4,
     "type": "spotter",
     "clue": "Look at the pedestal panels on the statue. Each depicts a different LA landmark. One shows a venue where orchestras perform outdoors. One shows a place where ships dock. One shows a mountain range. One shows a building full of books. Name the building full of books.",
     "answer": "LA Central Library",
@@ -138,50 +84,12 @@
   },
   {
     "ring": 2,
-    "difficulty": 6,
-    "type": "spotter",
-    "clue": "One pedestal panel depicts a venue where orchestras perform under the stars. It's been hosting concerts since 1922. What is the venue?",
-    "answer": "Hollywood Bowl",
-    "answerVariants": ["hollywood bowl", "the hollywood bowl", "the bowl"],
-    "historicalFact": "The Hollywood Bowl opened in 1922, one year before Angelus Temple. Both were built for crowds — one for music, one for sermons. The sculptor chose it as one of four landmarks that defined LA in 1935. The Bowl's distinctive band shell, the one everyone pictures, wasn't built until 1929."
-  },
-  {
-    "ring": 2,
-    "difficulty": 7,
+    "difficulty": 5,
     "type": "spotter",
     "clue": "The statue was planned in bronze, but Depression-era budget cuts forced the sculptor to use something cheaper. Look at the statue — it's not metal. What material is it actually made of?",
     "answer": "Stone",
     "answerVariants": ["stone", "concrete", "cast stone", "poured concrete", "liquid stone"],
     "historicalFact": "Ada Mae Sharpless was born in Hilo, Hawaii in 1904 and trained at the Ecole des Beaux-Arts in Paris. She was 30 when she carved the Queen of the Angels from 'liquid stone' — poured concrete — because the WPA budget for bronze ran out. The statue was vandalized, lost her fingers, spent 13 years in storage, and came back in 1999 sealed with anti-graffiti coating. She's tougher than she looks."
-  },
-  {
-    "ring": 2,
-    "difficulty": 8,
-    "type": "spotter",
-    "clue": "Three of the four pedestal panels depict man-made structures. One depicts something natural — something you might see on the horizon on a clear day. Which landmark is the natural one?",
-    "answer": "San Gabriel Mountains",
-    "answerVariants": ["san gabriel mountains", "san gabriels", "the mountains", "mountains", "san gabriel"],
-    "historicalFact": "The San Gabriels rise to 10,064 feet just 15 miles north of downtown LA. On clear winter days after rain, they're snow-capped and visible from Echo Park Lake. The sculptor included them alongside the Hollywood Bowl, LA Harbor, and the Central Library — the only natural landmark among four symbols of the city."
-  },
-  {
-    "ring": 2,
-    "difficulty": 9,
-    "type": "connector",
-    "clue": "The temple at 1100 Glendale Blvd was built by a woman from Ontario, Canada. The statue at the lake was carved by a woman from Hilo, Hawaii. Both came from elsewhere to leave their mark on Echo Park. The statue's sculptor gave her work a Spanish title beginning with 'Nuestra.' If that title is inscribed on the pedestal, what is the second word?",
-    "answer": "Reina",
-    "answerVariants": ["reina"],
-    "verificationNeeded": "Confirm 'Nuestra Reina de Los Angeles' is inscribed on the pedestal.",
-    "historicalFact": "'Nuestra Reina de Los Angeles' — Queen of the Angels. McPherson built a temple in 1923; Sharpless carved a queen in 1935. Two women, two monuments, both from islands or peninsulas, both still standing in Echo Park a century later."
-  },
-  {
-    "ring": 2,
-    "difficulty": 10,
-    "type": "persona",
-    "clue": "I was born in Hilo, Hawaii in 1904. I studied sculpture at the Ecole des Beaux-Arts in Paris. The government hired me to build a monument in bronze, but the Depression took the budget — so I poured her from concrete instead. She lost her fingers to vandals and spent 13 years in a warehouse. She came back in 1999. Find her at the lake. Her pedestal carries a Spanish title. What is the first word of that title?",
-    "answer": "Nuestra",
-    "answerVariants": ["nuestra"],
-    "verificationNeeded": "Confirm 'Nuestra Reina de Los Angeles' is inscribed on the pedestal.",
-    "historicalFact": "Ada Mae Sharpless carved the Queen of the Angels from 'liquid stone' — poured concrete — because the WPA budget for bronze ran out. The statue was vandalized, lost her fingers, spent 13 years in storage, and came back in 1999 sealed with anti-graffiti coating. 'Nuestra Reina de Los Angeles' — Our Queen of the Angels. Sharpless was 30 years old. She'd come from Hawaii, trained in Paris, and left a 14-foot monument in a city that nearly forgot it."
   },
   {
     "ring": 3,
@@ -228,52 +136,5 @@
     "answer": "Brick",
     "answerVariants": ["brick", "bricks"],
     "historicalFact": "Henry Christian Jensen manufactured bricks for LA's rapid expansion — his product literally built the city. Then in 1924, he built himself a three-story recreation center at 1706 W Sunset using his own bricks. Bowling downstairs, 46 apartments upstairs. The building still stands. The rooftop sign is now a protected historic landmark."
-  },
-  {
-    "ring": 3,
-    "difficulty": 6,
-    "type": "spotter",
-    "clue": "Above the entrance at 1706 W Sunset, the building's name is spelled out in terra cotta letters. Count the letters in just the first word. How many?",
-    "answer": "6",
-    "answerVariants": ["6", "six"],
-    "historicalFact": "JENSEN — six letters in terra cotta, still crisp after a century. Jensen's Recreation Center was built in 1924 at the corner of Sunset and Logan. The building sold for $15 million in 2014 — a brick building by a brick man, outlasting everything around it."
-  },
-  {
-    "ring": 3,
-    "difficulty": 7,
-    "type": "persona",
-    "clue": "I won four gold medals in Berlin in 1936 while a dictator watched from the stands. I proved him wrong without saying a word. My name is in the sidewalk beneath your feet. Find my plaque. What is my name?",
-    "answer": "Jesse Owens",
-    "answerVariants": ["jesse owens", "owens"],
-    "historicalFact": "Jesse Owens won the 100m, 200m, long jump, and 4×100m relay at the 1936 Berlin Olympics — humiliating Hitler's claims of Aryan supremacy on his home turf. L. Andrew Castle chose Owens for his sidewalk hall of fame because the story transcended sports. Castle picked every name on this pavement for a reason."
-  },
-  {
-    "ring": 3,
-    "difficulty": 8,
-    "type": "persona",
-    "clue": "I broke baseball's color line in 1947. Before me, no Black man had played in the major leagues in the 20th century. I endured death threats and bean balls for a whole season before I was allowed to fight back. My name is in the sidewalk. Find my plaque. What is my last name?",
-    "answer": "Robinson",
-    "answerVariants": ["robinson", "jackie robinson"],
-    "historicalFact": "Jackie Robinson's plaque is embedded in the same sidewalk as Jesse Owens and Billie Jean King. Castle saw the pattern when he designed this walk of fame — every name on this pavement broke a barrier that went far beyond their sport. Robinson was told by Branch Rickey that he needed 'the courage not to fight back' for his first two seasons. He did it for one. Then he fought back."
-  },
-  {
-    "ring": 3,
-    "difficulty": 9,
-    "type": "spotter",
-    "clue": "At 1714 W Sunset, the slushy machine has a sign that's not quite a normal 'Out of Order' notice. Read the sign carefully. What does it actually say?",
-    "answer": "Out of Order Come Back Yesterday",
-    "answerVariants": ["out of order come back yesterday", "come back yesterday"],
-    "verificationNeeded": "Confirm slushy machine sign text is still displayed at 826LA.",
-    "historicalFact": "Every detail in the Echo Park Time Travel Mart is a bit — the slushy machine, the robot milk, the facial hair timeline poster. Dave Eggers started the concept in San Francisco with a pirate supply store. Each city in the 826 network picks its own theme. LA chose time travel. Behind the gag storefront, 826LA teaches 20-30 students per day in creative writing — all free, funded by the fake store."
-  },
-  {
-    "ring": 3,
-    "difficulty": 10,
-    "type": "connector",
-    "clue": "At 1714 W Sunset, a fake store sells Robot Milk to fund a free tutoring center. At 1706 W Sunset — the same block — a German brick manufacturer built a bowling alley with 46 apartments on top. One building pretends to be something it's not. The other is exactly what it says on the sign. Look at the storefront at 1714. The store's motto is written somewhere visible. What is it?",
-    "answer": "Whenever You Are, We're Already There",
-    "answerVariants": ["whenever you are, we're already there", "whenever you are we're already there"],
-    "verificationNeeded": "Confirm motto 'Whenever You Are, We're Already There' is displayed on storefront.",
-    "historicalFact": "Two buildings, one block, a century apart. Jensen's Recreation Center (1924) is a brick manufacturer's monument to himself — bowling, apartments, a 1,300-bulb neon sign, all built from his own product. The Echo Park Time Travel Mart (2008) is a joke with a serious punchline — every dollar from Viking Odorant and Mammoth Chunks funds writing classes for kids. Jensen put his name in terra cotta. Dave Eggers put a time-travel motto on the glass."
   }
 ]

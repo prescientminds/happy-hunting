@@ -24,6 +24,7 @@ const HappyHunting = {
     addedCluesCount: 0,
     addedCluesCost: 0,
     promoApplied: false,
+    huntPhotos: [],
 
     cacheElements() {
         [
@@ -38,7 +39,10 @@ const HappyHunting = {
             'difficulty-selector', 'diff-pips', 'diff-minus', 'diff-plus',
             'intro-next', 'intro-brand-graphic', 'amor-fati-row',
             'clue-next-btn',
-            'answer-row-text', 'answer-row-photo', 'photo-done-btn',
+            'answer-row-text', 'answer-row-photo',
+            'photo-input', 'photo-capture-btn', 'photo-thumbnail-wrap', 'photo-thumbnail',
+            'start-location', 'start-transit', 'start-distance', 'start-checkin-btn',
+            'arrival-gallery', 'arrival-gallery-grid',
             'preview-prev', 'preview-next',
             'stuck-btn', 'see-answer-btn', 'preview-answer-block',
             'preview-answer-text', 'hunt-back',
@@ -55,6 +59,7 @@ const HappyHunting = {
         this.screens = {
             envelope: document.getElementById('envelope-screen'),
             intro: document.getElementById('intro-screen'),
+            start: document.getElementById('start-screen'),
             clue: document.getElementById('clue-screen'),
             arrival: document.getElementById('arrival-screen'),
             error: document.getElementById('error-screen')
@@ -295,8 +300,13 @@ const HappyHunting = {
         const count = this.hunt.steps ? this.hunt.steps.length : 3;
         const meta = document.getElementById('intro-meta');
         if (meta) {
-            const label = this.isPreview ? 'Preview' : 'Start walking';
-            meta.innerHTML = `${count} clues. One destination.<br>${label}.`;
+            if (this.isPreview) {
+                meta.innerHTML = `${count} clues. One destination.<br>Preview.`;
+            } else if (this.hunt.startLocation) {
+                meta.innerHTML = `${count} clues. One destination.<br>Head to ${this.hunt.startLocation.label}.`;
+            } else {
+                meta.innerHTML = `${count} clues. One destination.<br>Start walking.`;
+            }
         }
         if (this.isPreview) {
             // Preview: show Start button + forward arrow + brand graphic
@@ -331,11 +341,12 @@ const HappyHunting = {
         }
 
         if (this.isPreview) {
+            const isPhoto = step.answerType === 'photo';
             // Preview mode: hide interactive answer, show consolidated answer block
             this.els['answer-section'].hidden = true;
             this.els['preview-answer-block'].hidden = false;
             this.els['see-answer-btn'].hidden = false;
-            this.els['see-answer-btn'].textContent = 'See Answer';
+            this.els['see-answer-btn'].textContent = isPhoto ? 'Continue' : 'See Answer';
             this.els['preview-answer-text'].textContent = '';
             this.els['preview-answer-text'].hidden = true;
             this.els['fact-reveal'].classList.remove('visible');
@@ -383,6 +394,10 @@ const HappyHunting = {
             const isPhoto = step.answerType === 'photo';
             this.els['answer-row-text'].hidden = isPhoto;
             this.els['answer-row-photo'].hidden = !isPhoto;
+            if (isPhoto) {
+                this.els['photo-capture-btn'].hidden = false;
+                this.els['photo-thumbnail-wrap'].hidden = true;
+            }
 
             // "I'm stuck" button: show after a delay, hidden initially
             this.els['stuck-btn'].hidden = true;
@@ -444,13 +459,101 @@ const HappyHunting = {
         }
     },
 
-    solvePhoto() {
+    solvePhoto(dataUrl) {
         const step = this.hunt.steps[this.currentStep];
+        if (dataUrl) {
+            this.huntPhotos.push({ step: step.stepNumber, src: dataUrl });
+        }
         this.els['answer-feedback'].textContent = 'Nice shot.';
         this.els['answer-feedback'].className = 'answer-feedback correct';
         this.els['answer-section'].classList.add('solved');
         this.els['fact-text'].textContent = step.historicalFact;
         setTimeout(() => this.els['fact-reveal'].classList.add('visible'), 400);
+    },
+
+    // ---- Photo Capture ----
+    triggerPhotoCapture() {
+        this.els['photo-input'].click();
+    },
+
+    handlePhotoCaptured(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const dataUrl = e.target.result;
+            this.els['photo-thumbnail'].src = dataUrl;
+            this.els['photo-thumbnail-wrap'].hidden = false;
+            this.els['photo-capture-btn'].hidden = true;
+            this.solvePhoto(dataUrl);
+        };
+        reader.readAsDataURL(file);
+    },
+
+    // ---- Start Location Screen + Geo Gate ----
+    showStartScreen() {
+        const sl = this.hunt.startLocation;
+        if (!sl) {
+            // No start location data — skip straight to clues
+            this.currentStep = 0;
+            this.renderClue();
+            return;
+        }
+        this.els['start-location'].textContent = sl.label;
+        this.els['start-transit'].textContent = sl.transit || '';
+        this.els['start-distance'].textContent = '';
+        this.showScreen('start');
+    },
+
+    checkLocation() {
+        const sl = this.hunt.startLocation;
+        if (!sl) { this.currentStep = 0; this.renderClue(); return; }
+
+        const btn = this.els['start-checkin-btn'];
+        btn.textContent = 'Checking...';
+        btn.disabled = true;
+
+        if (!navigator.geolocation) {
+            // No geolocation support — let them through
+            this.currentStep = 0;
+            this.renderClue();
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                const dist = this.haversineDistance(
+                    pos.coords.latitude, pos.coords.longitude,
+                    sl.lat, sl.lng
+                );
+                if (dist <= 150) {
+                    // Close enough — unlock
+                    this.currentStep = 0;
+                    this.renderClue();
+                } else {
+                    const blocks = Math.round(dist / 80); // ~80m per short block in LA
+                    this.els['start-distance'].textContent =
+                        `You're about ${blocks} block${blocks !== 1 ? 's' : ''} away. Keep going.`;
+                    btn.textContent = "I'm here";
+                    btn.disabled = false;
+                }
+            },
+            (err) => {
+                // Permission denied or error — let them through
+                this.currentStep = 0;
+                this.renderClue();
+            },
+            { enableHighAccuracy: true, timeout: 10000 }
+        );
+    },
+
+    haversineDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371000; // meters
+        const toRad = d => d * Math.PI / 180;
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a = Math.sin(dLat / 2) ** 2 +
+                  Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     },
 
     onCorrect(step) {
@@ -486,8 +589,17 @@ const HappyHunting = {
         this.els['answer-input'].select();
     },
 
-    // ---- Preview: See Answer (toggle) ----
+    // ---- Preview: See Answer (toggle) / Continue (photo) ----
     toggleAnswer() {
+        const step = this.hunt.steps[this.currentStep];
+        // Photo clues in preview: "Continue" skips to fact reveal
+        if (step.answerType === 'photo') {
+            this.els['fact-text'].textContent = step.historicalFact || '';
+            this.els['fact-reveal'].classList.add('visible');
+            this.els['see-answer-btn'].hidden = true;
+            return;
+        }
+
         const isVisible = !this.els['preview-answer-text'].hidden;
         if (isVisible) {
             // Hide answer
@@ -496,7 +608,6 @@ const HappyHunting = {
             this.els['see-answer-btn'].textContent = 'See Answer';
         } else {
             // Show answer
-            const step = this.hunt.steps[this.currentStep];
             const answer = step.answer || '(no answer set)';
             this.els['preview-answer-text'].textContent = answer;
             this.els['preview-answer-text'].hidden = false;
@@ -791,21 +902,45 @@ const HappyHunting = {
         if (!bar.happyHour && !bar.vibe) {
             this.els['arrival-details'].style.display = 'none';
         }
+
+        // Photo gallery
+        if (this.huntPhotos.length > 0) {
+            const grid = this.els['arrival-gallery-grid'];
+            grid.innerHTML = '';
+            this.huntPhotos.forEach(p => {
+                const img = document.createElement('img');
+                img.src = p.src;
+                img.alt = `Clue ${p.step} photo`;
+                img.className = 'arrival-photo';
+                grid.appendChild(img);
+            });
+            this.els['arrival-gallery'].hidden = false;
+        }
+
         this.showScreen('arrival');
     },
 
     // ---- Events ----
     bindEvents() {
-        // Begin (interactive mode)
+        // Begin (interactive mode) → start screen (geo-gated) or clue 1
         this.els['begin-btn'].addEventListener('click', () => {
-            this.currentStep = 0;
-            this.renderClue();
+            if (this.hunt.startLocation && !this.isPreview) {
+                this.showStartScreen();
+            } else {
+                this.currentStep = 0;
+                this.renderClue();
+            }
         });
 
         // Intro forward arrow (preview mode)
         this.els['intro-next'].addEventListener('click', () => {
             this.currentStep = 0;
             this.renderClue();
+        });
+
+        // Start screen check-in
+        this.els['start-checkin-btn'].addEventListener('click', () => {
+            this.checkLocation();
         });
 
         // Skin selector
@@ -819,8 +954,12 @@ const HappyHunting = {
             if (e.key === 'Enter') this.checkAnswer();
         });
 
-        // Photo done
-        this.els['photo-done-btn'].addEventListener('click', () => this.solvePhoto());
+        // Photo capture
+        this.els['photo-capture-btn'].addEventListener('click', () => this.triggerPhotoCapture());
+        this.els['photo-input'].addEventListener('change', (e) => {
+            this.handlePhotoCaptured(e.target.files[0]);
+            e.target.value = ''; // reset so same file can be re-selected
+        });
 
         // Difficulty controls — +/- buttons + pip clicks
         this.els['diff-plus'].addEventListener('click', () => this.setDifficulty(this.difficultyLevel + 1));

@@ -26,6 +26,12 @@ const hunts = [
             happyHour: 'Check thunderboltla.com',
             vibe: 'Southern-inspired cocktails, centrifuge technique, Madeira list. North America\'s 50 Best Bars.'
         },
+        startLocation: {
+            lat: 34.0634,
+            lng: -118.2575,
+            label: 'Unidad Park, Beverly Blvd & Glendale Blvd',
+            transit: 'Metro B Line (Red) to Vermont/Beverly, walk 5 min west'
+        },
         theme: 'Mayors, Fires, and the Man Who Built Temple Street',
         totalWalkingDistance: '~0.3 miles',
         narrativeArc: 'From a French mayor\'s infrastructure legacy, through the fire stations that once protected this hillside, to a bar that transforms Southern tradition with laboratory precision.',
@@ -40,6 +46,12 @@ const hunts = [
             neighborhood: 'DTLA',
             happyHour: 'Mon–Fri 5–7pm, $10 cocktails, $6 beers',
             vibe: 'Hunting-lodge whiskey bar with 700+ bottles. Taxidermy. Live jazz.'
+        },
+        startLocation: {
+            lat: 34.0463,
+            lng: -118.253,
+            label: 'Broadway & 7th St (Route 66 Terminus)',
+            transit: 'Metro B/D Line to Pershing Square, walk 2 blocks south'
         },
         theme: 'Charity, Grasshoppers, and the Girl Named Spring',
         totalWalkingDistance: '~0.35 miles',
@@ -56,6 +68,12 @@ const hunts = [
             happyHour: 'Daily 4–7pm, $5 wells, $4 beers',
             vibe: 'Legendary dive bar since 1934. Al Hirschfeld mural. Adjacent to the Pantages Theatre.'
         },
+        startLocation: {
+            lat: 34.1031,
+            lng: -118.3262,
+            label: 'Capitol Records Building, Vine St & Hollywood Blvd',
+            transit: 'Metro B Line (Red) to Hollywood/Vine, street level'
+        },
         theme: 'A Fox Path, a Disgraced Vintner, and the Boulevard That Wasn\'t',
         totalWalkingDistance: '~0.35 miles',
         narrativeArc: 'An indigenous footpath. A disgraced man\'s street renamed for a senator\'s grapes. And a boulevard whose origin story no one can agree on — leading to a bar that\'s been telling stories since 1934.',
@@ -70,6 +88,12 @@ const hunts = [
             neighborhood: 'Echo Park',
             happyHour: 'Daily 3–7pm, PBR + tequila shot combos',
             vibe: 'No-pretension dive. Strong drinks, dark wood, good jukebox. The kind of bar that rewards you for walking hills.'
+        },
+        startLocation: {
+            lat: 34.0763,
+            lng: -118.261,
+            label: 'Angelus Temple, Glendale Blvd & Park Ave',
+            transit: 'Metro B Line (Red) to Vermont/Sunset, walk 10 min east on Sunset'
         },
         theme: 'Chaplin, McPherson, and the Lake That Echoes',
         totalWalkingDistance: '~0.3 miles',
@@ -86,6 +110,12 @@ const hunts = [
             happyHour: 'Daily 4–8pm + late night midnight–2am Sun–Thu, $7 cocktails',
             vibe: 'Day of the Dead cave grotto. Palomas, Old Fashioneds, mezcal. Arrival feels earned.'
         },
+        startLocation: {
+            lat: 34.1085,
+            lng: -118.1943,
+            label: 'Chicken Boy, Figueroa St & Ave 56',
+            transit: 'Metro A Line (Gold) to Highland Park, walk 5 min north on Figueroa'
+        },
         theme: 'The Man Who Walked to LA and the Street Named for a Ghost',
         totalWalkingDistance: '~0.3 miles',
         narrativeArc: 'A man walked 3,507 miles from Ohio to build a museum with a tunnel cut into rock. A Prohibition bowling alley hid its whiskey behind doctors\' prescriptions. A governor who never visited LA left his name on a 28-mile street. And at the end: a cave.',
@@ -101,6 +131,12 @@ const hunts = [
             happyHour: 'Mon–Fri 5–7pm, $8 cocktails, $6 beer/wine',
             vibe: 'Colombian rooftop inside a 1928 drive-in grocery. The building is the destination.'
         },
+        startLocation: {
+            lat: 34.0639,
+            lng: -118.2973,
+            label: 'Chapman Plaza, 3451 W 6th St',
+            transit: 'Metro B/D Line to Wilshire/Normandie, walk 2 blocks north'
+        },
         theme: 'Bean Patches, Blue Tiles, and the Night Bobby Died',
         totalWalkingDistance: '~0.25 miles',
         narrativeArc: 'A French landowner\'s tower clad in blue-green terra cotta. A silent film star\'s apartment built on top of a Greene & Greene mansion. A hotel where six Oscars were held and a senator was murdered. And a 1928 grocery store that became a bar — designed by the same architects who built the tower.',
@@ -110,14 +146,14 @@ const hunts = [
 
 const schema = {
     "$schema": "hunt-schema-v3",
-    "description": "Each hunt has a cluePool of 30 clues across 3 rings (distance tiers), with difficulty 1-10 per ring. Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Difficulty selector picks clue by difficulty level within ring.",
+    "description": "Each hunt has a cluePool of 15 clues across 3 rings (distance tiers), with difficulty 1-5 per ring. Ring 1 = farthest start, Ring 2 = middle, Ring 3 = arrives at bar. Difficulty selector picks clue by difficulty level within ring.",
     "constraints": {
         "maxTotalDistance": "0.4 miles",
         "maxStartDistance": "0.3 miles from bar",
         "direction": "inward — each step closer to the bar",
         "noFreewaysCrossed": true,
         "stepsPerHunt": 3,
-        "difficultiesPerRing": 10
+        "difficultiesPerRing": 5
     },
     "hunts": []
 };
@@ -139,13 +175,13 @@ for (const hunt of hunts) {
             const rings = [1, 2, 3];
             for (const ring of rings) {
                 const ringClues = cluePool.filter(c => c.ring === ring);
-                if (ringClues.length < 10) {
-                    console.warn(`  ⚠ ${hunt.huntId} ring ${ring}: only ${ringClues.length}/10 clues`);
+                if (ringClues.length < 5) {
+                    console.warn(`  ⚠ ${hunt.huntId} ring ${ring}: only ${ringClues.length}/5 clues`);
                 }
                 // Check difficulty coverage
                 const diffs = ringClues.map(c => c.difficulty).sort((a, b) => a - b);
                 const missing = [];
-                for (let d = 1; d <= 10; d++) {
+                for (let d = 1; d <= 5; d++) {
                     if (!diffs.includes(d)) missing.push(d);
                 }
                 if (missing.length) {
@@ -165,6 +201,7 @@ for (const hunt of hunts) {
     schema.hunts.push({
         huntId: hunt.huntId,
         bar: hunt.bar,
+        startLocation: hunt.startLocation,
         theme: hunt.theme,
         totalWalkingDistance: hunt.totalWalkingDistance,
         narrativeArc: hunt.narrativeArc,
