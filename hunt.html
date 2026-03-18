@@ -127,8 +127,10 @@
                     <button id="pa-prev" class="pa-btn pa-prev" hidden>&larr; Prev</button>
                     <button id="pa-delete" class="pa-btn pa-delete" hidden>&times; Delete</button>
                     <button id="pa-edit" class="pa-btn">Edit</button>
+                    <button id="pa-save" class="pa-btn pa-save" hidden>Save</button>
                     <button id="pa-add" class="pa-btn pa-add" hidden>+ Add Clue ($1)</button>
-                    <button id="pa-primary" class="pa-btn pa-primary">Next Clue &rarr;</button>
+                    <button id="pa-send-hunt" class="pa-btn pa-send" hidden>Send Hunt</button>
+                    <button id="pa-primary" class="pa-btn pa-primary" hidden>Next Clue &rarr;</button>
                 </div>
                 <!-- Interactive: answer input -->
                 <div class="answer-section" id="answer-section">
@@ -176,9 +178,17 @@
         <!-- Send -->
         <div id="send-screen" class="screen">
             <div class="card send-card">
-                <button class="pa-btn pa-prev send-back" id="send-back">&larr; Back</button>
                 <p class="send-label">Send this hunt</p>
                 <h2 class="send-hunt-title" id="send-hunt-title"></h2>
+
+                <div class="send-accounting" id="send-accounting">
+                    <div class="send-line-items" id="send-line-items"></div>
+                    <div class="send-total-row">
+                        <span class="send-total-label">Total</span>
+                        <span class="send-total-amount" id="send-total-amount">$5</span>
+                    </div>
+                </div>
+
                 <div class="send-form" id="send-hunt-form">
                     <input type="text" id="send-your-name" placeholder="Your name" autocomplete="given-name">
                     <input type="text" id="send-their-name" placeholder="Their name" autocomplete="off">
@@ -188,13 +198,16 @@
                         <button id="send-promo-apply" class="send-promo-btn">Apply</button>
                     </div>
                     <p class="send-promo-feedback" id="send-promo-feedback"></p>
-                    <button id="send-generate-btn" class="action-btn">Generate Invitation &mdash; $5</button>
+                    <button id="send-generate-btn" class="action-btn">Generate Invite &mdash; $5</button>
                 </div>
+
                 <div class="send-result" id="send-hunt-result" hidden>
                     <p>Share this link:</p>
                     <input type="text" id="send-hunt-link" readonly>
                     <button id="send-hunt-copy" class="action-btn">Copy Link</button>
                 </div>
+
+                <button class="pa-btn send-back-editor" id="send-back-editor">&larr; Go Back to Editor</button>
             </div>
         </div>
 

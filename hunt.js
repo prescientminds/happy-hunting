@@ -49,8 +49,8 @@ const HappyHunting = {
             'stuck-btn', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
             'dice-roll-btn',
-            'pa-prev', 'pa-edit', 'pa-delete', 'pa-add', 'pa-primary', 'preview-actions',
-            'send-back',
+            'pa-prev', 'pa-edit', 'pa-delete', 'pa-add', 'pa-save', 'pa-send-hunt', 'pa-primary', 'preview-actions',
+            'send-back-editor', 'send-accounting', 'send-line-items', 'send-total-amount',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
             'send-generate-btn', 'send-hunt-result', 'send-hunt-link', 'send-hunt-copy',
@@ -775,7 +775,6 @@ const HappyHunting = {
 
         const dirty = this.cardDirty[this.currentStep];
         const isLast = this.currentStep === this.hunt.steps.length - 1;
-        const step = this.hunt.steps[this.currentStep];
 
         // ← Previous: always visible except card 1
         this.els['pa-prev'].hidden = this.currentStep === 0;
@@ -783,24 +782,20 @@ const HappyHunting = {
         // Edit: always visible
         this.els['pa-edit'].hidden = false;
 
+        // Save: visible when card has unsaved changes
+        this.els['pa-save'].hidden = !dirty;
+
         // Delete: always visible (hidden only if 1 clue left)
         this.els['pa-delete'].hidden = this.hunt.steps.length <= 1;
 
-        // Primary button: text changes based on dirty state
-        const primary = this.els['pa-primary'];
-        if (dirty) {
-            primary.innerHTML = 'Save';
-            primary.className = 'pa-btn pa-primary';
-        } else if (isLast) {
-            primary.innerHTML = 'Send Hunt';
-            primary.className = 'pa-btn pa-send';
-        } else {
-            primary.innerHTML = 'Next Clue &rarr;';
-            primary.className = 'pa-btn pa-primary';
-        }
-
-        // Add Clue: only on last card, to the right of primary
+        // Add Clue: only on last card
         this.els['pa-add'].hidden = !isLast;
+
+        // Send Hunt: only on last card
+        this.els['pa-send-hunt'].hidden = !isLast;
+
+        // Next Clue: only on non-last cards
+        this.els['pa-primary'].hidden = isLast;
     },
 
     // ---- Visual Interventions ----
@@ -1052,6 +1047,54 @@ const HappyHunting = {
     },
 
     // ---- Send Screen ----
+    getSendTotal() {
+        if (this.sendPromoApplied) return 0;
+        return 5 + this.addedCluesCount;
+    },
+
+    renderSendAccounting() {
+        const items = this.els['send-line-items'];
+        items.innerHTML = '';
+
+        // Premium hunt base price
+        const baseLine = document.createElement('div');
+        baseLine.className = 'send-line-item';
+        baseLine.innerHTML = '<span class="send-item-name">Premium Hunt</span><span class="send-item-price">$5</span>';
+        items.appendChild(baseLine);
+
+        // Extra clues — list each added clue with remove button
+        this.hunt.steps.forEach((step, i) => {
+            if (!step.isAdded) return;
+            const line = document.createElement('div');
+            line.className = 'send-line-item send-line-extra';
+            const label = `Extra Clue \u2014 Clue ${i + 1}`;
+            line.innerHTML = `<span class="send-item-name">${label}</span><span class="send-item-price">$1</span><button class="send-remove-clue" data-step="${i}">&times;</button>`;
+            items.appendChild(line);
+        });
+
+        // Update total
+        const total = this.getSendTotal();
+        this.els['send-total-amount'].textContent = total === 0 ? 'Free' : `$${total}`;
+        this.els['send-generate-btn'].textContent = total === 0 ? 'Generate Invite \u2014 Free' : `Generate Invite \u2014 $${total}`;
+    },
+
+    removeSendClue(stepIndex) {
+        const step = this.hunt.steps[stepIndex];
+        if (!step || !step.isAdded) return;
+
+        this.hunt.steps.splice(stepIndex, 1);
+        this.hunt.steps.forEach((s, i) => { s.stepNumber = i + 1; });
+
+        delete this.stepDifficulties[stepIndex];
+        delete this.cardDirty[stepIndex];
+
+        this.addedCluesCount = Math.max(0, this.addedCluesCount - 1);
+        this.updateCostBar();
+
+        // Re-render accounting
+        this.renderSendAccounting();
+    },
+
     showSendScreen() {
         this.els['send-hunt-title'].textContent = this.hunt.theme;
         this.els['send-hunt-form'].hidden = false;
@@ -1061,31 +1104,31 @@ const HappyHunting = {
         this.els['send-their-phone'].value = '';
         this.els['send-promo'].value = '';
         this.els['send-promo-feedback'].textContent = '';
-        this.els['send-generate-btn'].textContent = 'Generate Invitation \u2014 $5';
         this.sendPromoApplied = false;
+
+        // Render accounting
+        this.renderSendAccounting();
+
         this.showScreen('send');
     },
 
     checkSendPromo() {
         const code = this.els['send-promo'].value.trim().toLowerCase();
         const fb = this.els['send-promo-feedback'];
-        const btn = this.els['send-generate-btn'];
         if (code === 'prescientminds') {
             this.sendPromoApplied = true;
             fb.textContent = 'Applied \u2014 invitation is free';
             fb.className = 'send-promo-feedback valid';
-            btn.textContent = 'Generate Invitation \u2014 Free';
         } else if (code.length > 0) {
             this.sendPromoApplied = false;
             fb.textContent = 'Invalid code';
             fb.className = 'send-promo-feedback invalid';
-            btn.textContent = 'Generate Invitation \u2014 $5';
         } else {
             this.sendPromoApplied = false;
             fb.textContent = '';
             fb.className = 'send-promo-feedback';
-            btn.textContent = 'Generate Invitation \u2014 $5';
         }
+        this.renderSendAccounting();
     },
 
     generateSendLink() {
@@ -1230,26 +1273,26 @@ const HappyHunting = {
         this.els['pa-prev'].addEventListener('click', () => this.prevClue());
         this.els['pa-edit'].addEventListener('click', () => this.toggleEdit());
         this.els['pa-delete'].addEventListener('click', () => this.deleteClue());
+        this.els['pa-save'].addEventListener('click', () => this.saveCurrentCard());
         this.els['pa-add'].addEventListener('click', () => this.addClue());
+        this.els['pa-send-hunt'].addEventListener('click', () => this.showSendScreen());
         this.els['pa-primary'].addEventListener('click', () => {
-            if (this.cardDirty[this.currentStep]) {
-                this.saveCurrentCard();
-            } else if (this.currentStep === this.hunt.steps.length - 1) {
-                this.showSendScreen();
-            } else {
-                this.lockClue();
-                this.previewNext();
-            }
+            this.lockClue();
+            this.previewNext();
         });
 
         // Send screen
-        this.els['send-back'].addEventListener('click', () => {
+        this.els['send-back-editor'].addEventListener('click', () => {
             this.currentStep = this.hunt.steps.length - 1;
             this.renderClue();
         });
         this.els['send-promo-apply'].addEventListener('click', () => this.checkSendPromo());
         this.els['send-generate-btn'].addEventListener('click', () => this.generateSendLink());
         this.els['send-hunt-copy'].addEventListener('click', () => this.copySendLink());
+        this.els['send-line-items'].addEventListener('click', e => {
+            const btn = e.target.closest('.send-remove-clue');
+            if (btn) this.removeSendClue(parseInt(btn.dataset.step));
+        });
 
         // Cost bar promo
         this.els['cost-promo-apply'].addEventListener('click', () => this.applyPromo());
