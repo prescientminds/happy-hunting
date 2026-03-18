@@ -28,13 +28,6 @@
     "success": true
   },
   {
-    "name": "Little Doms",
-    "address": "2128 Hillhurst Ave, Los Angeles, CA",
-    "lat": 34.1108665,
-    "lng": -118.2872699,
-    "success": true
-  },
-  {
     "name": "Rossoblu",
     "address": "1124 San Julian St, Los Angeles, CA",
     "lat": 34.0349774,
@@ -133,13 +126,6 @@
     "success": true
   },
   {
-    "name": "Maple Block Meat Co",
-    "address": "3973 Sepulveda Blvd, Culver City, CA",
-    "lat": 34.0093007,
-    "lng": -118.4144366,
-    "success": true
-  },
-  {
     "name": "Piccalilli",
     "address": "3850 Main St, Culver City, CA",
     "lat": 34.0246765,
@@ -158,13 +144,6 @@
     "address": "8888 Washington Blvd, Culver City, CA",
     "lat": 34.0264743,
     "lng": -118.388883,
-    "success": true
-  },
-  {
-    "name": "Nick and Stefs Steakhouse",
-    "address": "330 S Hope St, Los Angeles, CA",
-    "lat": 34.0528899,
-    "lng": -118.2525561,
     "success": true
   },
   {
@@ -214,13 +193,6 @@
     "address": "633 W 5th St, Los Angeles, CA",
     "lat": 34.0509789,
     "lng": -118.2545122,
-    "success": true
-  },
-  {
-    "name": "33 Taps DTLA",
-    "address": "1240 S Figueroa St, Los Angeles, CA",
-    "lat": 34.0413364,
-    "lng": -118.2672527,
     "success": true
   },
   {
@@ -343,13 +315,6 @@
     "success": true
   },
   {
-    "name": "Boardners",
-    "address": "1652 N Cherokee Ave, Hollywood, CA",
-    "lat": 34.1006841,
-    "lng": -118.3349297,
-    "success": true
-  },
-  {
     "name": "Frolic Room",
     "address": "6245 Hollywood Blvd, Hollywood, CA",
     "lat": 34.1017078,
@@ -361,13 +326,6 @@
     "address": "7000 Hollywood Blvd, Hollywood, CA",
     "lat": 34.1009297,
     "lng": -118.3418149,
-    "success": true
-  },
-  {
-    "name": "Sunset and Vinyl",
-    "address": "1521 Vine St, Hollywood, CA",
-    "lat": 34.0984335,
-    "lng": -118.3267572,
     "success": true
   },
   {
@@ -396,13 +354,6 @@
     "address": "601 S Western Ave, Los Angeles, CA",
     "lat": 34.063392,
     "lng": -118.309192,
-    "success": true
-  },
-  {
-    "name": "Cassells Hamburgers",
-    "address": "3600 W 6th St, Los Angeles, CA",
-    "lat": 34.063484,
-    "lng": -118.300506,
     "success": true
   },
   {
@@ -462,24 +413,10 @@
     "success": true
   },
   {
-    "name": "Moos Craft Barbecue",
-    "address": "2118 N Broadway, Los Angeles, CA",
-    "lat": 34.0732167,
-    "lng": -118.2185772,
-    "success": true
-  },
-  {
     "name": "Far Bar",
     "address": "347 E 1st St, Los Angeles, CA",
     "lat": 34.0496226,
     "lng": -118.2395849,
-    "success": true
-  },
-  {
-    "name": "Wolf and Crane",
-    "address": "366 E 2nd St, Los Angeles, CA",
-    "lat": 34.0478985,
-    "lng": -118.2397855,
     "success": true
   },
   {
@@ -494,13 +431,6 @@
     "address": "313 E 1st St, Los Angeles, CA",
     "lat": 34.050236,
     "lng": -118.2404477,
-    "success": true
-  },
-  {
-    "name": "Big Bar Alcove",
-    "address": "1929 Hillhurst Ave, Los Angeles, CA",
-    "lat": 34.1062341,
-    "lng": -118.2877096,
     "success": true
   },
   {
@@ -525,38 +455,10 @@
     "success": true
   },
   {
-    "name": "Simmzys",
-    "address": "229 Manhattan Beach Blvd, Manhattan Beach, CA",
-    "lat": 33.8851578,
-    "lng": -118.4100315,
-    "success": true
-  },
-  {
-    "name": "Ercoles 1101",
-    "address": "1101 Manhattan Ave, Manhattan Beach, CA",
-    "lat": 33.8841109,
-    "lng": -118.410658,
-    "success": true
-  },
-  {
     "name": "Accomplice Bar",
     "address": "3811 Grand View Blvd, Los Angeles, CA",
     "lat": 34.0044836,
     "lng": -118.431004,
-    "success": true
-  },
-  {
-    "name": "Taverna Mar Vista",
-    "address": "12249 Venice Blvd, Los Angeles, CA",
-    "lat": 34.0044103,
-    "lng": -118.4317403,
-    "success": true
-  },
-  {
-    "name": "Dear Janes",
-    "address": "13950 Panay Way, Marina del Rey, CA",
-    "lat": 33.979073,
-    "lng": -118.4533335,
     "success": true
   },
   {
@@ -588,20 +490,6 @@
     "success": true
   },
   {
-    "name": "Oldfields Liquor Room",
-    "address": "10899 Venice Blvd, Los Angeles, CA",
-    "lat": 34.016268,
-    "lng": -118.411775,
-    "success": true
-  },
-  {
-    "name": "Alexanders Steakhouse",
-    "address": "111 N Los Robles Ave, Pasadena, CA",
-    "lat": 34.1474612,
-    "lng": -118.1423004,
-    "success": true
-  },
-  {
     "name": "The Arbour",
     "address": "527 S Lake Ave, Pasadena, CA",
     "lat": 34.1367866,
@@ -613,13 +501,6 @@
     "address": "64 W Union St, Pasadena, CA",
     "lat": 34.1465954,
     "lng": -118.1519836,
-    "success": true
-  },
-  {
-    "name": "Brookside Restaurant",
-    "address": "1133 Rosemont Ave, Pasadena, CA",
-    "lat": 34.1672572,
-    "lng": -118.1701492,
     "success": true
   },
   {
@@ -644,13 +525,6 @@
     "success": true
   },
   {
-    "name": "The Raymonds 1886",
-    "address": "1250 S Fair Oaks Ave, Pasadena, CA",
-    "lat": 34.1244362,
-    "lng": -118.1497449,
-    "success": true
-  },
-  {
     "name": "Rebel Republic",
     "address": "1710 S Catalina Ave, Redondo Beach, CA",
     "lat": 33.818133,
@@ -658,24 +532,10 @@
     "success": true
   },
   {
-    "name": "Huddys",
-    "address": "514 N Pacific Coast Hwy, Redondo Beach, CA",
-    "lat": 33.849256,
-    "lng": -118.3885669,
-    "success": true
-  },
-  {
     "name": "Sorry Not Sorry",
     "address": "11520 W Pico Blvd, Los Angeles, CA",
     "lat": 34.033101,
     "lng": -118.4425165,
-    "success": true
-  },
-  {
-    "name": "Tinys Hi-Dive",
-    "address": "12012 W Pico Blvd, Los Angeles, CA",
-    "lat": 34.029714,
-    "lng": -118.44933,
     "success": true
   },
   {
@@ -704,13 +564,6 @@
     "address": "2939 W Sunset Blvd, Los Angeles, CA",
     "lat": 34.0836919,
     "lng": -118.2737845,
-    "success": true
-  },
-  {
-    "name": "Jays Bar",
-    "address": "4321 Sunset Blvd, Los Angeles, CA",
-    "lat": 34.0952957,
-    "lng": -118.2830176,
     "success": true
   },
   {
@@ -798,24 +651,10 @@
     "success": true
   },
   {
-    "name": "Harriets Rooftop",
-    "address": "8490 Sunset Blvd, West Hollywood, CA",
-    "lat": 34.0941186,
-    "lng": -118.3756264,
-    "success": true
-  },
-  {
     "name": "33 Taps WeHo",
     "address": "8941 Santa Monica Blvd, West Hollywood, CA",
     "lat": 34.0842864,
     "lng": -118.3854084,
-    "success": true
-  },
-  {
-    "name": "EP and LP",
-    "address": "603 N La Cienega Blvd, West Hollywood, CA",
-    "lat": 34.0821504,
-    "lng": -118.3765711,
     "success": true
   },
   {
@@ -826,24 +665,10 @@
     "success": true
   },
   {
-    "name": "Hugos",
-    "address": "8401 Santa Monica Blvd, West Hollywood, CA",
-    "lat": 34.0908505,
-    "lng": -118.3729964,
-    "success": true
-  },
-  {
     "name": "Phorage",
     "address": "7326 Santa Monica Blvd, West Hollywood, CA",
     "lat": 34.0906632,
     "lng": -118.3494788,
-    "success": true
-  },
-  {
-    "name": "Matties WeHo",
-    "address": "8900 Santa Monica Blvd, West Hollywood, CA",
-    "lat": 34.0845472,
-    "lng": -118.3841399,
     "success": true
   },
   {
@@ -889,24 +714,10 @@
     "success": true
   },
   {
-    "name": "Death and Co",
-    "address": "818 E 3rd St, Los Angeles, CA",
-    "lat": 33.7704228,
-    "lng": -118.1821635,
-    "success": true
-  },
-  {
     "name": "Bar Americano",
     "address": "923 E 3rd St, Los Angeles, CA",
     "lat": 34.0462751,
     "lng": -118.2341401,
-    "success": true
-  },
-  {
-    "name": "Kombu Sushi",
-    "address": "300 S Santa Fe Ave, Los Angeles, CA",
-    "lat": 34.0443082,
-    "lng": -118.2323651,
     "success": true
   },
   {
@@ -952,17 +763,269 @@
     "success": true
   },
   {
-    "name": "Connie and Teds",
+    "name": "Wife and the Somm",
+    "address": "3416 Verdugo Rd, Los Angeles, CA",
+    "lat": 34.1139369,
+    "lng": -118.2351131,
+    "success": true
+  },
+  {
+    "name": "Little Dom's",
+    "address": "2128 Hillhurst Ave, Los Feliz, CA",
+    "lat": 34.1108665,
+    "lng": -118.2872699,
+    "success": true
+  },
+  {
+    "name": "Connie & Ted's",
     "address": "8171 Santa Monica Blvd, West Hollywood, CA",
     "lat": 34.0911191,
     "lng": -118.3672148,
     "success": true
   },
   {
-    "name": "Wife and the Somm",
-    "address": "3416 Verdugo Rd, Los Angeles, CA",
-    "lat": 34.1139369,
-    "lng": -118.2351131,
+    "name": "Big Bar / Alcove",
+    "address": "1929 Hillhurst Ave, Los Feliz, CA",
+    "lat": 34.1062341,
+    "lng": -118.2877096,
+    "success": true
+  },
+  {
+    "name": "Maple Block Meat Co.",
+    "address": "3973 Sepulveda Blvd, Culver City, CA",
+    "lat": 34.0093007,
+    "lng": -118.4144366,
+    "success": true
+  },
+  {
+    "name": "Nick + Stef's Steakhouse",
+    "address": "330 S Hope St, DTLA, CA",
+    "lat": 34.0528899,
+    "lng": -118.2525561,
+    "success": true
+  },
+  {
+    "name": "Uchi (Cocktail Bar)",
+    "address": "9001 Santa Monica Blvd, West Hollywood, CA",
+    "lat": 34.0828318,
+    "lng": -118.3867937,
+    "success": true
+  },
+  {
+    "name": "Alexander's Steakhouse",
+    "address": "111 N Los Robles Ave, Pasadena, CA",
+    "lat": 34.1474612,
+    "lng": -118.1423004,
+    "success": true
+  },
+  {
+    "name": "Brookside Restaurant (Rose Bowl)",
+    "address": "1133 Rosemont Ave, Pasadena, CA",
+    "lat": 34.1672572,
+    "lng": -118.1701492,
+    "success": true
+  },
+  {
+    "name": "The Raymond's 1886",
+    "address": "1250 S Fair Oaks Ave, Pasadena / South Pasadena, CA",
+    "lat": 34.1244362,
+    "lng": -118.1497449,
+    "success": true
+  },
+  {
+    "name": "Simmzy's",
+    "address": "229 Manhattan Beach Blvd, Manhattan Beach, CA",
+    "lat": 33.8851578,
+    "lng": -118.4100315,
+    "success": true
+  },
+  {
+    "name": "Ercole's 1101",
+    "address": "1101 Manhattan Ave, Manhattan Beach, CA",
+    "lat": 33.8841109,
+    "lng": -118.410658,
+    "success": true
+  },
+  {
+    "name": "Huddy's",
+    "address": "514 N Pacific Coast Hwy, Redondo Beach, CA",
+    "lat": 33.849256,
+    "lng": -118.3885669,
+    "success": true
+  },
+  {
+    "name": "Dear Jane's",
+    "address": "13950 Panay Way, Marina del Rey, CA",
+    "lat": 33.979073,
+    "lng": -118.4533335,
+    "success": true
+  },
+  {
+    "name": "Moo's Craft Barbecue",
+    "address": "2118 N Broadway, Lincoln Heights, CA",
+    "lat": 34.0732167,
+    "lng": -118.2185772,
+    "success": true
+  },
+  {
+    "name": "Boardner's",
+    "address": "1652 N Cherokee Ave, Hollywood, CA",
+    "lat": 34.1006841,
+    "lng": -118.3349297,
+    "success": true
+  },
+  {
+    "name": "Oldfield's Liquor Room",
+    "address": "10899 Venice Blvd, Palms, CA",
+    "lat": 34.016268,
+    "lng": -118.411775,
+    "success": true
+  },
+  {
+    "name": "Cassell's Hamburgers",
+    "address": "3600 W 6th St, Koreatown, CA",
+    "lat": 34.063484,
+    "lng": -118.300506,
+    "success": true
+  },
+  {
+    "name": "Death & Co",
+    "address": "818 E 3rd St, Arts District, CA",
+    "lat": 33.7704228,
+    "lng": -118.1821635,
+    "success": true
+  },
+  {
+    "name": "Wolf & Crane",
+    "address": "366 E 2nd St, Little Tokyo, CA",
+    "lat": 34.0478985,
+    "lng": -118.2397855,
+    "success": true
+  },
+  {
+    "name": "Kombu Sushi & Sake",
+    "address": "300 S Santa Fe Ave, Suite Q, Arts District, CA",
+    "lat": 34.0443082,
+    "lng": -118.2323651,
+    "success": true
+  },
+  {
+    "name": "33 Taps",
+    "address": "1240 S Figueroa St, DTLA, CA",
+    "lat": 34.0413364,
+    "lng": -118.2672527,
+    "success": true
+  },
+  {
+    "name": "Jay's Bar",
+    "address": "4321 Sunset Blvd, Silver Lake, CA",
+    "lat": 34.0952957,
+    "lng": -118.2830176,
+    "success": true
+  },
+  {
+    "name": "Tiny's Hi-Dive",
+    "address": "12012 W Pico Blvd, Sawtelle, CA",
+    "lat": 34.029714,
+    "lng": -118.44933,
+    "success": true
+  },
+  {
+    "name": "Harriet's Rooftop",
+    "address": "8490 Sunset Blvd, West Hollywood, CA",
+    "lat": 34.0941186,
+    "lng": -118.3756264,
+    "success": true
+  },
+  {
+    "name": "E.P. & L.P.",
+    "address": "603 N La Cienega Blvd, West Hollywood, CA",
+    "lat": 34.0821504,
+    "lng": -118.3765711,
+    "success": true
+  },
+  {
+    "name": "Sunset & Vinyl",
+    "address": "1521 Vine St, Hollywood, CA",
+    "lat": 34.0984335,
+    "lng": -118.3267572,
+    "success": true
+  },
+  {
+    "name": "Hugo's",
+    "address": "8401 Santa Monica Blvd, West Hollywood, CA",
+    "lat": 34.0908505,
+    "lng": -118.3729964,
+    "success": true
+  },
+  {
+    "name": "Mattie's WeHo",
+    "address": "8900 Santa Monica Blvd, West Hollywood, CA",
+    "lat": 34.0845472,
+    "lng": -118.3841399,
+    "success": true
+  },
+  {
+    "name": "Good Clean Fun",
+    "address": "868 S Olive St, Los Angeles, CA",
+    "lat": 34.0439579,
+    "lng": -118.257763,
+    "success": true
+  },
+  {
+    "name": "Citrin",
+    "address": "1104 Wilshire Blvd, Santa Monica, CA",
+    "lat": 34.0244231,
+    "lng": -118.4913266,
+    "success": true
+  },
+  {
+    "name": "Charcoal Venice",
+    "address": "425 Washington Blvd, Venice, CA",
+    "lat": 33.9814746,
+    "lng": -118.4629732,
+    "success": true
+  },
+  {
+    "name": "Founders Ale House",
+    "address": "8771 W Pico Blvd, Los Angeles, CA",
+    "lat": 34.0548722,
+    "lng": -118.3833397,
+    "success": true
+  },
+  {
+    "name": "Marco Polo",
+    "address": "4141 Santa Monica Blvd, Los Angeles, CA",
+    "lat": 34.0918176,
+    "lng": -118.2828677,
+    "success": true
+  },
+  {
+    "name": "Tu Madre",
+    "address": "1111 N Hayworth Ave, West Hollywood, CA",
+    "lat": 34.091002,
+    "lng": -118.3630707,
+    "success": true
+  },
+  {
+    "name": "Gin Rummy",
+    "address": "822 Washington Blvd, Venice, CA",
+    "lat": 33.9880529,
+    "lng": -118.451845,
+    "success": true
+  },
+  {
+    "name": "Zori",
+    "address": "7910 W 3rd St, Los Angeles, CA",
+    "lat": 34.0714673,
+    "lng": -118.36239,
+    "success": true
+  },
+  {
+    "name": "Taverna at The Mar Vista",
+    "address": "12249 Venice Blvd, Los Angeles, CA",
+    "lat": 34.0044103,
+    "lng": -118.4317403,
     "success": true
   }
 ]

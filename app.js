@@ -213,8 +213,14 @@ function getSlot(startTime) {
 
 // ---- Main app ----
 async function init() {
-  const response = await fetch('deals.json');
-  const deals = await response.json();
+  const [dealsResponse, geocodeResponse] = await Promise.all([
+    fetch('deals.json'),
+    fetch('bars-geocoded.json').catch(() => new Response('[]')),
+  ]);
+  const deals = await dealsResponse.json();
+  const geocodeData = await geocodeResponse.json();
+  const geocodeMap = {};
+  geocodeData.forEach(g => { if (g.success) geocodeMap[g.name] = { lat: g.lat, lng: g.lng }; });
 
   const restaurantNames = [...new Set(deals.map(d => d.restaurant))].sort();
   const neighborhoods = [...new Set(deals.map(d => d.neighborhood))].sort();
@@ -452,7 +458,7 @@ async function init() {
       const isToday = day === today;
 
       if (groups.length === 0) {
-        return `<div class="day-column${isToday ? ' today' : ''}">
+        return `<div class="day-column${isToday ? ' today' : ''}" data-day="${day}">
           <div class="empty-day">No deals</div>
         </div>`;
       }
@@ -474,8 +480,10 @@ async function init() {
           const time = shortTimeRange(deal.startTime, deal.endTime);
           return `<div class="block-item${hidden ? ' block-item-hidden' : ''}" data-deal-id="${deal.id}">
             <span class="bi-dot" style="background:${color.bg}"></span>
-            <span class="bi-name">${deal.restaurant}</span>
-            <span class="bi-time">${time}</span>
+            <div class="bi-info">
+              <span class="bi-name">${deal.restaurant}</span>
+              <span class="bi-time">${time}</span>
+            </div>
             ${qb}
           </div>`;
         }).join('');
@@ -500,7 +508,7 @@ async function init() {
         </div>`;
       }).join('');
 
-      return `<div class="day-column${isToday ? ' today' : ''}">${blocksHtml}</div>`;
+      return `<div class="day-column${isToday ? ' today' : ''}" data-day="${day}">${blocksHtml}</div>`;
     }).join('');
 
     // Attach interactions
@@ -579,7 +587,7 @@ async function init() {
   });
 
   // ---- Filter bindings ----
-  function refresh() { renderGrid(); }
+  function refresh() { renderGrid(); updateMap(); updateMobileView(); }
 
   const lateNightBtn = document.getElementById('late-night-toggle');
   lateNightBtn.addEventListener('click', () => {
@@ -676,8 +684,126 @@ async function init() {
     searchInput.value = '';
   });
 
+  // ---- Map ----
+  let map = null;
+  let markerLayer = null;
+
+  function initMap() {
+    if (typeof L === 'undefined') return;
+    map = L.map('map', { scrollWheelZoom: true, zoomControl: true }).setView([34.05, -118.35], 11);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 19,
+    }).addTo(map);
+    markerLayer = L.layerGroup().addTo(map);
+    updateMap();
+  }
+
+  function updateMap() {
+    if (!map || !markerLayer) return;
+    markerLayer.clearLayers();
+    const filtered = getFilteredDeals();
+    const seen = new Set();
+    const restaurants = [];
+    filtered.forEach(deal => {
+      if (!seen.has(deal.restaurant)) {
+        seen.add(deal.restaurant);
+        restaurants.push(deal);
+      }
+    });
+
+    let mapped = 0;
+    const bounds = [];
+
+    restaurants.forEach(deal => {
+      const geo = geocodeMap[deal.restaurant];
+      if (!geo) return;
+      mapped++;
+      const color = getColor(deal.neighborhood);
+      const time = shortTimeRange(deal.startTime, deal.endTime);
+      const qc = deal.quality === 'A+' ? 'a-plus' : deal.quality === 'A' ? 'a' : deal.quality === 'B+' ? 'b-plus' : 'b';
+
+      const marker = L.circleMarker([geo.lat, geo.lng], {
+        radius: 8,
+        fillColor: color.bg,
+        color: '#fff',
+        weight: 2,
+        fillOpacity: 0.9,
+      });
+
+      marker.bindTooltip(deal.restaurant, {
+        permanent: false,
+        direction: 'top',
+        offset: [0, -10],
+        className: 'map-tooltip',
+      });
+
+      let popup = `<div class="map-popup">`;
+      popup += `<strong>${deal.restaurant}</strong>`;
+      popup += `<div class="map-popup-meta">${deal.neighborhood} &middot; <span class="map-popup-quality ${qc}">${deal.quality}</span> &middot; ${time}</div>`;
+      if (deal.address) popup += `<div class="map-popup-addr">${deal.address}</div>`;
+      if (deal.drinks?.length) popup += `<div class="map-popup-deal">${deal.drinks[0]}</div>`;
+      popup += `</div>`;
+      marker.bindPopup(popup, { maxWidth: 280 });
+
+      marker.addTo(markerLayer);
+      bounds.push([geo.lat, geo.lng]);
+    });
+
+    document.getElementById('map-count').textContent = `${mapped} of ${restaurants.length} venues mapped`;
+    if (bounds.length > 0) {
+      map.fitBounds(bounds, { padding: [30, 30], maxZoom: 14 });
+    }
+  }
+
+  // ---- Mobile day navigation ----
+  const mobileDayOrder = [1, 2, 3, 4, 5, 6, 0];
+  const fullDayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  const todayNum = new Date().getDay();
+  const todayIdx = mobileDayOrder.indexOf(todayNum);
+  let mobileDay = todayIdx >= 0 ? todayIdx : 0;
+
+  function updateMobileView() {
+    const isMobile = window.innerWidth <= 768;
+    const nav = document.getElementById('mobile-day-nav');
+
+    if (!isMobile) {
+      if (nav) nav.style.display = 'none';
+      document.querySelectorAll('.day-column').forEach(col => col.classList.remove('mobile-hidden'));
+      return;
+    }
+
+    if (nav) nav.style.display = 'flex';
+    const currentDayNum = mobileDayOrder[mobileDay];
+    const label = document.getElementById('mdn-label');
+    if (label) {
+      label.textContent = currentDayNum === todayNum
+        ? `Today \u2014 ${fullDayNames[mobileDay]}`
+        : fullDayNames[mobileDay];
+    }
+
+    document.querySelectorAll('.day-column').forEach(col => {
+      const colDay = parseInt(col.dataset.day);
+      col.classList.toggle('mobile-hidden', colDay !== currentDayNum);
+    });
+  }
+
+  document.getElementById('mdn-prev').addEventListener('click', () => {
+    mobileDay = (mobileDay - 1 + 7) % 7;
+    updateMobileView();
+  });
+
+  document.getElementById('mdn-next').addEventListener('click', () => {
+    mobileDay = (mobileDay + 1) % 7;
+    updateMobileView();
+  });
+
+  window.addEventListener('resize', updateMobileView);
+
   // Initial render
   renderGrid();
+  initMap();
+  updateMobileView();
 }
 
 document.addEventListener('DOMContentLoaded', init);
