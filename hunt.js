@@ -49,7 +49,7 @@ const HappyHunting = {
             'stuck-btn', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
             'dice-roll-btn',
-            'pa-prev', 'pa-edit', 'pa-delete', 'pa-add', 'pa-save', 'pa-send-hunt', 'pa-primary', 'preview-actions',
+            'pa-prev', 'pa-delete', 'pa-add', 'pa-send-hunt', 'pa-primary', 'preview-actions',
             'send-back-editor', 'send-accounting', 'send-line-items', 'send-total-amount', 'checkout-container',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
@@ -75,7 +75,9 @@ const HappyHunting = {
 
     async init() {
         this.cacheElements();
-        this.stripe = Stripe('pk_test_51TC8t70Eer3QhVmnKLNJO1eonxk6zJ3UG8wFduhb3V3c4BxVDx2ztCBWLPr9UZQT3o69RQRAZpOFN7e2ifpyKzw100wSZ7xmOT');
+        this.addedCluesCount = 0;
+        this.primaryState = 'edit'; // edit → save → next (cycles)
+        try { this.stripe = Stripe('pk_test_51TC8t70Eer3QhVmnKLNJO1eonxk6zJ3UG8wFduhb3V3c4BxVDx2ztCBWLPr9UZQT3o69RQRAZpOFN7e2ifpyKzw100wSZ7xmOT'); } catch (e) { console.warn('Stripe.js not loaded'); }
 
         const params = new URLSearchParams(window.location.search);
         this.skin = params.get('skin') || '';
@@ -351,6 +353,9 @@ const HappyHunting = {
         // Clean up any in-flight stuck call or timeout from previous clue
         if (this.stuckTimeout) clearTimeout(this.stuckTimeout);
         this.cancelStuckCall();
+
+        // Reset button state when navigating to a new card
+        this.primaryState = 'edit';
 
         const step = this.hunt.steps[this.currentStep];
         this.els['step-label'].textContent = `Clue ${step.stepNumber} of ${this.hunt.steps.length}`;
@@ -662,7 +667,7 @@ const HappyHunting = {
 
     // ---- Delete Clue (user-added only) ----
     deleteClue() {
-        if (this.hunt.steps.length <= 1) return; // keep at least 1 clue
+        if (this.hunt.steps.length <= 3) return; // keep at least 3 clues
         const step = this.hunt.steps[this.currentStep];
 
         this.hunt.steps.splice(this.currentStep, 1);
@@ -782,29 +787,36 @@ const HappyHunting = {
         if (!actions) return;
         actions.hidden = false;
 
-        const dirty = this.cardDirty[this.currentStep];
         const isLast = this.currentStep === this.hunt.steps.length - 1;
+        const primary = this.els['pa-primary'];
 
-        // ← Previous: always visible except card 1
+        // ← Previous: hidden on first card
         this.els['pa-prev'].hidden = this.currentStep === 0;
 
-        // Edit: always visible
-        this.els['pa-edit'].hidden = false;
+        // Delete: only when more than 3 clues (can't go below 3)
+        this.els['pa-delete'].hidden = this.hunt.steps.length <= 3;
 
-        // Save: visible when card has unsaved changes
-        this.els['pa-save'].hidden = !dirty;
+        // Primary button: cycles Edit → Save → Next Clue
+        primary.hidden = false;
+        if (this.primaryState === 'save') {
+            primary.textContent = 'Save';
+            primary.className = 'pa-btn pa-save';
+        } else if (this.primaryState === 'next') {
+            primary.textContent = 'Next Clue';
+            primary.className = 'pa-btn pa-primary';
+        } else {
+            primary.textContent = 'Edit';
+            primary.className = 'pa-btn';
+        }
 
-        // Delete: always visible (hidden only if 1 clue left)
-        this.els['pa-delete'].hidden = this.hunt.steps.length <= 1;
+        // On last card: hide Next Clue (show Add Clue + Send Invite instead)
+        if (isLast && this.primaryState === 'next') {
+            primary.hidden = true;
+        }
 
-        // Add Clue: only on last card
+        // Add Clue + Send Invite: only on last card
         this.els['pa-add'].hidden = !isLast;
-
-        // Send Hunt: only on last card
         this.els['pa-send-hunt'].hidden = !isLast;
-
-        // Next Clue: only on non-last cards
-        this.els['pa-primary'].hidden = isLast;
     },
 
     // ---- Visual Interventions ----
@@ -1375,14 +1387,24 @@ const HappyHunting = {
 
         // Preview action buttons
         this.els['pa-prev'].addEventListener('click', () => this.prevClue());
-        this.els['pa-edit'].addEventListener('click', () => this.toggleEdit());
         this.els['pa-delete'].addEventListener('click', () => this.deleteClue());
-        this.els['pa-save'].addEventListener('click', () => this.saveCurrentCard());
         this.els['pa-add'].addEventListener('click', () => this.addClue());
         this.els['pa-send-hunt'].addEventListener('click', () => this.showSendScreen());
         this.els['pa-primary'].addEventListener('click', () => {
-            this.lockClue();
-            this.previewNext();
+            if (this.primaryState === 'edit') {
+                this.toggleEdit();
+                this.primaryState = 'save';
+                this.updatePreviewActions();
+            } else if (this.primaryState === 'save') {
+                this.saveCurrentCard();
+                const isLast = this.currentStep === this.hunt.steps.length - 1;
+                this.primaryState = isLast ? 'edit' : 'next';
+                this.updatePreviewActions();
+            } else if (this.primaryState === 'next') {
+                this.lockClue();
+                this.previewNext();
+                // renderClue resets primaryState to 'edit'
+            }
         });
 
         // Send screen

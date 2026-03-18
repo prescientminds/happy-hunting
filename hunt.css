@@ -2534,7 +2534,7 @@ body.hh-landing {
 .skin-ransom .pa-btn.pa-send:hover { background: #2a1c0f; }
 .skin-napkin .pa-btn.pa-send { background: #5a5040; color: #f8f4ee; border-color: #5a5040; }
 .skin-napkin .pa-btn.pa-send:hover { background: #4a4030; }
-/* Save — visible when card has edits */
+/* Save state of cycling button */
 .pa-btn.pa-save {
     background: rgba(201, 168, 76, 0.15);
     border-color: #c9a84c;
