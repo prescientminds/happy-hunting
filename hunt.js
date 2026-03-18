@@ -619,20 +619,28 @@ const HappyHunting = {
 
     // ---- Dice Roll: Amor Fati ----
     rollDice() {
-        const candidates = this.getPoolForCurrentRing();
+        const allCandidates = this.getPoolForCurrentRing();
+        const currentClue = this.hunt.steps[this.currentStep].clue;
+        // Exclude the current clue so it always changes
+        const candidates = allCandidates.filter(c => c.clue !== currentClue);
         if (candidates.length === 0) return;
+        const wasAdded = this.hunt.steps[this.currentStep].isAdded;
         const btn = this.els['dice-roll-btn'];
         btn.classList.add('dice-rolling');
         setTimeout(() => {
             btn.classList.remove('dice-rolling');
             const pick = candidates[Math.floor(Math.random() * candidates.length)];
-            this.hunt.steps[this.currentStep] = { ...pick, stepNumber: this.currentStep + 1 };
+            this.hunt.steps[this.currentStep] = {
+                ...pick,
+                stepNumber: this.currentStep + 1,
+                isAdded: wasAdded,
+                isBlank: false
+            };
             this.renderClueContent();
-            const sorted = candidates.slice().sort((a, b) => (a.difficulty || 0) - (b.difficulty || 0));
+            const sorted = allCandidates.slice().sort((a, b) => (a.difficulty || 0) - (b.difficulty || 0));
             const idx = sorted.indexOf(pick);
             if (idx >= 0) {
                 this.stepDifficulties[this.currentStep] = idx + 1;
-                // Highlight the pip it landed on
                 this.els['diff-pips'].querySelectorAll('.diff-pip').forEach(pip => {
                     pip.classList.toggle('active', parseInt(pip.dataset.level) === idx + 1);
                 });
@@ -645,8 +653,8 @@ const HappyHunting = {
 
     // ---- Delete Clue (user-added only) ----
     deleteClue() {
+        if (this.hunt.steps.length <= 1) return; // keep at least 1 clue
         const step = this.hunt.steps[this.currentStep];
-        if (!step.isAdded) return;
 
         this.hunt.steps.splice(this.currentStep, 1);
         // Renumber remaining steps
@@ -656,9 +664,11 @@ const HappyHunting = {
         delete this.stepDifficulties[this.currentStep];
         delete this.cardDirty[this.currentStep];
 
-        // Cost tracking
-        this.addedCluesCount = Math.max(0, this.addedCluesCount - 1);
-        this.updateCostBar();
+        // Cost tracking (only if it was user-added)
+        if (step.isAdded) {
+            this.addedCluesCount = Math.max(0, this.addedCluesCount - 1);
+            this.updateCostBar();
+        }
 
         // Navigate: go to previous card (or stay on last)
         if (this.currentStep > 0) this.currentStep--;
@@ -678,18 +688,32 @@ const HappyHunting = {
             unused.sort((a, b) => (ringCounts[a.ring] || 0) - (ringCounts[b.ring] || 0));
             const targetRing = unused.length > 0 ? unused[0].ring : 1;
 
-            // Start blank — user picks difficulty to fill
-            newStep = {
-                stepNumber: this.hunt.steps.length + 1,
-                ring: targetRing,
-                clue: '',
-                answer: '',
-                answerVariants: [],
-                answerType: 'text',
-                historicalFact: '',
-                isAdded: true,
-                isBlank: true
-            };
+            // Prepopulate with an actual clue from the pool
+            const ringUnused = unused.filter(c => c.ring === targetRing);
+            const pick = ringUnused.length > 0
+                ? ringUnused[Math.floor(Math.random() * ringUnused.length)]
+                : (unused.length > 0 ? unused[0] : null);
+
+            if (pick) {
+                newStep = {
+                    ...pick,
+                    stepNumber: this.hunt.steps.length + 1,
+                    isAdded: true
+                };
+            } else {
+                // Fallback: all pool clues used, create blank
+                newStep = {
+                    stepNumber: this.hunt.steps.length + 1,
+                    ring: targetRing,
+                    clue: '',
+                    answer: '',
+                    answerVariants: [],
+                    answerType: 'text',
+                    historicalFact: '',
+                    isAdded: true,
+                    isBlank: true
+                };
+            }
         } else {
             newStep = {
                 stepNumber: this.hunt.steps.length + 1,
@@ -705,7 +729,7 @@ const HappyHunting = {
         this.hunt.steps.push(newStep);
         this.currentStep = this.hunt.steps.length - 1;
         this.stepDifficulties[this.currentStep] = 0;
-        this.cardDirty[this.currentStep] = false;
+        this.cardDirty[this.currentStep] = true;
 
         // Cost tracking
         this.addedCluesCount++;
@@ -759,8 +783,8 @@ const HappyHunting = {
         // Edit: always visible
         this.els['pa-edit'].hidden = false;
 
-        // Delete: only on user-added clues
-        this.els['pa-delete'].hidden = !step.isAdded;
+        // Delete: always visible (hidden only if 1 clue left)
+        this.els['pa-delete'].hidden = this.hunt.steps.length <= 1;
 
         // Primary button: text changes based on dirty state
         const primary = this.els['pa-primary'];
