@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@400;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="hunt.css">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="skin-ransom">
     <div id="hunt-app">
@@ -200,6 +201,8 @@
                     <p class="send-promo-feedback" id="send-promo-feedback"></p>
                     <button id="send-generate-btn" class="action-btn">Generate Invite &mdash; $5</button>
                 </div>
+
+                <div id="checkout-container" hidden></div>
 
                 <div class="send-result" id="send-hunt-result" hidden>
                     <p>Share this link:</p>

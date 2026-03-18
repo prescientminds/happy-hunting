@@ -707,6 +707,11 @@ body {
     font-weight: 700;
     font-size: 0.95em;
 }
+/* Stripe Embedded Checkout */
+#checkout-container {
+    min-height: 300px;
+    margin: 16px 0;
+}
 /* Back to editor */
 .send-back-editor {
     margin-top: 16px;

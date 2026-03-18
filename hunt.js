@@ -50,7 +50,7 @@ const HappyHunting = {
             'visual-intervention', 'clue-edit-field',
             'dice-roll-btn',
             'pa-prev', 'pa-edit', 'pa-delete', 'pa-add', 'pa-save', 'pa-send-hunt', 'pa-primary', 'preview-actions',
-            'send-back-editor', 'send-accounting', 'send-line-items', 'send-total-amount',
+            'send-back-editor', 'send-accounting', 'send-line-items', 'send-total-amount', 'checkout-container',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
             'send-generate-btn', 'send-hunt-result', 'send-hunt-link', 'send-hunt-copy',
@@ -75,6 +75,8 @@ const HappyHunting = {
 
     async init() {
         this.cacheElements();
+        this.stripe = Stripe('pk_test_51TC8t70Eer3QhVmnKLNJO1eonxk6zJ3UG8wFduhb3V3c4BxVDx2ztCBWLPr9UZQT3o69RQRAZpOFN7e2ifpyKzw100wSZ7xmOT');
+
         const params = new URLSearchParams(window.location.search);
         this.skin = params.get('skin') || '';
         this.senderName = params.get('from') || '';
@@ -123,13 +125,20 @@ const HappyHunting = {
             }
         }
 
+        this.bindEvents();
+
+        // Check if returning from Stripe payment
+        const sessionId = params.get('session_id');
+        if (sessionId) {
+            await this.handlePaymentReturn(sessionId);
+            return;
+        }
+
         if (this.isInvite) {
             this.renderEnvelope();
         } else {
             this.renderIntro();
         }
-
-        this.bindEvents();
     },
 
     // ---- Data ----
@@ -1131,7 +1140,7 @@ const HappyHunting = {
         this.renderSendAccounting();
     },
 
-    generateSendLink() {
+    async generateSendLink() {
         const senderName = this.els['send-your-name'].value.trim();
         const recipientName = this.els['send-their-name'].value.trim();
         const phone = this.els['send-their-phone'].value.replace(/\D/g, '');
@@ -1140,7 +1149,60 @@ const HappyHunting = {
         if (!recipientName) { this.els['send-their-name'].focus(); return; }
         if (phone.length < 4) { this.els['send-their-phone'].focus(); return; }
 
-        const last4 = phone.slice(-4);
+        const total = this.getSendTotal();
+        if (total === 0) {
+            // Free via promo — skip payment
+            this.createInviteLink(senderName, recipientName, phone);
+            return;
+        }
+
+        // Save state for after payment return
+        localStorage.setItem('hh_payment', JSON.stringify({
+            senderName, recipientName, phone,
+            huntId: this.hunt.huntId,
+            skin: this.skin,
+            ts: Date.now()
+        }));
+
+        // Start Stripe Embedded Checkout
+        const btn = this.els['send-generate-btn'];
+        btn.textContent = 'Loading\u2026';
+        btn.disabled = true;
+
+        try {
+            // Build return URL preserving current hunt params + session_id template
+            const retUrl = new URL(window.location.href.replace(/hunt\.html.*$/, 'hunt.html'));
+            retUrl.search = '';
+            retUrl.searchParams.set('h', btoa(this.hunt.huntId).replace(/=/g, ''));
+            retUrl.searchParams.set('skin', this.skin);
+            retUrl.searchParams.set('preview', '1');
+            const returnUrl = retUrl.toString() + '&session_id={CHECKOUT_SESSION_ID}';
+
+            const res = await fetch('/api/create-checkout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ addedClues: this.addedCluesCount, returnUrl })
+            });
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+
+            // Hide form, show checkout
+            this.els['send-hunt-form'].hidden = true;
+            this.els['send-accounting'].hidden = true;
+            this.els['send-back-editor'].hidden = true;
+            this.els['checkout-container'].hidden = false;
+
+            const checkout = await this.stripe.initEmbeddedCheckout({ clientSecret: data.clientSecret });
+            checkout.mount('#checkout-container');
+        } catch (err) {
+            console.error('Checkout error:', err);
+            btn.textContent = `Generate Invite \u2014 $${total}`;
+            btn.disabled = false;
+        }
+    },
+
+    createInviteLink(senderName, recipientName, phone) {
+        const last4 = phone.replace(/\D/g, '').slice(-4);
         const key = btoa(last4 + ':' + this.hunt.huntId).replace(/=/g, '');
 
         const base = window.location.href.replace(/hunt\.html.*$/, 'hunt.html');
@@ -1153,8 +1215,50 @@ const HappyHunting = {
         url.searchParams.set('key', key);
 
         this.els['send-hunt-form'].hidden = true;
+        this.els['send-accounting'].hidden = true;
+        this.els['checkout-container'].hidden = true;
+        this.els['send-back-editor'].hidden = true;
         this.els['send-hunt-result'].hidden = false;
         this.els['send-hunt-link'].value = url.toString();
+    },
+
+    async handlePaymentReturn(sessionId) {
+        // Verify payment with Stripe
+        try {
+            const res = await fetch(`/api/session-status?session_id=${encodeURIComponent(sessionId)}`);
+            const data = await res.json();
+
+            if (data.status === 'complete' && data.payment_status === 'paid') {
+                // Restore saved state
+                const saved = JSON.parse(localStorage.getItem('hh_payment') || 'null');
+                localStorage.removeItem('hh_payment');
+
+                if (saved && Date.now() - saved.ts < 3600000) {
+                    this.createInviteLink(saved.senderName, saved.recipientName, saved.phone);
+                    this.showScreen('send');
+                } else {
+                    // State expired or missing — show success without link
+                    this.els['send-hunt-title'].textContent = this.hunt.theme;
+                    this.els['send-hunt-form'].hidden = true;
+                    this.els['send-accounting'].hidden = true;
+                    this.els['send-back-editor'].hidden = true;
+                    this.els['send-hunt-result'].hidden = false;
+                    this.els['send-hunt-link'].value = 'Payment confirmed. Refresh to generate link.';
+                    this.showScreen('send');
+                }
+            } else {
+                // Payment not complete — go to intro
+                this.renderIntro();
+            }
+        } catch (err) {
+            console.error('Payment verification error:', err);
+            this.renderIntro();
+        }
+
+        // Clean session_id from URL
+        const cleanUrl = new URL(window.location.href);
+        cleanUrl.searchParams.delete('session_id');
+        window.history.replaceState({}, '', cleanUrl.toString());
     },
 
     async copySendLink() {
