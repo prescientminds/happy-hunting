@@ -57,8 +57,6 @@ const HappyHunting = {
             'peek-prev', 'peek-next',
             'route-map',
             'preview-start-btn', 'preview-carousel',
-            'cost-bar', 'cost-bar-count', 'cost-bar-total',
-            'cost-promo', 'cost-promo-apply', 'cost-checkout'
         ].forEach(id => {
             this.els[id] = document.getElementById(id);
         });
@@ -677,11 +675,6 @@ const HappyHunting = {
         delete this.stepDifficulties[this.currentStep];
         delete this.cardDirty[this.currentStep];
 
-        // Cost tracking (only if it was user-added)
-        if (step.isAdded) {
-            this.addedCluesCount = Math.max(0, this.addedCluesCount - 1);
-            this.updateCostBar();
-        }
 
         // Navigate: go to previous card (or stay on last)
         if (this.currentStep > 0) this.currentStep--;
@@ -744,39 +737,12 @@ const HappyHunting = {
         this.stepDifficulties[this.currentStep] = 0;
         this.cardDirty[this.currentStep] = true;
 
-        // Cost tracking
-        this.addedCluesCount++;
-        this.updateCostBar();
-
         this.renderClue();
         if (!this.hasPool) {
             this.toggleEdit();
         }
     },
 
-    // ---- Cost Tracking ----
-    updateCostBar() {
-        const extra = this.hunt ? Math.max(0, this.hunt.steps.length - 3) : 0;
-        if (!this.isPreview || extra === 0) {
-            this.els['cost-bar'].hidden = true;
-            return;
-        }
-        this.els['cost-bar'].hidden = false;
-        const cost = this.promoApplied ? 0 : extra;
-        this.els['cost-bar-count'].textContent = `${extra} extra clue${extra !== 1 ? 's' : ''}`;
-        this.els['cost-bar-total'].textContent = cost === 0 ? 'Free' : `$${cost}`;
-        this.els['cost-bar-total'].classList.toggle('free', cost === 0);
-    },
-
-    applyPromo() {
-        const code = this.els['cost-promo'].value.trim().toLowerCase();
-        if (code === 'prescientminds') {
-            this.promoApplied = true;
-            this.els['cost-promo'].value = '';
-            this.els['cost-promo'].placeholder = 'Applied!';
-            this.updateCostBar();
-        }
-    },
 
     // ---- Preview Actions ----
     updatePreviewActions() {
@@ -1432,12 +1398,6 @@ const HappyHunting = {
         this.els['send-line-items'].addEventListener('click', e => {
             const btn = e.target.closest('.send-remove-clue');
             if (btn) this.removeSendClue(parseInt(btn.dataset.step));
-        });
-
-        // Cost bar promo
-        this.els['cost-promo-apply'].addEventListener('click', () => this.applyPromo());
-        this.els['cost-promo'].addEventListener('keydown', e => {
-            if (e.key === 'Enter') this.applyPromo();
         });
 
         // Next clue
