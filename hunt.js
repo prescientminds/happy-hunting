@@ -49,7 +49,7 @@ const HappyHunting = {
             'stuck-btn', 'hunt-back',
             'visual-intervention', 'clue-edit-field',
             'dice-roll-btn',
-            'pa-prev', 'pa-delete', 'pa-add', 'pa-send-hunt', 'pa-primary', 'preview-actions',
+            'pa-prev', 'pa-delete', 'pa-edit', 'pa-action', 'pa-add', 'pa-send-hunt', 'preview-actions',
             'send-back-editor', 'send-accounting', 'send-line-items', 'send-total-amount', 'checkout-container',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
@@ -76,7 +76,6 @@ const HappyHunting = {
     async init() {
         this.cacheElements();
         this.addedCluesCount = 0;
-        this.primaryState = 'edit'; // edit → save → next (cycles)
         try { this.stripe = Stripe('pk_test_51TC8t70Eer3QhVmnKLNJO1eonxk6zJ3UG8wFduhb3V3c4BxVDx2ztCBWLPr9UZQT3o69RQRAZpOFN7e2ifpyKzw100wSZ7xmOT'); } catch (e) { console.warn('Stripe.js not loaded'); }
 
         const params = new URLSearchParams(window.location.search);
@@ -354,9 +353,6 @@ const HappyHunting = {
         if (this.stuckTimeout) clearTimeout(this.stuckTimeout);
         this.cancelStuckCall();
 
-        // Reset button state when navigating to a new card
-        this.primaryState = 'edit';
-
         const step = this.hunt.steps[this.currentStep];
         this.els['step-label'].textContent = `Clue ${step.stepNumber} of ${this.hunt.steps.length}`;
 
@@ -382,6 +378,7 @@ const HappyHunting = {
 
             // Reset edit state when navigating to a card
             this.isEditing = false;
+            this.actionShowNext = false;
             this.els['clue-text'].hidden = false;
             this.els['clue-edit-field'].hidden = true;
 
@@ -788,35 +785,37 @@ const HappyHunting = {
         actions.hidden = false;
 
         const isLast = this.currentStep === this.hunt.steps.length - 1;
-        const primary = this.els['pa-primary'];
+        const actionBtn = this.els['pa-action'];
 
-        // ← Previous: hidden on first card
+        // Previous: hidden on card 1
         this.els['pa-prev'].hidden = this.currentStep === 0;
 
-        // Delete: only when more than 3 clues (can't go below 3)
+        // Delete: only when > 3 clues
         this.els['pa-delete'].hidden = this.hunt.steps.length <= 3;
 
-        // Primary button: cycles Edit → Save → Next Clue
-        primary.hidden = false;
-        if (this.primaryState === 'save') {
-            primary.textContent = 'Save';
-            primary.className = 'pa-btn pa-save';
-        } else if (this.primaryState === 'next') {
-            primary.textContent = 'Next Clue';
-            primary.className = 'pa-btn pa-primary';
+        // Edit: always visible
+        this.els['pa-edit'].hidden = false;
+
+        // Action button (Save / Next Clue):
+        // - Default: "Save"
+        // - After saving on non-last card: "Next Clue"
+        // - After saving on last card: hidden (Add Clue + Send Invite take over)
+        if (this.actionShowNext && isLast) {
+            actionBtn.hidden = true;
+        } else if (this.actionShowNext) {
+            actionBtn.hidden = false;
+            actionBtn.textContent = 'Next Clue';
+            actionBtn.className = 'pa-btn pa-primary';
         } else {
-            primary.textContent = 'Edit';
-            primary.className = 'pa-btn';
+            actionBtn.hidden = false;
+            actionBtn.textContent = 'Save';
+            actionBtn.className = 'pa-btn pa-save';
         }
 
-        // On last card: hide Next Clue (show Add Clue + Send Invite instead)
-        if (isLast && this.primaryState === 'next') {
-            primary.hidden = true;
-        }
-
-        // Add Clue + Send Invite: only on last card
-        this.els['pa-add'].hidden = !isLast;
-        this.els['pa-send-hunt'].hidden = !isLast;
+        // Add Clue + Send Invite: last card only, after saving
+        const showRight = isLast && this.actionShowNext;
+        this.els['pa-add'].hidden = !showRight;
+        this.els['pa-send-hunt'].hidden = !showRight;
     },
 
     // ---- Visual Interventions ----
@@ -1390,20 +1389,25 @@ const HappyHunting = {
         this.els['pa-delete'].addEventListener('click', () => this.deleteClue());
         this.els['pa-add'].addEventListener('click', () => this.addClue());
         this.els['pa-send-hunt'].addEventListener('click', () => this.showSendScreen());
-        this.els['pa-primary'].addEventListener('click', () => {
-            if (this.primaryState === 'edit') {
-                this.toggleEdit();
-                this.primaryState = 'save';
-                this.updatePreviewActions();
-            } else if (this.primaryState === 'save') {
-                this.saveCurrentCard();
-                const isLast = this.currentStep === this.hunt.steps.length - 1;
-                this.primaryState = isLast ? 'edit' : 'next';
-                this.updatePreviewActions();
-            } else if (this.primaryState === 'next') {
+
+        // Edit: enters edit mode, resets action button to Save
+        this.els['pa-edit'].addEventListener('click', () => {
+            this.toggleEdit();
+            this.actionShowNext = false;
+            this.updatePreviewActions();
+        });
+
+        // Action button: Save or Next Clue
+        this.els['pa-action'].addEventListener('click', () => {
+            if (this.actionShowNext) {
+                // Next Clue — advance
                 this.lockClue();
                 this.previewNext();
-                // renderClue resets primaryState to 'edit'
+            } else {
+                // Save — save edits, switch to Next Clue
+                this.saveCurrentCard();
+                this.actionShowNext = true;
+                this.updatePreviewActions();
             }
         });
 
