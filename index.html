@@ -6,6 +6,7 @@
   <title>Happy Hunting &mdash; LA Happy Hour Scavenger Hunts</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/tippy.js@6/dist/tippy.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hunt.css">
 </head>
@@ -107,9 +108,23 @@
     </div>
   </div>
 
+  <div class="mobile-day-nav" id="mobile-day-nav">
+    <button class="mdn-arrow" id="mdn-prev">&#8249;</button>
+    <span class="mdn-label" id="mdn-label"></span>
+    <button class="mdn-arrow" id="mdn-next">&#8250;</button>
+  </div>
+
   <div class="grid-wrapper">
     <div class="day-headers" id="day-headers"></div>
     <div class="time-grid" id="time-grid"></div>
+  </div>
+
+  <div class="map-section">
+    <div class="map-header">
+      <h2 class="map-title">Map</h2>
+      <span class="map-count" id="map-count"></span>
+    </div>
+    <div id="map"></div>
   </div>
 
   <!-- Detail panel -->
@@ -128,6 +143,7 @@
 
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

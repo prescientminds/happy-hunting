@@ -538,9 +538,9 @@ select:focus, .toggle-btn:focus { outline: none; border-color: var(--accent); }
 
 .block-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
-  padding: 5px 12px;
+  padding: 6px 12px;
   cursor: pointer;
   font-size: 12px;
   color: var(--text);
@@ -558,21 +558,26 @@ select:focus, .toggle-btn:focus { outline: none; border-color: var(--accent); }
   height: 6px;
   border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.bi-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
 }
 
 .bi-name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex: 1;
-  min-width: 0;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .bi-time {
   font-size: 9px;
   color: var(--text-muted);
-  white-space: nowrap;
-  flex-shrink: 0;
+  line-height: 1.2;
+  margin-top: 1px;
 }
 
 .q-badge {
@@ -846,6 +851,138 @@ footer {
   letter-spacing: 0.5px;
 }
 
+/* ---- Map section ---- */
+.map-section {
+  margin-top: 24px;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.map-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.map-count {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+#map {
+  width: 100%;
+  height: 480px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.map-tooltip {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.map-popup {
+  font-family: var(--sans);
+  line-height: 1.5;
+}
+
+.map-popup strong {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.map-popup-meta {
+  font-size: 12px;
+  color: #666;
+}
+
+.map-popup-quality {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.map-popup-quality.a-plus { background: var(--accent); color: #fff; }
+.map-popup-quality.a { background: var(--green); color: #fff; }
+.map-popup-quality.b-plus { background: var(--blue); color: #fff; }
+.map-popup-quality.b { background: var(--surface-3); color: var(--text-muted); }
+
+.map-popup-addr {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.map-popup-deal {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Mobile day navigation ---- */
+.mobile-day-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 0;
+  margin-bottom: 8px;
+}
+
+.mdn-arrow {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  font-family: var(--sans);
+  line-height: 1;
+}
+
+.mdn-arrow:hover {
+  background: var(--surface-2);
+  border-color: var(--border-light);
+}
+
+.mdn-arrow:active {
+  transform: scale(0.95);
+}
+
+.mdn-label {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 180px;
+  text-align: center;
+}
+
+/* ---- Mobile hidden utility ---- */
+.day-column.mobile-hidden { /* applied via JS on mobile */ }
+
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .day-headers, .time-grid {
@@ -862,14 +999,22 @@ footer {
   .ms-trigger { min-width: 130px; font-size: 12px; }
   .grid-wrapper { padding: 12px; }
 
-  .day-headers, .time-grid {
-    grid-template-columns: repeat(7, minmax(100px, 1fr));
+  .mobile-day-nav { display: flex; }
+  .day-headers { display: none; }
+
+  .time-grid {
+    grid-template-columns: 1fr;
   }
 
-  .block-item { font-size: 10px; padding: 3px 8px; }
+  .day-column.mobile-hidden { display: none; }
+
+  .block-item { font-size: 11px; padding: 5px 10px; }
   .block-slot-name { font-size: 9px; }
   .block-time { font-size: 9px; }
-  .bi-time { display: none; }
+
+  #map { height: 360px; }
+
+  .map-title { font-size: 20px; }
 
   .detail-panel { width: calc(100vw - 24px); right: -100vw; }
   .detail-panel.open { right: 0; }
