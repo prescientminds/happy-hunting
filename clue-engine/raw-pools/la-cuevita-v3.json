@@ -2,11 +2,11 @@
   {
     "ring": 1,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're starting on Figueroa Street in Highland Park. Look up. Way up. There's a 22-foot figure watching over this block from a rooftop. Snap a photo of it against the sky — you'll want to explain this one later.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're starting on Figueroa Street in Highland Park. Look up at the rooftop of 5558 N Figueroa. A 22-foot figure is standing up there. It has a human body but the head of a bird. What kind of bird?",
+    "answer": "A chicken",
+    "answerVariants": ["a chicken", "chicken", "the chicken"],
+    "answerType": "text",
     "historicalFact": "The walk ahead covers half a mile of Figueroa — Highland Park's commercial spine since the 1920s. You'll pass a 1925 movie palace, a Prohibition-era bowling alley, and a 75-foot Chicano mural before arriving at a bar built behind 100-year-old church doors from Mexico."
   },
   {
@@ -49,11 +49,11 @@
   {
     "ring": 2,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You've reached the grandest building on this stretch of Figueroa — a three-story movie palace with arches that belong in a different century. Stand across the street and take a photo of the full facade. This building turns 101 this year.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You've reached the grandest building on this stretch of Figueroa — a movie palace with arches that belong in a different century. Find the building at 5604 N Figueroa. Look for the name on the marquee or facade. What is this theater called?",
+    "answer": "Highland",
+    "answerVariants": ["highland", "the highland", "highland theatre", "highland theater"],
+    "answerType": "text",
     "historicalFact": "The Highland Theatre opened March 5, 1925 with 1,450 seats and a film premiere attended by Norma Shearer herself. The architect, Lewis A. Smith, designed movie palaces across LA — the Vista, El Portal, the Rialto — but died at roughly 30 years old, just one year after this one opened. Kristen Stewart bought the building in February 2026."
   },
   {
@@ -97,11 +97,11 @@
   {
     "ring": 3,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're almost at the bar. On the corner of Figueroa and Avenue 61, a 75-foot mural covers an entire building wall — faces, symbols, colors you can't miss. Stand back and take it in. Snap a photo and send it ahead. You're about to walk through the door.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're almost at the bar. Walk to the corner of Figueroa and Avenue 61. An enormous artwork covers an entire building wall — you can't miss it. What kind of artwork is it — a sculpture, a mosaic, or a painted mural?",
+    "answer": "A painted mural",
+    "answerVariants": ["a painted mural", "painted mural", "mural", "a mural"],
+    "answerType": "text",
     "historicalFact": "The mural is called 'Mexico-Tenochtitlan: The Wall That Talks.' It was painted in 1996 by the Quetzalcoatl Mural Project after a member lost a friend to gang violence. The artists turned grief into the most significant Chicano mural in Northeast LA — and when the building owner threatened to paint over it in 2020, the community fought to get it nominated as a historic landmark."
   },
   {

@@ -2451,14 +2451,15 @@ body.hh-landing {
     font-weight: 600;
     padding: 8px 24px;
 }
-/* Delete Clue — subtle danger */
+/* Delete Clue */
 .pa-btn.pa-delete {
-    opacity: 0.5;
-    font-size: 0.7em;
-    border-color: rgba(224, 112, 112, 0.3);
+    border-color: rgba(224, 112, 112, 0.5);
     color: #e07070;
+    font-weight: 600;
 }
-.pa-btn.pa-delete:hover { opacity: 1; background: rgba(224, 112, 112, 0.1); border-color: #e07070; }
+.pa-btn.pa-delete:hover { background: rgba(224, 112, 112, 0.15); border-color: #e07070; }
+.skin-ransom .pa-btn.pa-delete { color: #8b0000; border-color: rgba(139, 0, 0, 0.4); }
+.skin-napkin .pa-btn.pa-delete { color: #a04040; border-color: rgba(160, 64, 64, 0.4); }
 .pa-btn.pa-send:hover { background: #d4b85c; }
 .skin-ransom .pa-btn.pa-send { background: #3d2b1a; color: #f5f0e8; border-color: #3d2b1a; }
 .skin-ransom .pa-btn.pa-send:hover { background: #2a1c0f; }
@@ -2758,10 +2759,17 @@ body.hh-landing {
 
 
 /* ============================================
-   PHOTO CAPTURE + GALLERY
+   START SCREEN PHOTO + ARRIVAL GALLERY
    ============================================ */
 
-.photo-capture-btn {
+.start-phase { /* geo and photo phases toggle via hidden attr */ }
+.start-photo-prompt {
+    font-size: 0.9em;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+.start-photo-action {
     width: 100%;
     padding: 14px;
     font-size: 1em;
@@ -2777,32 +2785,44 @@ body.hh-landing {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 12px;
 }
-.photo-capture-btn:hover {
-    border-color: rgba(128,128,128,0.5);
+.start-photo-action:hover {
+    border-color: rgba(201, 168, 76, 0.5);
     background: rgba(128,128,128,0.1);
 }
-.photo-capture-btn svg { flex-shrink: 0; }
-
-.photo-thumbnail-wrap {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px;
-    border: 1px solid rgba(128,128,128,0.2);
-    border-radius: 6px;
-    background: rgba(128,128,128,0.05);
+.start-photo-action svg { flex-shrink: 0; }
+.start-photo-preview {
+    margin-bottom: 16px;
 }
-.photo-thumbnail {
-    width: 60px;
-    height: 60px;
+.start-photo-thumb {
+    width: 100%;
+    max-height: 200px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 6px;
 }
-.photo-saved-label {
+.start-skip-hint {
+    font-size: 0.75em;
+    opacity: 0.4;
+    margin-top: 8px;
+}
+.memento-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 12px;
     font-size: 0.85em;
-    opacity: 0.7;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: transparent;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 6px;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
 }
+.memento-btn:hover { border-color: #c9a84c; color: #c9a84c; }
 
 /* Arrival photo gallery */
 .arrival-gallery {

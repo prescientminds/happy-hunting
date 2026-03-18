@@ -90,11 +90,14 @@
         {
           "ring": 1,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're standing at the edge of the largest Filipino American mural in the country — 145 feet of history painted onto a park wall. Take a photo of the section that grabs you. Save it. By the time you reach the bar, you'll know why it's here.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're starting at the park on Beverly Blvd that holds the largest Filipino American mural in the country. Look for the park sign. What is the name of this park?",
+          "answer": "Unidad Park",
+          "answerVariants": [
+            "unidad park",
+            "unidad"
+          ],
+          "answerType": "text",
           "historicalFact": "Gintong Kasaysayan, Gintong Pamana — 'A Glorious History, A Golden Legacy.' Eliseo Art Silva painted it in 1995 to compress 5,000 years of Filipino and Filipino American history into one wall. It was the first public artwork anywhere to honor Larry Itliong's role in the 1965 Delano Grape Strike — eight days before Cesar Chavez joined. The mural helped inspire the city to designate Historic Filipinotown in 2002."
         },
         {
@@ -155,11 +158,16 @@
         {
           "ring": 2,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You've arrived at one of the oldest Filipino landmarks in America. Before you read anything, look at the building in front of you — the architecture, the materials, the way it sits on the corner. Take a photo. This building changed a neighborhood.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You've arrived at 301 N Union Ave — one of the oldest Filipino landmarks in America. Look at the building. It's a place of worship, founded in 1928. What kind of building is it?",
+          "answer": "A church",
+          "answerVariants": [
+            "a church",
+            "church",
+            "the church",
+            "filipino christian church"
+          ],
+          "answerType": "text",
           "historicalFact": "The Filipino Christian Church at 301 N Union Ave is the oldest Filipino Protestant church in the United States, founded in 1928 by young Filipino men who were barred from worshipping in white congregations. Forced to relocate repeatedly by city redevelopment, the congregation finally settled here in 1950 — and their presence pulled the entire Filipino community to this corridor, creating what became Historic Filipinotown."
         },
         {
@@ -221,11 +229,16 @@
         {
           "ring": 3,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're almost at your destination. But first — look up. A 14-foot neon giraffe is watching you from the side of a building. Take a photo with the giraffe. This is the one you send ahead to whoever's waiting at the bar.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're almost at your destination. Look up at the building near Temple St and Belmont Ave. A large neon sign depicts an animal. What animal is it?",
+          "answer": "A giraffe",
+          "answerVariants": [
+            "a giraffe",
+            "giraffe",
+            "the giraffe",
+            "neon giraffe"
+          ],
+          "answerType": "text",
           "historicalFact": "The neon giraffe has been on this building since it was a deli. When three stop-motion animators moved their studio here in 2003, they kept the giraffe, restored the neon, and changed the word at the bottom from 'DELI' to 'Hi-Fi' — the neighborhood abbreviation for Historic Filipinotown. The studio inside created Robot Chicken and Moral Orel for Adult Swim."
         },
         {
@@ -375,11 +388,17 @@
         {
           "ring": 1,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're standing at the corner where Route 66 ended — 2,448 miles of America, terminating right here on Broadway. This block has more movie palaces per foot than anywhere else on earth. Look around. Take a photo of whatever catches your eye first. Save it — you'll want to compare it to where you end up.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're starting at the corner of 7th and Broadway — where Route 66 used to end. Look at the street signs at this intersection. What two streets are you standing at?",
+          "answer": "7th and Broadway",
+          "answerVariants": [
+            "7th and broadway",
+            "7th & broadway",
+            "seventh and broadway",
+            "w 7th st and s broadway",
+            "7th street and broadway"
+          ],
+          "answerType": "text",
           "historicalFact": "From 1926 to 1936, 7th & Broadway was the official western terminus of US Route 66. Dust Bowl migrants, dreamers, and drifters who drove 2,448 miles from Chicago ended their journey at this intersection — surrounded by movie palaces, department stores, and 504,000 pedestrians a day."
         },
         {
@@ -439,11 +458,16 @@
         {
           "ring": 2,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You've walked from Broadway to Olive Street — from the entertainment strip to the money strip. The building in front of you was designed to make bankers feel underdressed. Look at the entrance. Take a photo of the doors. Send it ahead — they won't believe these are real.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You've walked from Broadway to Olive Street. Find the building at 617 S Olive. Look at the name on the facade or entrance. What name is on the building?",
+          "answer": "Oviatt",
+          "answerVariants": [
+            "oviatt",
+            "james oviatt",
+            "the oviatt",
+            "oviatt building"
+          ],
+          "answerType": "text",
           "historicalFact": "The James Oviatt Building at 617 S Olive was built in 1928 by LA's most fashionable haberdasher. He visited the 1925 Paris Exposition, saw Rene Lalique's glass pavilion, and commissioned the artisan's first commercial installation: 30 tons of crystal glass shipped from France. The front doors alone are the largest panels of lead crystal Lalique ever produced."
         },
         {
@@ -506,11 +530,15 @@
         {
           "ring": 3,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're here. The building in front of you started as a jewelry emporium in 1922, became a cafeteria in 1974, and became a whiskey bar in 2007. Three lives, one address. Before you walk in, look up at the facade — the original bones are still showing. Take a photo. The jewelry cases inside now hold bourbon instead of diamonds.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You've arrived at your destination — a whiskey bar at 515 W 7th St. Before you go in, find the bar's sign or entrance. What is the name of the bar?",
+          "answer": "Seven Grand",
+          "answerVariants": [
+            "seven grand",
+            "Seven Grand",
+            "SEVEN GRAND"
+          ],
+          "answerType": "text",
           "historicalFact": "George A. Brock opened his jewelry emporium at 515 W 7th Street in 1922 — LA's most important jewelry and giftware store. When Brock's closed, Clifton's Silver Spoon Cafeteria moved in. When that closed, Cedd Moses signed a lease for $1,600 a month for 25,000 square feet and opened Seven Grand. The vintage Brock & Co. display cases that once held diamonds now showcase 900+ whiskeys."
         },
         {
@@ -645,11 +673,17 @@
         {
           "ring": 1,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're standing at the base of a building shaped like a stack of vinyl records. The walk ahead passes a silent-film alley, Art Deco starbursts, and a neon sign from Howard Hughes. Take a photo here — you'll want one at the start and one at the bar.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're starting at 1750 Vine St. Look up at the building in front of you — it's one of the most recognizable structures in Hollywood. What shape is the building?",
+          "answer": "Round",
+          "answerVariants": [
+            "round",
+            "circular",
+            "a circle",
+            "cylinder",
+            "cylindrical"
+          ],
+          "answerType": "text",
           "historicalFact": "The Capitol Records Building at 1750 Vine St was the world's first circular office building, completed in 1956. Architect Louis Naidorf denies designing it to look like records on a turntable — but nobody believes him. The light at the top has been blinking 'HOLLYWOOD' in Morse code since opening day."
         },
         {
@@ -716,11 +750,15 @@
         {
           "ring": 2,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You've arrived at an alley that looks like nothing — a service lane between two buildings. A hundred years ago, the three greatest comedians in the world filmed here on the same block. Walk through it. Take a photo from inside the alley looking out toward the street.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're on Hollywood Blvd near the alley between Cahuenga and Cosmo. Look at the street you're standing on. The sidewalk is embedded with stars honoring entertainers. What famous boulevard are you walking on?",
+          "answer": "Hollywood Blvd",
+          "answerVariants": [
+            "hollywood blvd",
+            "hollywood boulevard",
+            "hollywood"
+          ],
+          "answerType": "text",
           "historicalFact": "Chaplin-Keaton-Lloyd Alley runs south of Hollywood Blvd between Cahuenga and Cosmo. Charlie Chaplin filmed The Kid here in 1921. Buster Keaton filmed Cops in 1922. Harold Lloyd filmed Safety Last! in 1923. All three films are in the Library of Congress National Film Registry. Most people walk through it every day without knowing."
         },
         {
@@ -786,11 +824,16 @@
         {
           "ring": 3,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're almost at the bar. The Pantages Theatre is right in front of you — the last movie palace built in Hollywood, dripping with Art Deco geometry. Look at the facade. Take a photo of whatever detail catches your eye first. The bar is next door.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're almost at the bar. Look at the theater at 6233 Hollywood Blvd — the last movie palace built in Hollywood. Find the theater's name on the marquee or facade. What is it called?",
+          "answer": "Pantages",
+          "answerVariants": [
+            "pantages",
+            "the pantages",
+            "pantages theatre",
+            "pantages theater"
+          ],
+          "answerType": "text",
           "historicalFact": "The Pantages opened June 4, 1930 — vaudeville impresario Alexander Pantages' last theater and Hollywood's last movie palace. He planned a 12-story office tower above it. The 1929 stock market crash stopped construction at two stories, where it remains. For 11 consecutive years (1949-1960), the Academy Awards were held on its stage."
         },
         {
@@ -932,11 +975,17 @@
         {
           "ring": 1,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're about to walk through a century of Echo Park history. The path starts at a dome and ends at a dive bar. Take a photo of yourself here — save it. You'll want to compare it to the one at the end.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're starting at 1100 Glendale Blvd — a massive building with a dome that once held 5,300 people. Look at the shape of the roof. What shape is it?",
+          "answer": "A dome",
+          "answerVariants": [
+            "a dome",
+            "dome",
+            "domed",
+            "round",
+            "circular"
+          ],
+          "answerType": "text",
           "historicalFact": "The 0.6-mile walk you're about to take passes a megachurch (1923), a lake that used to be a reservoir (1868), a statue that was planned in bronze but carved in stone (1935), an animated neon sign with 1,300 bulbs, and a sidewalk hall of fame that most people step on without noticing."
         },
         {
@@ -991,11 +1040,16 @@
         {
           "ring": 2,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You've arrived at the lake. The water, the statue, the skyline behind it — take it in. Snap a photo of the view that stops you. Save it or send it ahead.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You've arrived at the lake. Look at the water. There's a feature shooting up from the middle of the lake. What is it?",
+          "answer": "A fountain",
+          "answerVariants": [
+            "a fountain",
+            "fountain",
+            "the fountain",
+            "water fountain"
+          ],
+          "answerType": "text",
           "historicalFact": "This lake started as a reservoir in 1868, feeding a woolen factory at 6th and Figueroa — miles from here. A parks superintendent converted it to recreation in 1892 after he shouted across the water and heard his own voice come back. He named the park after the sound."
         },
         {
@@ -1057,11 +1111,16 @@
         {
           "ring": 3,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're almost at the bar. The sidewalk beneath your feet is a hall of fame that most people never notice — bronze plaques honoring athletes, embedded right in the concrete. Find one and snap a photo. You'll want to show this later.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're almost at the bar. Look down at the sidewalk — really look. Bronze plaques are embedded in the concrete, honoring famous people. Find one. What kind of people do the plaques honor — musicians, actors, or athletes?",
+          "answer": "Athletes",
+          "answerVariants": [
+            "athletes",
+            "sports figures",
+            "olympians",
+            "sports legends"
+          ],
+          "answerType": "text",
           "historicalFact": "You're standing on the Avenue of the Athletes — 32 brass plaques honoring Olympians and sports legends, embedded in 10 blocks of Sunset Blvd sidewalk. A Dodgers photographer named L. Andrew Castle created the project in 1976. He died two years later and the plaque designs were literally lost for years."
         },
         {
@@ -1198,11 +1257,15 @@
         {
           "ring": 1,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're starting on Figueroa Street in Highland Park. Look up. Way up. There's a 22-foot figure watching over this block from a rooftop. Snap a photo of it against the sky — you'll want to explain this one later.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're starting on Figueroa Street in Highland Park. Look up at the rooftop of 5558 N Figueroa. A 22-foot figure is standing up there. It has a human body but the head of a bird. What kind of bird?",
+          "answer": "A chicken",
+          "answerVariants": [
+            "a chicken",
+            "chicken",
+            "the chicken"
+          ],
+          "answerType": "text",
           "historicalFact": "The walk ahead covers half a mile of Figueroa — Highland Park's commercial spine since the 1920s. You'll pass a 1925 movie palace, a Prohibition-era bowling alley, and a 75-foot Chicano mural before arriving at a bar built behind 100-year-old church doors from Mexico."
         },
         {
@@ -1263,11 +1326,16 @@
         {
           "ring": 2,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You've reached the grandest building on this stretch of Figueroa — a three-story movie palace with arches that belong in a different century. Stand across the street and take a photo of the full facade. This building turns 101 this year.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You've reached the grandest building on this stretch of Figueroa — a movie palace with arches that belong in a different century. Find the building at 5604 N Figueroa. Look for the name on the marquee or facade. What is this theater called?",
+          "answer": "Highland",
+          "answerVariants": [
+            "highland",
+            "the highland",
+            "highland theatre",
+            "highland theater"
+          ],
+          "answerType": "text",
           "historicalFact": "The Highland Theatre opened March 5, 1925 with 1,450 seats and a film premiere attended by Norma Shearer herself. The architect, Lewis A. Smith, designed movie palaces across LA — the Vista, El Portal, the Rialto — but died at roughly 30 years old, just one year after this one opened. Kristen Stewart bought the building in February 2026."
         },
         {
@@ -1322,11 +1390,16 @@
         {
           "ring": 3,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're almost at the bar. On the corner of Figueroa and Avenue 61, a 75-foot mural covers an entire building wall — faces, symbols, colors you can't miss. Stand back and take it in. Snap a photo and send it ahead. You're about to walk through the door.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're almost at the bar. Walk to the corner of Figueroa and Avenue 61. An enormous artwork covers an entire building wall — you can't miss it. What kind of artwork is it — a sculpture, a mosaic, or a painted mural?",
+          "answer": "A painted mural",
+          "answerVariants": [
+            "a painted mural",
+            "painted mural",
+            "mural",
+            "a mural"
+          ],
+          "answerType": "text",
           "historicalFact": "The mural is called 'Mexico-Tenochtitlan: The Wall That Talks.' It was painted in 1996 by the Quetzalcoatl Mural Project after a member lost a friend to gang violence. The artists turned grief into the most significant Chicano mural in Northeast LA — and when the building owner threatened to paint over it in 2020, the community fought to get it nominated as a historic landmark."
         },
         {
@@ -1465,11 +1538,15 @@
         {
           "ring": 1,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're starting at a building designed for cars to drive inside. Stand at the arched entrance on 6th Street, look up at the towers and the red-tiled roof, and take a photo. Send it ahead — your date should know what kind of neighborhood they're walking into.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're starting at a building on 6th Street that was America's first drive-in grocery store. Look for the name on the building or its signage. What is this plaza called?",
+          "answer": "Chapman",
+          "answerVariants": [
+            "chapman",
+            "chapman plaza",
+            "chapman park market"
+          ],
+          "answerType": "text",
           "historicalFact": "Chapman Plaza opened in 1929 as America's first drive-in grocery store. Wealthy families from Hancock Park and Windsor Square drove under the arched entrance, parked in the central courtyard, and shopped without leaving the shade. The same architecture firm — Morgan, Walls & Clements — also designed the Wiltern Theatre two years later."
         },
         {
@@ -1534,11 +1611,15 @@
         {
           "ring": 2,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You've arrived at one of LA's oldest dive bars — the nautical-themed saloon on the ground floor of a 13-story 1924 apartment tower. Step inside if you can. If not, find the entrance and take a photo of the signage. This bar has had three names in a century. You're seeing the third.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You've arrived at 3355 Wilshire Blvd — a 1924 apartment tower with a dive bar on the ground floor. Look at the building's exterior. What material is the facade made of?",
+          "answer": "Brick",
+          "answerVariants": [
+            "brick",
+            "bricks",
+            "brick and terra cotta"
+          ],
+          "answerType": "text",
           "historicalFact": "The ground-floor bar started as 'The Gay Room' (named for the building's namesake, Henry Gaylord Wilshire), became 'The Secret Harbor,' and finally HMS Bounty in 1962. Jack Webb, Walter Winchell, and William Randolph Hearst drank in previous incarnations. The nautical decor — wood paneling, red leather booths — has barely changed since the 1960s."
         },
         {
@@ -1598,11 +1679,17 @@
         {
           "ring": 3,
           "difficulty": 1,
-          "type": "moment",
-          "clue": "You're standing where the Ambassador Hotel stood for 84 years. The hotel is gone — replaced by a school. But there's a mural on the exterior wall that carries the neighborhood's entire history in one image. Find it and take a photo. Look for a woman's face surrounded by patterns that don't quite match the Hollywood era she represents.",
-          "answer": "",
-          "answerVariants": [],
-          "answerType": "photo",
+          "type": "spotter",
+          "clue": "You're standing where the Ambassador Hotel stood for 84 years. The hotel is gone — replaced by something else. Look at the building complex at 3400 Wilshire. What kind of building is here now?",
+          "answer": "A school",
+          "answerVariants": [
+            "a school",
+            "school",
+            "the school",
+            "schools",
+            "rfk community schools"
+          ],
+          "answerType": "text",
           "historicalFact": "The original mural (2016) depicted Ava Gardner with sun-ray motifs honoring the Ambassador's Cocoanut Grove nightclub. Korean Americans objected — the radiating lines resembled the Imperial Japanese battle flag used during Japan's 35-year colonial occupation of Korea. A 3-year community debate ended with a 2021 revision adding a Korean phoenix pattern and immigrant worker figures. The mural is a physical artifact of the neighborhood's identity collision."
         },
         {

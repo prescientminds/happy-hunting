@@ -39,9 +39,11 @@ const HappyHunting = {
             'envelope', 'code-row',
             'difficulty-selector', 'diff-pips', 'diff-minus', 'diff-plus',
             'intro-next', 'intro-brand-graphic', 'amor-fati-row',
-            'answer-row-text', 'answer-row-photo',
-            'photo-input', 'photo-capture-btn', 'photo-thumbnail-wrap', 'photo-thumbnail',
+            'answer-row-text',
             'start-location', 'start-transit', 'start-distance', 'start-checkin-btn',
+            'start-geo', 'start-photo', 'start-photo-input', 'start-photo-btn',
+            'start-photo-preview', 'start-photo-thumb', 'start-begin-btn',
+            'memento-btn',
             'arrival-gallery', 'arrival-gallery-grid',
             'preview-prev', 'preview-next',
             'stuck-btn', 'hunt-back',
@@ -388,14 +390,8 @@ const HappyHunting = {
             this.els['visual-intervention'].innerHTML = '';
             this.renderRouteMap();
 
-            // Photo vs text answer
-            const isPhoto = step.answerType === 'photo';
-            this.els['answer-row-text'].hidden = isPhoto;
-            this.els['answer-row-photo'].hidden = !isPhoto;
-            if (isPhoto) {
-                this.els['photo-capture-btn'].hidden = false;
-                this.els['photo-thumbnail-wrap'].hidden = true;
-            }
+            // All clues are text answers
+            this.els['answer-row-text'].hidden = false;
 
             // "I'm stuck" button: show after a delay, hidden initially
             this.els['stuck-btn'].hidden = true;
@@ -415,9 +411,7 @@ const HappyHunting = {
             const isLast = this.currentStep === this.hunt.steps.length - 1;
             this.els['next-btn'].innerHTML = isLast ? 'You\'ve arrived &rarr;' : 'Next Clue &rarr;';
 
-            if (!isPhoto) {
-                setTimeout(() => this.els['answer-input'].focus(), 500);
-            }
+            setTimeout(() => this.els['answer-input'].focus(), 500);
         }
 
         this.showScreen('clue');
@@ -458,37 +452,7 @@ const HappyHunting = {
         }
     },
 
-    solvePhoto(dataUrl) {
-        const step = this.hunt.steps[this.currentStep];
-        if (dataUrl) {
-            this.huntPhotos.push({ step: step.stepNumber, src: dataUrl });
-        }
-        this.els['answer-feedback'].textContent = 'Nice shot.';
-        this.els['answer-feedback'].className = 'answer-feedback correct';
-        this.els['answer-section'].classList.add('solved');
-        this.els['fact-text'].textContent = step.historicalFact;
-        setTimeout(() => this.els['fact-reveal'].classList.add('visible'), 400);
-    },
-
-    // ---- Photo Capture ----
-    triggerPhotoCapture() {
-        this.els['photo-input'].click();
-    },
-
-    handlePhotoCaptured(file) {
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const dataUrl = e.target.result;
-            this.els['photo-thumbnail'].src = dataUrl;
-            this.els['photo-thumbnail-wrap'].hidden = false;
-            this.els['photo-capture-btn'].hidden = true;
-            this.solvePhoto(dataUrl);
-        };
-        reader.readAsDataURL(file);
-    },
-
-    // ---- Start Location Screen + Geo Gate ----
+    // ---- Start Location Screen + Geo Gate + Photo ----
     showStartScreen() {
         const sl = this.hunt.startLocation;
         if (!sl) {
@@ -499,19 +463,49 @@ const HappyHunting = {
         this.els['start-location'].textContent = sl.label;
         this.els['start-transit'].textContent = sl.transit || '';
         this.els['start-distance'].textContent = '';
+        // Show geo phase, hide photo phase
+        this.els['start-geo'].hidden = false;
+        this.els['start-photo'].hidden = true;
+        this.els['start-photo-preview'].hidden = true;
         // In preview mode, show "Continue" instead of geo check
         this.els['start-checkin-btn'].textContent = this.isPreview ? 'Continue' : "I'm here";
         this.showScreen('start');
+    },
+
+    showStartPhotoPhase() {
+        this.els['start-geo'].hidden = true;
+        this.els['start-photo'].hidden = false;
+    },
+
+    handleStartPhoto(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const dataUrl = e.target.result;
+            this.huntPhotos.push({ label: 'start', src: dataUrl });
+            this.els['start-photo-thumb'].src = dataUrl;
+            this.els['start-photo-preview'].hidden = false;
+            // Brief pause to show the photo, then begin
+            setTimeout(() => {
+                this.currentStep = 0;
+                this.renderClue();
+            }, 800);
+        };
+        reader.readAsDataURL(file);
+    },
+
+    beginHunt() {
+        this.currentStep = 0;
+        this.renderClue();
     },
 
     checkLocation() {
         const sl = this.hunt.startLocation;
         if (!sl) { this.currentStep = 0; this.renderClue(); return; }
 
-        // Preview mode: skip geolocation, go straight to clues
+        // Preview mode: skip geolocation, show photo phase
         if (this.isPreview) {
-            this.currentStep = 0;
-            this.renderClue();
+            this.showStartPhotoPhase();
             return;
         }
 
@@ -520,9 +514,8 @@ const HappyHunting = {
         btn.disabled = true;
 
         if (!navigator.geolocation) {
-            // No geolocation support — let them through
-            this.currentStep = 0;
-            this.renderClue();
+            // No geolocation support — show photo phase
+            this.showStartPhotoPhase();
             return;
         }
 
@@ -533,9 +526,8 @@ const HappyHunting = {
                     sl.lat, sl.lng
                 );
                 if (dist <= 150) {
-                    // Close enough — unlock
-                    this.currentStep = 0;
-                    this.renderClue();
+                    // Close enough — show photo option
+                    this.showStartPhotoPhase();
                 } else {
                     const blocks = Math.round(dist / 80); // ~80m per short block in LA
                     this.els['start-distance'].textContent =
@@ -545,9 +537,8 @@ const HappyHunting = {
                 }
             },
             (err) => {
-                // Permission denied or error — let them through
-                this.currentStep = 0;
-                this.renderClue();
+                // Permission denied or error — show photo phase
+                this.showStartPhotoPhase();
             },
             { enableHighAccuracy: true, timeout: 10000 }
         );
@@ -1137,7 +1128,7 @@ const HappyHunting = {
             this.huntPhotos.forEach(p => {
                 const img = document.createElement('img');
                 img.src = p.src;
-                img.alt = `Clue ${p.step} photo`;
+                img.alt = `Hunt photo`;
                 img.className = 'arrival-photo';
                 grid.appendChild(img);
             });
@@ -1185,11 +1176,22 @@ const HappyHunting = {
             if (e.key === 'Enter') this.checkAnswer();
         });
 
-        // Photo capture
-        this.els['photo-capture-btn'].addEventListener('click', () => this.triggerPhotoCapture());
-        this.els['photo-input'].addEventListener('change', (e) => {
-            this.handlePhotoCaptured(e.target.files[0]);
-            e.target.value = ''; // reset so same file can be re-selected
+        // Start screen: photo + begin
+        this.els['start-photo-btn'].addEventListener('click', () => {
+            this.els['start-photo-input'].click();
+        });
+        this.els['start-photo-input'].addEventListener('change', (e) => {
+            this.handleStartPhoto(e.target.files[0]);
+            e.target.value = '';
+        });
+        this.els['start-begin-btn'].addEventListener('click', () => this.beginHunt());
+
+        // Memento button (arrival screen)
+        this.els['memento-btn'].addEventListener('click', () => {
+            // For now, share via native share or download
+            if (navigator.share && this.huntPhotos.length > 0) {
+                navigator.share({ title: 'Happy Hunting Memento', text: `Our hunt to ${this.hunt.bar.name}` }).catch(() => {});
+            }
         });
 
         // Difficulty controls — +/- buttons + pip clicks

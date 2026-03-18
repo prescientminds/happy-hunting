@@ -2,11 +2,11 @@
   {
     "ring": 1,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're about to walk through a century of Echo Park history. The path starts at a dome and ends at a dive bar. Take a photo of yourself here — save it. You'll want to compare it to the one at the end.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're starting at 1100 Glendale Blvd — a massive building with a dome that once held 5,300 people. Look at the shape of the roof. What shape is it?",
+    "answer": "A dome",
+    "answerVariants": ["a dome", "dome", "domed", "round", "circular"],
+    "answerType": "text",
     "historicalFact": "The 0.6-mile walk you're about to take passes a megachurch (1923), a lake that used to be a reservoir (1868), a statue that was planned in bronze but carved in stone (1935), an animated neon sign with 1,300 bulbs, and a sidewalk hall of fame that most people step on without noticing."
   },
   {
@@ -48,11 +48,11 @@
   {
     "ring": 2,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You've arrived at the lake. The water, the statue, the skyline behind it — take it in. Snap a photo of the view that stops you. Save it or send it ahead.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You've arrived at the lake. Look at the water. There's a feature shooting up from the middle of the lake. What is it?",
+    "answer": "A fountain",
+    "answerVariants": ["a fountain", "fountain", "the fountain", "water fountain"],
+    "answerType": "text",
     "historicalFact": "This lake started as a reservoir in 1868, feeding a woolen factory at 6th and Figueroa — miles from here. A parks superintendent converted it to recreation in 1892 after he shouted across the water and heard his own voice come back. He named the park after the sound."
   },
   {
@@ -94,11 +94,11 @@
   {
     "ring": 3,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're almost at the bar. The sidewalk beneath your feet is a hall of fame that most people never notice — bronze plaques honoring athletes, embedded right in the concrete. Find one and snap a photo. You'll want to show this later.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're almost at the bar. Look down at the sidewalk — really look. Bronze plaques are embedded in the concrete, honoring famous people. Find one. What kind of people do the plaques honor — musicians, actors, or athletes?",
+    "answer": "Athletes",
+    "answerVariants": ["athletes", "sports figures", "olympians", "sports legends"],
+    "answerType": "text",
     "historicalFact": "You're standing on the Avenue of the Athletes — 32 brass plaques honoring Olympians and sports legends, embedded in 10 blocks of Sunset Blvd sidewalk. A Dodgers photographer named L. Andrew Castle created the project in 1976. He died two years later and the plaque designs were literally lost for years."
   },
   {

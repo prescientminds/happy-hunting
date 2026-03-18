@@ -2,11 +2,11 @@
   {
     "ring": 1,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're standing at the base of a building shaped like a stack of vinyl records. The walk ahead passes a silent-film alley, Art Deco starbursts, and a neon sign from Howard Hughes. Take a photo here — you'll want one at the start and one at the bar.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're starting at 1750 Vine St. Look up at the building in front of you — it's one of the most recognizable structures in Hollywood. What shape is the building?",
+    "answer": "Round",
+    "answerVariants": ["round", "circular", "a circle", "cylinder", "cylindrical"],
+    "answerType": "text",
     "historicalFact": "The Capitol Records Building at 1750 Vine St was the world's first circular office building, completed in 1956. Architect Louis Naidorf denies designing it to look like records on a turntable — but nobody believes him. The light at the top has been blinking 'HOLLYWOOD' in Morse code since opening day."
   },
   {
@@ -48,11 +48,11 @@
   {
     "ring": 2,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You've arrived at an alley that looks like nothing — a service lane between two buildings. A hundred years ago, the three greatest comedians in the world filmed here on the same block. Walk through it. Take a photo from inside the alley looking out toward the street.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're on Hollywood Blvd near the alley between Cahuenga and Cosmo. Look at the street you're standing on. The sidewalk is embedded with stars honoring entertainers. What famous boulevard are you walking on?",
+    "answer": "Hollywood Blvd",
+    "answerVariants": ["hollywood blvd", "hollywood boulevard", "hollywood"],
+    "answerType": "text",
     "historicalFact": "Chaplin-Keaton-Lloyd Alley runs south of Hollywood Blvd between Cahuenga and Cosmo. Charlie Chaplin filmed The Kid here in 1921. Buster Keaton filmed Cops in 1922. Harold Lloyd filmed Safety Last! in 1923. All three films are in the Library of Congress National Film Registry. Most people walk through it every day without knowing."
   },
   {
@@ -98,11 +98,11 @@
   {
     "ring": 3,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're almost at the bar. The Pantages Theatre is right in front of you — the last movie palace built in Hollywood, dripping with Art Deco geometry. Look at the facade. Take a photo of whatever detail catches your eye first. The bar is next door.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're almost at the bar. Look at the theater at 6233 Hollywood Blvd — the last movie palace built in Hollywood. Find the theater's name on the marquee or facade. What is it called?",
+    "answer": "Pantages",
+    "answerVariants": ["pantages", "the pantages", "pantages theatre", "pantages theater"],
+    "answerType": "text",
     "historicalFact": "The Pantages opened June 4, 1930 — vaudeville impresario Alexander Pantages' last theater and Hollywood's last movie palace. He planned a 12-story office tower above it. The 1929 stock market crash stopped construction at two stories, where it remains. For 11 consecutive years (1949-1960), the Academy Awards were held on its stage."
   },
   {

@@ -2,11 +2,11 @@
   {
     "ring": 1,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're starting at a building designed for cars to drive inside. Stand at the arched entrance on 6th Street, look up at the towers and the red-tiled roof, and take a photo. Send it ahead — your date should know what kind of neighborhood they're walking into.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're starting at a building on 6th Street that was America's first drive-in grocery store. Look for the name on the building or its signage. What is this plaza called?",
+    "answer": "Chapman",
+    "answerVariants": ["chapman", "chapman plaza", "chapman park market"],
+    "answerType": "text",
     "historicalFact": "Chapman Plaza opened in 1929 as America's first drive-in grocery store. Wealthy families from Hancock Park and Windsor Square drove under the arched entrance, parked in the central courtyard, and shopped without leaving the shade. The same architecture firm — Morgan, Walls & Clements — also designed the Wiltern Theatre two years later."
   },
   {
@@ -49,11 +49,11 @@
   {
     "ring": 2,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You've arrived at one of LA's oldest dive bars — the nautical-themed saloon on the ground floor of a 13-story 1924 apartment tower. Step inside if you can. If not, find the entrance and take a photo of the signage. This bar has had three names in a century. You're seeing the third.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You've arrived at 3355 Wilshire Blvd — a 1924 apartment tower with a dive bar on the ground floor. Look at the building's exterior. What material is the facade made of?",
+    "answer": "Brick",
+    "answerVariants": ["brick", "bricks", "brick and terra cotta"],
+    "answerType": "text",
     "historicalFact": "The ground-floor bar started as 'The Gay Room' (named for the building's namesake, Henry Gaylord Wilshire), became 'The Secret Harbor,' and finally HMS Bounty in 1962. Jack Webb, Walter Winchell, and William Randolph Hearst drank in previous incarnations. The nautical decor — wood paneling, red leather booths — has barely changed since the 1960s."
   },
   {
@@ -98,11 +98,11 @@
   {
     "ring": 3,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're standing where the Ambassador Hotel stood for 84 years. The hotel is gone — replaced by a school. But there's a mural on the exterior wall that carries the neighborhood's entire history in one image. Find it and take a photo. Look for a woman's face surrounded by patterns that don't quite match the Hollywood era she represents.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're standing where the Ambassador Hotel stood for 84 years. The hotel is gone — replaced by something else. Look at the building complex at 3400 Wilshire. What kind of building is here now?",
+    "answer": "A school",
+    "answerVariants": ["a school", "school", "the school", "schools", "rfk community schools"],
+    "answerType": "text",
     "historicalFact": "The original mural (2016) depicted Ava Gardner with sun-ray motifs honoring the Ambassador's Cocoanut Grove nightclub. Korean Americans objected — the radiating lines resembled the Imperial Japanese battle flag used during Japan's 35-year colonial occupation of Korea. A 3-year community debate ended with a 2021 revision adding a Korean phoenix pattern and immigrant worker figures. The mural is a physical artifact of the neighborhood's identity collision."
   },
   {

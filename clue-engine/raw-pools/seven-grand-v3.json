@@ -2,11 +2,11 @@
   {
     "ring": 1,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're standing at the corner where Route 66 ended — 2,448 miles of America, terminating right here on Broadway. This block has more movie palaces per foot than anywhere else on earth. Look around. Take a photo of whatever catches your eye first. Save it — you'll want to compare it to where you end up.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're starting at the corner of 7th and Broadway — where Route 66 used to end. Look at the street signs at this intersection. What two streets are you standing at?",
+    "answer": "7th and Broadway",
+    "answerVariants": ["7th and broadway", "7th & broadway", "seventh and broadway", "w 7th st and s broadway", "7th street and broadway"],
+    "answerType": "text",
     "historicalFact": "From 1926 to 1936, 7th & Broadway was the official western terminus of US Route 66. Dust Bowl migrants, dreamers, and drifters who drove 2,448 miles from Chicago ended their journey at this intersection — surrounded by movie palaces, department stores, and 504,000 pedestrians a day."
   },
   {
@@ -49,11 +49,11 @@
   {
     "ring": 2,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You've walked from Broadway to Olive Street — from the entertainment strip to the money strip. The building in front of you was designed to make bankers feel underdressed. Look at the entrance. Take a photo of the doors. Send it ahead — they won't believe these are real.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You've walked from Broadway to Olive Street. Find the building at 617 S Olive. Look at the name on the facade or entrance. What name is on the building?",
+    "answer": "Oviatt",
+    "answerVariants": ["oviatt", "james oviatt", "the oviatt", "oviatt building"],
+    "answerType": "text",
     "historicalFact": "The James Oviatt Building at 617 S Olive was built in 1928 by LA's most fashionable haberdasher. He visited the 1925 Paris Exposition, saw Rene Lalique's glass pavilion, and commissioned the artisan's first commercial installation: 30 tons of crystal glass shipped from France. The front doors alone are the largest panels of lead crystal Lalique ever produced."
   },
   {
@@ -98,11 +98,11 @@
   {
     "ring": 3,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're here. The building in front of you started as a jewelry emporium in 1922, became a cafeteria in 1974, and became a whiskey bar in 2007. Three lives, one address. Before you walk in, look up at the facade — the original bones are still showing. Take a photo. The jewelry cases inside now hold bourbon instead of diamonds.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You've arrived at your destination — a whiskey bar at 515 W 7th St. Before you go in, find the bar's sign or entrance. What is the name of the bar?",
+    "answer": "Seven Grand",
+    "answerVariants": ["seven grand", "Seven Grand", "SEVEN GRAND"],
+    "answerType": "text",
     "historicalFact": "George A. Brock opened his jewelry emporium at 515 W 7th Street in 1922 — LA's most important jewelry and giftware store. When Brock's closed, Clifton's Silver Spoon Cafeteria moved in. When that closed, Cedd Moses signed a lease for $1,600 a month for 25,000 square feet and opened Seven Grand. The vintage Brock & Co. display cases that once held diamonds now showcase 900+ whiskeys."
   },
   {

@@ -69,11 +69,27 @@
         <!-- Start Location (geo-gated) -->
         <div id="start-screen" class="screen">
             <div class="card start-card">
-                <p class="start-label">Head to the start</p>
-                <h2 class="start-location" id="start-location"></h2>
-                <p class="start-transit" id="start-transit"></p>
-                <p class="start-distance" id="start-distance"></p>
-                <button id="start-checkin-btn" class="action-btn">I'm here</button>
+                <div id="start-geo" class="start-phase">
+                    <p class="start-label">Head to the start</p>
+                    <h2 class="start-location" id="start-location"></h2>
+                    <p class="start-transit" id="start-transit"></p>
+                    <p class="start-distance" id="start-distance"></p>
+                    <button id="start-checkin-btn" class="action-btn">I'm here</button>
+                </div>
+                <div id="start-photo" class="start-phase" hidden>
+                    <p class="start-label">You're here</p>
+                    <p class="start-photo-prompt">Capture the moment before you begin?</p>
+                    <input type="file" accept="image/*" capture="environment" id="start-photo-input" hidden>
+                    <div class="start-photo-preview" id="start-photo-preview" hidden>
+                        <img id="start-photo-thumb" class="start-photo-thumb" alt="Your photo">
+                    </div>
+                    <button id="start-photo-btn" class="start-photo-action">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                        <span>Take a Photo</span>
+                    </button>
+                    <button id="start-begin-btn" class="action-btn">Begin</button>
+                    <p class="start-skip-hint">No pressure — you can skip this</p>
+                </div>
             </div>
         </div>
 
@@ -120,17 +136,6 @@
                         <input type="text" id="answer-input" placeholder="Your answer..." autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
                         <button id="submit-btn" class="submit-btn">&rarr;</button>
                     </div>
-                    <div class="answer-row answer-row-photo" id="answer-row-photo" hidden>
-                        <input type="file" accept="image/*" capture="environment" id="photo-input" hidden>
-                        <button id="photo-capture-btn" class="photo-capture-btn">
-                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                            <span>Take Photo</span>
-                        </button>
-                        <div class="photo-thumbnail-wrap" id="photo-thumbnail-wrap" hidden>
-                            <img id="photo-thumbnail" class="photo-thumbnail" alt="Your photo">
-                            <span class="photo-saved-label">Photo saved</span>
-                        </div>
-                    </div>
                     <p class="answer-feedback" id="answer-feedback"></p>
                     <button class="stuck-btn" id="stuck-btn" hidden><svg class="stuck-phone" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> <span class="stuck-text">I'm stuck</span></button>
                 </div>
@@ -157,8 +162,9 @@
                 </div>
                 <p class="arrival-arc" id="arrival-arc"></p>
                 <div class="arrival-gallery" id="arrival-gallery" hidden>
-                    <p class="arrival-gallery-label">Your photos</p>
+                    <p class="arrival-gallery-label">Your moment</p>
                     <div class="arrival-gallery-grid" id="arrival-gallery-grid"></div>
+                    <button class="memento-btn" id="memento-btn">Send a Memento</button>
                 </div>
                 <div class="arrival-actions">
                     <a href="happy-hunting.html" class="action-btn" style="text-align:center;text-decoration:none;">Send a Hunt</a>

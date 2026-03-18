@@ -2,11 +2,11 @@
   {
     "ring": 1,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're standing at the edge of the largest Filipino American mural in the country — 145 feet of history painted onto a park wall. Take a photo of the section that grabs you. Save it. By the time you reach the bar, you'll know why it's here.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're starting at the park on Beverly Blvd that holds the largest Filipino American mural in the country. Look for the park sign. What is the name of this park?",
+    "answer": "Unidad Park",
+    "answerVariants": ["unidad park", "unidad"],
+    "answerType": "text",
     "historicalFact": "Gintong Kasaysayan, Gintong Pamana — 'A Glorious History, A Golden Legacy.' Eliseo Art Silva painted it in 1995 to compress 5,000 years of Filipino and Filipino American history into one wall. It was the first public artwork anywhere to honor Larry Itliong's role in the 1965 Delano Grape Strike — eight days before Cesar Chavez joined. The mural helped inspire the city to designate Historic Filipinotown in 2002."
   },
   {
@@ -52,11 +52,11 @@
   {
     "ring": 2,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You've arrived at one of the oldest Filipino landmarks in America. Before you read anything, look at the building in front of you — the architecture, the materials, the way it sits on the corner. Take a photo. This building changed a neighborhood.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You've arrived at 301 N Union Ave — one of the oldest Filipino landmarks in America. Look at the building. It's a place of worship, founded in 1928. What kind of building is it?",
+    "answer": "A church",
+    "answerVariants": ["a church", "church", "the church", "filipino christian church"],
+    "answerType": "text",
     "historicalFact": "The Filipino Christian Church at 301 N Union Ave is the oldest Filipino Protestant church in the United States, founded in 1928 by young Filipino men who were barred from worshipping in white congregations. Forced to relocate repeatedly by city redevelopment, the congregation finally settled here in 1950 — and their presence pulled the entire Filipino community to this corridor, creating what became Historic Filipinotown."
   },
   {
@@ -102,11 +102,11 @@
   {
     "ring": 3,
     "difficulty": 1,
-    "type": "moment",
-    "clue": "You're almost at your destination. But first — look up. A 14-foot neon giraffe is watching you from the side of a building. Take a photo with the giraffe. This is the one you send ahead to whoever's waiting at the bar.",
-    "answer": "",
-    "answerVariants": [],
-    "answerType": "photo",
+    "type": "spotter",
+    "clue": "You're almost at your destination. Look up at the building near Temple St and Belmont Ave. A large neon sign depicts an animal. What animal is it?",
+    "answer": "A giraffe",
+    "answerVariants": ["a giraffe", "giraffe", "the giraffe", "neon giraffe"],
+    "answerType": "text",
     "historicalFact": "The neon giraffe has been on this building since it was a deli. When three stop-motion animators moved their studio here in 2003, they kept the giraffe, restored the neon, and changed the word at the bottom from 'DELI' to 'Hi-Fi' — the neighborhood abbreviation for Historic Filipinotown. The studio inside created Robot Chicken and Moral Orel for Adult Swim."
   },
   {
