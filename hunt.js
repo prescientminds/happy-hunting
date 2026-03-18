@@ -756,15 +756,14 @@ const HappyHunting = {
 
     // ---- Cost Tracking ----
     updateCostBar() {
-        if (!this.isPreview || this.addedCluesCount === 0) {
+        const extra = this.hunt ? Math.max(0, this.hunt.steps.length - 3) : 0;
+        if (!this.isPreview || extra === 0) {
             this.els['cost-bar'].hidden = true;
             return;
         }
         this.els['cost-bar'].hidden = false;
-        const count = this.addedCluesCount;
-        const cost = this.promoApplied ? 0 : count;
-        this.addedCluesCost = cost;
-        this.els['cost-bar-count'].textContent = `${count} clue${count !== 1 ? 's' : ''} added`;
+        const cost = this.promoApplied ? 0 : extra;
+        this.els['cost-bar-count'].textContent = `${extra} extra clue${extra !== 1 ? 's' : ''}`;
         this.els['cost-bar-total'].textContent = cost === 0 ? 'Free' : `$${cost}`;
         this.els['cost-bar-total'].classList.toggle('free', cost === 0);
     },
@@ -1069,9 +1068,13 @@ const HappyHunting = {
     },
 
     // ---- Send Screen ----
+    getExtraClueCount() {
+        return Math.max(0, this.hunt.steps.length - 3);
+    },
+
     getSendTotal() {
         if (this.sendPromoApplied) return 0;
-        return 5 + this.addedCluesCount;
+        return 5 + this.getExtraClueCount();
     },
 
     renderSendAccounting() {
@@ -1084,15 +1087,16 @@ const HappyHunting = {
         baseLine.innerHTML = '<span class="send-item-name">Premium Hunt</span><span class="send-item-price">$5</span>';
         items.appendChild(baseLine);
 
-        // Extra clues — list each added clue with remove button
-        this.hunt.steps.forEach((step, i) => {
-            if (!step.isAdded) return;
+        // Extra clues — $1 each for clues beyond 3
+        const extraCount = this.getExtraClueCount();
+        for (let i = 0; i < extraCount; i++) {
+            const clueIndex = 3 + i; // clues 4, 5, 6...
             const line = document.createElement('div');
             line.className = 'send-line-item send-line-extra';
-            const label = `Extra Clue \u2014 Clue ${i + 1}`;
-            line.innerHTML = `<span class="send-item-name">${label}</span><span class="send-item-price">$1</span><button class="send-remove-clue" data-step="${i}">&times;</button>`;
+            const label = `Extra Clue \u2014 Clue ${clueIndex + 1}`;
+            line.innerHTML = `<span class="send-item-name">${label}</span><span class="send-item-price">$1</span><button class="send-remove-clue" data-step="${clueIndex}">&times;</button>`;
             items.appendChild(line);
-        });
+        }
 
         // Update total
         const total = this.getSendTotal();
@@ -1101,17 +1105,14 @@ const HappyHunting = {
     },
 
     removeSendClue(stepIndex) {
-        const step = this.hunt.steps[stepIndex];
-        if (!step || !step.isAdded) return;
+        if (this.hunt.steps.length <= 3) return;
+        if (stepIndex < 3) return; // can't remove the base 3
 
         this.hunt.steps.splice(stepIndex, 1);
         this.hunt.steps.forEach((s, i) => { s.stepNumber = i + 1; });
 
         delete this.stepDifficulties[stepIndex];
         delete this.cardDirty[stepIndex];
-
-        this.addedCluesCount = Math.max(0, this.addedCluesCount - 1);
-        this.updateCostBar();
 
         // Re-render accounting
         this.renderSendAccounting();
@@ -1179,6 +1180,7 @@ const HappyHunting = {
 
         // Start Stripe Embedded Checkout
         const btn = this.els['send-generate-btn'];
+        const extraClues = this.getExtraClueCount();
         btn.textContent = 'Loading\u2026';
         btn.disabled = true;
 
@@ -1194,8 +1196,10 @@ const HappyHunting = {
             const res = await fetch('/api/create-checkout', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ addedClues: this.addedCluesCount, returnUrl })
+                body: JSON.stringify({ addedClues: extraClues, returnUrl })
             });
+
+            if (!res.ok) throw new Error(`Server error: ${res.status}`);
             const data = await res.json();
             if (data.error) throw new Error(data.error);
 
@@ -1211,6 +1215,10 @@ const HappyHunting = {
             console.error('Checkout error:', err);
             btn.textContent = `Generate Invite \u2014 $${total}`;
             btn.disabled = false;
+            // Show error to user
+            const fb = this.els['send-promo-feedback'];
+            fb.textContent = 'Payment error: ' + err.message;
+            fb.className = 'send-promo-feedback invalid';
         }
     },
 
