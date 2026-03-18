@@ -224,8 +224,8 @@ const HappyHunting = {
                 isBlank: false
             };
             this.renderClueContent();
-            this.cardDirty[this.currentStep] = false;
-            this.actionShowNext = true;
+            this.cardDirty[this.currentStep] = true;
+            this.actionShowNext = false;
             this.updatePreviewActions();
         }
     },
@@ -657,8 +657,8 @@ const HappyHunting = {
                     pip.classList.toggle('active', parseInt(pip.dataset.level) === idx + 1);
                 });
             }
-            this.cardDirty[this.currentStep] = false;
-            this.actionShowNext = true;
+            this.cardDirty[this.currentStep] = true;
+            this.actionShowNext = false;
             this.updatePreviewActions();
             this.renderPeekCards();
         }, 600);
