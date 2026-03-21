@@ -58,6 +58,8 @@ const HappyHunting = {
             'route-map',
             'preview-start-btn', 'preview-carousel',
             'location-picker-overlay', 'location-picker-close', 'location-picker-options',
+            'arrival-actions-live', 'arrival-actions-preview',
+            'arrival-back-btn', 'arrival-add-clue', 'arrival-send-hunt',
         ].forEach(id => {
             this.els[id] = document.getElementById(id);
         });
@@ -367,8 +369,8 @@ const HappyHunting = {
 
             // Navigation arrows (carousel)
             this.els['preview-prev'].hidden = this.currentStep === 0;
-            const isLast = this.currentStep === this.hunt.steps.length - 1;
-            this.els['preview-next'].hidden = isLast && !(isLast && this.currentStep >= 2);
+            // Always show right arrow — last card goes to arrival
+            this.els['preview-next'].hidden = false;
 
             // Reset edit state when navigating to a card
             this.isEditing = false;
@@ -1018,12 +1020,11 @@ const HappyHunting = {
             const cluePreview = (nextStep.clue || '').slice(0, 80) + (nextStep.clue.length > 80 ? '...' : '');
             nextEl.innerHTML = `<div class="peek-step">Clue ${nextStep.stepNumber}</div><div class="peek-text">${cluePreview}</div>`;
             nextEl.hidden = false;
-        } else if (isLast && this.currentStep >= 2) {
-            // After 3+ cards: show Add Clue as next peek
-            nextEl.innerHTML = `<div class="peek-step">Add Clue</div><div class="peek-text peek-add">+ $1</div>`;
-            nextEl.hidden = false;
         } else {
-            nextEl.hidden = true;
+            // Last card: show destination bar as next peek
+            const bar = this.hunt.bar;
+            nextEl.innerHTML = `<div class="peek-step">Destination</div><div class="peek-text peek-destination">${bar.name}</div>`;
+            nextEl.hidden = false;
         }
     },
 
@@ -1384,6 +1385,10 @@ const HappyHunting = {
             this.els['arrival-gallery'].hidden = false;
         }
 
+        // Show preview or live actions
+        if (this.els['arrival-actions-live']) this.els['arrival-actions-live'].hidden = this.isPreview;
+        if (this.els['arrival-actions-preview']) this.els['arrival-actions-preview'].hidden = !this.isPreview;
+
         this.showScreen('arrival');
     },
 
@@ -1460,6 +1465,14 @@ const HappyHunting = {
         this.els['pa-add'].addEventListener('click', () => this.addClue());
         this.els['pa-send-hunt'].addEventListener('click', () => this.showSendScreen());
 
+        // Arrival screen preview buttons
+        this.els['arrival-back-btn'].addEventListener('click', () => {
+            this.currentStep = this.hunt.steps.length - 1;
+            this.renderClue();
+        });
+        this.els['arrival-add-clue'].addEventListener('click', () => this.addClue());
+        this.els['arrival-send-hunt'].addEventListener('click', () => this.showSendScreen());
+
         // Edit: enters edit mode, resets action button to Save
         this.els['pa-edit'].addEventListener('click', () => {
             this.toggleEdit();
@@ -1527,14 +1540,7 @@ const HappyHunting = {
 
         // Peek card clicks (preview mode)
         this.els['peek-prev'].addEventListener('click', () => this.prevClue());
-        this.els['peek-next'].addEventListener('click', () => {
-            const isLast = this.currentStep === this.hunt.steps.length - 1;
-            if (isLast && this.currentStep >= 2) {
-                this.addClue();
-            } else {
-                this.previewNext();
-            }
-        });
+        this.els['peek-next'].addEventListener('click', () => this.previewNext());
 
         // Preview Start button → also through start screen
         this.els['preview-start-btn'].addEventListener('click', () => {
