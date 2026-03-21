@@ -848,12 +848,11 @@ const HappyHunting = {
         // Edit: always visible
         this.els['pa-edit'].hidden = false;
 
-        // Action button (Save / Next Clue):
-        // - Default: "Save"
-        // - After saving on non-last card: "Next Clue"
-        // - After saving on last card: hidden (Add Clue + Send Invite take over)
+        // Action button (Save / Next Clue / See Arrival):
         if (this.actionShowNext && isLast) {
-            actionBtn.hidden = true;
+            actionBtn.hidden = false;
+            actionBtn.textContent = 'See Arrival →';
+            actionBtn.className = 'pa-btn pa-primary';
         } else if (this.actionShowNext) {
             actionBtn.hidden = false;
             actionBtn.textContent = 'Next Clue';
