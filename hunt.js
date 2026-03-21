@@ -57,6 +57,7 @@ const HappyHunting = {
             'peek-prev', 'peek-next',
             'route-map',
             'preview-start-btn', 'preview-carousel',
+            'location-picker-overlay', 'location-picker-close', 'location-picker-options',
         ].forEach(id => {
             this.els[id] = document.getElementById(id);
         });
@@ -674,45 +675,10 @@ const HappyHunting = {
 
     // ---- Add Clue ----
     addClue() {
-        let newStep;
         if (this.hasPool) {
-            // Determine which ring to use for the new clue
-            const ringCounts = {};
-            this.hunt.steps.forEach(s => { ringCounts[s.ring] = (ringCounts[s.ring] || 0) + 1; });
-            const usedClues = new Set(this.hunt.steps.map(s => s.clue));
-            const unused = this.hunt.cluePool.filter(c => !usedClues.has(c.clue));
-            // Pick ring with least usage
-            unused.sort((a, b) => (ringCounts[a.ring] || 0) - (ringCounts[b.ring] || 0));
-            const targetRing = unused.length > 0 ? unused[0].ring : 1;
-
-            // Prepopulate with an actual clue from the pool
-            const ringUnused = unused.filter(c => c.ring === targetRing);
-            const pick = ringUnused.length > 0
-                ? ringUnused[Math.floor(Math.random() * ringUnused.length)]
-                : (unused.length > 0 ? unused[0] : null);
-
-            if (pick) {
-                newStep = {
-                    ...pick,
-                    stepNumber: this.hunt.steps.length + 1,
-                    isAdded: true
-                };
-            } else {
-                // Fallback: all pool clues used, create blank
-                newStep = {
-                    stepNumber: this.hunt.steps.length + 1,
-                    ring: targetRing,
-                    clue: '',
-                    answer: '',
-                    answerVariants: [],
-                    answerType: 'text',
-                    historicalFact: '',
-                    isAdded: true,
-                    isBlank: true
-                };
-            }
+            this.showLocationPicker();
         } else {
-            newStep = {
+            const newStep = {
                 stepNumber: this.hunt.steps.length + 1,
                 ring: this.hunt.steps[this.currentStep]?.ring || 1,
                 clue: '',
@@ -721,17 +687,128 @@ const HappyHunting = {
                 historicalFact: '',
                 isAdded: true
             };
+            this.hunt.steps.push(newStep);
+            this.currentStep = this.hunt.steps.length - 1;
+            this.stepDifficulties[this.currentStep] = 0;
+            this.cardDirty[this.currentStep] = true;
+            this.renderClue();
+            this.toggleEdit();
         }
+    },
+
+    // ---- Location Picker ----
+    showLocationPicker() {
+        const overlay = this.els['location-picker-overlay'];
+        if (!overlay) return;
+
+        const usedClues = new Set(this.hunt.steps.map(s => s.clue));
+        const rings = [...new Set(this.hunt.cluePool.map(c => c.ring))].sort();
+        const rm = this.hunt.routeMap;
+        const optionsEl = this.els['location-picker-options'];
+        optionsEl.innerHTML = '';
+
+        rings.forEach(ring => {
+            const ringClues = this.hunt.cluePool.filter(c => c.ring === ring);
+            const unused = ringClues.filter(c => !usedClues.has(c.clue));
+            const stop = rm ? rm.stops.find(s => s.ring === ring) : null;
+
+            // Sample answers for this zone
+            const samples = ringClues.slice(0, 3).map(c => c.answer).join(', ');
+
+            // Mini-map SVG highlighting this ring's stop
+            let miniMap = '';
+            if (rm && rm.stops.length > 0) {
+                miniMap = this.renderMiniMap(ring);
+            }
+
+            const option = document.createElement('div');
+            option.className = 'location-option' + (unused.length === 0 ? ' disabled' : '');
+            option.innerHTML = `
+                <div class="location-option-map">${miniMap}</div>
+                <div class="location-option-info">
+                    <div class="location-option-zone">Zone ${ring}</div>
+                    <div class="location-option-samples">${samples}</div>
+                    <div class="location-option-avail">${unused.length} clue${unused.length !== 1 ? 's' : ''} available</div>
+                </div>
+            `;
+
+            if (unused.length > 0) {
+                option.addEventListener('click', () => this.pickLocationClue(ring));
+            }
+            optionsEl.appendChild(option);
+        });
+
+        overlay.classList.add('visible');
+    },
+
+    hideLocationPicker() {
+        const overlay = this.els['location-picker-overlay'];
+        if (overlay) overlay.classList.remove('visible');
+    },
+
+    renderMiniMap(highlightRing) {
+        const rm = this.hunt.routeMap;
+        if (!rm || !rm.stops.length) return '';
+
+        const stops = rm.stops;
+        const lats = stops.map(s => s.lat);
+        const lngs = stops.map(s => s.lng);
+        const minLat = Math.min(...lats), maxLat = Math.max(...lats);
+        const minLng = Math.min(...lngs), maxLng = Math.max(...lngs);
+
+        const W = 60, H = 60, PAD = 12;
+        const latScale = 111000, lngScale = 93000;
+        const meterW = (maxLng - minLng) * lngScale || 100;
+        const meterH = (maxLat - minLat) * latScale || 100;
+        const scaleX = (W - 2 * PAD) / meterW;
+        const scaleY = (H - 2 * PAD) / meterH;
+        const scale = Math.min(scaleX, scaleY);
+        const oX = PAD + ((W - 2 * PAD) - meterW * scale) / 2;
+        const oY = PAD + ((H - 2 * PAD) - meterH * scale) / 2;
+        const toX = lng => oX + (lng - minLng) * lngScale * scale;
+        const toY = lat => oY + (maxLat - lat) * latScale * scale;
+
+        let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+
+        // Route line
+        if (stops.length > 1) {
+            const pts = stops.map(s => `${toX(s.lng).toFixed(1)},${toY(s.lat).toFixed(1)}`);
+            svg += `<polyline points="${pts.join(' ')}" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="3 3"/>`;
+        }
+
+        // Stop dots
+        stops.forEach(s => {
+            const x = toX(s.lng), y = toY(s.lat);
+            const isHighlight = s.ring === highlightRing;
+            svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${isHighlight ? 8 : 4}" fill="${isHighlight ? '#c9a84c' : '#555'}" opacity="${isHighlight ? 1 : 0.5}"/>`;
+            if (isHighlight) {
+                svg += `<text x="${x.toFixed(1)}" y="${(y + 3.5).toFixed(1)}" text-anchor="middle" fill="#111" font-size="9" font-weight="600">${s.ring}</text>`;
+            }
+        });
+
+        svg += '</svg>';
+        return svg;
+    },
+
+    pickLocationClue(ring) {
+        const usedClues = new Set(this.hunt.steps.map(s => s.clue));
+        const unused = this.hunt.cluePool.filter(c => c.ring === ring && !usedClues.has(c.clue));
+        if (unused.length === 0) return;
+
+        const pick = unused[Math.floor(Math.random() * unused.length)];
+        const newStep = {
+            ...pick,
+            stepNumber: this.hunt.steps.length + 1,
+            isAdded: true
+        };
 
         this.hunt.steps.push(newStep);
         this.currentStep = this.hunt.steps.length - 1;
         this.stepDifficulties[this.currentStep] = 0;
         this.cardDirty[this.currentStep] = true;
 
+        this.hideLocationPicker();
         this.renderClue();
-        if (!this.hasPool) {
-            this.toggleEdit();
-        }
     },
 
 
@@ -1323,6 +1400,12 @@ const HappyHunting = {
         this.els['submit-btn'].addEventListener('click', () => this.checkAnswer());
         this.els['answer-input'].addEventListener('keydown', e => {
             if (e.key === 'Enter') this.checkAnswer();
+        });
+
+        // Location picker close
+        this.els['location-picker-close'].addEventListener('click', () => this.hideLocationPicker());
+        this.els['location-picker-overlay'].addEventListener('click', (e) => {
+            if (e.target === this.els['location-picker-overlay']) this.hideLocationPicker();
         });
 
         // Start screen: photo + begin
