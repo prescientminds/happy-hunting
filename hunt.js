@@ -221,6 +221,7 @@ const HappyHunting = {
                 isBlank: false
             };
             this.renderClueContent();
+            this.renderRouteMap();
             this.cardDirty[this.currentStep] = true;
             this.actionShowNext = false;
             this.updatePreviewActions();
@@ -641,6 +642,7 @@ const HappyHunting = {
                 isBlank: false
             };
             this.renderClueContent();
+            this.renderRouteMap();
             const sorted = allCandidates.slice().sort((a, b) => (a.difficulty || 0) - (b.difficulty || 0));
             const idx = sorted.indexOf(pick);
             if (idx >= 0) {
@@ -748,11 +750,28 @@ const HappyHunting = {
 
     renderMiniMap(highlightRing) {
         const rm = this.hunt.routeMap;
-        if (!rm || !rm.stops.length) return '';
+        if (!rm) return '';
 
-        const stops = rm.stops;
-        const lats = stops.map(s => s.lat);
-        const lngs = stops.map(s => s.lng);
+        // Show current steps + a representative dot for the highlighted ring
+        const usedClues = new Set(this.hunt.steps.map(s => s.clue));
+        const ringClues = this.hunt.cluePool.filter(c => c.ring === highlightRing && !usedClues.has(c.clue));
+        const highlightClue = ringClues[0];
+
+        // Gather all points: current steps + highlight candidate
+        const allPts = this.hunt.steps
+            .filter(s => s.lat && s.lng)
+            .map(s => ({ lat: s.lat, lng: s.lng, highlight: false }));
+        if (highlightClue && highlightClue.lat && highlightClue.lng) {
+            allPts.push({ lat: highlightClue.lat, lng: highlightClue.lng, highlight: true });
+        } else {
+            // Fallback to static ring stop
+            const fallback = rm.stops.find(s => s.ring === highlightRing);
+            if (fallback) allPts.push({ lat: fallback.lat, lng: fallback.lng, highlight: true });
+        }
+
+        if (allPts.length === 0) return '';
+
+        const lats = allPts.map(p => p.lat), lngs = allPts.map(p => p.lng);
         const minLat = Math.min(...lats), maxLat = Math.max(...lats);
         const minLng = Math.min(...lngs), maxLng = Math.max(...lngs);
 
@@ -770,20 +789,16 @@ const HappyHunting = {
 
         let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
 
-        // Route line
-        if (stops.length > 1) {
-            const pts = stops.map(s => `${toX(s.lng).toFixed(1)},${toY(s.lat).toFixed(1)}`);
-            svg += `<polyline points="${pts.join(' ')}" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="3 3"/>`;
-        }
+        // Existing step dots (dim)
+        allPts.filter(p => !p.highlight).forEach(p => {
+            svg += `<circle cx="${toX(p.lng).toFixed(1)}" cy="${toY(p.lat).toFixed(1)}" r="3" fill="#555" opacity="0.4"/>`;
+        });
 
-        // Stop dots
-        stops.forEach(s => {
-            const x = toX(s.lng), y = toY(s.lat);
-            const isHighlight = s.ring === highlightRing;
-            svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${isHighlight ? 8 : 4}" fill="${isHighlight ? '#c9a84c' : '#555'}" opacity="${isHighlight ? 1 : 0.5}"/>`;
-            if (isHighlight) {
-                svg += `<text x="${x.toFixed(1)}" y="${(y + 3.5).toFixed(1)}" text-anchor="middle" fill="#111" font-size="9" font-weight="600">${s.ring}</text>`;
-            }
+        // Highlighted new location (gold, larger)
+        allPts.filter(p => p.highlight).forEach(p => {
+            const x = toX(p.lng), y = toY(p.lat);
+            svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8" fill="#c9a84c"/>`;
+            svg += `<text x="${x.toFixed(1)}" y="${(y + 3.5).toFixed(1)}" text-anchor="middle" fill="#111" font-size="9" font-weight="600">${highlightRing}</text>`;
         });
 
         svg += '</svg>';
@@ -876,14 +891,24 @@ const HappyHunting = {
         const rm = this.hunt.routeMap;
         if (!rm) { el.innerHTML = ''; return; }
 
+        // Build stops from current steps' per-clue coordinates
+        // Fall back to routeMap.stops if clues lack lat/lng
+        const stepStops = this.hunt.steps.map((s, i) => {
+            if (s.lat && s.lng) return { lat: s.lat, lng: s.lng, stepNumber: s.stepNumber || i + 1 };
+            // Fallback: find matching ring in static stops
+            const fallback = rm.stops.find(st => st.ring === s.ring) || rm.stops[i] || rm.stops[0];
+            return { lat: fallback.lat, lng: fallback.lng, stepNumber: s.stepNumber || i + 1 };
+        });
+
         const bar = this.hunt.bar;
         const barLat = this.hunt.startLocation?.lat || rm.stops[rm.stops.length - 1].lat;
         const barLng = this.hunt.startLocation?.lng || rm.stops[rm.stops.length - 1].lng;
 
-        // Collect all points for bounds
+        // Collect all points for bounds (step coords + streets + bar)
         const pts = [
-            ...rm.stops.map(s => [s.lat, s.lng]),
-            ...rm.streets.flatMap(st => [st.from, st.to])
+            ...stepStops.map(s => [s.lat, s.lng]),
+            ...rm.streets.flatMap(st => [st.from, st.to]),
+            [barLat, barLng]
         ];
         const lats = pts.map(p => p[0]);
         const lngs = pts.map(p => p[1]);
@@ -893,7 +918,6 @@ const HappyHunting = {
         const maxLng = Math.max(...lngs);
 
         const W = 300, H = 140, PAD = 28;
-        // LA latitude: 1° lat ≈ 111km, 1° lng ≈ 93km
         const latScale = 111000;
         const lngScale = 93000;
         const meterW = (maxLng - minLng) * lngScale || 100;
@@ -926,7 +950,6 @@ const HappyHunting = {
             const w = wobble(si * 7 + 3, len * 0.04);
             const cx = mx + nx * w, cy = my + ny * w;
             svg += `<path d="M${x1.toFixed(1)},${y1.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}" class="rm-street"/>`;
-            // Label
             const lx = mx + nx * 6, ly = my + ny * 6;
             let angle = Math.atan2(dy, dx) * 180 / Math.PI;
             if (angle > 90 || angle < -90) angle += 180;
@@ -934,8 +957,8 @@ const HappyHunting = {
         });
 
         // Progressive reveal: show stops up to current step in preview
-        const visibleCount = this.isPreview ? this.currentStep + 1 : rm.stops.length;
-        const visibleStops = rm.stops.slice(0, visibleCount);
+        const visibleCount = this.isPreview ? this.currentStep + 1 : stepStops.length;
+        const visibleStops = stepStops.slice(0, visibleCount);
 
         // Route path — dashed, connecting visible stops in order
         if (visibleStops.length > 0) {
@@ -956,7 +979,7 @@ const HappyHunting = {
             const x = toX(s.lng), y = toY(s.lat);
             const active = i === this.currentStep;
             svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${active ? 7 : 5}" class="rm-stop${active ? ' active' : ''}"/>`;
-            svg += `<text x="${x.toFixed(1)}" y="${(y + 3.5).toFixed(1)}" class="rm-stop-num">${s.ring}</text>`;
+            svg += `<text x="${x.toFixed(1)}" y="${(y + 3.5).toFixed(1)}" class="rm-stop-num">${s.stepNumber}</text>`;
         });
 
         // Bar marker (destination)
