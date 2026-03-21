@@ -37,7 +37,7 @@ const HappyHunting = {
             'arrival-hh', 'arrival-vibe', 'arrival-arc',
             'arrival-details', 'envelope-sender', 'unlock-feedback',
             'envelope', 'code-row',
-            'difficulty-selector', 'diff-pips', 'diff-minus', 'diff-plus',
+            'difficulty-selector', 'diff-pips', 'diff-slider',
             'intro-next', 'intro-brand-graphic', 'amor-fati-row',
             'answer-row-text',
             'start-location', 'start-transit', 'start-distance', 'start-checkin-btn',
@@ -204,10 +204,8 @@ const HappyHunting = {
         if (level > max) level = max;
         this.stepDifficulties[this.currentStep] = level;
 
-        // Update pip highlights
-        this.els['diff-pips'].querySelectorAll('.diff-pip').forEach(pip => {
-            pip.classList.toggle('active', parseInt(pip.dataset.level) === level);
-        });
+        // Update slider value
+        if (this.els['diff-slider']) this.els['diff-slider'].value = level;
 
         if (!this.hasPool || sorted.length === 0) return;
 
@@ -229,19 +227,14 @@ const HappyHunting = {
     },
 
     renderDifficultyPips() {
-        const pipsEl = this.els['diff-pips'];
-        if (!pipsEl) return;
+        const slider = this.els['diff-slider'];
+        if (!slider) return;
         const candidates = this.getPoolForCurrentRing();
         const count = candidates.length || 1;
         const currentDiff = this.stepDifficulties[this.currentStep] || 1;
-        pipsEl.innerHTML = '';
-        for (let i = 1; i <= count; i++) {
-            const pip = document.createElement('button');
-            pip.className = 'diff-pip' + (i === currentDiff ? ' active' : '');
-            pip.dataset.level = i;
-            pip.textContent = i;
-            pipsEl.appendChild(pip);
-        }
+        slider.min = 1;
+        slider.max = count;
+        slider.value = currentDiff;
     },
 
     // ---- Lock Clue (implicit — called by Save and Next) ----
@@ -651,9 +644,7 @@ const HappyHunting = {
             const idx = sorted.indexOf(pick);
             if (idx >= 0) {
                 this.stepDifficulties[this.currentStep] = idx + 1;
-                this.els['diff-pips'].querySelectorAll('.diff-pip').forEach(pip => {
-                    pip.classList.toggle('active', parseInt(pip.dataset.level) === idx + 1);
-                });
+                if (this.els['diff-slider']) this.els['diff-slider'].value = idx + 1;
             }
             this.cardDirty[this.currentStep] = true;
             this.actionShowNext = false;
@@ -1352,12 +1343,9 @@ const HappyHunting = {
             }
         });
 
-        // Difficulty controls — +/- buttons + pip clicks
-        this.els['diff-plus'].addEventListener('click', () => this.setDifficulty((this.stepDifficulties[this.currentStep] || 1) + 1));
-        this.els['diff-minus'].addEventListener('click', () => this.setDifficulty((this.stepDifficulties[this.currentStep] || 1) - 1));
-        this.els['diff-pips'].addEventListener('click', e => {
-            const pip = e.target.closest('.diff-pip');
-            if (pip) this.setDifficulty(parseInt(pip.dataset.level));
+        // Difficulty slider
+        this.els['diff-slider'].addEventListener('input', () => {
+            this.setDifficulty(parseInt(this.els['diff-slider'].value));
         });
 
         // Preview action buttons

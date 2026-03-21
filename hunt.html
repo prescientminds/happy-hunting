@@ -116,12 +116,17 @@
                     <div class="clue-text" id="clue-text"></div>
                     <textarea class="clue-edit-field" id="clue-edit-field" hidden placeholder="Write your clue..."></textarea>
                 </div>
-                <!-- Difficulty: 1-5 pip bar -->
+                <!-- Difficulty: slider -->
                 <div class="difficulty-selector" id="difficulty-selector" hidden>
-                    <span class="diff-label-text">Difficulty</span>
-                    <button class="diff-step-btn" id="diff-minus">&minus;</button>
-                    <div class="diff-pips" id="diff-pips"></div>
-                    <button class="diff-step-btn" id="diff-plus">+</button>
+                    <div class="diff-slider-row">
+                        <span class="diff-end-label left">Easier</span>
+                        <div class="diff-slider-wrap">
+                            <input type="range" class="diff-slider" id="diff-slider" min="1" max="5" value="1" step="1">
+                        </div>
+                        <span class="diff-end-label right">Harder</span>
+                    </div>
+                    <!-- Hidden pips for JS compat -->
+                    <div class="diff-pips" id="diff-pips" hidden></div>
                 </div>
                 <!-- Preview: action buttons -->
                 <div class="preview-actions" id="preview-actions" hidden>
