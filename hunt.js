@@ -53,7 +53,7 @@ const HappyHunting = {
             'send-back-editor', 'send-accounting', 'send-line-items', 'send-total-amount', 'checkout-container',
             'send-hunt-title', 'send-hunt-form', 'send-your-name', 'send-their-name', 'send-their-phone',
             'send-promo', 'send-promo-apply', 'send-promo-feedback',
-            'send-generate-btn', 'send-hunt-result', 'send-hunt-link', 'send-hunt-copy',
+            'send-generate-btn', 'send-hunt-result', 'send-hunt-link', 'send-hunt-copy', 'send-hunt-sms',
             'peek-prev', 'peek-next',
             'route-map',
             'preview-start-btn', 'preview-carousel',
@@ -1296,7 +1296,16 @@ const HappyHunting = {
         this.els['checkout-container'].hidden = true;
         this.els['send-back-editor'].hidden = true;
         this.els['send-hunt-result'].hidden = false;
-        this.els['send-hunt-link'].value = url.toString();
+
+        const inviteUrl = url.toString();
+        this.els['send-hunt-link'].value = inviteUrl;
+
+        // Build SMS deep link — sms:number?&body= works on both iOS and Android
+        const digits = phone.replace(/\D/g, '');
+        const smsNumber = digits.length === 10 ? '+1' + digits : '+' + digits;
+        const smsBody = encodeURIComponent(`${senderName} sent you a Happy Hunt! Tap to play:\n${inviteUrl}`);
+        this.els['send-hunt-sms'].href = `sms:${smsNumber}?&body=${smsBody}`;
+        this.els['send-hunt-sms'].hidden = false;
     },
 
     async handlePaymentReturn(sessionId) {
@@ -1320,6 +1329,7 @@ const HappyHunting = {
                     this.els['send-accounting'].hidden = true;
                     this.els['send-back-editor'].hidden = true;
                     this.els['send-hunt-result'].hidden = false;
+                    this.els['send-hunt-sms'].hidden = true;
                     this.els['send-hunt-link'].value = 'Payment confirmed. Refresh to generate link.';
                     this.showScreen('send');
                 }
