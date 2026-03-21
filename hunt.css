@@ -643,6 +643,12 @@ body {
     margin-bottom: 24px;
     opacity: 0.8;
 }
+.arrival-preview-secondary {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 12px;
+}
 .browse-link {
     display: block;
     text-align: center;

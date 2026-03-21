@@ -863,10 +863,9 @@ const HappyHunting = {
             actionBtn.className = 'pa-btn pa-save';
         }
 
-        // Add Clue + Send Invite: last card only, after saving
-        const showRight = isLast && this.actionShowNext;
-        this.els['pa-add'].hidden = !showRight;
-        this.els['pa-send-hunt'].hidden = !showRight;
+        // Add Clue: last card only, after saving. Send Invite moves to arrival screen.
+        this.els['pa-add'].hidden = !(isLast && this.actionShowNext);
+        this.els['pa-send-hunt'].hidden = true;
     },
 
     // ---- Visual Interventions ----
