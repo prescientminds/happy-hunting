@@ -137,7 +137,7 @@
                     <button id="pa-add" class="pa-btn pa-add" hidden>+ Add Clue ($1)</button>
                     <button id="pa-send-hunt" class="pa-btn pa-send" hidden>Send Invite</button>
                 </div>
-                <!-- Interactive: answer input -->
+                <!-- Interactive: answer input (text) -->
                 <div class="answer-section" id="answer-section">
                     <div class="answer-row" id="answer-row-text">
                         <input type="text" id="answer-input" placeholder="Your answer..." autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
@@ -146,7 +146,32 @@
                     <p class="answer-feedback" id="answer-feedback"></p>
                     <button class="stuck-btn" id="stuck-btn" hidden><svg class="stuck-phone" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> <span class="stuck-text">I'm stuck</span></button>
                 </div>
+                <!-- Interactive: answer input (photo — first clue only) -->
+                <div class="answer-section-photo" id="answer-section-photo" hidden>
+                    <input type="file" accept="image/*" capture="environment" id="clue-photo-input" hidden>
+                    <button id="clue-photo-btn" class="clue-photo-action">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                        <span>Take a Photo</span>
+                    </button>
+                    <div class="clue-photo-preview" id="clue-photo-preview" hidden>
+                        <img id="clue-photo-thumb" class="clue-photo-thumb" alt="Your photo">
+                    </div>
+                </div>
+                <!-- Preview: answer + fact preview -->
+                <div class="answer-preview" id="answer-preview" hidden>
+                    <div class="answer-preview-divider"></div>
+                    <p class="answer-preview-label">Answer</p>
+                    <p class="answer-preview-text" id="answer-preview-text"></p>
+                    <p class="answer-preview-fact" id="answer-preview-fact"></p>
+                </div>
                 <div class="fact-reveal" id="fact-reveal">
+                    <div class="next-destination" id="next-destination" hidden>
+                        <div class="next-dest-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <p class="next-dest-label">Next Stop</p>
+                        <p class="next-dest-info" id="next-dest-info"></p>
+                    </div>
                     <button id="next-btn" class="action-btn">Next Clue &rarr;</button>
                     <div class="fact-divider"></div>
                     <p class="fact-text" id="fact-text"></p>

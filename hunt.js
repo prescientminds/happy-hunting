@@ -39,7 +39,10 @@ const HappyHunting = {
             'envelope', 'code-row',
             'difficulty-selector', 'diff-pips', 'diff-slider',
             'intro-next', 'intro-brand-graphic', 'amor-fati-row',
-            'answer-row-text',
+            'answer-row-text', 'answer-section-photo', 'clue-photo-input', 'clue-photo-btn',
+            'clue-photo-preview', 'clue-photo-thumb',
+            'answer-preview', 'answer-preview-text', 'answer-preview-fact',
+            'next-destination', 'next-dest-info',
             'start-location', 'start-transit', 'start-distance', 'start-checkin-btn',
             'start-geo', 'start-photo', 'start-photo-input', 'start-photo-btn',
             'start-photo-preview', 'start-photo-thumb', 'start-begin-btn',
@@ -365,7 +368,18 @@ const HappyHunting = {
         if (this.isPreview) {
             // Preview mode: hide interactive answer, show preview actions
             this.els['answer-section'].hidden = true;
+            this.els['answer-section-photo'].hidden = true;
             this.els['fact-reveal'].classList.remove('visible');
+
+            // Show answer preview
+            const step = this.hunt.steps[this.currentStep];
+            if (step.answer || step.historicalFact) {
+                this.els['answer-preview'].hidden = false;
+                this.els['answer-preview-text'].textContent = step.answer || '(photo clue)';
+                this.els['answer-preview-fact'].textContent = step.historicalFact || '';
+            } else {
+                this.els['answer-preview'].hidden = true;
+            }
 
             // Navigation arrows (carousel)
             this.els['preview-prev'].hidden = this.currentStep === 0;
@@ -387,7 +401,7 @@ const HappyHunting = {
             this.renderRouteMap();
         } else {
             // Interactive mode: show answers, hide preview elements
-            this.els['answer-section'].hidden = false;
+            this.els['answer-preview'].hidden = true;
             this.els['preview-actions'].hidden = true;
             this.els['preview-prev'].hidden = true;
             this.els['preview-next'].hidden = true;
@@ -397,14 +411,23 @@ const HappyHunting = {
             this.els['visual-intervention'].innerHTML = '';
             this.renderRouteMap();
 
-            // All clues are text answers
+            // First clue = photo, rest = text
+            const isPhotoClue = this.currentStep === 0;
+            this.els['answer-section'].hidden = isPhotoClue;
+            this.els['answer-section-photo'].hidden = !isPhotoClue;
             this.els['answer-row-text'].hidden = false;
 
-            // "I'm stuck" button: show after a delay, hidden initially
-            this.els['stuck-btn'].hidden = true;
-            this.stuckTimeout = setTimeout(() => {
-                this.els['stuck-btn'].hidden = false;
-            }, 8000); // appears after 8 seconds
+            if (isPhotoClue) {
+                // Reset photo state
+                this.els['clue-photo-preview'].hidden = true;
+                this.els['clue-photo-btn'].hidden = false;
+            } else {
+                // "I'm stuck" button: show after a delay, hidden initially
+                this.els['stuck-btn'].hidden = true;
+                this.stuckTimeout = setTimeout(() => {
+                    this.els['stuck-btn'].hidden = false;
+                }, 8000); // appears after 8 seconds
+            }
 
             // Reset state
             this.els['answer-section'].classList.remove('solved');
@@ -413,12 +436,15 @@ const HappyHunting = {
             this.els['answer-feedback'].textContent = '';
             this.els['answer-feedback'].className = 'answer-feedback';
             this.els['fact-reveal'].classList.remove('visible');
+            this.els['next-destination'].hidden = true;
             this.wrongAttempts = 0;
 
             const isLast = this.currentStep === this.hunt.steps.length - 1;
             this.els['next-btn'].innerHTML = isLast ? 'You\'ve arrived &rarr;' : 'Next Clue &rarr;';
 
-            setTimeout(() => this.els['answer-input'].focus(), 500);
+            if (!isPhotoClue) {
+                setTimeout(() => this.els['answer-input'].focus(), 500);
+            }
         }
 
         this.showScreen('clue');
@@ -571,12 +597,70 @@ const HappyHunting = {
         setTimeout(() => this.els['answer-input'].classList.remove('pulse-correct'), 600);
 
         this.els['fact-text'].textContent = step.historicalFact;
+        this.showNextDestination();
         setTimeout(() => this.els['fact-reveal'].classList.add('visible'), 400);
 
         // Scroll next button into view on mobile
         setTimeout(() => {
             this.els['next-btn'].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 500);
+    },
+
+    onPhotoCorrect(step) {
+        this.els['clue-photo-btn'].hidden = true;
+        this.els['fact-text'].textContent = step.historicalFact || '';
+        this.showNextDestination();
+        setTimeout(() => this.els['fact-reveal'].classList.add('visible'), 400);
+        setTimeout(() => {
+            this.els['next-btn'].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 500);
+    },
+
+    handleCluePhoto(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const dataUrl = e.target.result;
+            this.huntPhotos.push({ label: `clue-${this.currentStep + 1}`, src: dataUrl });
+            this.els['clue-photo-thumb'].src = dataUrl;
+            this.els['clue-photo-preview'].hidden = false;
+            const step = this.hunt.steps[this.currentStep];
+            setTimeout(() => this.onPhotoCorrect(step), 600);
+        };
+        reader.readAsDataURL(file);
+    },
+
+    showNextDestination() {
+        const isLast = this.currentStep === this.hunt.steps.length - 1;
+        if (isLast) {
+            const bar = this.hunt.bar;
+            this.els['next-dest-info'].textContent = `Head to ${bar.name} — ${bar.address}`;
+            this.els['next-destination'].hidden = false;
+        } else {
+            const current = this.hunt.steps[this.currentStep];
+            const next = this.hunt.steps[this.currentStep + 1];
+            if (current.lat && next.lat) {
+                const dist = this.haversineDistance(current.lat, current.lng, next.lat, next.lng);
+                const blocks = Math.max(1, Math.round(dist / 80));
+                const dir = this.cardinalDirection(current.lat, current.lng, next.lat, next.lng);
+                this.els['next-dest-info'].textContent = `Head ${dir} — about ${blocks} block${blocks !== 1 ? 's' : ''} to your next stop`;
+                this.els['next-destination'].hidden = false;
+            }
+        }
+    },
+
+    cardinalDirection(lat1, lng1, lat2, lng2) {
+        const dLat = lat2 - lat1;
+        const dLng = lng2 - lng1;
+        const angle = Math.atan2(dLng, dLat) * 180 / Math.PI;
+        if (angle > -22.5 && angle <= 22.5) return 'north';
+        if (angle > 22.5 && angle <= 67.5) return 'northeast';
+        if (angle > 67.5 && angle <= 112.5) return 'east';
+        if (angle > 112.5 && angle <= 157.5) return 'southeast';
+        if (angle > 157.5 || angle <= -157.5) return 'south';
+        if (angle > -157.5 && angle <= -112.5) return 'southwest';
+        if (angle > -112.5 && angle <= -67.5) return 'west';
+        return 'northwest';
     },
 
     onWrong(step) {
@@ -1432,10 +1516,19 @@ const HappyHunting = {
             btn.addEventListener('click', () => this.applySkin(btn.dataset.skin));
         });
 
-        // Submit answer
+        // Submit answer (text)
         this.els['submit-btn'].addEventListener('click', () => this.checkAnswer());
         this.els['answer-input'].addEventListener('keydown', e => {
             if (e.key === 'Enter') this.checkAnswer();
+        });
+
+        // Submit answer (photo — first clue)
+        this.els['clue-photo-btn'].addEventListener('click', () => {
+            this.els['clue-photo-input'].click();
+        });
+        this.els['clue-photo-input'].addEventListener('change', (e) => {
+            this.handleCluePhoto(e.target.files[0]);
+            e.target.value = '';
         });
 
         // Location picker close
