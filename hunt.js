@@ -80,7 +80,7 @@ const HappyHunting = {
     async init() {
         this.cacheElements();
         this.addedCluesCount = 0;
-        try { this.stripe = Stripe('pk_test_51TC8t70Eer3QhVmnKLNJO1eonxk6zJ3UG8wFduhb3V3c4BxVDx2ztCBWLPr9UZQT3o69RQRAZpOFN7e2ifpyKzw100wSZ7xmOT'); } catch (e) { console.warn('Stripe.js not loaded'); }
+        try { this.stripe = Stripe(window.STRIPE_PUBLISHABLE_KEY || ''); } catch (e) { console.warn('Stripe.js not loaded'); }
 
         const params = new URLSearchParams(window.location.search);
         this.skin = params.get('skin') || '';

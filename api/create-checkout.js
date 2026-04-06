@@ -1,5 +1,20 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+const ALLOWED_ORIGINS = [
+  'https://happyhunting.fun',
+  'https://www.happyhunting.fun',
+  'https://happy-hunting.vercel.app',
+];
+
+function isAllowedReturnUrl(url) {
+  try {
+    const parsed = new URL(url);
+    return ALLOWED_ORIGINS.some(origin => parsed.origin === origin);
+  } catch {
+    return false;
+  }
+}
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -8,6 +23,11 @@ module.exports = async (req, res) => {
 
   try {
     const { addedClues, returnUrl } = req.body;
+
+    if (!returnUrl || !isAllowedReturnUrl(returnUrl)) {
+      res.status(400).json({ error: 'Invalid return URL' });
+      return;
+    }
 
     const lineItems = [
       {
